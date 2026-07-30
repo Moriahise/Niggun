@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אִישׁ כְּאָחִיו · פִּיּוּט סְפָרַדִּי · עֲשִׂיָּה</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   אִישׁ כְּאָחִיו — Jeder wie sein Bruder
+   Jecheskel 47–48 · die Verteilung des Landes
+   תִּפְאֶרֶת → מַלְכוּת · Maqam Rast → Hijaz
+   Erde & Stämme (Sienna/Terrakotta) · Jerusalem-Gold im Zentrum · Malchut-Granat
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#08060A; --deep:#0D0A0E; --layer:#141018; --card:#0E0B11;
+
+  /* ── הָאָרֶץ וְהַשְּׁבָטִים — Land & Stämme, Assija-Erde ── */
+  --earth:#A85A32; --earth-lt:#C8895A; --earth-dp:#5A2E18;
+  --sienna:#B0602E; --terra:#C87A4A; --ochre:#C89838;
+  --olive:#7A7434; --olive-lt:#A0A054;
+
+  /* ── יְרוּשָׁלַיִם · מִקְדַּשׁ · אֲדֹנָי שָׁמָּה — goldenes Zentrum ── */
+  --jeru:#E8B84A; --jeru-lt:#F6D888; --jeru-vlt:#FBEEC0;
+  --holy:#F0C860;
+
+  /* ── מַלְכוּת · דָּוִד — Granat / Königspurpur ── */
+  --mal:#9E2A44; --mal-lt:#C85A72; --mal-vlt:#E094A6;
+
+  --sage:#4A6840; --sage-lt:#7AA870;
+  --teal:#2A6058; --teal-lt:#50A098;
+  --parch-dim:#b0a082;
+  --ivory:#ece4d6; --ivory-lt:#f8f0e4; --ivory-dim:#8c8474;
+  --silver:#bcb4a8; --silver-dim:#6a645a;
+  --text:#a0988a;
+  --guitar:#c08840; --guitar-lt:#dca860;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(232,184,74,.14) 0%,transparent 34%),
+    radial-gradient(ellipse at 50% 3%,  rgba(232,184,74,.08) 0%,transparent 40%),
+    radial-gradient(ellipse at 18% 24%, rgba(168,90,50,.10)  0%,transparent 38%),
+    radial-gradient(ellipse at 82% 28%, rgba(122,116,52,.08) 0%,transparent 38%),
+    radial-gradient(ellipse at 30% 74%, rgba(158,42,68,.08)  0%,transparent 40%),
+    radial-gradient(ellipse at 74% 78%, rgba(200,122,74,.08) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(8,6,10,.80)     0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 7% 9%,rgba(246,216,136,.44) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 4%,rgba(200,122,74,.46) 0%,transparent 100%),
+    radial-gradient(1px 1px at 81% 14%,rgba(122,116,52,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 22% 34%,rgba(232,184,74,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 65% 60%,rgba(158,42,68,.30) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 11% 70%,rgba(168,90,50,.36) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 74%,rgba(246,216,136,.34) 0%,transparent 100%),
+    radial-gradient(1px 1px at 38% 88%,rgba(200,122,74,.30) 0%,transparent 100%);
+}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,6,10,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(232,184,74,.24);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{font-family:'Frank Ruhl Libre',serif;font-weight:900;padding:12px 22px;
+  border-right:1px solid rgba(232,184,74,.22);white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.nav-brand-main{font-size:.95em;color:var(--jeru-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.50em;
+  color:var(--silver-dim);font-weight:300;letter-spacing:.14em;direction:ltr;}
+.nav-link{font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(246,216,136,.56);text-decoration:none;padding:0 11px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;}
+.nav-link:hover{color:var(--jeru-lt);border-bottom-color:var(--jeru);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:48px;padding-bottom:56px;
+  border-bottom:1px solid rgba(232,184,74,.18);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--jeru);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--mal-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.5em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(232,184,74,.46),0 0 160px rgba(200,122,74,.22);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:22px;}
+.epigraph{font-family:'Frank Ruhl Libre',serif;font-size:1.16em;color:var(--ivory);
+  direction:rtl;line-height:1.9;margin:0 auto 6px;max-width:640px;}
+.epigraph-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--jeru-lt);letter-spacing:.10em;margin-bottom:24px;opacity:.85;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 22px;}
+
+/* ── LANDKARTE: 12 Stämme N→S mit goldenem Zentrum ── */
+.map{max-width:440px;margin:0 auto 12px;border:1px solid rgba(232,184,74,.24);
+  background:rgba(168,90,50,.04);padding:8px;}
+.map-compass{display:flex;justify-content:space-between;font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:.66em;color:var(--silver-dim);letter-spacing:.18em;padding:2px 8px 6px;}
+.tribe-row{display:flex;align-items:center;gap:10px;padding:5px 12px;margin:2px 0;
+  border-right:3px solid;direction:rtl;}
+.tribe-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--ivory-lt);min-width:74px;}
+.tribe-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;
+  color:var(--silver-dim);margin-right:auto;direction:ltr;}
+.center-row{display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:11px 12px;margin:5px 0;background:linear-gradient(135deg,rgba(240,200,96,.16),rgba(232,184,74,.05));
+  border:1px solid rgba(246,216,136,.42);box-shadow:0 0 30px rgba(232,184,74,.18) inset;}
+.center-he{font-family:'Frank Ruhl Libre',serif;font-size:1.04em;font-weight:900;
+  color:var(--jeru-vlt);direction:rtl;letter-spacing:.04em;text-shadow:0 0 24px rgba(246,216,136,.6);}
+.center-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.64em;color:var(--jeru-lt);letter-spacing:.08em;}
+.map-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:20px;max-width:500px;
+  margin-left:auto;margin-right:auto;line-height:1.7;}
+
+.world-chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(232,184,74,.20);padding:12px 26px;background:rgba(232,184,74,.03);margin-top:16px;}
+.wc-item{font-family:'Frank Ruhl Libre',serif;font-size:.9em;direction:rtl;padding:2px 10px;border:1px solid transparent;}
+.wc-active{color:var(--jeru-lt);border-color:rgba(232,184,74,.30);background:rgba(232,184,74,.09);}
+.wc-dim{color:var(--silver-dim);opacity:.4;}
+.wc-sep{color:var(--jeru);opacity:.4;font-size:.7em;}
+
+/* ── QUELLENPRÜFUNG (Korrektur) ── */
+.crit-box{background:linear-gradient(135deg,rgba(184,40,40,.09),rgba(8,6,10,.88));
+  border:1px solid rgba(184,40,40,.30);border-left:4px solid #c03030;
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.crit-box::before{content:'בְּדִיקַת מְקוֹרוֹת — Quellenprüfung &amp; ein Regel-Fund';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:#e07070;
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.crit-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.crit-de strong{color:var(--ivory-lt);}
+.crit-de em{color:#e07070;font-style:italic;}
+.crit-num{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:#e07070;display:block;margin:20px 0 8px;direction:rtl;text-align:right;}
+.crit-num:first-of-type{margin-top:6px;}
+.he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INFO ── */
+.info-box{background:linear-gradient(135deg,rgba(232,184,74,.07),rgba(8,6,10,.88));
+  border:1px solid rgba(232,184,74,.24);border-left:4px solid var(--jeru);
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.info-box::before{content:attr(data-label);position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--jeru-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.info-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;text-align:right;margin-bottom:10px;line-height:1.78;}
+.info-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--jeru-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.9;}
+.info-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.info-de strong{color:var(--ivory);}
+.info-de em{color:var(--jeru-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sefira-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:54px;}
+.sefira-nav-item{border:1px solid rgba(232,184,74,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(232,184,74,.03);}
+.sefira-nav-item:hover{opacity:.88;background:rgba(232,184,74,.08);border-color:rgba(232,184,74,.42);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.57em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--jeru-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;scroll-margin-top:60px;border:1px solid rgba(232,184,74,.14);
+  background:linear-gradient(180deg,rgba(20,16,24,.96) 0%,rgba(9,7,11,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--earth-dp),var(--sienna),var(--terra),var(--jeru),var(--mal));opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(232,184,74,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--jeru-lt);border-right:1px solid rgba(232,184,74,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.58;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--jeru-lt);opacity:.64;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--terra);opacity:.80;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(232,184,74,.30);
+  padding:5px 14px;color:var(--jeru-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(232,184,74,.04);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(232,184,74,.09);opacity:.8;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--guitar);opacity:.88;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(192,136,64,.32);background:rgba(192,136,64,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.15;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.15;border-left:1px solid rgba(232,184,74,.12);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--ivory-dim);opacity:.68;font-size:.92em;}
+.jw{color:var(--jeru-lt);}
+.mw{color:var(--mal-lt);}
+.divider{text-align:center;color:var(--jeru);opacity:.32;letter-spacing:.7em;
+  font-size:.72em;margin:26px 0;}
+
+.refrain-box{background:linear-gradient(135deg,rgba(232,184,74,.11),rgba(232,184,74,.02));
+  border:1px solid rgba(232,184,74,.30);border-left:3px solid var(--jeru);padding:22px 28px;}
+.strophe-box{background:linear-gradient(135deg,rgba(168,90,50,.08),transparent);
+  border:1px solid rgba(168,90,50,.24);border-left:3px solid var(--sienna);padding:22px 28px;}
+.coda-box{text-align:center;padding:26px 0 12px;}
+.coda-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;color:var(--ivory-dim);
+  direction:rtl;line-height:2.4;letter-spacing:.06em;}
+.coda-whisper em{font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;}
+
+.tikkun-box{background:linear-gradient(135deg,rgba(42,96,88,.13),rgba(8,32,28,.44));
+  border:1px solid rgba(42,96,88,.30);border-left:4px solid var(--teal);
+  padding:28px 32px;margin:28px 0;position:relative;}
+.tikkun-box::before{content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 12px;font-size:.60em;color:var(--teal-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.tikkun-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid rgba(42,96,88,.18);gap:18px;flex-wrap:wrap;}
+.tikkun-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);direction:rtl;}
+.tikkun-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--teal);display:block;margin-top:2px;}
+.tikkun-src{font-family:'Frank Ruhl Libre',serif;font-size:.65em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.32);padding:3px 11px;background:rgba(42,96,88,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{font-family:'Frank Ruhl Libre',serif;font-size:.68em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.30);padding:3px 10px;background:rgba(42,96,88,.05);direction:rtl;}
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(232,184,74,.05);
+  border-left:2px solid rgba(232,184,74,.26);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--jeru-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(192,136,64,.07),rgba(8,6,10,.86));
+  border:1px solid rgba(192,136,64,.24);border-left:4px solid var(--guitar);
+  padding:24px 32px;margin:28px 0 0;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--guitar-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.perf-item{border-left:2px solid rgba(192,136,64,.20);padding:2px 0 2px 16px;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  color:var(--guitar-lt);display:block;margin-bottom:3px;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.78;}
+
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(232,184,74,.30),transparent);}
+.ornament-star{color:var(--jeru);font-size:.65em;letter-spacing:.5em;opacity:.44;}
+
+.footer{text-align:center;margin-top:80px;padding-top:60px;border-top:1px solid rgba(232,184,74,.14);}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--jeru-lt);
+  direction:rtl;letter-spacing:.08em;text-shadow:0 0 50px rgba(232,184,74,.44);margin-bottom:14px;}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:26px;}
+.footer-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97em;
+  color:var(--silver-dim);line-height:1.95;max-width:620px;margin:0 auto 28px;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;color:var(--sage-lt);letter-spacing:.2em;opacity:.50;}
+
+.sources-box{background:linear-gradient(135deg,rgba(232,184,74,.06),rgba(8,6,10,.85));
+  border:1px solid rgba(232,184,74,.22);border-left:4px solid var(--jeru);
+  padding:26px 32px;margin-top:44px;position:relative;}
+.sources-box::before{content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.60em;color:var(--jeru-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.88;}
+.sources-text strong{color:var(--ivory);}
+
+@media(max-width:780px){
+  .wrap{padding:40px 18px 80px;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(232,184,74,.12);padding-top:14px;margin-top:14px;}
+  .perf-grid{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:62px 1fr;}
+  .source-badge{display:none;}
+  .song-body{padding:0 18px 34px;}
+  .page-title-he{font-size:2.3em;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .tikkun-box{padding:20px 18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">אִישׁ כְּאָחִיו</span>
+    <span class="nav-brand-sub">Jecheskel 47–48 · Assija · Gitarre · Rast → Hijaz</span>
+  </div>
+  <a class="nav-link" href="#p1"><span class="nav-num">א</span>פְּתִיחָה</a>
+  <a class="nav-link" href="#p2"><span class="nav-num">ב</span>פַּזְמוֹן</a>
+  <a class="nav-link" href="#p3"><span class="nav-num">ג</span>בֵּית א</a>
+  <a class="nav-link" href="#p4"><span class="nav-num">ד</span>פַּזְמוֹן</a>
+  <a class="nav-link" href="#p5"><span class="nav-num">ה</span>בֵּית ב</a>
+  <a class="nav-link" href="#p6"><span class="nav-num">ו</span>פַּזְמוֹן</a>
+  <a class="nav-link" href="#p7"><span class="nav-num">ז</span>גֶּשֶׁר</a>
+  <a class="nav-link" href="#p8"><span class="nav-num">ח</span>סִיּוּם</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══ HEADER ══ -->
+<div class="page-header">
+  <div class="eyebrow">Piyut · Jecheskel 47–48 · Die Verteilung des Landes · Assija</div>
+  <h1 class="page-title-he">אִישׁ כְּאָחִיו</h1>
+  <div class="page-title-de">Isch keAchiw — Jeder wie sein Bruder</div>
+
+  <div class="epigraph">
+    וְשֵׁם הָעִיר מִיּוֹם — אֲדֹנָי שָׁמָּה
+  </div>
+  <div class="epigraph-src">יְחֶזְקֵאל מ״ח:ל״ה &nbsp;·&nbsp; der letzte Vers des Buches Jecheskel</div>
+
+  <div class="map">
+    <div class="map-compass"><span>◀ צָפוֹן · Norden</span><span>Süden · נֶגֶב ▶</span></div>
+    <div class="tribe-row" style="border-color:var(--olive)"><span class="tribe-he">דָּן</span><span class="tribe-de">Dan · 48:1</span></div>
+    <div class="tribe-row" style="border-color:var(--olive-lt)"><span class="tribe-he">אָשֵׁר</span><span class="tribe-de">Ascher · 48:2</span></div>
+    <div class="tribe-row" style="border-color:var(--sienna)"><span class="tribe-he">נַפְתָּלִי</span><span class="tribe-de">Naftali · 48:3</span></div>
+    <div class="tribe-row" style="border-color:var(--terra)"><span class="tribe-he">מְנַשֶּׁה</span><span class="tribe-de">Menasche · 48:4</span></div>
+    <div class="tribe-row" style="border-color:var(--earth-lt)"><span class="tribe-he">אֶפְרַיִם</span><span class="tribe-de">Efrajim · 48:5</span></div>
+    <div class="tribe-row" style="border-color:var(--ochre)"><span class="tribe-he">רְאוּבֵן</span><span class="tribe-de">Reuven · 48:6</span></div>
+    <div class="tribe-row" style="border-color:var(--mal-lt)"><span class="tribe-he">יְהוּדָה</span><span class="tribe-de">Jehuda · 48:7</span></div>
+    <div class="center-row">
+      <span class="center-he">תְּרוּמַת הַקֹּדֶשׁ · יְרוּשָׁלַיִם</span>
+      <span class="center-de">Die heilige Hebe · Jerusalem · אֲדֹנָי שָׁמָּה · 48:8–22</span>
+    </div>
+    <div class="tribe-row" style="border-color:var(--mal)"><span class="tribe-he">בִּנְיָמִין</span><span class="tribe-de">Binjamin · 48:23</span></div>
+    <div class="tribe-row" style="border-color:var(--ochre)"><span class="tribe-he">שִׁמְעוֹן</span><span class="tribe-de">Schimon · 48:24</span></div>
+    <div class="tribe-row" style="border-color:var(--earth-lt)"><span class="tribe-he">יִשָּׂשכָר</span><span class="tribe-de">Jissachar · 48:25</span></div>
+    <div class="tribe-row" style="border-color:var(--terra)"><span class="tribe-he">זְבוּלֻן</span><span class="tribe-de">Sebulon · 48:26</span></div>
+    <div class="tribe-row" style="border-color:var(--sienna)"><span class="tribe-he">גָּד</span><span class="tribe-de">Gad · 48:27</span></div>
+  </div>
+  <div class="map-cap">
+    Die zwölf Stämme in der exakten Reihenfolge Nord→Süd von Jecheskel 48.
+    Jehuda und Binjamin flankieren die heilige Hebe von beiden Seiten; genau zwischen ihnen
+    liegt Jerusalem, <span class="he">אֲדֹנָי שָׁמָּה</span>.
+  </div>
+
+  <p class="page-desc">
+    Kein Klagelied und keine Sehnsucht ins Ungewisse, sondern ein <strong>Kataster</strong> —
+    eine gesungene Landkarte der Endzeit. Jecheskels letzte Vision teilt das Land
+    <em>איש כאחיו</em>, jeder wie sein Bruder, und setzt in die Mitte nicht einen König,
+    sondern ein Heiligtum; der Fürst steht davor, nicht darüber. Das Lied endet mit dem
+    letzten Wort des ganzen Buches: dem neuen Namen der Stadt.
+  </p>
+
+  <div class="world-chain">
+    <span class="wc-item wc-active">עֲשִׂיָּה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">יְצִירָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-active">בְּרִיאָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span></div></div><div class="crit-box"><p class="crit-de"><br>
+    <em>Ein feiner Punkt am Rande:</em> Die Paarung „<span class="he">יְהוּדָה וּבִנְיָמִין</span>“
+    ist nicht nur metrisch schön — es sind genau die beiden Stämme, die im Text die heilige Hebe
+    von Norden und Süden <em>umschließen</em>, und es sind die beiden Stämme des historischen
+    Südreichs. Sie gehören zusammen genannt.
+
+    <span class="crit-num">Wichtig: das ist die Land-Liste, nicht die Tor-Liste</span>
+    Damit es für die <em>Torlieder</em> (Schaar Reuven, Schaar Issachar …) sauber getrennt
+    bleibt: Dieses Lied benutzt die <strong>Land-Anteile</strong> (48:1–29) — mit Efrajim und
+    Menasche getrennt und <em>ohne</em> Levi. Die <strong>Tore</strong> (48:31–34) haben eine
+    <em>andere</em> Reihenfolge und Zusammensetzung — dort <em>mit</em> Levi und mit Josef
+    ungeteilt. Nicht verwechseln.
+  </p>
+</div>
+
+<!-- ══ DER NASI ══ -->
+<div class="info-box" data-label="הַנָּשִׂיא — Wer ist der Fürst?">
+  <div class="info-he">
+    וְעַבְדִּי דָוִד נָשִׂיא בְתוֹכָם … וְדָוִד עַבְדִּי נָשִׂיא לָהֶם לְעוֹלָם
+  </div>
+  <div class="info-src">יְחֶזְקֵאל ל״ד:כ״ד · ל״ז:כ״ה</div>
+  <p class="info-de">
+    Die Brücke nennt den <span class="he">נָשִׂיא</span> und setzt ihn mit
+    <strong>David Maschiach</strong> gleich.&nbsp;<strong>Jecheskel 34:23–24</strong> („mein Knecht David … Fürst in ihrer Mitte“) und
+    <strong>37:24–25</strong> („mein Knecht David, Fürst für sie auf ewig“). Erst diese beiden
+    Verse machen den namenlosen Nasi der Schlusskapitel zu David.<br><br>
+    Beachte, wie zurückhaltend Jecheskel ist: In den Schlusskapiteln heißt er fast durchgehend
+    nur <span class="he">נָשִׂיא</span>, nicht <span class="he">מֶלֶךְ</span> — der Fürst steht
+    <em>vor</em> dem Heiligtum, nicht an dessen Stelle.&nbsp;&nbsp;<span class="he">וְהַנָּשִׂיא
+    לְפָנָיו</span> trifft das genau. Und <span class="he">חַי וְקַיָּם לְנֶצַח נְצָחִים</span>
+    nimmt den Ton von <span class="he">דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם</span> auf
+    (Rosch HaSchana 25a) — dieselbe Formel wie in „Doro schel Maschiach“.
+  </p>
+</div>
+
+<!-- ══ SEKTIONS-NAV ══ -->
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Eröffnungsvers</span></a>
+  <a class="sefira-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">פַּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+  <a class="sefira-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בֵּית א</span><span class="sn-de">Die Prophetie</span></a>
+  <a class="sefira-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">פַּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+  <a class="sefira-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">בֵּית ב</span><span class="sn-de">Die Stämme</span></a>
+  <a class="sefira-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">פַּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+  <a class="sefira-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Heiligtum &amp; Fürst</span></a>
+  <a class="sefira-nav-item" href="#p8"><span class="sn-num">VIII</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Schluss &amp; Coda</span></a>
+</div>
+
+<!-- ══ SONG ══ -->
+<div class="song-section">
+
+  <div class="song-header">
+    <div class="song-num"><span class="snum-sefira">תִּפְאֶרֶת → מַלְכוּת</span>I</div>
+    <div class="song-meta">
+      <span class="sefira-badge">תִּפְאֶרֶת → מַלְכוּת · אֲצִילוּת בְּכֵלִים שֶׁל עֲשִׂיָּה</span>
+      <span class="maqam-badge">Maqam Rast → Hijaz · Rubato ≈ 66 BPM · Solostimme &amp; Gitarre</span>
+      <span class="song-title-he">אִישׁ כְּאָחִיו</span>
+      <span class="song-title-de">Isch keAchiw — Jeder wie sein Bruder</span>
+    </div>
+    <div class="source-badge">
+      פִּיּוּט מְקוֹרִי
+      <span class="source-badge-de">Originalpiyut · Jecheskel 47–48</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <!-- I · PETICHA -->
+    <div class="section-block" id="p1">
+      <div class="section-label">I · פָּסוּק פְּתִיחָה — Eröffnungsvers</div>
+      <div class="instr-note">Guitar: Rast, open and grave, fingerpicked. <em>Ko amar Adonai</em> is a
+        proclamation — sung slowly, with space, like the opening of a decree. Not yet the song,
+        but its authority.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כֹּה אָמַר אֲדֹנָי אֱלֹהִים —</span>
+          <span class="line">זֶה גְּבוּל הָאָרֶץ</span>
+          <span class="line">לִשְׁנֵים עָשָׂר שִׁבְטֵי יִשְׂרָאֵל,</span>
+          <span class="line"><span class="jw">נַחֲלַת עוֹלָמִים</span></span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">So spricht Adonai, der Ewige —</span>
+          <span class="line">dies ist die Grenze des Landes</span>
+          <span class="line">für die zwölf Stämme Israels,</span>
+          <span class="line"><span class="jw">ein ewiges Erbe.</span></span>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle</span>
+        „כֹּה אָמַר אֲדֹנָי אֱלֹהִים, [גֵּה] זֶה גְּבוּל אֲשֶׁר תִּתְנַחֲלוּ אֶת הָאָרֶץ לִשְׁנֵי עָשָׂר שִׁבְטֵי יִשְׂרָאֵל — יוֹסֵף חֲבָלִים“ — יְחֶזְקֵאל מ״ז:י״ג. „יוֹסֵף חֲבָלִים“ — שְׁנֵי חֲלָקִים; לָכֵן אֶפְרַיִם וּמְנַשֶּׁה נִמְנִים לְחוּד וְלֵוִי אֵין לוֹ נַחֲלַת קַרְקַע.
+      </div>
+    </div>
+
+    <!-- II · PAZMON -->
+    <div class="section-block" id="p2">
+      <div class="section-label">II · פַּזְמוֹן — Refrain</div>
+      <div class="instr-note">Guitar: The refrain opens into full Rast, gently strummed.
+        <em>Isch keAchiw</em> doubled — warm, level, unhurried; the repetition is the point,
+        equality stated twice. Turn toward Hijaz on <em>waAdonai schamma</em>.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="jw">אִישׁ כְּאָחִיו, אִישׁ כְּאָחִיו —</span></span>
+            <span class="line">כֵּן תַּחֲלֹקוּ אֶת הָאָרֶץ</span>
+            <span class="line"><span class="mw">וַאֲדֹנָי שָׁמָּה</span> — שְׁמוֹ עָלֶיהָ,</span>
+            <span class="line">יְרוּשָׁלַיִם — עִיר הַמְּנוּחָה</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="jw">Jeder wie sein Bruder, jeder wie sein Bruder —</span></span>
+            <span class="line">so sollt ihr das Land aufteilen.</span>
+            <span class="line"><span class="mw">Und Adonai ist dort</span> — sein Name über ihr,</span>
+            <span class="line">Jerusalem — Stadt der Ruhe.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        „וּנְחַלְתֶּם אוֹתָהּ אִישׁ כְּאָחִיו“ — יְחֶזְקֵאל מ״ז:י״ד. „וְשֵׁם הָעִיר מִיּוֹם, אֲדֹנָי שָׁמָּה“ — יְחֶזְקֵאל מ״ח:ל״ה. „עִיר הַמְּנוּחָה“ — עַל פִּי „זֹאת מְנוּחָתִי עֲדֵי עַד“ (תְּהִלִּים קל״ב:י״ד) וְ„הַמְּנוּחָה וְהַנַּחֲלָה“ (דְּבָרִים י״ב:ט׳).
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- III · BAYIT ALEF -->
+    <div class="section-block" id="p3">
+      <div class="section-label">III · בֵּית א — Strophe I · Die Prophetie</div>
+      <div class="instr-note">Guitar: Melodic, a single-note line — the prophet's own voice.
+        <em>Mizzafon lanegev</em> can descend melodically, north to south, tracing the map.</div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חָזָה יְחֶזְקֵאל בְּיַד אֲדֹנָי,</span>
+            <span class="line">אֶרֶץ מְחֻלֶּקֶת לְחַיֵּי עָד —</span>
+            <span class="line">מִצָּפוֹן לָנֶגֶב, גְּבָלֶיהָ שָׁלֵם,</span>
+            <span class="line">כָּל שֵׁבֶט בְּחֶלְקוֹ, בְּנַחֲלַת אָב</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Jecheskel schaute durch die Hand Adonais —</span>
+            <span class="line">ein geteiltes Land für ewiges Leben.</span>
+            <span class="line">Von Norden nach Süden, seine Grenzen vollständig,</span>
+            <span class="line">jeder Stamm in seinem Anteil, im Erbe der Väter.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle</span>
+        גְּבוּלוֹת הָאָרֶץ מִצָּפוֹן וְעַד נֶגֶב — יְחֶזְקֵאל מ״ז:ט״ו–כ׳. „בְּיַד אֲדֹנָי“ — לְשׁוֹן הַנְּבוּאָה, כְּמוֹ „וַתְּהִי עָלַי יַד אֲדֹנָי“ (יְחֶזְקֵאל ל״ז:א׳).
+      </div>
+    </div>
+
+    <!-- IV · PAZMON -->
+    <div class="section-block" id="p4">
+      <div class="section-label">IV · פַּזְמוֹן — Refrain (Wiederholung)</div>
+      <div class="instr-note">Guitar: As before, unchanged — the refrain is the boundary marker
+        the strophes return to, like the recurring border-formula in the text itself.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="jw">אִישׁ כְּאָחִיו, אִישׁ כְּאָחִיו —</span></span>
+            <span class="line">כֵּן תַּחֲלֹקוּ אֶת הָאָרֶץ</span>
+            <span class="line"><span class="mw">וַאֲדֹנָי שָׁמָּה</span> — שְׁמוֹ עָלֶיהָ,</span>
+            <span class="line">יְרוּשָׁלַיִם — עִיר הַמְּנוּחָה</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="jw">Jeder wie sein Bruder, jeder wie sein Bruder —</span></span>
+            <span class="line">so sollt ihr das Land aufteilen.</span>
+            <span class="line"><span class="mw">Und Adonai ist dort</span> — sein Name über ihr,</span>
+            <span class="line">Jerusalem — Stadt der Ruhe.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- V · BAYIT BET -->
+    <div class="section-block" id="p5">
+      <div class="section-label">V · בֵּית ב — Strophe II · Die Stämme</div>
+      <div class="instr-note">Guitar: Rhythmic, a steady processional pulse — twelve names carried
+        evenly, none louder than another; the music must enact <em>isch keAchiw</em> here.
+        A tiny lift on <em>be'ahava</em>.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">דָּן וְאָשֵׁר בַּצָּפוֹן יִנְחֲלוּ,</span>
+          <span class="line">נַפְתָּלִי וּמְנַשֶּׁה בְּאַהֲבָה —</span>
+          <span class="line">אֶפְרַיִם וּרְאוּבֵן, יְהוּדָה וּבִנְיָמִין,</span>
+          <span class="line">שִׁמְעוֹן וְיִשָּׂשכָר, זְבוּלֻן וָגָד</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Dan und Ascher erben im Norden,</span>
+          <span class="line">Naftali und Menasche in Liebe —</span>
+          <span class="line">Efrajim und Reuven, Jehuda und Binjamin,</span>
+          <span class="line">Schimon und Jissachar, Sebulon und Gad.</span>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle · Reihenfolge geprüft</span>
+        סֵדֶר הַנַּחֲלוֹת מִצָּפוֹן לְנֶגֶב — יְחֶזְקֵאל מ״ח:א׳–כ״ז, בְּדִיּוּק: דָּן, אָשֵׁר, נַפְתָּלִי, מְנַשֶּׁה, אֶפְרַיִם, רְאוּבֵן, יְהוּדָה — [תְּרוּמָה] — בִּנְיָמִין, שִׁמְעוֹן, יִשָּׂשכָר, זְבוּלֻן, גָּד. הַשִּׁיר תּוֹאֵם מִלָּה בְּמִלָּה. יְהוּדָה וּבִנְיָמִין סוֹבְבִים אֶת הַתְּרוּמָה מִשְּׁנֵי עֲבָרֶיהָ.
+      </div>
+    </div>
+
+    <!-- VI · PAZMON -->
+    <div class="section-block" id="p6">
+      <div class="section-label">VI · פַּזְמוֹן — Refrain (Wiederholung)</div>
+      <div class="instr-note">Guitar: As before. After the twelve names, the refrain should feel like the
+        whole map resolving into one line.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="jw">אִישׁ כְּאָחִיו, אִישׁ כְּאָחִיו —</span></span>
+            <span class="line">כֵּן תַּחֲלֹקוּ אֶת הָאָרֶץ</span>
+            <span class="line"><span class="mw">וַאֲדֹנָי שָׁמָּה</span> — שְׁמוֹ עָלֶיהָ,</span>
+            <span class="line">יְרוּשָׁלַיִם — עִיר הַמְּנוּחָה</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="jw">Jeder wie sein Bruder, jeder wie sein Bruder —</span></span>
+            <span class="line">so sollt ihr das Land aufteilen.</span>
+            <span class="line"><span class="mw">Und Adonai ist dort</span> — sein Name über ihr,</span>
+            <span class="line">Jerusalem — Stadt der Ruhe.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- VII · GESCHER / TIKKUN -->
+    <div class="section-block" id="p7">
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div>
+            <div class="tikkun-title-he">גֶּשֶׁר — תְּרוּמַת הַקֹּדֶשׁ וְהַנָּשִׂיא</div>
+            <span class="tikkun-title-de">Brücke — die heilige Hebe und der Fürst</span>
+          </div>
+          <div class="tikkun-src">יְחֶזְקֵאל ל״ד · ל״ז · מ״ח</div>
+        </div>
+        <div class="instr-note">Guitar: The emotional centre — swell to full Hijaz on
+          <em>Mikdasch Adonai benes nissa</em>, then hold back for <em>David Maschiach</em>,
+          which should be sung quietly and certainly, not shouted. The exclamation is in the
+          word, not the volume.</div>
+        <div class="refrain-box" style="border-left-color:var(--mal);">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">וּבְלֵב הָאָרֶץ — <span class="jw">תְּרוּמַת הַקֹּדֶשׁ</span>,</span>
+              <span class="line">מִקְדַּשׁ אֲדֹנָי בְּנֵס נִשָּׂא —</span>
+              <span class="line">וְהַנָּשִׂיא לְפָנָיו — <span class="mw">דָּוִד מָשִׁיחַ</span>,</span>
+              <span class="line">חַי וְקַיָּם לְנֶצַח נְצָחִים!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Und im Herzen des Landes — <span class="jw">die heilige Hebe</span>,</span>
+              <span class="line">das Heiligtum Adonais hoch erhoben —</span>
+              <span class="line">und der Fürst vor ihm — <span class="mw">David, der Gesalbte</span>,</span>
+              <span class="line">lebt und besteht in alle Ewigkeit!</span>
+            </div>
+          </div>
+        </div>
+        <div class="mitzva-tags">
+          <span class="mitzva-tag">תִּפְאֶרֶת → מַלְכוּת</span>
+          <span class="mitzva-tag">תְּרוּמַת הַקֹּדֶשׁ</span>
+          <span class="mitzva-tag">נָשִׂיא = מָשִׁיחַ בֶּן דָּוִד</span>
+          <span class="mitzva-tag">רַאסְט → חִיגַ׳אז</span>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Der Tikkun</span>
+          שִׂים לֵב לַמִּבְנֶה: לֹא מֶלֶךְ בַּמֶּרְכָּז אֶלָּא מִקְדָּשׁ, וְהַנָּשִׂיא עוֹמֵד „לְפָנָיו“ — לֹא בִּמְקוֹמוֹ. הַתְּרוּמָה בְּלֵב הָאָרֶץ הִיא נְקֻדַּת הַחִבּוּר בֵּין מַעְלָה לְמַטָּה (יְסוֹד הַמְחַבֵּר תִּפְאֶרֶת לְמַלְכוּת), וּסְבִיבָהּ שְׁנֵים עָשָׂר שְׁבָטִים כְּמוֹ שְׁנֵים עָשָׂר גְּבוּלֵי הַמַּלְכוּת. „דָּוִד מָשִׁיחַ“ — מְיֻסָּד עַל יְחֶזְקֵאל ל״ד:כ״ג–כ״ד וְל״ז:כ״ד–כ״ה.
+        </div>
+      </div>
+    </div>
+
+    <!-- VIII · SIJUM -->
+    <div class="section-block" id="p8">
+      <div class="section-label">VIII · פַּזְמוֹן סִיּוּם — Schlussrefrain mit Coda</div>
+      <div class="instr-note">Guitar: Full refrain one last time, then strip away to almost nothing
+        for the coda. <em>Adonai schamma</em> twice, very quiet; the last <em>schemo le'ad</em>
+        should trail into silence, unresolved — the book of Jecheskel ends on this word, and so should the song.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="jw">אִישׁ כְּאָחִיו, אִישׁ כְּאָחִיו —</span></span>
+            <span class="line">כֵּן תַּחֲלֹקוּ אֶת הָאָרֶץ</span>
+            <span class="line"><span class="mw">וַאֲדֹנָי שָׁמָּה</span> — שְׁמוֹ עָלֶיהָ,</span>
+            <span class="line">יְרוּשָׁלַיִם — עִיר הַמְּנוּחָה</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="jw">Jeder wie sein Bruder, jeder wie sein Bruder —</span></span>
+            <span class="line">so sollt ihr das Land aufteilen.</span>
+            <span class="line"><span class="mw">Und Adonai ist dort</span> — sein Name über ihr,</span>
+            <span class="line">Jerusalem — Stadt der Ruhe.</span>
+          </div>
+        </div>
+      </div>
+      <div class="coda-box">
+        <div class="coda-whisper">
+          — — —<br>
+          אֲדֹנָי שָׁמָּה · אֲדֹנָי שָׁמָּה<br>
+          <span class="jw">שְׁמוֹ לְעוֹלַם, שְׁמוֹ לְעָד…</span><br>
+          <em>Adonai ist dort · Adonai ist dort<br>
+          Sein Name in Ewigkeit, sein Name für immer…</em>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Der Schluss</span>
+        „וְשֵׁם הָעִיר מִיּוֹם — אֲדֹנָי שָׁמָּה“ הוּא הַפָּסוּק הָאַחֲרוֹן בְּכָל סֵפֶר יְחֶזְקֵאל (מ״ח:ל״ה). כָּל הַשִּׁיר צוֹעֵד אֶל הַמִּלָּה הַזֹּאת, וּמְסַיֵּם בָּהּ — הַשֵּׁם הֶחָדָשׁ שֶׁל הָעִיר לֶעָתִיד לָבֹא.
+      </div>
+    </div>
+
+    <!-- VORTRAG -->
+    <div class="perf-box">
+      <div class="perf-grid">
+        <div class="perf-item">
+          <span class="perf-h">Dynamik</span>
+          <span class="perf-t">Eröffnungsvers: gravitätisch, mittlere Stärke. Refrain: warm, getragen,
+          gleichmäßig. Strophe II: prozessional, alle zwölf Namen gleich laut. Brücke: Anstieg zum
+          Mikdasch, dann leise Gewissheit auf „David Maschiach“. Coda: <em>ppp</em>, verklingend.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Maqam</span>
+          <span class="perf-t">Rast (Tiferet) für Vers und Refrain — der „königliche“, tragende Modus;
+          Wendung nach Hijaz (Malchut) bei „waAdonai schamma“ und im Höhepunkt der Brücke.
+          Coda zurück in ruhiges Rast.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Vokalführung</span>
+          <span class="perf-t">Offene Phrasenenden auf Kamatz/Patach (הָאָרֶץ, עָלֶיהָ, שָׁמָּה,
+          לְעָד) tragen gehaltene Töne. Besonders „שָׁמָּה“ aushalten — es ist der Schlüsselklang
+          und das letzte Wort.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Struktur</span>
+          <span class="perf-t">Eröffnungsvers → Refrain → Strophe I → Refrain → Strophe II → Refrain →
+          Brücke → Schlussrefrain → Coda. Zwölf Stämme + Terumah im Zentrum = das ganze
+          Bild in der Mitte des Liedes (Brücke).</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</div><!-- /song-section -->
+
+<div class="ornament">
+  <div class="ornament-line"></div>
+  <div class="ornament-star">✦ ✦ ✦</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-world">אִישׁ כְּאָחִיו</div>
+  <div class="footer-chain">תִּפְאֶרֶת → מַלְכוּת · מַקַאם רַאסְט → חִיגַ׳אז · יְחֶזְקֵאל מ״ז–מ״ח · עֲשִׂיָּה</div>
+  <p class="footer-de">
+    Eine gesungene Landkarte der Endzeit. Das Land wird geteilt <em>איש כאחיו</em> —
+    jeder wie sein Bruder, keiner über dem anderen — und in die Mitte kommt nicht ein Thron,
+    sondern ein Heiligtum, vor dem der Fürst steht. Die zwölf Stämme umschließen es wie zwölf
+    Grenzen der Malchut, und das letzte Wort des ganzen Buches Jecheskel ist zugleich das letzte
+    Wort des Liedes: der neue Name der Stadt.
+    <br><br>
+    <strong>אֲדֹנָי שָׁמָּה — שְׁמוֹ לְעוֹלַם, שְׁמוֹ לְעָד.</strong>
+  </p>
+  <div class="footer-amen">אָמֵן</div>
+</div>
+
+<!-- QUELLEN -->
+<div class="sources-box">
+  <div class="sources-text">
+    <strong>Jecheskel 47:13</strong> — <em>ko amar Adonai Elohim, [ge] se gewul ascher titnachalu
+    et ha'arez lischnei asar schiwtei Jisrael; Josef chawalim</em>. Josef erhält zwei Anteile —
+    daher werden Efrajim und Menasche einzeln gezählt und Levi hat keinen Landanteil. Grundlage
+    des Eröffnungsverses. ·
+    <strong>Jecheskel 47:14</strong> — <em>unechaltem otah isch keAchiw</em>; die Kernzeile des
+    Refrains. ·
+    <strong>Jecheskel 47:15–20</strong> — die Grenzen des Landes von Norden nach Süden;
+    Grundlage von Strophe I. ·
+    <strong>Jecheskel 48:1–27</strong> — die Stammesanteile in der Reihenfolge Nord→Süd:
+    Dan, Ascher, Naftali, Menasche, Efrajim, Reuven, Jehuda — [Terumah 48:8–22] — Binjamin,
+    Schimon, Jissachar, Sebulon, Gad. Die Strophe stimmt Wort für Wort mit dem Bibeltext überein
+    (maschinell geprüft). ·
+    <strong>Jecheskel 48:35</strong> — <em>weschem ha'ir mijom, Adonai schamma</em>; der
+    <strong>letzte Vers des ganzen Buches</strong>. Grundlage von Refrain und Coda. ·
+    <strong>Jecheskel 34:23–24</strong> und <strong>37:24–25</strong> — <em>awdi David nasi
+    betocham / nasi lahem le'olam</em>; die eigentliche Grundlage für die Gleichsetzung des
+    namenlosen Nasi der Schlusskapitel mit <strong>David</strong>. In der alten Fassung fehlte
+    dieser Beleg — ergänzt. ·
+    <strong>Tehillim 132:13–14</strong> — <em>zot menuchati adei ad</em>; und
+    <strong>Dewarim 12:9</strong> — <em>hammenucha wehannachala</em>. Grundlage des Epithetons
+    <em>ir hamenucha</em> („Stadt der Ruhe“). ·
+    <strong>Jeschajahu 11:10</strong> — <em>schoresch Jischai ascher omed lenes ammim</em>;
+    Hintergrund von <em>benes nissa</em> und dieselbe messianische Wurzel wie „Doro schel
+    Maschiach“. ·
+    <strong>Rosch HaSchana 25a</strong> — <em>David melech Jisrael chai wekajam</em>;
+    Anklang von <em>chai wekajam lenezach nezachim</em>.
+    <br><br>
+    <em>Zur kabbalistischen Lesart</em> (zwölf Stämme als zwölf Grenzen der Malchut, die Terumah
+    im Zentrum als verbindender Punkt zwischen den oberen Welten und dem Irdischen): eine
+    homiletische Deutung im Rahmen von Ramaks <em>Pardes Rimonim</em> zur Struktur der Malchut;
+    ohne bestimmten Scha'ar geführt, als Deutung, nicht als Zitat.
+    <br><br>
+    Das Tetragramm erscheint im gesamten Dokument ausschließlich als <strong>אֲדֹנָי</strong> —
+    auch im Schlussvers <span class="he">אֲדֹנָי שָׁמָּה</span>.</div>
+</div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

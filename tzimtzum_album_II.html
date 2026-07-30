@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>עֵץ הַחַיִּים — Album II · Zehn Lieder entlang der Sephirot</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #0a0806;
+    --bg-warm:     #12100c;
+    --layer:       #1e1810;
+    --amber:       #c8820a;
+    --amber-lt:    #e8aa3a;
+    --amber-dim:   #5a3c06;
+    --emerald:     #2a6644;
+    --emerald-lt:  #4a9868;
+    --emerald-dim: #143322;
+    --rose:        #a84858;
+    --rose-lt:     #d07888;
+    --burgundy:    #7a1828;
+    --ivory:       #e8e0d0;
+    --ivory-dim:   #9a9080;
+    --ivory-lt:    #f5f0e8;
+    --copper:      #b06030;
+    --copper-lt:   #d08858;
+    --violet:      #6848a0;
+    --violet-lt:   #9878d0;
+    --text-body:   #c0b4a0;
+    --parchment:   #ddd0b8;
+
+    /* Sefira colors */
+    --keter:       #e8e8f0;   /* pure white-silver */
+    --chochma:     #7090e0;   /* blue */
+    --binah:       #602060;   /* deep purple */
+    --chesed:      #4488cc;   /* sky blue */
+    --gevura:      #cc3030;   /* red */
+    --tiferet:     #c8a010;   /* golden yellow */
+    --netzach:     #50a050;   /* green */
+    --hod:         #c86820;   /* orange */
+    --yesod:       #9060c0;   /* purple */
+    --malchut:     #702020;   /* dark red / royal */
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ivory);
+    font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ── WARM ATMOSPHERE ── */
+  body::before {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(ellipse at 30% 0%,   rgba(200,130,10,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 20%,  rgba(42,102,68,0.07)  0%, transparent 45%),
+      radial-gradient(ellipse at 50% 80%,  rgba(168,72,88,0.06)  0%, transparent 40%),
+      radial-gradient(ellipse at 20% 100%, rgba(200,130,10,0.08) 0%, transparent 45%);
+  }
+
+  /* Tree-of-life gold grain */
+  body::after {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(1px 1px at 18% 14%, rgba(232,170,58,.5)  0%, transparent 100%),
+      radial-gradient(1px 1px at 42%  6%, rgba(232,170,58,.3)  0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 20%, rgba(232,170,58,.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 45%, rgba(232,170,58,.2)  0%, transparent 100%),
+      radial-gradient(1px 1px at 12% 60%, rgba(74,152,104,.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(232,170,58,.4)  0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 75%, rgba(232,170,58,.38) 0%, transparent 100%),
+      radial-gradient(2px 2px at 30% 88%, rgba(200,104,48,.50) 0%, transparent 100%),
+      radial-gradient(2px 2px at 65%  3%, rgba(168,72,88,.45)  0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 8% 33%, rgba(232,170,58,.3) 0%, transparent 100%);
+  }
+
+  /* ── STICKY NAV ── */
+  .nav-bar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,8,6,0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200,130,10,0.2);
+    padding: 0 36px;
+    display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-bar::-webkit-scrollbar { display:none; }
+
+  .nav-logo {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900; font-size: 1.05em;
+    color: var(--amber-lt);
+    letter-spacing: 0.1em;
+    padding: 15px 22px 15px 0;
+    border-right: 1px solid rgba(200,130,10,0.3);
+    margin-right: 18px;
+    white-space: nowrap; flex-shrink: 0;
+    direction: rtl;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 2px; flex: 1; }
+
+  .nav-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.77em;
+    color: var(--ivory-dim);
+    text-decoration: none;
+    padding: 15px 10px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .nav-link:hover { color: var(--ivory-lt); border-bottom-color: var(--amber-lt); }
+
+  .nav-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    flex-shrink: 0; opacity: 0.8;
+  }
+
+  /* ── WRAPPER ── */
+  .wrapper {
+    position: relative; z-index: 1;
+    max-width: 920px; margin: 0 auto;
+    padding: 80px 44px 130px;
+  }
+
+  /* ── ALBUM HEADER ── */
+  .album-header {
+    text-align: center; margin-bottom: 90px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(200,130,10,0.2);
+    position: relative;
+  }
+  .album-header::after {
+    content: '✦ ✦ ✦';
+    position: absolute; bottom: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg); padding: 0 20px;
+    color: var(--amber); font-size: 0.62em; letter-spacing: 0.5em;
+  }
+
+  .album-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.82em;
+    color: var(--emerald-lt);
+    letter-spacing: 0.22em; text-transform: uppercase;
+    margin-bottom: 24px; opacity: 0.8;
+  }
+
+  .album-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.72em;
+    color: var(--amber); letter-spacing: 0.3em;
+    margin-bottom: 12px; opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  .album-title-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 4.8em; font-weight: 900;
+    color: var(--ivory-lt);
+    letter-spacing: 0.06em; line-height: 1.05;
+    direction: rtl; margin-bottom: 10px;
+    text-shadow: 0 0 50px rgba(200,130,10,0.35), 0 0 100px rgba(200,130,10,0.12);
+  }
+
+  .album-sub-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2.0em; font-weight: 400;
+    color: var(--amber-lt);
+    direction: rtl; margin-bottom: 14px;
+    opacity: 0.85;
+  }
+
+  .album-title-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.15em;
+    color: var(--ivory-dim); margin-bottom: 32px;
+    letter-spacing: 0.05em;
+  }
+
+  .album-desc {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.0em; color: var(--text-body);
+    line-height: 1.95; max-width: 600px; margin: 0 auto 28px;
+  }
+
+  .album-tag {
+    display: inline-block; font-size: 0.78em;
+    color: var(--amber); border: 1px solid var(--amber-dim);
+    padding: 5px 18px; letter-spacing: 0.12em;
+    font-family: 'EB Garamond', serif;
+    margin: 4px;
+  }
+
+  /* ── SEFIROT MAP ── */
+  .sefira-map {
+    margin-bottom: 80px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px; border: 1px solid rgba(200,130,10,0.15);
+    background: rgba(200,130,10,0.08);
+    position: relative;
+  }
+  .sefira-map::before {
+    content: 'עֵץ הַחַיִּים — אֲרִיכַת הַשִּׁירִים';
+    position: absolute; top: -11px; right: 24px;
+    background: var(--bg); padding: 0 14px;
+    font-size: 0.68em; color: var(--amber-lt);
+    letter-spacing: 0.18em; font-family: 'Frank Ruhl Libre', serif;
+  }
+
+  .sefira-cell {
+    background: rgba(10,8,6,0.85);
+    padding: 18px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+    text-align: center;
+  }
+  .sefira-cell:hover { background: rgba(30,24,16,0.95); }
+
+  .sefira-num-small {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.68em;
+    opacity: 0.6; display: block; margin-bottom: 4px;
+    color: var(--amber);
+  }
+
+  .sefira-name-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.15em; font-weight: 700;
+    display: block; margin-bottom: 2px;
+    direction: rtl;
+  }
+
+  .sefira-name-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.75em;
+    color: var(--ivory-dim); display: block;
+  }
+
+  /* Sefira accent colors */
+  .sf-keter   { border-bottom-color: var(--keter);   } .sf-keter   .sefira-name-he { color: var(--keter); }
+  .sf-chochma { border-bottom-color: var(--chochma); } .sf-chochma .sefira-name-he { color: var(--chochma); }
+  .sf-binah   { border-bottom-color: var(--binah);   } .sf-binah   .sefira-name-he { color: var(--binah); }
+  .sf-chesed  { border-bottom-color: var(--chesed);  } .sf-chesed  .sefira-name-he { color: var(--chesed); }
+  .sf-gevura  { border-bottom-color: var(--gevura);  } .sf-gevura  .sefira-name-he { color: var(--gevura); }
+  .sf-tiferet { border-bottom-color: var(--tiferet); } .sf-tiferet .sefira-name-he { color: var(--tiferet); }
+  .sf-netzach { border-bottom-color: var(--netzach); } .sf-netzach .sefira-name-he { color: var(--netzach); }
+  .sf-hod     { border-bottom-color: var(--hod);     } .sf-hod     .sefira-name-he { color: var(--hod); }
+  .sf-yesod   { border-bottom-color: var(--yesod);   } .sf-yesod   .sefira-name-he { color: var(--yesod); }
+  .sf-malchut { border-bottom-color: var(--malchut); } .sf-malchut .sefira-name-he { color: var(--malchut); }
+
+  /* full-width cells for single-column rows */
+  .sefira-cell.full { grid-column: 1 / -1; }
+  .sefira-cell.half { grid-column: span 1; }
+
+  /* ── SONG ARTICLE ── */
+  .song-article {
+    margin-bottom: 110px; padding-bottom: 70px;
+    border-bottom: 1px solid rgba(200,130,10,0.1);
+  }
+  .song-article:last-of-type { border-bottom: none; }
+
+  /* song header */
+  .song-header {
+    text-align: center; margin-bottom: 52px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(200,130,10,0.15);
+    position: relative;
+  }
+  .song-header::after {
+    content: attr(data-ornament);
+    position: absolute; bottom: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg); padding: 0 14px;
+    font-size: 1.0em;
+  }
+
+  .sefira-badge {
+    display: inline-block; margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.75em;
+    letter-spacing: 0.18em; padding: 4px 18px;
+    border: 1px solid; opacity: 0.9;
+  }
+
+  .song-sefira-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.4em; font-weight: 700;
+    direction: rtl; margin-bottom: 4px; opacity: 0.7;
+  }
+
+  .song-title-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3.0em; font-weight: 900;
+    color: var(--ivory-lt); direction: rtl;
+    margin-bottom: 10px; letter-spacing: 0.04em;
+    text-shadow: 0 0 40px rgba(200,130,10,0.25);
+  }
+
+  .song-title-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.08em;
+    color: var(--ivory-dim); margin-bottom: 14px;
+  }
+
+  .song-source {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.82em; color: var(--amber-lt);
+    letter-spacing: 0.08em; opacity: 0.7;
+  }
+
+  /* ── SECTION BLOCKS ── */
+  .s-block { margin-bottom: 42px; }
+
+  .s-label {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .s-label-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.68em;
+    color: var(--amber-lt); letter-spacing: 0.22em;
+    text-transform: uppercase; white-space: nowrap;
+  }
+
+  .s-label-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(200,130,10,0.3), transparent);
+  }
+
+  .stage-dir {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.8em;
+    color: var(--ivory-dim);
+    border-left: 2px solid rgba(200,130,10,0.3);
+    padding-left: 14px; margin-bottom: 16px;
+    opacity: 0.7; direction: ltr;
+  }
+
+  /* lyrics */
+  .lyric-block { direction: rtl; text-align: right; margin-bottom: 14px; }
+
+  .l-line {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.55em; font-weight: 400;
+    line-height: 2.0; color: var(--ivory-lt);
+    display: block; letter-spacing: 0.02em;
+  }
+  .l-line.key { color: var(--amber-lt); font-weight: 700; font-size: 1.72em; }
+  .l-line.echo { font-size: 1.2em; color: var(--emerald-lt); font-style: italic; padding-right: 26px; }
+
+  .l-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.9em;
+    color: var(--ivory-dim); line-height: 1.8;
+    direction: ltr; text-align: left;
+    border-left: 2px solid var(--amber); padding-left: 14px;
+    margin-top: 10px;
+  }
+
+  /* section boxes */
+  .refrain-box {
+    background: linear-gradient(135deg, rgba(200,130,10,0.07), rgba(18,16,12,0.7));
+    border: 1px solid rgba(200,130,10,0.22);
+    border-left: 3px solid var(--amber);
+    padding: 24px 32px; margin-bottom: 14px;
+  }
+
+  .bridge-box {
+    background: linear-gradient(135deg, rgba(42,102,68,0.07), rgba(10,8,6,0.8));
+    border: 1px solid rgba(42,102,68,0.2);
+    border-left: 3px solid var(--emerald);
+    padding: 24px 32px; margin-bottom: 14px;
+  }
+
+  .climax-box {
+    background: linear-gradient(135deg, rgba(168,72,88,0.07), rgba(18,16,12,0.7));
+    border: 1px solid rgba(168,72,88,0.22);
+    border-left: 3px solid var(--rose);
+    padding: 24px 32px; margin-bottom: 14px;
+  }
+
+  .outro-box {
+    background: rgba(10,8,6,0.6);
+    border: 1px solid rgba(200,130,10,0.1);
+    border-left: 2px solid rgba(200,130,10,0.2);
+    padding: 18px 32px; margin-bottom: 14px;
+  }
+
+  /* ── DIVIDER ── */
+  .ornament-div {
+    text-align: center; color: var(--ivory-dim);
+    opacity: 0.35; margin: 55px 0;
+    font-size: 0.85em; letter-spacing: 0.5em;
+  }
+
+  /* ── SCENARIOS ── */
+  .scenarios-wrap { margin-top: 60px; }
+
+  .scenarios-title {
+    text-align: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.05em; color: var(--amber);
+    letter-spacing: 0.16em; margin-bottom: 36px;
+    opacity: 0.8; padding-bottom: 18px;
+    border-bottom: 1px solid rgba(200,130,10,0.12);
+    direction: rtl;
+  }
+
+  .sc-card { margin-bottom: 34px; border: 1px solid; position: relative; overflow: hidden; }
+  .sc-bar { height: 3px; width: 100%; }
+  .sc-inner { padding: 24px 30px 30px; }
+  .sc-num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.7em; letter-spacing: 0.2em; opacity: 0.65; margin-bottom: 6px; }
+  .sc-title-he { font-family: 'Frank Ruhl Libre', serif; font-size: 1.28em; font-weight: 700; direction: rtl; text-align: right; margin-bottom: 2px; }
+  .sc-title-de { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.84em; color: var(--ivory-dim); margin-bottom: 18px; direction: ltr; }
+  .sc-body { font-family: 'EB Garamond', serif; font-size: 1.02em; line-height: 1.88; color: var(--text-body); }
+  .sc-body p { margin-bottom: 11px; }
+  .sc-body p:last-child { margin-bottom: 0; }
+
+  .sc-moment {
+    display: flex; gap: 12px; align-items: flex-start;
+    margin: 13px 0; padding: 12px 16px;
+    background: rgba(0,0,0,0.25); border-left: 2px solid;
+  }
+  .sc-icon { font-size: 1.2em; flex-shrink: 0; margin-top: 2px; }
+  .sc-moment-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95em; line-height: 1.7; color: var(--ivory); }
+  .sc-moment-text strong { font-style: normal; font-weight: 600; }
+
+  /* Scenario card colors — warm palette to differ from Album I */
+  .sc-1 { border-color: rgba(74,152,104,0.38); background: linear-gradient(135deg, rgba(42,102,68,0.1), rgba(10,8,6,0.95)); }
+  .sc-1 .sc-accent { color: var(--emerald-lt); } .sc-1 .sc-bar { background: var(--emerald-lt); } .sc-1 .sc-moment { border-left-color: var(--emerald); }
+
+  .sc-2 { border-color: rgba(200,130,10,0.35); background: linear-gradient(135deg, rgba(150,90,6,0.1), rgba(10,8,6,0.95)); }
+  .sc-2 .sc-accent { color: var(--amber-lt); } .sc-2 .sc-bar { background: var(--amber-lt); } .sc-2 .sc-moment { border-left-color: var(--amber); }
+
+  .sc-3 { border-color: rgba(168,72,88,0.38); background: linear-gradient(135deg, rgba(120,30,50,0.1), rgba(10,8,6,0.95)); }
+  .sc-3 .sc-accent { color: var(--rose-lt); } .sc-3 .sc-bar { background: var(--rose-lt); } .sc-3 .sc-moment { border-left-color: var(--rose); }
+
+  .sc-4 { border-color: rgba(176,96,48,0.38); background: linear-gradient(135deg, rgba(130,60,20,0.1), rgba(10,8,6,0.95)); }
+  .sc-4 .sc-accent { color: var(--copper-lt); } .sc-4 .sc-bar { background: var(--copper-lt); } .sc-4 .sc-moment { border-left-color: var(--copper); }
+
+  /* ── FOOTER ── */
+  .album-footer {
+    text-align: center; margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(200,130,10,0.15);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.88em;
+    color: var(--ivory-dim); line-height: 2;
+  }
+  .album-footer strong { font-weight: 600; color: var(--amber-lt); font-style: normal; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(18px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  .song-article { animation: fadeUp 0.55s ease both; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAVIGATION ══ -->
+<nav class="nav-bar">
+  <div class="nav-logo">עֵץ חַיִּים II</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#song-keter"><span class="nav-dot" style="background:var(--keter)"></span>כֶּתֶר</a>
+    <a class="nav-link" href="#song-chochma"><span class="nav-dot" style="background:var(--chochma)"></span>חָכְמָה</a>
+    <a class="nav-link" href="#song-binah"><span class="nav-dot" style="background:var(--binah)"></span>בִּינָה</a>
+    <a class="nav-link" href="#song-chesed"><span class="nav-dot" style="background:var(--chesed)"></span>חֶסֶד</a>
+    <a class="nav-link" href="#song-gevura"><span class="nav-dot" style="background:var(--gevura)"></span>גְּבוּרָה</a>
+    <a class="nav-link" href="#song-tiferet"><span class="nav-dot" style="background:var(--tiferet)"></span>תִּפְאֶרֶת</a>
+    <a class="nav-link" href="#song-netzach"><span class="nav-dot" style="background:var(--netzach)"></span>נֶצַח</a>
+    <a class="nav-link" href="#song-hod"><span class="nav-dot" style="background:var(--hod)"></span>הוֹד</a>
+    <a class="nav-link" href="#song-yesod"><span class="nav-dot" style="background:var(--yesod)"></span>יְסוֹד</a>
+    <a class="nav-link" href="#song-malchut"><span class="nav-dot" style="background:var(--malchut)"></span>מַלְכוּת</a>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+<!-- ══════════════════════════════════════════ ALBUM HEADER ══ -->
+<header class="album-header">
+  <p class="album-eyebrow">Album II · Zehn Lieder entlang der Sephirot</p>
+  <p class="album-num">הַמְשֵׁךְ — Fortsetzung des Tzimtzum-Zyklus</p>
+  <h1 class="album-title-he">עֵץ הַחַיִּים</h1>
+  <p class="album-sub-he">צִמְצוּם דֶּרֶךְ הַסְּפִירוֹת</p>
+  <p class="album-title-de">Der Lebensbaum — Tzimtzum entlang der zehn Sephirot</p>
+  <p class="album-desc">
+    Das zweite Album durchschreitet die zehn Sephirot des kabbalistischen Lebensbaums —
+    von der Krone (<em>כֶּתֶר</em>) bis zum Königreich (<em>מַלְכוּת</em>). Jedes Lied ist
+    einer Sefira zugeordnet und verbindet deren spirituelle Qualität mit den
+    neuen Erkenntnissen: Rav Kook, Rebbe Rashab, Ramchal, Rabbi Dessler,
+    dem frühen Streit zwischen Ergas und Ricchi, und dem Dialog mit Spinoza.
+  </p>
+  <span class="album-tag">רַב קוּק · Rav Kook</span>
+  <span class="album-tag">רֶבִּי רַשַׁ״ב · Rebbe Rashab</span>
+  <span class="album-tag">רַמְחַ״ל · Ramchal</span>
+  <span class="album-tag">מוּסָר · Mussar</span>
+</header>
+
+<!-- ══════════════════════════════════════════ SEFIROT MAP ══ -->
+<section class="sefira-map">
+  <!-- Row 1: Keter alone -->
+  <a class="sefira-cell full sf-keter" href="#song-keter">
+    <span class="sefira-num-small">א · I</span>
+    <span class="sefira-name-he">כֶּתֶר</span>
+    <span class="sefira-name-de">Die Krone — Rav Kook: Das verborgene Licht in allem</span>
+  </a>
+  <!-- Row 2: Chochma / Binah -->
+  <a class="sefira-cell sf-chochma" href="#song-chochma">
+    <span class="sefira-num-small">ב · II</span>
+    <span class="sefira-name-he">חָכְמָה</span>
+    <span class="sefira-name-de">Die Weisheit — Ramchal: Geordnete Emanation</span>
+  </a>
+  <a class="sefira-cell full sf-binah" href="#song-binah" style="grid-column: span 2;">
+    <span class="sefira-num-small">ג · III</span>
+    <span class="sefira-name-he">בִּינָה</span>
+    <span class="sefira-name-de">Das Verstehen — Rabbi Dessler: Grenzen der Erkenntnis</span>
+  </a>
+  <!-- Row 3: Chesed / Gevura -->
+  <a class="sefira-cell sf-chesed" href="#song-chesed">
+    <span class="sefira-num-small">ד · IV</span>
+    <span class="sefira-name-he">חֶסֶד</span>
+    <span class="sefira-name-de">Die Gnade — Rav Kook: Der Funke im Säkularen</span>
+  </a>
+  <a class="sefira-cell full sf-gevura" href="#song-gevura" style="grid-column: span 2;">
+    <span class="sefira-num-small">ה · V</span>
+    <span class="sefira-name-he">גְּבוּרָה</span>
+    <span class="sefira-name-de">Die Stärke — Rebbe Rashab: Die Grenze muss bewahrt werden</span>
+  </a>
+  <!-- Row 4: Tiferet alone -->
+  <a class="sefira-cell full sf-tiferet" href="#song-tiferet">
+    <span class="sefira-num-small">ו · VI</span>
+    <span class="sefira-name-he">תִּפְאֶרֶת</span>
+    <span class="sefira-name-de">Die Schönheit — Nefesch HaChaim und Tanya: Zwei Wege, ein Ziel</span>
+  </a>
+  <!-- Row 5: Netzach / Hod -->
+  <a class="sefira-cell sf-netzach" href="#song-netzach">
+    <span class="sefira-num-small">ז · VII</span>
+    <span class="sefira-name-he">נֶצַח</span>
+    <span class="sefira-name-de">Der Sieg — Ergas vs. Ricchi: Der ewige Streit</span>
+  </a>
+  <a class="sefira-cell full sf-hod" href="#song-hod" style="grid-column: span 2;">
+    <span class="sefira-num-small">ח · VIII</span>
+    <span class="sefira-name-he">הוֹד</span>
+    <span class="sefira-name-de">Der Glanz — Spinozas Begegnung mit dem Tzimtzum</span>
+  </a>
+  <!-- Row 6: Yesod alone -->
+  <a class="sefira-cell full sf-yesod" href="#song-yesod">
+    <span class="sefira-num-small">ט · IX</span>
+    <span class="sefira-name-he">יְסוֹד</span>
+    <span class="sefira-name-de">Das Fundament — Freier Wille und Verantwortung</span>
+  </a>
+  <!-- Row 7: Malchut alone -->
+  <a class="sefira-cell full sf-malchut" href="#song-malchut">
+    <span class="sefira-num-small">י · X</span>
+    <span class="sefira-name-he">מַלְכוּת</span>
+    <span class="sefira-name-de">Das Königreich — Die Seele als leeres Gefäß</span>
+  </a>
+</section>
+
+<!-- ════════════════════════════ SONG 1 · כֶּתֶר ══ -->
+<article class="song-article" id="song-keter">
+  <header class="song-header" data-ornament="○">
+    <div class="sefira-badge" style="color:var(--keter); border-color:var(--keter)">סְפִירָה א — שִׁיר רִאשׁוֹן · Lied I</div>
+    <p class="song-sefira-he" style="color:var(--keter)">כֶּתֶר</p>
+    <h2 class="song-title-he">אוֹר גָּנוּז בַּכֹּל</h2>
+    <p class="song-title-de">Das verborgene Licht in allem — Rav Kooks Panentheismus</p>
+    <p class="song-source">מָקוֹר: אוֹרוֹת הַקֹּדֶשׁ לְרַב קוּק — הָאוֹר הָאֵין-סוֹפִי נִסְתָּר בְּכָל פִּנָּה</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — ein warmer, voller Akkord, wie Sonnenaufgang. Kein Zögern, kein Schweigen — das Licht war immer da. Die Stimme tritt sofort ein, freudig und ruhig zugleich.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">בְּכָל אֶבֶן נִסְתָּר אוֹר,</span>
+      <span class="l-line">בְּכָל עָלֶה — זֹהַר שֶׁל מָקוֹם,</span>
+      <span class="l-line">הָעוֹלָם אֵינוֹ רֵיק מֵאֱלֹהִים —</span>
+      <span class="l-line">רַק עֶטְרַת אוֹרוֹ נֶעְלָמָה לָנוּ.</span>
+    </div>
+    <p class="l-de">In jedem Stein verbirgt sich Licht, / In jedem Blatt — der Glanz des Ortes. / Die Welt ist nicht leer von Gott — / Nur seine Lichtkrone ist uns verborgen.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הָאוֹר הַגָּנוּז — לֹא נֶעְדַּר,</span>
+      <span class="l-line">הוּא נִסְתַּר מֵאַחֲרֵי הַגְּבוּל —</span>
+      <span class="l-line">כְּמוֹ הַשֶּׁמֶשׁ מֵאַחַר הֶעָנָן,</span>
+      <span class="l-line">הַשֶּׁמֶשׁ תָּמִיד זוֹרַחַת — תָּמִיד.</span>
+    </div>
+    <p class="l-de">Das verborgene Licht — es fehlt nicht, / Es versteckt sich hinter dem Rand. / Wie die Sonne hinter der Wolke — / Die Sonne scheint immer — immer.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">כֶּתֶר, כֶּתֶר, עֶטֶר הָאוֹר —</span>
+        <span class="l-line">גָּנוּז בַּכֹּל, מְבֹרָךְ בַּכֹּל,</span>
+        <span class="l-line key">כֶּתֶר, כֶּתֶר, מֵעַל לַכֹּל —</span>
+        <span class="l-line">וּבְתוֹךְ הַכֹּל — אֲדֹנָי שֹׁכֵן.</span>
+      </div>
+      <p class="l-de">Krone, Krone, Diadem des Lichts — / Verborgen in allem, gesegnet in allem. / Krone, Krone, über allem — / Und im Inneren von allem — Adonai wohnt.</p>
+    </div>
+    <p class="stage-dir">Echo: <em>כֶּתֶר... כֶּתֶר... גָּנוּז... גָּנוּז...</em></p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Rav Kook: Abstieg dient dem Aufstieg]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">הַיְּרִידָה לְמַעַן הָעֲלִיָּה,</span>
+        <span class="l-line">הַחֹשֶׁךְ לְמַעַן הָאוֹר הָרַב —</span>
+        <span class="l-line">אַף הַכְּפִירָה — נִיצוֹץ אֱמֶת בָּהּ,</span>
+        <span class="l-line">כִּי כֶּתֶר מֵעַל לַהֶבְחֵן.</span>
+      </div>
+      <p class="l-de">Der Abstieg um des Aufstiegs willen, / Das Dunkel um des großen Lichts willen — / Sogar die Ketzerei trägt einen Funken Wahrheit, / Denn die Krone übersteigt jeden Unterschied.</p>
+    </div>
+    <p class="stage-dir">Rav Kooks Orot HaKodesh: Selbst säkulare Denker und Zweifler sind Teil des kosmischen Offenbarungsprozesses; der Irrtum enthält einen Funken.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">כֶּתֶר! כֶּתֶר! אוֹר לָעוֹלָם!</span>
+        <span class="l-line">אֲדֹנָי מָלֵא כָּל אַרְעָא — כָּבוֹד!</span>
+        <span class="l-line key">כֶּתֶר! כֶּתֶר! הַכֹּל בּוֹ!</span>
+        <span class="l-line">וּמֵעַל הַכֹּל — כִּסְאוֹ נִצָּב!</span>
+        <span class="l-line echo">(כֶּתֶר... כֶּתֶר... אוֹר גָּנוּז...)</span>
+      </div>
+      <p class="l-de">Krone! Krone! Licht für die Welt! / Adonai erfüllt die ganze Erde — Herrlichkeit! / Krone! Krone! Alles in Ihm! / Und über allem — sein Thron steht fest!</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">כֶּתֶר... אוֹר גָּנוּז... גָּנוּז בַּכֹּל...</span></div>
+      <p class="stage-dir">Gitarre behält Wärme — kein Verlöschen, sondern ein sanftes Überleiten in die Weisheit. Die Krone bleibt als Leuchten im Hintergrund aller folgenden Lieder.</p>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · כֶּתֶר</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Das Lied klingt fast buddhistisch: Gott in allem, Licht überall. Er kennt Rav Kook dem Namen nach — vielleicht aus dem religiösen Zionismus. Aber er hat ihn nie gehört. Die Aussage, dass sogar Ketzerei einen Funken Wahrheit enthält, überrascht ihn.</p>
+      <div class="sc-moment"><span class="sc-icon">🍃</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>אַף הַכְּפִירָה — נִיצוֹץ אֱמֶת בָּהּ</em>. Auch die Ketzerei trägt einen Funken. Er denkt: Das sagt ein Rabbiner? Über Ungläubige? Er öffnet sein Handy und googelt Rav Kook.</span></div>
+      <p>Er entdeckt, dass Kook der geistige Vater des religiösen Zionismus ist — und dass er Marx und Nietzsche als Teil der göttlichen Offenbarung sah. Das ist nicht die Religion, die er kannte.</p></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Rav Kook ist sein geistiger Vorfahre. Er singt beim Shabbat-Tisch manchmal Lieder, die Kooks Worte aufgreifen. Aber er hatte nie ein Lied, das die Sefira Keter mit Kooks Theologie verbindet. Das ist neu — und es trifft.</p>
+      <div class="sc-moment"><span class="sc-icon">🕍</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die Zeile <em>הַיְּרִידָה לְמַעַן הָעֲלִיָּה</em> — Der Abstieg dient dem Aufstieg. Das erklärt für ihn den Staat Israel: das weltliche Zionismus war ein Abstieg, der zum geistigen Aufstieg führt.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Er prüft: Wird Keter korrekt als Überschreitung aller Unterschiede dargestellt? Ja. Wird Kooks Panentheismus gegen wörtlichen Pantheismus abgegrenzt? Präzise — <em>מֵעַל לַהֶבְחֵן</em>, über dem Unterschied. Er betrachtet das Lied als theurgisch korrekt.</p>
+      <div class="sc-moment"><span class="sc-icon">👑</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die Verknüpfung von Keter als <em>עֶטֶר הָאוֹר</em> und Kooks Orot: Keter ist nicht nur Sefira, sondern lebendige Erfahrung. Das Lied macht Kosmologie spürbar.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי בְּמִקְרֶה</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er hört das Lied auf dem Markt in Tel Aviv aus einem offenen Café. <em>כֶּתֶר, כֶּתֶר, עֶטֶר הָאוֹר</em> — er versteht die Worte, aber nicht die Theologie. Er fragt den Barista: „Was ist Keter?" Der Barista, selbst Halb-religiös, erklärt: „Es ist die Krone Gottes im Lebensbaum." Für den Zufallshörer ist das wie ein Videospiel-Begriff.</p>
+      <div class="sc-moment"><span class="sc-icon">☕</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>בְּכָל אֶבֶן נִסְתָּר אוֹר</em> — In jedem Stein verbirgt sich Licht. Er greift seinen Kaffeebecher und denkt zum ersten Mal: Was wenn da wirklich etwas drin ist?</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ב —</div>
+
+<!-- ════════════════════════════ SONG 2 · חָכְמָה ══ -->
+<article class="song-article" id="song-chochma">
+  <header class="song-header" data-ornament="◈">
+    <div class="sefira-badge" style="color:var(--chochma); border-color:var(--chochma)">סְפִירָה ב — שִׁיר שֵׁנִי · Lied II</div>
+    <p class="song-sefira-he" style="color:var(--chochma)">חָכְמָה</p>
+    <h2 class="song-title-he">סֻלָּם הַסְּפִירוֹת</h2>
+    <p class="song-title-de">Die Leiter der Sephirot — Ramchals geordnete Emanation</p>
+    <p class="song-source">מָקוֹר: קֶלַח פִּתְחֵי חָכְמָה לְרַמְחַ״ל — יְרִידַת הָאוֹר בְּמַדְרֵגוֹת</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — sorgfältig, strukturiert, Ton für Ton aufsteigend wie eine Tonleiter. Ramchals Geist: Ordnung ist nicht Kälte, sondern Weisheit.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הָאוֹר יוֹרֵד בְּמַדְרֵגוֹת,</span>
+      <span class="l-line">כָּל סְפִירָה — כֶּלִי לִכְלִי —</span>
+      <span class="l-line">לֹא קְפִיצָה, לֹא כָּאוֹס —</span>
+      <span class="l-line">אֶלָּא סֵדֶר שֶׁל חָכְמָה עֶלְיוֹנָה.</span>
+    </div>
+    <p class="l-de">Das Licht steigt herab in Stufen, / Jede Sefira — ein Gefäß zum Gefäß hin — / Kein Sprung, kein Chaos — / Sondern die Ordnung höchster Weisheit.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">בְּכָל מַדְרֵגָה — מִנְיַן הָאוֹר שֶׁלָּהּ,</span>
+      <span class="l-line">כָּל עוֹלָם לְפִי כֹּחוֹ לְקַבֵּל —</span>
+      <span class="l-line">הַצִּמְצוּם בָּנָה בֵּית לְכָל נְשָׁמָה,</span>
+      <span class="l-line">וְדֶרֶךְ הַמִּצְווֹת — הָעֲלִיָּה בָּחֲזָרָה.</span>
+    </div>
+    <p class="l-de">Auf jeder Stufe — ihre Portion des Lichts, / Jede Welt empfängt gemäß ihrer Kraft — / Der Tzimtzum baute ein Haus für jede Seele, / Und durch die Mitzwot — der Aufstieg zurück.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">חָכְמָה, חָכְמָה, רֵאשִׁית הַדַּעַת —</span>
+        <span class="l-line">בָּהּ הַסֵּדֶר, בָּהּ הָאֱמֶת,</span>
+        <span class="l-line key">חָכְמָה, חָכְמָה, פֶּתַח הָאוֹר —</span>
+        <span class="l-line">דֶּרֶךְ הַסֻּלָּם — הַדֶּרֶךְ לַמָּרוֹם.</span>
+      </div>
+      <p class="l-de">Weisheit, Weisheit, Anfang des Wissens — / In ihr die Ordnung, in ihr die Wahrheit. / Weisheit, Weisheit, Öffnung des Lichts — / Der Weg der Leiter — der Weg zum Höchsten.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Ramchal vs. Spinoza]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">לֹא הַכֹּל שָׁוֶה — יֵשׁ מַעְלָה וּמַטָּה,</span>
+        <span class="l-line">יֵשׁ קֹדֶשׁ וּפָחוּת מִמֶּנּוּ —</span>
+        <span class="l-line">הַחָכְמָה יוֹדַעַת לְהַבְחִין בֵּינֵיהֶם,</span>
+        <span class="l-line">כִּי לֹא כָּל אוֹר שָׁוֶה בְּאוֹרוֹ.</span>
+      </div>
+      <p class="l-de">Nicht alles ist gleich — es gibt Oben und Unten, / Es gibt Heiliges und Minderes — / Die Weisheit weiß zu unterscheiden zwischen ihnen, / Denn nicht jedes Licht ist in seiner Helligkeit gleich.</p>
+    </div>
+    <p class="stage-dir">Ramchal gegen Spinozas Gleichsetzung: Das hierarchische Emanationsmodell lässt keinen Raum für pantheistische Nivellierung aller Realität.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">חָכְמָה! חָכְמָה! עֲלֵה בַּסֻּלָּם!</span>
+        <span class="l-line">כָּל מִצְוָה — שְׂלַב אַחֵר כְּלַפֵּי מַעְלָה!</span>
+        <span class="l-line key">חָכְמָה! חָכְמָה! לֵאלֹהִים הַדֶּרֶךְ!</span>
+        <span class="l-line">אַךְ רַק דֶּרֶךְ הַתּוֹרָה — לֹא אַחֵר!</span>
+        <span class="l-line echo">(חָכְמָה... חָכְמָה... סֵדֶר... אוֹר...)</span>
+      </div>
+      <p class="l-de">Weisheit! Weisheit! Steige auf der Leiter! / Jede Mitzwa — eine weitere Sprosse nach oben! / Weisheit! Weisheit! Der Weg zu Gott! / Doch nur durch die Tora — nicht anders!</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">חָכְמָה... סֻלָּם... מַדְרֵגָה... מַדְרֵגָה...</span></div>
+      <p class="stage-dir">Gitarren-Töne steigen ab — wie Licht, das Stufe für Stufe in die Welt herabsteigt. Bereit für Binah: das Verstehen der Grenzen.</p>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · חָכְמָה</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Die Metapher der Leiter kennt er aus der Bibel — Jakobsleiter, Sulam Yaakov. Dass Ramchal die Sephirot als Leiterstufen beschreibt, leuchtet ihm sofort ein. Er ist Software-Entwickler: Hierarchie, Schichten, Abstraktionsebenen — das ist sein Denkmodell.</p>
+      <div class="sc-moment"><span class="sc-icon">💻</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>לֹא קְפִיצָה, לֹא כָּאוֹס — אֶלָּא סֵדֶר שֶׁל חָכְמָה</em>. Kein Sprung, kein Chaos — das ist Software-Architektur! Er schreibt in seinem Tech-Blog: „Ramchal war der erste Systemarchitekt."</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Ramchal ist für ihn ein Heiliger — Mesilat Yesharim ist Pflichtlektüre. Aber Klach Pitchei Chochma kennt er kaum. Das Lied öffnet ihm einen neuen Ramchal: nicht nur Ethiker, sondern kosmologischer Systematiker.</p>
+      <div class="sc-moment"><span class="sc-icon">📗</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>דֶּרֶךְ הַמִּצְווֹת — הָעֲלִיָּה בָּחֲזָרָה</em>. Jede Mitzwa ist ein Aufstieg. Er beginnt, Mitzwot nicht als Pflicht, sondern als Levitation zu verstehen.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Ramchals strenge Hierarchie gegen Rav Kooks panentheistische Toleranz — für ihn ist das die zentrale Debatte der modernen Kabbala. Das Lied stellt beide dar ohne zu urteilen. Respekt.</p>
+      <div class="sc-moment"><span class="sc-icon">⚖️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>לֹא כָּל אוֹר שָׁוֶה בְּאוֹרוֹ</em>. Nicht jedes Licht ist gleich hell. Das ist die Antwort auf Spinoza in einer einzigen Zeile. Präzise lurianische Theologie.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Der Refrain <em>חָכְמָה, חָכְמָה, פֶּתַח הָאוֹר</em> ist einprägsam. Er summt ihn beim Kochen. Chochma kennt er als hebräisches Wort für Weisheit. Dass es eine spezifische Sefira ist, weiß er nicht — aber das Bild der Leiter als Weg nach oben versteht er universal.</p>
+      <div class="sc-moment"><span class="sc-icon">🧗</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כָּל מִצְוָה — שְׂלַב אַחֵר כְּלַפֵּי מַעְלָה</em>. Er fragt seine Freundin: „Was ist eine Mitzwa genau?" Es wird ein langer Abend.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ג —</div>
+
+<!-- ════════════════════════════ SONG 3 · בִּינָה ══ -->
+<article class="song-article" id="song-binah">
+  <header class="song-header" data-ornament="◉">
+    <div class="sefira-badge" style="color:var(--binah); border-color:var(--binah)">סְפִירָה ג — שִׁיר שְׁלִישִׁי · Lied III</div>
+    <p class="song-sefira-he" style="color:var(--binah)">בִּינָה</p>
+    <h2 class="song-title-he">גְּבוּלוֹת הַדַּעַת</h2>
+    <p class="song-title-de">Die Grenzen des Wissens — Rabbi Desslers Mussar des Tzimtzum</p>
+    <p class="song-source">מָקוֹר: מִכְתַּב מֵאֵלִיָּהוּ לְרַבִּי אֱלִיָּהוּ דֶּסְלֶר — גְּבוּלוֹת הַהַכָּרָה</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — nachdenklich, ruhig. Ein Motiv, das sich selbst in Frage stellt. Binah ist das tiefe Verstehen, das auch die eigene Begrenzung begreift.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">כָּל מַה שֶּׁאֲנִי יוֹדֵעַ — יָחֵס הוּא,</span>
+      <span class="l-line">כָּל מַה שֶּׁאֶרְאֶה — דֶּרֶךְ הַפַּרְגּוֹד —</span>
+      <span class="l-line">הָאֱמֶת הַמֻּחְלֶטֶת מֵעַל לִי,</span>
+      <span class="l-line">וַאֲנִי רוֹאֶה רַק צֵל שֶׁל צֵל.</span>
+    </div>
+    <p class="l-de">Alles, was ich weiß — ist relativ, / Alles, was ich sehe — durch den Vorhang — / Die absolute Wahrheit liegt über mir, / Und ich sehe nur einen Schatten eines Schattens.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">גַּם הַצִּמְצוּם לִמְּדַנִי עֲנָוָה —</span>
+      <span class="l-line">אֱלֹהִים הִסְתִּיר לְמַעַן אֶחְיֶה,</span>
+      <span class="l-line">וְאִם הוּא הִצְטַמְצֵם לְמַעֲנִי,</span>
+      <span class="l-line">אֶצְטַמְצֵם גַּם אֲנִי לִפְנֵי הָאֱמֶת.</span>
+    </div>
+    <p class="l-de">Auch der Tzimtzum lehrte mich Demut — / Gott verbarg sich, damit ich lebe, / Und wenn Er sich für mich kontrahiert hat, / Werde auch ich mich vor der Wahrheit kontrahieren.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">בִּינָה, בִּינָה, לָדַעַת הַגְּבוּל —</span>
+        <span class="l-line">לֹא בְּגַאֲוָה אֶלָּא בִּשְׁתִיקָה,</span>
+        <span class="l-line key">בִּינָה, בִּינָה, עֶנְוַת הַדַּעַת —</span>
+        <span class="l-line">כִּי רַק מִי שֶׁיֵּדַע לְהִצְטַמְצֵם — יֵדָע.</span>
+      </div>
+      <p class="l-de">Binah, Binah, die Grenze zu kennen — / Nicht in Hochmut, sondern in Stille. / Binah, Binah, die Demut des Wissens — / Denn nur wer sich zu kontrahieren weiß — weiß.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Dessler: Der Schleier der Schöpfung]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">הָעוֹלָם קַיָּם כִּי אֱלֹהִים הֶסְתִּיר אֲמִתּוֹ,</span>
+        <span class="l-line">הַמַּסָּךְ — לֹא עֲלִיבוּת, אֶלָּא חֶסֶד —</span>
+        <span class="l-line">כִּי אִלְמָלֵא הַהֶסְתֵּר — לֹא הָיְתָה בְּחִירָה,</span>
+        <span class="l-line">וְאִלְמָלֵא בְּחִירָה — לֹא הָיָה אֱנוֹשׁ.</span>
+      </div>
+      <p class="l-de">Die Welt existiert, weil Gott seine Wahrheit verbarg, / Der Schleier — nicht Armut, sondern Gnade — / Denn ohne Verborgenheit gäbe es keine freie Wahl, / Und ohne freie Wahl — gäbe es keinen Menschen.</p>
+    </div>
+    <p class="stage-dir">Rabbi Dessler (Michtav MeEliyahu): Die Verborgenheit Gottes ist nicht Mangel, sondern Bedingung für menschliche Würde und Verantwortung.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">בִּינָה! בִּינָה! הַצִּמְצוּם — חֶסֶד!</span>
+        <span class="l-line">אֱלֹהִים הִסְתִּיר — לְמַעַן אֶבְחַר!</span>
+        <span class="l-line key">בִּינָה! בִּינָה! גַּם אֲנִי אֶצְטַמְצֵם!</span>
+        <span class="l-line">וּמִתּוֹךְ הַשְּׁתִיקָה — אֶמְצָא אֶת הָאֱמֶת!</span>
+        <span class="l-line echo">(בִּינָה... גְּבוּל... עֲנָוָה...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">בִּינָה... שְׁתִיקָה... גְּבוּל... עֲנָוָה...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · בִּינָה</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Die Aussage, dass das menschliche Wissen relativ ist, klingt für ihn nach Kant oder Epistemologie. Aber dass Gott sich verbirgt, damit der Mensch Entscheidungsfreiheit hat — das ist ein Argument, das er nie in religiösem Kontext gehört hat. Es ist überzeugend.</p>
+      <div class="sc-moment"><span class="sc-icon">🔭</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כָּל מַה שֶּׁאֲנִי יוֹדֵעַ — יָחֵס הוּא</em>. Alles Wissen ist relativ. Aber das bedeutet nicht Nihilismus — es bedeutet Demut. Das findet er klüger als den meisten Relativismus.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Rabbi Dessler ist für ihn die Mussar-Bewegung in ihrer reinsten Form. Die Verbindung von Tzimtzum und Ethik — Gott verbirgt sich, damit wir wählen können — gibt ihm ein tiefes Verständnis der freien Willenslehre.</p>
+      <div class="sc-moment"><span class="sc-icon">🤲</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כִּי רַק מִי שֶׁיֵּדַע לְהִצְטַמְצֵם — יֵדָע</em>. Nur wer sich selbst kontrahiert, kennt wirklich. Das ist die tiefste Mussar-Aussage: Selbstbegrenzung als Weg zur Wahrheit.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Binah als Sefira des tiefen Verstehens, das auch die eigene Begrenzung erkennt — das ist exakt die lurianische Funktion von Binah: Sie ist das Gebärmutter-Prinzip, das empfängt und begrenzt. Dessler bringt dies in ethische Sprache.</p>
+      <div class="sc-moment"><span class="sc-icon">📿</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die Wendung — <em>אֶצְטַמְצֵם גַּם אֲנִי לִפְנֵי הָאֱמֶת</em>. Ich werde mich auch kontrahieren vor der Wahrheit. Das ist Bittul — Selbstauflösung — in der Sprache der Mussar.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er hört das Lied in einer schwierigen Phase: er weiß nicht, was er im Leben machen soll. Der Refrain <em>לָדַעַת הַגְּבוּל</em> — die Grenze zu kennen — trifft ihn. Nicht schwach zu sein ist das Ziel, sondern die eigene Grenze zu akzeptieren.</p>
+      <div class="sc-moment"><span class="sc-icon">🌊</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כִּי אִלְמָלֵא הַהֶסְתֵּר — לֹא הָיְתָה בְּחִירָה</em>. Ohne Verborgenheit keine Wahl. Er versteht: Die Ungewissheit seines Lebens ist kein Fehler — sie ist Voraussetzung für seine Freiheit.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ד —</div>
+
+<!-- ════════════════════════════ SONG 4 · חֶסֶד ══ -->
+<article class="song-article" id="song-chesed">
+  <header class="song-header" data-ornament="◎">
+    <div class="sefira-badge" style="color:var(--chesed); border-color:var(--chesed)">סְפִירָה ד — שִׁיר רְבִיעִי · Lied IV</div>
+    <p class="song-sefira-he" style="color:var(--chesed)">חֶסֶד</p>
+    <h2 class="song-title-he">גַּם הַחִילוֹנִי נוֹשֵׂא נִיצוֹץ</h2>
+    <p class="song-title-de">Auch der Säkulare trägt einen Funken — Rav Kooks Gnade ohne Grenzen</p>
+    <p class="song-source">מָקוֹר: אוֹרוֹת לְרַב קוּק — גַּם הַצִּיּוֹנִי הַחִילוֹנִי חֵלֶק מִן הַגִּלּוּי הָאֱלֹהִי</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — offen, freundlich, einladend. Chesed ist die Sefira der Gnade ohne Grenzen. Die Musik öffnet die Arme.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הָאִישׁ שֶׁאֵינוֹ מְאַמִּין —</span>
+      <span class="l-line">גַּם בְּלִבּוֹ נִיצוֹץ בּוֹעֵר,</span>
+      <span class="l-line">כִּי הָאוֹר הַגָּנוּז לֹא בּוֹחֵר</span>
+      <span class="l-line">רַק בְּמִי שֶׁיּוֹדֵעַ שְׁמוֹ.</span>
+    </div>
+    <p class="l-de">Der Mann, der nicht glaubt — / Auch in seinem Herzen brennt ein Funke. / Denn das verborgene Licht wählt nicht / Nur den, der seinen Namen kennt.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הַחַלּוּץ שֶׁבָּנָה אֶת הָאָרֶץ,</span>
+      <span class="l-line">בְּלִי שֵׁם שָׁמַיִם עַל שְׂפָתָיו —</span>
+      <span class="l-line">גַּם הוּא הָיָה שָׁלִיחַ בְּלִי לָדַעַת,</span>
+      <span class="l-line">כִּי חֶסֶד עֶלְיוֹן לֹא מְחַשֵּׁב.</span>
+    </div>
+    <p class="l-de">Der Chaluz, der das Land aufgebaut hat, / Ohne den Himmelsnamen auf seinen Lippen — / Auch er war ein Bote, ohne es zu wissen, / Denn höchste Gnade rechnet nicht.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">חֶסֶד, חֶסֶד, לְכָל אֲשֶׁר חַי —</span>
+        <span class="l-line">אֲדֹנָי לֹא עָזַב אֶחָד מִכָּל בְּרוּאָיו,</span>
+        <span class="l-line key">חֶסֶד, חֶסֶד, גָּדוֹל מֵהַשָּׁמַיִם —</span>
+        <span class="l-line">גַּם בִּמְקוֹם שֶׁלֹּא חִפֵּשׂ — הוּא מוֹצֵא.</span>
+      </div>
+      <p class="l-de">Chesed, Chesed, für alle Lebenden — / Adonai hat keinen seiner Geschöpfe verlassen. / Chesed, Chesed, größer als der Himmel — / Auch wo man nicht suchte — Er findet.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">אַף שְׁפִינוֹזָה — חָשַׁב בֶּאֱמֶת,</span>
+        <span class="l-line">רַק הֶחְסִיר אֶת הָעוֹלֶה מֵעַל —</span>
+        <span class="l-line">הַחֶסֶד רוֹאֶה גַּם בַּטָּעוּת</span>
+        <span class="l-line">אֶת הַנִּיצוֹץ שֶׁל אֱמֶת שֶׁהִתְגַּלָּה.</span>
+      </div>
+      <p class="l-de">Sogar Spinoza — dachte wahrhaftig, / Er hat nur die Transzendenz vergessen — / Die Gnade sieht selbst im Irrtum / Den Funken der Wahrheit, der sich offenbarte.</p>
+    </div>
+    <p class="stage-dir">Rav Kook: Spinozas Pantheismus enthält einen Funken Wahrheit — die Anerkennung der Immanenz. Sein Fehler: Er leugnet die Transzendenz. Aber die Gnade sieht auch das Wahre im Irrtum.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">חֶסֶד! חֶסֶד! אֵין גְּבוּל לְאַהֲבָתוֹ!</span>
+        <span class="l-line">גַּם הֶרֶשַׁע — כָּלוּל בְּהַחְזָרָתוֹ!</span>
+        <span class="l-line key">חֶסֶד! חֶסֶד! לֹא יִנְהַג בְּכָעַס!</span>
+        <span class="l-line">כִּי הַכֹּל — בַּסּוֹף — חֵלֶק מֵהַאוֹר!</span>
+        <span class="l-line echo">(חֶסֶד... חֶסֶד... לֹא גְּבוּל...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">חֶסֶד... לְכָל אֲשֶׁר חַי... לֹא גְּבוּל...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · חֶסֶד</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Das ist das Lied, das er gebraucht hat. Jemand sagt ihm, dass seine weltliche Identität, sein Leben ohne Gebet, sein Aufbau des Landes — dass das alles Teil von etwas Größerem ist. Er ist kein Ausgestoßener. Er ist ein Bote, der es nicht weiß.</p>
+      <div class="sc-moment"><span class="sc-icon">🏗️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>גַּם הוּא הָיָה שָׁלִיחַ בְּלִי לָדַעַת</em>. Auch er war ein Bote. Er denkt an seinen Großvater, den Chaluz aus dem Kibbuz, der nie gebetet hat. Jetzt sieht er ihn anders.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Das ist Rav Kooks bekannteste und umstrittenste These: Die säkularen Zionisten sind Teil der Geula. Er stimmt zu, aber er hadert: Was ist mit Halacha, was ist mit Grenzen? Das nächste Lied wird es beantworten.</p>
+      <div class="sc-moment"><span class="sc-icon">🕊️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כִּי חֶסֶד עֶלְיוֹן לֹא מְחַשֵּׁב</em>. Höchste Gnade rechnet nicht. Er nickt — aber innerlich fragt er: Gibt es wirklich gar keine Grenzen der Gnade?</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Chesed als grenzenlose Ausdehnung — das ist die Sefira korrekt zugeordnet. Kooks Inklusivismus ist die theologische Entsprechung von Chesed. Er fragt sich: Aber was ist dann Gevura? Das nächste Lied (Rebbe Rashab) wird die Grenze ziehen.</p>
+      <div class="sc-moment"><span class="sc-icon">⚡</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Das Lied über Spinoza in der Bridge — ein Funken Wahrheit sogar im Irrtum. Das ist Chesed-Denken in seiner reinsten Form: Man sieht das Gute in allem.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er, der nicht glaubt, hört: „Du trägst auch einen Funken." Ohne Bedingungen. Ohne Forderung, sich zu ändern. Das ist ein Satz, den er von der Religion nie gehört hat. Er ist überrascht.</p>
+      <div class="sc-moment"><span class="sc-icon">✨</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>הָאוֹר הַגָּנוּז לֹא בּוֹחֵר רַק בְּמִי שֶׁיּוֹדֵעַ שְׁמוֹ</em> — Das verborgene Licht wählt nicht nur den, der seinen Namen kennt. Er atmet aus. Er fühlt sich eingeladen — nicht verurteilt.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ה —</div>
+
+<!-- ════════════════════════════ SONG 5 · גְּבוּרָה ══ -->
+<article class="song-article" id="song-gevura">
+  <header class="song-header" data-ornament="✦">
+    <div class="sefira-badge" style="color:var(--gevura); border-color:var(--gevura)">סְפִירָה ה — שִׁיר חֲמִישִׁי · Lied V</div>
+    <p class="song-sefira-he" style="color:var(--gevura)">גְּבוּרָה</p>
+    <h2 class="song-title-he">הַגְּבוּל הַקָּדוֹשׁ</h2>
+    <p class="song-title-de">Die heilige Grenze — Rebbe Rashabers Stärke gegen Auflösung</p>
+    <p class="song-source">מָקוֹר: קוּנְטְרֵס וּמַעְיַן לְרֶבִּי רַשַׁ״ב — הַקְּלִיפָּה אֵינָהּ קֹדֶשׁ וְאֵין בָּהּ אֱמֶת</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — rhythmisch, fest, bestimmt. Keine Fragen, nur Entschlossenheit. Gevura ist die Sefira der Stärke, der Grenze, des Urteils.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">יֵשׁ גְּבוּל בֵּין קֹדֶשׁ לְחוֹל,</span>
+      <span class="l-line">בֵּין אוֹר לְחֹשֶׁךְ — לֹא הַכֹּל שָׁוֶה —</span>
+      <span class="l-line">הַצִּמְצוּם לֹא נֶאֱמַר לַעֲבוֹר,</span>
+      <span class="l-line">כִּי הַגְּבוּל הוּא עַצְמוֹ — קֹדֶשׁ.</span>
+    </div>
+    <p class="l-de">Es gibt eine Grenze zwischen Heiligem und Profanem, / Zwischen Licht und Dunkel — nicht alles ist gleich — / Der Tzimtzum wurde nicht gesagt, um überschritten zu werden, / Denn die Grenze selbst — ist Heiligkeit.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הַתְּנוּעָה הַחִילוֹנִית — קְלִיפָּה הִיא,</span>
+      <span class="l-line">לֹא גִּלּוּי אֱלֹהִי — אֶלָּא כִּיסּוּי —</span>
+      <span class="l-line">הָאוֹר הַטָּמוּן שָׁם — צָרִיךְ לְהִוָּדֵל,</span>
+      <span class="l-line">לֹא לְהִטָּמֵע בַּחֹשֶׁךְ שֶׁמְּכַסֵּהוּ.</span>
+    </div>
+    <p class="l-de">Die weltliche Bewegung — ist eine Kelipa, / Keine göttliche Offenbarung — sondern Verhüllung — / Das Licht, das dort verborgen ist — muss abgesondert werden, / Nicht im Dunkel aufgehen, das es bedeckt.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">גְּבוּרָה, גְּבוּרָה, חֶרֶב הָאֱמֶת —</span>
+        <span class="l-line">לֹא כָּל אוֹר — אוֹר אֱלֹהִים הוּא,</span>
+        <span class="l-line key">גְּבוּרָה, גְּבוּרָה, הֲבְחֵן — בַּחֲרֵד —</span>
+        <span class="l-line">כִּי הַגְּבוּל שֹׁמֵר אֶת הַחַיִּים.</span>
+      </div>
+      <p class="l-de">Gevura, Gevura, das Schwert der Wahrheit — / Nicht jedes Licht — ist Gotteslicht. / Gevura, Gevura, unterscheide — in Ehrfurcht — / Denn die Grenze schützt das Leben.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Rebbe Rashab und Spinoza]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">שְׁפִינוֹזָה שָׁלַל אֶת הַגְּבוּל,</span>
+        <span class="l-line">וְיָצַר אֱלֹהִים שֶׁל טֶבַע בְּלַד —</span>
+        <span class="l-line">אֲבָל בְּלִי גְּבוּל — אֵין בְּחִירָה חָפְשִׁית,</span>
+        <span class="l-line">וּבְלִי בְּחִירָה — אֵין חֶסֶד וְאֵין דִּין.</span>
+      </div>
+      <p class="l-de">Spinoza hat die Grenze geleugnet / Und einen Gott der bloßen Natur erschaffen — / Aber ohne Grenze — keine freie Wahl, / Und ohne Wahl — kein Chesed und kein Gericht.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">גְּבוּרָה! גְּבוּרָה! שְׁמֹר אֶת הַגְּבוּל!</span>
+        <span class="l-line">הַהֶבְדֵּל בֵּין קֹדֶשׁ לְחוֹל — חַיִּים הוּא!</span>
+        <span class="l-line key">גְּבוּרָה! גְּבוּרָה! לֹא חֵרֶם — כִּי אַהֲבָה!</span>
+        <span class="l-line">הַגְּבוּל הַקָּדוֹשׁ — מָגֵן לִנְשָׁמָה!</span>
+        <span class="l-line echo">(גְּבוּרָה... גְּבוּל... קֹדֶשׁ...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">גְּבוּרָה... גְּבוּל... קֹדֶשׁ... חַיִּים...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · גְּבוּרָה</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Das vorherige Lied (Chesed) hat ihn begrüßt — dieses grenzt aus. Er fühlt sich leicht provoziert von der Aussage, dass seine Bewegung Kelipa ist. Aber er hört weiter. Die Spannung zwischen Lied IV und V hält ihn fest.</p>
+      <div class="sc-moment"><span class="sc-icon">⚔️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>הַגְּבוּל שֹׁמֵר אֶת הַחַיִּים</em>. Die Grenze schützt das Leben. Das klingt nicht nach Ausgrenzung — das klingt nach Schutz. Er denkt an Grenzen im persönlichen Leben: die, die er hätte ziehen sollen.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Das ist die Antwort auf das Chesed-Lied, die er gesucht hat. Gevura und Chesed müssen im Gleichgewicht sein. Rebbe Rashab und Rav Kook sind nicht Gegner — sie sind die zwei Seiten des Lebensbaums.</p>
+      <div class="sc-moment"><span class="sc-icon">⚖️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>לֹא חֵרֶם — כִּי אַהֲבָה</em>. Die Grenze nicht als Bann — sondern als Liebe. Das ist für ihn die reifste Formulierung: Grenzen aus Liebe, nicht aus Feindschaft.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Gevura als Gegenwicht zu Chesed — die klassische lurianische Balance. Das Album zeigt jetzt, wie die Sephirot keine abstrakten Ideen sind, sondern lebendige Kräfte, die in theologischen Positionen sichtbar werden: Kook = Chesed, Rashab = Gevura.</p>
+      <div class="sc-moment"><span class="sc-icon">🌳</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Er versteht jetzt das Album-Konzept: Jeder Denker ist eine Sefira. Das ist Kabbala als Hermeneutik — nicht nur Kosmologie.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er hat gehört: Zuerst „Du bist eingeschlossen" (Chesed), jetzt „Es gibt eine Grenze" (Gevura). Das ist die ehrlichste religiöse Botschaft, die er je gehört hat — keine falsche Schmeichelei, keine pure Ausgrenzung. Beides.</p>
+      <div class="sc-moment"><span class="sc-icon">🚪</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die Spannung zwischen Lied IV und V ergibt für ihn ein Bild von Gott, das er glaubwürdiger findet als alles, was er in seiner Kindheit über Religion gehört hat.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ו · ז · ח · ט · י —</div>
+
+<!-- ════════════════════════════ SONG 6 · תִּפְאֶרֶת ══ -->
+<article class="song-article" id="song-tiferet">
+  <header class="song-header" data-ornament="✡">
+    <div class="sefira-badge" style="color:var(--tiferet); border-color:var(--tiferet)">סְפִירָה ו — שִׁיר שִׁשִּׁי · Lied VI</div>
+    <p class="song-sefira-he" style="color:var(--tiferet)">תִּפְאֶרֶת</p>
+    <h2 class="song-title-he">שְׁנֵי הַדְּרָכִים — לֵב אֶחָד</h2>
+    <p class="song-title-de">Zwei Wege — ein Herz: Nefesch HaChaim und Tanya in der Mitte</p>
+    <p class="song-source">מָקוֹר: נֶפֶשׁ הַחַיִּים שַׁעַר ג׳ וְתַנְיָא מח–מט — אֵין מַחֲלֹקֶת אֶלָּא שְׁאֵלַת הַיִּשׂוּם</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — harmonisch, ausgewogen, zwei Melodielinien die sich umschlingen. Tiferet ist die Sefira der Schönheit, der Mitte, des Gleichgewichts. Hier begegnen sich Chesed und Gevura.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">אֶחָד הָלַךְ בְּדֶרֶךְ הַלֵּב,</span>
+      <span class="l-line">וְאֶחָד בְּדֶרֶךְ הַשֵּׂכֶל הַנָּבוֹן —</span>
+      <span class="l-line">שְׁנֵיהֶם עָלוּ לָהָר הָאֶחָד,</span>
+      <span class="l-line">שְׁנֵי שְׁבִילִים — אֵל אֶחָד.</span>
+    </div>
+    <p class="l-de">Einer ging den Weg des Herzens, / Und einer den Weg des klaren Verstandes — / Beide stiegen denselben Berg hinauf, / Zwei Pfade — Ein Gott.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הַחַסִיד אוֹמֵר: הַכֹּל בּוֹ — תָּמִיד,</span>
+      <span class="l-line">הַמִּתְנַגֵּד אוֹמֵר: שְׁמֹר אֶת הַגְּבוּל —</span>
+      <span class="l-line">וּבִינֵיהֶם — תִּפְאֶרֶת עוֹמֶדֶת,</span>
+      <span class="l-line">אוֹמֶרֶת: שְׁנֵיכֶם צוֹדְקִים — שְׁנֵיכֶם.</span>
+    </div>
+    <p class="l-de">Der Chassid sagt: Alles in Ihm — immer, / Der Mitnaged sagt: Wahre die Grenze — / Und zwischen beiden steht Tiferet, / Und sagt: Ihr beide habt recht — ihr beide.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">תִּפְאֶרֶת, תִּפְאֶרֶת, יוֹפִי הָאֱמֶת —</span>
+        <span class="l-line">בֵּין הַדִּין לַחֶסֶד — הַלֵּב,</span>
+        <span class="l-line key">תִּפְאֶרֶת, תִּפְאֶרֶת, שְׁנֵי דְּרָכִים —</span>
+        <span class="l-line">מְחַבֵּר לֵב אֶחָד לֵאלֹהִים אֶחָד.</span>
+      </div>
+      <p class="l-de">Tiferet, Tiferet, Schönheit der Wahrheit — / Zwischen Gericht und Gnade — das Herz. / Tiferet, Tiferet, zwei Wege — / Verbindet ein Herz mit einem Gott.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">מִנֶּגֶד — מִבִּפְנִים: שְׁתֵּי עֵינַיִם,</span>
+        <span class="l-line">הַחַסִיד רוֹאֶה מִבִּפְנִים אֶת הָאֵין-סוֹף,</span>
+        <span class="l-line">הַמִּתְנַגֵּד שֹׁמֵר גְּבוּל לְמַעַן הַהֲלָכָה —</span>
+        <span class="l-line">שְׁנֵיהֶם בְּתוֹרָה אַחַת מוֹצְאִים שָׁלוֹם.</span>
+      </div>
+      <p class="l-de">Von außen — von innen: zwei Augen, / Der Chassid sieht von innen das Unendliche, / Der Mitnaged bewahrt die Grenze für die Halacha — / Beide finden Frieden in einer Tora.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">תִּפְאֶרֶת! תִּפְאֶרֶת! לֵב הָעֵץ!</span>
+        <span class="l-line">חֶסֶד וּגְבוּרָה — בְּלֵב אֶחָד!</span>
+        <span class="l-line key">תִּפְאֶרֶת! תִּפְאֶרֶת! יֹפִי שֶׁל הַדֶּרֶךְ!</span>
+        <span class="l-line">שְׁנֵי שְׁבִילִים — אֶחָד הַיַּעַד!</span>
+        <span class="l-line echo">(תִּפְאֶרֶת... לֵב... אֶחָד...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">תִּפְאֶרֶת... לֵב... שָׁלוֹם... שָׁלוֹם...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · תִּפְאֶרֶת</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Er hat gerade zwei Lieder gehört, die verschiedene religiöse Haltungen vertreten, ohne die andere zu verwerfen. Das hier sagt: Beide haben Recht. Das ist für ihn das reifste religiöse Denken, dem er begegnet ist.</p>
+      <div class="sc-moment"><span class="sc-icon">🤝</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>שְׁנֵי שְׁבִילִים — אֵל אֶחָד</em>. Zwei Pfade — ein Gott. Er denkt: Vielleicht ist das auch für Religiöse und Säkulare wahr.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Er war jahrelang in der Debatte Chassidim vs. Litvakim gefangen. Dieses Lied spricht von Frieden. Nicht Kompromiss — Synthese. Tiferet ist die Mitte des Lebensbaums aus einem Grund.</p>
+      <div class="sc-moment"><span class="sc-icon">🌿</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>שְׁנֵיהֶם בְּתוֹרָה אַחַת מוֹצְאִים שָׁלוֹם</em>. Beide finden Frieden in einer Tora. Er sendet das Lied seinem besten Freund, einem Litvak.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Tiferet als Herz des Lebensbaums — präzise. Die Sefira verbindet Chesed und Gevura. Das Album verwendet die Sephirot nicht nur als Struktur, sondern als theologisches Argument: Der Konflikt Kook / Rashab ist im Lebensbaum bereits aufgelöst.</p>
+      <div class="sc-moment"><span class="sc-icon">🌳</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Das Bild der zwei Augen — מִנֶּגֶד וּמִבִּפְנִים. Von außen und von innen. Das ist die duale Perspektive von Nefesch HaChaim und Tanya auf einem Bild zusammengefasst.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er hat das Album jetzt fünf Lieder lang gehört. Er folgt dem Bogen. Dieses Lied gibt ihm das Gefühl, dass das Album ihn zu etwas führt — nicht belehrt, sondern einlädt.</p>
+      <div class="sc-moment"><span class="sc-icon">🎼</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>תִּפְאֶרֶת... יֹפִי שֶׁל הַדֶּרֶךְ</em>. Schönheit des Weges. Er versteht jetzt, dass das Album selbst Tiferet ist — schön in seiner Ausgewogenheit.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ז —</div>
+
+<!-- ════════════════════════════ SONG 7 · נֶצַח ══ -->
+<article class="song-article" id="song-netzach">
+  <header class="song-header" data-ornament="◇">
+    <div class="sefira-badge" style="color:var(--netzach); border-color:var(--netzach)">סְפִירָה ז — שִׁיר שְׁבִיעִי · Lied VII</div>
+    <p class="song-sefira-he" style="color:var(--netzach)">נֶצַח</p>
+    <h2 class="song-title-he">מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</h2>
+    <p class="song-title-de">Streit um des Himmels willen — Ergas und Ricchi: Der ewige Disput</p>
+    <p class="song-source">מָקוֹר: וִויכּוּחַ בֵּין רַבִּי יוֹסֵף אֶרְגָּס לְרַבִּי עִמָּנוּאֵל רִיקִי — 1736/1737 בְּאִיטַלְיָה</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — zwei Stimmen, die miteinander dialogieren. Eine Phrase antwortet auf die andere. Nicht Kampf, sondern Ringen um Wahrheit.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1 — Ergas]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">אֶרְגָּס אָמַר: לֹא כְּפִשּׁוּטוֹ —</span>
+      <span class="l-line">הַצִּמְצוּם הוּא מַסָּךְ, לֹא עֲזִיבָה —</span>
+      <span class="l-line">הָאֵין-סוֹף נוֹכֵחַ בְּכֹל מָקוֹם,</span>
+      <span class="l-line">רַק אוֹרוֹ נֶאֱסַף, לֹא עַצְמוּתוֹ.</span>
+    </div>
+    <p class="l-de">Ergas sagte: Nicht wörtlich — / Der Tzimtzum ist ein Schleier, kein Verlassen — / Das Unendliche ist überall gegenwärtig, / Nur sein Licht wurde zurückgezogen, nicht sein Wesen.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2 — Ricchi]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">רִיקִי עָנָה: יֵשׁ גְּבוּל אֲמִתִּי,</span>
+      <span class="l-line">אֱלֹהִים מֻבְדָּל מִן הַנִּבְרָאִים —</span>
+      <span class="l-line">בְּלִי רֶוַח אֲמִתִּי בֵּין הַבּוֹרֵא לְנִבְרָא,</span>
+      <span class="l-line">אֵין כָּבוֹד אֱלֹהִים — אֵין שׁוּם כָּבוֹד.</span>
+    </div>
+    <p class="l-de">Ricchi antwortete: Es gibt eine echte Grenze, / Gott ist von den Geschöpfen getrennt — / Ohne wirklichen Abstand zwischen Schöpfer und Geschöpf, / Gibt es keine göttliche Würde — überhaupt keine.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">נֶצַח, נֶצַח, הַוִּיכּוּחַ נִצְחִי —</span>
+        <span class="l-line">אַךְ זֶה וְזֶה — לְשֵׁם שָׁמַיִם,</span>
+        <span class="l-line key">נֶצַח, נֶצַח, הָאֱמֶת נֶצַח —</span>
+        <span class="l-line">גַּם הַמַּחֲלֹקֶת — מְשַׁרְתַּת הָאֵין-סוֹף.</span>
+      </div>
+      <p class="l-de">Netzach, Netzach, der Streit ist ewig — / Doch dieser und jener — um des Himmels willen. / Netzach, Netzach, die Wahrheit währt — / Auch der Streit dient dem Unendlichen.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">כֵּיצַד אֱלֹהִים אֵין-סוֹף מִתְיַחֵס לְגָבוּל?</span>
+        <span class="l-line">שְׁאֵלָה זוֹ נוֹלְדָה בְּוֵנֶצְיָה — 1736 —</span>
+        <span class="l-line">וְעֲדַיִן הִיא שׁוֹאֶלֶת בְּכָל בֵּית מִדְרָשׁ,</span>
+        <span class="l-line">כִּי אֱמֶת נֶצַחִית אֵינָהּ נִפְתֶּרֶת.</span>
+      </div>
+      <p class="l-de">Wie verhält sich ein unendlicher Gott zur Grenze? / Diese Frage wurde in Venedig geboren — 1736 — / Und noch immer fragt sie in jedem Lehrhaus, / Denn ewige Wahrheit löst sich nicht auf.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">נֶצַח! נֶצַח! הַשְּׁאֵלָה חַיָּה!</span>
+        <span class="l-line">אֶרְגָּס וְרִיקִי — שְׁנֵיהֶם אֱמֶת!</span>
+        <span class="l-line key">נֶצַח! נֶצַח! גַּם אֲנִי שׁוֹאֵל!</span>
+        <span class="l-line">כִּי מִי שֶׁחָדַל לִשְׁאֹל — חָדַל לִחְיוֹת!</span>
+        <span class="l-line echo">(נֶצַח... שְׁאֵלָה... נֶצַח... חַיִּים...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">נֶצַח... שְׁאֵלָה... חַיִּים... נֶצַח...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · נֶצַח</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Ein Lied über einen philosophischen Disput von 1736 in Venedig. Das klingt für ihn wie ein Seminar — und dann trifft ihn die Bridge: Die Frage wurde damals geboren und fragt noch immer. Philosophische Fragen, die keine Antwort kennen — das versteht er.</p>
+      <div class="sc-moment"><span class="sc-icon">🎓</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>מִי שֶׁחָדַל לִשְׁאֹל — חָדַל לִחְיוֹת</em>. Wer aufhört zu fragen, hat aufgehört zu leben. Das ist sein Mantra. Er war nie so religiös und hat es doch immer gelebt.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Er kennt den Begriff Machloket L'Shem Shamayim — Streit um des Himmels willen. Aber dass der erste Tzimtzum-Streit in Italien 1736 stattfand, wusste er nicht. Das Lied gibt seinem Lernen historische Tiefe.</p>
+      <div class="sc-moment"><span class="sc-icon">🕎</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>גַּם הַמַּחֲלֹקֶת — מְשַׁרְתַּת הָאֵין-סוֹף</em>. Auch der Streit dient dem Unendlichen. Er hört auf, sich über religiöse Debatten zu ärgern.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Ergas und Ricchi — die Urväter der Tzimtzum-Debatte. Er kennt beide Werke: Shomer Emunim und Yosher Levav. Das Lied fasst jahrelange Lehre in vier Strophen zusammen. Für ihn ist das eine brillante didaktische Leistung.</p>
+      <div class="sc-moment"><span class="sc-icon">📚</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die historische Verortung — Venedig, 1736 — verbindet die kabbalistischen Ideen mit konkreter Geschichte. Mystik hat Geographie und Datum. Das macht sie real.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er hört das Wort <em>נֶצַח</em> und denkt zunächst an „Sieg" — er kennt es aus dem Fußball. Dann hört er: Der Streit ist ewig, Netzach. Er versteht: Das Album spielt mit Bedeutungen. Das gefällt ihm.</p>
+      <div class="sc-moment"><span class="sc-icon">⚽</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>גַּם אֲנִי שׁוֹאֵל</em>. Auch ich frage. Er fühlt sich einbezogen — nicht als Schüler, als gleichberechtigter Fragesteller.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ח —</div>
+
+<!-- ════════════════════════════ SONG 8 · הוֹד ══ -->
+<article class="song-article" id="song-hod">
+  <header class="song-header" data-ornament="◐">
+    <div class="sefira-badge" style="color:var(--hod); border-color:var(--hod)">סְפִירָה ח — שִׁיר שְׁמִינִי · Lied VIII</div>
+    <p class="song-sefira-he" style="color:var(--hod)">הוֹד</p>
+    <h2 class="song-title-he">שְׁפִינוֹזָה לִפְנֵי הַחָלָל</h2>
+    <p class="song-title-de">Spinoza vor dem Chalal — Glanz ohne Transzendenz</p>
+    <p class="song-source">מָקוֹר: אֶתִיקָה לְשְׁפִינוֹזָה וְתְּגוּבַת רַב קוּק — הַשַּׁגָּה שֶׁרָאֲתָה אֶת הָאוֹר אַךְ לֹא אֶת הַגְּבוּלוֹת</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — brillant und leuchtend, aber ohne Tiefe — wie eine polierte Oberfläche. Hod ist Glanz, Pracht — aber auch: das Licht das reflektiert, ohne selbst zu leuchten.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">שְׁפִינוֹזָה עָמַד לִפְנֵי הַיֹּפִי,</span>
+      <span class="l-line">רָאָה שֶׁהַכֹּל נִמְלָא אֱלֹהִים —</span>
+      <span class="l-line">אַךְ הוּא לֹא רָאָה אֶת הֶחָלָל הַפָּנוּי,</span>
+      <span class="l-line">לֹא רָאָה אֶת הַמָּקוֹם שֶׁנּוֹתַר.</span>
+    </div>
+    <p class="l-de">Spinoza stand vor der Schönheit, / Er sah, dass alles mit Gott erfüllt ist — / Aber er sah nicht den leeren Raum, / Er sah nicht den Ort, der blieb.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הוּא אָמַר: הַכֹּל אֱלֹהִים — וְאֱלֹהִים הַכֹּל,</span>
+      <span class="l-line">אֵין מָקוֹם לְמַעְלָה, אֵין מָקוֹם לְמַטָּה —</span>
+      <span class="l-line">אַךְ בְּלִי הַחָלָל — אֵין בְּחִירָה חָפְשִׁית,</span>
+      <span class="l-line">וּבְלִי בְּחִירָה — הַיֹּפִי נַעֲשֶׂה כֶּלֶא.</span>
+    </div>
+    <p class="l-de">Er sagte: Alles ist Gott — und Gott ist alles, / Kein Oben, kein Unten — / Doch ohne den Raum — keine freie Wahl, / Und ohne Wahl — wird Schönheit zum Gefängnis.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">הוֹד, הוֹד, יֹפִי בְּלִי עֹמֶק —</span>
+        <span class="l-line">אוֹר שֶׁאֵין לוֹ מָקוֹר מֵעָלָיו,</span>
+        <span class="l-line key">הוֹד, הוֹד, זֹהַר בְּלִי צֵל —</span>
+        <span class="l-line">שְׁפִינוֹזָה רָאָה הַרְבֵּה — אַךְ לֹא הַכֹּל.</span>
+      </div>
+      <p class="l-de">Hod, Hod, Schönheit ohne Tiefe — / Licht ohne Quelle darüber. / Hod, Hod, Glanz ohne Schatten — / Spinoza sah viel — aber nicht alles.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Rav Kooks Antwort]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">אָמַר רַב קוּק: גַּם בּוֹ נִיצוֹץ אֱמֶת —</span>
+        <span class="l-line">הוּא רָאָה אֶת הָאוֹר שֶׁבַּטֶּבַע,</span>
+        <span class="l-line">אַךְ לֹא הִגִּיעַ אֶל הָאוֹר הַמַּעְלֶה מִן הַטֶּבַע,</span>
+        <span class="l-line">כִּי הַכֶּתֶר הוּא מֵעַל לְמַה שֶּׁנִּרְאֶה.</span>
+      </div>
+      <p class="l-de">Rav Kook sagte: Auch in ihm ein Funken Wahrheit — / Er sah das Licht in der Natur, / Doch er erreichte nicht das Licht, das über der Natur liegt, / Denn die Krone ist über dem Sichtbaren.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">הוֹד! הוֹד! רְאֵה אֶת הַיֹּפִי!</span>
+        <span class="l-line">אַךְ שְׁאַל: מֵאַיִן בָּא הַיֹּפִי?</span>
+        <span class="l-line key">הוֹד! הוֹד! לֹא נַעֲצוֹר כָּאן!</span>
+        <span class="l-line">כִּי מֵעַל לְהוֹד — יֵשׁ אוֹר גָּדוֹל יוֹתֵר!</span>
+        <span class="l-line echo">(הוֹד... יֹפִי... מָקוֹר... כֶּתֶר...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">הוֹד... יֹפִי... וּמֵעָלָיו — אוֹר גָּדוֹל יוֹתֵר...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · הוֹד</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Er ist Fan von Spinoza — hat die Ethik im Philosophiestudium gelesen. Das Lied ist gleichzeitig eine Hommage und eine Kritik: Spinoza sah viel, aber nicht alles. Das findet er fair — keine Verdammung, sondern differenziertes Urteil.</p>
+      <div class="sc-moment"><span class="sc-icon">🔬</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>בְּלִי הַחָלָל — אֵין בְּחִירָה חָפְשִׁית</em>. Ohne den leeren Raum keine Wahl. Das ist der Kerneinwand gegen Spinozas Determinismus — und er versteht ihn jetzt kabbalistisch formuliert.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Spinoza ist für ihn der Ketzer schlechthin. Aber das Lied sagt: Er sah einen Funken Wahrheit. Das ist Rav Kooks Großzügigkeit — und er muss zugeben: das klingt weise, nicht naiv.</p>
+      <div class="sc-moment"><span class="sc-icon">🕯️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>שְׁפִינוֹזָה רָאָה הַרְבֵּה — אַךְ לֹא הַכֹּל</em>. Er sah viel — aber nicht alles. Das ist die gerechteste Formulierung über einen Irrenden, die er je gehört hat.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Hod als Sefira des Glanzes, der von Netzach empfängt und nach unten weitergibt — das ist der Sefira-Charakter: reflektiert, nicht originär. Spinoza reflektiert das göttliche Licht, aber kennt seine Quelle nicht. Perfekt zugeordnet.</p>
+      <div class="sc-moment"><span class="sc-icon">🪞</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>הוֹד — יֹפִי בְּלִי עֹמֶק</em>. Schönheit ohne Tiefe. Das ist die kabbalistisch präzise Beschreibung von Pantheismus: leuchtend, aber flach.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er kennt Spinoza aus einem Meme: „Gott oder die Natur." Das Lied macht das Meme lebendig. Plötzlich versteht er, was die Debatte wirklich bedeutet — nicht abstrakt, sondern für sein eigenes Leben.</p>
+      <div class="sc-moment"><span class="sc-icon">🌅</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>שְׁאַל: מֵאַיִן בָּא הַיֹּפִי?</em> Frage: Woher kommt die Schönheit? Er schaut aus dem Fenster auf den Sonnenuntergang. Zum ersten Mal fragt er sich das wirklich.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— ט —</div>
+
+<!-- ════════════════════════════ SONG 9 · יְסוֹד ══ -->
+<article class="song-article" id="song-yesod">
+  <header class="song-header" data-ornament="◆">
+    <div class="sefira-badge" style="color:var(--yesod); border-color:var(--yesod)">סְפִירָה ט — שִׁיר תְּשִׁיעִי · Lied IX</div>
+    <p class="song-sefira-he" style="color:var(--yesod)">יְסוֹד</p>
+    <h2 class="song-title-he">הַצִּמְצוּם וְהַבְּחִירָה</h2>
+    <p class="song-title-de">Der Tzimtzum und die Wahl — Fundament der menschlichen Freiheit</p>
+    <p class="song-source">מָקוֹר: מִכְתַּב מֵאֵלִיָּהוּ · רֶבִּי רַשַׁ״ב · אֶרְגָּס — הַצִּמְצוּם כַּתְּנַאי לַבְּחִירָה הַחָפְשִׁית</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — tief, grundlegend. Ein einziger, fester Ton als Fundament, auf dem alles ruht. Yesod ist das Fundament, das Bindeglied zwischen allen oberen Sephirot und der Malchut.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">אֱלֹהִים נִסְתַּר — לְמַעֲנִי,</span>
+      <span class="l-line">לְמַעַן תִּהְיֶה לִי בְּחִירָה —</span>
+      <span class="l-line">אִלּוּ הָיָה גָּלוּי בְּכֹל עֹצְמָתוֹ,</span>
+      <span class="l-line">לֹא הָיִיתִי יָכוֹל לִבְחֹר אַחֵר.</span>
+    </div>
+    <p class="l-de">Gott verbarg sich — für mich, / Damit ich eine Wahl habe — / Wäre Er in seiner vollen Macht offenbar, / Könnte ich nichts anderes wählen.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">הַחָלָל הַפָּנוּי — זֶה מֶרְחַב חֵירוּתִי,</span>
+      <span class="l-line">הַהֶסְתֵּר — אֵינוֹ עֲזִיבָה אֶלָּא מַתָּנָה —</span>
+      <span class="l-line">כִּי רַק בְּמָקוֹם שֶׁנִּרְאֶה כְּחֶסֶר אֱלֹהִים,</span>
+      <span class="l-line">יְכוֹלָה הָאֱנוֹשׁוּת לְהִגָּלוֹת בִּמְלוֹאָהּ.</span>
+    </div>
+    <p class="l-de">Der leere Raum — das ist der Raum meiner Freiheit, / Die Verborgenheit — kein Verlassen, sondern ein Geschenk — / Denn nur an einem Ort, der Gottlosigkeit zu sein scheint, / Kann das Menschliche sich in seiner Fülle entfalten.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">יְסוֹד, יְסוֹד, הַצִּמְצוּם — יְסוֹד הַבְּחִירָה —</span>
+        <span class="l-line">בְּלָעְדָּיו — אֵין חֶסֶד, אֵין אַחֲרָיוּת,</span>
+        <span class="l-line key">יְסוֹד, יְסוֹד, יְסוֹד הָאֱנוֹשׁוּת —</span>
+        <span class="l-line">כִּי הָאָדָם נִבְרָא בְּחָלָל הַפָּנוּי.</span>
+      </div>
+      <p class="l-de">Yesod, Yesod, der Tzimtzum — Fundament der Wahl — / Ohne ihn — kein Chesed, keine Verantwortung. / Yesod, Yesod, Fundament der Menschlichkeit — / Denn der Mensch wurde im leeren Raum erschaffen.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">אֲנִי אֶבְחַר טוֹב — לֹא כִּי מֻכְרָח,</span>
+        <span class="l-line">אֲנִי אֶהֱיֶה טוֹב — כִּי זוֹ בְּחִירָתִי —</span>
+        <span class="l-line">הַצִּמְצוּם נָתַן לִי כֹּחַ לוֹמַר: בָּחַרְתִּי,</span>
+        <span class="l-line">וּמִבְּחִירָה — נוֹלֶדֶת הָאַהֲבָה.</span>
+      </div>
+      <p class="l-de">Ich wähle das Gute — nicht weil ich muss, / Ich werde gut sein — weil das meine Wahl ist — / Der Tzimtzum gab mir die Kraft zu sagen: Ich habe gewählt, / Und aus der Wahl — wird Liebe geboren.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">יְסוֹד! יְסוֹד! אֲנִי בּוֹחֵר!</span>
+        <span class="l-line">הַצִּמְצוּם — הִיא מַתַּנַת הַחֵירוּת!</span>
+        <span class="l-line key">יְסוֹד! יְסוֹד! אֲנִי אָדָם!</span>
+        <span class="l-line">כִּי נִבְרַאתִי בְּחָלָל שֶׁל כְּבוֹד!</span>
+        <span class="l-line echo">(יְסוֹד... בְּחִירָה... חֵירוּת... כָּבוֹד...)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block"><span class="l-line echo">יְסוֹד... בְּחִירָה... אָדָם... כָּבוֹד...</span></div>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · יְסוֹד</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Das Lied sagt: Freiheit ist nur möglich, wenn Gott sich verbirgt. Das ist das Fundament seiner atheistischen Haltung — und gleichzeitig ihr Widerspruch. Er fragt sich: Wenn Gott sich verbirgt, damit ich frei bin, wäre dann meine Freiheit ein Geschenk Gottes?</p>
+      <div class="sc-moment"><span class="sc-icon">🗽</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>נִבְרַאתִי בְּחָלָל שֶׁל כָּבוֹד</em>. Ich wurde in einem Raum der Würde erschaffen. Er sitzt still. Das ist das erste Mal, dass er das Wort „erschaffen" auf sich selbst bezieht.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Freier Wille ist das größte Problem der jüdischen Theologie — und das Lied gibt ihm eine kabbalistisch-fundierte Antwort: Tzimtzum ist die metaphysische Bedingung für Bechirah Chofshit. Er hatte diese Verbindung nie so klar gesehen.</p>
+      <div class="sc-moment"><span class="sc-icon">🌐</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>מִבְּחִירָה — נוֹלֶדֶת הָאַהֲבָה</em>. Aus der Wahl wird Liebe geboren. Das ist der Grund warum Gott uns erschaffen hat — damit Liebe freiwillig entsteht.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Yesod als Fundament und als Kanal — es verbindet die sieben oberen Sephirot mit Malchut. So verbindet das Lied alle theologischen Überlegungen des Albums mit der letzten Sefira: die menschliche Freiheit ist das Fundament, auf dem Malchut — das Königreich, die Welt — ruht.</p>
+      <div class="sc-moment"><span class="sc-icon">🏛️</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Das Album ist jetzt fast vollständig. Er sieht die Architektur: Keter bis Yesod — alles läuft auf Malchut zu. Das letzte Lied wird der Abschluss sein.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er war nicht geplant hier. Er hat das Album zufällig begonnen — und jetzt hört er das neunte Lied. Er folgt dem Bogen. Die Aussage, dass er in einem Raum der Würde erschaffen wurde — das ist das Stärkste, was er bisher gehört hat.</p>
+      <div class="sc-moment"><span class="sc-icon">💎</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>אֲנִי בּוֹחֵר</em>. Ich wähle. Drei Silben. Er sagt sie laut für sich. Es klingt wie ein Gebet — das erste, das er je gesprochen hat.</span></div></div>
+    </div></div>
+  </div>
+</article>
+
+<div class="ornament-div">— י —</div>
+
+<!-- ════════════════════════════ SONG 10 · מַלְכוּת ══ -->
+<article class="song-article" id="song-malchut">
+  <header class="song-header" data-ornament="♛">
+    <div class="sefira-badge" style="color:var(--malchut); border-color:var(--malchut)">סְפִירָה י — שִׁיר עֲשִׂירִי · Lied X</div>
+    <p class="song-sefira-he" style="color:var(--malchut)">מַלְכוּת</p>
+    <h2 class="song-title-he">הַנְּשָׁמָה כְּכֶלִי רֵיק</h2>
+    <p class="song-title-de">Die Seele als leeres Gefäß — das Königreich empfängt das Licht</p>
+    <p class="song-source">מָקוֹר: אוֹרוֹת הַקֹּדֶשׁ לְרַב קוּק — מַלְכוּת כְּקָטֶגוֹרְיָה שֶׁל קַנְט · תִּפְאֶרֶת הַמְקַבֵּל</p>
+  </header>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+    <p class="stage-dir">Gitarre — voll, warm, ruhend. Alle vorangegangenen Melodien kehren zurück, verflochten. Das Königreich ist das Gefäß, das alles empfängt und zur Welt bringt. Die Stimme tritt ein wie eine Königin, die ihren Thron betritt.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">מַלְכוּת — הַסְּפִירָה הָאַחֲרוֹנָה,</span>
+      <span class="l-line">הַכֶּלִי שֶׁמְּקַבֵּל אֶת הַכֹּל —</span>
+      <span class="l-line">כַּמֶּלֶךְ שֶׁאֵינוֹ מַשְׁפִּיעַ מֵאַצְמוֹ,</span>
+      <span class="l-line">אֶלָּא שֹׁכֵן בְּתוֹךְ מַה שֶּׁנִּתְּנָה לוֹ.</span>
+    </div>
+    <p class="l-de">Malchut — die letzte Sefira, / Das Gefäß, das alles empfängt — / Wie der König, der nicht aus sich selbst strahlt, / Sondern in dem wohnt, was ihm gegeben wurde.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+    <div class="lyric-block">
+      <span class="l-line">גַּם נַפְשִׁי — מַלְכוּת הִיא,</span>
+      <span class="l-line">כֶּלִי לָאוֹר שֶׁיָּבוֹא מִלְּמַעְלָה —</span>
+      <span class="l-line">רַב קוּק אוֹמֵר: כְּקָטֶגוֹרְיוֹת שֶׁל קַנְט,</span>
+      <span class="l-line">נַפְשֵׁנוּ מְסַנֶּנֶת — אַךְ לֹא יוֹצֶרֶת.</span>
+    </div>
+    <p class="l-de">Auch meine Seele — ist Malchut, / Ein Gefäß für das Licht, das von oben kommt — / Rav Kook sagt: Wie Kants Kategorien, / Filtert unsere Seele — aber erschafft nicht.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+    <div class="refrain-box">
+      <div class="lyric-block">
+        <span class="l-line key">מַלְכוּת, מַלְכוּת, כֶּלִי לָאוֹר —</span>
+        <span class="l-line">רֵיקָה לִפְנֵי הַשֵּׁם — וּמְלֵאָה בּוֹ,</span>
+        <span class="l-line key">מַלְכוּת, מַלְכוּת, הַנֶּפֶשׁ הַמְּקַבֶּלֶת —</span>
+        <span class="l-line">הִיא הַגֶּשֶׁר בֵּין הַשָּׁמַיִם לָאָרֶץ.</span>
+      </div>
+      <p class="l-de">Malchut, Malchut, Gefäß des Lichts — / Leer vor dem Namen — und voll von Ihm. / Malchut, Malchut, die empfangende Seele — / Sie ist die Brücke zwischen Himmel und Erde.</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Bridge — Der Abschluss des Bogens]</span><div class="s-label-line"></div></div>
+    <div class="bridge-box">
+      <div class="lyric-block">
+        <span class="l-line">מִן הַכֶּתֶר עַד הַמַּלְכוּת —</span>
+        <span class="l-line">מֵאֵין-סוֹף עַד לְנִגּוּן קָטָן —</span>
+        <span class="l-line">הַצִּמְצוּם אֵינוֹ רַק קוֹסְמוֹלוֹגְיָה,</span>
+        <span class="l-line">הוּא הַחַיִּים עַצְמָם — כָּל יוֹם, כָּל שָׁעָה.</span>
+      </div>
+      <p class="l-de">Von der Krone bis zum Königreich — / Vom Unendlichen bis zu einer kleinen Melodie — / Der Tzimtzum ist nicht nur Kosmologie, / Er ist das Leben selbst — jeden Tag, jede Stunde.</p>
+    </div>
+    <p class="stage-dir">Rav Kook in Orot HaKodesh: Malchut ist wie Kants Denkkategorien — sie filtert rohe Erfahrung und macht sie empfangbar. Die Kabbala kannte die Relativität menschlicher Erkenntnis lange vor Kant.</p>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Klimax / Letzter Refrain]</span><div class="s-label-line"></div></div>
+    <div class="climax-box">
+      <div class="lyric-block">
+        <span class="l-line key">מַלְכוּת! מַלְכוּת! הַנֶּפֶשׁ — מֶלֶךְ!</span>
+        <span class="l-line">פְּתַח שַׁעֲרֶיךָ — הָאוֹר בָּא!</span>
+        <span class="l-line key">מַלְכוּת! מַלְכוּת! כֶּתֶר — מַלְכוּת —</span>
+        <span class="l-line">אֶחָד הוּא הַמָּקוֹר — אֶחָד הוּא הַמְּקַבֵּל!</span>
+        <span class="l-line echo">(מַלְכוּת... כֶּתֶר... אֶחָד... אֶחָד... אָמֵן.)</span>
+      </div>
+      <p class="l-de">Malchut! Malchut! Die Seele — König! / Öffne deine Tore — das Licht kommt! / Malchut! Malchut! Krone — Malchut — / Einer ist die Quelle — Einer der Empfänger!</p>
+    </div>
+  </div>
+
+  <div class="s-block">
+    <div class="s-label"><span class="s-label-text">[Outro — Schlusskadenz]</span><div class="s-label-line"></div></div>
+    <div class="outro-box">
+      <div class="lyric-block">
+        <span class="l-line echo">מַלְכוּת... כֶּתֶר... אֶחָד... אָמֵן...</span>
+      </div>
+      <p class="stage-dir">Alle zehn Sephirot-Melodien kehren kurz zurück — Keter bis Malchut — dann lösen sie sich auf in einen einzigen, warmen Akkord. Der Lebensbaum hat seinen vollen Bogen durchlaufen. Die Gitarre hält den letzten Ton, der langsam, sanft, in Stille übergeht. <em>אָמֵן.</em></p>
+    </div>
+  </div>
+
+  <div class="scenarios-wrap">
+    <p class="scenarios-title">תַּרְחִישִׁים — Vier Hörerszenarien · מַלְכוּת</p>
+    <div class="sc-card sc-1"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p><p class="sc-title-he sc-accent">הַחִילוֹנִי</p><p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body"><p>Er hat das gesamte Album gehört. Zehn Sephirot, zehn Positionen, zehn Theologen. Das letzte Lied schließt den Bogen: Keter bis Malchut. Er versteht: Das Album ist selbst ein Tzimtzum — es hat sich kontrahiert, um ihm Raum zu geben, das Unendliche zu berühren.</p>
+      <div class="sc-moment"><span class="sc-icon">🌍</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>הַצִּמְצוּם אֵינוֹ רַק קוֹסְמוֹלוֹגְיָה, הוּא הַחַיִּים עַצְמָם</em>. Der Tzimtzum ist nicht nur Kosmologie — er ist das Leben selbst. Er nickt. Er war das ganze Zeit und wusste es nicht.</span></div>
+      <p>Er sucht einen Shiur über Kabbalah. Er findet einen in Tel Aviv. Er geht hin — nicht um religiös zu werden, sondern weil er verstehen will, was dieses Album ihm gezeigt hat.</p></div>
+    </div></div>
+
+    <div class="sc-card sc-2"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p><p class="sc-title-he sc-accent">הַדָּתִי-לְאוּמִי</p><p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body"><p>Das Bild von Malchut als Kant'sche Kategorie — Rav Kooks philosophische Kühnheit — bringt ihm zum ersten Mal einen Dialog zwischen Kabbala und westlicher Philosophie. Er hatte immer gedacht, das seien feindliche Lager. Das Lied zeigt: Sie spiegeln einander.</p>
+      <div class="sc-moment"><span class="sc-icon">📖</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כֶּתֶר — מַלְכוּת — אֶחָד הוּא הַמָּקוֹר — אֶחָד הוּא הַמְּקַבֵּל</em>. Der Kreis schließt sich: Quelle und Empfänger sind Eines. Das ist die Erfahrung des Schma — nicht als Satz, sondern als Kosmologie.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-3"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p><p class="sc-title-he sc-accent">הַקַּבָּלִיסְט</p><p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body"><p>Das Album hat seine volle lurianische Architektur: Album I deckt den Schöpfungsweg ab (Ein Sof → Tzimtzum → Chalal → Kav → Shevirah → Nitzotzot → Tikkun). Album II deckt den intellektuellen Rezeptionsweg ab (Keter → Malchut durch Sephirot). Zusammen sind beide Alben ein vollständiges kabbalistisches Lehrgebäude in Liedform.</p>
+      <div class="sc-moment"><span class="sc-icon">🔱</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>מִן הַכֶּתֶר עַד הַמַּלְכוּת</em>. Von Keter bis Malchut — der vollständige Lebensbaum wurde durchsungen. Das ist im jüdischen liturgischen Gedächtnis ohne Präzedenz. Er verneigt sich innerlich.</span></div></div>
+    </div></div>
+
+    <div class="sc-card sc-4"><div class="sc-bar"></div><div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p><p class="sc-title-he sc-accent">הַלֹּא-דָּתִי</p><p class="sc-title-de">Der Zufallshörer</p>
+      <div class="sc-body"><p>Er begann das Album bei Lied VI zufällig. Er hörte rückwärts und vorwärts. Das letzte Wort des Albums — <em>אָמֵן</em> — trifft ihn wie ein Seufzer. Er hat das Wort immer als religiöse Floskel betrachtet. Jetzt klingt es wie eine tiefe Zustimmung zum Leben.</p>
+      <div class="sc-moment"><span class="sc-icon">🙏</span><span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>אָמֵן.</em> Er sagt es leise nach. Nicht zu irgendjemand. Oder vielleicht doch. Er weiß es nicht. Aber er sagt es.</span></div>
+      <p>Er speichert beide Alben. Er beginnt das erste von vorne. <em>לִפְנֵי כָּל בְּרֵאשִׁית, לִפְנֵי כָּל אוֹר...</em></p></div>
+    </div></div>
+  </div>
+</article>
+
+<!-- ══════════════════════════════════════════ FOOTER ══ -->
+<footer class="album-footer">
+  <p><strong>עֵץ הַחַיִּים — Album II</strong> · עֲשָׂרָה שִׁירִים לְקוֹל וְגִיטָרָה אֲקוּסְטִית</p>
+  <p>Zehn Lieder für Stimme und akustische Gitarre · Die zehn Sephirot des Lebensbaums</p>
+  <p>רַב קוּק · רֶבִּי רַשַׁ״ב · רַמְחַ״ל · דֶּסְלֶר · אֶרְגָּס · רִיקִי · שְׁפִינוֹזָה</p>
+  <p style="margin-top:20px; font-size:0.8em; opacity:0.5; direction:rtl;">
+    מִן הַכֶּתֶר עַד הַמַּלְכוּת — הַכֹּל בּוֹ, וְהוּא בַּכֹּל
+  </p>
+</footer>
+
+</div><!-- /wrapper -->
+</body>
+</html>

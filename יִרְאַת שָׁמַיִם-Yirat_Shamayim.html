@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יִרְאַת שָׁמַיִם · פִּיּוּט סְפָרַדִּי · גְּבוּרָה</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   יִרְאַת שָׁמַיִם — Die Furcht des Himmels
+   דְּבָרִים י׳:י״ב · בְּרָכוֹת ל״ג · אִתְפַּשְּׁטוּתָא דְמֹשֶׁה
+   גְּבוּרָה → נֶצַח · Maqam Hijaz → Bayat → Hijaz
+   Stahl-Schiefer der Ehrfurcht · Gevurah-Karmin · Mosche-Ember (Nezach)
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#08090C; --deep:#0C0E12; --layer:#13161C; --card:#0D0F14;
+
+  /* ── יִרְאָה · גְּבוּרָה — Karmin, Ehrfurcht/Din ── */
+  --gev:#9E2530; --gev-lt:#C8505C; --gev-vlt:#E08890; --gev-dp:#4A1016;
+  --gev-glow:#C8505C;
+
+  /* ── שָׁמַיִם · הַסַּעַר — Stahl-Schiefer, Himmel & Sturm ── */
+  --steel:#5A6878; --steel-lt:#8A98A8; --steel-vlt:#B8C4D0;
+  --slate:#2E3844; --slate-dp:#1A2028;
+
+  /* ── מֹשֶׁה · נֶצַח · נְשָׁמָה מֵאִירָה — Ember/Amber ── */
+  --ember:#C89440; --ember-lt:#E8B860; --ember-vlt:#F4D89A;
+
+  --sage:#4A6840; --sage-lt:#7AA870;
+  --teal:#2A6058; --teal-lt:#50A098;
+  --parch-dim:#a8a290;
+  --ivory:#e6e4dc; --ivory-lt:#f4f2ea; --ivory-dim:#89877e;
+  --silver:#b8b6b0; --silver-dim:#66645e;
+  --text:#9a988e;
+  --guitar:#c08840; --guitar-lt:#dca860;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 2%,  rgba(184,196,208,.10) 0%,transparent 42%),
+    radial-gradient(ellipse at 20% 22%, rgba(90,104,120,.14)  0%,transparent 42%),
+    radial-gradient(ellipse at 82% 26%, rgba(158,37,48,.10)   0%,transparent 40%),
+    radial-gradient(ellipse at 50% 54%, rgba(200,148,64,.06)  0%,transparent 36%),
+    radial-gradient(ellipse at 30% 74%, rgba(90,104,120,.10)  0%,transparent 42%),
+    radial-gradient(ellipse at 74% 80%, rgba(158,37,48,.08)   0%,transparent 40%),
+    radial-gradient(ellipse at 50% 48%, rgba(8,9,12,.86)      0%,transparent 70%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 7% 9%,rgba(184,196,208,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 4%,rgba(138,152,168,.48) 0%,transparent 100%),
+    radial-gradient(1px 1px at 81% 14%,rgba(200,80,92,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 22% 34%,rgba(184,196,208,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 65% 50%,rgba(200,148,64,.34) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 11% 70%,rgba(138,152,168,.34) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 74%,rgba(200,80,92,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 38% 88%,rgba(232,184,96,.30) 0%,transparent 100%);
+}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,9,12,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(138,152,168,.22);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{font-family:'Frank Ruhl Libre',serif;font-weight:900;padding:12px 22px;
+  border-right:1px solid rgba(138,152,168,.20);white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.nav-brand-main{font-size:.95em;color:var(--gev-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.50em;
+  color:var(--silver-dim);font-weight:300;letter-spacing:.14em;direction:ltr;}
+.nav-link{font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(200,80,92,.56);text-decoration:none;padding:0 11px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;}
+.nav-link:hover{color:var(--gev-lt);border-bottom-color:var(--gev);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:48px;padding-bottom:56px;
+  border-bottom:1px solid rgba(138,152,168,.18);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--gev);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--steel-vlt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.5em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(158,37,48,.38),0 0 170px rgba(90,104,120,.28);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:22px;}
+.epigraph{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--ivory);
+  direction:rtl;line-height:1.9;margin:0 auto 6px;max-width:660px;}
+.epigraph-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--gev-lt);letter-spacing:.10em;margin-bottom:24px;opacity:.85;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 22px;}
+
+/* ── DAS EINE WORT ── */
+.oneword{display:inline-flex;flex-direction:column;align-items:center;gap:4px;
+  border:1px solid rgba(158,37,48,.34);padding:14px 40px;margin:0 auto 12px;
+  background:linear-gradient(180deg,rgba(158,37,48,.10),rgba(8,9,12,.4));}
+.oneword-he{font-family:'Frank Ruhl Libre',serif;font-size:1.7em;font-weight:900;
+  color:var(--gev-lt);direction:rtl;letter-spacing:.06em;text-shadow:0 0 30px rgba(200,80,92,.4);}
+.oneword-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);letter-spacing:.16em;}
+.oneword-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:20px;}
+
+.world-chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(138,152,168,.20);padding:12px 26px;background:rgba(138,152,168,.03);margin-top:16px;}
+.wc-item{font-family:'Frank Ruhl Libre',serif;font-size:.9em;direction:rtl;padding:2px 10px;border:1px solid transparent;}
+.wc-active{color:var(--gev-lt);border-color:rgba(158,37,48,.30);background:rgba(158,37,48,.08);}
+.wc-dim{color:var(--silver-dim);opacity:.4;}
+.wc-sep{color:var(--gev);opacity:.4;font-size:.7em;}
+
+/* ── QUELLENPRÜFUNG (Korrektur) ── */
+.crit-box{background:linear-gradient(135deg,rgba(184,40,40,.10),rgba(8,9,12,.88));
+  border:1px solid rgba(184,40,40,.32);border-left:4px solid #c03030;
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.crit-box::before{content:'בְּדִיקַת מְקוֹרוֹת — Quellenprüfung &amp; Korrektur';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:#e07070;
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.crit-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.crit-de strong{color:var(--ivory-lt);}
+.crit-de em{color:#e07070;font-style:italic;}
+.crit-num{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:#e07070;display:block;margin:20px 0 8px;direction:rtl;text-align:right;}
+.crit-num:first-of-type{margin-top:6px;}
+.he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+.swap{border:1px solid rgba(184,40,40,.20);padding:14px 18px;background:rgba(184,40,40,.04);margin:16px 0 6px;}
+.swap-out{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;color:#e07070;
+  display:block;margin-bottom:8px;}
+.swap-out s{opacity:.8;}
+.swap-in{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;display:block;letter-spacing:.03em;}
+.swap-note{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);display:block;margin-top:8px;line-height:1.8;}
+.swap-note em{color:var(--ember-lt);font-style:italic;}
+
+/* ── INFO ── */
+.info-box{background:linear-gradient(135deg,rgba(90,104,120,.12),rgba(8,9,12,.88));
+  border:1px solid rgba(138,152,168,.28);border-left:4px solid var(--steel-lt);
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.info-box::before{content:attr(data-label);position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--steel-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.info-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;text-align:right;margin-bottom:10px;line-height:1.78;}
+.info-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--steel-vlt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.9;}
+.info-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.info-de strong{color:var(--ivory);}
+.info-de em{color:var(--steel-vlt);font-style:italic;}
+.five-list{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px;}
+.five{font-family:'Frank Ruhl Libre',serif;font-size:.76em;color:var(--steel-vlt);
+  border:1px solid rgba(138,152,168,.24);padding:4px 12px;background:rgba(138,152,168,.04);direction:rtl;}
+.five.hi{color:var(--gev-lt);border-color:rgba(158,37,48,.36);background:rgba(158,37,48,.07);font-weight:700;}
+
+/* ── SEKTIONS-NAV ── */
+.sefira-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:54px;}
+.sefira-nav-item{border:1px solid rgba(138,152,168,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(138,152,168,.03);}
+.sefira-nav-item:hover{opacity:.88;background:rgba(158,37,48,.07);border-color:rgba(158,37,48,.38);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.57em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--gev-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;scroll-margin-top:60px;border:1px solid rgba(138,152,168,.14);
+  background:linear-gradient(180deg,rgba(19,22,28,.96) 0%,rgba(9,10,14,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--slate-dp),var(--slate),var(--steel),var(--gev),var(--ember));opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(138,152,168,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gev-lt);border-right:1px solid rgba(138,152,168,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.58;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.13em;
+  color:var(--gev-lt);opacity:.64;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--steel-vlt);opacity:.80;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(138,152,168,.28);
+  padding:5px 14px;color:var(--gev-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(138,152,168,.04);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(138,152,168,.09);opacity:.8;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--guitar);opacity:.88;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(192,136,64,.32);background:rgba(192,136,64,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.15;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.15;border-left:1px solid rgba(138,152,168,.12);padding-left:26px;}
+.line{display:block;}
+.gw{color:var(--gev-lt);}
+.sw{color:var(--steel-vlt);}
+.ew{color:var(--ember-lt);}
+.divider{text-align:center;color:var(--gev);opacity:.32;letter-spacing:.7em;
+  font-size:.72em;margin:26px 0;}
+
+.refrain-box{background:linear-gradient(135deg,rgba(158,37,48,.11),rgba(158,37,48,.02));
+  border:1px solid rgba(158,37,48,.30);border-left:3px solid var(--gev);padding:22px 28px;}
+.refrain-box.echo-r{opacity:.9;border-left-style:dashed;}
+.strophe-box{background:linear-gradient(135deg,rgba(90,104,120,.10),transparent);
+  border:1px solid rgba(138,152,168,.24);border-left:3px solid var(--steel);padding:22px 28px;}
+.coda-box2{background:linear-gradient(135deg,rgba(158,37,48,.08),rgba(200,148,64,.05));
+  border:1px solid rgba(158,37,48,.24);border-left:3px solid var(--gev);padding:22px 28px;}
+
+.tikkun-box{background:linear-gradient(135deg,rgba(42,96,88,.13),rgba(8,32,28,.44));
+  border:1px solid rgba(42,96,88,.30);border-left:4px solid var(--teal);
+  padding:28px 32px;margin:28px 0;position:relative;}
+.tikkun-box::before{content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 12px;font-size:.60em;color:var(--teal-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.tikkun-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid rgba(42,96,88,.18);gap:18px;flex-wrap:wrap;}
+.tikkun-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);direction:rtl;}
+.tikkun-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--teal);display:block;margin-top:2px;}
+.tikkun-src{font-family:'Frank Ruhl Libre',serif;font-size:.65em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.32);padding:3px 11px;background:rgba(42,96,88,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{font-family:'Frank Ruhl Libre',serif;font-size:.68em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.30);padding:3px 10px;background:rgba(42,96,88,.05);direction:rtl;}
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(158,37,48,.05);
+  border-left:2px solid rgba(158,37,48,.26);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--gev-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(192,136,64,.07),rgba(8,9,12,.86));
+  border:1px solid rgba(192,136,64,.24);border-left:4px solid var(--guitar);
+  padding:24px 32px;margin:28px 0 0;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--guitar-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.perf-item{border-left:2px solid rgba(192,136,64,.20);padding:2px 0 2px 16px;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  color:var(--guitar-lt);display:block;margin-bottom:3px;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.78;}
+
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(158,37,48,.30),transparent);}
+.ornament-star{color:var(--gev);font-size:.65em;letter-spacing:.5em;opacity:.44;}
+
+.footer{text-align:center;margin-top:80px;padding-top:60px;border-top:1px solid rgba(138,152,168,.14);}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--gev-lt);
+  direction:rtl;letter-spacing:.08em;text-shadow:0 0 50px rgba(158,37,48,.40);margin-bottom:14px;}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:26px;}
+.footer-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97em;
+  color:var(--silver-dim);line-height:1.95;max-width:620px;margin:0 auto 28px;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;color:var(--sage-lt);letter-spacing:.2em;opacity:.50;}
+
+.sources-box{background:linear-gradient(135deg,rgba(138,152,168,.06),rgba(8,9,12,.85));
+  border:1px solid rgba(138,152,168,.22);border-left:4px solid var(--gev);
+  padding:26px 32px;margin-top:44px;position:relative;}
+.sources-box::before{content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.60em;color:var(--gev-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.88;}
+.sources-text strong{color:var(--ivory);}
+
+@media(max-width:780px){
+  .wrap{padding:40px 18px 80px;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(138,152,168,.12);padding-top:14px;margin-top:14px;}
+  .perf-grid{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:62px 1fr;}
+  .source-badge{display:none;}
+  .song-body{padding:0 18px 34px;}
+  .page-title-he{font-size:2.3em;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .tikkun-box{padding:20px 18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">יִרְאַת שָׁמַיִם</span>
+    <span class="nav-brand-sub">Sephardisch · Gevurah · Gitarre · Hijaz → Bayat → Hijaz</span>
+  </div>
+  <a class="nav-link" href="#p1"><span class="nav-num">א</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p2"><span class="nav-num">ב</span>בֵּית א׳</a>
+  <a class="nav-link" href="#p3"><span class="nav-num">ג</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p4"><span class="nav-num">ד</span>בֵּית ב׳</a>
+  <a class="nav-link" href="#p5"><span class="nav-num">ה</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p6"><span class="nav-num">ו</span>גֶּשֶׁר</a>
+  <a class="nav-link" href="#p7"><span class="nav-num">ז</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p8"><span class="nav-num">ח</span>סִיּוּם</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══ HEADER ══ -->
+<div class="page-header">
+  <div class="eyebrow">Piyut · Sephardische Tradition · Die eine Forderung · Gevurah</div>
+  <h1 class="page-title-he">יִרְאַת שָׁמַיִם</h1>
+  <div class="page-title-de">Yir'at Schamajim — Die Furcht des Himmels</div>
+
+  <div class="epigraph">
+    וְעַתָּה יִשְׂרָאֵל — מָה אֲדֹנָי אֱלֹהֶיךָ שֹׁאֵל מֵעִמָּךְ, כִּי אִם לְיִרְאָה
+  </div>
+  <div class="epigraph-src">דְּבָרִים י׳:י״ב &nbsp;·&nbsp; Dewarim 10,12</div>
+
+  <div class="oneword">
+    <span class="oneword-he">כִּי אִם לְיִרְאָה</span>
+    <span class="oneword-de">nichts als: zu fürchten</span>
+  </div>
+  <div class="oneword-cap">Von fünf Forderungen des Verses bleibt im Lied die eine — die, die alles trägt</div>
+
+  <p class="page-desc">
+    Ein Lied über <strong>die eine Sache</strong>, die verlangt wird. Der Vers zählt fünf Dinge
+    auf, aber die Gemara sieht darin nur eines: <em>Furcht des Himmels</em>. Und sie sagt zwei
+    Dinge, die sich zu widersprechen scheinen — dass Furcht das <em>Einzige</em> ist, was nicht
+    von oben gegeben, sondern selbst gewählt wird, und dass sie für Mosche eine
+    <em>kleine</em> Sache war. Das Lied löst die Spannung nicht auf, es besingt sie: schwer für
+    uns, leicht für Mosche — und in jeder Generation gibt es einen Mosche, an den man sich hängen kann.
+  </p>
+
+  <div class="world-chain">
+    <span class="wc-item wc-active">עֲשִׂיָּה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">יְצִירָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">בְּרִיאָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span></div></div><div class="crit-box"><div class="swap">
+    <span class="swap-in">תִּקּוּנֵי זֹהַר, תִּקּוּן ס״ט — אִתְפַּשְּׁטוּתָא דְמֹשֶׁה בְּכָל דָּרָא וְדָרָא</span>
+    <span class="swap-note">„Die Ausbreitung Mosches in jeder Generation“ — das ist der <em>Urtext</em>,
+    den Tanja dort anführt. Der Gedanke bleibt Wort für Wort erhalten, nur steht jetzt die
+    zoharische Quelle da statt der chassidischen Ableitung. Damit ist die Brücke sauber —
+    und näher an der Wurzel.</span></div><p class="crit-de">
+    Das <span class="he">הִתְקַשֵּׁר אֵלָיו</span> (hänge dich an ihn) ist im Original in der
+    Chabad-Sprache der Rebbe-Anbindung gehalten. Der zugrunde liegende Gedanke ist aber
+    talmudisch: <span class="he">וּבוֹ תִדְבָּק</span> (Dewarim 10:20) deutet
+    <strong>Ketubot 111b</strong> als das Anhaften an die Weisen — das Anklammern an den
+    Zaddik als Weg zur Gottverbundenheit. Damit steht die Zeile auf universalem Grund, nicht auf
+    einer bestimmten chassidischen Schule. Und Dewarim 10:20 steht nur acht Verse nach dem
+    Refrain — dieselbe Rede Mosches.<br>
+    <strong>Dewarim 10:12</strong> (Refrain) und <strong>Berachot 33b</strong>
+    (<span class="he">מִלְּתָא זוּטְרְתָּא</span>) sind einwandfrei und talmudisch. Ich habe unten
+    noch <strong>Berachot 28b</strong> (Furcht des Himmels gegen Furcht des Menschen) und die
+    zweite Hälfte von <strong>Berachot 33b</strong> ergänzt — beide sitzen genau auf den Zeilen.
+  </p>
+</div>
+
+<!-- ══ BERACHOT 33b ══ -->
+<div class="info-box" data-label="הַכֹּל בִּידֵי שָׁמַיִם — Die eine Gemara, die alles trägt">
+  <div class="info-he">
+    הַכֹּל בִּידֵי שָׁמַיִם חוּץ מִיִּרְאַת שָׁמַיִם … אַטּוּ יִרְאַת שָׁמַיִם מִילְּתָא זוּטְרְתָּא הִיא?<br>
+    אִין, לְגַבֵּי מֹשֶׁה מִילְּתָא זוּטְרְתָּא הִיא
+  </div>
+  <div class="info-src">בְּרָכוֹת ל״ג ע״ב</div>
+  <p class="info-de">
+    Auf <em>einem</em> Blatt stehen beide Sätze, die das Lied auseinanderlegt.
+    Erstens: <strong>alles ist in der Hand des Himmels — außer der Furcht des Himmels</strong>.
+    Sie ist das eine, was nicht vorherbestimmt ist, sondern gewählt werden muss; darum kann der
+    Vers sie überhaupt „fordern“. Zweitens, sofort danach der Einwand: Ist Furcht des Himmels
+    denn eine <em>kleine</em> Sache, dass der Vers sagt „nichts als“? Und die Antwort:
+    <strong>ja — für Mosche</strong> ist sie klein. Genau das singt die zweite Strophe:
+    <span class="he">לְמֹשֶׁה הָיְתָה מִלְּתָא זוּטְרְתָּא, כִּי טִבְעוֹ הָיָה יִרְאָה</span>.
+    <br><br>
+    Der Vers selbst (Dewarim 10:12–13) fordert <em>fünf</em> Dinge — das Lied behält das erste,
+    weil es die anderen trägt:
+  </p>
+  <div class="five-list">
+    <span class="five hi">לְיִרְאָה</span>
+    <span class="five">לָלֶכֶת בְּכָל דְּרָכָיו</span>
+    <span class="five">לְאַהֲבָה אֹתוֹ</span>
+    <span class="five">לַעֲבֹד בְּכָל לֵבָב</span>
+    <span class="five">לִשְׁמֹר מִצְוֹת</span>
+  </div>
+</div>
+
+<!-- ══ SEKTIONS-NAV ══ -->
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+  <a class="sefira-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בֵּית א׳</span><span class="sn-de">Die Herausforderung</span></a>
+  <a class="sefira-nav-item" href="#p4"><span class="sn-num">III</span><span class="sn-he">בֵּית ב׳</span><span class="sn-de">Mosches Natur</span></a>
+  <a class="sefira-nav-item" href="#p6"><span class="sn-num">IV</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Der Mosche jeder Generation</span></a>
+  <a class="sefira-nav-item" href="#p8"><span class="sn-num">V</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Coda auf den Vers</span></a>
+</div>
+
+<!-- ══ SONG ══ -->
+<div class="song-section">
+
+  <div class="song-header">
+    <div class="song-num"><span class="snum-sefira">גְּבוּרָה</span>I</div>
+    <div class="song-meta">
+      <span class="sefira-badge">גְּבוּרָה · יִרְאָה · הִתְקַשְּׁרוּת לְמֹשֶׁה (נֶצַח)</span>
+      <span class="maqam-badge">Maqam Hijaz · Brücke nach Bayat (Mosche/Nezach) · Rubato ≈ 64 BPM · Gitarre</span>
+      <span class="song-title-he">יִרְאַת שָׁמַיִם</span>
+      <span class="song-title-de">Yir'at Schamajim — Die Furcht des Himmels</span>
+    </div>
+    <div class="source-badge">
+      פִּיּוּט מְקוֹרִי
+      <span class="source-badge-de">Originalpiyut · Dewarim 10:12 · Berachot 33b</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <!-- I · PIZMON -->
+    <div class="section-block" id="p1">
+      <div class="section-label">I · פִּזְמוֹן — Refrain</div>
+      <div class="instr-note">Guitar: Hijaz, grave and open — the awe-maqam. The refrain is the spine of the
+        whole piece and returns five times; establish it plainly, unhurried, so each return can
+        deepen it. <em>Liyra</em> held on an open vowel.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מַה שֹּׁאֵל מֵעִמְּךָ אֲדֹנָי</span>
+            <span class="line">כִּי אִם <span class="gw">לְיִרְאָה אֶת שְׁמוֹ</span></span>
+            <span class="line">וְיִרְאַת שָׁמַיִם בִּלְבָבֶךָ</span>
+            <span class="line">וְלָלֶכֶת בְּכָל דְּרָכָיו</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Was fordert der Ewige von dir,</span>
+            <span class="line">als nur: <span class="gw">seinen Namen zu fürchten,</span></span>
+            <span class="line">und die Furcht des Himmels in deinem Herzen,</span>
+            <span class="line">und auf allen seinen Wegen zu gehen.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle</span>
+        „וְעַתָּה יִשְׂרָאֵל, מָה אֲדֹנָי אֱלֹהֶיךָ שֹׁאֵל מֵעִמָּךְ כִּי אִם לְיִרְאָה … לָלֶכֶת בְּכָל דְּרָכָיו“ — דְּבָרִים י׳:י״ב. הַפִּזְמוֹן הוּא הַפָּסוּק עַצְמוֹ, כִּמְעַט מִלָּה בְּמִלָּה.
+      </div>
+    </div>
+
+    <!-- II · BAYIT ALEF -->
+    <div class="section-block" id="p2">
+      <div class="section-label">II · בֵּית א׳ — Strophe I · Die Herausforderung</div>
+      <div class="instr-note">Guitar: <em>mp</em>, a firmer pulse. The two negations at the top should be
+        set low and plain — ordinary fears, dismissed. Then lift on <em>hi hanescham</em>:
+        the true fear is not a threat but a breath.</div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="sw">לֹא פַּחַד הַסַּעַר וְהַגֶּשֶׁם</span></span>
+            <span class="line"><span class="sw">לֹא יִרְאַת אֱנוֹשׁ לְפָנֶיךָ</span></span>
+            <span class="line">יִרְאַת אֲדֹנָי — הִיא הַנֶּשֶׁם</span>
+            <span class="line">הַחַי בְּלִבָּבְךָ וּבְנַפְשְׁךָ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="sw">Nicht die Angst vor Sturm und Regen,</span></span>
+            <span class="line"><span class="sw">nicht die Furcht vor dem Menschen vor dir —</span></span>
+            <span class="line">die Furcht des Ewigen: sie ist der Atem,</span>
+            <span class="line">der in deinem Herzen und in deiner Seele lebt.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        הַהַבְחָנָה בֵּין יִרְאַת שָׁמַיִם לְיִרְאַת אֱנוֹשׁ — בְּרָכוֹת כ״ח ע״ב: „יְהִי רָצוֹן שֶׁתְּהֵא מוֹרָא שָׁמַיִם עֲלֵיכֶם כְּמוֹרָא בָּשָׂר וָדָם“ (רַבָּן יוֹחָנָן בֶּן זַכַּאי). „הַנֶּשֶׁם הַחַי בְּנַפְשְׁךָ“ — עַל דֶּרֶךְ „נִשְׁמַת שַׁדַּי“ (אִיּוֹב ל״ב:ח׳).
+      </div>
+    </div>
+
+    <!-- III · PIZMON -->
+    <div class="section-block" id="p3">
+      <div class="section-label">III · חֲזָרַת פִּזְמוֹן — Refrain (Wiederholung)</div>
+      <div class="instr-note">Guitar: as before. The first return — same Hijaz, a touch warmer.</div>
+      <div class="refrain-box echo-r">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מַה שֹּׁאֵל מֵעִמְּךָ אֲדֹנָי</span>
+            <span class="line">כִּי אִם <span class="gw">לְיִרְאָה אֶת שְׁמוֹ</span></span>
+            <span class="line">וְיִרְאַת שָׁמַיִם בִּלְבָבֶךָ</span>
+            <span class="line">וְלָלֶכֶת בְּכָל דְּרָכָיו</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Was fordert der Ewige von dir,</span>
+            <span class="line">als nur: <span class="gw">seinen Namen zu fürchten,</span></span>
+            <span class="line">und die Furcht des Himmels in deinem Herzen,</span>
+            <span class="line">und auf allen seinen Wegen zu gehen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- IV · BAYIT BET -->
+    <div class="section-block" id="p4">
+      <div class="section-label">IV · בֵּית ב׳ — Strophe II · Mosches Natur</div>
+      <div class="instr-note">Guitar: <em>mp</em>, melodic. The Aramaic <em>milta zutreta</em> should be sung
+        gently, almost with a smile — it is the Gemara's own wording, a small learned aside.
+        Broaden on <em>kol Jisrael echad</em>: the whole people as one.</div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לְמֹשֶׁה הָיְתָה מִלְּתָא זוּטְרְתָּא</span>
+            <span class="line">כִּי טִבְעוֹ הָיָה יִרְאָה</span>
+            <span class="line">וּבְפָנָיו עָמְדָה כָּל הָעֵדָה —</span>
+            <span class="line">כָּל יִשְׂרָאֵל אֶחָד — לִשְׁמֹעַ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Für Mosche war es eine kleine Sache,</span>
+            <span class="line">denn seine Natur war Furcht;</span>
+            <span class="line">und vor ihm stand die ganze Gemeinde —</span>
+            <span class="line">ganz Israel als eins — um zu hören.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle</span>
+        „אַטּוּ יִרְאַת שָׁמַיִם מִילְּתָא זוּטְרְתָּא הִיא? אִין, לְגַבֵּי מֹשֶׁה מִילְּתָא זוּטְרְתָּא הִיא“ — בְּרָכוֹת ל״ג ע״ב. הָאֲרַמִּית „מִילְּתָא זוּטְרְתָּא“ נִשְׁמֶרֶת כִּלְשׁוֹנָהּ, כְּמִנְהַג הַפְּרוֹיֶקְט — לֹא לְשַׁנּוֹת אֲרַמִּית.
+      </div>
+    </div>
+
+    <!-- V · PIZMON -->
+    <div class="section-block" id="p5">
+      <div class="section-label">V · חֲזָרַת פִּזְמוֹן — Refrain (Wiederholung)</div>
+      <div class="instr-note">Guitar: as before. Second return — begin to prepare the modulation;
+        a hint of Bayat can colour the last line, leading into the Bridge.</div>
+      <div class="refrain-box echo-r">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מַה שֹּׁאֵל מֵעִמְּךָ אֲדֹנָי</span>
+            <span class="line">כִּי אִם <span class="gw">לְיִרְאָה אֶת שְׁמוֹ</span></span>
+            <span class="line">וְיִרְאַת שָׁמַיִם בִּלְבָבֶךָ</span>
+            <span class="line">וְלָלֶכֶת בְּכָל דְּרָכָיו</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Was fordert der Ewige von dir,</span>
+            <span class="line">als nur: <span class="gw">seinen Namen zu fürchten,</span></span>
+            <span class="line">und die Furcht des Himmels in deinem Herzen,</span>
+            <span class="line">und auf allen seinen Wegen zu gehen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- VI · GESCHER / TIKKUN -->
+    <div class="section-block" id="p6">
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div>
+            <div class="tikkun-title-he">גֶּשֶׁר — אִתְפַּשְּׁטוּתָא דְמֹשֶׁה</div>
+            <span class="tikkun-title-de">Brücke — die Ausbreitung Mosches in jeder Generation</span>
+          </div>
+          <div class="tikkun-src">תִּקּוּנֵי זֹהַר ס״ט</div>
+        </div>
+        <div class="instr-note">Guitar: modulate fully to Bayat here — the Mosche-mode, Nezach.
+          This is the one place the awe of Hijaz opens into something warmer; the fear is being
+          <em>received</em> from the tzaddik, not imposed. Lift on <em>bigwura</em> — the heart
+          filled with strength — then turn back toward Hijaz for the returning refrain.</div>
+        <div class="coda-box2">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line"><span class="ew">בְּכָל דּוֹר וָדוֹר יֶשְׁנוֹ מֹשֶׁה</span></span>
+              <span class="line">נְשָׁמַת הַדּוֹר מֵאִירָה</span>
+              <span class="line">הִתְקַשֵּׁר אֵלָיו — וְיִרְאָה</span>
+              <span class="line">תְּמַלֵּא אֶת לִבָּבְךָ <span class="gw">בִּגְבוּרָה</span></span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line"><span class="ew">In jeder Generation gibt es einen Mosche,</span></span>
+              <span class="line">die Seele der Generation leuchtet;</span>
+              <span class="line">verbinde dich mit ihm — und Furcht</span>
+              <span class="line">wird dein Herz füllen <span class="gw">mit Gevura.</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mitzva-tags">
+          <span class="mitzva-tag">גְּבוּרָה → נֶצַח</span>
+          <span class="mitzva-tag">אִתְפַּשְּׁטוּתָא דְמֹשֶׁה</span>
+          <span class="mitzva-tag">וּבוֹ תִדְבָּק</span>
+          <span class="mitzva-tag">חִיגַ׳אז → בַּיַּאת</span>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Der Tikkun</span>
+          „אִתְפַּשְּׁטוּתָא דְמֹשֶׁה בְּכָל דָּרָא וְדָרָא … בְּכָל צַדִּיקָא וְצַדִּיקָא“ — תִּקּוּנֵי זֹהַר, תִּקּוּן ס״ט. הַתִּיקּוּן: הַיִּרְאָה שֶׁקָּשָׁה לְךָ נִמְשֶׁכֶת דֶּרֶךְ הַהִתְקַשְּׁרוּת לְנִיצוֹץ מֹשֶׁה שֶׁבַּדּוֹר. „וּבוֹ תִדְבָּק“ (דְּבָרִים י׳:כ׳) — כְּתֻבּוֹת קי״א ע״ב: הִדַּבֵּק בַּחֲכָמִים. הַיִּרְאָה שֹׁרֶשׁ בַּגְּבוּרָה, וּמֹשֶׁה בַּנֶּצַח.
+        </div>
+      </div>
+    </div>
+
+    <!-- VII · PIZMON -->
+    <div class="section-block" id="p7">
+      <div class="section-label">VII · חֲזָרַת פִּזְמוֹן — Refrain (Wiederholung)</div>
+      <div class="instr-note">Guitar: back in Hijaz — but after the Bridge it should sound different,
+        as if the fear it names is now something one <em>has</em>, not only something demanded.</div>
+      <div class="refrain-box echo-r">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מַה שֹּׁאֵל מֵעִמְּךָ אֲדֹנָי</span>
+            <span class="line">כִּי אִם <span class="gw">לְיִרְאָה אֶת שְׁמוֹ</span></span>
+            <span class="line">וְיִרְאַת שָׁמַיִם בִּלְבָבֶךָ</span>
+            <span class="line">וְלָלֶכֶת בְּכָל דְּרָכָיו</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Was fordert der Ewige von dir,</span>
+            <span class="line">als nur: <span class="gw">seinen Namen zu fürchten,</span></span>
+            <span class="line">und die Furcht des Himmels in deinem Herzen,</span>
+            <span class="line">und auf allen seinen Wegen zu gehen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- VIII · SIJUM -->
+    <div class="section-block" id="p8">
+      <div class="section-label">VIII · סִיּוּם — Coda auf den Vers</div>
+      <div class="instr-note">Guitar: full Hijaz once more, then pull back. The coda returns to the verse's
+        own opening — <em>we'ata Jisrael</em> — and adds <em>schemo hannora</em>, the awesome name.
+        Let the last <em>derachaw</em> hang open and unresolved; the demand is never quite finished.</div>
+      <div class="coda-box2">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="sw">וְעַתָּה יִשְׂרָאֵל — שְׁמַע וָדַע</span></span>
+            <span class="line">מַה שֹּׁאֵל מִמְּךָ אֲדֹנָי</span>
+            <span class="line"><span class="gw">לְיִרְאָה אֶת שְׁמוֹ הַנּוֹרָא</span></span>
+            <span class="line">וְלָלֶכֶת בְּכָל דְּרָכָיו</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="sw">Und nun, Israel — höre und wisse,</span></span>
+            <span class="line">was der Ewige von dir fordert:</span>
+            <span class="line"><span class="gw">seinen furchtgebietenden Namen zu fürchten,</span></span>
+            <span class="line">und auf allen seinen Wegen zu gehen.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        „וְעַתָּה יִשְׂרָאֵל“ מַחֲזִיר לִתְחִלַּת הַפָּסוּק (דְּבָרִים י׳:י״ב). „שְׁמוֹ הַנּוֹרָא“ — עַל פִּי „הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא“ (דְּבָרִים י׳:י״ז) וְ„אֶת נוֹרְאֹתֶיךָ“ (י׳:כ״א). הַשִּׁיר פּוֹתֵחַ בַּפָּסוּק וְנִסְגָּר בּוֹ.
+      </div>
+    </div>
+
+    <!-- VORTRAG -->
+    <div class="perf-box">
+      <div class="perf-grid">
+        <div class="perf-item">
+          <span class="perf-h">Dynamik</span>
+          <span class="perf-t">Refrain: getragen, ehrfürchtig, jedes Mal eine Spur tiefer. Strophe I:
+          die zwei Verneinungen tief und schlicht, dann Anhebung auf „הַנֶּשֶׁם“. Strophe II:
+          sanft, fast lächelnd auf dem aramäischen „מִילְּתָא זוּטְרְתָּא“. Brücke: Öffnung,
+          Höhepunkt auf „בִּגְבוּרָה“. Coda: voll, dann offen verklingend.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Maqam</span>
+          <span class="perf-t">Hijaz (Gevurah) als Ehrfurchts-Modus für Refrain und Strophen;
+          Modulation nach Bayat (Nezach/Mosche) allein in der Brücke — dort wird die Furcht
+          <em>empfangen</em>, nicht verlangt; Rückkehr nach Hijaz.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Vokalführung</span>
+          <span class="perf-t">Offene Phrasenenden auf Kamatz/Patach (לְיִרְאָה, דְּרָכָיו, יִרְאָה,
+          בִּגְבוּרָה) tragen gehaltene Töne. Besonders „לְיִרְאָה“ und „הַנּוֹרָא“ aushalten —
+          die zwei Angelklänge des Liedes.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Struktur · Refrain ×5</span>
+          <span class="perf-t">Pizmon → Bét I → Pizmon → Bét II → Pizmon → Gescher → Pizmon → Sijum.
+          Der Refrain ist das Rückgrat und kehrt fünfmal wieder; jede Strophe verändert, wie man
+          ihn beim nächsten Mal hört — besonders nach der Brücke.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</div><!-- /song-section -->
+
+<div class="ornament">
+  <div class="ornament-line"></div>
+  <div class="ornament-star">✦ ✦ ✦</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-world">יִרְאַת שָׁמַיִם</div>
+  <div class="footer-chain">גְּבוּרָה → נֶצַח · מַקַאם חִיגַ׳אז → בַּיַּאת · דְּבָרִים י׳ · בְּרָכוֹת ל״ג · תִּקּוּנֵי זֹהַר ס״ט</div>
+  <p class="footer-de">
+    Die eine Sache, die verlangt wird — und zugleich das Einzige, was nicht von oben gegeben,
+    sondern gewählt werden muss. Schwer für uns, klein für Mosche; und weil in jeder Generation
+    ein Funke Mosches leuchtet, ist der Weg zur Furcht das Anhaften an ihn. Die Furcht wurzelt
+    in der Gevura, Mosche im Nezach — und der Refrain, fünfmal wiederkehrend, sagt am Ende
+    nichts anderes als am Anfang, nur klingt er anders.
+    <br><br>
+    <strong>מַה שֹּׁאֵל מֵעִמְּךָ אֲדֹנָי — כִּי אִם לְיִרְאָה אֶת שְׁמוֹ.</strong>
+  </p>
+  <div class="footer-amen">אָמֵן</div>
+</div>
+
+<!-- QUELLEN -->
+<div class="sources-box">
+  <div class="sources-text">
+    <strong>Dewarim 10:12–13</strong> — <em>we'ata Jisrael, ma Adonai Elohecha schoel me'immach
+    ki im lejir'a … lalechet bechol derachaw</em>. Der Refrain ist der Vers selbst; er fordert
+    fünf Dinge, von denen das Lied das erste — <em>Furcht</em> — als tragendes behält. ·
+    <strong>Berachot 33b</strong> — trägt gleich zwei Zeilen: <em>hakol bidei schamajim chutz
+    mijir'at schamajim</em> (Furcht als das eine Nicht-Vorherbestimmte) und <em>atu jir'at
+    schamajim milta zutreta hi? in, legabbei Mosche milta zutreta hi</em> (Grundlage von
+    Strophe II, wörtlich, samt Aramäisch). ·
+    <strong>Berachot 28b</strong> — R. Jochanan ben Sakkai: <em>möge die Furcht des Himmels über
+    euch sein wie die Furcht vor Fleisch und Blut</em>; Grundlage der Gegenüberstellung
+    <em>jir'at Adonai</em> vs. <em>jir'at enosch</em> in Strophe I. <strong>Neu ergänzt.</strong> ·
+    <strong>Ijow 32:8</strong> — <em>nischmat Schaddai tewinem</em>; Hintergrund von
+    <em>hanescham hachai benafschecha</em>. ·
+    <strong>Tikkunei Zohar, Tikkun 69</strong> — <em>itpaschtuta deMosche bechol dara wedara …
+    bechol tzaddika wetzaddika</em>, „die Ausbreitung Mosches in jeder Generation“; Grundlage der
+    Brücke. <strong>Dies ist der sephardisch-zoharische Urtext, den die zuvor angegebene
+    aschkenasische Quelle selbst zitierte</strong> — sie wurde dadurch ersetzt. ·
+    <strong>Dewarim 10:20</strong> — <em>uwo tidbak</em>; mit <strong>Ketubot 111b</strong>
+    (Anhaften an die Weisen) Grundlage von <em>hitkascher elaw</em>. ·
+    <strong>Dewarim 10:17 · 10:21</strong> — <em>ha'el haggadol haggibbor wehannora / et
+    nora'otecha</em>; Grundlage von <em>schemo hannora</em> in der Coda.<br><br>
+    Das Tetragramm erscheint im gesamten Dokument ausschließlich als <strong>אֲדֹנָי</strong>.
+    Die aramäische Wendung <span class="he">מִילְּתָא זוּטְרְתָּא</span> bleibt unverändert.
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>קַנֹּא קִנֵּאתִי · נִיגּוּן אֵלִיָּהוּ · חוֹרֵב</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   קַנֹּא קִנֵּאתִי — נִיגּוּן אֵלִיָּהוּ
+   Kanno Kineti — Der Niggun des Elija · Wüstennacht am Horev
+   Klage → Trost · „allein" → „doch nicht allein"
+   Nachtblau · Ember · Sand · Schechina-Blau
+   ── נֶפֶשׁ הָאֵשׁ · Lied III · Elijah nach dem Karmel ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#070910; --deep:#0B0E18; --layer:#10131F; --card:#0C0F19;
+
+  /* ── אֵשׁ — Ember der Kina (Eifer/Klage) ── */
+  --fire:#D4622A; --fire-lt:#F0945C; --fire-vlt:#F6B892;
+  --fire-dim:#3E1D0C; --fire-bdr:rgba(212,98,42,.32);
+
+  --ember:#C0893A; --ember-lt:#DCB067;
+
+  /* ── שְׁכִינָה — kühles Blau: Bethel, Trost, „nicht allein" ── */
+  --shk:#3A6AA0; --shk-lt:#6A93C4; --shk-vlt:#9AB6D8; --shk-dim:#1B3050;
+
+  --sand:#e8d8b8; --sand-lt:#f2e6cc; --sand-dim:#a08860;
+  --parch:#ecdcbc; --parch-dim:#a89070;
+  --ivory:#ece2cc; --ivory-lt:#f6eed6; --ivory-dim:#847858;
+  --silver:#bcc0c8; --silver-dim:#606878;
+  --text:#9a927e;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,  rgba(58,106,160,.22)  0%,transparent 54%),
+    radial-gradient(ellipse at 22% 30%, rgba(212,98,42,.10)   0%,transparent 44%),
+    radial-gradient(ellipse at 80% 40%, rgba(192,137,58,.06)  0%,transparent 38%),
+    radial-gradient(ellipse at 16% 70%, rgba(212,98,42,.08)   0%,transparent 42%),
+    radial-gradient(ellipse at 84% 82%, rgba(58,106,160,.10)  0%,transparent 44%),
+    radial-gradient(ellipse at 50% 50%, rgba(7,9,16,.86)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 9%,rgba(246,238,214,.44) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 5%,rgba(154,182,216,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 81% 13%,rgba(232,216,184,.40) 0%,transparent 100%),
+    radial-gradient(1px 1px at 22% 38%,rgba(220,176,103,.30) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 55%,rgba(240,148,92,.30) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 72%,rgba(154,182,216,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 76%,rgba(246,238,214,.30) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(212,98,42,.24) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(212,98,42,.20);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--fire);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--shk-vlt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(212,98,42,.50),0 0 150px rgba(58,106,160,.35);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:710px;margin:0 auto 30px;}
+.page-desc em{color:var(--fire-lt);font-style:italic;}
+.page-desc .shk{color:var(--shk-lt);font-style:italic;}
+
+/* ── BOGEN-KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(212,98,42,.22);padding:12px 26px;background:rgba(212,98,42,.04);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-lament{color:var(--fire-lt);border-color:var(--fire-bdr);background:rgba(212,98,42,.08);}
+.chain-turn{color:var(--shk-lt);border-color:rgba(58,106,160,.34);background:rgba(58,106,160,.09);}
+.chain-sep{color:var(--fire);opacity:.5;font-size:.7em;}
+
+/* ── STATIONEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:14px 16px;position:relative;background:rgba(7,9,16,.6);}
+.cyc-lament{border-color:rgba(212,98,42,.36);background:rgba(212,98,42,.07);}
+.cyc-bethel{border-color:rgba(58,106,160,.34);background:rgba(58,106,160,.06);}
+.cyc-trost{border-color:rgba(220,176,103,.32);background:rgba(220,176,103,.05);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-lament .cyc-num{color:var(--fire-lt);} .cyc-bethel .cyc-num{color:var(--shk-lt);} .cyc-trost .cyc-num{color:var(--ember-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;direction:rtl;display:block;}
+.cyc-lament .cyc-he{color:var(--fire-vlt);} .cyc-bethel .cyc-he{color:var(--shk-vlt);} .cyc-trost .cyc-he{color:var(--ember-lt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.70em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(58,106,160,.10),rgba(7,9,16,.85));
+  border:1px solid rgba(58,106,160,.28);border-left:4px solid var(--shk);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'בֵּית אֵל — Zum Wendepunkt';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--shk-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.2em;font-weight:900;
+  color:var(--shk-vlt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.08em;text-shadow:0 0 60px rgba(58,106,160,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--shk-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(212,98,42,.11),rgba(7,9,16,.85));
+  border:1px solid rgba(212,98,42,.30);border-left:4px solid var(--fire);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'רַד״ק · Melachim I 18:31';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--fire-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--fire-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--fire-lt);font-style:italic;}
+.ib-de .shk{color:var(--shk-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(212,98,42,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(212,98,42,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(212,98,42,.09);border-color:rgba(212,98,42,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.9em;font-weight:700;color:var(--fire-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;border:1px solid rgba(212,98,42,.14);
+  background:linear-gradient(180deg,rgba(16,19,31,.96) 0%,rgba(7,9,16,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--shk),var(--fire),var(--ember),var(--fire),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(212,98,42,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--fire-lt);border-right:1px solid rgba(212,98,42,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.28em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--fire-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--ember-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(212,98,42,.32);
+  padding:5px 14px;color:var(--fire-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(212,98,42,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(212,98,42,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--ember-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(220,176,103,.32);background:rgba(220,176,103,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(212,98,42,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.7;font-size:.82em;}
+.fire{color:var(--fire-lt);}
+.shk{color:var(--shk-lt);}
+.ember{color:var(--ember-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(212,98,42,.13),rgba(192,137,58,.04));
+  border:1px solid rgba(212,98,42,.28);border-left:3px solid var(--fire);padding:22px 28px;}
+.bridge-box{background:linear-gradient(135deg,rgba(58,106,160,.11),transparent);
+  border:1px solid rgba(58,106,160,.26);border-left:3px solid var(--shk);padding:22px 28px;}
+.turn-box{background:linear-gradient(135deg,rgba(212,98,42,.14),rgba(58,106,160,.08));
+  border:1px solid rgba(212,98,42,.30);border-left:3px solid var(--fire);padding:24px 28px;}
+.turn-box .lyrics-he .line{font-weight:400;}
+.outro-box{text-align:center;padding:26px 0 12px;}
+.outro-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.16em;color:var(--fire-vlt);
+  direction:rtl;line-height:2.4;letter-spacing:.06em;text-shadow:0 0 30px rgba(212,98,42,.3);}
+.outro-whisper .sm{font-size:.78em;color:var(--silver-dim);}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(212,98,42,.05);
+  border-left:2px solid rgba(212,98,42,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref.cool{background:rgba(58,106,160,.06);border-left-color:rgba(58,106,160,.30);}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--fire-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.piyut-ref.cool .piyut-ref-label{color:var(--shk-lt);}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:60px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,98,42,.3),transparent);}
+.ornament-star{color:var(--fire);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── NAMEN-BOX ── */
+.names-box{margin-top:44px;padding:22px 30px;border:1px solid rgba(212,98,42,.16);
+  background:rgba(212,98,42,.03);position:relative;}
+.names-box::before{content:'שְׁמוֹת קֹדֶשׁ · Heilige Namen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.6em;color:var(--fire-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.names-list{display:flex;flex-wrap:wrap;gap:8px 20px;direction:rtl;margin-bottom:12px;}
+.names-list span{font-family:'Frank Ruhl Libre',serif;font-size:1.02em;color:var(--fire-lt);
+  border:1px solid rgba(212,98,42,.22);padding:3px 12px;background:rgba(212,98,42,.05);}
+.names-note{font-family:'EB Garamond',serif;font-size:.86em;color:var(--text);line-height:1.8;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--fire-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--ember-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--shk-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--fire-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(212,98,42,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(212,98,42,.20);
+  background:rgba(212,98,42,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--fire-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--fire-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr;}
+  .sec-nav{grid-template-columns:repeat(4,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(212,98,42,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(212,98,42,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 36px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">נֶפֶשׁ הָאֵשׁ · Lied III · Elijah am Horev</div>
+    <div class="page-title-he">קַנֹּא קִנֵּאתִי</div>
+    <div class="page-title-de">Kanno Kineti — „Eifern habe ich geeifert"</div>
+    <p class="page-desc">
+      Nach dem Feuer auf dem Karmel flieht der Eiferer in die Wüste und klagt: <em>„die Altäre
+      haben sie niedergerissen … und ich bin allein übrig geblieben."</em> Doch der Radak legt in
+      diese Klage einen Trost: dieselben <span class="shk">מִזְבְּחוֹת</span>, die Elija beweint, waren
+      Altäre der Liebe — in Bethel schon von Gott angenommen. So kehrt sich das Lied um, von
+      <em>לְבַדִּי</em> („allein") zu <span class="shk">אַךְ לֹא לְבַדִּי</span> („doch nicht allein").
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-lament">קַנֹּא קִנֵּאתִי</span><span class="chain-sep">◂</span>
+      <span class="chain-item chain-lament">וָאִוָּתֵר לְבַדִּי</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-turn">אַךְ לֹא לְבַדִּי</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-turn">לֹא עֲזַבְתָּ לָנֶצַח</span>
+    </div>
+  </div>
+
+  <!-- ══ STATIONEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-lament">
+      <span class="cyc-num">Die Klage · unter dem Baum</span>
+      <span class="cyc-he">וָאִוָּתֵר אֲנִי לְבַדִּי</span>
+      <span class="cyc-de">Elija allein in der Wüste (I Kön 19)</span>
+    </div>
+    <div class="cyc cyc-bethel">
+      <span class="cyc-num">Die Wende · Bethel</span>
+      <span class="cyc-he">יִשְׂרָאֵל יִהְיֶה שְׁמֶךָ</span>
+      <span class="cyc-de">Radak: die Altäre der Liebe (I Kön 18:31)</span>
+    </div>
+    <div class="cyc cyc-trost">
+      <span class="cyc-num">Der Trost · nicht allein</span>
+      <span class="cyc-he">לֹא עֲזַבְתָּ אֶת בָּנֶיךָ</span>
+      <span class="cyc-de">Du hast Dein Volk nie verlassen</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: BETHEL / RADAK ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">מִזְבְּחוֹת הָאַהֲבָה</span>
+    <p class="gloss-de">
+      Elijas Anklage <span class="gloss-he">אֶת מִזְבְּחֹתֶיךָ הָרָסוּ</span> steht im <strong>Plural</strong> —
+      und der <strong>Radak</strong> fragt: welche Altäre? Nicht der eine Tempelaltar, sondern die
+      vielen Altäre, die Israel aus Liebe gebaut hatte. Beim Aufbau seines Zwölf-Steine-Altars auf dem
+      Karmel nennt der Vers Jakobs Umbenennung — <em>„Israel sei dein Name"</em> — und das führt zurück
+      nach <strong>Bethel</strong> (Gen 35): dort baute Jakob einen Altar, dort wurde ihm gesagt,
+      seine Kinder würden sich versammeln <em>und einen Altar bauen und darauf opfern, sogar zur Zeit
+      des Bamot-Verbots</em> — <span class="gloss-he">וַאֲנִי מִתְרַצֶּה בַּדָּבָר</span>, „und ich nehme es an".
+      <br><br>
+      Darum die Brücke des Liedes: was Elija beklagt, hatte Gott längst als Ausdruck von Israels Herz
+      angenommen. Der Eiferer klagt — und wird zugleich getröstet.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: RADAK ══ -->
+  <div class="intro-box">
+    <div class="ib-he">וַיִּקַּח אֵלִיָּהוּ שְׁתֵּים עֶשְׂרֵה אֲבָנִים כְּמִסְפַּר שִׁבְטֵי בְנֵי יַעֲקֹב … יִשְׂרָאֵל יִהְיֶה שְׁמֶךָ</div>
+    <div class="ib-src">מְלָכִים א׳ י״ח:ל״א · רד״ק שָׁם</div>
+    <p class="ib-de">
+      Der Radak zu diesem Vers: die zwölf Steine stehen für die zwölf Stämme, die sich an
+      <strong>einem</strong> Altar vereinen sollen. Und warum wird gerade hier an Jakobs neuen Namen
+      erinnert? <em>Weil in Bethel, wo Jakob einen Altar für Gott baute, gesagt wurde: „Israel sei
+      dein Name"</em> — und dort wurde ihm eröffnet, dass seine Kinder einst einen Altar bauen und
+      opfern würden, <span class="shk">selbst zur Zeit, da private Altäre (Bamot) verboten sind</span> —
+      und Gott spricht: <em>ich willige darin ein</em>. Elija selbst baute den Karmel-Altar und opferte
+      darauf <strong>zur Zeit des Bamot-Verbots</strong>, als prophetische Ausnahme der Stunde
+      (<em>le-tzorech sha'ah</em>).
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Str. I</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Str. II</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">סוֹפִי</span><span class="sn-de">Wende</span></a>
+    <a class="sec-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">יְצִיאָה</span><span class="sn-de">Outro</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">גְּבוּרָה</span>III</div>
+      <div class="song-meta">
+        <span class="sefira-badge">אֵלִיָּהוּ · חוֹרֵב · קִינָה → נֶחָמָה</span>
+        <span class="maqam-badge">Em · fingerpicked · äolisch/dorisch · Rubato</span>
+        <span class="song-title-he">קַנֹּא קִנֵּאתִי — נִיגּוּן אֵלִיָּהוּ</span>
+        <span class="song-title-de">Der Niggun des Elija · Gitarre &amp; Stimme</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · I Kön 19:10 · Radak 18:31</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · PETICHA -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · פְּתִיחָה — Intro · leises Flüstern, einzelne Gitarrentöne, ppp</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line echo">קַנֹּא קִנֵּאתִי —</span>
+            <span class="line echo">קַנֹּא קִנֵּאתִי —</span>
+            <span class="line">קַנֹּא קִנֵּאתִי לַאדֹנָי...</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line echo">Eifern habe ich geeifert —</span>
+            <span class="line echo">eifern habe ich geeifert —</span>
+            <span class="line">eifern habe ich geeifert für den Herrn …</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- II · BAYIT ALEF -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · בֵּית א׳ — Strophe I · ruhig, getragen, mp</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">קַנֹּא קִנֵּאתִי לַאדֹנָי</span>
+            <span class="line">אֱלֹהֵי הַצְּבָאוֹת</span>
+            <span class="line">כִּי עָזְבוּ בְרִיתֶךָ</span>
+            <span class="line">בְּנֵי יִשְׂרָאֵל</span>
+            <span class="line echo">(עָזְבוּ, עָזְבוּ...)</span>
+            <span class="line" style="margin-top:10px;display:block;">אֶת מִזְבְּחוֹתֶיךָ הָרָסוּ</span>
+            <span class="line">וְאֶת נְבִיאֶיךָ הָרְגוּ</span>
+            <span class="line fire">בַּחֶרֶב, בַּחֶרֶב —</span>
+            <span class="line fire">וָאִוָּתֵר לְבַדִּי</span>
+            <span class="line echo">(לְבַדִּי, לְבַדִּי...)</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Eifern habe ich geeifert für den Herrn,</span>
+            <span class="line">den Gott der Heerscharen —</span>
+            <span class="line">denn sie haben Deinen Bund verlassen,</span>
+            <span class="line">die Kinder Israels.</span>
+            <span class="line echo">(verlassen, verlassen...)</span>
+            <span class="line" style="margin-top:10px;display:block;">Deine Altäre haben sie niedergerissen</span>
+            <span class="line">und Deine Propheten erschlagen</span>
+            <span class="line fire">mit dem Schwert, mit dem Schwert —</span>
+            <span class="line fire">und ich bin allein übrig geblieben.</span>
+            <span class="line echo">(allein, allein...)</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „קַנֹּא קִנֵּאתִי לַה׳ אֱלֹהֵי צְבָאוֹת … אֶת מִזְבְּחֹתֶיךָ הָרָסוּ וְאֶת נְבִיאֶיךָ הָרְגוּ בֶחָרֶב וָאִוָּתֵר אֲנִי לְבַדִּי" — מְלָכִים א׳ י״ט:י׳ (וְחוֹזֵר בְּי״ט:י״ד). לְפִי רד״ק: „בְרִיתֶךָ" — בְּרִית סִינַי, וּבַדְּרָשׁ בְּרִית מִילָה.
+        </div>
+      </div>
+
+      <!-- III · PIZMON -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · פָּזְמוֹן — Refrain · Stimme voll, Gitarre rhythmisch, mf → f</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line fire">וַיְבַקְשׁוּ אֶת נַפְשִׁי</span>
+              <span class="line fire">לְקַחְתָּהּ, לְקַחְתָּהּ —</span>
+              <span class="line">וָאִוָּתֵר אֲנִי לְבַדִּי</span>
+              <span class="line">תַּחַת הָאֶרֶז</span>
+              <span class="line echo">(לְבַדִּי, לְבַדִּי...)</span>
+              <span class="line" style="margin-top:10px;display:block;">אֲדֹנָי, אֲדֹנָי —</span>
+              <span class="line fire">שְׁמַע אֶת קוֹלִי</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line fire">Sie trachten nach meinem Leben —</span>
+              <span class="line fire">es zu nehmen, es zu nehmen —</span>
+              <span class="line">und ich bin allein übrig geblieben,</span>
+              <span class="line">unter der Zeder.</span>
+              <span class="line echo">(allein, allein...)</span>
+              <span class="line" style="margin-top:10px;display:block;">Herr, Herr —</span>
+              <span class="line fire">höre meine Stimme.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle · und ein Hinweis</span>
+          „וַיְבַקְשׁוּ אֶת נַפְשִׁי לְקַחְתָּהּ" — מְלָכִים א׳ י״ט:י׳. בַּמִּקְרָא אֵלִיָּהוּ יוֹשֵׁב תַּחַת רֹתֶם (י״ט:ד׳–ה׳); „הָאֶרֶז" הוּא שִׁנּוּי פִּיּוּטִי בַּשִּׁיר.
+        </div>
+      </div>
+
+      <!-- IV · BAYIT BET -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · בֵּית ב׳ — Strophe II · leiser, innig · die Bethel-Dimension (Radak)</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line shk">אַךְ בְּבֵית אֵל הַקָּדוֹשׁ</span>
+            <span class="line shk">נִרְאָה הַשְּׁכִינָה</span>
+            <span class="line">לְיַעֲקֹב — יִשְׂרָאֵל שְׁמֶךָ</span>
+            <span class="line">לְעוֹלָם, לְעוֹלָם</span>
+            <span class="line echo">(יִשְׂרָאֵל, יִשְׂרָאֵל...)</span>
+            <span class="line" style="margin-top:10px;display:block;">גּוֹי וּקְהַל גּוֹיִם</span>
+            <span class="line">מִמְּךָ יֵצְאוּ</span>
+            <span class="line">וּמִזְבֵּחַ יִבְנוּ בָנֶיךָ —</span>
+            <span class="line ember">וְרָצִיתִי, אָמַרְתִּי</span>
+            <span class="line echo">(רָצִיתִי, רָצִיתִי...)</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line shk">Doch in Bethel, dem Heiligen,</span>
+            <span class="line shk">erschien die Schechina —</span>
+            <span class="line">zu Jakob: Israel sei dein Name,</span>
+            <span class="line">für immer, für immer.</span>
+            <span class="line echo">(Israel, Israel...)</span>
+            <span class="line" style="margin-top:10px;display:block;">Eine Nation und eine Schar von Nationen</span>
+            <span class="line">sollen aus dir hervorgehen —</span>
+            <span class="line">und deine Kinder werden einen Altar bauen —</span>
+            <span class="line ember">und ich habe es angenommen, sprach Er.</span>
+            <span class="line echo">(angenommen, angenommen...)</span>
+          </div>
+        </div>
+        <div class="piyut-ref cool">
+          <span class="piyut-ref-label">Quelle</span>
+          בֵּית אֵל — בְּרֵאשִׁית ל״ה:ט׳–י״ב: „יִשְׂרָאֵל יִהְיֶה שְׁמֶךָ … גּוֹי וּקְהַל גּוֹיִם יִהְיֶה מִמֶּךָּ". „יִשְׂרָאֵל" — שֵׁם שְׂרָרָה (בְּרֵאשִׁית ל״ב:כ״ט). „וְרָצִיתִי" — רד״ק מְלָכִים א׳ י״ח:ל״א: „וַאֲנִי מִתְרַצֶּה בַּדָּבָר".
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line fire">וַיְבַקְשׁוּ אֶת נַפְשִׁי</span>
+              <span class="line fire">לְקַחְתָּהּ, לְקַחְתָּהּ —</span>
+              <span class="line">וָאִוָּתֵר אֲנִי לְבַדִּי</span>
+              <span class="line">תַּחַת הָאֶרֶז</span>
+              <span class="line" style="margin-top:10px;display:block;">אֲדֹנָי, אֲדֹנָי —</span>
+              <span class="line fire">שְׁמַע אֶת קוֹלִי</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line fire">Sie trachten nach meinem Leben —</span>
+              <span class="line fire">es zu nehmen, es zu nehmen —</span>
+              <span class="line">und ich bin allein übrig geblieben,</span>
+              <span class="line">unter der Zeder.</span>
+              <span class="line" style="margin-top:10px;display:block;">Herr, Herr —</span>
+              <span class="line fire">höre meine Stimme.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- V · GESCHER -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · גֶּשֶׁר — Brücke · sehr langsam, fast a cappella, nachdenklich, p</div>
+        <div class="instr-note">Guitar: single tones, almost percussive — space between each phrase.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">כִּי הַשֵּׁם מְקַבֵּל</span>
+              <span class="line shk">אֶת מִזְבְּחוֹת הָאַהֲבָה</span>
+              <span class="line">אֲפִילּוּ בְּשָׁעַת הָאִסּוּר —</span>
+              <span class="line">כִּי לִבָּם לַשָּׁמַיִם</span>
+              <span class="line echo">(לַשָּׁמַיִם, לַשָּׁמַיִם...)</span>
+              <span class="line" style="margin-top:10px;display:block;">מִזְבְּחוֹת רַבּוֹת —</span>
+              <span class="line">כֻּלָּן לְשִׁמְךָ</span>
+              <span class="line shk">וְלֹא עֲזַבְתָּ אֶת בָּנֶיךָ</span>
+              <span class="line shk">לְעוֹלָם וָעֶד</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Denn der Name nimmt an</span>
+              <span class="line shk">die Altäre der Liebe,</span>
+              <span class="line">selbst in der Stunde des Verbots —</span>
+              <span class="line">denn ihre Herzen sind zum Himmel gewandt.</span>
+              <span class="line echo">(zum Himmel, zum Himmel...)</span>
+              <span class="line" style="margin-top:10px;display:block;">Viele Altäre —</span>
+              <span class="line">alle für Deinen Namen.</span>
+              <span class="line shk">Und Du hast Deine Kinder nicht verlassen,</span>
+              <span class="line shk">in Ewigkeit und für immer.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref cool">
+          <span class="piyut-ref-label">Quelle</span>
+          מִזְבְּחוֹת „בִּשְׁעַת אִסּוּר הַבָּמוֹת" הַמִּתְקַבְּלִים בְּאַהֲבָה — רד״ק מְלָכִים א׳ י״ח:ל״א. עַל דִּין הַבָּמוֹת: מִשְׁנָה זְבָחִים י״ד. הוֹרָאַת שָׁעָה שֶׁל נָבִיא — יְבָמוֹת צ׳ ע״ב.
+        </div>
+      </div>
+
+      <!-- VI · PIZMON SOFI (Wende) -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · פָּזְמוֹן סוֹפִי — Abschluss-Refrain · volles Crescendo, dann Umschlag — fff → p</div>
+        <div class="instr-note">Build to the peak on <span dir="rtl">אַךְ לֹא לְבַדִּי</span> — then let it fall away at once into stillness.</div>
+        <div class="turn-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line fire">וַיְבַקְשׁוּ אֶת נַפְשִׁי</span>
+              <span class="line fire">לְקַחְתָּהּ, לְקַחְתָּהּ —</span>
+              <span class="line">וָאִוָּתֵר אֲנִי לְבַדִּי —</span>
+              <span class="line shk" style="font-weight:700;">אַךְ לֹא לְבַדִּי</span>
+              <span class="line echo">(לֹא לְבַדִּי, לֹא לְבַדִּי...)</span>
+              <span class="line" style="margin-top:10px;display:block;">כִּי עַמְּךָ יִשְׂרָאֵל</span>
+              <span class="line shk">לֹא עֲזַבְתָּ לָנֶצַח —</span>
+              <span class="line">אֲדֹנָי, אֲדֹנָי —</span>
+              <span class="line fire">שְׁמַע אֶת קוֹלִי</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line fire">Sie trachten nach meinem Leben —</span>
+              <span class="line fire">es zu nehmen, es zu nehmen —</span>
+              <span class="line">und ich bin allein übrig geblieben —</span>
+              <span class="line shk" style="font-weight:700;">doch nicht allein!</span>
+              <span class="line echo">(nicht allein, nicht allein...)</span>
+              <span class="line" style="margin-top:10px;display:block;">Denn Dein Volk Israel</span>
+              <span class="line shk">hast Du nie für immer verlassen —</span>
+              <span class="line">Herr, Herr —</span>
+              <span class="line fire">höre meine Stimme.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VII · JEZIAH -->
+      <div class="section-block" id="p7">
+        <div class="section-label">VII · יְצִיאָה — Outro · Gitarre solo, dann Flüstern, Fade, ppp</div>
+        <div class="outro-box">
+          <div class="outro-whisper">
+            אֶת מִזְבְּחוֹת הָאַהֲבָה<br>
+            לֹא יֶחְרְבוּ עוֹד<br>
+            <span class="sm">קַנֹּא קִנֵּאתִי —</span><br>
+            לַאדֹנָי, לַאדֹנָי<br>
+            <span class="sm">(לַאדֹנָי... לַאדֹנָי...)</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Und der Schluss</span>
+          מִזְבְּחוֹת הָאַהֲבָה שֶׁלֹּא יֶחְרְבוּ — נֶחָמַת הַשִּׁיר עַל פִּי רד״ק. „קַנֹּא קִנֵּאתִי" חוֹזֵר — אַךְ עַכְשָׁו מִתּוֹךְ יְדִיעָה שֶׁאֵין הוּא לְבַדּוֹ.
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <!-- ══ HEILIGE NAMEN ══ -->
+  <div class="names-box">
+    <div class="names-list">
+      <span>אֲדֹנָי ← יהוה</span>
+      <span>אֱלֹהֵי הַצְּבָאוֹת</span>
+      <span>הַשְּׁכִינָה</span>
+    </div>
+    <p class="names-note">
+      Das Tetragramm erscheint durchgehend als <span class="sources-he">אֲדֹנָי</span>. Der biblische
+      Titel <span class="sources-he">אֱלֹהֵי הַצְּבָאוֹת</span> (Gott der Heerscharen) ist als vollständige
+      Anrede aus dem Vers belassen.&nbsp;</p>
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">נֶפֶשׁ הָאֵשׁ — נִיגּוּן אֵלִיָּהוּ</div>
+    <div class="footer-chain">פִּינְחָס ◂ הַכַּרְמֶל ◂ חוֹרֵב · קִינָה ↦ נֶחָמָה · לְבַדִּי ↦ לֹא לְבַדִּי</div>
+    <p class="footer-de">
+      Das Karmel-Lied rief das Feuer herab; dieses folgt dem Eiferer in die Wüste, wo er sich für den
+      letzten Gerechten hält. Doch schon im Bau des Zwölf-Steine-Altars lag die Antwort: die vielen
+      Altäre Israels waren keine Untreue, sondern Liebe — in Bethel längst angenommen. So wendet sich
+      die Klage in ihr Gegenteil: <em>nicht allein</em>. Und das Feuer, das auf dem Karmel verzehrte
+      und hier klagt, wird am Ende zur Stimme dünnen Schweigens geführt (I Kön 19:12).
+      <br><br>
+      <strong>אַךְ לֹא לְבַדִּי — כִּי עַמְּךָ יִשְׂרָאֵל לֹא עֲזַבְתָּ לָנֶצַח.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>, kein überlieferter Midrasch; die
+      Umkehrung <em>„doch nicht allein"</em> und die „Altäre der Liebe, die nicht mehr zerstört werden"
+      sind die Dichtung dieses Liedes. Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Melachim I 19:10</strong> (wörtlich wiederholt in <strong>19:14</strong>) —
+      <span class="sources-he">קַנֹּא קִנֵּאתִי לַה׳ אֱלֹהֵי צְבָאוֹת … אֶת מִזְבְּחֹתֶיךָ הָרָסוּ … וָאִוָּתֵר אֲנִי לְבַדִּי וַיְבַקְשׁוּ אֶת נַפְשִׁי לְקַחְתָּהּ</span>;
+      Elijas Klage. ·
+      <strong>Radak zu Melachim I 18:31</strong> (bestätigt) — die zwölf Steine für die zwölf Stämme,
+      die sich an einem Altar vereinen; „Israel sei dein Name" verweist auf Bethel, wo Gott eröffnete,
+      Jakobs Kinder würden einen Altar bauen und opfern <em>„selbst zur Zeit des Bamot-Verbots — und ich
+      willige darin ein"</em> (<span class="sources-he">וַאֲנִי מִתְרַצֶּה בַּדָּבָר</span>); Elija opferte
+      auf dem Karmel <em>„le-tzorech sha'ah"</em>. Theologischer Kern des Liedes. ·
+      <strong>Radak zu Melachim I 19:10</strong> — <span class="sources-he">בְרִיתֶךָ</span> gedeutet als
+      Sinai-Bund (Peschat) bzw. Beschneidungsbund (Derasch). ·
+      <strong>Bereschit 35:9–12</strong> — Jakob wird in Bethel zu <em>Israel</em>; <span class="sources-he">גּוֹי וּקְהַל גּוֹיִם יִהְיֶה מִמֶּךָּ</span>;
+      Grundlage von Strophe II. ·
+      <strong>Bereschit 32:29</strong> — <em>Israel</em> als Name der Herrschaft
+      (<span class="sources-he">כִּי שָׂרִיתָ עִם אֱלֹהִים</span>), vom Radak zitiert. ·
+      <strong>Mischna Sewachim 14</strong> — das Recht der Bamot: erlaubt vor dem Bau des Tempels,
+      verboten danach; halachischer Hintergrund von <span class="sources-he">שְׁעַת אִסּוּר הַבָּמוֹת</span>. ·
+      <strong>Hora'at scha'a</strong> — ein Prophet darf ein Verbot vorübergehend aussetzen (Elijas
+      Opfer auf dem Karmel als klassisches Beispiel; vgl. Jewamot 90b). ·
+      <strong>Melachim I 19:4–5</strong> — Elija sitzt/schläft <span class="sources-he">תַּחַת רֹתֶם</span>
+      (unter einem Ginster­strauch).
+      <br><br>
+      <em>Korrektur:</em> Der Refrain singt <span class="sources-he">תַּחַת הָאֶרֶז</span> („unter der Zeder").
+      Im Bibeltext sitzt Elija jedoch <span class="sources-he">תַּחַת רֹתֶם</span> — unter einem
+      <em>Ginster/Wacholder</em> (I Kön 19:4).&nbsp;<br><br>
+      <strong>שְׁמוֹת קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht durchgehend für das
+      Tetragramm</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

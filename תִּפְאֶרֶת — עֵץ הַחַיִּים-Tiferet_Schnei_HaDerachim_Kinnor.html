@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תִּפְאֶרֶת — שְׁנֵי הַדְּרָכִים — לֵב אֶחָד · Album II · Kinnor &amp; Chalil</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08070A; --layer:rgba(22,20,27,.96);
+  --a:#D9A441; --a-lt:#F0C878; --a-vlt:#FAE4B0; --a-dp:#7A5A18;
+  --b:#7C76C0; --b-lt:#B0AAE8; --b-dp:#3A3670;
+  --c:#A8323C; --c-lt:#D06068;
+  --kin:#E8E4D8; --cha:#D06068;
+  --sage:#4A6840; --sage-lt:#7AA870; --teal:#2A6058; --teal-lt:#50A098;
+  --parch-dim:#a09c94; --ivory:#e4e2de; --ivory-lt:#f6f4f0; --ivory-dim:#8a8884;
+  --silver:#b6b4b0; --silver-dim:#625f5c; --text:#979490;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% 26%,rgba(217,164,65,.16) 0%,transparent 48%),radial-gradient(ellipse at 10% 46%,rgba(232,228,216,.10) 0%,transparent 44%),radial-gradient(ellipse at 90% 50%,rgba(168,50,60,.13) 0%,transparent 44%),radial-gradient(ellipse at 50% 88%,rgba(124,118,192,.12) 0%,transparent 42%),radial-gradient(ellipse at 50% 56%,rgba(8,7,10,.74) 0%,transparent 76%);}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:
+  radial-gradient(1.5px 1.5px at 50% 5%,rgba(255,255,255,.30) 0%,transparent 100%),
+  radial-gradient(1px 1px at 22% 20%,rgba(255,255,255,.20) 0%,transparent 100%),
+  radial-gradient(1px 1px at 78% 26%,rgba(255,255,255,.18) 0%,transparent 100%),
+  radial-gradient(1px 1px at 36% 52%,rgba(255,255,255,.16) 0%,transparent 100%),
+  radial-gradient(1px 1px at 66% 68%,rgba(255,255,255,.14) 0%,transparent 100%),
+  radial-gradient(1px 1px at 46% 90%,rgba(255,255,255,.13) 0%,transparent 100%);}
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,8,10,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.14);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{font-family:'Frank Ruhl Libre',serif;font-weight:900;padding:12px 22px;
+  border-right:1px solid rgba(255,255,255,.12);white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.nav-brand-main{font-size:.95em;color:var(--a-lt);letter-spacing:.05em;direction:rtl;}
+.nav-brand-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.50em;
+  color:var(--silver-dim);font-weight:300;letter-spacing:.14em;direction:ltr;}
+.nav-link{font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(255,255,255,.44);text-decoration:none;padding:0 11px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;}
+.nav-link:hover{color:var(--a-vlt);border-bottom-color:var(--a);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+.page-header{text-align:center;margin-bottom:48px;padding-bottom:56px;
+  border-bottom:1px solid rgba(255,255,255,.12);position:relative;}
+.page-header::after{content:'\2726 \2726 \2726';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--a-dp);font-size:.52em;letter-spacing:.65em;}
+.album-tag{font-family:'Frank Ruhl Libre',serif;font-size:.72em;font-weight:700;letter-spacing:.2em;
+  color:var(--a-lt);border:1px solid rgba(255,255,255,.22);padding:4px 16px;
+  display:inline-block;margin-bottom:18px;direction:rtl;background:rgba(255,255,255,.04);}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--b-lt);letter-spacing:.26em;text-transform:uppercase;margin-bottom:22px;opacity:.9;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.3em;font-weight:900;
+  color:var(--a-vlt);direction:rtl;letter-spacing:.07em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 92px rgba(217,164,65,.46);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:22px;}
+.epigraph{font-family:'Frank Ruhl Libre',serif;font-size:1.16em;color:var(--ivory);
+  direction:rtl;line-height:1.9;margin:0 auto 6px;max-width:700px;}
+.epigraph-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--a-lt);letter-spacing:.10em;margin-bottom:24px;opacity:.85;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 22px;}
+/* Kinnor + Chalil */
+.duo{display:flex;align-items:flex-end;justify-content:center;gap:34px;height:78px;margin:0 auto 10px;}
+.kinnor{display:flex;align-items:flex-end;gap:4px;height:100%;}
+.kinnor i{width:2px;background:linear-gradient(180deg,var(--kin),transparent);border-radius:1px;}
+.chalil{position:relative;width:150px;height:100%;}
+.chalil .tube{position:absolute;left:0;right:0;top:44px;height:3px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--cha),var(--cha),transparent);}
+.chalil .hole{position:absolute;top:42px;width:7px;height:7px;border-radius:50%;background:var(--bg);
+  border:1px solid var(--cha);}
+.chalil .breath{position:absolute;left:10%;right:10%;top:8px;height:26px;
+  border-top:2px solid var(--cha);border-radius:50%/100% 100% 0 0;opacity:.45;}
+.duo-lbl{display:flex;justify-content:center;gap:34px;margin-bottom:6px;}
+.duo-lbl span{font-family:'Frank Ruhl Libre',serif;font-size:.80em;direction:rtl;}
+.duo-lbl .k{color:var(--kin);} .duo-lbl .c{color:var(--cha);}
+.duo-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);letter-spacing:.13em;margin-bottom:22px;}
+/* Sefirot */
+.sef10{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:5px;
+  border:1px solid rgba(255,255,255,.14);padding:14px 16px;background:rgba(255,255,255,.03);
+  max-width:840px;margin:0 auto 12px;}
+.sf{font-family:'Frank Ruhl Libre',serif;font-size:.84em;direction:rtl;padding:5px 11px;
+  border:1px solid transparent;color:var(--silver-dim);opacity:.45;}
+.sf.done{opacity:.62;color:var(--a-dp);}
+.sf.next{opacity:.72;color:var(--b-lt);border-color:rgba(255,255,255,.20);border-style:dashed;}
+.sf.now{color:var(--a-vlt);opacity:1;border-color:rgba(255,255,255,.42);
+  background:rgba(255,255,255,.08);font-weight:700;}
+.sf-sep{color:var(--a-dp);opacity:.8;font-size:.66em;}
+.sef10-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.70em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:20px;}
+/* Meta */
+.meta-box{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(0,0,0,.5));
+  border:1px solid rgba(255,255,255,.20);border-left:4px solid var(--a);
+  padding:24px 32px;margin-bottom:44px;position:relative;}
+.meta-box::before{content:'\05E0\05B0\05EA\05D5\05BC\05E0\05B5\05D9 \05D1\05B4\05E6\05BC\05D5\05BC\05E2\05B7 \2014 Tempo & Schlagw\00F6rter';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--a-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.bpm-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;}
+.bpm-cell{border:1px solid rgba(255,255,255,.20);padding:12px 22px;background:rgba(255,255,255,.04);
+  text-align:center;flex:1;min-width:130px;}
+.bpm-v{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--a-vlt);
+  display:block;line-height:1.2;letter-spacing:.03em;}
+.bpm-l{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--silver-dim);letter-spacing:.12em;display:block;margin-top:3px;}
+.kw-h{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--a-lt);letter-spacing:.14em;display:block;margin:16px 0 7px;}
+.kw-line{font-family:'EB Garamond',serif;font-size:.90em;color:var(--ivory);line-height:1.85;
+  border-left:2px solid rgba(255,255,255,.22);padding:8px 12px 8px 16px;background:rgba(255,255,255,.03);}
+.kw-line.rtl{direction:rtl;border-left:none;border-right:2px solid rgba(255,255,255,.22);
+  padding:8px 16px 8px 12px;font-family:'Frank Ruhl Libre',serif;font-size:.92em;}
+.meta-note{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.82;margin-top:16px;}
+.meta-note strong{color:var(--ivory-lt);}
+/* Kritik */
+.crit-box{background:linear-gradient(135deg,rgba(184,40,40,.10),rgba(0,0,0,.5));
+  border:1px solid rgba(184,40,40,.30);border-left:4px solid #c03030;
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.crit-box::before{content:'\05D1\05B0\05BC\05D3\05B4\05D9\05E7\05B7\05EA \05DE\05B0\05E7\05D5\05B9\05E8\05D5\05B9\05EA \2014 Quellenpr\00FCfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:#e07070;letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.crit-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.crit-de strong{color:var(--ivory-lt);} .crit-de em{color:#e07070;font-style:italic;}
+.crit-num{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;color:#e07070;
+  display:block;margin:20px 0 8px;direction:rtl;text-align:right;}
+.crit-num:first-of-type{margin-top:6px;}
+.ok-num{color:var(--teal-lt);}
+.he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+.add-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 6px;}
+.add{border:1px solid rgba(42,96,88,.24);padding:12px 16px;background:rgba(42,96,88,.05);}
+.add-lbl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:#e07070;display:block;margin-bottom:5px;letter-spacing:.08em;}
+.add-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);
+  direction:rtl;display:block;letter-spacing:.03em;}
+.add-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  color:var(--silver-dim);display:block;margin-top:5px;line-height:1.7;}
+.wordfix{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px;}
+.wf{border:1px solid rgba(184,40,40,.24);padding:11px 15px;background:rgba(184,40,40,.05);}
+.wf-out{font-family:'Frank Ruhl Libre',serif;font-size:.98em;color:#e8a0a0;direction:rtl;display:block;}
+.wf-in{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;color:var(--a-vlt);
+  direction:rtl;display:block;margin-top:3px;}
+.wf-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);display:block;margin-top:5px;line-height:1.65;}
+.flagbox{border:1px solid rgba(224,112,112,.32);border-left:3px solid #c03030;
+  background:rgba(184,40,40,.07);padding:16px 20px;margin:16px 0 6px;}
+.flag-h{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:#e8a0a0;
+  direction:rtl;display:block;margin-bottom:8px;}
+/* Info */
+.info-box{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,0,0,.5));
+  border:1px solid rgba(255,255,255,.18);border-left:4px solid var(--b);
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.info-box::before{content:attr(data-label);position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--b-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.info-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;text-align:right;margin-bottom:10px;line-height:1.80;}
+.info-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--b-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.95;}
+.info-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.info-de strong{color:var(--ivory);} .info-de em{color:var(--a-lt);font-style:italic;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 6px;}
+.tc{border:1px solid rgba(255,255,255,.16);padding:14px 18px;background:rgba(255,255,255,.03);}
+.tc-h{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;direction:rtl;display:block;margin-bottom:5px;}
+.tc.a .tc-h{color:var(--kin);} .tc.b .tc-h{color:var(--cha);}
+.tc-t{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.80;}
+.tc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);display:block;margin-bottom:6px;letter-spacing:.08em;}
+/* Sektionsnav */
+.sefira-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:54px;}
+.sefira-nav-item{border:1px solid rgba(255,255,255,.16);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s;background:rgba(255,255,255,.03);}
+.sefira-nav-item:hover{opacity:.9;background:rgba(255,255,255,.08);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.57em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--a-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;color:var(--silver-dim);display:block;}
+/* Song */
+.song-section{margin-bottom:70px;scroll-margin-top:60px;border:1px solid rgba(255,255,255,.14);
+  background:linear-gradient(180deg,var(--layer) 0%,rgba(0,0,0,.6) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--a-dp),var(--a),var(--a-vlt),var(--b-lt),var(--c));opacity:.72;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(255,255,255,.10);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.46;
+  line-height:1;text-align:center;color:var(--a-lt);border-right:1px solid rgba(255,255,255,.14);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.58;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.13em;
+  color:var(--a-lt);opacity:.68;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--b-lt);opacity:.88;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.56em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(255,255,255,.20);
+  padding:5px 14px;color:var(--a-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(255,255,255,.04);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,.08);opacity:.8;}
+.instr{margin-bottom:12px;display:flex;flex-direction:column;gap:5px;}
+.instr div{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  padding:6px 15px;line-height:1.76;direction:ltr;}
+.instr .k{color:var(--kin);border-left:2px solid var(--kin);background:rgba(255,255,255,.03);}
+.instr .c{color:var(--cha);border-left:2px solid var(--cha);background:rgba(255,255,255,.02);}
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.15;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.15;border-left:1px solid rgba(255,255,255,.10);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--ivory-dim);opacity:.68;font-size:.92em;}
+.w1{color:var(--a-vlt);} .w2{color:var(--b-lt);} .w3{color:var(--c-lt);}
+.divider{text-align:center;color:var(--a);opacity:.36;letter-spacing:.7em;font-size:.72em;margin:26px 0;}
+.refrain-box{background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.26);border-left:3px solid var(--a);padding:22px 28px;}
+.strophe-box{background:linear-gradient(135deg,rgba(255,255,255,.045),transparent);
+  border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--b);padding:22px 28px;}
+.bridge-box{background:linear-gradient(135deg,rgba(255,255,255,.05),transparent);
+  border:1px solid rgba(255,255,255,.18);border-left:3px solid var(--c);padding:22px 28px;}
+.climax-box{background:linear-gradient(135deg,rgba(255,255,255,.10),transparent);
+  border:1px solid rgba(255,255,255,.28);padding:24px 28px;}
+.climax-box .lyrics-he .line{font-size:1.06em;font-weight:700;}
+.coda-box{text-align:center;padding:26px 0 12px;}
+.coda-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;color:var(--ivory-dim);
+  direction:rtl;line-height:2.4;letter-spacing:.07em;}
+.coda-whisper em{font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;}
+.tikkun-box{background:linear-gradient(135deg,rgba(42,96,88,.14),rgba(8,32,28,.44));
+  border:1px solid rgba(42,96,88,.32);border-left:4px solid var(--teal);
+  padding:28px 32px;margin:28px 0;position:relative;}
+.tikkun-box::before{content:'\05DE\05B7\05E2\05B2\05E9\05B5\05C2\05D4 \05D4\05B7\05EA\05BC\05B4\05D9\05E7\05BC\05D5\05BC\05DF \2014 Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 12px;font-size:.60em;
+  color:var(--teal-lt);letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.tikkun-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid rgba(42,96,88,.18);gap:18px;flex-wrap:wrap;}
+.tikkun-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);direction:rtl;}
+.tikkun-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--teal);display:block;margin-top:2px;}
+.tikkun-src{font-family:'Frank Ruhl Libre',serif;font-size:.65em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.32);padding:3px 11px;background:rgba(42,96,88,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{font-family:'Frank Ruhl Libre',serif;font-size:.68em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.30);padding:3px 10px;background:rgba(42,96,88,.05);direction:rtl;}
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(255,255,255,.04);
+  border-left:2px solid rgba(255,255,255,.20);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--a-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.perf-box{background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(0,0,0,.5));
+  border:1px solid rgba(255,255,255,.18);border-left:4px solid var(--kin);
+  padding:24px 32px;margin:28px 0 0;position:relative;}
+.perf-box::before{content:'\05D4\05B6\05E2\05B8\05E8\05D5\05B9\05EA \05DC\05B7\05D1\05BC\05B4\05E6\05BC\05D5\05BC\05E2\05B7 \2014 Auff\00FChrungshinweise';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--kin);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.perf-item{border-left:2px solid rgba(255,255,255,.14);padding:2px 0 2px 16px;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  color:var(--a-lt);display:block;margin-bottom:3px;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.78;}
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);}
+.ornament-star{color:var(--a);font-size:.65em;letter-spacing:.5em;opacity:.52;}
+.footer{text-align:center;margin-top:80px;padding-top:60px;border-top:1px solid rgba(255,255,255,.14);}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.45em;font-weight:900;color:var(--a-vlt);
+  direction:rtl;letter-spacing:.10em;margin-bottom:14px;}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:26px;}
+.footer-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97em;
+  color:var(--silver-dim);line-height:1.95;max-width:660px;margin:0 auto 28px;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;color:var(--sage-lt);letter-spacing:.24em;opacity:.60;}
+.sources-box{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,0,0,.5));
+  border:1px solid rgba(255,255,255,.18);border-left:4px solid var(--a);
+  padding:26px 32px;margin-top:44px;position:relative;}
+.sources-box::before{content:'\05D0\05B4\05DE\05BC\05D5\05BC\05EA \05D4\05B7\05DE\05BC\05B0\05E7\05D5\05B9\05E8\05D5\05B9\05EA \2014 Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.60em;
+  color:var(--a-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.88;}
+.sources-text strong{color:var(--ivory);}
+@media(max-width:780px){
+  .wrap{padding:40px 18px 80px;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.10);padding-top:14px;margin-top:14px;}
+  .perf-grid,.add-grid,.two,.wordfix{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:62px 1fr;}
+  .source-badge{display:none;}
+  .song-body{padding:0 18px 34px;}
+  .page-title-he{font-size:2.1em;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .tikkun-box{padding:20px 18px;}
+  .sf{font-size:.74em;padding:4px 7px;}
+  .bpm-cell{min-width:110px;padding:10px 12px;}
+  .duo{gap:18px;} .chalil{width:110px;}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">תִּפְאֶרֶת — שְׁנֵי הַדְּרָכִים — לֵב אֶחָד</span>
+    <span class="nav-brand-sub">Album II · Kinnor &amp; Chalil · Lied VI/XI · Tiferet · Maqam Nahawand · 72 BPM</span>
+  </div>
+  <a class="nav-link" href="#meta"><span class="nav-num">·</span>נְתוּנִים</a>
+  <a class="nav-link" href="#p1"><span class="nav-num">א</span>פְּתִיחָה</a>
+  <a class="nav-link" href="#p2"><span class="nav-num">ב</span>בֵּית א</a>
+  <a class="nav-link" href="#p3"><span class="nav-num">ג</span>בֵּית ב</a>
+  <a class="nav-link" href="#p4"><span class="nav-num">ד</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p5"><span class="nav-num">ה</span>גֶּשֶׁר</a>
+  <a class="nav-link" href="#p6"><span class="nav-num">ו</span>תִּיקּוּן</a>
+  <a class="nav-link" href="#p7"><span class="nav-num">ז</span>שִׂיא</a>
+  <a class="nav-link" href="#p8"><span class="nav-num">ח</span>קוֹדָה</a>
+</nav>
+
+<div class="wrap">
+
+<div class="page-header">
+  <div class="album-tag">עֵץ הַחַיִּים · Album II · כִּנּוֹר וְחָלִיל · שִׁיר VI מִתּוֹךְ י״א</div>
+  <div class="eyebrow">Piyut · Der Lebensbaum · Harfe &amp; Flöte · Solostimme</div>
+  <h1 class="page-title-he">תִּפְאֶרֶת</h1>
+  <div class="page-title-de">Tiferet — שְׁנֵי הַדְּרָכִים — לֵב אֶחָד · Zwei Wege — Ein Herz</div>
+  <div class="epigraph">חֶסֶד וֶאֱמֶת נִפְגָּשׁוּ — צֶדֶק וְשָׁלוֹם נָשָׁקוּ</div>
+  <div class="epigraph-src">תְּהִלִּים פ״ה:י״א · Tehillim 85,11</div>
+  <div class="duo">
+    <div class="kinnor"><i style="height:30%"></i><i style="height:44%"></i><i style="height:56%"></i><i style="height:66%"></i><i style="height:74%"></i><i style="height:78%"></i><i style="height:74%"></i><i style="height:66%"></i><i style="height:56%"></i><i style="height:44%"></i><i style="height:30%"></i></div>
+    <div class="chalil"><span class="breath"></span><span class="tube"></span><span class="hole" style="left:26%"></span><span class="hole" style="left:40%"></span><span class="hole" style="left:54%"></span><span class="hole" style="left:68%"></span><span class="hole" style="left:82%"></span></div>
+  </div>
+  <div class="duo-lbl"><span class="k">כִּנּוֹר</span><span class="c">חָלִיל</span></div>
+  <div class="duo-cap">Harfe und Flöte im Zwiegespräch — jede antwortet der anderen, beide umschlingen sich</div>
+  <div class="sef10">
+    <span class="sf done">כֶּתֶר</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf done">חָכְמָה</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf done">בִינָה</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf done">חֶסֶד</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf done">גְּבוּרָה</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf now">תִּפְאֶרֶת</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf next">נֶצַח</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf">הוֹד</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf">יְסוֹד</span>
+    <span class="sf-sep">▸</span>
+    <span class="sf">מַלְכוּת</span>
+  </div>
+  <div class="sef10-cap">Station VI von zehn · dazu das elfte Lied, הָאוֹר הַחוֹזֵר</div>
+  <p class="page-desc">Die Mitte — und das erste Lied, in dem <strong>beide Instrumente durchgehend
+    gleichberechtigt</strong> sind: „zwei Stimmen, eine Harmonie“. Nach Lied V, das die Flöte
+    ganz ausgeschlossen hatte, ist das ein hörbarer Einschnitt. Und der Text tut das
+    Ungewöhnlichste, was ein Streitlied tun kann — er gibt beiden recht, ohne einen
+    Kompromiss zu schließen.</p>
+</div>
+
+<div class="meta-box" id="meta">
+  <div class="bpm-row">
+    <div class="bpm-cell"><span class="bpm-v">72</span><span class="bpm-l">BPM · ausgewogen</span></div>
+    <div class="bpm-cell"><span class="bpm-v">נַהַאוַנְד</span><span class="bpm-l">Maqam Nahawand · Tiferet</span></div>
+    <div class="bpm-cell"><span class="bpm-v">4/4</span><span class="bpm-l">ruhig, zweistimmig</span></div>
+    <div class="bpm-cell"><span class="bpm-v">≈ 5:10</span><span class="bpm-l">Richtwert Gesamtdauer</span></div>
+  </div>
+  <span class="kw-h">Schlagwörter — Musik &amp; Klang</span>
+  <div class="kw-line">Sephardic piyut, Jewish liturgical music, Hebrew sacred song, solo male voice, harp, kinnor, concert flute, chalil, two-voice dialogue, interlocking melodies, counterpoint, Maqam Nahawand, Middle Eastern modal, Andalusian, Levantine Jewish tradition, balanced, warm, no percussion, no drums, no choir, no guitar, sparse arrangement</div>
+  <span class="kw-h">Schlagwörter — Inhalt &amp; Thema</span>
+  <div class="kw-line">Tiferet, Schönheit, Mitte, mittlerer Pfeiler, Sefirot, Lebensbaum, Ez HaChaim, Kabbala, Chesed und Gevura, Elu weElu, Machloket leSchem Schamajim, Jaakow, Emet, Gebet, Awodat HaLew, Schacharit Mincha Maariv, Nefesch HaChaim, Tanja, Harfe und Flöte, Album II</div>
+  <span class="kw-h">Schlagwörter — עִבְרִית</span>
+  <div class="kw-line rtl">תִּפְאֶרֶת, שְׁנֵי הַדְּרָכִים, לֵב אֶחָד, קַו הָאֶמְצַע, אֵלּוּ וָאֵלּוּ, עֲבוֹדַת הַלֵּב, שַׁחֲרִית מִנְחָה מַעֲרִיב, כִּנּוֹר וְחָלִיל, עֵץ הַחַיִּים, מַקַאם נַהַאוַנְד, פִּיּוּט סְפָרַדִּי</div>
+  <p class="meta-note"><strong>Zum Tempo — 72 BPM, und zwar nicht beliebig:</strong> Chesed steht bei 68,
+    Gevura bei 76. <strong>72 ist exakt die Mitte zwischen beiden.</strong> Wenn ein Lied seine
+    Aussage im Metrum tragen kann, dann dieses. Und die Besetzung sagt dasselbe: Nach Lied V,
+    in dem die Flöte kein einziges Mal spielte, kehrt sie hier als gleichberechtigte Stimme
+    zurück — die Bewegung ist Teil der Aussage.</p></div><div class="crit-box">
+  <div class="flagbox"><span class="flag-h">נֶפֶשׁ הַחַיִּים וְתַנְיָא — שְׁנֵיהֶם אַשְׁכְּנַזִּים, נִשְׁאָרִים</span>
+    <p class="crit-de"><strong>Nefesch HaChaim,
+      Scha'ar 3</strong> (R. Chaim von Woloschin, 1749–1821, Litauen) und <strong>Tanja
+      48–49</strong> (R. Schneur Salman von Ljadi, Chabad). Auch das Begriffspaar
+      <span class="he">חָסִיד / מִתְנַגֵּד</span> benennt eine innerlich aschkenasische
+      Auseinandersetzung des späten 18. Jahrhunderts.&nbsp;<br><br>
+      <strong>Die sephardische Entsprechung steht im Album — im nächsten Lied.</strong>
+      Ergas und Ricchi führen denselben Streit (Immanenz gegen Grenze) ein Jahrhundert früher
+      und vollständig innersephardisch. Wer Lied VI sephardisch belegen will, braucht nur auf
+      Lied VII zu zeigen. Und der Tikkun-Abschnitt ist ohnehin sauber:
+      <em>Ta'anit 2a</em> ist Talmud.</p>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num ok-num">Quellen</span>
+  </p>
+  <div class="add-grid">
+    <div class="add"><span class="add-lbl">für <span class="he">שְׁנֵיכֶם צוֹדְקִים</span> — die Hauptquelle</span><span class="add-he">עֵרוּבִין י״ג ע״ב</span><span class="add-note">„אֵלּוּ וָאֵלּוּ דִּבְרֵי אֱלֹהִים חַיִּים“ — über Bet Hillel und Bet Schammai. Der klassische Satz dafür, dass zwei einander widersprechende Positionen beide göttlich sein können. <strong>Genau deine Refrain-Logik, in fünf Wörtern.</strong></span></div>
+    <div class="add"><span class="add-lbl">für <span class="he">שְׁנֵי שְׁבִילִים — אֵל אֶחָד</span></span><span class="add-he">חֲגִיגָה ג׳ ע״ב · קֹהֶלֶת י״ב:י״א</span><span class="add-note">„כֻּלָּם נִתְּנוּ מֵרוֹעֶה אֶחָד“ — die Gemara wendet den Kohelet-Vers ausdrücklich auf einander widersprechende Lehrmeinungen an.</span></div>
+    <div class="add"><span class="add-lbl">für <span class="he">יוֹפִי הָאֱמֶת</span> — Tiferet und Jaakow</span><span class="add-he">מִיכָה ז׳:כ׳</span><span class="add-note">„תִּתֵּן <b>אֱמֶת לְיַעֲקֹב</b>, <b>חֶסֶד לְאַבְרָהָם</b>“ — und mit Bereschit 31:42 (<em>Pachad Jizchak</em>, in Lied V ergänzt) steht die Trias vollständig: <strong>die Lieder IV, V und VI sind die drei Erzväter.</strong></span></div>
+    <div class="add"><span class="add-lbl">für den Refrain — Epigraph</span><span class="add-he">תְּהִלִּים פ״ה:י״א</span><span class="add-note">„חֶסֶד וֶאֱמֶת <b>נִפְגָּשׁוּ</b>, צֶדֶק וְשָׁלוֹם נָשָׁקוּ“ — Chesed und Emet <em>begegnen einander</em>. Ein Vers, der die Anlage von Lied IV bis VI in einer Zeile hat.</span></div>
+    <div class="add"><span class="add-lbl">für <span class="he">שְׁנֵי כְּנָפַיִם</span></span><span class="add-he">אָבוֹת ה׳:י״ז</span><span class="add-note">„כָּל מַחֲלֹקֶת שֶׁהִיא לְשֵׁם שָׁמַיִם — <b>סוֹפָהּ לְהִתְקַיֵּם</b>“: ein Streit um des Himmels willen <em>hat Bestand</em>. Nicht: er wird beigelegt. Das ist die feinere Pointe — dein Lied schließt den Streit nicht, es trägt ihn.</span></div>
+    <div class="add"><span class="add-lbl">für den Tikkun — die Album-Angabe ist exakt</span><span class="add-he">תַּעֲנִית ב׳ ע״א</span><span class="add-note">„וּלְעָבְדוֹ בְּכָל לְבַבְכֶם — אֵיזוֹ הִיא עֲבוֹדָה שֶׁהִיא בַּלֵּב? הֱוֵי אוֹמֵר: <b>זוֹ תְּפִלָּה</b>.“ <strong>Der Talmud definiert das Gebet wörtlich als „Dienst des Herzens“</strong> — genau dein Abschnittstitel.</span></div>
+    <div class="add"><span class="add-lbl">für die drei Gebetszeiten</span><span class="add-he">בְּרָכוֹת כ״ו ע״ב</span><span class="add-note">Die Gemara leitet Schacharit, Mincha und Maariv teils von den Erzvätern, teils von den Tamid-Opfern ab. Dass dein Tikkun-Abschnitt gerade in Tiferet steht, passt: Jaakow gilt dort als Stifter von Maariv.</span></div>
+    <div class="add"><span class="add-lbl">für die Sefira selbst</span><span class="add-he">רָמָ״ק, פַּרְדֵּס רִמּוֹנִים</span><span class="add-note">Tiferet als mittlerer Pfeiler zwischen Chesed und Gevura, als <span class="he">לֵב</span> des Baums und als Sitz von <em>Emet</em>. Der kabbalistische Rahmen deines „שֶׁמֶשׁ בָּאֶמְצַע“ — sephardisch, Safed.</span></div>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num">Wortformen</span>
+    Alle silbengleich oder um höchstens eine Silbe abweichend; für ein etwaigen zweiten Durchgang wert:
+  </p>
+  <div class="wordfix">
+    <div class="wf"><span class="wf-out">הַחָסִיד</span><span class="wf-in">הֶחָסִיד</span><span class="wf-t">Vor Chet mit Kamatz steht der Artikel als <span class="he">הֶ</span>. Klanglich kaum unterscheidbar.</span></div>
+    <div class="wf"><span class="wf-out">הַאַהֲבָה</span><span class="wf-in">הָאַהֲבָה</span><span class="wf-t">Vor Alef steht der Artikel als <span class="he">הָ</span>. Silbengleich.</span></div>
+    <div class="wf"><span class="wf-out">בֵּין חֶסֶד לְגְּבוּרָה</span><span class="wf-in">בֵּין חֶסֶד לִגְבוּרָה</span><span class="wf-t">Vor Schwa wird das Lamed zu <span class="he">לִ</span>, und das Gimel verliert sein Dagesch. Im Klimax.</span></div>
+    <div class="wf"><span class="wf-out">הָרִב / הַמִּחְלֹקֶת</span><span class="wf-in">הָרִיב / הַמַּחֲלֹקֶת</span><span class="wf-t">Betrifft Lied VII, sei hier aber mitvermerkt, weil dieselbe Sache: <span class="he">מַחֲלֹקֶת</span> hat Patach-Chataf-Patach, nicht Chirik-Schwa.</span></div>
+  </div>
+</div>
+
+<div class="info-box" data-label="אֵלּוּ וָאֵלּוּ — Warum das Lied nichts beilegt">
+  <div class="info-he">אֵלּוּ וָאֵלּוּ דִּבְרֵי אֱלֹהִים חַיִּים</div>
+  <div class="info-src">עֵרוּבִין י״ג ע״ב</div>
+  <p class="info-de">Die Zeile <span class="he">שְׁנֵיכֶם צוֹדְקִים — שְׁנֵיכֶם</span> klingt wie eine
+    freundliche Beschwichtigung. Sie ist etwas Härteres — und der Talmud macht klar, was.</p>
+  <div class="two">
+    <div class="tc a"><span class="tc-sub">בַּת קוֹל · beide zugleich</span><span class="tc-h">אֵלּוּ וָאֵלּוּ</span><span class="tc-t">In Eruwin 13b sagt eine Himmelsstimme über beide Häuser: <em>diese und jene sind Worte des lebendigen Gottes</em> — <strong>und</strong> die Halacha folgt Bet Hillel. Beides im selben Atemzug.</span></div>
+    <div class="tc b"><span class="tc-sub">אָבוֹת ה׳:י״ז · Bestand</span><span class="tc-h">סוֹפָהּ לְהִתְקַיֵּם</span><span class="tc-t">Ein Streit um des Himmels willen <em>hat Bestand</em> — nicht: er endet. Er bleibt. Das Lied befriedet nicht, es gibt dem Streit einen Ort.</span></div>
+  </div>
+  <p class="info-de"><strong>Und die Besetzung setzt genau das um.</strong> Die Anweisung sagt für die
+    Peticha: „Flöte antwortet der Harfe <em>mit einer anderen Phrase</em>“ — nicht mit derselben.
+    Im Refrain „finden sie sich zusammen“, im Klimax „verschmelzen sie zu einer Melodie“, und in
+    der Coda „beendet jede den Satz der anderen“.
+    <br><br>
+    <strong>Das ist eine vierstufige Dramaturgie der Zweistimmigkeit</strong> — verschieden,
+    zusammenfindend, verschmelzend, einander ergänzend. Und sie ist inhaltlich präzise: Tiferet
+    ist keine Mitte im Sinne des halben Wegs, sondern die Säule, an der beide Seiten hängen.
+    Ohne sie hätte der Baum nicht weniger Chesed und weniger Gevura, sondern gar keine.
+    <br><br>
+    Deshalb sollte die Coda-Anweisung wörtlich genommen werden: <em>jede beendet den Satz der
+    anderen.</em> Das ist mehr als ein Effekt — es ist das einzige Verfahren, das zwei Stimmen
+    vereint, ohne eine von beiden aufzugeben.</p>
+</div>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro</span></a>
+  <a class="sefira-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בֵּית א</span><span class="sn-de">Strophe I</span></a>
+  <a class="sefira-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בֵּית ב</span><span class="sn-de">Strophe II</span></a>
+  <a class="sefira-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+  <a class="sefira-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+  <a class="sefira-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">תִּיקּוּן</span><span class="sn-de">Tikkun</span></a>
+  <a class="sefira-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">שִׂיא</span><span class="sn-de">Klimax</span></a>
+  <a class="sefira-nav-item" href="#p8"><span class="sn-num">VIII</span><span class="sn-he">קוֹדָה</span><span class="sn-de">Outro</span></a>
+</div>
+
+<div class="song-section">
+
+  <div class="song-header">
+    <div class="song-num"><span class="snum-sefira">תִּפְאֶרֶת</span>VI</div>
+    <div class="song-meta">
+      <span class="sefira-badge">נֶפֶשׁ הַחַיִּים שַׁעַר ג׳ · תַּנְיָא מ״ח–מ״ט · עֵץ הַחַיִּים Album II · כִּנּוֹר וְחָלִיל</span>
+      <span class="maqam-badge">Maqam Nahawand · 72 BPM · ≈ 5:10 · Harfe, Flöte &amp; Solostimme</span>
+      <span class="song-title-he">תִּפְאֶרֶת — שְׁנֵי הַדְּרָכִים — לֵב אֶחָד</span>
+      <span class="song-title-de">Tiferet — Zwei Wege — Ein Herz</span>
+    </div>
+    <div class="source-badge">פִּיּוּט מְקוֹרִי<span class="source-badge-de">Eruwin 13b · Micha 7:20 · Ta'anit 2a</span></div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block" id="p1">
+      <div class="section-label">I · פְּתִיחָה — Intro · Zwiegespräch</div>
+      <div class="instr"><div class="k">Harfe: eine melodische Phrase · <em>pp</em>, ruhig</div><div class="c">Flöte: antwortet der Harfe mit <em>einer anderen</em> Phrase · Beide umschlingen sich — zwei Stimmen, eine Harmonie · Das ist Tiferet: die Mitte zwischen Chesed und Gevura</div></div>
+      <div class="coda-box"><div class="coda-whisper"><span class="echo">Harfe und Flöte im Zwiegespräch — jede antwortet der anderen, beide umschlingen sich</span></div></div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>שִׂים לֵב לְנֻסַּח הַהוֹרָאָה: הֶחָלִיל עוֹנֶה „בְּמִשְׁפָּט אַחֵר“ — לֹא בְּחִקּוּי. אַחֲרֵי שִׁיר ה, שֶׁבּוֹ לֹא נִגֵּן כְּלָל, זוֹ חֲזָרָה מֻדְגֶּשֶׁת. וְהַתְּנוּעָה עַצְמָהּ הִיא הַתֹּכֶן: תִּפְאֶרֶת אֵינָהּ מְמַזֶּגֶת אֶת חֶסֶד וּגְבוּרָה לְקוֹל שְׁלִישִׁי, אֶלָּא מַחֲזִיקָה אֶת שְׁנֵיהֶם.</div>
+    </div>
+
+    <div class="section-block" id="p2">
+      <div class="section-label">II · בֵּית א — Strophe I · Zwei Pfade, ein Gott</div>
+      <div class="instr"><div class="k">Harfe: <em>mf</em>, eigene Linie</div><div class="c">Flöte: eigene Linie, gleichrangig</div></div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֶחָד הָלַךְ <span class="w1">בְּדֶרֶךְ הַלֵּב</span> —</span>
+            <span class="line">וְאֶחָד <span class="w3">בְּדֶרֶךְ הַשֵּׂכֶל הַנָּבוֹן</span>,</span>
+            <span class="line">שְׁנֵיהֶם עָלוּ לָהָר הָאֶחָד,</span>
+            <span class="line"><span class="w2">שְׁנֵי שְׁבִילִים — אֵל אֶחָד.</span></span>
+            <span class="line">הַחָסִיד אוֹמֵר: הַכֹּל בּוֹ תָּמִיד —</span>
+            <span class="line">הַמִּתְנַגֵּד אוֹמֵר: שְׁמֹר אֶת הַגְּבוּל,</span>
+            <span class="line">וּבֵינֵיהֶם — <span class="w1">תִּפְאֶרֶת עוֹמֶדֶת</span>:</span>
+            <span class="line"><span class="w1">שְׁנֵיכֶם צוֹדְקִים — שְׁנֵיכֶם.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Einer ging <span class="w1">den Weg des Herzens</span> —</span>
+            <span class="line">und einer <span class="w3">den Weg des klaren Verstands</span>,</span>
+            <span class="line">beide stiegen denselben Berg hinauf,</span>
+            <span class="line"><span class="w2">zwei Pfade — Ein Gott.</span></span>
+            <span class="line">Der Chassid sagt: Alles in Ihm — immer —</span>
+            <span class="line">der Mitnaged sagt: Wahre die Grenze,</span>
+            <span class="line">und zwischen ihnen steht <span class="w1">Tiferet</span>:</span>
+            <span class="line"><span class="w1">Ihr beide habt recht — ihr beide.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>עֵרוּבִין י״ג ע״ב — „אֵלּוּ וָאֵלּוּ דִּבְרֵי אֱלֹהִים חַיִּים“. וְ„שְׁנֵי שְׁבִילִים — אֵל אֶחָד“ — חֲגִיגָה ג׳ ע״ב עַל קֹהֶלֶת י״ב:י״א, „כֻּלָּם נִתְּנוּ מֵרוֹעֶה אֶחָד“, וְהַגְּמָרָא אוֹמֶרֶת זֹאת בְּמֵפֹרָשׁ עַל דֵּעוֹת חוֹלְקוֹת. שִׂים לֵב לַכְּפִילוּת „שְׁנֵיכֶם … שְׁנֵיכֶם“: אֵין זוֹ הַדְגָּשָׁה רִגְשִׁית אֶלָּא נֻסָּח שֶׁל פְּסַק.</div>
+    </div>
+
+    <div class="section-block" id="p3">
+      <div class="section-label">III · בֵּית ב — Strophe II · Zwei Flügel</div>
+      <div class="instr"><div class="k">Harfe: trägt die Nefesch-HaChaim-Zeilen</div><div class="c">Flöte: trägt die Tanja-Zeilen</div></div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">נֶפֶשׁ הַחַיִּים אָמַר: הַתּוֹרָה —</span>
+            <span class="line"><span class="w3">הִיא עֲבוֹדַת הַשֵּׂכֶל לְפָנָיו</span>,</span>
+            <span class="line">הַתַּנְיָא אָמַר: הַאַהֲבָה —</span>
+            <span class="line"><span class="w2">הִיא עֲבוֹדַת הַלֵּב לְפָנָיו.</span></span>
+            <span class="line"><span class="w1">שְׁנֵיהֶם צוֹדְקִים — הֵם שְׁנֵי כְּנָפַיִם,</span></span>
+            <span class="line">בְּלֹא שְׁנֵיהֶם — אִי אֶפְשָׁר לָעוּף,</span>
+            <span class="line">תִּפְאֶרֶת — הַלֵּב שֶׁבֵּין שְׁנֵיהֶם,</span>
+            <span class="line"><span class="w1">יוֹפִי הָאֱמֶת — בָּאֶמְצַע.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Nefesch HaChaim sagte: Die Tora —</span>
+            <span class="line"><span class="w3">sie ist der Dienst des Verstands vor Ihm</span>,</span>
+            <span class="line">Tanja sagte: Die Liebe —</span>
+            <span class="line"><span class="w2">sie ist der Dienst des Herzens vor Ihm.</span></span>
+            <span class="line"><span class="w1">Beide haben recht — sie sind zwei Flügel,</span></span>
+            <span class="line">ohne beide — kann man nicht fliegen,</span>
+            <span class="line">Tiferet — das Herz zwischen ihnen,</span>
+            <span class="line"><span class="w1">Schönheit der Wahrheit — in der Mitte.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>שְׁנֵי הַמְּקוֹרוֹת הַנִּזְכָּרִים אַשְׁכְּנַזִּים, וְנִשְׁאָרִים כִּלְשׁוֹנָם — עַיֵּן בַּבְּדִיקָה לְמַעְלָה. וְ„יוֹפִי הָאֱמֶת“ — מִיכָה ז׳:כ׳: „תִּתֵּן אֱמֶת לְיַעֲקֹב“; וְיַעֲקֹב הוּא תִּפְאֶרֶת. וְשִׂים לֵב לַתִּזְמוּר: הַכִּנּוֹר נוֹשֵׂא צַד אֶחָד וְהֶחָלִיל אֶת הַשֵּׁנִי — הַמַּחֲלֹקֶת מְחֻלֶּקֶת בֵּין הַכֵּלִים.</div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <div class="section-block" id="p4">
+      <div class="section-label">IV · פִּזְמוֹן — Refrain · Sie finden sich</div>
+      <div class="instr"><div class="c">Flöte: trägt eine Melodielinie</div><div class="k">Harfe: trägt die andere · Im Refrain finden sie sich zusammen</div></div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="w1">תִּפְאֶרֶת, תִּפְאֶרֶת — יוֹפִי הָאֱמֶת,</span></span>
+            <span class="line">בֵּין <span class="w3">הַדִּין</span> <span class="w2">לַחֶסֶד</span> — הַלֵּב,</span>
+            <span class="line"><span class="w1">תִּפְאֶרֶת, תִּפְאֶרֶת — שְׁנֵי דְּרָכִים —</span></span>
+            <span class="line"><span class="w1">אֵל אֶחָד — לֵב אֶחָד.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="w1">Tiferet, Tiferet — Schönheit der Wahrheit,</span></span>
+            <span class="line">zwischen <span class="w3">Gericht</span> und <span class="w2">Gnade</span> — das Herz,</span>
+            <span class="line"><span class="w1">Tiferet, Tiferet — zwei Wege —</span></span>
+            <span class="line"><span class="w1">Ein Gott — Ein Herz.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>תְּהִלִּים פ״ה:י״א — „חֶסֶד וֶאֱמֶת נִפְגָּשׁוּ, צֶדֶק וְשָׁלוֹם נָשָׁקוּ“: חֶסֶד וֶאֱמֶת <b>נִפְגָּשִׁים</b>, וְזוֹ בְּדִיּוּק הַהוֹרָאָה לַכֵּלִים כָּאן. וְהַתִּפְאֶרֶת כְּקַו הָאֶמְצַע וְכַלֵּב — רָמָ״ק, פַּרְדֵּס רִמּוֹנִים.</div>
+    </div>
+
+    <div class="section-block" id="p5">
+      <div class="section-label">V · גֶּשֶׁר — — entfällt: dieses Lied hat keine Brücke</div>
+      <div class="instr"><div class="k">In der Album-Fassung folgt auf den Refrain unmittelbar der Tikkun-Abschnitt</div><div class="c">Die Funktion der Brücke übernimmt hier die zweite Strophe, die beide Positionen namentlich nennt</div></div>
+      <div class="coda-box"><div class="coda-whisper"><span class="echo">Harfe und Flöte im Zwiegespräch — jede antwortet der anderen, beide umschlingen sich</span></div></div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>שִׂים לֵב: זֶהוּ הַשִּׁיר הַיָּחִיד בַּשִּׁשָּׁה הָרִאשׁוֹנִים בְּלֹא „גֶּשֶׁר“ נִפְרָד. וְאֵין זֶה חִסָּרוֹן: תַּפְקִיד הַגֶּשֶׁר — לְהַצִּיג אֶת הָעֶמְדָּה הַנֶּגְדִּית — כְּבָר מְמֻלָּא בְּבֵית ב, שֶׁכֻּלּוֹ שְׁתֵּי עֶמְדּוֹת זוֹ מוּל זוֹ. תִּפְאֶרֶת אֵינָהּ צְרִיכָה גֶּשֶׁר; הִיא עַצְמָהּ הַגֶּשֶׁר.</div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <div class="section-block" id="p6">
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div>
+            <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ו — הַתְּפִלָּה כְּלֵב</div>
+            <span class="tikkun-title-de">Das Gebet als Herzensdienst</span>
+          </div>
+          <div class="tikkun-src">תַּעֲנִית ב׳ ע״א · בְּרָכוֹת כ״ו ע״ב</div>
+        </div>
+        <div class="instr"><div class="c">Flöte: sanft, <em>pp</em> — wie ein Gebet, das aufsteigt</div><div class="k">Harfe: trägt darunter, ohne zu drängen</div></div>
+        <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שָׁלֹשׁ תְּפִלּוֹת בַּיּוֹם —</span>
+            <span class="line"><span class="w1">שַׁחֲרִית, מִנְחָה, מַעֲרִיב</span>,</span>
+            <span class="line">לֹא כְּחוֹבָה בִּלְבַד — כִּי כְּלֵב,</span>
+            <span class="line"><span class="w2">תִּפְאֶרֶת — הִיא עֲבוֹדַת הַלֵּב.</span></span>
+            <span class="line">כָּל תְּפִלָּה — שְׁנֵי כְּנָפַיִם:</span>
+            <span class="line"><span class="w3">שֵׂכֶל שֶׁיּוֹדֵעַ מַה הוּא אוֹמֵר,</span></span>
+            <span class="line"><span class="w2">וְלֵב שֶׁמַּרְגִּישׁ לְפָנֵי מִי הוּא עוֹמֵד —</span></span>
+            <span class="line"><span class="w1">וּשְׁנֵיהֶם — תִּפְאֶרֶת.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Drei Gebete täglich —</span>
+            <span class="line"><span class="w1">Schacharit, Mincha, Maariv</span>,</span>
+            <span class="line">nicht nur als Pflicht — sondern als Herz,</span>
+            <span class="line"><span class="w2">Tiferet — ist der Dienst des Herzens.</span></span>
+            <span class="line">Jedes Gebet — zwei Flügel:</span>
+            <span class="line"><span class="w3">Verstand, der weiß, was er sagt,</span></span>
+            <span class="line"><span class="w2">und Herz, das fühlt, vor wem es steht —</span></span>
+            <span class="line"><span class="w1">und beide zusammen — Tiferet.</span></span>
+          </div>
+        </div>
+        </div>
+        <div class="mitzva-tags"><span class="mitzva-tag">תְּפִלַּת שַׁחֲרִית</span><span class="mitzva-tag">מִנְחָה</span><span class="mitzva-tag">מַעֲרִיב</span><span class="mitzva-tag">כַּוָּנָה בַּתְּפִלָּה</span></div>
+        <div class="piyut-ref"><span class="piyut-ref-label">Der Tikkun</span>תַּעֲנִית ב׳ ע״א: „וּלְעָבְדוֹ בְּכָל לְבַבְכֶם — אֵיזוֹ הִיא עֲבוֹדָה שֶׁהִיא בַּלֵּב? הֱוֵי אוֹמֵר: זוֹ תְּפִלָּה.“ הַתַּלְמוּד מַגְדִּיר אֶת הַתְּפִלָּה בְּמִלִּים שֶׁל שֵׁם הַסְּעִיף שֶׁלְּךָ — הָאַלְבּוֹם מְדֻיָּק. וּבְרָכוֹת כ״ו ע״ב לִשְׁלֹשׁ הַתְּפִלּוֹת. וְהַתִּיקּוּן: „שְׁנֵי כְּנָפַיִם“ אֵינוֹ קִשּׁוּט — הוּא מַחֲזִיר אֶת מַחֲלֹקֶת הַבַּיִת הַשֵּׁנִי לְתוֹךְ מַעֲשֶׂה יוֹמִי אֶחָד. שֵׂכֶל וָלֵב אֵינָם שְׁתֵּי דְּרָכִים אֶלָּא שְׁנֵי צְדָדִים שֶׁל תְּפִלָּה אַחַת.</div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <div class="section-block" id="p7">
+      <div class="section-label">VII · שִׂיא — Klimax</div>
+      <div class="instr"><div class="k">Harfe + Flöte: höchster Punkt des gemeinsamen Dialogs</div><div class="c">Die zwei Instrumente verschmelzen zu <em>einer</em> Melodie</div></div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="w1">תִּפְאֶרֶת! — שֶׁמֶשׁ בָּאֶמְצַע,</span></span>
+            <span class="line">בֵּין <span class="w2">חֶסֶד</span> <span class="w3">לְגְּבוּרָה</span> — הָאֱמֶת,</span>
+            <span class="line">הַחָסִיד וְהַמִּתְנַגֵּד — אֶחָד,</span>
+            <span class="line"><span class="w1">יֵשׁ יוֹפִי — בָּאֶמְצָעִית.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="w1">Tiferet! — Sonne in der Mitte,</span></span>
+            <span class="line">zwischen <span class="w2">Chesed</span> und <span class="w3">Gevura</span> — die Wahrheit,</span>
+            <span class="line">Chassid und Mitnaged — Eines,</span>
+            <span class="line"><span class="w1">es gibt Schönheit — in der Mitte.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Quellen</span>„שֶׁמֶשׁ בָּאֶמְצַע“ — הַתִּפְאֶרֶת נִמְשְׁלָה לַשֶּׁמֶשׁ וְהַמַּלְכוּת לַלְּבָנָה; רָמָ״ק, פַּרְדֵּס רִמּוֹנִים. וְשִׂים לֵב שֶׁזֶּהוּ הָרֶגַע הַיָּחִיד בָּאַלְבּוֹם שֶׁבּוֹ שְׁנֵי הַכֵּלִים „מִתְמַזְּגִים לְלַחַן אֶחָד“ — לֹא בְּמַקְבִּיל כְּמוֹ בְּשִׁיר ב, אֶלָּא לְאֶחָד מַמָּשׁ. וְזֶה מֻתָּר רַק כָּאן, וְרַק לְאַרְבַּע שׁוּרוֹת.</div>
+    </div>
+
+    <div class="section-block" id="p8">
+      <div class="section-label">VIII · קוֹדָה — Outro</div>
+      <div class="instr"><div class="c">Flöte und Harfe: wechseln die Melodielinie — <em>jede beendet den Satz der anderen</em></div><div class="k">Dann gemeinsam in die Stille</div></div>
+      <div class="coda-box"><div class="coda-whisper"><span class="w1">תִּפְאֶרֶת…</span> <span class="w2">לֵב…</span> <span class="w1">אֶחָד…</span><br>
+        <em>Tiferet… Herz… eins…<br>(bereit für Nezach: der Streit, der nicht endet)</em></div></div>
+      <div class="piyut-ref"><span class="piyut-ref-label">Der Schluss</span>הַהוֹרָאָה „כָּל אֶחָד מְסַיֵּם אֶת מִשְׁפַּט הַשֵּׁנִי“ הִיא הַנְּקֻדָּה כֻּלָּהּ: זוֹ הַדֶּרֶךְ הַיְּחִידָה לְאַחֵד שְׁנֵי קוֹלוֹת בְּלֹא לְוַתֵּר עַל אַף אֶחָד מֵהֶם. וּמִכָּאן אֶל נֶצַח — שָׁם הַמַּחֲלֹקֶת שׁוּב נִפְרֶדֶת, וְהַפַּעַם הִיא לֹא תִּתְאַחֵד.</div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-grid">
+        <div class="perf-item"><span class="perf-h">Tempo &amp; Dynamik</span><span class="perf-t"><strong>72 BPM</strong> — exakt zwischen Chesed (68) und Gevura (76). Peticha: <em>pp</em>, zwei verschiedene Phrasen. Strophen: <em>mf</em>, weiterhin getrennt. Refrain: die Linien finden sich. Tikkun: Flöte <em>pp</em>, wie ein aufsteigendes Gebet. Si: Verschmelzung, <em>f</em>. Coda: Wechselspiel, dann gemeinsam in die Stille.</span></div>
+        <div class="perf-item"><span class="perf-h">Maqam Nahawand</span><span class="perf-t">Nahawand durchgehend — Moll mit Dur-Anteilen, kanonisch die Zweitzuordnung der <strong>Tiferet</strong> (Rast steht in diesem Album bei Chochma). Der einzige Modus, der beide Färbungen zugleich trägt, ohne sich für eine zu entscheiden.</span></div>
+        <div class="perf-item"><span class="perf-h">Die Zweistimmigkeit</span><span class="perf-t">Die zentrale Aufgabe. <strong>Die beiden Linien dürfen erst im Refrain zusammenfinden und erst im Klimax verschmelzen.</strong> Wer von Anfang an homophon spielt, macht aus dem Lied einen Kompromiss — und das ist es ausdrücklich nicht.</span></div>
+        <div class="perf-item"><span class="perf-h">Haltung</span><span class="perf-t">Nicht beschwichtigend singen. <span class="he">שְׁנֵיכֶם צוֹדְקִים</span> ist ein Urteil, keine Höflichkeit — der Talmud spricht es aus, während er zugleich entscheidet, wie gehandelt wird. Ruhig und bestimmt; die Wärme liegt im Maqam.</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="ornament"><div class="ornament-line"></div><div class="ornament-star">✦ ✦ ✦</div><div class="ornament-line"></div></div>
+
+<div class="footer">
+  <div class="footer-world">תִּפְאֶרֶת — שְׁנֵי הַדְּרָכִים — לֵב אֶחָד</div>
+  <div class="footer-chain">תִּפְאֶרֶת · מַקַאם נַהַאוַנְד · 72 BPM · כִּנּוֹר וְחָלִיל · עֵץ הַחַיִּים Album II, שִׁיר VI</div>
+  <p class="footer-de">Die Mitte — und das Lied, das den Streit nicht beilegt, sondern trägt. Tiferet ist
+    keine Mitte im Sinne des halben Wegs, sondern die Säule, an der beide Seiten hängen.
+    Und die Besetzung führt das in vier Stufen vor: zwei verschiedene Phrasen, dann Zusammenfinden,
+    dann Verschmelzen, dann ein Wechselspiel, in dem jede den Satz der anderen beendet.
+    72 BPM — exakt zwischen Chesed und Gevura.
+    <br><br>
+    <strong>שְׁנֵיהֶם צוֹדְקִים — הֵם שְׁנֵי כְּנָפַיִם.</strong></p>
+  <div class="footer-amen">אָמֵן</div>
+</div>
+
+<div class="sources-box"><div class="sources-text"><strong>Eruwin 13b</strong> — <em>elu we'elu diwrei Elohim chajim</em>; Grundlage von
+    <em>schneichem zodkim</em>. <strong>Ergänzt — die Hauptquelle.</strong> ·
+    <strong>Chagiga 3b</strong> zu <strong>Kohelet 12:11</strong> — <em>kullam nittenu mero'e
+    echad</em>; Grundlage von <em>schnei schwilim — El echad</em>. <strong>Ergänzt.</strong> ·
+    <strong>Micha 7:20</strong> — <em>titten emet leJa'akow, chessed leAwraham</em>; mit
+    <strong>Bereschit 31:42</strong> ergibt sich die Trias der Erzväter für die Lieder IV–VI.
+    <strong>Ergänzt.</strong> ·
+    <strong>Tehillim 85:11</strong> — <em>chessed we'emet nifgaschu</em>; Epigraph.
+    <strong>Ergänzt.</strong> ·
+    <strong>Awot 5:17</strong> — <em>sofah lehitkajjem</em>: der Streit hat Bestand.
+    <strong>Ergänzt.</strong> ·
+    <strong>Ta'anit 2a</strong> — <em>eiso hi awoda schehi ballew? hewe omer: so tefilla</em>:
+    der Talmud definiert das Gebet als Dienst des Herzens. <em>Die Album-Angabe ist exakt.</em>
+    Dazu <strong>Berachot 26b</strong> zu den drei Gebetszeiten. <strong>Ergänzt.</strong> ·
+    <strong>Ramak, Pardes Rimonim</strong> — Tiferet als mittlerer Pfeiler und Sitz von
+    <em>Emet</em>.<br><br>
+    Das Tetragramm erscheint im gesamten Dokument ausschließlich als <strong>אֲדֹנָי</strong>.</div></div>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מִי יִתֵּן טָהוֹר · פִּיּוּט · זְכַרְיָה · נָחָשׁ ↔ מָשִׁיחַ</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   מִי יִתֵּן טָהוֹר מִטָּמֵא — Mi Yitten Tahor miTame
+   „Wer bringt Reines aus Unreinem?" · Ijow 14:4
+   Secharja 13–14 · נָחָשׁ = מָשִׁיחַ = 358 · die eherne Schlange
+   Gift-Grün (Tum'a) → Kupfer (die Schlange) → Gold (הָאֶחָד · Geula)
+   ── פִּיּוּט · אֲדֹנָי אֶחָד ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#06090A; --deep:#0A1210; --layer:#111C18; --card:#0B1512;
+
+  /* ── טֻמְאָה / רַעַל — Gift-Grün der Schlange, der Unreinheit ── */
+  --venom:#3E7359; --venom-lt:#6FA588; --venom-vlt:#A2CDB6;
+  --venom-dim:#183028; --venom-bdr:rgba(111,165,136,.30);
+
+  /* ── נְחֹשֶׁת — Kupfer/Bronze der ehernen Schlange, die Wandlung ── */
+  --copper:#B0703A; --copper-lt:#D89A5A; --copper-vlt:#ECC292; --copper-dim:#3E2410;
+
+  /* ── אוֹר / אֶחָד — Gold: das Licht, der Eine, die Geula ── */
+  --gold:#C9A84C; --gold-lt:#E8CC80; --gold-vlt:#F4E4A8; --gold-dim:#4A3810;
+
+  --parch:#eee6cc; --parch-dim:#a69a78;
+  --ivory:#e8e2cc; --ivory-lt:#f4efda; --ivory-dim:#847c62;
+  --silver:#bfc6c2; --silver-dim:#66706a;
+  --text:#97a09a;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,  rgba(201,168,76,.20)  0%,transparent 54%),
+    radial-gradient(ellipse at 22% 26%, rgba(62,115,89,.14)   0%,transparent 46%),
+    radial-gradient(ellipse at 80% 40%, rgba(176,112,58,.10)  0%,transparent 40%),
+    radial-gradient(ellipse at 50% 100%,rgba(201,168,76,.14)  0%,transparent 54%),
+    radial-gradient(ellipse at 16% 74%, rgba(62,115,89,.10)   0%,transparent 44%),
+    radial-gradient(ellipse at 50% 48%, rgba(6,9,10,.84)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 10%,rgba(244,228,168,.48) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 6%,rgba(232,204,128,.52) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 14%,rgba(236,194,146,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 23% 40%,rgba(162,205,182,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 56%,rgba(111,165,136,.32) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 74%,rgba(201,168,76,.44) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 78%,rgba(244,228,168,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(176,112,58,.3) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(201,168,76,.20);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--gold);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--venom-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.2em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(201,168,76,.42),0 0 150px rgba(62,115,89,.28);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:720px;margin:0 auto 30px;}
+.page-desc em{color:var(--copper-lt);font-style:italic;}
+.page-desc .venom{color:var(--venom-lt);font-style:italic;}
+.page-desc .gold{color:var(--gold-lt);font-style:italic;}
+
+/* ── KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(201,168,76,.22);padding:12px 26px;background:rgba(201,168,76,.04);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-tum{color:var(--venom-lt);border-color:var(--venom-bdr);background:rgba(62,115,89,.10);}
+.chain-heal{color:var(--gold-lt);border-color:rgba(201,168,76,.32);background:rgba(201,168,76,.08);}
+.chain-sep{color:var(--copper-lt);opacity:.6;font-size:.7em;}
+
+/* ── STATIONEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:13px 15px;position:relative;background:rgba(6,9,10,.6);}
+.cyc-proph{border-color:rgba(111,165,136,.36);background:rgba(62,115,89,.09);}
+.cyc-know{border-color:rgba(201,168,76,.34);background:rgba(201,168,76,.06);}
+.cyc-turn{border-color:rgba(176,112,58,.36);background:rgba(176,112,58,.08);}
+.cyc-geula{border-color:rgba(232,204,128,.36);background:rgba(201,168,76,.08);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-proph .cyc-num{color:var(--venom-lt);} .cyc-know .cyc-num{color:var(--gold-lt);}
+.cyc-turn .cyc-num{color:var(--copper-lt);} .cyc-geula .cyc-num{color:var(--gold-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;display:block;}
+.cyc-proph .cyc-he{color:var(--venom-vlt);} .cyc-know .cyc-he{color:var(--gold-vlt);}
+.cyc-turn .cyc-he{color:var(--copper-vlt);} .cyc-geula .cyc-he{color:var(--gold-vlt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(201,168,76,.09),rgba(6,9,10,.85));
+  border:1px solid rgba(201,168,76,.28);border-left:4px solid var(--gold);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'לֹא אֶחָד → הָאֶחָד — Das Wortspiel';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.13em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.1em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.06em;text-shadow:0 0 60px rgba(201,168,76,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--gold-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(62,115,89,.15),rgba(6,9,10,.85));
+  border:1px solid rgba(111,165,136,.30);border-left:4px solid var(--venom-lt);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'הַכָּתוּב · Secharja 13–14';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--venom-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--venom-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--copper-lt);font-style:italic;}
+.ib-de .gold{color:var(--gold-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(201,168,76,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(201,168,76,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(201,168,76,.09);border-color:rgba(201,168,76,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.9em;font-weight:700;color:var(--gold-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:52px;border:1px solid rgba(201,168,76,.14);
+  background:linear-gradient(180deg,rgba(17,28,24,.96) 0%,rgba(6,9,10,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--venom),var(--copper),var(--gold),var(--copper),var(--venom),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(201,168,76,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gold-lt);border-right:1px solid rgba(201,168,76,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.4em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--gold-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--copper-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(201,168,76,.32);
+  padding:5px 14px;color:var(--gold-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(201,168,76,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 40px;}
+.section-block{margin:26px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(201,168,76,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--copper-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(176,112,58,.32);background:rgba(176,112,58,.05);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--gold-vlt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(201,168,76,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.66;font-size:.82em;}
+.venom{color:var(--venom-lt);}
+.copper{color:var(--copper-lt);}
+.gold{color:var(--gold-lt);}
+.big{font-size:1.28em;font-weight:700;color:var(--gold-vlt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(62,115,89,.05));
+  border:1px solid rgba(201,168,76,.28);border-left:3px solid var(--gold);padding:22px 28px;}
+.refrain-box .lyrics-he .line:first-child{font-weight:700;color:var(--gold-vlt);}
+.bridge-box{background:linear-gradient(135deg,rgba(176,112,58,.12),transparent);
+  border:1px solid rgba(176,112,58,.28);border-left:3px solid var(--copper);padding:22px 28px;}
+.climax-box{background:linear-gradient(135deg,rgba(201,168,76,.16),rgba(176,112,58,.06));
+  border:1px solid rgba(201,168,76,.36);border-left:3px solid var(--gold-lt);padding:24px 30px;}
+.intro-lyr,.outro-lyr{text-align:center;padding:16px 0 6px;}
+.intro-lyr .lyrics-he,.outro-lyr .lyrics-he{direction:rtl;text-align:center;font-size:1.24em;
+  color:var(--gold-vlt);line-height:2.3;letter-spacing:.05em;text-shadow:0 0 30px rgba(201,168,76,.28);}
+.intro-lyr .de,.outro-lyr .de{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:8px;}
+.outro-lyr .fade1{color:var(--silver-dim);opacity:.7;}
+.outro-lyr .fade2{color:var(--silver-dim);opacity:.45;font-size:.9em;}
+.outro-lyr .fade3{color:var(--silver-dim);opacity:.3;font-size:.82em;}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(201,168,76,.05);
+  border-left:2px solid rgba(201,168,76,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref.green{background:rgba(62,115,89,.07);border-left-color:rgba(111,165,136,.30);}
+.piyut-ref.copper{background:rgba(176,112,58,.06);border-left-color:rgba(176,112,58,.30);}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--gold-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.piyut-ref.green .piyut-ref-label{color:var(--venom-lt);}
+.piyut-ref.copper .piyut-ref-label{color:var(--copper-lt);}
+
+/* ── GEMATRIA-BOX ── */
+.gematria{margin:36px 0 20px;padding:26px 30px;border:1px solid rgba(176,112,58,.26);
+  background:rgba(176,112,58,.05);position:relative;}
+.gematria::before{content:'גִּימַטְרִיָּה · נָחָשׁ = מָשִׁיחַ';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--copper-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gem-eq{display:flex;align-items:center;justify-content:center;gap:14px 22px;flex-wrap:wrap;direction:rtl;margin-bottom:14px;}
+.gem-word{text-align:center;}
+.gem-he{font-family:'Frank Ruhl Libre',serif;font-size:2em;font-weight:900;display:block;letter-spacing:.06em;}
+.gem-word.nachash .gem-he{color:var(--venom-lt);text-shadow:0 0 40px rgba(62,115,89,.4);}
+.gem-word.mashiach .gem-he{color:var(--gold-lt);text-shadow:0 0 40px rgba(201,168,76,.4);}
+.gem-calc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;}
+.gem-eqsign{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;color:var(--copper-lt);opacity:.8;}
+.gem-num{text-align:center;font-family:'Frank Ruhl Libre',serif;font-size:2.4em;font-weight:900;
+  color:var(--copper-vlt);letter-spacing:.1em;text-shadow:0 0 50px rgba(176,112,58,.45);direction:ltr;}
+.gem-num .gem-numde{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.32em;
+  font-weight:400;color:var(--silver-dim);display:block;letter-spacing:.12em;margin-top:2px;}
+.gem-note{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.85;margin-top:14px;text-align:center;}
+.gem-note em{color:var(--copper-lt);font-style:italic;}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(6,9,10,.86));
+  border:1px solid rgba(201,168,76,.24);border-left:4px solid var(--gold);
+  padding:26px 32px;margin-top:16px;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-intro{font-family:'EB Garamond',serif;font-size:.9em;color:var(--text);line-height:1.85;margin-bottom:18px;}
+.perf-intro em{color:var(--copper-lt);font-style:italic;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;}
+.perf-item{border-left:2px solid rgba(176,112,58,.22);padding:2px 0 2px 16px;}
+.perf-item.wide{grid-column:1 / -1;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.88em;font-weight:700;
+  color:var(--gold-lt);display:block;margin-bottom:4px;}
+.perf-h .he{color:var(--copper-lt);font-weight:400;font-size:.9em;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.82;}
+.perf-t strong{color:var(--ivory);}
+.perf-t em{color:var(--copper-lt);font-style:italic;}
+
+/* ── NAMEN-BOX ── */
+.names-box{margin-top:16px;padding:22px 30px;border:1px solid rgba(201,168,76,.16);
+  background:rgba(201,168,76,.03);position:relative;}
+.names-box::before{content:'שְׁמוֹת קֹדֶשׁ · Heilige Namen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.6em;color:var(--gold-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.names-list{display:flex;flex-wrap:wrap;gap:8px 20px;direction:rtl;margin-bottom:12px;}
+.names-list span{font-family:'Frank Ruhl Libre',serif;font-size:1.02em;color:var(--gold-lt);
+  border:1px solid rgba(201,168,76,.22);padding:3px 12px;background:rgba(201,168,76,.05);}
+.names-note{font-family:'EB Garamond',serif;font-size:.86em;color:var(--text);line-height:1.8;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent);}
+.ornament-star{color:var(--gold);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--copper-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--copper-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(201,168,76,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(201,168,76,.20);
+  background:rgba(201,168,76,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.1em;}
+  .cycle-strip{grid-template-columns:1fr 1fr;}
+  .sec-nav{grid-template-columns:repeat(4,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(201,168,76,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(201,168,76,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 32px;}
+  .perf-grid{grid-template-columns:1fr;}
+  .gem-eq{gap:8px 14px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">זְכַרְיָה · אִיּוֹב · Wandlung · für Stimme &amp; Gitarre</div>
+    <div class="page-title-he">מִי יִתֵּן טָהוֹר מִטָּמֵא</div>
+    <div class="page-title-de">Mi Yitten Tahor miTame — „Wer bringt Reines aus Unreinem?"</div>
+    <p class="page-desc">
+      Ein Lied über die <em>Wandlung</em>: Ijows scheinbar hoffnungslose Frage — wer kann Reines aus
+      Unreinem holen? <span class="venom">Nicht Eines!</span> — wird zur Antwort umgehört:
+      <span class="gold">nur der Eine</span>. Zwischen Secharjas Prophetie vom Ende der Unreinheit und
+      dem Tag, an dem <span class="gold">„Adonai Einer sein wird und Sein Name Einer"</span>, steht das
+      Geheimnis, dass <em>נָחָשׁ</em> und <em>מָשִׁיחַ</em> denselben Zahlenwert tragen — dass Gift zu
+      Heilung, Schlange zu Erlösung werden kann.
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-tum">רוּחַ הַטֻּמְאָה</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-tum">מִי יִתֵּן טָהוֹר</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-heal">נָחָשׁ ↔ מָשִׁיחַ</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-heal">אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד</span>
+    </div>
+  </div>
+
+  <!-- ══ STATIONEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-proph">
+      <span class="cyc-num">Prophetie</span>
+      <span class="cyc-he">אַעֲבִיר רוּחַ הַטֻּמְאָה</span>
+      <span class="cyc-de">Secharja 13 · das Ende der Unreinheit</span>
+    </div>
+    <div class="cyc cyc-know">
+      <span class="cyc-num">Erkenntnis</span>
+      <span class="cyc-he">רַק הָאֶחָד</span>
+      <span class="cyc-de">Ijow 14 · nur der Eine reinigt</span>
+    </div>
+    <div class="cyc cyc-turn">
+      <span class="cyc-num">Wandlung</span>
+      <span class="cyc-he">הָרַעַל לְרַחֲמִים</span>
+      <span class="cyc-de">nachash → mashiach · das Gift heilt</span>
+    </div>
+    <div class="cyc cyc-geula">
+      <span class="cyc-num">Erlösung</span>
+      <span class="cyc-he">אֲדֹנָי לְמֶלֶךְ</span>
+      <span class="cyc-de">Secharja 14 · Adonai Einer</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: LO ECHAD → HA'ECHAD ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">לֹא אֶחָד → הָאֶחָד</span>
+    <p class="gloss-de">
+      Der Vers Ijow 14:4 fragt: <span class="gloss-he">מִי יִתֵּן טָהוֹר מִטָּמֵא — לֹא אֶחָד</span>,
+      wörtlich <em>„Wer bringt Reines aus Unreinem? Nicht einer."</em> Ein Satz der Verzweiflung: niemand
+      vermag es. Doch die Auslegung <em>hört dasselbe anders</em> — <span class="gloss-he">לֹא אֶחָד</span>
+      wird zu <span class="gloss-he">הֲלֹא אֶחָד?</span>, <em>„ist es nicht der Eine?"</em>: <strong>der
+      einzige, der Reines aus Unreinem hervorbringt, ist der Eine — Gott selbst</strong>.
+      <br><br>
+      Das ist das Paradox der roten Kuh, die den Unreinen reinigt; und es ist die Klammer des ganzen
+      Liedes, das dieselbe Zahl — <span class="gloss-he">אֶחָד</span> — vom Klagelaut bis zum Krönungsruf
+      trägt: <span class="gloss-he">אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד</span>.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: SECHARJA ══ -->
+  <div class="intro-box">
+    <div class="ib-he">וְהָיָה בַיּוֹם הַהוּא … אֶת רוּחַ הַטֻּמְאָה אַעֲבִיר מִן הָאָרֶץ · וְהָיָה ה׳ לְמֶלֶךְ עַל כָּל הָאָרֶץ … ה׳ אֶחָד וּשְׁמוֹ אֶחָד</div>
+    <div class="ib-src">זְכַרְיָה י״ג:ב׳ · י״ד:ט׳</div>
+    <p class="ib-de">
+      Zwei Verse Secharjas rahmen das Lied. Der erste (13:2) verheißt das Ende der Unreinheit: Gott
+      <em>tilgt die Namen der Götzen</em>, entfernt den falschen Propheten und den <em>Geist der
+      Unreinheit</em> aus dem Land. Der zweite (14:9) — der Höhepunkt — verkündet den Tag, an dem
+      <span class="gold">Adonai König über die ganze Erde</span> sein wird, <em>„Einer, und Sein Name
+      Einer"</em>. Zwischen beiden liegt der Weg der Wandlung: wie aus dem Biss Heilung, aus der Schlange
+      Erlösung wird.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Secharja 13</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Ijow 14</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">נחש=משיח</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Teschuwa</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">שִׂיא</span><span class="sn-de">Secharja 14</span></a>
+    <a class="sec-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Outro</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">טֻמְאָה → אֶחָד</span>י״ג–י״ד</div>
+      <div class="song-meta">
+        <span class="sefira-badge">מִטָּמֵא לְטָהוֹר · נָחָשׁ לְמָשִׁיחַ</span>
+        <span class="maqam-badge">Solo voice &amp; guitar · drone on D · ppp → ff → pppp</span>
+        <span class="song-title-he">מִי יִתֵּן טָהוֹר מִטָּמֵא</span>
+        <span class="song-title-de">Wandlung · von der Unreinheit zum Einen</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · Secharja 13–14 · Ijow 14:4</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · PETICHA -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · פְּתִיחָה — Intro · ppp, Gitarre solo, Ton D</div>
+        <div class="intro-lyr">
+          <div class="lyrics-he">
+            וְהָיָה בַּיּוֹם הַהוּא...
+            <span class="de">Und es wird geschehen an jenem Tag… · · ·</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- II · BAYIT ALEF -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · בֵּית א׳ — Strophe I · Secharja 13:2 · p, klar und prophetisch</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">וְהָיָה בַּיּוֹם הַהוּא —</span>
+            <span class="line">נְאֻם אֲדֹנָי צְבָאוֹת:</span>
+            <span class="line">אַכְרִית אֶת-שְׁמוֹת הָעֲצַבִּים</span>
+            <span class="line">מִן-הָאָרֶץ — וְלֹא יִזָּכְרוּ עוֹד.</span>
+            <span class="line echo">(וְלֹא יִזָּכְרוּ... לֹא יִזָּכְרוּ...)</span>
+            <span class="line" style="margin-top:10px;display:block;">וְגַם אֶת-הַנָּבִיא הַשֶּׁקֶר</span>
+            <span class="line venom">וְאֶת-רוּחַ הַטֻּמְאָה —</span>
+            <span class="line">אַעֲבִיר מִן-הָאָרֶץ,</span>
+            <span class="line gold">אַעֲבִיר — כִּי אֲדֹנָי אֶחָד.</span>
+            <span class="line echo">(כִּי אֲדֹנָי אֶחָד...)</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Und es wird geschehen an jenem Tag —</span>
+            <span class="line">Spruch des Herrn der Heerscharen:</span>
+            <span class="line">Ich werde die Namen der Götzen tilgen</span>
+            <span class="line">aus dem Land — sie werden nicht mehr erwähnt.</span>
+            <span class="line echo">(nicht mehr erwähnt… nie mehr…)</span>
+            <span class="line" style="margin-top:10px;display:block;">Und auch den falschen Propheten</span>
+            <span class="line venom">und den Geist der Unreinheit —</span>
+            <span class="line">werde ich vergehen lassen aus dem Land,</span>
+            <span class="line gold">vergehen lassen — denn Adonai ist Einer.</span>
+          </div>
+        </div>
+        <div class="piyut-ref green">
+          <span class="piyut-ref-label">Quelle</span>
+          „וְהָיָה בַיּוֹם הַהוּא … אַכְרִית אֶת שְׁמוֹת הָעֲצַבִּים … וְאֶת רוּחַ הַטֻּמְאָה אַעֲבִיר מִן הָאָרֶץ" — זְכַרְיָה י״ג:ב׳. (בַּמִּקְרָא: „וְגַם אֶת הַנְּבִיאִים"; הַשִּׁיר מְפָרֵשׁ „הַנָּבִיא הַשֶּׁקֶר".)
+        </div>
+      </div>
+
+      <!-- III · PIZMON -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · פָּזְמוֹן — Refrain · Ijow 14:4 · mf, „לֹא אֶחָד" laut &amp; fest (f)</div>
+        <div class="instr-note">Guitar pauses on „לֹא אֶחָד" — a beat of silence, then resumes.</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מִי יִתֵּן טָהוֹר מִטָּמֵא —</span>
+              <span class="line big">לֹא אֶחָד!</span>
+              <span class="line echo">(לֹא אֶחָד — לֹא אֶחָד...)</span>
+              <span class="line">רַק הָאֶחָד — הוּא לְבַדּוֹ —</span>
+              <span class="line gold">מוֹצִיא טֹהַר מִן הַטֻּמְאָה!</span>
+              <span class="line gold" style="margin-top:10px;display:block;">אֲדֹנָי אֶחָד —</span>
+              <span class="line echo">(אֶחָד...)</span>
+              <span class="line gold">וּשְׁמוֹ אֶחָד!</span>
+              <span class="line echo">(וּשְׁמוֹ אֶחָד...)</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wer vermag Reines aus Unreinem hervorzubringen? —</span>
+              <span class="line big">Nicht Eines!</span>
+              <span class="line echo">(Nicht Eines… nicht Eines…)</span>
+              <span class="line">Nur der Eine — er allein —</span>
+              <span class="line gold">bringt Reinheit aus der Unreinheit hervor!</span>
+              <span class="line gold" style="margin-top:10px;display:block;">Adonai ist Einer —</span>
+              <span class="line echo">(Einer…)</span>
+              <span class="line gold">und Sein Name ist Einer!</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „מִי יִתֵּן טָהוֹר מִטָּמֵא לֹא אֶחָד" — אִיּוֹב י״ד:ד׳. הַדְּרָשָׁה: „לֹא אֶחָד" ⇦ „הֲלֹא אֶחָד" — רַק הָאֶחָד מוֹצִיא טָהוֹר מִטָּמֵא (עַל דֶּרֶךְ מִדְרַשׁ פָּרָה אֲדֻמָּה).
+        </div>
+      </div>
+
+      <!-- IV · BAYIT BET -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · בֵּית ב׳ — Strophe II · נָחָשׁ / נְחֻשְׁתָּן · p, meditativ, langsamer</div>
+
+        <div class="gematria">
+          <div class="gem-eq">
+            <div class="gem-word nachash">
+              <span class="gem-he">נָחָשׁ</span>
+              <span class="gem-calc">Schlange · נ 50 · ח 8 · שׁ 300</span>
+            </div>
+            <span class="gem-eqsign">=</span>
+            <div class="gem-word mashiach">
+              <span class="gem-he">מָשִׁיחַ</span>
+              <span class="gem-calc">Messias · מ 40 · שׁ 300 · י 10 · ח 8</span>
+            </div>
+          </div>
+          <div class="gem-num">358<span class="gem-numde">שְׁלֹשׁ מֵאוֹת חֲמִשִּׁים וּשְׁמוֹנָה · dreihundertachtundfünfzig</span></div>
+          <p class="gem-note">
+            Kein Wortspiel, sondern eine kabbalistische Aussage: <em>das Böse trägt den Keim der Erlösung
+            in sich</em>. Die Schlange Edens brachte die Illusion der Trennung — der Mashiach heilt eben
+            diese Wunde.
+          </p>
+        </div>
+
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="venom">נָחָשׁ</span> — <span class="gold">מָשִׁיחַ</span>,</span>
+            <span class="line">שְׁנֵיהֶם שְׁלֹשׁ מֵאוֹת חֲמִשִּׁים וּשְׁמוֹנָה.</span>
+            <span class="line copper">הַמַּכָּה נֶהְפֶּכֶת לְרֶפֶא,</span>
+            <span class="line copper">הָרַעַל — לְרַחֲמִים.</span>
+            <span class="line echo">(הָרַעַל — לְרַחֲמִים...)</span>
+            <span class="line" style="margin-top:10px;display:block;">כַּאֲשֶׁר מֹשֶׁה הֵרִים נְחַשׁ הַנְּחֹשֶׁת</span>
+            <span class="line">וְכָל-הַנָּשׁוּךְ הֵן נִרְפָּא —</span>
+            <span class="line">כֵּן יָרִים אֲדֹנָי אֶת-פִּצְעֵנוּ</span>
+            <span class="line gold">לְאוֹר, לִתְפִלָּה, לִישׁוּעָה.</span>
+            <span class="line echo">(לְאוֹר, לִתְפִלָּה, לִישׁוּעָה...)</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Schlange — Messias,</span>
+            <span class="line">beide dreihundertachtundfünfzig.</span>
+            <span class="line copper">Der Stich verwandelt sich in Heilung,</span>
+            <span class="line copper">das Gift — in Barmherzigkeit.</span>
+            <span class="line echo">(das Gift — in Barmherzigkeit…)</span>
+            <span class="line" style="margin-top:10px;display:block;">Wie Moses die kupferne Schlange erhob</span>
+            <span class="line">und jeder Gebissene geheilt wurde —</span>
+            <span class="line">so wird Adonai unsere Wunde erheben</span>
+            <span class="line gold">zum Licht, zum Gebet, zur Erlösung.</span>
+          </div>
+        </div>
+        <div class="piyut-ref copper">
+          <span class="piyut-ref-label">Quelle</span>
+          נָחָשׁ = מָשִׁיחַ = 358 — גִּימַטְרִיָּה (רמח״ל וְרִאשׁוֹנֵי הַחֲסִידוּת). נְחַשׁ הַנְּחֹשֶׁת — בְּמִדְבַּר כ״א:ח׳–ט׳; „וְכִי נָחָשׁ מֵמִית אוֹ מְחַיֶּה? … מְשַׁעְבְּדִין לִבָּם לַאֲבִיהֶם שֶׁבַּשָּׁמַיִם" — מִשְׁנָה רֹאשׁ הַשָּׁנָה ג׳:ח׳.
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung · mf → f, voller</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מִי יִתֵּן טָהוֹר מִטָּמֵא —</span>
+              <span class="line big">לֹא אֶחָד!</span>
+              <span class="line echo">(לֹא אֶחָד — לֹא אֶחָד...)</span>
+              <span class="line">רַק הָאֶחָד — הוּא לְבַדּוֹ —</span>
+              <span class="line gold">מוֹצִיא טֹהַר מִן הַטֻּמְאָה!</span>
+              <span class="line gold" style="margin-top:10px;display:block;">אֲדֹנָי אֶחָד — וּשְׁמוֹ אֶחָד!</span>
+              <span class="line echo">(וּשְׁמוֹ אֶחָד...)</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wer vermag Reines aus Unreinem hervorzubringen? — Nicht Eines!</span>
+              <span class="line echo">(Nicht Eines… nicht Eines…)</span>
+              <span class="line">Nur der Eine — er allein — bringt Reinheit aus der Unreinheit hervor!</span>
+              <span class="line gold" style="margin-top:10px;display:block;">Adonai ist Einer — und Sein Name ist Einer!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- V · GESCHER -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · גֶּשֶׁר — Brücke · הַנָּחָשׁ שֶׁבְּקִרְבִּי · p, sehr persönlich</div>
+        <div class="instr-note">The song turns inward — from prophecy to personal teshuvah. Guitar only as an undertone, single notes.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">גַּם בְּקִרְבִּי יֵשׁ נָחָשׁ,</span>
+              <span class="line venom">גַּם בִּי יֵצֶר הַפֵּרוּד.</span>
+              <span class="line">אַחֲזִיר אֵלֶיךָ כָּל-חֵלֶק שֶׁנִּפְרַד,</span>
+              <span class="line gold">אָשׁוּב — כִּי אַתָּה הָאֶחָד.</span>
+              <span class="line echo">(כִּי אַתָּה הָאֶחָד...)</span>
+              <span class="line copper" style="margin-top:10px;display:block;">בִּתְשׁוּבָה — הָרַעַל לִרְפוּאָה,</span>
+              <span class="line copper">בִּתְפִלָּה — הַחֹשֶׁךְ לְאוֹר,</span>
+              <span class="line">בְּכָל-פְּסִיעָה אֵלֶיךָ —</span>
+              <span class="line gold">הַנָּחָשׁ נֶהְפָּךְ לְמָשִׁיחַ.</span>
+              <span class="line echo">(הַנָּחָשׁ נֶהְפָּךְ לְמָשִׁיחַ...)</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Auch in mir wohnt eine Schlange,</span>
+              <span class="line venom">auch in mir der Trieb der Trennung.</span>
+              <span class="line">Ich bringe zu dir jeden Teil zurück, der sich entfernte,</span>
+              <span class="line gold">ich kehre um — denn du bist der Eine.</span>
+              <span class="line echo">(denn du bist der Eine…)</span>
+              <span class="line copper" style="margin-top:10px;display:block;">Durch Umkehr — das Gift zur Heilung,</span>
+              <span class="line copper">durch Gebet — die Dunkelheit zum Licht,</span>
+              <span class="line">bei jedem Schritt zu dir hin —</span>
+              <span class="line gold">verwandelt sich die Schlange in den Messias.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref copper">
+          <span class="piyut-ref-label">Quelle</span>
+          „יֵצֶר הַפֵּרוּד" וְתִקּוּן הַנָּחָשׁ — מוֹטִיב קַבָּלִי-חֲסִידִי (הַנָּחָשׁ הַקַּדְמוֹנִי כְּשֹׁרֶשׁ הַפֵּרוּד; תְּשׁוּבָה מְאַחֶדֶת). עַל דֶּרֶךְ יְשַׁעְיָהוּ כ״ז:א׳ (נָחָשׁ בָּרִיחַ / עֲקַלָּתוֹן).
+        </div>
+      </div>
+
+      <!-- VI · SI / KLIMAX -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · שִׂיא — Klimax · Secharja 14:9 · ff, die ganze Kraft der Stimme</div>
+        <div class="instr-note">Full strumming; the eschatological fulfilment. Each line held and sung wide.</div>
+        <div class="climax-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line big">וְהָיָה אֲדֹנָי לְמֶלֶךְ</span>
+              <span class="line big">עַל-כָּל-הָאָרֶץ!</span>
+              <span class="line" style="margin-top:8px;display:block;">בַּיּוֹם הַהוּא יִהְיֶה —</span>
+              <span class="line big gold">אֲדֹנָי אֶחָד!</span>
+              <span class="line echo">(אֶחָד! — אֶחָד!)</span>
+              <span class="line" style="margin-top:10px;display:block;">מִי יִתֵּן טָהוֹר מִטָּמֵא —</span>
+              <span class="line big">לֹא אֶחָד!</span>
+              <span class="line">אֵין עוֹד טֻמְאָה, אֵין עוֹד שֶׁקֶר,</span>
+              <span class="line">אֵין עוֹד נְבִיא הַשָּׁוְא —</span>
+              <span class="line">כֹּל יֵאִיר כִּקְדֻשָּׁה:</span>
+              <span class="line big gold">אֲדֹנָי אֶחָד — וּשְׁמוֹ אֶחָד!</span>
+              <span class="line echo">(וּשְׁמוֹ אֶחָד... וּשְׁמוֹ אֶחָד...)</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Und Adonai wird König sein</span>
+              <span class="line">über die ganze Erde!</span>
+              <span class="line" style="margin-top:8px;display:block;">An jenem Tag wird sein —</span>
+              <span class="line gold">Adonai ist Einer!</span>
+              <span class="line echo">(Einer! — Einer!)</span>
+              <span class="line" style="margin-top:10px;display:block;">Wer bringt Reines aus Unreinem? — Nicht Eines!</span>
+              <span class="line">Keine Unreinheit mehr, keine Lüge mehr,</span>
+              <span class="line">kein falscher Prophet mehr —</span>
+              <span class="line">alles wird leuchten als Heiligkeit:</span>
+              <span class="line gold">Adonai ist Einer — und Sein Name ist Einer!</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „וְהָיָה ה׳ לְמֶלֶךְ עַל כָּל הָאָרֶץ בַּיּוֹם הַהוּא יִהְיֶה ה׳ אֶחָד וּשְׁמוֹ אֶחָד" — זְכַרְיָה י״ד:ט׳ (וּבְנֻסַּח „עָלֵינוּ").
+        </div>
+      </div>
+
+      <!-- VII · SIJUM -->
+      <div class="section-block" id="p7">
+        <div class="section-label">VII · סִיּוּם — Outro · ppp → pppp · Stille · Flageolett-Töne</div>
+        <div class="outro-lyr">
+          <div class="lyrics-he">
+            <span class="fade1">אֶחָד... אֶחָד...</span><br>
+            <span class="fade2">וּשְׁמוֹ אֶחָד... אֶחָד...</span><br>
+            <span class="fade3">הַנָּחָשׁ — הַמָּשִׁיחַ — אֶחָד...</span>
+            <span class="de">Einer… Einer… / Sein Name ist Einer… / Die Schlange — der Messias — Einer…</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <!-- ══ AUFFÜHRUNGSHINWEISE ══ -->
+  <div class="perf-box">
+    <p class="perf-intro">
+      Das Lied durchläuft fünf innere Zustände: <em>Prophetie</em> (Secharja) · <em>Erkenntnis</em> (Ijow) ·
+      <em>Enthüllung</em> (die Gematrie) · <em>Teschuwa</em> (die Brücke) · <em>Geula</em> (der Klimax).
+      Jede Sektion hat einen anderen emotionalen Charakter — die Übergänge bewusst gestalten.
+    </p>
+    <div class="perf-grid">
+      <div class="perf-item wide">
+        <span class="perf-h">Dynamischer Bogen <span class="he">· הַמַּסָּע</span></span>
+        <p class="perf-t">Vom Flüstern (<strong>ppp</strong>, Gitarre solo auf D) in drei Stufen bis zum
+        Klimax (<strong>ff</strong>). Der Refrain kehrt zweimal wieder — erst zurückhaltend (<strong>mf</strong>),
+        dann kraftvoll (<strong>f</strong>). Die Brücke bricht die Steigerung bewusst und kehrt zu
+        <strong>p</strong> zurück (Intimität), bevor der Klimax explodiert. Danach zerfällt alles ins
+        <strong>pppp</strong> — nur noch <em>אֶחָד</em>.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Dynamik <span class="he">· דִּינָמִיקָה</span></span>
+        <p class="perf-t">Intro <strong>ppp</strong> · Str. I <strong>p</strong> (prophetisch) · Refrain
+        <strong>mf</strong>, das <em>„לֹא אֶחָד"</em> laut und fest (<strong>f</strong>), Gitarre pausiert
+        kurz · Str. II <strong>p</strong> (langsamer) · Refrain II <strong>mf→f</strong> · Brücke
+        <strong>p</strong> · Klimax <strong>ff</strong> · Outro <strong>ppp→pppp</strong>.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gitarre <span class="he">· גִּיטָרָה</span></span>
+        <p class="perf-t">Intro &amp; Strophen: <em>Fingerpicking</em> mit Bordun auf der offenen
+        <strong>D-Saite</strong>. Refrain: wechselnd Picking und leichtes Strumming. Brücke: einzelne
+        Töne, fast Harfen-Stil. Klimax: volles Strumming, alle Saiten. Outro: Flageolett-Töne am
+        12. Bund, ausklingen lassen.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gesang <span class="he">· שִׁירָה</span></span>
+        <p class="perf-t">Str. I objektiv, prophetisch (Gottes Stimme). Refrain: kühle, ruhige Gewissheit —
+        das <em>„לֹא אֶחָד!"</em> als fester Ausruf. Str. II erzählend, damit die Erkenntnis der Gematrie
+        sich setzen kann. Brücke ganz persönlich, fast gesprochen. Die Echo-Zeilen (in Klammern) leiser,
+        wie Nachhall — auch als zweite Stimme möglich.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Zur Gematrie <span class="he">· נָחָשׁ = מָשִׁיחַ</span></span>
+        <p class="perf-t">Strophe II bewusst <em>langsam</em> singen — die Zeile <strong>נָחָשׁ — מָשִׁיחַ</strong>
+        ist der theologische Kern: dieselbe Zahl, dasselbe Geheimnis. Das Wort <em>הָרַעַל</em> (Gift) dunkel
+        färben, <em>לְרַחֲמִים</em> (Barmherzigkeit) aufhellen — der Wechsel selbst ist die Botschaft.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Tonart &amp; Struktur <span class="he">· נֻסָּח</span></span>
+        <p class="perf-t">Grundton <strong>D</strong> (Bordun), modale Moll-Färbung, die im Refrain und
+        Klimax nach Dur-Licht öffnet. Ablauf: Intro → Str. I → Refrain → Str. II → Refrain → Brücke →
+        Klimax → Outro. Gesamtlaufzeit etwa <strong>6–7 Minuten</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ HEILIGE NAMEN ══ -->
+  <div class="names-box">
+    <div class="names-list">
+      <span>אֲדֹנָי ← יהוה</span>
+      <span>אֲדֹנָי צְבָאוֹת</span>
+      <span>הָאֶחָד</span>
+    </div>
+    <p class="names-note">
+      Das Tetragramm erscheint durchgehend als <span class="sources-he">אֲדֹנָי</span> — im Gesang stets
+      „Adonai", nie eine andere Aussprache.&nbsp;</p>
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">מִי יִתֵּן טָהוֹר מִטָּמֵא — רַק הָאֶחָד</div>
+    <div class="footer-chain">רוּחַ הַטֻּמְאָה ◂ לֹא אֶחָד ← הָאֶחָד ◂ נָחָשׁ = מָשִׁיחַ = 358 ◂ אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד</div>
+    <p class="footer-de">
+      Das Lied nimmt einen Vers der Verzweiflung — <em>niemand kann Reines aus Unreinem holen</em> — und
+      hört ihn als Trost: <strong>nur der Eine kann es</strong>. Dazwischen legt es das Geheimnis der
+      Wandlung frei: dass Schlange und Messias dieselbe Zahl tragen, dass der erhobene Blick zum Kupfer
+      heilt, dass jede Umkehr Gift in Heilung verwandelt — bis zu dem Tag, an dem alles als Heiligkeit
+      leuchtet.
+      <br><br>
+      <strong>בַּיּוֹם הַהוּא יִהְיֶה — אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>; die Umdeutung von <em>„lo echad"</em> zu
+      <em>„ha'echad"</em>, die persönliche Teschuwa-Brücke und das Bild <em>„das Gift zur Barmherzigkeit"</em>
+      gehören dem Lied. Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Secharja 13:2</strong> — <span class="sources-he">וְהָיָה בַיּוֹם הַהוּא … אַכְרִית אֶת שְׁמוֹת הָעֲצַבִּים … וְאֶת רוּחַ הַטֻּמְאָה אַעֲבִיר מִן הָאָרֶץ</span>;
+      Strophe I. ·
+      <strong>Ijow 14:4</strong> — <span class="sources-he">מִי יִתֵּן טָהוֹר מִטָּמֵא לֹא אֶחָד</span>;
+      der Refrain. Die darschanische Umdeutung <em>„lo echad" → „ha'echad"</em> (nur der Eine bringt
+      Reines aus Unreinem) steht in der Tradition der Auslegung der roten Kuh (<span class="sources-he">פָּרָה אֲדֻמָּה</span>). ·
+      <strong>Secharja 14:9</strong> — <span class="sources-he">וְהָיָה ה׳ לְמֶלֶךְ עַל כָּל הָאָרֶץ בַּיּוֹם הַהוּא יִהְיֶה ה׳ אֶחָד וּשְׁמוֹ אֶחָד</span>;
+      der Klimax (auch im „Alenu"). ·
+      <strong>Gematrie נָחָשׁ = מָשִׁיחַ = 358</strong> (ergänzt) — נ 50 + ח 8 + שׁ 300 = מ 40 + שׁ 300 +
+      י 10 + ח 8; bezeugt beim <em>Ramchal</em> und frühen chassidischen Meistern: das Böse trägt den Keim
+      der Erlösung, der „schlangengleiche" Mashiach kehrt den Fall Edens um. ·
+      <strong>Bamidbar 21:8–9</strong> (ergänzt) — die <em>eherne Schlange</em>, die jeden Gebissenen
+      heilt; dazu <strong>Mischna Rosch haSchana 3:8</strong>: nicht die Schlange heilte, sondern das
+      Aufblicken und das Unterordnen des Herzens „unter den Vater im Himmel". Grundlage von Strophe II. ·
+      <strong>Jeschajahu 27:1</strong> — <span class="sources-he">נָחָשׁ בָּרִיחַ / נָחָשׁ עֲקַלָּתוֹן</span>;
+      kabbalistischer Hintergrund des „nachash"-Motivs (Brücke).
+      <br><br>
+      <em>Präzisierung:</em> Secharja 13:2 liest <span class="sources-he">וְגַם אֶת הַנְּבִיאִים</span>
+      („die [falschen] Propheten"); das Lied macht daraus ausdrücklich <span class="sources-he">הַנָּבִיא הַשֶּׁקֶר</span>
+      — dem Sinn nach korrekt, hier nur vermerkt. Die Vorlage nannte Secharja 13:2, 14:9, Ijow 14:4 und
+      „Rabbi Nachman"; die Gematrie und der Schlangen-Tikkun sind breiter belegt (Ramchal, Chassidut) und
+      hier so verankert; Bamidbar 21 / RH 3:8 sind ergänzt.
+      <br><br>
+      <strong>שֵׁם קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht für das Tetragramm.</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יָצָאתָ לְיֶשַׁע · פִּיּוּט · חֲבַקּוּק ג׳</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   יָצָאתָ לְיֶשַׁע — Yatzata liYesha
+   „Du bist ausgezogen zur Rettung" · Chavakuk 3:13
+   Erlösung · Theophanie · Mashiach ben David · Rückkehr nach Zion
+   Karmesin · Glut · Gold · ein Hauch Türkis (der Bund, die Rückkehr)
+   ── פִּיּוּט · גְּאֻלָּה ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0A0404; --deep:#140707; --layer:#1E0C0C; --card:#160808;
+
+  /* ── דָּם / אֵשׁ — Karmesin & Glut (der Auszug, das Zerschmettern) ── */
+  --crim:#8B2020; --crim-lt:#C43030; --ember:#D4622A; --ember-lt:#F0945C;
+  --crim-dim:#3A0E0E; --crim-bdr:rgba(196,48,48,.30);
+
+  /* ── זָהָב — Gold der Rettung (yeshuah) ── */
+  --gold:#C9932A; --gold-lt:#E8BC6A; --gold-vlt:#F5E4B8;
+  --gold-dim:#4A3608;
+
+  /* ── צִיּוֹן / דָּוִד — kühles Türkis: Bund, Rückkehr, Ewigkeit ── */
+  --tql:#2A7068; --tql-lt:#5AA99E; --tql-vlt:#8FCFC4; --tql-dim:#123A34;
+
+  --sand:#e8d5b0; --sand-lt:#f2e6cc; --sand-dim:#9a8060;
+  --parch:#f0e2c4; --parch-dim:#a89070;
+  --ivory:#ecdcc0; --ivory-lt:#f6ecd4; --ivory-dim:#8a7a5c;
+  --silver:#c8bcaa; --silver-dim:#6e6250;
+  --text:#a2947c;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(139,32,32,.42)  0%,transparent 56%),
+    radial-gradient(ellipse at 22% 82%,  rgba(212,98,42,.14)   0%,transparent 46%),
+    radial-gradient(ellipse at 80% 88%,  rgba(201,147,42,.10)  0%,transparent 40%),
+    radial-gradient(ellipse at 50% 8%,   rgba(196,48,48,.14)   0%,transparent 50%),
+    radial-gradient(ellipse at 84% 30%,  rgba(42,112,104,.08)  0%,transparent 42%),
+    radial-gradient(ellipse at 50% 46%,  rgba(10,4,4,.82)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 75%,rgba(201,147,42,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 32% 88%,rgba(196,48,48,.5) 0%,transparent 100%),
+    radial-gradient(2px 2px at 68% 82%,rgba(232,188,106,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 85% 70%,rgba(196,48,48,.55) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 92%,rgba(240,148,92,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 10% 60%,rgba(201,147,42,.32) 0%,transparent 100%),
+    radial-gradient(2px 2px at 77% 95%,rgba(232,188,106,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 55% 66%,rgba(143,207,196,.3) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(196,48,48,.22);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--crim-lt);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--gold-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(196,48,48,.5),0 0 150px rgba(201,147,42,.32);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:710px;margin:0 auto 30px;}
+.page-desc em{color:var(--ember-lt);font-style:italic;}
+.page-desc .tql{color:var(--tql-lt);font-style:italic;}
+
+/* ── ERLÖSUNGS-KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(196,48,48,.22);padding:12px 26px;background:rgba(196,48,48,.05);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-fire{color:var(--ember-lt);border-color:var(--crim-bdr);background:rgba(196,48,48,.09);}
+.chain-hope{color:var(--tql-lt);border-color:rgba(42,112,104,.34);background:rgba(42,112,104,.09);}
+.chain-sep{color:var(--crim-lt);opacity:.55;font-size:.7em;}
+
+/* ── STATIONEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:13px 15px;position:relative;background:rgba(10,4,4,.6);}
+.cyc-out{border-color:rgba(201,147,42,.40);background:rgba(201,147,42,.09);}
+.cyc-crush{border-color:rgba(196,48,48,.38);background:rgba(196,48,48,.08);}
+.cyc-end{border-color:rgba(212,98,42,.34);background:rgba(212,98,42,.06);}
+.cyc-zion{border-color:rgba(42,112,104,.36);background:rgba(42,112,104,.07);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-out .cyc-num{color:var(--gold-lt);} .cyc-crush .cyc-num{color:var(--crim-lt);}
+.cyc-end .cyc-num{color:var(--ember-lt);} .cyc-zion .cyc-num{color:var(--tql-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;display:block;}
+.cyc-out .cyc-he{color:var(--gold-vlt);} .cyc-crush .cyc-he{color:var(--ember-lt);}
+.cyc-end .cyc-he{color:rgba(240,148,92,.9);} .cyc-zion .cyc-he{color:var(--tql-vlt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(201,147,42,.09),rgba(10,4,4,.85));
+  border:1px solid rgba(201,147,42,.28);border-left:4px solid var(--gold);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'יָצָאתָ — Zum Wort';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.3em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.08em;text-shadow:0 0 60px rgba(201,147,42,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--gold-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(196,48,48,.11),rgba(10,4,4,.85));
+  border:1px solid rgba(196,48,48,.30);border-left:4px solid var(--crim-lt);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'הַכָּתוּב · Chavakuk 3:13';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--crim-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--crim-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--ember-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(196,48,48,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(196,48,48,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(196,48,48,.09);border-color:rgba(196,48,48,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.9em;font-weight:700;color:var(--gold-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:52px;border:1px solid rgba(196,48,48,.14);
+  background:linear-gradient(180deg,rgba(30,12,12,.96) 0%,rgba(9,4,4,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--crim),var(--ember),var(--gold),var(--tql),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(196,48,48,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gold-lt);border-right:1px solid rgba(196,48,48,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.28em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--gold-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--ember-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(196,48,48,.32);
+  padding:5px 14px;color:var(--crim-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(196,48,48,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 40px;}
+.section-block{margin:26px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(196,48,48,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--ember-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(212,98,42,.32);background:rgba(212,98,42,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--gold-vlt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(196,48,48,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.7;font-size:.82em;}
+.fire{color:var(--ember-lt);}
+.crim{color:var(--crim-lt);}
+.gold{color:var(--gold-lt);}
+.tql{color:var(--tql-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(201,147,42,.12),rgba(196,48,48,.05));
+  border:1px solid rgba(201,147,42,.28);border-left:3px solid var(--gold);padding:22px 28px;}
+.refrain-box .lyrics-he .line:first-child{font-weight:700;color:var(--gold-vlt);}
+.bridge-box{background:linear-gradient(135deg,rgba(42,112,104,.12),transparent);
+  border:1px solid rgba(42,112,104,.28);border-left:3px solid var(--tql);padding:22px 28px;}
+.bridge-mid{text-align:center;color:var(--crim-lt);opacity:.5;letter-spacing:.4em;margin:8px 0;font-size:.9em;}
+.selah{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;
+  color:var(--crim-lt);letter-spacing:.28em;margin-top:8px;direction:rtl;}
+.intro-lyr,.outro-lyr{text-align:center;padding:18px 0 6px;}
+.intro-lyr .lyrics-he,.outro-lyr .lyrics-he{direction:rtl;text-align:center;font-size:1.24em;
+  color:var(--gold-vlt);line-height:2.3;letter-spacing:.05em;text-shadow:0 0 30px rgba(201,147,42,.3);}
+.intro-lyr .de,.outro-lyr .de{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:8px;}
+.outro-lyr .echo-he{color:var(--silver-dim);font-size:.86em;}
+.outro-lyr .tql{color:var(--tql-vlt);}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(196,48,48,.05);
+  border-left:2px solid rgba(196,48,48,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref.cool{background:rgba(42,112,104,.06);border-left-color:rgba(42,112,104,.30);}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--crim-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.piyut-ref.cool .piyut-ref-label{color:var(--tql-lt);}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(201,147,42,.07),rgba(10,4,4,.86));
+  border:1px solid rgba(201,147,42,.24);border-left:4px solid var(--gold);
+  padding:26px 32px;margin-top:16px;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-intro{font-family:'EB Garamond',serif;font-size:.9em;color:var(--text);line-height:1.85;margin-bottom:18px;}
+.perf-intro em{color:var(--ember-lt);font-style:italic;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;}
+.perf-item{border-left:2px solid rgba(196,48,48,.22);padding:2px 0 2px 16px;}
+.perf-item.wide{grid-column:1 / -1;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.88em;font-weight:700;
+  color:var(--gold-lt);display:block;margin-bottom:4px;}
+.perf-h .he{color:var(--ember-lt);font-weight:400;font-size:.9em;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.82;}
+.perf-t strong{color:var(--ivory);}
+.perf-t em{color:var(--ember-lt);font-style:italic;}
+
+/* ── NAMEN-BOX ── */
+.names-box{margin-top:16px;padding:22px 30px;border:1px solid rgba(196,48,48,.16);
+  background:rgba(196,48,48,.03);position:relative;}
+.names-box::before{content:'שְׁמוֹת קֹדֶשׁ · Heilige Namen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.6em;color:var(--crim-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.names-list{display:flex;flex-wrap:wrap;gap:8px 20px;direction:rtl;margin-bottom:12px;}
+.names-list span{font-family:'Frank Ruhl Libre',serif;font-size:1.02em;color:var(--gold-lt);
+  border:1px solid rgba(201,147,42,.22);padding:3px 12px;background:rgba(201,147,42,.05);}
+.names-note{font-family:'EB Garamond',serif;font-size:.86em;color:var(--text);line-height:1.8;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(196,48,48,.3),transparent);}
+.ornament-star{color:var(--crim-lt);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--ember-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--tql-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(201,147,42,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(201,147,42,.20);
+  background:rgba(201,147,42,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr 1fr;}
+  .sec-nav{grid-template-columns:repeat(4,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(196,48,48,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(196,48,48,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 32px;}
+  .perf-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">חֲבַקּוּק ג׳ · Erlösung · für Stimme &amp; Gitarre</div>
+    <div class="page-title-he">יָצָאתָ לְיֶשַׁע</div>
+    <div class="page-title-de">Yatzata liYesha — „Du bist ausgezogen zur Rettung"</div>
+    <p class="page-desc">
+      Das Gebet Habakuks endet mit einer Theophanie: Gott <em>zieht aus</em>, um sein Volk und seinen
+      Gesalbten zu retten, und zerschmettert das Haupt aus dem Haus des Frevlers. Das Lied trägt diesen
+      Vers vom Auszug über das Zerschmettern des Bösen bis in die <span class="tql">Endzeit</span> —
+      wenn Mashiach ben David kommt und <span class="tql">Adonai nach Zion zurückkehrt</span>.
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-fire">יָצָאתָ לְיֶשַׁע</span><span class="chain-sep">◂</span>
+      <span class="chain-item chain-fire">מָחַצְתָּ רֹאשׁ</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-hope">אַחֲרִית הַיָּמִים</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-hope">וְשָׁב אֲדֹנָי לְצִיּוֹן</span>
+    </div>
+  </div>
+
+  <!-- ══ STATIONEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-out">
+      <span class="cyc-num">Der Auszug</span>
+      <span class="cyc-he">יֶשַׁע עַמֶּךָ</span>
+      <span class="cyc-de">Gott zieht aus, zu retten</span>
+    </div>
+    <div class="cyc cyc-crush">
+      <span class="cyc-num">Das Zerschmettern</span>
+      <span class="cyc-he">מִבֵּית רָשָׁע</span>
+      <span class="cyc-de">das Haupt des Frevlers</span>
+    </div>
+    <div class="cyc cyc-end">
+      <span class="cyc-num">Die Endzeit</span>
+      <span class="cyc-he">מְשִׁיחַ בֶּן דָּוִד</span>
+      <span class="cyc-de">der Erlöser kommt</span>
+    </div>
+    <div class="cyc cyc-zion">
+      <span class="cyc-num">Die Rückkehr</span>
+      <span class="cyc-he">שָׁב לְצִיּוֹן</span>
+      <span class="cyc-de">heimgekehrt ins Haus Adonais</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: YATZATA ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">יָצָאתָ</span>
+    <p class="gloss-de">
+      <strong>Yatzata</strong> — <em>„Du bist ausgezogen"</em>. Das Bild ist das des göttlichen Kriegers,
+      der aus seinem Ort <em>hervortritt</em>, um zu retten — nicht ferne Vorsehung, sondern ein Gott,
+      der <strong>selbst in Bewegung gerät</strong>. Habakuk sagt es doppelt:
+      <span class="gloss-he">לְיֶשַׁע עַמֶּךָ · לְיֶשַׁע אֶת מְשִׁיחֶךָ</span> — zur Rettung des Volkes und
+      zur Rettung <em>mit</em> dem Gesalbten.
+      <br><br>
+      Das dreifache <span class="gloss-he">יָצָאתָ — יָצָאתָ — יָצָאתָ</span> im Refrain ist frei gedacht,
+      ein atemloser Ruf über einer einzelnen Saite; und der Kehrvers antwortet mit dem, was den Auszug
+      erst trägt: <span class="gloss-he">וְאַתָּה אֲדֹנָי אִתָּנוּ</span> — „und Du, Adonai, bist bei uns".
+    </p>
+  </div>
+
+  <!-- ══ INTRO: HABAKUK 3:13 ══ -->
+  <div class="intro-box">
+    <div class="ib-he">יָצָאתָ לְיֵשַׁע עַמֶּךָ לְיֵשַׁע אֶת מְשִׁיחֶךָ · מָחַצְתָּ רֹּאשׁ מִבֵּית רָשָׁע עָרוֹת יְסוֹד עַד צַוָּאר סֶלָה</div>
+    <div class="ib-src">חֲבַקּוּק ג׳:י״ג</div>
+    <p class="ib-de">
+      Klassische Ausleger lesen <em>„das Haupt aus dem Haus des Frevlers"</em> als den Anführer des
+      frevlerischen Reiches (Radak, Malbim: das Haupt des Heeres Gogs), und <em>„von Fundament bis zum
+      Nacken"</em> als <strong>vollständige</strong> Vernichtung — von oben bis unten wird das Böse
+      entblößt. Dieselbe vertikale Reichweite kennt schon die Schlagung der Erstgeburt
+      <em>„vom Thron bis zur Grube"</em> (Schemot 12:29).
+      <br><br>
+      Und derselbe Vers klingt im Pessach-Pijut <strong>„Omez Gevurotecha"</strong> (Kalir; Kehrvers
+      <em>„va'amartem zevach pesach"</em>) — dort auf Haman gedeutet:
+      <span class="gloss-he">רֹאשׁ מִבֵּית רָשָׁע מָחַצְתָּ בְּעֵץ חֲמִשִּׁים בַּפֶּסַח</span> —
+      „das Haupt aus dem Haus des Frevlers zerschmettertest Du am Galgen von fünfzig [Ellen] am Pessach".
+      So verankert das Lied den Vers in der liturgischen Erlösungsdichtung.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">הַקְדָּמָה</span><span class="sn-de">Intro</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Str. I</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Str. II</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Schluss</span></a>
+    <a class="sec-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">נְעִילָה</span><span class="sn-de">Ausklang</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">גְּאֻלָּה</span>ג׳:י״ג</div>
+      <div class="song-meta">
+        <span class="sefira-badge">יְשׁוּעָה · מְשִׁיחַ · שִׁיבַת צִיּוֹן</span>
+        <span class="maqam-badge">Solo voice &amp; guitar · Em · free melisma · ppp → fff → ppp</span>
+        <span class="song-title-he">יָצָאתָ לְיֶשַׁע</span>
+        <span class="song-title-de">Du bist ausgezogen zur Rettung</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · Chavakuk 3:13</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · HAKDAMA -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · הַקְדָּמָה — Einleitung · ruhig, atemlos</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי — שְׁמָעֵנוּ</span>
+            <span class="line">אֲדֹנָי — עֲנֵנוּ</span>
+            <span class="line">כְּאָבוֹת כֵּן לְבָנִים —</span>
+            <span class="line gold">זְכֹר יֶשַׁע עַמֶּךָ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai — höre uns,</span>
+            <span class="line">Adonai — antworte uns;</span>
+            <span class="line">wie den Vätern, so den Söhnen —</span>
+            <span class="line gold">gedenke der Rettung deines Volkes.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          פְּתִיחָה בְּנֻסַּח סְלִיחוֹת — עַל דֶּרֶךְ „אֲדֹנָי שְׁמָעָה אֲדֹנָי סְלָחָה אֲדֹנָי הַקְשִׁיבָה" (דָּנִיֵּאל ט׳:י״ט).
+        </div>
+      </div>
+
+      <!-- II · PIZMON -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · פָּזְמוֹן — Refrain · aufsteigend</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">יָצָאתָ לְיֶשַׁע עַמֶּךָ</span>
+              <span class="line">לְיֶשַׁע אֶת מְשִׁיחֶךָ</span>
+              <span class="line fire">יָצָאתָ — יָצָאתָ — יָצָאתָ</span>
+              <span class="line tql">וְאַתָּה אֲדֹנָי אִתָּנוּ</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Du bist ausgezogen, dein Volk zu retten,</span>
+              <span class="line">deinen Gesalbten zu retten;</span>
+              <span class="line fire">Du bist ausgezogen — ausgezogen — ausgezogen,</span>
+              <span class="line tql">und Du, Adonai, bist bei uns.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „יָצָאתָ לְיֵשַׁע עַמֶּךָ לְיֵשַׁע אֶת מְשִׁיחֶךָ" — חֲבַקּוּק ג׳:י״ג. „וְאַתָּה אֲדֹנָי אִתָּנוּ" — תּוֹסֶפֶת הַשִּׁיר.
+        </div>
+      </div>
+
+      <!-- III · BAYIT ALEF -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · בֵּית א׳ — Strophe I · das Zerschmettern</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line crim">מָחַצְתָּ רֹאשׁ מִבֵּית רָשָׁע</span>
+            <span class="line">עָרוֹת יְסוֹד עַד צַוָּאר</span>
+            <span class="line gold">בְּזַרְעֲךָ הַגְּדוֹלָה</span>
+            <span class="line gold">מִכָּל רָע הִצַּלְתָּנוּ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line crim">Du hast das Haupt aus dem Haus des Frevlers zerschmettert,</span>
+            <span class="line">das Fundament bis zum Nacken entblößt;</span>
+            <span class="line gold">mit deinem großen Arm</span>
+            <span class="line gold">hast du uns aus allem Bösen gerettet.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle · und ein Hinweis</span>
+          „מָחַצְתָּ רֹּאשׁ מִבֵּית רָשָׁע עָרוֹת יְסוֹד עַד צַוָּאר" — חֲבַקּוּק ג׳:י״ג. „בְּזַרְעֲךָ הַגְּדוֹלָה" — הַכַּוָּנָה לִזְרוֹעֲךָ הַגְּדוֹלָה (עַל דֶּרֶךְ „בִּזְרוֹעַ נְטוּיָה", שְׁמוֹת ו׳:ו׳).
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">יָצָאתָ לְיֶשַׁע עַמֶּךָ</span>
+              <span class="line">לְיֶשַׁע אֶת מְשִׁיחֶךָ</span>
+              <span class="line fire">יָצָאתָ — יָצָאתָ — יָצָאתָ</span>
+              <span class="line tql">וְאַתָּה אֲדֹנָי אִתָּנוּ</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Du bist ausgezogen, dein Volk zu retten,</span>
+              <span class="line">deinen Gesalbten zu retten;</span>
+              <span class="line fire">Du bist ausgezogen — ausgezogen — ausgezogen,</span>
+              <span class="line tql">und Du, Adonai, bist bei uns.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV · BAYIT BET -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · בֵּית ב׳ — Strophe II · die eschatologische Hoffnung</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">וּבְאַחֲרִית הַיָּמִים</span>
+            <span class="line">תָּשׁוּב וְתוֹשִׁיעֵנוּ</span>
+            <span class="line tql">מְשִׁיחַ בֶּן דָּוִד יָבוֹא</span>
+            <span class="line tql">לִגְאֹל אֶת יִשְׂרָאֵל</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Und am Ende der Tage</span>
+            <span class="line">wirst du wiederkehren und uns retten;</span>
+            <span class="line tql">Mashiach, Sohn Davids, wird kommen,</span>
+            <span class="line tql">Israel zu erlösen.</span>
+          </div>
+        </div>
+        <div class="piyut-ref cool">
+          <span class="piyut-ref-label">Quelle</span>
+          מְשִׁיחַ בֶּן דָּוִד וְאַחֲרִית הַיָּמִים — יְסוֹד הָאֱמוּנָה בַּגְּאֻלָּה (רמב״ם, י״ג עִיקָּרִים, י״ב). „וּבָא לְצִיּוֹן גּוֹאֵל" — יְשַׁעְיָהוּ נ״ט:כ׳.
+        </div>
+      </div>
+
+      <!-- V · GESCHER -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · גֶּשֶׁר — Brücke · langsam, tief, Selah-Pause</div>
+        <div class="instr-note">Slow and low; a full stop at Selah — the singer holds before returning.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line tql" style="font-weight:700;">דָּוִד מֶלֶךְ יִשְׂרָאֵל</span>
+              <span class="line tql">חַי וְקַיָּם — לְעוֹלָם</span>
+              <div class="bridge-mid">⸻</div>
+              <span class="line">מִבֵּית רָשָׁע — נִגְאַלְנוּ</span>
+              <span class="line gold">לְבֵית אֲדֹנָי — שַׁבְנוּ</span>
+              <span class="selah">סֶלָה ✦</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line tql" style="font-weight:700;">David, König Israels,</span>
+              <span class="line tql">lebt und besteht — in Ewigkeit.</span>
+              <div class="bridge-mid" style="visibility:hidden;">⸻</div>
+              <span class="line">Aus dem Haus des Frevlers — wurden wir befreit,</span>
+              <span class="line gold">ins Haus Adonais — sind wir heimgekehrt.</span>
+              <span class="selah" style="direction:ltr;">Sela ✦</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref cool">
+          <span class="piyut-ref-label">Quelle</span>
+          „דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם" — רֹאשׁ הַשָּׁנָה כ״ה ע״א (סִימָנוֹ שֶׁל רַבִּי לְרַבִּי חִיָּא בְּקִדּוּשׁ הַחֹדֶשׁ; רַשִׁ״י: עַל שֵׁם תְּהִלִּים פ״ט:ל״ז).
+        </div>
+      </div>
+
+      <!-- VI · PIZMON SIJUM -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · פָּזְמוֹן סִיּוּם — Abschluss-Refrain · voll, fortissimo</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">יָצָאתָ לְיֶשַׁע עַמֶּךָ</span>
+              <span class="line">לְיֶשַׁע אֶת מְשִׁיחֶךָ</span>
+              <span class="line fire">יָצָאתָ — יָצָאתָ — יָצָאתָ</span>
+              <span class="line tql">וְאַתָּה אֲדֹנָי אִתָּנוּ</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Du bist ausgezogen, dein Volk zu retten,</span>
+              <span class="line">deinen Gesalbten zu retten;</span>
+              <span class="line fire">Du bist ausgezogen — ausgezogen — ausgezogen,</span>
+              <span class="line tql">und Du, Adonai, bist bei uns.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VII · NEILA -->
+      <div class="section-block" id="p7">
+        <div class="section-label">VII · נְעִילָה — Ausklang · Pianissimo, allein</div>
+        <div class="outro-lyr">
+          <div class="lyrics-he">
+            <span class="echo-he">יָצָאתָ… יָצָאתָ…</span><br>
+            <span class="echo-he">לְיֶשַׁע… לְיֶשַׁע…</span><br>
+            <span class="tql">וְשָׁב אֲדֹנָי לְצִיּוֹן —</span><br>
+            <span class="selah" style="font-size:.95em;">סֶלָה ✦ אָמֵן</span>
+            <span class="de">Du bist ausgezogen… zur Rettung… / und Adonai kehrt zurück nach Zion — Sela. Amen.</span>
+          </div>
+        </div>
+        <div class="piyut-ref cool">
+          <span class="piyut-ref-label">Quelle</span>
+          „וְשָׁב אֲדֹנָי לְצִיּוֹן" — עַל דֶּרֶךְ „בְּשׁוּב ה׳ צִיּוֹן" (יְשַׁעְיָהוּ נ״ב:ח׳) וּבִרְכַּת „וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן" (עֲמִידָה).
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <!-- ══ AUFFÜHRUNGSHINWEISE ══ -->
+  <div class="perf-box">
+    <p class="perf-intro">
+      Das Lied beginnt in flehendem Halbdunkel und endet in stiller Gewissheit — dazwischen der
+      <em>Auszug</em> Gottes zur Rettung. Der Wendepunkt ist der letzte Refrain und der Gesher:
+      aus der Bitte wird Gewissheit, aus der Klage <em>„und Du, Adonai, bist bei uns"</em>.
+    </p>
+    <div class="perf-grid">
+      <div class="perf-item wide">
+        <span class="perf-h">Dramatischer Bogen <span class="he">· הַמַּסָּע</span></span>
+        <p class="perf-t">Von der flehenden Einleitung (<em>אֲדֹנָי שְׁמָעֵנוּ</em>) über das Zerschmettern
+        des Bösen zur eschatologischen Hoffnung (<strong>מְשִׁיחַ בֶּן דָּוִד</strong>). Die Brücke —
+        <em>דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם</em> — ist der ruhende Höhepunkt; danach bricht der
+        Abschluss-Refrain in voller Gewissheit hervor, und die Nĕila kehrt still nach Zion zurück.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Dynamik <span class="he">· דִּינָמִיקָה</span></span>
+        <p class="perf-t">Einleitung &amp; Nĕila: <strong>ppp</strong> — Flüstern, einzelne Saiten.
+        Strophen: <strong>mp</strong>, getragen. Refrain: <strong>mf → f</strong>. Gesher: <strong>p</strong>,
+        fast a cappella, mit voller <em>Selah</em>-Pause. Abschluss-Refrain: <strong>fff</strong> —
+        danach unmittelbarer Abfall ins Pianissimo des Ausklangs.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gitarre <span class="he">· גִּיטָרָה</span></span>
+        <p class="perf-t">Intro: <em>fingerpicked</em>, offene Moll-Akkorde (Em, Am), viel Raum.
+        Refrain: rhythmisches Strumming, Betonung auf der hebräischen Wortsilbe. Gesher: einzelne Töne,
+        fast perkussiv gedämpft. Outro: arpeggiert, nachklingend.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gesang <span class="he">· שִׁירָה</span></span>
+        <p class="perf-t">Das dreifache <strong>יָצָאתָ — יָצָאתָ — יָצָאתָ</strong> als freier, atemloser
+        Ruf — kein starres Metrum, sondern liturgisches Melisma über einer einzelnen Saite. Phrasenenden
+        auf offenem Vokal (<em>מְשִׁיחֶךָ · אִתָּנוּ · לְצִיּוֹן</em>) als Halteton. Der Sänger hält
+        besonders bei <em>וְאַתָּה אֲדֹנָי אִתָּנוּ</em> inne — der Trost, der den Auszug trägt.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Selah &amp; Echo <span class="he">· סֶלָה</span></span>
+        <p class="perf-t"><strong>סֶלָה</strong> markiert eine vollständige Pause — der Sänger hält inne,
+        bevor er zurückkehrt (im Gesher und in der Nĕila). Echo-artige Zeilen wie
+        <em>יָצָאתָ… יָצָאתָ… · לְיֶשַׁע… לְיֶשַׁע…</em> leiser, wie ein Eigenhall; auch als zweite
+        Stimme möglich, um eine Sekunde versetzt.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Tonart &amp; Struktur <span class="he">· נֻסָּח</span></span>
+        <p class="perf-t">Empfehlung: E-Moll mit freier Mixtur aus äolisch und dorisch — klagend und
+        zugleich würdevoll; alternativ D-Moll, das die tiefe Resonanz von <em>אֲדֹנָי</em> trägt.
+        Ablauf: Intro → Str. I → Refrain → Str. II → Gesher → Abschluss-Refrain → Nĕila.
+        Gesamtlaufzeit mit Wiederholungen etwa <strong>6–7 Minuten</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ HEILIGE NAMEN ══ -->
+  <div class="names-box">
+    <div class="names-list">
+      <span>אֲדֹנָי ← יהוה</span>
+      <span>מְשִׁיחֶךָ</span>
+    </div>
+    <p class="names-note">
+      Das Tetragramm erscheint durchgehend als <span class="sources-he">אֲדֹנָי</span>, gemäß der
+      liturgischen Wiedergabe von Gebets- und Liedtexten.&nbsp;</p>
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">יָצָאתָ לְיֶשַׁע — גְּאֻלָּה</div>
+    <div class="footer-chain">יֶשַׁע ◂ מָחַצְתָּ רֹאשׁ ◂ מְשִׁיחַ בֶּן דָּוִד ◂ וְשָׁב אֲדֹנָי לְצִיּוֹן · סֶלָה</div>
+    <p class="footer-de">
+      Habakuks Vision endet nicht in der Klage, sondern im Auszug Gottes zur Rettung. Das Lied nimmt
+      diesen einen Vers und spannt ihn über die Zeit: vom Zerschmettern des Bösen „von Fundament bis
+      zum Nacken" über die Verheißung des <em>Mashiach ben David</em> bis zur Rückkehr Adonais nach
+      Zion. Und über allem steht der Kehrvers, der den Auszug erst trägt —
+      <em>„und Du, Adonai, bist bei uns"</em>.
+      <br><br>
+      <strong>מִבֵּית רָשָׁע נִגְאַלְנוּ — לְבֵית אֲדֹנָי שַׁבְנוּ.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>; der Kehrvers <em>„und Du, Adonai, bist bei
+      uns"</em> und die Verklammerung der Verse sind die Dichtung dieses Liedes. Die verifizierten
+      Quellen des Stoffes:
+      <br><br>
+      <strong>Chavakuk 3:13</strong> — <span class="sources-he">יָצָאתָ לְיֵשַׁע עַמֶּךָ לְיֵשַׁע אֶת מְשִׁיחֶךָ מָחַצְתָּ רֹּאשׁ מִבֵּית רָשָׁע עָרוֹת יְסוֹד עַד צַוָּאר סֶלָה</span>;
+      Refrain und Strophe I. ·
+      <strong>Pijut „Omez Gevurotecha hiflata baPesach"</strong> (Elazar Kalir; Kehrvers
+      <em>„va'amartem zevach pesach"</em>, zweite Sedernacht) — die Zeile
+      <span class="sources-he">רֹאשׁ מִבֵּית רָשָׁע מָחַצְתָּ בְּעֵץ חֲמִשִּׁים בַּפֶּסַח</span> deutet
+      Chavakuk 3:13 auf Hamans Sturz am Galgen; verankert den Vers in der Erlösungsliturgie
+      <em>(überprüft anhand des Pijut-Textes)</em>. ·
+      <strong>Schemot 12:29</strong> — die Schlagung der Erstgeburt <em>„vom Thron … bis zur Grube"</em>;
+      Parallele der vertikalen, vollständigen Reichweite (<span class="sources-he">עַד צַוָּאר</span>). ·
+      <strong>Radak &amp; Malbim zu Chavakuk 3:13</strong> — <em>rosch mibeit rascha</em> als Anführer
+      des frevlerischen Reiches (Gog); die Vernichtung „von Fundament bis Nacken" als vollständig. ·
+      <strong>Rosch haSchana 25a</strong> — <span class="sources-he">דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם</span>,
+      das Zeichen (<em>simana</em>), das R. Jehuda haNasi an R. Chijja sandte; nach Raschi auf
+      Tehillim 89:37 (die Davidsdynastie „wie der Mond, ewig bestehend"). Grundlage der Brücke. ·
+      <strong>Rambam, 13 Glaubensgrundsätze (12)</strong> und <strong>Jeschajahu 59:20</strong>
+      (<span class="sources-he">וּבָא לְצִיּוֹן גּוֹאֵל</span>) — Mashiach ben David / die Erlösung. ·
+      <strong>Jeschajahu 52:8</strong> (<span class="sources-he">בְּשׁוּב ה׳ צִיּוֹן</span>) und die
+      <strong>Amida</strong> (<span class="sources-he">בְּשׁוּבְךָ לְצִיּוֹן</span>) — Grundlage von
+      <span class="sources-he">וְשָׁב אֲדֹנָי לְצִיּוֹן</span>. ·
+      <strong>Daniel 9:19</strong> (<span class="sources-he">אֲדֹנָי שְׁמָעָה … אֲדֹנָי הַקְשִׁיבָה</span>) —
+      Nusach der Einleitung (Selichot).
+      <br><br>
+      <em>Präzisierung:</em> Die gesungene Zeile <span class="sources-he">בְּזַרְעֲךָ הַגְּדוֹלָה</span>
+      meint dem Sinn nach <em>„mit deinem großen Arm"</em> —
+      <span class="sources-he">בִּזְרוֹעֲךָ הַגְּדוֹלָה</span> (vgl. <span class="sources-he">בִּזְרוֹעַ נְטוּיָה</span>,
+      Schemot 6:6).&nbsp;<br><br>
+      <strong>שֵׁם קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht durchgehend für das
+      Tetragramme<span style="font-size: 0.88em;">.</span></p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

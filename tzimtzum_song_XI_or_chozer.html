@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הָאוֹר הַחוֹזֵר — שִׁיר י״א · מִמַּלְכוּת לְכֶתֶר</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #080608;
+    --bg-warm:     #100c10;
+    --layer:       #1a141a;
+    --amber:       #c8820a;
+    --amber-lt:    #e8aa3a;
+    --amber-dim:   #5a3c06;
+    --emerald:     #2a6644;
+    --emerald-lt:  #4a9868;
+    --rose:        #a84858;
+    --rose-lt:     #d07888;
+    --ivory:       #e8e0d0;
+    --ivory-dim:   #9a9080;
+    --ivory-lt:    #f5f0e8;
+    --copper:      #b06030;
+    --copper-lt:   #d08858;
+    --text-body:   #c0b4a0;
+    --parchment:   #ddd0b8;
+    --keter:       #e8e8f8;
+    --malchut:     #702020;
+
+    /* Circle color — both poles unified */
+    --circle:      #c8c0e0;   /* silver-violet: Keter light meeting Malchut */
+    --circle-dim:  #48406a;
+    --circle-lt:   #e0d8f8;
+    --circle-glow: rgba(200,192,224,0.18);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ivory);
+    font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ── CIRCULAR / BOTH-POLES ATMOSPHERE ── */
+  body::before {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(ellipse at 50%   0%, rgba(200,192,224,0.16) 0%, transparent 50%),
+      radial-gradient(ellipse at 15%  30%, rgba(232,232,248,0.06) 0%, transparent 40%),
+      radial-gradient(ellipse at 85%  30%, rgba(112,32,32,0.07)   0%, transparent 40%),
+      radial-gradient(ellipse at 50% 100%, rgba(200,192,224,0.12) 0%, transparent 50%);
+  }
+
+  /* dual-pole starfield: silver (Keter) + deep red (Malchut) */
+  body::after {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(1px 1px at 22% 10%, rgba(232,232,248,.60) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55%  5%, rgba(232,232,248,.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 78% 14%, rgba(232,232,248,.50) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 38%, rgba(200,192,224,.38) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 42%, rgba(200,192,224,.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 44% 55%, rgba(232,232,248,.30) 0%, transparent 100%),
+      radial-gradient(2px 2px at 66% 85%, rgba(112,32,32,.55)   0%, transparent 100%),
+      radial-gradient(2px 2px at 33% 90%, rgba(112,32,32,.45)   0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 7% 70%, rgba(200,192,224,.40) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 92% 75%, rgba(232,232,248,.35) 0%, transparent 100%);
+  }
+
+  /* ── STICKY NAV ── */
+  .nav-bar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,6,8,0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200,192,224,0.18);
+    padding: 0 36px;
+    display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-bar::-webkit-scrollbar { display:none; }
+
+  .nav-logo {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900; font-size: 1.05em;
+    color: var(--circle-lt);
+    letter-spacing: 0.1em;
+    padding: 15px 22px 15px 0;
+    border-right: 1px solid rgba(200,192,224,0.25);
+    margin-right: 18px;
+    white-space: nowrap; flex-shrink: 0;
+    direction: rtl;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 8px; flex: 1; }
+
+  .nav-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.78em;
+    color: var(--ivory-dim);
+    text-decoration: none;
+    padding: 15px 12px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-link:hover { color: var(--circle-lt); border-bottom-color: var(--circle); }
+  .nav-link.active { color: var(--circle-lt); border-bottom-color: var(--circle); }
+
+  /* ── WRAPPER ── */
+  .wrapper {
+    position: relative; z-index: 1;
+    max-width: 920px; margin: 0 auto;
+    padding: 80px 44px 130px;
+  }
+
+  /* ── SONG HEADER ── */
+  .song-header {
+    text-align: center;
+    margin-bottom: 64px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(200,192,224,0.15);
+    position: relative;
+  }
+
+  /* rotating circle ornament */
+  .circle-ornament {
+    width: 72px; height: 72px;
+    border: 1px solid rgba(200,192,224,0.3);
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    animation: spin-slow 30s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .circle-ornament::before {
+    content: '';
+    position: absolute; inset: 6px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,192,224,0.15);
+  }
+
+  .circle-dot-top {
+    position: absolute; top: -3px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--keter);
+    box-shadow: 0 0 8px var(--keter);
+  }
+
+  .circle-dot-bottom {
+    position: absolute; bottom: -3px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--malchut);
+    box-shadow: 0 0 8px rgba(112,32,32,0.8);
+  }
+
+  .circle-inner-symbol {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.4em;
+    color: var(--circle);
+    opacity: 0.6;
+    animation: counter-spin 30s linear infinite;
+  }
+
+  @keyframes counter-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
+
+  .song-header::after {
+    content: '○';
+    position: absolute; bottom: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg); padding: 0 14px;
+    font-size: 1.0em; color: var(--circle);
+  }
+
+  .sefira-badge {
+    display: inline-block; margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.75em;
+    letter-spacing: 0.18em; padding: 4px 20px;
+    border: 1px solid rgba(200,192,224,0.35);
+    color: var(--circle-lt);
+    opacity: 0.9;
+  }
+
+  .song-sefira-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.35em; font-weight: 700;
+    direction: rtl; margin-bottom: 6px;
+    color: var(--circle);
+    opacity: 0.75;
+  }
+
+  .song-title-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3.2em; font-weight: 900;
+    color: var(--ivory-lt); direction: rtl;
+    margin-bottom: 10px; letter-spacing: 0.04em;
+    text-shadow:
+      0 0 40px rgba(200,192,224,0.3),
+      0 0 80px rgba(200,192,224,0.1);
+  }
+
+  .song-subtitle-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.45em; font-weight: 400;
+    direction: rtl; margin-bottom: 12px;
+    color: var(--circle);
+    opacity: 0.65;
+  }
+
+  .song-title-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.1em;
+    color: var(--ivory-dim); margin-bottom: 14px;
+    letter-spacing: 0.04em;
+  }
+
+  .song-source {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.82em; color: var(--circle-lt);
+    letter-spacing: 0.08em; opacity: 0.6;
+    line-height: 1.8;
+  }
+
+  /* ── CONCEPT BLOCK ── */
+  .concept-block {
+    background: linear-gradient(135deg, rgba(200,192,224,0.06), rgba(8,6,8,0.85));
+    border: 1px solid rgba(200,192,224,0.18);
+    border-left: 3px solid var(--circle);
+    padding: 28px 36px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .concept-block::before {
+    content: 'הֶקְשֵׁר מִקַּבָּלִי';
+    position: absolute; top: -11px; right: 22px;
+    background: var(--bg); padding: 0 12px;
+    font-size: 0.68em; color: var(--circle-lt);
+    letter-spacing: 0.18em;
+    font-family: 'Frank Ruhl Libre', serif;
+    opacity: 0.8;
+  }
+
+  .concept-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.05em; font-weight: 700;
+    color: var(--circle-lt);
+    direction: rtl; text-align: right;
+    margin-bottom: 12px;
+  }
+
+  .concept-body {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.0em; line-height: 1.95;
+    color: var(--text-body);
+    direction: ltr;
+  }
+
+  .concept-terms {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px solid rgba(200,192,224,0.1);
+    direction: rtl;
+  }
+
+  .concept-term {
+    text-align: center;
+  }
+
+  .concept-term-he {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.15em; font-weight: 700;
+    color: var(--circle-lt);
+    display: block; margin-bottom: 2px;
+  }
+
+  .concept-term-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.78em;
+    color: var(--ivory-dim); display: block;
+  }
+
+  /* ── SECTION BLOCKS ── */
+  .s-block { margin-bottom: 44px; }
+
+  .s-label {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .s-label-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.68em;
+    color: var(--circle-lt); letter-spacing: 0.22em;
+    text-transform: uppercase; white-space: nowrap;
+    opacity: 0.8;
+  }
+
+  .s-label-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(200,192,224,0.25), transparent);
+  }
+
+  .stage-dir {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.8em;
+    color: var(--ivory-dim);
+    border-left: 2px solid rgba(200,192,224,0.25);
+    padding-left: 14px; margin-bottom: 16px;
+    opacity: 0.7; direction: ltr;
+  }
+
+  /* lyrics */
+  .lyric-block { direction: rtl; text-align: right; margin-bottom: 14px; }
+
+  .l-line {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.58em; font-weight: 400;
+    line-height: 2.05; color: var(--ivory-lt);
+    display: block; letter-spacing: 0.02em;
+  }
+
+  .l-line.key {
+    color: var(--circle-lt);
+    font-weight: 700; font-size: 1.76em;
+    text-shadow: 0 0 24px rgba(200,192,224,0.2);
+  }
+
+  .l-line.echo {
+    font-size: 1.22em;
+    color: var(--circle);
+    font-style: italic;
+    padding-right: 26px;
+    opacity: 0.75;
+  }
+
+  .l-de {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.9em;
+    color: var(--ivory-dim); line-height: 1.8;
+    direction: ltr; text-align: left;
+    border-left: 2px solid var(--circle);
+    padding-left: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+
+  /* section boxes */
+  .refrain-box {
+    background: linear-gradient(135deg, rgba(200,192,224,0.07), rgba(16,12,16,0.75));
+    border: 1px solid rgba(200,192,224,0.2);
+    border-left: 3px solid var(--circle);
+    padding: 26px 34px; margin-bottom: 14px;
+  }
+
+  .bridge-box {
+    background: linear-gradient(135deg, rgba(42,102,68,0.07), rgba(8,6,8,0.82));
+    border: 1px solid rgba(42,102,68,0.2);
+    border-left: 3px solid var(--emerald);
+    padding: 26px 34px; margin-bottom: 14px;
+  }
+
+  .climax-box {
+    background: linear-gradient(135deg, rgba(200,192,224,0.10), rgba(112,32,32,0.08), rgba(16,12,16,0.8));
+    border: 1px solid rgba(200,192,224,0.25);
+    border-left: 3px solid var(--circle-lt);
+    padding: 26px 34px; margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .climax-box::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(200,192,224,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .outro-box {
+    background: rgba(8,6,8,0.7);
+    border: 1px solid rgba(200,192,224,0.1);
+    border-left: 2px solid rgba(200,192,224,0.2);
+    padding: 20px 34px; margin-bottom: 14px;
+  }
+
+  /* ── CIRCLE DIAGRAM ── */
+  .circle-diagram {
+    display: flex; justify-content: center;
+    margin: 56px 0;
+  }
+
+  .circle-svg-wrap {
+    width: 220px; height: 220px;
+    position: relative;
+  }
+
+  .circle-svg-wrap svg {
+    width: 100%; height: 100%;
+    overflow: visible;
+  }
+
+  /* ── DIVIDER ── */
+  .ornament-div {
+    text-align: center; color: var(--ivory-dim);
+    opacity: 0.3; margin: 52px 0;
+    font-size: 0.85em; letter-spacing: 0.5em;
+  }
+
+  /* ── SCENARIOS ── */
+  .scenarios-wrap { margin-top: 64px; }
+
+  .scenarios-title {
+    text-align: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.05em; color: var(--circle-lt);
+    letter-spacing: 0.16em; margin-bottom: 36px;
+    opacity: 0.8; padding-bottom: 18px;
+    border-bottom: 1px solid rgba(200,192,224,0.1);
+    direction: rtl;
+  }
+
+  .sc-card { margin-bottom: 34px; border: 1px solid; position: relative; overflow: hidden; }
+  .sc-bar { height: 3px; width: 100%; }
+  .sc-inner { padding: 24px 30px 30px; }
+  .sc-num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.7em; letter-spacing: 0.2em; opacity: 0.65; margin-bottom: 6px; }
+  .sc-title-he { font-family: 'Frank Ruhl Libre', serif; font-size: 1.28em; font-weight: 700; direction: rtl; text-align: right; margin-bottom: 2px; }
+  .sc-title-de { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.84em; color: var(--ivory-dim); margin-bottom: 18px; direction: ltr; }
+  .sc-body { font-family: 'EB Garamond', serif; font-size: 1.02em; line-height: 1.88; color: var(--text-body); }
+  .sc-body p { margin-bottom: 11px; }
+  .sc-body p:last-child { margin-bottom: 0; }
+
+  .sc-moment {
+    display: flex; gap: 12px; align-items: flex-start;
+    margin: 13px 0; padding: 12px 16px;
+    background: rgba(0,0,0,0.25); border-left: 2px solid;
+  }
+  .sc-icon { font-size: 1.2em; flex-shrink: 0; margin-top: 2px; }
+  .sc-moment-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95em; line-height: 1.7; color: var(--ivory); }
+  .sc-moment-text strong { font-style: normal; font-weight: 600; }
+
+  .sc-1 { border-color: rgba(74,152,104,0.38); background: linear-gradient(135deg, rgba(42,102,68,0.1), rgba(8,6,8,0.95)); }
+  .sc-1 .sc-accent { color: var(--emerald-lt); } .sc-1 .sc-bar { background: var(--emerald-lt); } .sc-1 .sc-moment { border-left-color: var(--emerald); }
+
+  .sc-2 { border-color: rgba(200,130,10,0.35); background: linear-gradient(135deg, rgba(150,90,6,0.1), rgba(8,6,8,0.95)); }
+  .sc-2 .sc-accent { color: var(--amber-lt); } .sc-2 .sc-bar { background: var(--amber-lt); } .sc-2 .sc-moment { border-left-color: var(--amber); }
+
+  .sc-3 { border-color: rgba(200,192,224,0.35); background: linear-gradient(135deg, rgba(100,90,130,0.1), rgba(8,6,8,0.95)); }
+  .sc-3 .sc-accent { color: var(--circle-lt); } .sc-3 .sc-bar { background: var(--circle-lt); } .sc-3 .sc-moment { border-left-color: var(--circle); }
+
+  .sc-4 { border-color: rgba(168,72,88,0.38); background: linear-gradient(135deg, rgba(120,30,50,0.1), rgba(8,6,8,0.95)); }
+  .sc-4 .sc-accent { color: var(--rose-lt); } .sc-4 .sc-bar { background: var(--rose-lt); } .sc-4 .sc-moment { border-left-color: var(--rose); }
+
+  /* ── FOOTER ── */
+  .album-footer {
+    text-align: center; margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(200,192,224,0.12);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.88em;
+    color: var(--ivory-dim); line-height: 2;
+  }
+  .album-footer strong { font-weight: 600; color: var(--circle-lt); font-style: normal; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(18px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  .song-article { animation: fadeUp 0.55s ease both; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ NAVIGATION ══ -->
+<nav class="nav-bar">
+  <div class="nav-logo">עֵץ חַיִּים II — י״א</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#concept">הֶקְשֵׁר</a>
+    <a class="nav-link" href="#song">הַשִּׁיר</a>
+    <a class="nav-link" href="#scenarios">תַּרְחִישִׁים</a>
+    <span style="margin-left:auto; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.75em; color:var(--circle); opacity:0.7; padding:0 12px; white-space:nowrap;">
+      מַלְכוּת → כֶּתֶר · הָאִגּוּל הַנִּצְחִי
+    </span>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+<!-- ══════════════════════════════════════════ SONG HEADER ══ -->
+<article class="song-article" id="song">
+
+<header class="song-header">
+
+  <!-- rotating circle symbol -->
+  <div class="circle-ornament">
+    <div class="circle-dot-top"></div>
+    <div class="circle-dot-bottom"></div>
+    <span class="circle-inner-symbol">○</span>
+  </div>
+
+  <div class="sefira-badge">הַסְּפִירָה הַנִּסְתֶּרֶת — שִׁיר י״א · Lied XI</div>
+  <p class="song-sefira-he">הָאוֹר הַחוֹזֵר — מִמַּלְכוּת לְכֶתֶר</p>
+  <h2 class="song-title-he">הָאִגּוּל הַנִּצְחִי</h2>
+  <p class="song-subtitle-he">כֶּתֶר ↓ מַלְכוּת ↑ כֶּתֶר</p>
+  <p class="song-title-de">Der ewige Kreis — Das zurückkehrende Licht</p>
+  <p class="song-source">
+    מָקוֹר: עֵץ חַיִּים, שַׁעַר הַכְּלָלִים — אוֹר יָשָׁר וְאוֹר חוֹזֵר<br>
+    לִקּוּטֵי אֲמָרִים (תַּנְיָא), פ׳ נ״א — הָאִגּוּל וְהַיֹּשֶׁר<br>
+    Etz Chaim, Sha'ar HaKlalim · Tanya Kap. 51
+  </p>
+</header>
+
+<!-- ══════════════════════════════════════════ CONCEPT BLOCK ══ -->
+<div class="concept-block" id="concept">
+  <p class="concept-title">אוֹר יָשָׁר וְאוֹר חוֹזֵר — Direktes und kehrendes Licht</p>
+  <p class="concept-body">
+    In der lurianischen Kabbala fließt das göttliche Licht in zwei Richtungen zugleich:
+    <em>אוֹר יָשָׁר</em> (Or Yashar) — das direkte Licht — strömt von Keter herab bis Malchut,
+    von der Unendlichkeit in die Welt. Doch damit ist der Kreis nicht geschlossen.
+    <em>אוֹר חוֹזֵר</em> (Or Chozer) — das zurückkehrende Licht — steigt von Malchut zurück
+    zu Keter auf, wie ein Atemzug, der ausgeatmet und wieder eingeatmet wird.
+    Erst wenn beide Lichter sich treffen — das absteigende und das aufsteigende —
+    entsteht der vollständige <em>אִגּוּל</em> (Iggul), der ewige Kreis.
+    Das Album war erst dann vollständig, wenn Malchut zurück zu Keter führt.
+    Dieses Lied ist der Atem, der umkehrt.
+  </p>
+  <div class="concept-terms">
+    <div class="concept-term">
+      <span class="concept-term-he">אוֹר יָשָׁר</span>
+      <span class="concept-term-de">Or Yashar — direktes Licht ↓</span>
+    </div>
+    <div class="concept-term">
+      <span class="concept-term-he">אוֹר חוֹזֵר</span>
+      <span class="concept-term-de">Or Chozer — kehrendes Licht ↑</span>
+    </div>
+    <div class="concept-term">
+      <span class="concept-term-he">אִגּוּל</span>
+      <span class="concept-term-de">Iggul — der Kreis</span>
+    </div>
+    <div class="concept-term">
+      <span class="concept-term-he">יֹשֶׁר</span>
+      <span class="concept-term-de">Yosher — die Linie</span>
+    </div>
+    <div class="concept-term">
+      <span class="concept-term-he">דַּעַת</span>
+      <span class="concept-term-de">Da'at — die verborgene Synthese</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ CIRCLE DIAGRAM ══ -->
+<div class="circle-diagram" aria-hidden="true">
+  <div class="circle-svg-wrap">
+    <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <!-- outer circle -->
+      <circle cx="110" cy="110" r="100" stroke="rgba(200,192,224,0.2)" stroke-width="1"/>
+      <!-- inner circle -->
+      <circle cx="110" cy="110" r="68"  stroke="rgba(200,192,224,0.12)" stroke-width="1" stroke-dasharray="4 6"/>
+      <!-- descending arc (Or Yashar) -->
+      <path d="M110 12 A98 98 0 0 1 110 208" stroke="rgba(232,232,248,0.45)" stroke-width="1.5" stroke-dasharray="none"/>
+      <!-- ascending arc (Or Chozer) -->
+      <path d="M110 208 A98 98 0 0 1 110 12" stroke="rgba(112,32,32,0.55)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <!-- Keter dot (top) -->
+      <circle cx="110" cy="12" r="5" fill="#e8e8f8" opacity="0.9"/>
+      <text x="110" y="5" text-anchor="middle" font-family="Frank Ruhl Libre, serif" font-size="9" fill="rgba(232,232,248,0.7)" letter-spacing="1">כֶּתֶר</text>
+      <!-- Malchut dot (bottom) -->
+      <circle cx="110" cy="208" r="5" fill="#702020" opacity="0.85"/>
+      <text x="110" y="220" text-anchor="middle" font-family="Frank Ruhl Libre, serif" font-size="9" fill="rgba(112,32,32,0.7)" letter-spacing="1">מַלְכוּת</text>
+      <!-- arrows -->
+      <polygon points="113,28 107,28 110,14" fill="rgba(232,232,248,0.5)"/>
+      <polygon points="107,192 113,192 110,206" fill="rgba(112,32,32,0.6)"/>
+      <!-- Or Yashar label -->
+      <text x="132" y="95" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8.5" fill="rgba(232,232,248,0.45)" letter-spacing="0.5">אוֹר יָשָׁר ↓</text>
+      <!-- Or Chozer label -->
+      <text x="58" y="130" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8.5" fill="rgba(112,32,32,0.55)" letter-spacing="0.5">אוֹר חוֹזֵר ↑</text>
+      <!-- center Da'at symbol -->
+      <circle cx="110" cy="110" r="3" fill="rgba(200,192,224,0.4)"/>
+      <text x="110" y="106" text-anchor="middle" font-family="Frank Ruhl Libre, serif" font-size="8" fill="rgba(200,192,224,0.5)">דַּעַת</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ INTRO ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Intro]</span><div class="s-label-line"></div></div>
+  <p class="stage-dir">Gitarre — ganz langsam, ein einzelner Ton der aufwärts geht. Nicht herunter wie beim ersten Lied des Albums, sondern aufwärts — die Umkehr beginnt. Die Stille nach dem zehnten Lied hält noch einen Moment an. Dann setzt die Stimme ein, wie ein Atem der sich wendet.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ STROPHE 1 ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Strophe 1]</span><div class="s-label-line"></div></div>
+  <div class="lyric-block">
+    <span class="l-line">מַלְכוּת — הַמָּקוֹם שֶׁבּוֹ עָמַדְתִּי,</span>
+    <span class="l-line">הָאָרֶץ שֶׁבָּהּ קִבַּלְתִּי אֶת הָאוֹר —</span>
+    <span class="l-line">אַךְ הָאוֹר אֵינוֹ נֶעֱצָר כָּאן,</span>
+    <span class="l-line">הוּא חוֹזֵר — תָּמִיד חוֹזֵר — לִמְקוֹרוֹ.</span>
+  </div>
+  <p class="l-de">Malchut — der Ort, an dem ich stand, / Die Erde, auf der ich das Licht empfing — / Doch das Licht hält hier nicht an, / Es kehrt zurück — kehrt immer zurück — zu seiner Quelle.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ STROPHE 2 ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Strophe 2]</span><div class="s-label-line"></div></div>
+  <div class="lyric-block">
+    <span class="l-line">כְּנֶשֶׁם שֶׁיּוֹצֵא וְשָׁב פְּנִימָה,</span>
+    <span class="l-line">כְּגַל שֶׁמַּגִּיעַ לַחוֹף וְחוֹזֵר —</span>
+    <span class="l-line">כֵּן הָאוֹר יוֹרֵד מִכֶּתֶר לְמַלְכוּת,</span>
+    <span class="l-line">וּמִמַּלְכוּת — עוֹלֶה שׁוּב — לְמָרוֹם.</span>
+  </div>
+  <p class="l-de">Wie ein Atemzug, der hinausgeht und zurückkommt, / Wie eine Welle, die ans Ufer trifft und zurückweicht — / So steigt das Licht von Keter nach Malchut herab, / Und von Malchut — steigt es wieder auf — zum Höchsten.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ REFRAIN ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Refrain]</span><div class="s-label-line"></div></div>
+  <div class="refrain-box">
+    <div class="lyric-block">
+      <span class="l-line key">אוֹר יָשָׁר יוֹרֵד — אוֹר חוֹזֵר עוֹלֶה,</span>
+      <span class="l-line">וּבֵינֵיהֶם — הָאִגּוּל הַנִּצְחִי —</span>
+      <span class="l-line key">מַלְכוּת לְכֶתֶר — כֶּתֶר לְמַלְכוּת —</span>
+      <span class="l-line">וְהַמָּעְגָּל לֹא נִפְסָק לְעוֹלָם.</span>
+    </div>
+    <p class="l-de">Direktes Licht steigt herab — kehrendes Licht steigt auf, / Und dazwischen — der ewige Kreis — / Malchut zu Keter — Keter zu Malchut — / Und der Kreislauf hört niemals auf.</p>
+  </div>
+  <p class="stage-dir">Echo — leise, kreisend: <em>אוֹר יָשָׁר... אוֹר חוֹזֵר... אוֹר יָשָׁר... אוֹר חוֹזֵר...</em></p>
+</div>
+
+<!-- ══════════════════════════════════════════ STROPHE 3 ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Strophe 3 — Da'at: die verborgene Synthese]</span><div class="s-label-line"></div></div>
+  <div class="lyric-block">
+    <span class="l-line">יֵשׁ סְפִירָה נִסְתֶּרֶת — דַּעַת שְׁמָהּ,</span>
+    <span class="l-line">לֹא נִמְנֵית עִם הָעֶשֶׂר — וּבְכֻלָּן נוֹכַחַת —</span>
+    <span class="l-line">הִיא הָעֵד שֶׁהַמָּעְגָּל נִסְגָּר,</span>
+    <span class="l-line">שֶׁהַיֵּשׁ הוּא הָאַיִן — וְהָאַיִן — הַיֵּשׁ.</span>
+  </div>
+  <p class="l-de">Es gibt eine verborgene Sefira — Da'at ist ihr Name, / Nicht unter den Zehn gezählt — und doch in allen gegenwärtig — / Sie ist der Zeuge, dass der Kreis sich schließt, / Dass das Sein das Nichts ist — und das Nichts — das Sein.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ BRIDGE ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Bridge — Tanya Kap. 51: Iggul und Yosher]</span><div class="s-label-line"></div></div>
+  <div class="bridge-box">
+    <div class="lyric-block">
+      <span class="l-line">הָאִגּוּל אוֹמֵר: הַכֹּל שָׁוֶה —</span>
+      <span class="l-line">כֶּתֶר וּמַלְכוּת — אֶחָד הֵם לָאֵל,</span>
+      <span class="l-line">הַיֹּשֶׁר אוֹמֵר: יֵשׁ מַעְלָה וּמַטָּה,</span>
+      <span class="l-line">וּשְׁנֵיהֶם — אֶחָד — בְּסוֹד הַצִּמְצוּם.</span>
+    </div>
+    <p class="l-de">Der Kreis sagt: Alles ist gleich — / Keter und Malchut — sind Eines für Gott. / Die Linie sagt: Es gibt Oben und Unten, / Und beide — sind Eines — im Geheimnis des Tzimtzum.</p>
+  </div>
+  <p class="stage-dir">Tanya Kap. 51: Der Alter Rebbe unterscheidet zwischen dem zirkulären Modell (אִגּוּל — alle Welten gleich nah an Gott) und dem linearen Modell (יֹשֶׁר — gestufte Hierarchie). Beide sind wahr gleichzeitig — aus Gottes Sicht ist kein Punkt ferner als ein anderer; aus menschlicher Sicht gibt es Stufen. Das Lied hält beide Wahrheiten offen.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ REFRAIN 2 ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Refrain — Wiederholung, voller]</span><div class="s-label-line"></div></div>
+  <div class="refrain-box">
+    <div class="lyric-block">
+      <span class="l-line key">אוֹר יָשָׁר יוֹרֵד — אוֹר חוֹזֵר עוֹלֶה,</span>
+      <span class="l-line">וּבֵינֵיהֶם — הָאִגּוּל הַנִּצְחִי —</span>
+      <span class="l-line key">מַלְכוּת לְכֶתֶר — כֶּתֶר לְמַלְכוּת —</span>
+      <span class="l-line">וְהַמָּעְגָּל לֹא נִפְסָק לְעוֹלָם.</span>
+      <span class="l-line echo">(אוֹר יָשָׁר... חוֹזֵר... עוֹלֶה...)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ CLIMAX ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Klimax — הַשִּׁיר הָאַחֲרוֹן שֶׁסּוֹגֵר אֶת הָאַלְבּוּם]</span><div class="s-label-line"></div></div>
+  <div class="climax-box">
+    <div class="lyric-block">
+      <span class="l-line key">אֲדֹנָי — אַתָּה הָרִאשׁוֹן וְהָאַחֲרוֹן!</span>
+      <span class="l-line">כֶּתֶר וּמַלְכוּת — שְׁנֵי שְׁמוֹתֶיךָ לְחוֹד —</span>
+      <span class="l-line key">וְאַתָּה — בֵּין שְׁנֵיהֶם — הָאֶחָד!</span>
+      <span class="l-line">הָאִגּוּל הַנִּצְחִי — שִׁמְךָ לְעוֹלָם!</span>
+      <span class="l-line" style="margin-top:12px; font-size:1.3em; color:var(--circle); letter-spacing:0.1em;">כֶּתֶר ↓ מַלְכוּת ↑ כֶּתֶר ↓ מַלְכוּת ↑</span>
+      <span class="l-line echo">(אֶחָד... אֶחָד... הַמָּעְגָּל... אֶחָד...)</span>
+    </div>
+    <p class="l-de">Adonai — Du bist der Erste und der Letzte! / Keter und Malchut — zwei deiner Namen allein — / Und Du — zwischen beiden — der Eine! / Der ewige Kreis — dein Name für immer!</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ OUTRO ══ -->
+<div class="s-block">
+  <div class="s-label"><span class="s-label-text">[Outro — Schluss des Albums]</span><div class="s-label-line"></div></div>
+  <div class="outro-box">
+    <div class="lyric-block">
+      <span class="l-line echo">אוֹר יָשָׁר... אוֹר חוֹזֵר... אוֹר יָשָׁר...</span>
+      <span class="l-line echo" style="font-size:1.05em; margin-top:8px;">כֶּתֶר... מַלְכוּת... כֶּתֶר... מַלְכוּת...</span>
+      <span class="l-line echo" style="font-size:0.95em; margin-top:8px; opacity:0.5;">אֶחָד... אֶחָד... אָמֵן.</span>
+    </div>
+    <p class="stage-dir">Die Gitarre wiederholt dieselbe absteigende Phrase vom Intro des ersten Liedes des Albums — aber jetzt in der Umkehrung: aufsteigend. Der letzte Ton ist identisch mit dem allerersten Ton des gesamten Zyklus. Das Album ist ein Kreis. Der Hörer kann von vorne beginnen — und wird jedes Mal etwas Neues hören. <em>הָאִגּוּל הַנִּצְחִי.</em></p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ SCENARIOS ══ -->
+<div class="scenarios-wrap" id="scenarios">
+  <p class="scenarios-title">תַּרְחִישִׁים — Wie hebräisch-sprachige Hörer dieses Lied erleben</p>
+
+  <!-- SC 1 -->
+  <div class="sc-card sc-1">
+    <div class="sc-bar"></div>
+    <div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 1</p>
+      <p class="sc-title-he sc-accent">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</p>
+      <p class="sc-title-de">Der säkulare Israeli</p>
+      <div class="sc-body">
+        <p>Er hat das gesamte zweite Album gehört — zehn Lieder, zehn Sephirot, zehn theologische Positionen. Als das letzte Lied des Albums endete mit <em>אָמֵן</em>, glaubte er, es sei vorbei. Jetzt erklingt dieses Lied — und er versteht sofort: Es ist kein Abschluss. Es ist eine Rückkehr. Das erzeugt in ihm ein seltenes Gefühl: dass etwas, das er für abgeschlossen hielt, eigentlich erst jetzt vollständig wird.</p>
+        <div class="sc-moment">
+          <span class="sc-icon">🌀</span>
+          <span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כֶּתֶר וּמַלְכוּת — שְׁנֵי שְׁמוֹתֶיךָ לְחוֹד</em>. Krone und Königreich — zwei Namen desselben. Er denkt an Anfang und Ende — an Geburt und Tod — und begreift: vielleicht sind diese auch zwei Namen desselben.</span>
+        </div>
+        <p>Er hört die aufsteigende Gitarren-Phrase am Ende und erkennt sie als Umkehrung des Anfangs. Er startet Album I von vorne. Das Kreisen hat ihn erfasst.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SC 2 -->
+  <div class="sc-card sc-2">
+    <div class="sc-bar"></div>
+    <div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 2</p>
+      <p class="sc-title-he sc-accent">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</p>
+      <p class="sc-title-de">Der traditionell-religiöse Hörer</p>
+      <div class="sc-body">
+        <p>Er erkennt sofort: <em>אוֹר יָשָׁר</em> und <em>אוֹר חוֹזֵר</em> sind zentrale Konzepte der lurianischen Kabbala und des Tanya. Dass ein Song-Album diese Konzepte aufgreift — nicht als Lehre, sondern als Musik — überrascht ihn. Die Verbindung von Tanya Kap. 51 (Iggul und Yosher) mit dem Gesang gibt ihm einen neuen Zugang zu einem Text, den er in der Yeshiva hunderte Male gelernt hat.</p>
+        <div class="sc-moment">
+          <span class="sc-icon">📿</span>
+          <span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>הָאִגּוּל אוֹמֵר: הַכֹּל שָׁוֶה / הַיֹּשֶׁר אוֹמֵר: יֵשׁ מַעְלָה וּמַטָּה / וּשְׁנֵיהֶם — אֶחָד</em>. Die Bridge des Tanya — dass beide Modelle gleichzeitig wahr sind — wird für ihn beim Singen fühlbar, was beim Lernen allein nicht immer gelingt.</span>
+        </div>
+        <p>Er verwendet das Lied als Abschluss eines Schabbat-Tisches. Die Frage, die er stellt: „Was kehrt in deinem Leben gerade zurück?"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SC 3 -->
+  <div class="sc-card sc-3">
+    <div class="sc-bar"></div>
+    <div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 3</p>
+      <p class="sc-title-he sc-accent">הַקַּבָּלִיסְט / הַחֲסִידִי</p>
+      <p class="sc-title-de">Der Kabbalist / Chassidische Hörer</p>
+      <div class="sc-body">
+        <p>Für ihn vollendet dieses Lied das gesamte Projekt. Er hatte nach dem zehnten Lied — Malchut — gespürt, dass der Kreis nicht geschlossen war. Als er das elfte hört, nickt er langsam. Das Konzept des <em>אוֹר חוֹזֵר</em> ist die tiefste kabbalistisch-lurianische Aussage: Ohne das zurückkehrende Licht ist das direkte Licht unvollständig. Die Schöpfung ist nicht nur ein Abstieg — sie ist ein Kreislauf. Das Album ist theologisch korrekt abgeschlossen.</p>
+        <div class="sc-moment">
+          <span class="sc-icon">🔮</span>
+          <span class="sc-moment-text"><strong>Schlüsselmoment:</strong> Die Erwähnung von <em>דַּעַת</em> als verborgene elfte Sefira — das ist präzise lurianische Numerologie. Da'at tritt in Erscheinung, wenn Keter sich verbirgt; es ist das Bindeglied, das den Kreis schließt. Das Lied weiß, was es tut.</span>
+        </div>
+        <p>Er betrachtet beide Alben zusammen als vollständige lurianische Darstellung: Album I — der Schöpfungsweg von Ein Sof bis Tikkun. Album II — die Rezeptionsgeschichte durch die Sephirot. Lied XI — der Kreis, der das Ganze bindet. <em>תָּם וְנִשְׁלָם.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SC 4 -->
+  <div class="sc-card sc-4">
+    <div class="sc-bar"></div>
+    <div class="sc-inner">
+      <p class="sc-num sc-accent">SZENARIO 4</p>
+      <p class="sc-title-he sc-accent">הַלֹּא-דָּתִי הַשּׁוֹמֵעַ בְּמִקְרֶה</p>
+      <p class="sc-title-de">Der nicht-religiöse Zufallshörer</p>
+      <div class="sc-body">
+        <p>Er hat das Album nicht von Anfang an gehört. Er ist beim elften Lied eingestiegen — weil es zufällig lief, weil jemand es geteilt hat. Er versteht die meisten Begriffe nicht: <em>אוֹר יָשָׁר, אוֹר חוֹזֵר, אִגּוּל</em>. Aber das Bild versteht er: Etwas kommt herunter und steigt zurück auf. Wie ein Atemzug. Wie ein Herzschlag. Das ist kein religiöses Bild — das ist Physik, Biologie, Rhythmus.</p>
+        <div class="sc-moment">
+          <span class="sc-icon">🌬️</span>
+          <span class="sc-moment-text"><strong>Schlüsselmoment:</strong> <em>כְּנֶשֶׁם שֶׁיּוֹצֵא וְשָׁב פְּנִימָה</em> — Wie ein Atemzug, der hinausgeht und zurückkommt. Er atmet bewusst ein und aus. Zum ersten Mal in seinem Leben fühlt er seinen eigenen Atem als etwas, das eine Richtung hat — und umkehrt. Das ist genug.</span>
+        </div>
+        <p>Er fragt nicht nach dem Namen der Theologie. Er fragt nur: „Wer hat das geschrieben?" Nicht weil er religiös werden will. Sondern weil ihn jemand, den er nie getroffen hat, mit einem Atemzug erreicht hat.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /scenarios-wrap -->
+
+</article>
+
+<!-- ══════════════════════════════════════════ FOOTER ══ -->
+<footer class="album-footer">
+  <p><strong>הָאוֹר הַחוֹזֵר — שִׁיר י״א</strong></p>
+  <p>Das elfte Lied · Die Vollendung des ewigen Kreises</p>
+  <p>עֵץ חַיִּים, שַׁעַר הַכְּלָלִים · תַּנְיָא, פֶּרֶק נ״א · לוּרְיָאנִישֶׁה קַבָּלָה</p>
+  <p style="margin-top: 28px; font-size:1.1em; direction:rtl; color:var(--circle); opacity:0.6; letter-spacing:0.1em;">
+    כֶּתֶר ↓ חָכְמָה ↓ בִּינָה ↓ חֶסֶד ↓ גְּבוּרָה ↓ תִּפְאֶרֶת ↓ נֶצַח ↓ הוֹד ↓ יְסוֹד ↓ מַלְכוּת ↑ כֶּתֶר
+  </p>
+  <p style="margin-top:12px; font-size:0.78em; opacity:0.4;">
+    הָאִגּוּל הַנִּצְחִי — Der ewige Kreis
+  </p>
+</footer>
+
+</div><!-- /wrapper -->
+</body>
+</html>

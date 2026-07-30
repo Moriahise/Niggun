@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שִׁיר הַמַּעֲלוֹת · פִּיּוּט · מִמַּעֲמַקִּים</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   שִׁיר הַמַּעֲלוֹת — Schir haMaalot
+   Lied der Stufen · Tehillim 130 & die fünfzehn Stufen im Tempel
+   Aus der Tiefe zum Licht · תְּהוֹם → אוֹר · יה = 15
+   Tehom-Blau · Wasser · Gold des Aufstiegs · ein Hauch Violett (das Geheimnis)
+   ── פִּיּוּט · עֲלִיָּה ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#05090C; --deep:#08111A; --layer:#0E1C28; --card:#091622;
+
+  /* ── תְּהוֹם — die Tiefe (Wasser, Abgrund) ── */
+  --tehom:#1C5058; --tehom-lt:#3E8C8C; --wave:#4FA5A0; --wave-lt:#8FCFC4; --wave-vlt:#BEE6DE;
+  --tehom-dim:#0E2A30; --tehom-bdr:rgba(79,165,160,.30);
+
+  /* ── אוֹר / זָהָב — Gold des Aufstiegs, das erhabene Licht ── */
+  --gold:#C99A3A; --gold-lt:#E8BC6A; --gold-vlt:#F5E4B8;
+  --gold-dim:#4A3608;
+
+  /* ── סוֹד / שֵׁם — Violett des Geheimnisses (yud-he, nevuah) ── */
+  --viol:#7A5AB8; --viol-lt:#A088D0;
+
+  --sand:#e6dcc4; --sand-dim:#98906e;
+  --parch:#eee2c8; --parch-dim:#a89a78;
+  --ivory:#e6e0cc; --ivory-lt:#f4eed8; --ivory-dim:#847c60;
+  --silver:#bcc4c8; --silver-dim:#647078;
+  --text:#96a0a2;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(28,80,88,.48)   0%,transparent 58%),
+    radial-gradient(ellipse at 22% 82%,  rgba(79,165,160,.14)  0%,transparent 46%),
+    radial-gradient(ellipse at 50% 0%,   rgba(201,154,58,.16)  0%,transparent 52%),
+    radial-gradient(ellipse at 80% 24%,  rgba(232,188,106,.08) 0%,transparent 40%),
+    radial-gradient(ellipse at 16% 40%,  rgba(122,90,184,.07)  0%,transparent 42%),
+    radial-gradient(ellipse at 50% 54%,  rgba(5,9,12,.84)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%,rgba(245,228,184,.5) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 6%,rgba(232,188,106,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 16%,rgba(190,230,222,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 23% 40%,rgba(160,136,208,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 58%,rgba(143,207,196,.34) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 74%,rgba(79,165,160,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 78%,rgba(245,228,184,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(79,165,160,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 57% 30%,rgba(190,230,222,.28) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(79,165,160,.22);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--wave);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--gold-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(79,165,160,.45),0 0 150px rgba(201,154,58,.30);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:710px;margin:0 auto 30px;}
+.page-desc em{color:var(--wave-lt);font-style:italic;}
+.page-desc .gold{color:var(--gold-lt);font-style:italic;}
+
+/* ── AUFSTIEGS-KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(79,165,160,.24);padding:12px 26px;background:rgba(79,165,160,.05);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-deep{color:var(--wave-lt);border-color:var(--tehom-bdr);background:rgba(79,165,160,.09);}
+.chain-up{color:var(--gold-lt);border-color:rgba(201,154,58,.32);background:rgba(201,154,58,.08);}
+.chain-sep{color:var(--wave);opacity:.55;font-size:.7em;}
+
+/* ── STATIONEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:13px 15px;position:relative;background:rgba(5,9,12,.6);}
+.cyc-deep{border-color:rgba(79,165,160,.40);background:rgba(28,80,88,.14);}
+.cyc-steps{border-color:rgba(201,154,58,.34);background:rgba(201,154,58,.07);}
+.cyc-name{border-color:rgba(122,90,184,.32);background:rgba(122,90,184,.06);}
+.cyc-up{border-color:rgba(232,188,106,.34);background:rgba(232,188,106,.06);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-deep .cyc-num{color:var(--wave-lt);} .cyc-steps .cyc-num{color:var(--gold-lt);}
+.cyc-name .cyc-num{color:var(--viol-lt);} .cyc-up .cyc-num{color:var(--gold-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;display:block;}
+.cyc-deep .cyc-he{color:var(--wave-vlt);} .cyc-steps .cyc-he{color:var(--gold-vlt);}
+.cyc-name .cyc-he{color:rgba(160,136,208,.92);} .cyc-up .cyc-he{color:var(--gold-vlt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(122,90,184,.09),rgba(5,9,12,.85));
+  border:1px solid rgba(122,90,184,.26);border-left:4px solid var(--viol);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'חֲמֵשׁ עֶשְׂרֵה — Zur Zahl';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--viol-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.2em;font-weight:900;
+  color:var(--viol-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.1em;text-shadow:0 0 60px rgba(122,90,184,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--viol-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(28,80,88,.16),rgba(5,9,12,.85));
+  border:1px solid rgba(79,165,160,.30);border-left:4px solid var(--tehom-lt);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'הַכָּתוּב · Tehillim 130 · Sukka 53';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--wave-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--wave-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--wave-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(79,165,160,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(79,165,160,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(79,165,160,.09);border-color:rgba(79,165,160,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.9em;font-weight:700;color:var(--gold-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:52px;border:1px solid rgba(79,165,160,.14);
+  background:linear-gradient(180deg,rgba(14,28,40,.96) 0%,rgba(5,9,12,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--tehom),var(--wave),var(--gold),var(--viol),var(--gold),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(79,165,160,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gold-lt);border-right:1px solid rgba(79,165,160,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.34em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--gold-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--wave-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(79,165,160,.32);
+  padding:5px 14px;color:var(--wave-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(79,165,160,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 40px;}
+.section-block{margin:26px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(79,165,160,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--wave-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(79,165,160,.32);background:rgba(79,165,160,.05);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--gold-vlt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(79,165,160,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.7;font-size:.82em;}
+.wave{color:var(--wave-lt);}
+.gold{color:var(--gold-lt);}
+.viol{color:var(--viol-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(201,154,58,.12),rgba(122,90,184,.05));
+  border:1px solid rgba(201,154,58,.28);border-left:3px solid var(--gold);padding:22px 28px;}
+.refrain-box .lyrics-he .line:first-child{font-weight:700;color:var(--gold-vlt);}
+.bridge-box{background:linear-gradient(135deg,rgba(28,80,88,.16),transparent);
+  border:1px solid rgba(79,165,160,.28);border-left:3px solid var(--tehom-lt);padding:22px 28px;}
+.intro-lyr,.outro-lyr{text-align:center;padding:18px 0 6px;}
+.intro-lyr .lyrics-he,.outro-lyr .lyrics-he{direction:rtl;text-align:center;font-size:1.28em;
+  color:var(--gold-vlt);line-height:2.3;letter-spacing:.05em;text-shadow:0 0 30px rgba(201,154,58,.28);}
+.intro-lyr .de,.outro-lyr .de{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:8px;}
+.outro-lyr .gold{color:var(--gold-vlt);}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(79,165,160,.05);
+  border-left:2px solid rgba(79,165,160,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref.warm{background:rgba(201,154,58,.05);border-left-color:rgba(201,154,58,.30);}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--wave-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.piyut-ref.warm .piyut-ref-label{color:var(--gold-lt);}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(201,154,58,.07),rgba(5,9,12,.86));
+  border:1px solid rgba(201,154,58,.24);border-left:4px solid var(--gold);
+  padding:26px 32px;margin-top:16px;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-intro{font-family:'EB Garamond',serif;font-size:.9em;color:var(--text);line-height:1.85;margin-bottom:18px;}
+.perf-intro em{color:var(--wave-lt);font-style:italic;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;}
+.perf-item{border-left:2px solid rgba(79,165,160,.22);padding:2px 0 2px 16px;}
+.perf-item.wide{grid-column:1 / -1;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.88em;font-weight:700;
+  color:var(--gold-lt);display:block;margin-bottom:4px;}
+.perf-h .he{color:var(--wave-lt);font-weight:400;font-size:.9em;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.82;}
+.perf-t strong{color:var(--ivory);}
+.perf-t em{color:var(--wave-lt);font-style:italic;}
+
+/* ── NAMEN-BOX ── */
+.names-box{margin-top:16px;padding:22px 30px;border:1px solid rgba(79,165,160,.16);
+  background:rgba(79,165,160,.03);position:relative;}
+.names-box::before{content:'שְׁמוֹת קֹדֶשׁ · Heilige Namen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.6em;color:var(--wave-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.names-list{display:flex;flex-wrap:wrap;gap:8px 20px;direction:rtl;margin-bottom:12px;}
+.names-list span{font-family:'Frank Ruhl Libre',serif;font-size:1.02em;color:var(--gold-lt);
+  border:1px solid rgba(201,154,58,.22);padding:3px 12px;background:rgba(201,154,58,.05);}
+.names-note{font-family:'EB Garamond',serif;font-size:.86em;color:var(--text);line-height:1.8;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(79,165,160,.3),transparent);}
+.ornament-star{color:var(--wave);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--wave-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--wave-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(201,154,58,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(201,154,58,.20);
+  background:rgba(201,154,58,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr 1fr;}
+  .sec-nav{grid-template-columns:repeat(4,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(79,165,160,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(79,165,160,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 32px;}
+  .perf-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">תְּהִלִּים ק״ל · Die fünfzehn Stufen · für Stimme &amp; Gitarre</div>
+    <div class="page-title-he">שִׁיר הַמַּעֲלוֹת</div>
+    <div class="page-title-de">Schir haMaalot — Lied der Stufen / des Aufstiegs</div>
+    <p class="page-desc">
+      Fünfzehn <em>Ma'alot</em> — fünfzehn „Stufen" und fünfzehn „Aufstiege" zugleich: die fünfzehn
+      Stufen im Tempel, auf denen die Leviten sangen, die fünfzehn <em>Schir-haMaalot</em>-Psalmen,
+      und die fünfzehn Lieder, mit denen David die Wasser der Tiefe bändigte. Das Lied steigt vom
+      Ruf <span class="gold">aus den Tiefen</span> (<em>mimaamakim</em>) über all diese Stufen empor —
+      <span class="gold">bis zum erhabenen Licht</span> und heim.
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-deep">מִמַּעֲמַקִּים</span><span class="chain-sep">↑</span>
+      <span class="chain-item chain-deep">חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת</span><span class="chain-sep">↑</span>
+      <span class="chain-item chain-up">יוּד-הֵא</span><span class="chain-sep">↑</span>
+      <span class="chain-item chain-up">עוֹלִים הַבַּיְתָה</span>
+    </div>
+  </div>
+
+  <!-- ══ STATIONEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-deep">
+      <span class="cyc-num">Die Tiefe</span>
+      <span class="cyc-he">מִמַּעֲמַקִּים</span>
+      <span class="cyc-de">Ruf aus dem Abgrund (Ps 130)</span>
+    </div>
+    <div class="cyc cyc-steps">
+      <span class="cyc-num">Die Stufen</span>
+      <span class="cyc-he">חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת</span>
+      <span class="cyc-de">im Tempel · die Leviten singen</span>
+    </div>
+    <div class="cyc cyc-name">
+      <span class="cyc-num">Der Name · das Geheimnis</span>
+      <span class="cyc-he">יה — הַתְּהוֹם</span>
+      <span class="cyc-de">David &amp; die Wasser (Sukka 53)</span>
+    </div>
+    <div class="cyc cyc-up">
+      <span class="cyc-num">Der Aufstieg</span>
+      <span class="cyc-he">הָאוֹר הַנֶּעֱלֶה</span>
+      <span class="cyc-de">aus der Finsternis zum Licht, heim</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: FÜNFZEHN ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">יה = 15</span>
+    <p class="gloss-de">
+      Alles hängt an der <strong>Fünfzehn</strong>. Fünfzehn Stufen führten im Tempel vom Frauenvorhof
+      hinauf, <em>„entsprechend den fünfzehn Schir-haMaalot in den Psalmen, auf denen die Leviten im
+      Gesang standen"</em> (Mischna Middot 2:5; Sukka 5:4). Und fünfzehn ist der Zahlenwert des Namens
+      <span class="gloss-he">יה</span> (Jud = 10, He = 5).
+      <br><br>
+      Als David die Wasser der Tiefe mit einem Namen auf einer Scherbe bändigte, war es — nach dem
+      <strong>Maharscha</strong> (zu Sukka 53) — gerade der Name <span class="gloss-he">יה</span>,
+      dessen Wert fünfzehn ist, der mit der Enderlösung verbunden wird. Darum singt der Refrain:
+      <span class="gloss-he">יוּד-הֵא — שֵׁם הַנִּגְלֶה · חֲמֵשׁ עֶשְׂרֵה — סוֹד הַנְּבוּאָה</span>.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: PSALM 130 & SUKKA 53 ══ -->
+  <div class="intro-box">
+    <div class="ib-he">שִׁיר הַמַּעֲלוֹת · מִמַּעֲמַקִּים קְרָאתִיךָ ה׳ · אֲדֹנָי שִׁמְעָה בְקוֹלִי</div>
+    <div class="ib-src">תְּהִלִּים ק״ל:א׳–ב׳</div>
+    <p class="ib-de">
+      Der Rahmen des Liedes ist <strong>Psalm 130</strong> — selbst einer der fünfzehn
+      <em>Schir-haMaalot</em> (Tehillim 120–134). Sein Kern aber ist eine Erzählung aus
+      <strong>Sukka 53a–b</strong>: als David die Gruben (<em>schitin</em>) des Tempelaltars grub, stieg
+      der <em>Tehom</em> empor und drohte, die Welt zu überfluten. David schrieb — nach Ahitofels Rat
+      (a fortiori von der <em>Sota</em>, wo der Name für den Frieden ausgelöscht wird, Bamidbar 5) —
+      den Gottesnamen auf eine Scherbe und warf sie in die Tiefe; die Wasser sanken zu tief, und da
+      <strong>sang David die fünfzehn Ma'alot</strong> und hob sie zurück auf das rechte Maß.
+      <br><br>
+      Und noch eine Fünfzehn klingt an: schon die Wasser der Flut stiegen
+      <em>„fünfzehn Ellen über die Berge"</em> (Bereschit 7:20). Zwei Fluten, ein Maß — und über beiden
+      der Aufstieg des Gesangs.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Str. I</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Str. II</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">בַּיִת ג</span><span class="sn-de">Str. III</span></a>
+    <a class="sec-nav-item" href="#p8"><span class="sn-num">VII</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Schluss</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">מִמַּעֲמַקִּים ↑ אוֹר</span>ק״ל</div>
+      <div class="song-meta">
+        <span class="sefira-badge">חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת · יה</span>
+        <span class="maqam-badge">Solo voice &amp; guitar · rising, step by step · ppp → f</span>
+        <span class="song-title-he">שִׁיר הַמַּעֲלוֹת</span>
+        <span class="song-title-de">Lied der Stufen · aus der Tiefe zum Licht</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · Tehillim 130 · Sukka 53</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · PETICHA -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · פְּתִיחָה — Eröffnung · aus der Tiefe, ppp</div>
+        <div class="intro-lyr">
+          <div class="lyrics-he">
+            מִמַּעֲמַקִּים קְרָאתִיךָ, אֲדֹנָי,<br>
+            מִן הַתְּהוֹמוֹת יַעֲלֶה קוֹלִי.
+            <span class="de">Aus den Tiefen rufe ich Dich, Adonai — aus den Abgründen steigt meine Stimme empor.</span>
+          </div>
+        </div>
+        <div class="piyut-ref warm">
+          <span class="piyut-ref-label">Quelle</span>
+          „שִׁיר הַמַּעֲלוֹת מִמַּעֲמַקִּים קְרָאתִיךָ ה׳" — תְּהִלִּים ק״ל:א׳, אֶחָד מֵחֲמֵשׁ עֶשְׂרֵה שִׁירֵי הַמַּעֲלוֹת (ק״כ–קל״ד).
+        </div>
+      </div>
+
+      <!-- II · BAYIT ALEF -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · בֵּית א׳ — Strophe I · die fünfzehn Stufen im Tempel</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line gold">חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת בַּמִּקְדָּשׁ,</span>
+            <span class="line">עָלָה הַלֵּוִי בְּשִׁירָה וּבְזִמְרָה.</span>
+            <span class="line">מֵעֶזְרַת נָשִׁים לְעֶזְרַת יִשְׂרָאֵל,</span>
+            <span class="line viol">בְּכָל מַדְרֵגָה — שְׁכִינָה שָׁרָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line gold">Fünfzehn Stufen im Heiligtum —</span>
+            <span class="line">der Levit stieg hinauf mit Lied und Gesang.</span>
+            <span class="line">Vom Frauenvorhof zum Vorhof Israels,</span>
+            <span class="line viol">auf jeder Stufe — sang die Schechina.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת יוֹרְדוֹת מֵעֶזְרַת יִשְׂרָאֵל לְעֶזְרַת נָשִׁים, כְּנֶגֶד ט״ו שִׁירֵי הַמַּעֲלוֹת, שֶׁעֲלֵיהֶן הַלְוִיִּם עוֹמְדִין בְּשִׁיר — מִשְׁנָה מִדּוֹת ב׳:ה׳; סֻכָּה ה׳:ד׳. (בַּשִּׁיר: הָעֲלִיָּה כְּמוֹטִיב.)
+        </div>
+      </div>
+
+      <!-- III · PIZMON -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · פִּזְמוֹן — Refrain · Lied des Aufstiegs</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שִׁיר הַמַּעֲלוֹת, שִׁיר הָעֲלִיָּה,</span>
+              <span class="line viol">יוּד-הֵא — שֵׁם הַנִּגְלֶה.</span>
+              <span class="line">חֲמֵשׁ עֶשְׂרֵה — סוֹד הַנְּבוּאָה,</span>
+              <span class="line gold">מִן הַשֹּׁפֶל עַד הָאוֹר הַנֶּעֱלֶה.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Lied der Stufen, Lied des Aufstiegs,</span>
+              <span class="line viol">Jud-He — der offenbarte Name.</span>
+              <span class="line">Fünfzehn — Geheimnis der Prophetie,</span>
+              <span class="line gold">von der Niedrigkeit bis zum erhabenen Licht.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref warm">
+          <span class="piyut-ref-label">Quelle</span>
+          יה — גִּימַטְרִיָּה חֲמֵשׁ עֶשְׂרֵה (י=10, ה=5); הַשֵּׁם שֶׁכָּתַב דָּוִד עַל הַחֶרֶס — מַהַרְשָׁ״א לְסֻכָּה נ״ג, קָשׁוּר לַגְּאֻלָּה.
+        </div>
+      </div>
+
+      <!-- IV · BAYIT BET -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · בֵּית ב׳ — Strophe II · die Wasser der Flut</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line wave">מֵי הַמַּבּוּל עָלוּ חֲמֵשׁ עֶשְׂרֵה,</span>
+            <span class="line wave">עַל רָאשֵׁי הָרִים מַיִם שְׁטָפָה.</span>
+            <span class="line">אַךְ בְּשֵׁם אֲדֹנָי עָמְדוּ הַגַּלִּים,</span>
+            <span class="line gold">וְשָׁב הַמַּיִם לְמָקוֹם הַבְּרָאָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line wave">Die Wasser der Flut stiegen fünfzehn [Ellen],</span>
+            <span class="line wave">über die Gipfel der Berge strömte das Wasser.</span>
+            <span class="line">Doch im Namen Adonais standen die Wogen,</span>
+            <span class="line gold">und das Wasser kehrte zum Ort der Schöpfung zurück.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם" — בְּרֵאשִׁית ז׳:כ׳ (מֵי הַמַּבּוּל עַל רָאשֵׁי הֶהָרִים).
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פִּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שִׁיר הַמַּעֲלוֹת, שִׁיר הָעֲלִיָּה,</span>
+              <span class="line viol">יוּד-הֵא — שֵׁם הַנִּגְלֶה.</span>
+              <span class="line">חֲמֵשׁ עֶשְׂרֵה — סוֹד הַנְּבוּאָה,</span>
+              <span class="line gold">מִן הַשֹּׁפֶל עַד הָאוֹר הַנֶּעֱלֶה.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Lied der Stufen, Lied des Aufstiegs,</span>
+              <span class="line viol">Jud-He — der offenbarte Name.</span>
+              <span class="line">Fünfzehn — Geheimnis der Prophetie,</span>
+              <span class="line gold">von der Niedrigkeit bis zum erhabenen Licht.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- V · GESCHER -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · גֶּשֶׁר — Brücke · David, die Scherbe und die Tiefe</div>
+        <div class="instr-note">Low and held; then, as the waters return, the melody climbs — fifteen small steps toward the light.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">דָּוִד כָּתַב שֵׁם אֲדֹנָי עַל הַחֶרֶשׂ,</span>
+              <span class="line wave">וְהִשְׁלִיכוֹ אֶל תְּהוֹם הַגָּדוֹשׁ.</span>
+              <span class="line">וּבְשׁוּב הַמַּיִם — שָׁר חֲמֵשׁ עֶשְׂרֵה,</span>
+              <span class="line gold">וּבַשִּׁיר — עָלָה מִן הַחֹשֶׁךְ לָאוֹר.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">David schrieb den Namen Adonais auf die Scherbe</span>
+              <span class="line wave">und warf sie in die überströmende Tiefe.</span>
+              <span class="line">Und als das Wasser zurückkehrte — sang er die fünfzehn,</span>
+              <span class="line gold">und im Lied — stieg er aus der Finsternis zum Licht.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          כְּרִיַּת הַשִּׁיתִין, הַתְּהוֹם, כְּתִיבַת הַשֵּׁם עַל הַחֶרֶס וַאֲמִירַת ט״ו הַמַּעֲלוֹת — סֻכָּה נ״ג ע״א–ע״ב (עַל פִּי עֲצַת אֲחִיתֹפֶל; קַל וָחֹמֶר מִסּוֹטָה, בְּמִדְבַּר ה׳).
+        </div>
+      </div>
+
+      <!-- VI · BAYIT GIMEL -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · בֵּית ג׳ — Strophe III · so auch wir</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כֵּן אֲנַחְנוּ — בְּשֹׁפֶל לִבֵּנוּ</span>
+            <span class="line">קוֹרְאִים אֵלֶיךָ מִן הַמַּעֲמַקִּים.</span>
+            <span class="line viol">בְּכָל מַעְלָה וּמַעְלָה — מִתְגַּלֶּה,</span>
+            <span class="line gold">בְּשִׁיר אֶחָד — בֵּין הָאֲנָשִׁים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">So auch wir — in der Niedrigkeit unseres Herzens</span>
+            <span class="line">rufen wir zu Dir aus den Tiefen.</span>
+            <span class="line viol">Auf jeder Stufe und Stufe — offenbarst Du Dich,</span>
+            <span class="line gold">in einem einzigen Lied — unter den Menschen.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZMON MUGDAL -->
+      <div class="section-block">
+        <div class="section-label">פִּזְמוֹן מוּגְדָּל — Erweiterter Refrain</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שִׁיר הַמַּעֲלוֹת, שִׁיר הָעֲלִיָּה,</span>
+              <span class="line viol">יוּד-הֵא — שֵׁם הַנִּגְלֶה.</span>
+              <span class="line">חֲמֵשׁ עֶשְׂרֵה — סוֹד הַנְּבוּאָה,</span>
+              <span class="line gold">מִן הַשֹּׁפֶל עַד הָאוֹר הַנֶּעֱלֶה.</span>
+              <span class="line" style="margin-top:10px;display:block;">אֲדֹנָי — שְׁמַע קוֹלֵנוּ,</span>
+              <span class="line">אֲדֹנָי — חַנֵּנוּ וַעֲנֵנוּ.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Lied der Stufen, Lied des Aufstiegs,</span>
+              <span class="line viol">Jud-He — der offenbarte Name.</span>
+              <span class="line">Fünfzehn — Geheimnis der Prophetie,</span>
+              <span class="line gold">von der Niedrigkeit bis zum erhabenen Licht.</span>
+              <span class="line" style="margin-top:10px;display:block;">Adonai — höre unsere Stimme,</span>
+              <span class="line">Adonai — sei uns gnädig und antworte uns.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref warm">
+          <span class="piyut-ref-label">Quelle</span>
+          „אֲדֹנָי שִׁמְעָה בְקוֹלִי" — תְּהִלִּים ק״ל:ב׳; נֻסַּח בַּקָּשָׁה (סְלִיחוֹת).
+        </div>
+      </div>
+
+      <!-- VII · SIJUM -->
+      <div class="section-block" id="p8">
+        <div class="section-label">VII · סִיּוּם — Schluss · heim, hinauf</div>
+        <div class="outro-lyr">
+          <div class="lyrics-he">
+            מִמַּעֲמַקִּים קְרָאתִיךָ, אֲדֹנָי —<br>
+            <span class="gold">חֲמֵשׁ עֶשְׂרֵה — עוֹלִים הַבַּיְתָה.</span>
+            <span class="de">Aus den Tiefen rufe ich Dich, Adonai — fünfzehn — wir steigen hinauf, nach Hause.</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <!-- ══ AUFFÜHRUNGSHINWEISE ══ -->
+  <div class="perf-box">
+    <p class="perf-intro">
+      Das Lied ist eine <em>Leiter</em>: Es beginnt ganz unten, im Abgrund, und steigt Stufe um Stufe
+      empor, bis der Gesang „aus der Finsternis zum Licht" kommt und heimkehrt. Der ganze Vortrag sollte
+      diesen einen Aufstieg tragen — jede Wiederholung des Refrains eine Stufe höher als die vorige.
+    </p>
+    <div class="perf-grid">
+      <div class="perf-item wide">
+        <span class="perf-h">Dramatischer Bogen <span class="he">· הַמַּסָּע</span></span>
+        <p class="perf-t">Von <em>מִמַּעֲמַקִּים</em> (aus der Tiefe, allein, fast tonlos) über die fünfzehn
+        Stufen bis zum <strong>אוֹר הַנֶּעֱלֶה</strong> (dem erhabenen Licht). Der Wendepunkt ist der Gesher:
+        die Wasser sinken zu tief, dann hebt der Gesang sie zurück — ab hier klettert alles unaufhaltsam.
+        Der erweiterte Refrain ist der Gipfel; der Sijum kehrt still nach Hause zurück.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Dynamik <span class="he">· דִּינָמִיקָה</span></span>
+        <p class="perf-t">Petiacha &amp; Sijum: <strong>ppp</strong> — nur gehaucht, aus dem Abgrund.
+        Strophen: <strong>mp</strong>, getragen. Refrain: <strong>mf → f</strong>, mit jeder Wiederkehr
+        eine Stufe lauter. Strophe II (Wasser): anschwellen und wieder zurücknehmen. Erweiterter Refrain:
+        <strong>fff</strong> — dann unmittelbarer Abfall ins Pianissimo des Schlusses.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gitarre <span class="he">· גִּיטָרָה</span></span>
+        <p class="perf-t">Intro: einzelne, tiefe Töne, viel Nachhall — Wasser in der Dunkelheit.
+        Strophen: <em>fingerpicked</em>, offene Akkorde, die schrittweise höher greifen (ein „Stufen"-Motiv).
+        Strophe II &amp; Gesher: arpeggierte Wellen, perlend. Zum Gipfel hin: volles, ruhiges Strumming,
+        das die Melodie hinaufträgt. Outro: eine letzte, ausklingende Saite.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gesang <span class="he">· שִׁירָה</span></span>
+        <p class="perf-t"><em>מִמַּעֲמַקִּים</em> und <em>קוֹלִי</em> auf offenem Vokal halten — die Stimme
+        „steigt" aus dem Ton empor. <strong>חֲמֵשׁ עֶשְׂרֵה</strong> jedes Mal als klar markierte, gezählte
+        Figur singen. <strong>יוּד-הֵא</strong> ehrfürchtig, fast geflüstert. Phrasenenden auf
+        <em>הַנֶּעֱלֶה · הַבַּיְתָה · שָׁרָה</em> als Halteton — der Ort zum Atmen und Steigen.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Echo &amp; Wiederholung <span class="he">· הֵד</span></span>
+        <p class="perf-t">Die dreifache Struktur der „Fünfzehn" (Stufen · Flut · Davids Lieder) darf hörbar
+        werden: derselbe melodische Kern kehrt in Strophe I, II und im Gesher wieder, jedes Mal eine Lage
+        höher. Eine zweite Stimme (falls vorhanden) kann <em>שְׁכִינָה שָׁרָה</em> als leisen Nachhall
+        setzen — „auf jeder Stufe".</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Tonart, Modus &amp; Struktur <span class="he">· נֻסָּח</span></span>
+        <p class="perf-t">Empfehlung: eine aufsteigende, modale Färbung — z. B. D-Moll dorisch, das sich
+        Strophe für Strophe hebt (bis hin zu einer Modulation nach oben vor dem erweiterten Refrain).
+        Ablauf: Petiacha → Str. I → Refrain → Str. II → Refrain → Gesher → Str. III → Refrain (erweitert)
+        → Sijum. Gesamtlaufzeit mit Wiederholungen etwa <strong>6–7 Minuten</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ HEILIGE NAMEN ══ -->
+  <div class="names-box">
+    <div class="names-list">
+      <span>אֲדֹנָי ← יהוה</span>
+      <span>יוּד-הֵא (יה)</span>
+      <span>הַשְּׁכִינָה</span>
+    </div>
+    <p class="names-note">
+      Das Tetragramm erscheint durchgehend als <span class="sources-he">אֲדֹנָי</span>. Der Name
+      <span class="sources-he">יה</span> ist buchstabiert als <span class="sources-he">יוּד-הֵא</span>
+      wiedergegeben — genannt, nicht als vokalisierter Gottesname ausgesprochen.</p>
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">שִׁיר הַמַּעֲלוֹת — מִן הַשֹּׁפֶל עַד הָאוֹר</div>
+    <div class="footer-chain">מִמַּעֲמַקִּים ◂ ט״ו מַעֲלוֹת ◂ יה = 15 ◂ עוֹלִים הַבַּיְתָה · חֲמֵשׁ עֶשְׂרֵה</div>
+    <p class="footer-de">
+      Ein einziges Maß — die Fünfzehn — verbindet alles: die Stufen des Tempels, die Psalmen des
+      Aufstiegs, die Ellen der Flut und die Lieder, mit denen David die Tiefe bändigte, und den Namen
+      <em>יה</em>, dessen Wert fünfzehn ist. Das Lied macht daraus einen Weg: vom Ruf aus dem Abgrund,
+      Stufe um Stufe, bis das Wasser an seinen Ort zurückkehrt und der Gesang <em>aus der Finsternis
+      zum Licht</em> steigt. Und was der Levit auf den Stufen tat und David über der Tiefe, tun auch
+      wir — <em>in einem einzigen Lied, unter den Menschen</em>.
+      <br><br>
+      <strong>מִן הַשֹּׁפֶל עַד הָאוֹר הַנֶּעֱלֶה — עוֹלִים הַבַּיְתָה.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>; die Verknüpfung der drei „Fünfzehn"-Motive
+      und die Wendung <em>„auf jeder Stufe sang die Schechina"</em> sind die Dichtung dieses Liedes.
+      Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Tehillim 130:1–2</strong> — <span class="sources-he">שִׁיר הַמַּעֲלוֹת מִמַּעֲמַקִּים קְרָאתִיךָ ה׳ … אֲדֹנָי שִׁמְעָה בְקוֹלִי</span>;
+      Rahmen, Refrain-Bitte und Schluss. Psalm 130 ist selbst einer der fünfzehn Schir-haMaalot. ·
+      <strong>Die fünfzehn Schir-haMaalot</strong> — <span class="sources-he">תְּהִלִּים ק״כ–קל״ד</span>
+      (Psalmen 120–134), je überschrieben <span class="sources-he">שִׁיר הַמַּעֲלוֹת</span>. ·
+      <strong>Mischna Middot 2:5</strong> und <strong>Sukka 5:4</strong> — fünfzehn Stufen zwischen dem
+      Frauenvorhof und dem Vorhof Israels, <em>entsprechend den fünfzehn Schir-haMaalot, auf denen die
+      Leviten im Gesang standen</em> (Simchat Beit haSchoeva). Grundlage von Strophe I. ·
+      <strong>Sukka 53a–b</strong> — David grub die <em>schitin</em>; der <em>Tehom</em> stieg und drohte
+      die Welt zu überfluten; David schrieb (nach Ahitofels Rat) den Gottesnamen auf eine Scherbe
+      (<span class="sources-he">חֶרֶס / חַסְפָּא</span>) und warf sie in die Tiefe; die Wasser sanken zu
+      tief, worauf David die <em>fünfzehn Ma'alot</em> sang und sie auf das rechte Maß zurückhob.
+      Grundlage der Brücke. ·
+      <strong>Maharscha zu Sukka 53</strong> — der Name auf der Scherbe war <span class="sources-he">יה</span>
+      (Zahlenwert 15), mit der Erlösung verbunden. Grundlage von <span class="sources-he">יוּד-הֵא … חֲמֵשׁ עֶשְׂרֵה</span>. ·
+      <strong>Bamidbar 5 (Sota)</strong> — das Auslöschen des Namens für den Frieden; Ahitofels
+      <em>Kal-vaChomer</em>. ·
+      <strong>Bereschit 7:20</strong> — <span class="sources-he">חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם</span>;
+      die Flut stieg fünfzehn Ellen über die Berge — Grundlage von Strophe II.
+      <br><br>
+      <em>Hinweise:</em> (1) In der Mischna <em>steigen die Stufen hinab</em> vom Vorhof Israels zum
+      Frauenvorhof (<span class="sources-he">יוֹרְדוֹת</span>); das Lied erzählt den <em>Aufstieg</em> —
+      das ist der Sinn von <em>ma'alot</em> (Aufstiege) und genau die Frage Rav Chisdas in Sukka 53
+      (warum „Aufstiege" und nicht „Abstiege"). (2) Das Lied nennt die Wasser <em>„mej ha-mabul"</em>
+      (Flut); der Talmud spricht beim David-Ereignis vom <em>Tehom</em> (Tiefe) — beide „Fünfzehn-Wasser"
+      werden hier bewusst zusammengeführt.
+      <br><br>
+      <strong>שְׁמוֹת קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht für das Tetragramm;
+      <span class="sources-he">יה</span> ist buchstabiert (<span class="sources-he">יוּד-הֵא</span>)
+      wiedergegeben.</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

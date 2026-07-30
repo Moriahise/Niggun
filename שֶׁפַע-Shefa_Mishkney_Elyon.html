@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן · פִּיּוּט · חֶסֶד</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן
+   Schefa — Mischkeney Eljon · Der Strom des Segens aus dem oberen Heiligtum
+   חֶסֶד עֶלְיוֹן ↓ אֲצִילוּת · בְּרִיאָה · יְצִירָה · עֲשִׂיָּה
+   Ramchal · Gold · Honig · Bernstein · Licht
+   ── אַבְרָהָם כֹּהֵן הַחֶסֶד · Niggun des herabsteigenden Segens ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0B0803; --deep:#110C05; --layer:#191008; --card:#130D06;
+
+  /* ── חֶסֶד — Gold / Honig, der Strom ── */
+  --gold:#C9922A; --gold-lt:#E8BB6A; --gold-vlt:#F3DBA0;
+  --gold-dim:#4A3608; --gold-bdr:rgba(201,146,42,.34);
+
+  /* ── אוֹר — Licht, das ausströmt ── */
+  --light:#F3DBA0; --light-lt:#F8ECCB; --amber:#D4854A; --amber-lt:#E8A870;
+
+  /* ── עוֹלָמוֹת — die vier Welten ── */
+  --atz:#C9922A; --ber:#3878b8; --yetz:#6B3FA0; --asi:#9B4D18;
+
+  --crimson:#8b1a1a;
+  --parch:#f0e6d0; --parch-dim:#b09872;
+  --ivory:#efe6d2; --ivory-lt:#f8f0dc; --ivory-dim:#8a7c60;
+  --silver:#c6bfac; --silver-dim:#726a54;
+  --text:#a2947c;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,  rgba(201,146,42,.24)  0%,transparent 54%),
+    radial-gradient(ellipse at 28% 20%, rgba(243,219,160,.10) 0%,transparent 46%),
+    radial-gradient(ellipse at 78% 38%, rgba(232,187,106,.08) 0%,transparent 40%),
+    radial-gradient(ellipse at 16% 66%, rgba(201,146,42,.10)  0%,transparent 44%),
+    radial-gradient(ellipse at 82% 82%, rgba(155,77,24,.08)   0%,transparent 42%),
+    radial-gradient(ellipse at 50% 50%, rgba(11,8,3,.86)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 10%,rgba(248,236,203,.44) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 43% 5%,rgba(232,187,106,.54) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 15%,rgba(243,219,160,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 23% 39%,rgba(239,230,210,.26) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 54%,rgba(212,133,74,.32) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 71%,rgba(201,146,42,.40) 0%,transparent 100%),
+    radial-gradient(1px 1px at 87% 75%,rgba(239,230,210,.28) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(155,77,24,.24) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(201,146,42,.20);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--gold);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--amber-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(201,146,42,.58),0 0 150px rgba(243,219,160,.28);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:710px;margin:0 auto 30px;}
+.page-desc em{color:var(--gold-lt);font-style:italic;}
+
+/* ── HERKUNFTS-KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(201,146,42,.22);padding:12px 26px;background:rgba(201,146,42,.04);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-src{color:var(--gold-lt);border-color:var(--gold-bdr);background:rgba(201,146,42,.10);}
+.chain-flow{color:var(--amber-lt);}
+.chain-sep{color:var(--gold);opacity:.55;font-size:.7em;}
+
+/* ── WELTEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:13px 15px;position:relative;background:rgba(11,8,3,.6);}
+.cyc-atz{border-color:rgba(201,146,42,.44);background:rgba(201,146,42,.10);}
+.cyc-ber{border-color:rgba(56,120,184,.30);background:rgba(56,120,184,.05);}
+.cyc-yetz{border-color:rgba(107,63,160,.30);background:rgba(107,63,160,.05);}
+.cyc-asi{border-color:rgba(155,77,24,.32);background:rgba(155,77,24,.05);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-atz .cyc-num{color:var(--gold-lt);} .cyc-ber .cyc-num{color:#5b8fd4;}
+.cyc-yetz .cyc-num{color:#a47adb;} .cyc-asi .cyc-num{color:var(--amber-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;display:block;}
+.cyc-atz .cyc-he{color:var(--gold-vlt);} .cyc-ber .cyc-he{color:rgba(91,143,212,.9);}
+.cyc-yetz .cyc-he{color:rgba(164,122,219,.9);} .cyc-asi .cyc-he{color:rgba(212,133,74,.9);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(201,146,42,.10),rgba(11,8,3,.85));
+  border:1px solid rgba(201,146,42,.28);border-left:4px solid var(--gold);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'שֶׁפַע — Zum Wort';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.4em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.1em;text-shadow:0 0 60px rgba(201,146,42,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--gold-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(212,133,74,.10),rgba(11,8,3,.85));
+  border:1px solid rgba(212,133,74,.28);border-left:4px solid var(--amber);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'מִשְׁכְּנֵי עֶלְיוֹן · רמח״ל';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--amber-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--amber-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--amber-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(201,146,42,.22);padding:10px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(201,146,42,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(201,146,42,.09);border-color:rgba(201,146,42,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;color:var(--gold-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;border:1px solid rgba(201,146,42,.14);
+  background:linear-gradient(180deg,rgba(19,13,6,.96) 0%,rgba(10,7,3,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--amber),var(--gold),var(--light),var(--gold),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(201,146,42,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gold-lt);border-right:1px solid rgba(201,146,42,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.28em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--gold-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--amber-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(201,146,42,.32);
+  padding:5px 14px;color:var(--gold-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(201,146,42,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(201,146,42,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--amber-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(232,168,112,.32);background:rgba(232,168,112,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(201,146,42,.14);padding-left:26px;}
+.line{display:block;}
+.gold{color:var(--gold-lt);}
+.light{color:var(--light-lt);}
+.amber{color:var(--amber-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(201,146,42,.13),rgba(243,219,160,.04));
+  border:1px solid rgba(201,146,42,.28);border-left:3px solid var(--gold);padding:22px 28px;}
+.refrain-box .lyrics-he .line:first-child,
+.refrain-box .lyrics-he .line:nth-child(2){font-weight:700;color:var(--gold-vlt);}
+.bridge-box{background:linear-gradient(135deg,rgba(139,26,26,.07),transparent);
+  border:1px solid rgba(201,146,42,.22);border-left:3px solid var(--amber);padding:22px 28px;}
+.coda-box{text-align:center;padding:26px 0 12px;}
+.coda-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.2em;color:var(--gold-vlt);
+  direction:rtl;line-height:2.4;letter-spacing:.06em;text-shadow:0 0 30px rgba(201,146,42,.3);}
+.coda-whisper .de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;display:block;margin-top:4px;}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(201,146,42,.05);
+  border-left:2px solid rgba(201,146,42,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--gold-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:60px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,146,42,.3),transparent);}
+.ornament-star{color:var(--gold);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--amber-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--gold-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(201,146,42,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(201,146,42,.20);
+  background:rgba(201,146,42,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr 1fr;}
+  .sec-nav{grid-template-columns:repeat(3,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(201,146,42,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(201,146,42,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 36px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">מִשְׁכְּנֵי עֶלְיוֹן · Ramchal · für Stimme &amp; Gitarre</div>
+    <div class="page-title-he">שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן</div>
+    <div class="page-title-de">Schefa — Der Strom des Segens aus dem oberen Heiligtum</div>
+    <p class="page-desc">
+      Ein Lied nach dem <em>Mischkeney Eljon</em> des Ramchal: der Tempel als der eine Punkt, an dem
+      alle Zweige des Lebensbaums mit ihrer Wurzel verbunden werden — und von dort strömt
+      der <em>Schefa</em>, der Strom von Segen und Nahrung, hinaus in jede Welt. Abraham, der Kohen
+      des Chesed, zieht ihn herab; und aus dem innersten Heiligtum breitet er sich aus
+      bis zur äußersten Schwelle, für alles, was lebt.
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-src">חֶסֶד עֶלְיוֹן</span><span class="chain-sep">↓</span>
+      <span class="chain-item chain-flow">מִשְׁכְּנֵי עֶלְיוֹן</span><span class="chain-sep">↓</span>
+      <span class="chain-item chain-flow">שֶׁפַע</span><span class="chain-sep">↓</span>
+      <span class="chain-item chain-flow">כָּל הַנִּבְרָאִים</span>
+    </div>
+  </div>
+
+  <!-- ══ WELTEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-atz">
+      <span class="cyc-num">Quelle · Atzilut</span>
+      <span class="cyc-he">קֹדֶשׁ הַקֳּדָשִׁים</span>
+      <span class="cyc-de">Das Allerheiligste · Ursprung des Schefa</span>
+    </div>
+    <div class="cyc cyc-ber">
+      <span class="cyc-num">Beriah</span>
+      <span class="cyc-he">הָעֲזָרָה הַפְּנִימִית</span>
+      <span class="cyc-de">Der innere Vorhof</span>
+    </div>
+    <div class="cyc cyc-yetz">
+      <span class="cyc-num">Jetzirah</span>
+      <span class="cyc-he">הָעֲזָרָה הַחִיצוֹנָה</span>
+      <span class="cyc-de">Der äußere Vorhof</span>
+    </div>
+    <div class="cyc cyc-asi">
+      <span class="cyc-num">Assiah</span>
+      <span class="cyc-he">הַר הַבַּיִת</span>
+      <span class="cyc-de">Der Tempelberg · zur Welt hin</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: SCHEFA ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">שֶׁפַע</span>
+    <p class="gloss-de">
+      <strong>Schefa</strong> hat kein einzelnes deutsches Wort. Die Wurzel meint <em>Einfluss</em> —
+      die wohltuende Wirkung, die eine höhere Quelle (<span class="gloss-he">מַשְׁפִּיעַ</span>) auf den
+      Empfänger ausübt; daher übersetzt man meist mit „Strom von Segen und Nahrung". Ramchal ordnet
+      das ganze <em>Mischkeney Eljon</em> nach diesem Prinzip: <em>„Ich folge dem Weg des Schefa, wie er
+      aus der Quelle hervorbricht und sich nach allen Seiten ausbreitet."</em>
+      <br><br>
+      Der Weg beginnt im <strong>Allerheiligsten</strong> und geht hinaus über Hechal, inneren Vorhof,
+      äußeren Vorhof bis zum Tempelberg — von der Quelle bis zur Schwelle. Das Lied liest diesen
+      räumlichen Abstieg als den Abstieg durch die vier Welten: <span class="gloss-he">אֲצִילוּת · בְּרִיאָה · יְצִירָה · עֲשִׂיָּה</span>.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: MISHKNEY ELYON ══ -->
+  <div class="intro-box">
+    <div class="ib-he">נָהָר פְּלָגָיו יְשַׂמְּחוּ עִיר אֱלֹהִים — קְדֹשׁ מִשְׁכְּנֵי עֶלְיוֹן</div>
+    <div class="ib-src">תְּהִלִּים מ״ו:ה׳</div>
+    <p class="ib-de">
+      Aus diesem Vers nimmt Ramchals Werk seinen Namen: <em>„die heiligen Wohnungen des Höchsten"</em>.
+      Grundgedanke des <strong>Mischkeney Eljon</strong> ist, dass der Tempel der Mittelpunkt ist,
+      an dem sich alle Zweige des Lebensbaums wieder mit ihren Wurzeln verbinden — und erst durch
+      diese Wiederverbindung strömt der Schefa in alle Welten hinaus.
+      <br><br>
+      Darum verweilt das Lied bei Abraham: nach <strong>Nedarim 32b</strong> ging die Priesterschaft
+      von Malki-Zedek auf Abraham über (<em>„du bist Priester auf ewig"</em>, Ps 110:4) — und zwar,
+      weil Abrahams Wesen der <strong>Chesed</strong> ist. So wird der Kohen des Chesed zu dem,
+      der den Strom von oben herabzieht. Und Ramchal erinnert (nach <strong>Ta'anit 5a</strong>):
+      das obere Jerusalem und das untere gehören zusammen — der Segen des Oberen sucht die Schwelle
+      des Unteren.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Strophe I</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Strophe II</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">קוֹדָה</span><span class="sn-de">Coda</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">חֶסֶד עֶלְיוֹן</span>שֶׁפַע</div>
+      <div class="song-meta">
+        <span class="sefira-badge">חֶסֶד שֶׁבַּאֲצִילוּת → כָּל הָעוֹלָמוֹת</span>
+        <span class="maqam-badge">Solo · voice &amp; acoustic guitar · Chazzanut &amp; Piyut style</span>
+        <span class="song-title-he">שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן</span>
+        <span class="song-title-de">Der Strom des Segens</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · nach Ramchal, Mishkney Elyon</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · BAYIT ALEF -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · בֵּית א — Strophe I · Die Seelen &amp; die Stämme</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כַּאֲשֶׁר הַנְּשָׁמוֹת יַחְדָּו נִפְגָּשׁוֹת</span>
+            <span class="line">בִּשְׁנֵים עָשָׂר שִׁבְטֵי אֲדֹנָי נִכְלָלוֹת</span>
+            <span class="line">שָׁרְשֵׁי הַחַיִּים בָּאָבוֹת מְאוּחָדִים</span>
+            <span class="line gold">וּבְאַבְרָהָם אָבִינוּ כּוּלָּם נֶאֱחָדִים</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Wenn die Seelen einander begegnen</span>
+            <span class="line">und sich in den zwölf Stämmen Adonais sammeln,</span>
+            <span class="line">sind die Wurzeln des Lebens in den Vätern vereint —</span>
+            <span class="line gold">und in Abraham, unserem Vater, sind alle eins.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          שָׁרָשִׁים וַעֲנָפִים הַנֶּאֱחָזִים בְּשָׁרְשָׁם — עִקַּר תּוֹרַת מִשְׁכְּנֵי עֶלְיוֹן. אַבְרָהָם — מִדַּת הַחֶסֶד. הַחִבּוּר שֶׁל הַנְּשָׁמוֹת בָּאָבוֹת: פִּתּוּחַ פִּיּוּטִי.
+        </div>
+      </div>
+
+      <!-- II · PIZMON -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · פָּזְמוֹן — Refrain · Der Strom des Schefa</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שֶׁפַע, שֶׁפַע יֵרֵד מִמָּרוֹם</span>
+              <span class="line">מֵחֶסֶד עֶלְיוֹן עַד כָּל עוֹלָם</span>
+              <span class="line">בְּרָכָה וּמָזוֹן לְכָל הַנִּבְרָאִים</span>
+              <span class="line light">אוֹר וָשֶׁפַע לְכָל הַחַיִּים</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Schefa, Schefa steigt herab aus der Höhe,</span>
+              <span class="line">vom oberen Chesed bis zu jeder Welt.</span>
+              <span class="line">Segen und Nahrung für alle Geschöpfe,</span>
+              <span class="line light">Licht und Strom für alles, was lebt.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „אֵלֵךְ בְּדֶרֶךְ הַשֶּׁפַע כְּמוֹ שֶׁיּוֹצֵא מִן הַמָּקוֹר וּמִתְפַּשֵּׁט לְכָל צַד" — רמח״ל, מִשְׁכְּנֵי עֶלְיוֹן.
+        </div>
+      </div>
+
+      <!-- III · BAYIT BET -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · בֵּית ב — Strophe II · Abraham, Kohen Gadol</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line gold">אַבְרָהָם הַכֹּהֵן הַגָּדוֹל</span>
+            <span class="line">אַחַת בַּשָּׁנָה לִפְנַי וְלִפְנִים בָּא</span>
+            <span class="line">עֲבוֹדָתוֹ מוֹשֶׁכֶת שֶׁפַע מִמָּעַל</span>
+            <span class="line amber">מֵחֶסֶד הָעֶלְיוֹן — שֶׁפַע וְאוֹרָה</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line gold">Abraham, der Hohepriester,</span>
+            <span class="line">einmal im Jahr tritt er ins Innerste ein.</span>
+            <span class="line">Sein Dienst zieht den Strom von oben herab,</span>
+            <span class="line amber">aus dem oberen Chesed — Strom und Licht.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          אַבְרָהָם כֹּהֵן — נְדָרִים ל״ב ע״ב עַל פִּי „אַתָּה כֹהֵן לְעוֹלָם" (תְּהִלִּים ק״י:ד׳). „אַחַת בַּשָּׁנָה … לִפְנַי וְלִפְנִים" — עֲבוֹדַת יוֹם הַכִּפּוּרִים (וַיִּקְרָא ט״ז), בִּדְמוּת פִּיּוּטִית.
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שֶׁפַע, שֶׁפַע יֵרֵד מִמָּרוֹם</span>
+              <span class="line">מֵחֶסֶד עֶלְיוֹן עַד כָּל עוֹלָם</span>
+              <span class="line">בְּרָכָה וּמָזוֹן לְכָל הַנִּבְרָאִים</span>
+              <span class="line light">אוֹר וָשֶׁפַע לְכָל הַחַיִּים</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Schefa, Schefa steigt herab aus der Höhe,</span>
+              <span class="line">vom oberen Chesed bis zu jeder Welt.</span>
+              <span class="line">Segen und Nahrung für alle Geschöpfe,</span>
+              <span class="line light">Licht und Strom für alles, was lebt.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV · GESCHER -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · גֶּשֶׁר — Brücke · Die drei Welten</div>
+        <div class="instr-note">The three descents, each one step lower — sung a shade softer, wider, more open with each line.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מִן הָעֲזָרָה הַפְּנִימִית — אוֹר לַבְּרִיאָה</span>
+              <span class="line">מִן הָעֲזָרָה הַחִיצוֹנָה — אוֹר לַיְּצִירָה</span>
+              <span class="line">מֵהַר הַבַּיִת — אוֹר לַעֲשִׂיָּה</span>
+              <span class="line light">לְכָל הַנִּבְרָאִים — שֶׁפַע וָחַיָּה</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Aus dem inneren Vorhof — Licht für die Beriah (Schöpfung),</span>
+              <span class="line">aus dem äußeren Vorhof — Licht für die Jetzirah (Formung),</span>
+              <span class="line">vom Tempelberg — Licht für die Assiah (Wirken),</span>
+              <span class="line light">für alle Geschöpfe — Strom und lebendiges Licht.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          מַסְלוּל הַשֶּׁפַע מִקֹּדֶשׁ הַקֳּדָשִׁים דֶּרֶךְ הָעֲזָרוֹת עַד הַר הַבַּיִת — רמח״ל, מִשְׁכְּנֵי עֶלְיוֹן. הַהַקְבָּלָה לְאַרְבַּע עוֹלָמוֹת (אֲצִילוּת · בְּרִיאָה · יְצִירָה · עֲשִׂיָּה): קְרִיאָה מִבְנִית שֶׁל הַשִּׁיר.
+        </div>
+      </div>
+
+      <!-- PIZMON (Sijum) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Abschluss</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">שֶׁפַע, שֶׁפַע יֵרֵד מִמָּרוֹם</span>
+              <span class="line">מֵחֶסֶד עֶלְיוֹן עַד כָּל עוֹלָם</span>
+              <span class="line">בְּרָכָה וּמָזוֹן לְכָל הַנִּבְרָאִים</span>
+              <span class="line light">אוֹר וָשֶׁפַע לְכָל הַחַיִּים</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Schefa, Schefa steigt herab aus der Höhe,</span>
+              <span class="line">vom oberen Chesed bis zu jeder Welt.</span>
+              <span class="line">Segen und Nahrung für alle Geschöpfe,</span>
+              <span class="line light">Licht und Strom für alles, was lebt.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- V · CODA -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · קוֹדָה — Coda · Besiegelung</div>
+        <div class="instr-note">Guitar: open chords, ringing out; the two lines held, then let fade.</div>
+        <div class="coda-box">
+          <div class="coda-whisper">
+            שֶׁפַע וָאוֹר, אוֹר וָשֶׁפַע<br>
+            <span class="de">Strom und Licht, Licht und Strom</span>
+            לְדוֹר וָדוֹר עַד עוֹלָם וָעֶד
+            <span class="de">von Geschlecht zu Geschlecht, in Ewigkeit</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן</div>
+    <div class="footer-chain">חֶסֶד עֶלְיוֹן ◂ אַבְרָהָם כֹּהֵן ◂ הַמִּשְׁכָּן ◂ אֲצִילוּת · בְּרִיאָה · יְצִירָה · עֲשִׂיָּה</div>
+    <p class="footer-de">
+      Der Tempel ist bei Ramchal kein Bauwerk unter anderen, sondern der eine Knoten, an dem sich
+      die Zweige der Schöpfung wieder an ihre Wurzel binden — und in diesem Augenblick fließt der
+      <em>Schefa</em> von der Quelle bis zur äußersten Schwelle. Abraham, der Kohen des Chesed, zieht
+      ihn herab; vom Allerheiligsten breitet er sich aus durch die Höfe, bis er jedes Geschöpf erreicht.
+      <br><br>
+      <strong>אוֹר וָשֶׁפַע לְכָל הַחַיִּים.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>, kein überlieferter Midrasch; die Verbindung
+      der Seelen in den Stämmen und Abrahams Eintritt „einmal im Jahr" sind poetische Entfaltungen
+      und werden nicht als Quelle ausgegeben. Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Ramchal — Mishkney Elyon</strong> (R. Moshe Chaim Luzzatto, 1707–1746), „Die Wohnungen des
+      Höchsten": der Tempel als der eine Punkt, an dem die Zweige des Lebensbaums sich mit ihrer Wurzel
+      verbinden, wodurch der <em>Schefa</em> in alle Welten strömt. Grundriss und Route des Werkes folgen
+      ausdrücklich dem Weg des Schefa vom Allerheiligsten nach außen. ·
+      <strong>Tehillim 46:5</strong> — <span class="sources-he">קְדֹשׁ מִשְׁכְּנֵי עֶלְיוֹן</span>;
+      der Titel-Vers, aus dem das Werk seinen Namen nimmt. ·
+      <strong>Nedarim 32b</strong> — die Priesterschaft geht von Malki-Zedek auf Abraham über;
+      Grundlage für „Abraham, der Kohen". ·
+      <strong>Tehillim 110:4</strong> — <span class="sources-he">אַתָּה כֹהֵן לְעוֹלָם</span>, der Beleg­vers
+      dazu. ·
+      <strong>Chesed = Abraham</strong> — die Väter als Sefirot (Abraham/Chesed, Jizchak/Gewura,
+      Ja'akov/Tiferet); klassische kabbalistische Zuordnung (u.a. Sohar; „Patach Elijahu", Tikkuney Sohar).
+      Sie begründet <span class="sources-he">מֵחֶסֶד עֶלְיוֹן</span>. ·
+      <strong>Ta'anit 5a</strong> — <em>„Ich betrete das obere Jerusalem nicht, ehe ich das untere
+      betrete"</em>; von Ramchal in Mishkney Elyon zitiert; Grund für den Bezug des oberen Segens auf
+      die untere Welt. ·
+      <strong>Wajikra 16</strong> — die Jom-Kippur-Avoda des Hohepriesters, <em>„einmal im Jahr",
+      lifnai velifnim</em>; hier poetisch auf Abraham/Chesed übertragen. ·
+      <strong>Vier Welten</strong> — <span class="sources-he">אֲצִילוּת · בְּרִיאָה · יְצִירָה · עֲשִׂיָּה</span>;
+      die Zuordnung der Tempelbereiche (Allerheiligstes → innerer Vorhof → äußerer Vorhof → Tempelberg)
+      zu den vier Welten ist die strukturelle Lesart dieses Liedes, gestützt auf Ramchals Schefa-Route.
+      <br><br>
+      <em>Ergänzt gegenüber der Vorlage:</em> der Titel-Vers (Ps 46:5), die Talmud-Belege für Abraham
+      als Kohen (Nedarim 32b; Ps 110:4), die Sefira-Zuordnung Abraham = Chesed sowie Ta'anit 5a —
+      damit ruht jede Strophe auf einer nachprüfbaren Quelle.
+      <br><br>
+      <strong>שֵׁם קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht durchgehend für das
+      Tetragramm.</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

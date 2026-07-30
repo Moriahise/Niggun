@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אֵלִיָּהוּ עַל הַכַּרְמֶל · פִּיּוּט · גְּבוּרָה מְמֻתֶּקֶת</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   אֵלִיָּהוּ עַל הַכַּרְמֶל
+   Eliyahu al haKarmel — Elijah auf dem Karmel
+   גְּבוּרָה שֶׁבַּאֲצִילוּת → שָׁלוֹם · Niggun der gesüßten Gewura
+   Feuer · Kupfer · Waw ketia · Gold des Friedens
+   ── נֶפֶשׁ הָאֵשׁ · Lied II · פִּינְחָס ⇄ אֵלִיָּהוּ ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0A0503; --deep:#100704; --layer:#180C06; --card:#120A06;
+
+  /* ── אֵשׁ — Feuer / Gevura ── */
+  --fire:#C0392B; --fire-lt:#E0785E; --fire-vlt:#F2A88C;
+  --fire-dim:#3E120A; --fire-bdr:rgba(192,57,43,.32);
+
+  /* ── כֹּפֶר / זָהָב — Kupfer & Gold, das Feuer, das leuchtet ── */
+  --gold:#C89018; --gold-lt:#E8BA50; --gold-vlt:#F4D68A;
+  --gold-dim:#4A3608;
+
+  /* ── שָׁלוֹם — die gesüßte Ruhe ── */
+  --peace:#8FA96A; --peace-lt:#B8CE92; --peace-dim:#3A4826;
+
+  --parch:#f0e8d4; --parch-dim:#b09878;
+  --ivory:#ece4d4; --ivory-lt:#f8f2e8; --ivory-dim:#8a7c68;
+  --silver:#c4c0b4; --silver-dim:#6e6858;
+  --text:#a09384;
+  --gev:#8E1B1B; --ches:#2A6058; --tif:#B8860B;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,  rgba(192,57,43,.26)   0%,transparent 52%),
+    radial-gradient(ellipse at 28% 22%, rgba(200,144,24,.12)  0%,transparent 46%),
+    radial-gradient(ellipse at 78% 40%, rgba(244,214,138,.06) 0%,transparent 38%),
+    radial-gradient(ellipse at 16% 66%, rgba(192,57,43,.10)   0%,transparent 44%),
+    radial-gradient(ellipse at 82% 82%, rgba(143,169,106,.07) 0%,transparent 42%),
+    radial-gradient(ellipse at 50% 50%, rgba(10,5,3,.86)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 10%,rgba(244,214,138,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 43% 5%,rgba(224,120,94,.52) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 15%,rgba(232,186,80,.40) 0%,transparent 100%),
+    radial-gradient(1px 1px at 23% 39%,rgba(236,228,212,.26) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 54%,rgba(224,120,94,.34) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 71%,rgba(200,144,24,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 87% 75%,rgba(236,228,212,.28) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(143,169,106,.26) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(192,57,43,.20);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--fire);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--gold-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.82;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(192,57,43,.60),0 0 150px rgba(200,144,24,.30);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 30px;}
+.page-desc em{color:var(--fire-lt);font-style:italic;}
+
+/* ── SEELENKETTE ── */
+.soul-chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(200,144,24,.22);padding:12px 26px;background:rgba(200,144,24,.04);margin-top:20px;}
+.sc-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.sc-past{color:var(--silver-dim);opacity:.6;}
+.sc-now{color:var(--fire-lt);border-color:var(--fire-bdr);background:rgba(192,57,43,.10);}
+.sc-fut{color:var(--gold-lt);border-color:rgba(200,144,24,.32);background:rgba(200,144,24,.08);}
+.sc-sep{color:var(--fire);opacity:.5;font-size:.7em;}
+
+/* ── DEUTUNGS-LEISTE (Sefira / Weg) ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:14px 16px;position:relative;background:rgba(10,5,3,.6);}
+.cyc-gev{border-color:rgba(142,27,27,.34);background:rgba(142,27,27,.06);}
+.cyc-tif{border-color:rgba(184,134,11,.32);background:rgba(184,134,11,.05);}
+.cyc-now{border-color:rgba(192,57,43,.44);background:rgba(192,57,43,.09);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;
+  letter-spacing:.16em;text-transform:uppercase;opacity:.62;display:block;margin-bottom:3px;}
+.cyc-gev .cyc-num{color:var(--gev);} .cyc-tif .cyc-num{color:var(--tif);} .cyc-now .cyc-num{color:var(--fire-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;direction:rtl;display:block;}
+.cyc-gev .cyc-he{color:rgba(210,90,90,.82);} .cyc-tif .cyc-he{color:rgba(232,194,90,.85);} .cyc-now .cyc-he{color:var(--fire-vlt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.70em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(143,169,106,.09),rgba(10,5,3,.85));
+  border:1px solid rgba(143,169,106,.26);border-left:4px solid var(--peace);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'שָׁלוֹם — Zum gebrochenen Waw';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--peace-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.4em;font-weight:900;
+  color:var(--peace-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.1em;text-shadow:0 0 60px rgba(143,169,106,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--peace-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(192,57,43,.12),rgba(10,5,3,.85));
+  border:1px solid rgba(192,57,43,.30);border-left:4px solid var(--fire);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'מַעֲשֵׂה הַכַּרְמֶל · Melachim I 18–19';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--fire-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--fire-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--fire-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(192,57,43,.22);padding:10px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(192,57,43,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(192,57,43,.09);border-color:rgba(192,57,43,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;color:var(--fire-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;border:1px solid rgba(192,57,43,.14);
+  background:linear-gradient(180deg,rgba(18,10,6,.96) 0%,rgba(9,5,3,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gev),var(--fire),var(--gold),var(--peace),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(192,57,43,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.42;
+  line-height:1;text-align:center;color:var(--fire-lt);border-right:1px solid rgba(192,57,43,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.28em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--fire-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--gold-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(192,57,43,.32);
+  padding:5px 14px;color:var(--fire-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(192,57,43,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(192,57,43,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--gold-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(232,186,80,.32);background:rgba(232,186,80,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(192,57,43,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.7;font-size:.82em;}
+.fire{color:var(--fire-lt);}
+.peace{color:var(--peace-lt);}
+.gold{color:var(--gold-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(192,57,43,.14),rgba(200,144,24,.04));
+  border:1px solid rgba(192,57,43,.28);border-left:3px solid var(--fire);padding:22px 28px;}
+.refrain-box .lyrics-he .line{font-weight:400;}
+.bridge-box{background:linear-gradient(135deg,rgba(143,169,106,.09),transparent);
+  border:1px solid rgba(143,169,106,.24);border-left:3px solid var(--peace);padding:22px 28px;}
+.climax-box{background:linear-gradient(135deg,rgba(142,27,27,.16),transparent);
+  border:1px solid rgba(192,57,43,.34);padding:24px 28px;}
+.climax-box .lyrics-he .line{font-size:1.14em;font-weight:700;}
+.outro-box{text-align:center;padding:26px 0 12px;}
+.outro-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.2em;color:var(--peace-lt);
+  direction:rtl;line-height:2.4;letter-spacing:.08em;text-shadow:0 0 30px rgba(143,169,106,.3);}
+.outro-whisper .sm{font-size:.78em;color:var(--silver-dim);}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(192,57,43,.05);
+  border-left:2px solid rgba(192,57,43,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--fire-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:60px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(192,57,43,.3),transparent);}
+.ornament-star{color:var(--fire);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--fire-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--gold-lt);
+  direction:rtl;opacity:.7;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--peace-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(200,144,24,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(200,144,24,.20);
+  background:rgba(200,144,24,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr;}
+  .sec-nav{grid-template-columns:repeat(3,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(192,57,43,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(192,57,43,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 36px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">נֶפֶשׁ הָאֵשׁ · Lied II · Pinchas ⇄ Elijah</div>
+    <div class="page-title-he">אֵלִיָּהוּ עַל הַכַּרְמֶל</div>
+    <div class="page-title-de">Eliyahu al haKarmel — Elijah auf dem Karmel</div>
+    <p class="page-desc">
+      Das erste Lied ließ die Seele des Pinchas aufsteigen mit einem Namen, der noch nicht
+      ausgesprochen war. Hier wird er ausgesprochen. Dieselbe Nefesh, dieselbe Gewura, dasselbe Feuer —
+      doch jetzt fällt es nicht mehr auf einen Feind, sondern auf den Altar, und das Volk
+      fällt nicht mehr in der Seuche, sondern auf sein Angesicht. Der <em>Niggun der gesüßten Gewura</em>:
+      wie aus dem Speer des Pinchas das Feuer des Karmel wird und aus dem Feuer der Bund des Friedens.
+    </p>
+    <div class="soul-chain">
+      <span class="sc-item sc-past">נָדָב וַאֲבִיהוּא</span><span class="sc-sep">◂</span>
+      <span class="sc-item sc-past">פִּינְחָס בֶּן אֶלְעָזָר</span><span class="sc-sep">◂</span>
+      <span class="sc-item sc-now">אֵלִיָּהוּ הַתִּשְׁבִּי</span><span class="sc-sep">↦</span>
+      <span class="sc-item sc-fut">מְבַשֵּׂר הַגְּאֻלָּה</span>
+    </div>
+  </div>
+
+  <!-- ══ WEG-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-gev">
+      <span class="cyc-num">Der Speer · Gewura</span>
+      <span class="cyc-he">קִנְאָה בְּשִׁטִּים</span>
+      <span class="cyc-de">Pinchas · Zorn wendet die Seuche</span>
+    </div>
+    <div class="cyc cyc-now">
+      <span class="cyc-num">Das Feuer · gesüßte Gewura</span>
+      <span class="cyc-he">אֵשׁ עַל הַכַּרְמֶל</span>
+      <span class="cyc-de">Elijah · Feuer, das den Altar erhellt</span>
+    </div>
+    <div class="cyc cyc-tif">
+      <span class="cyc-num">Der Frieden · Tiferet</span>
+      <span class="cyc-he">בְּרִית שָׁלוֹם</span>
+      <span class="cyc-de">Herzwende der Väter und Söhne</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: DAS GEBROCHENE WAW ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">שָׁלוֹם</span>
+    <p class="gloss-de">
+      Das ganze Lied hängt an einem einzigen Buchstaben. In <strong>Bamidbar 25:12</strong> —
+      <span class="gloss-he">הִנְנִי נֹתֵן לוֹ אֶת בְּרִיתִי שָׁלוֹם</span> — wird das Waw im Wort
+      <em>schalom</em> in jeder gültigen Torarolle <strong>gebrochen</strong> geschrieben
+      (<span class="gloss-he">וָי״ו קְטִיעָה</span>). Ein sonst ungültiger Bruch, der hier vorgeschrieben ist.
+      <br><br>
+      Der <strong>Baal HaTurim</strong> deutet: das gebrochene Waw sieht aus wie ein Jud — und
+      der Name <em>Elijahu</em> wird bewusst <strong>ohne Waw</strong> geschrieben. Dieses Waw wird
+      „im Bund gehalten", bis Pinchas-Elijah seine Aufgabe erfüllt und den Maschiach ankündigt:
+      dann werden <em>schalom</em> (Friede) und <em>schalem</em> (Vollkommenheit) zugleich vollendet.
+      Darum die Brücke des Liedes: <span class="gloss-he">וָאו שְׁבוּרָה בַּכָּתוּב · תִּיקּוּן שֶׁלֹּא נִשְׁלַם</span> —
+      ein Tikkun, der noch offen ist.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: KARMEL & HOREV ══ -->
+  <div class="intro-box">
+    <div class="ib-he">וַתִּפֹּל אֵשׁ יְהוָה וַתֹּאכַל אֶת הָעֹלָה … וַיַּרְא כָּל הָעָם וַיִּפְּלוּ עַל פְּנֵיהֶם</div>
+    <div class="ib-src">מְלָכִים א׳ י״ח:ל״ח–ל״ט</div>
+    <p class="ib-de">
+      Auf dem Karmel ruft Elijah das Feuer herab, und es <strong>verzehrt das Brandopfer</strong>;
+      das Volk fällt nieder und ruft zweimal <em>Adonai hu haElohim</em> — dieselben Worte, mit denen
+      Israel das Ne'ila-Gebet am Jom Kippur beschließt, siebenmal wiederholt.
+      <br><br>
+      Doch die Geschichte endet dort nicht. Unmittelbar danach flieht Elijah zum <strong>Horev</strong>,
+      und Gott lehrt ihn: <em>nicht im Sturm, nicht im Beben, nicht im Feuer</em> — sondern in der
+      <em>kol demama daka</em>, der Stimme dünnen Schweigens (Melachim I 19:11–12). Der Eiferer,
+      der das Feuer rief, wird zur Stille geführt. Genau das ist die <strong>Süßung der Gewura</strong>:
+      das Feuer erlischt nicht, es ändert seine Gestalt — vom Verzehren zum Leuchten,
+      vom Zorn zum Bund des Friedens.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Strophe I</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Strophe II</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">שִׂיא</span><span class="sn-de">Klimax</span></a>
+    <a class="sec-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">יְצִיאָה</span><span class="sn-de">Outro</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">גְּבוּרָה מְמֻתֶּקֶת</span>II</div>
+      <div class="song-meta">
+        <span class="sefira-badge">גְּבוּרָה שֶׁבַּאֲצִילוּת → שָׁלוֹם</span>
+        <span class="maqam-badge">Am – G – F · fingerpicked · Rubato → ff → ppp</span>
+        <span class="song-title-he">אֵלִיָּהוּ עַל הַכַּרְמֶל</span>
+        <span class="song-title-de">Niggun der gesüßten Gewura · Gitarre &amp; Stimme</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · Melachim I 18–19 · Bamidbar 25</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · PETICHA -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · פְּתִיחָה — Intro · Flüstern, nur Gitarre, ppp</div>
+        <div class="instr-note">Guitar: fingerpicked, open chords (Am – G – F), much sustain, much air.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+            <span class="line echo">(הִנְנִי...)</span>
+            <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+            <span class="line echo">(שָׁלוֹם...)</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Siehe, ich gebe ihm</span>
+            <span class="line echo">(siehe, ich...)</span>
+            <span class="line">meinen Bund des Friedens</span>
+            <span class="line echo">(Frieden...)</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „לָכֵן אֱמֹר: הִנְנִי נֹתֵן לוֹ אֶת בְּרִיתִי שָׁלוֹם" — בְּמִדְבַּר כ״ה:י״ב. הַוָּו שֶׁבְּ„שָׁלוֹם" קְטִיעָה.
+        </div>
+      </div>
+
+      <!-- II · BAYIT ALEF -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · בֵּית א׳ — Strophe I · leise, aufbauend, mp</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בִּגְבוּרָה שֹׁרֶשׁ נִשְׁמָתוֹ</span>
+            <span class="line">וְנִשְׁמַת פִּינְחָס הָיָה</span>
+            <span class="line fire">אֵלִיָּהוּ הַמְּקַנֵּא —</span>
+            <span class="line fire">לַאֲדֹנָי קָנֵא</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">In Gewura wurzelt seine Seele —</span>
+            <span class="line">die Seele des Pinchas war er.</span>
+            <span class="line fire">Elijah, der Eiferer:</span>
+            <span class="line fire">er eiferte für Adonai.</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          פִּינְחָס הוּא אֵלִיָּהוּ — תַּרְגּוּם יוֹנָתָן בְּמִדְבַּר כ״ה:י״ב · יַלְקוּט שִׁמְעוֹנִי רתשע״א · פִּרְקֵי דְּרַבִּי אֱלִיעֶזֶר מ״ז. שֹׁרֶשׁ הַנֶּפֶשׁ בִּגְבוּרָה — שַׁעַר הַגִּלְגּוּלִים.
+        </div>
+      </div>
+
+      <!-- III · PIZMON -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · פָּזְמוֹן — Refrain · volle Stimme, ff</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line fire" style="margin-top:10px;display:block;">כִּי הָאֵשׁ שֶׁשָּׂרְפָה —</span>
+              <span class="line gold">עַתָּה תָּאִיר</span>
+              <span class="line peace">גְּבוּרָה לְשָׁלוֹם תָּשׁוּב</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens,</span>
+              <span class="line">siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens.</span>
+              <span class="line fire" style="margin-top:10px;display:block;">Denn das Feuer, das brannte —</span>
+              <span class="line gold">nun leuchtet es.</span>
+              <span class="line peace">Gewura kehrt zum Frieden zurück.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV · BAYIT BET -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · בֵּית ב׳ — Strophe II · erzählend, mp</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">וְעַל הַר הַכַּרְמֶל עָמַד</span>
+            <span class="line">וַיְהִי אֵשׁ אֲדֹנָי</span>
+            <span class="line">וַתֵּרֶד וַתֹּאכַל</span>
+            <span class="line">אֶת הָעֹלָה</span>
+            <span class="line" style="margin-top:10px;display:block;">וְהָעָם רָאָה וַיִּפֹּל</span>
+            <span class="line">עַל פָּנָיו אַרְצָה —</span>
+            <span class="line fire">אֲדֹנָי הוּא הָאֱלֹהִים</span>
+            <span class="line fire">אֲדֹנָי הוּא הָאֱלֹהִים</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Auf dem Berg Karmel stand er,</span>
+            <span class="line">und das Feuer Adonais war da —</span>
+            <span class="line">es fiel herab und verzehrte</span>
+            <span class="line">das Brandopfer.</span>
+            <span class="line" style="margin-top:10px;display:block;">Das Volk sah es und fiel nieder,</span>
+            <span class="line">warf sich zu Boden:</span>
+            <span class="line fire">„Adonai — Er ist Gott!</span>
+            <span class="line fire">Adonai — Er ist Gott!"</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          וַתִּפֹּל אֵשׁ יְהוָה וַתֹּאכַל אֶת הָעֹלָה — מְלָכִים א׳ י״ח:ל״ח · „יְהוָה הוּא הָאֱלֹהִים" (פַּעֲמַיִם) — י״ח:ל״ט, וְהוּא חוֹתָם תְּפִלַּת נְעִילָה.
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line fire" style="margin-top:10px;display:block;">כִּי הָאֵשׁ שֶׁשָּׂרְפָה —</span>
+              <span class="line gold">עַתָּה תָּאִיר</span>
+              <span class="line peace">גְּבוּרָה לְשָׁלוֹם תָּשׁוּב</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens,</span>
+              <span class="line">siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens.</span>
+              <span class="line fire" style="margin-top:10px;display:block;">Denn das Feuer, das brannte —</span>
+              <span class="line gold">nun leuchtet es.</span>
+              <span class="line peace">Gewura kehrt zum Frieden zurück.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- V · GESCHER -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · גֶּשֶׁר — Brücke · sehr langsam, fast a cappella, pp</div>
+        <div class="instr-note">Guitar: single tones, percussively muted, barely any accompaniment.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">וָאו שְׁבוּרָה בַּכָּתוּב</span>
+              <span class="line echo">(שָׁלוֹם... שָׁלוֹם...)</span>
+              <span class="line">תִּיקּוּן שֶׁלֹּא נִשְׁלַם —</span>
+              <span class="line echo">(עוֹד... עוֹד...)</span>
+              <span class="line" style="margin-top:10px;display:block;">מִקִּנְאָה לְשָׁלוֹם הַדֶּרֶךְ</span>
+              <span class="line">בְּאֵשׁ שֶׁלֹּא כָבָה</span>
+              <span class="line peace">גְּבוּרָה מְמֻתֶּקֶת —</span>
+              <span class="line peace">עוֹלָה מֵעַל חֶסֶד</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Ein gebrochenes Waw im Text —</span>
+              <span class="line echo">(Frieden... Frieden...)</span>
+              <span class="line">ein Tikkun, der noch nicht vollendet ist.</span>
+              <span class="line echo">(noch... noch...)</span>
+              <span class="line" style="margin-top:10px;display:block;">Von Eifer zu Frieden führt der Weg,</span>
+              <span class="line">durch Feuer, das nie erlosch.</span>
+              <span class="line peace">Gesüßte Gewura —</span>
+              <span class="line peace">sie steigt über den Chesed hinauf.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          וָי״ו קְטִיעָה בְּ„שָׁלוֹם" — קִידּוּשִׁין ס״ו ע״ב (רַב נַחְמָן) · בַּעַל הַטּוּרִים בְּמִדְבַּר כ״ה:י״ב. הַמְתָּקַת הַגְּבוּרוֹת — עַל דֶּרֶךְ הָאֲרִ״זַ״ל.
+        </div>
+      </div>
+
+      <!-- VI · SI (Klimax) -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · שִׂיא — Klimax · fff, voller Einsatz</div>
+        <div class="instr-note">Guitar: full strumming attack, no muting — then a sudden fall into the whisper of the outro.</div>
+        <div class="climax-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line fire">הֵשִׁיב לֵב אָבוֹת</span>
+              <span class="line fire">עַל בָּנִים!</span>
+              <span class="line fire">וְלֵב בָּנִים —</span>
+              <span class="line fire">עַל אֲבוֹתָם!</span>
+              <span class="line" style="margin-top:10px;display:block;">בְּטֶרֶם בּוֹא</span>
+              <span class="line">יוֹם אֲדֹנָי —</span>
+              <span class="line gold">הַגָּדוֹל</span>
+              <span class="line gold">וְהַנּוֹרָא!</span>
+              <span class="line fire" style="margin-top:10px;display:block;">אֵלִיָּהוּ! אֵלִיָּהוּ!</span>
+              <span class="line fire">אֵלִיָּהוּ הַנָּבִיא —</span>
+              <span class="line gold">בָּא!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line fire">„Er wendet das Herz der Väter</span>
+              <span class="line fire">den Söhnen zu</span>
+              <span class="line fire">und das Herz der Söhne —</span>
+              <span class="line fire">den Vätern",</span>
+              <span class="line" style="margin-top:10px;display:block;">bevor kommt</span>
+              <span class="line">der Tag Adonais —</span>
+              <span class="line gold">der große</span>
+              <span class="line gold">und ehrfurchtgebietende!</span>
+              <span class="line fire" style="margin-top:10px;display:block;">Eliyahu! Eliyahu!</span>
+              <span class="line fire">Eliyahu der Prophet —</span>
+              <span class="line gold">er kommt!</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „וְהֵשִׁיב לֵב אָבוֹת עַל בָּנִים וְלֵב בָּנִים עַל אֲבוֹתָם" — מַלְאָכִי ג׳:כ״ד · „הִנֵּה אָנֹכִי שֹׁלֵחַ לָכֶם אֵת אֵלִיָּה הַנָּבִיא … יוֹם יְהוָה הַגָּדוֹל וְהַנּוֹרָא" — מַלְאָכִי ג׳:כ״ג.
+        </div>
+      </div>
+
+      <!-- PIZMON SOFI -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן סוֹפִי — Abschluss-Refrain · 3× wiederholen, crescendo</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line">הִנְנִי נֹתֵן לוֹ</span>
+              <span class="line">אֶת בְּרִיתִי שָׁלוֹם</span>
+              <span class="line fire" style="margin-top:10px;display:block;">כִּי הָאֵשׁ שֶׁשָּׂרְפָה —</span>
+              <span class="line gold">עַתָּה תָּאִיר</span>
+              <span class="line peace">גְּבוּרָה לְשָׁלוֹם תָּשׁוּב</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens,</span>
+              <span class="line">siehe, ich gebe ihm</span>
+              <span class="line">meinen Bund des Friedens.</span>
+              <span class="line fire" style="margin-top:10px;display:block;">Denn das Feuer, das brannte —</span>
+              <span class="line gold">nun leuchtet es.</span>
+              <span class="line peace">Gewura kehrt zum Frieden zurück.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VII · JEZIAH -->
+      <div class="section-block" id="p7">
+        <div class="section-label">VII · יְצִיאָה — Outro · ppp, verklingend, nur Gitarre</div>
+        <div class="outro-box">
+          <div class="outro-whisper">
+            הִנְנִי נֹתֵן לוֹ<br>
+            <span class="sm">(הִנְנִי...)</span><br>
+            שָׁלוֹם<br>
+            <span class="sm">שָׁלוֹם...</span><br>
+            <span class="sm">שָׁלוֹם...</span>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Und das offene Ende</span>
+          שָׁלוֹם — בַּוָּו הַשְּׁבוּרָה. הַתִּיקּוּן נִשְׁאָר פָּתוּחַ עַד בּוֹא הַמְבַשֵּׂר. „לֹא בָרוּחַ … לֹא בָרַעַשׁ … לֹא בָאֵשׁ … קוֹל דְּמָמָה דַקָּה" — מְלָכִים א׳ י״ט.
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">נֶפֶשׁ הָאֵשׁ — שְׁנֵי פִּיּוּטִים</div>
+    <div class="footer-chain">נָדָב וַאֲבִיהוּא ◂ פִּינְחָס ◂ אֵלִיָּהוּ · קִנְאָה ↦ אֵשׁ ↦ שָׁלוֹם · גְּבוּרָה מְמֻתֶּקֶת</div>
+    <p class="footer-de">
+      Das erste Lied brachte eine Nefesh aus Atzilut zum Aufstieg und schloss mit einem Namen,
+      der noch nicht ausgesprochen war: <em>Sieh, er kommt.</em> Dieses Lied spricht ihn aus.
+      Derselbe Eifer, der in Schittim einen Speer führte, ruft auf dem Karmel das Feuer herab —
+      und dann führt Gott den Eiferer zum Horev, wo nicht das Feuer spricht, sondern die Stille.
+      So wird aus Gewura Frieden: nicht dadurch, dass das Feuer erlischt, sondern dadurch,
+      dass es die Gestalt wechselt. Das Waw bleibt gebrochen, der Tikkun bleibt offen —
+      bis der Prophet die Herzen der Väter und der Söhne einander zuwendet.
+      <br><br>
+      <strong>גְּבוּרָה לְשָׁלוֹם תָּשׁוּב.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>, kein überlieferter Midrasch; die poetischen
+      Wendungen (<em>„das Feuer, das brannte, leuchtet nun"</em>, <em>„gesüßte Gewura"</em>) gehören dem
+      Lied und werden nicht als Quelle ausgegeben. Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Bamidbar 25:12</strong> — <span class="sources-he">הִנְנִי נֹתֵן לוֹ אֶת בְּרִיתִי שָׁלוֹם</span>;
+      der Bund des Friedens für Pinchas. Das Waw in <em>schalom</em> ist die <em>vav keti'a</em>, das
+      gebrochene Waw. ·
+      <strong>Kiddushin 66b</strong> — Rav Nachman: das Waw von <em>schalom</em> ist <em>keti'a</em> (gebrochen);
+      älteste talmudische Bezeugung der Schreibtradition (vgl. Ritva; Minchat Schai z.St.). ·
+      <strong>Baal HaTurim, Bamidbar 25:12</strong> — das gebrochene Waw gleicht einem Jud; der Name
+      <em>Elijahu</em> wird defektiv (ohne Waw) geschrieben, „im Bund gehalten" bis Pinchas-Elijah den
+      Maschiach ankündigt. Direkte Grundlage der Brücke. ·
+      <strong>Targum (Pseudo-)Jonatan, Bamidbar 25:12</strong> — Pinchas wird zum „Engel, der ewig lebt
+      und am Ende der Tage die Erlösung verkündet"; klassische Quelle für <em>Pinchas ist Elijah</em>. ·
+      <strong>Jalkut Schimoni 771</strong> (Pinchas/Balak) — explizit: <span class="sources-he">פִּינְחָס הוּא אֵלִיָּהוּ</span>. ·
+      <strong>Pirkei deRabbi Eliezer, Kap. 47</strong> — Gott ruft Pinchas beim Namen Elijahs. ·
+      <strong>Sha'ar haGilgulim (Arizal / R. Chaim Vital), Hakdamah 31–33</strong> — die Seelenkette
+      <em>Nadab &amp; Abihu → Pinchas → Elijah</em>, die Nefesh aus Atzilut, die Wurzel in der Gewura und
+      die Süßung der Gerichte (<em>hamtakat ha-dinim</em>). ·
+      <strong>Melachim I 18:38</strong> — <span class="sources-he">וַתִּפֹּל אֵשׁ יְהוָה וַתֹּאכַל אֶת הָעֹלָה</span>;
+      das Feuer verzehrt das Brandopfer. ·
+      <strong>Melachim I 18:39</strong> — <span class="sources-he">יְהוָה הוּא הָאֱלֹהִים</span> (zweimal);
+      zugleich der Abschluss des Ne'ila-Gebets an Jom Kippur (siebenmal). ·
+      <strong>Melachim I 19:11–12</strong> — der Horev: nicht im Sturm, Beben oder Feuer, sondern in der
+      <em>kol demama daka</em>; die Wendung des Eifers zur Stille. ·
+      <strong>Maleachi 3:23</strong> — <span class="sources-he">הִנֵּה אָנֹכִי שֹׁלֵחַ לָכֶם אֵת אֵלִיָּה הַנָּבִיא</span>
+      vor dem großen und ehrfurchtgebietenden Tag. ·
+      <strong>Maleachi 3:24</strong> — <span class="sources-he">וְהֵשִׁיב לֵב אָבוֹת עַל בָּנִים</span>;
+      Grundlage der Klimax.
+      <br><br>
+      <em>Korrekturhinweis:</em> Der Zohar behandelt <em>Pinchas ist Elijah</em> im Abschnitt <em>Pinchas</em>
+      (Zohar III, u.a. Ra'aya Mehemna). Die tragende explizite Quelle bleibt Jalkut Schimoni 771;
+      als früheste Bezeugung gilt Targum Pseudo-Jonatan.
+      <br><br>
+      <strong>שְׁמוֹת קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht durchgehend für das
+      Tetragramm; <span class="sources-he">הָאֱלֹהִים</span> erscheint ausschließlich im direkten
+      Bibelzitat (Melachim I 18:39).&nbsp;</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

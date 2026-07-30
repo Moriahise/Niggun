@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>גִּנַּת אֱגוֹז · שַׁעַר א׳ · שַׁעַר הַהֲוָיָה — יְקֹוָק (הַוֶּסֶנְס-זַיְן) · ז׳ קְרִיאוֹת · מַקָּאם רַאסְט · Sephardische Kabbalah-Vertonung (vertieft)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      --work:#C8A048; --work-lt:#F0CC66; --work-dim:#8B7020;
+      --work-bg:rgba(200,160,72,.08); --work-bdr:rgba(200,160,72,.36); --work-glow:rgba(240,204,102,.20);
+      --myst:#8A6CB8; --myst-lt:#B598E0; --myst-dim:#5A4080;
+      --myst-bg:rgba(138,108,184,.08); --myst-bdr:rgba(138,108,184,.34); --myst-glow:rgba(181,152,224,.20);
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,72,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(138,108,184,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(200,160,72,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(181,152,224,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(14,10,20,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,102,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(181,152,224,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,96,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,80,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(181,152,224,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,72,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(181,152,224,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,96,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    .page-header { text-align:center; margin-bottom:70px; padding-bottom:40px; border-bottom:1px solid var(--work-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--work); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--work-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--work); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--work-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.0em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--work-glow), 0 0 140px var(--myst-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.12em; color:var(--work-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:820px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--myst-lt); font-style:italic; }
+    .special-note { max-width:820px; margin:26px auto 0; padding:16px 20px; background:var(--myst-bg); border:1px dashed var(--myst-bdr); border-radius:6px; font-family:'Cormorant Garamond',serif; font-size:.86em; color:var(--text); line-height:1.85; text-align:right; direction:rtl; }
+    .special-note .lbl { color:var(--myst-lt); font-style:italic; letter-spacing:.06em; }
+    .special-note b { color:var(--ivory-dim); }
+
+    .song-section { margin-bottom:70px; }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:44px; padding:24px 26px; background:var(--layer); border:1px solid var(--myst-bdr); border-radius:10px; }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .work-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--work-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:linear-gradient(90deg,var(--maqam-saba),var(--maqam-bayat)); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A88850; line-height:1.6; }
+
+    /* KRI'AH BLOCK */
+    .kria-block { margin-bottom:40px; padding-bottom:24px; border-bottom:1px solid rgba(200,160,72,.14); }
+    .kria-top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+    .kria-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.16em; text-transform:uppercase; color:var(--work-lt); white-space:nowrap; }
+    .kria-label { font-family:'Frank Ruhl Libre',serif; font-size:1.02em; font-weight:700; direction:rtl; color:var(--work); letter-spacing:.05em; }
+    .kria-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--silver-dim); margin-right:12px; opacity:.85; }
+    .kria-dyn { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--text); margin:8px 0 14px; padding:9px 14px; background:rgba(138,108,184,.05); border-left:2px solid var(--myst-dim); }
+    .line-status { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.66em; letter-spacing:.04em; padding:1px 7px; border-radius:4px; margin-right:8px; white-space:nowrap; }
+    .st-verb { color:var(--work-lt); background:rgba(200,160,72,.12); border:1px solid var(--work-bdr); }
+    .st-ess { color:var(--myst-lt); background:var(--myst-bg); border:1px dashed var(--myst-bdr); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.08em; color:var(--ivory); direction:rtl; line-height:2.0; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.9; }
+    .kria-commentary { font-family:'Cormorant Garamond',serif; font-size:.92em; color:var(--text); line-height:1.9; margin-top:16px; padding-left:15px; border-left:2px solid var(--work-dim); }
+    .kria-commentary strong { color:var(--ivory); }
+    .kria-commentary em { color:var(--work-lt); font-style:italic; }
+
+    .tikkun-box { background:rgba(200,160,72,.06); border:1px solid rgba(200,160,72,.30); padding:30px; margin-top:44px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A88850; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--work-lt); font-style:italic; }
+    .tikkun-list { margin:16px 0 0; padding:0; list-style:none; counter-reset:tik; }
+    .tikkun-list li { font-family:'Cormorant Garamond',serif; font-size:.94em; color:var(--text); line-height:1.85; margin-bottom:12px; padding-left:34px; position:relative; }
+    .tikkun-list li::before { counter-increment:tik; content:'('counter(tik)')'; position:absolute; left:0; color:var(--work-lt); font-style:italic; }
+    .tikkun-list em { color:var(--work-lt); font-style:italic; }
+    .tikkun-list strong { color:var(--ivory); }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(200,160,72,.15); color:var(--work-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    .climax-box { background:linear-gradient(135deg,rgba(200,160,72,.18),rgba(138,108,184,.12),rgba(6,8,8,.88)); border:2px solid var(--work-bdr); padding:32px; margin-top:44px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--work-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--work-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--work-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--myst-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--myst-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.9; color:var(--myst-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--work-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(24,18,32,.78),rgba(6,8,8,.92)); border:1px solid var(--myst-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--myst-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--myst-lt); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A88850; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--work-lt); }
+    .key-moment { font-size:.86em; color:var(--work-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--work-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--myst-dim); line-height:1.78; }
+
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--work-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--work-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--work-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:840px; margin:0 auto 24px; text-align:left; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--work-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--work-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.18em; }
+      .footer-he { font-size:1.10em; }
+      .footer-de { text-align:right; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Kabbalah-Vertonung · Sefer HaParashot bemo Maqam · Vertieft in sieben Kriot</div>
+    <div class="sefer-letter">ג</div>
+    <h1 class="page-title-he">שַׁעַר הַהֲוָיָה — שֵׁם הָעֶצֶם הַמּוֹרֶה עַל אֲמִתָּתוֹ</h1>
+    <div class="page-subtitle-he">שַׁעַר א׳ · ר׳ יוֹסֵף גִּיקַטִילְיָא · גִּנַּת אֱגוֹז · תִּפְאֶרֶת · מַקָּאם רַאסְט · ~64 BPM · שֶׁבַע קְרִיאוֹת</div>
+    <div class="page-title-de">Ginat Egoz · Erstes Tor — Das Tor des Seins (Hawaja) — יְקֹוָק, das Wesenssein · vertieft in sieben Kriot · Tiferet · Maqam Rast</div>
+    <p class="page-desc">Das <strong>erste Tor</strong> des Nussgartens öffnet den Wesensnamen selbst: <em>„Wisse — der Name Hawaja ist der Name, der auf die Wahrheit seines Seins hinweist und sie bezeugt; der eine einzige Name, der von seinem Sein und seiner Anfangslosigkeit zeugt.“</em> Hier wird dieser Eröffnungsabschnitt in <strong>sieben Kriot</strong> entfaltet — im klaren, aufgerichteten Maqam <em>Rast</em> (Tiferet, ~64 BPM): von der Aufforderung <em>„דַּע לְךָ“</em> über die Absonderung von aller Materie und Form bis zur Koda, dass „sein Name“ nicht die Buchstabengestalt meint, sondern die Wahrheit des Wesens des Seins. Der Tor-Wortlaut Gikatillas bleibt 1:1; vertieft wird die <em>Form</em>. Sechs der sieben Kriot tragen <strong>verifizierten Verbatim-Text (◆)</strong>, doppelt gegengeprüft an zwei unabhängigen Quellen.</p>
+    <div class="special-note">
+      <span class="lbl">שִׂים לֵב · Namens-Sonderfall (wie Schaʿarei Orah):</span> Weil dieses Werk <b>von den Namen handelt</b>, ist die Projekt-Regel „Tetragramm stets als אֲדֹנָי“ hier ausgesetzt. Das Tetragramm erscheint als die ehrfürchtige Druckform <b>יְקֹוָק</b> — niemals die vier Buchstaben ausgeschrieben. <b>אֲדֹנָי</b> bleibt als eigener Name (הֵיכָל · מַלְכוּת · ס״ה = 65) erhalten. Im gesungenen Suno-Feld wird das Tetragramm als <b>„HaShem“</b> gesprochen (nicht „Adonai“, zur Vermeidung der Kollision).
+    </div>
+  </header>
+
+  <section class="song-section">
+
+    <div class="song-header">
+      <div class="song-meta">
+        <div class="work-badge">Standalone · Sephardische Kabbalah · ר׳ יוֹסֵף גִּיקַטִילְיָא (רִאשׁוֹן · ~ה׳ל״ד) · שַׁעַר א׳</div>
+        <div class="song-title-he">שַׁעַר הַהֲוָיָה — דַּע לְךָ שֶׁשֵּׁם הַהֲוָיָה</div>
+        <div class="song-title-de">Das Tor des Seins — „Wisse, dass der Name Hawaja …“ · sieben Kriot in Maqam Rast</div>
+        <span class="maqam-badge" style="background:linear-gradient(90deg,var(--maqam-rast),var(--maqam-ajam))">תִּפְאֶרֶת · Tiferet · מַקָּאם רַאסְט · Rast · ~64 BPM · rubato</span>
+        <div class="source-badge">גִּנַּת אֱגוֹז · שַׁעַר הַהֲוָיָה (Eröffnung, verbatim doppelt gegengeprüft) · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה א׳ · תַּלְמוּד בַּבְלִי פְּסָחִים נ׳. · זְכַרְיָה י״ד:ט׳</div>
+      </div>
+    </div>
+
+    <!-- ── KRI'AH א׳ · דַּע לְךָ ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה א׳</span>
+        <span class="kria-label">דַּע לְךָ — הַשֵּׁם הַמּוֹרֶה עַל אֲמִתָּתוֹ<span class="kria-label-de">Wisse — der Name, der Seine Wahrheit bezeugt</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast clear balanced royal mode, mp opening, upright and lucid, biblical Hebrew Aleppo-Yerushalayim, rubato ~64 BPM] Harfe, Oud und Ney: Rast klar und aufgerichtet — die ruhige Aufforderung „Wisse“, ein lichter, gegründeter Ton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>דַּע לְךָ שֶׁשֵּׁם הַהֲוָיָה הוּא הַשֵּׁם הַמּוֹרֶה וְהַמֵּעִיד עַל אֲמִתָּתוֹ יִתְבָּרֵךְ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wisse: Der Name Hawaja (das Sein) ist der Name, der auf die Wahrheit seines gesegneten Daseins hinweist und sie bezeugt.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Das Tor öffnet nicht mit Spekulation, sondern mit einer Aufforderung: <em>„דַּע לְךָ“</em> — wisse für dich. Der Wesensname (im Druck יְקֹוָק) ist der <strong>Name des Seins</strong> selbst — er weist nicht auf eine Wirkung, sondern <em>morech u-me'id</em>: er zeigt und bezeugt die Wahrheit des Daseins. Das ist die verifizierte Eröffnung von Gikatillas erstem Tor.</div>
+    </div>
+
+    <!-- ── KRI'AH ב׳ · שֵׁם אֶחָד לְבַד ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ב׳</span>
+        <span class="kria-label">שֵׁם אֶחָד לְבַד — הֲוָיָה וְקַדְמוּת<span class="kria-label-de">Ein einziger Name — Sein und Anfangslosigkeit</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, mp to mf, a single clear sustained line, one name held] Ein einziger getragener Ton — der eine Name, der von Anfangslosigkeit zeugt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>וְהוּא שֵׁם אֶחָד לְבַד אֲשֶׁר מֵעִיד עַל הֲוָיָתוֹ וְקַדְמוּתוֹ יִתְבָּרֵךְ שְׁמוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und er ist der eine einzige Name, der von seinem Sein und seiner Anfangslosigkeit zeugt — gesegnet sei sein Name.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Nur <em>ein</em> Name bezeugt zugleich <strong>הֲוָיָה</strong> (Sein) und <strong>קַדְמוּת</strong> (Anfangslosigkeit, dass Er keinem anderen Sein nachfolgt). Kein Kinuj kann das — die Beinamen entstanden mit der Schöpfung; dieser Name allein reicht vor alle Zeit zurück. Rambam gründet darauf die erste Mizwah: zu wissen, dass ein erstes Sein da ist, das allem Dasein vorausgeht (הלכות יְסוֹדֵי הַתּוֹרָה א׳).</div>
+    </div>
+
+    <!-- ── KRI'AH ג׳ · נִבְדָּל מִכָּל צַד הֶרְגֵּשׁ ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ג׳</span>
+        <span class="kria-label">נִבְדָּל מִכָּל צַד הֶרְגֵּשׁ — חֹמֶר וְצוּרָה<span class="kria-label-de">Abgesondert von aller Wahrnehmung — Materie und Form</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, mf, wide open intervals, sense of transcendence and space] Weite offene Intervalle — die Absonderung von Materie und Form.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>וּמַרְאֶה עַל הֱיוֹתוֹ נִבְדָּל מִכָּל צַד הֶרְגֵּשׁ, חֹמֶר וְצוּרָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und er zeigt, dass er abgesondert ist von jeder Seite der Wahrnehmung, von Materie und Form.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Der Name bezeugt nicht nur <em>dass</em> Er ist, sondern <em>wie</em> Er ist: <strong>נִבְדָּל</strong> — abgesondert von aller Sinneswahrnehmung, jenseits von Materie (חֹמֶר) und Form (צוּרָה). Er ist kein Gegenstand unter Gegenständen; darum kann kein Bild, keine Buchstabengestalt Ihn fassen — ein Gedanke, der in Kri'ah ז׳ seinen Höhepunkt findet.</div>
+    </div>
+
+    <!-- ── KRI'AH ד׳ · מֵאֲמִתַּת הַנִּמְצָאוֹת ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ד׳</span>
+        <span class="kria-label">מֵאֲמִתַּת הַנִּמְצָאוֹת — עֵדוּת הַבְּרוּאִים<span class="kria-label-de">Aus der Wahrheit der Existenten — das Zeugnis der Geschöpfe</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, mf building, gathering upward motion, the witness of all being] Aufsammelnde, aufsteigende Bewegung — alles Seiende bezeugt den Einen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>וּמֵאֲמִתַּת מְצִיאוּת שְׁאָר כָּל הַנִּמְצָאוֹת כֻּלָּהּ, נוּכַל לְהָעִיד עַל אֲמִתַּת מְצִיאוּתוֹ יִתְבָּרֵךְ, כִּי מֵאַחַר שֶׁהוּא אֲמִתַּת כָּל הַהֲוָיָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und aus der Wahrheit des Daseins aller übrigen Existierenden können wir auf die Wahrheit seines Daseins zeugen — denn er ist die Wahrheit alles Seins.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Ein doppelter Zeugen-Gang: der Name bezeugt das Sein — und <em>umgekehrt</em> bezeugt alles Seiende Ihn. Weil jedes Existierende sein Dasein von Ihm empfängt, zeigt gerade die Wirklichkeit der Welt zurück auf <strong>אֲמִתַּת כָּל הַהֲוָיָה</strong> — die Wahrheit alles Seins. (Diese vollere Zeile ist an zwei unabhängigen Quellen verbatim bestätigt.)</div>
+    </div>
+
+    <!-- ── KRI'AH ה׳ · יְסוֹד הֲוָיָתָם ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ה׳</span>
+        <span class="kria-label">יְסוֹד הֲוָיָתָם — הַתְּלוּת הַגְּמוּרָה<span class="kria-label-de">Grund ihres Seins — die vollkommene Abhängigkeit</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, f affirmative peak, full lucid resonance on the foundation of being] Voller lichter Klang — der Grund allen Seins, klimaktisch aufgerichtet.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>כָּל הַנִּמְצָאִים תְּלוּיִים בּוֹ, וְכָל הַנִּמְצָאִים יִתְבַּטְּלוּ לְבִטּוּלוֹ, מִפְּנֵי שֶׁהוּא יְסוֹד הֲוָיָתָם וּמְצִיאוּתָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Alle Existierenden hängen von ihm ab, und alle Existierenden würden in seiner Aufhebung vergehen — denn er ist der Grund ihres Seins und Daseins.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Der Höhepunkt der Lehre: alles Sein ist <strong>תָּלוּי</strong> — hängend an Ihm, in jedem Augenblick getragen. Nicht nur am Anfang, sondern beständig; würde die Tragung aufhören, verginge alles. Das ist die klassische sephardische Ontologie (Rambam יְסוֹדֵי הַתּוֹרָה א׳): der Name Hawaja bedeutet <em>notwendiges Sein</em>, von dem alles mögliche Sein abhängt. In Rast erreicht die Vertonung hier ihr fortissimo.</div>
+    </div>
+
+    <!-- ── KRI'AH ו׳ · שְׁלוֹשָׁה זְמַנִּים ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ו׳</span>
+        <span class="kria-label">שְׁלוֹשָׁה זְמַנִּים — הָיָה הֹוֶה וְיִהְיֶה<span class="kria-label-de">Drei Zeiten — war, ist und wird sein</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, mf receding, three gentle phrases folding into one sustained tone] Drei sanfte Phrasen, die in einen Ton zusammenfallen — die drei Zeiten in einem Namen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-ess">○ Essenz (Deutung)</span>שֵׁם זֶה כּוֹלֵל שְׁלוֹשָׁה זְמַנִּים — הָיָה, הֹוֶה וְיִהְיֶה — וּמֵעִיד עַל קַדְמוּתוֹ וְנִצְחִיּוּתוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Dieser Name umfasst drei Zeiten — war, ist und wird sein (Haja, Howe, Jihje) — und zeugt von seiner Anfangslosigkeit und Ewigkeit.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Die klassische Deutung des Wesensnamens: seine Buchstaben verweben <em>הָיָה · הֹוֶה · יִהְיֶה</em> — war, ist, wird sein — in einem einzigen Wort, das die Zeit übersteigt. <em>(Als Deutung ○ gekennzeichnet — sie ist traditionell fest verankert, aber im abgerufenen Verbatim-Ausschnitt nicht wörtlich belegt; daher ehrlich als Essenz markiert.)</em></div>
+    </div>
+
+    <!-- ── KRI'AH ז׳ · לֹא לְצוּרַת הָאוֹתִיּוֹת ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ז׳</span>
+        <span class="kria-label">הַקּוֹדָה — לֹא לְצוּרַת הָאוֹתִיּוֹת<span class="kria-label-de">Die Koda — nicht die Gestalt der Buchstaben</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo ancient harp and oud with ney — Rast, mf to a hushed lucid close, one held tone dissolving into breath] Ein gehaltener, lichter Ton, der sich in Atem auflöst — das Wesen hinter den Buchstaben.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · שער ההויה</span>מַה שֶּׁאָנוּ אוֹמְרִים ״שְׁמוֹ״ — הַכַּוָּנָה אֵינָהּ לְצוּרַת הָאוֹתִיּוֹת כִּי אִם לַאֲמִתַּת מַהוּת הַהֲוָיָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wenn wir „sein Name“ sagen — so zielt die Absicht nicht auf die Gestalt der Buchstaben, sondern auf die Wahrheit des Wesens des Seins (Hawaja).</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Die Koda kehrt das ganze Tor nach innen: der Name ist kein Zeichen, das man betrachtet, sondern ein Fenster auf das <strong>Wesen des Seins</strong>. Darum <em>„נִכְתָּב יְקֹוָק וְנִקְרָא אֲדֹנָי“</em> (פְּסָחִים נ׳.) — die geschriebene Gestalt und der gelesene Klang weisen beide über sich hinaus. Und darum ist die volle Offenbarung dieses Namens der Horizont der Geulah: <strong>in den Tagen des Maschiach ben David</strong> wird Sein Name als einer erkannt (זְכַרְיָה י״ד:ט׳).</div>
+    </div>
+
+    <!-- ══ TIKKUN-BOX ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — הַכַּוָּנָה אֶל מַהוּת הַהֲוָיָה</div>
+        <div class="tikkun-title-de">Tikkun — die Kawanah auf das Wesen des Seins, nicht auf die Buchstaben</div>
+        <div class="tikkun-src">גִּנַּת אֱגוֹז · שַׁעַר הַהֲוָיָה · רמב״ם הלכות יְסוֹדֵי הַתּוֹרָה א׳ (מְצִיאוּת הָאֵל · מִצְוָה רִאשׁוֹנָה) · תַּלְמוּד בַּבְלִי פְּסָחִים נ׳. („נִכְתָּב יְקֹוָק נִקְרָא אֲדֹנָי“) · רש״ש · נְהַר שָׁלוֹם · בן איש חי · רמח״ל · מְסִלַּת יְשָׁרִים · זְכַרְיָה י״ד:ט׳</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Das erste Tor ist keine Metaphysik zum Bestaunen, sondern eine Ausrichtung des Herzens.</strong> Gikatilla sagt am Ende ausdrücklich: wenn wir „sein Name“ sagen, meinen wir nicht die Buchstabengestalt, sondern <em>die Wahrheit des Wesens des Seins</em>. Sephardisch wird daraus eine tägliche Kawanah: bei jeder Nennung des Namens richtet sich das Herz nicht auf ein Wort, sondern auf <strong>Den, von dem alles Sein in jedem Augenblick abhängt</strong> (כָּל הַנִּמְצָאִים תְּלוּיִים בּוֹ). <strong>Rambam</strong> (הלכות יְסוֹדֵי הַתּוֹרָה א׳) fasst dasselbe als erste Mizwah: zu wissen, dass ein erstes, notwendiges Sein da ist, und dass alles Übrige nur durch Es besteht. <strong>Rashash</strong> und <strong>Ben Ish Chai</strong> geben die praktische Kawanah — geschrieben יְקֹוָק, gelesen אֲדֹנָי, ein Yichud —; <strong>Ramchal</strong> (מְסִלַּת יְשָׁרִים) das Ziel: sich am Wesensnamen zu erfreuen, nicht an Begriffen.
+        <ul class="tikkun-list">
+          <li><em>„דַּע לְךָ“ als Morgen-Kawanah:</em> Vor der Amidah einen Augenblick festhalten — der Name, den ich gleich nenne, ist der Name des Seins selbst, von dem mein eigenes Dasein in diesem Moment abhängt (שער ההויה · Rambam יְסוֹדֵי הַתּוֹרָה א׳).</li>
+          <li><em>Kawanah bei „שְׁמַע … אֲדֹנָי אֶחָד“:</em> Sephardisch beim Schma — der gelesene Name Adonai und der geschriebene Wesensname sind <em>einer</em>; „echad“ meint die Wahrheit des Seins, nicht die Lautgestalt (Kri'ah ז׳).</li>
+          <li><em>Nicht die Buchstaben, sondern das Wesen:</em> Beim Sehen des geschriebenen Namens im Siddur die Kawanah — <em>„הַכַּוָּנָה … לַאֲמִתַּת מַהוּת הַהֲוָיָה“</em> —, das Auge ruht auf der Form, das Herz zielt hindurch auf das Sein.</li>
+          <li><em>Tlut — die Abhängigkeit spüren:</em> Einmal täglich, etwa beim Modeh Ani oder beim ersten Atemzug, bewusst anerkennen: mein Sein ist <em>תָּלוּי בּוֹ</em>, getragen in diesem Augenblick — sonst verginge es (Kri'ah ה׳).</li>
+          <li><em>„נִכְתָּב יְקֹוָק נִקְרָא אֲדֹנָי“ vor Mitzwot:</em> Die sephardische Yichud-Formel <em>לְשֵׁם יִחוּד קֻדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ</em> leise sprechen — die Vereinigung von verborgenem Wesen und offenbarer Herrschaft (Ben Ish Chai · Rashash).</li>
+          <li><em>Horizont der Geulah:</em> Beim Aleinu-Schluss <em>„בַּיּוֹם הַהוּא יִהְיֶה יְקֹוָק אֶחָד וּשְׁמוֹ אֶחָד“</em> die Kawanah — dass die volle Erkenntnis dieses Namens in den Tagen des Maschiach ben David offenbar werde (זְכַרְיָה י״ד:ט׳).</li>
+        </ul>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שֵׁם הַהֲוָיָה</span>
+        <span class="tikkun-tag">אֲמִתַּת מַהוּת הַהֲוָיָה</span>
+        <span class="tikkun-tag">כָּל הַנִּמְצָאִים תְּלוּיִים בּוֹ</span>
+        <span class="tikkun-tag">נִכְתָּב יְקֹוָק נִקְרָא אֲדֹנָי</span>
+        <span class="tikkun-tag">יְסוֹד הֲוָיָתָם</span>
+      </div>
+    </div>
+
+    <!-- ══ KLIMAX ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · Klimax — der Kern des Tores</div>
+      <div class="climax-verse-he">כָּל הַנִּמְצָאִים תְּלוּיִים בּוֹ · מִפְּנֵי שֶׁהוּא יְסוֹד הֲוָיָתָם וּמְצִיאוּתָם</div>
+      <div class="climax-verse-de">Alle Existierenden hängen von ihm ab — denn er ist der Grund ihres Seins und Daseins.</div>
+      <div class="climax-src">גִּנַּת אֱגוֹז · שַׁעַר הַהֲוָיָה (verbatim) · Rast, f · Rambam יְסוֹדֵי הַתּוֹרָה א׳</div>
+    </div>
+
+    <!-- ══ KODA ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · Koda-Whisper (mf → Atem)</div>
+      <div class="coda-whisper">
+        …לֹא לְצוּרַת הָאוֹתִיּוֹת…<br>
+        כִּי אִם לַאֲמִתַּת מַהוּת הַהֲוָיָה…<br>
+        <strong>בַּיּוֹם הַהוּא יִהְיֶה יְקֹוָק אֶחָד וּשְׁמוֹ אֶחָד — עַד בִּיאַת מָשִׁיחַ בֶּן דָּוִד</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">שַׁעַר הַהֲוָיָה · שֵׁם הָעֶצֶם · תִּפְאֶרֶת · מַקָּאם רַאסְט · שֶׁבַע קְרִיאוֹת · אֲמִתַּת מַהוּת הַהֲוָיָה</p>
+    <p class="footer-chain">
+      גִּנַּת אֱגוֹז · ר׳ יוֹסֵף גִּיקַטִילְיָא · נוּסַּח הָרַשַׁ״שׁ · יְרוּשָׁלַיִם · אֲרָם צוֹבָה · מָרוֹקוֹ · תֵּימָן
+    </p>
+    <p class="footer-de">
+      <strong>Namens-Sonderfall (transparent offengelegt):</strong> Weil Ginat Egoz <em>von den Namen handelt</em>, ist die Projekt-Regel „Tetragramm stets als אֲדֹנָי“ hier ausgesetzt (wie bei Schaʿarei Orah). Das Tetragramm erscheint als ehrfürchtige Druckform <strong>יְקֹוָק</strong> — nie die vier Buchstaben ausgeschrieben; Gikatillas eigene Bezeichnung <strong>שֵׁם הַהֲוָיָה</strong> (der Name des Seins) bleibt als solche erhalten; <strong>אֲדֹנָי</strong> bleibt eigener Name (Heichal · Malchut · ס״ה = 65); im gesungenen Suno-Feld wird das Tetragramm als <strong>„HaShem“</strong> gesprochen. Das Konzeptwort <em>הֲוָיָה</em> (Sein) wird nie in einen Gottesnamen verwandelt. — <strong>Maschiach ben David</strong> ausschließlich, affirmativ.
+      <br><br>
+      <strong>Quellen-Verifizierung (doppelt gegengeprüft):</strong> Die Eröffnung von Sha'ar HaHavayah wurde an <em>zwei unabhängigen Quellen</em> wörtlich bestätigt — <strong>sechs der sieben Kriot (א׳–ה׳, ז׳) tragen Verbatim-Text (◆)</strong>: <em>„דַּע לְךָ שֶׁשֵּׁם הַהֲוָיָה הוּא הַשֵּׁם הַמּוֹרֶה וְהַמֵּעִיד עַל אֲמִתָּתוֹ … שֵׁם אֶחָד לְבַד … נִבְדָּל מִכָּל צַד הֶרְגֵּשׁ, חֹמֶר וְצוּרָה … כָּל הַנִּמְצָאִים תְּלוּיִים בּוֹ … יְסוֹד הֲוָיָתָם וּמְצִיאוּתָם … הַכַּוָּנָה … לַאֲמִתַּת מַהוּת הַהֲוָיָה.“</em> <strong>Kri'ah ו׳</strong> (drei Zeiten הָיָה/הֹוֶה/יִהְיֶה) ist als <em>Deutung (○)</em> markiert — traditionell fest, im abgerufenen Ausschnitt nicht wörtlich belegt, daher ehrlich nicht als Verbatim ausgegeben. <strong>Apparat</strong> — <strong>Rambam · Hilchot Jesodei HaTora 1</strong> (מְצִיאוּת הָאֵל · notwendiges Sein · erste Mizwah); <strong>Talmud Bavli Pesachim 50a</strong>; <strong>Rashash · Nahar Schalom</strong> und <strong>Ben Ish Chai</strong> (Yichud, in Projektdatei verifiziert); <strong>Ramchal · Mesillat Yescharim</strong>; <strong>Secharja 14:9</strong>.
+      <br><br>
+      <strong>Anti-Fabrikations-Hinweis:</strong> Der erste Ginat-Egoz-Durchgang hatte diese Eröffnung bereits als verbatim geführt; die Doppelprüfung hat sie nun an zwei unabhängigen Quellen <em>bestätigt</em> und die drei-Zeiten-Zeile korrekt als Deutung abgestuft. Nichts wurde als Gikatilla-Wortlaut erfunden. Projekt-Rahmen schließt Raschi · Malbim · Metzudat aus.
+    </p>
+    <p class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</p>
+  </div>
+
+</div>
+
+
+</body></html>

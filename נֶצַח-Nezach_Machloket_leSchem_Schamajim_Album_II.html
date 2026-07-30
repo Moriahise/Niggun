@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>נֶצַח — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם · עֵץ הַחַיִּים Album II · שִׁיר ז</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   נֶצַח — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם
+   עֵץ הַחַיִּים · Album II · שִׁיר ז מִתּוֹךְ י
+   נֶצַח · Maqam Bayat · Gitarre & Stimme · 64 BPM (dialogisch)
+   Zwei Stimmen: Ergas-Türkis · Ricchi-Ocker · Nezach-Violett · Emet-Gold
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#06070C; --deep:#0A0C12; --layer:#14171E; --card:#080A0F;
+
+  /* ── אֶרְגָּס — die fließende Stimme, Türkis ── */
+  --erg:#2E7A88; --erg-lt:#64B0BC; --erg-vlt:#9CD4DC; --erg-dp:#14424A;
+
+  /* ── רִיקִי — die begrenzende Stimme, Ocker ── */
+  --ric:#B8823A; --ric-lt:#DCAA66; --ric-vlt:#F0CE9A; --ric-dp:#6A4818;
+
+  /* ── נֶצַח — der bleibende Faden, Violett ── */
+  --nez:#5A4A9E; --nez-lt:#8C7CD0; --nez-vlt:#B8ACE8; --nez-dp:#2A2058;
+
+  /* ── אֱמֶת — blasses Gold ── */
+  --emet:#D8C88A; --emet-lt:#F0E4B8;
+
+  --sage:#4A6840; --sage-lt:#7AA870;
+  --teal:#2A6058; --teal-lt:#50A098;
+  --parch-dim:#9c9a90;
+  --ivory:#e2e2de; --ivory-lt:#f4f4f0; --ivory-dim:#868682;
+  --silver:#b4b4b0; --silver-dim:#60605c;
+  --text:#96968f;
+  --guitar:#c08840; --guitar-lt:#dca860;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 4%,  rgba(184,172,232,.13) 0%,transparent 38%),
+    radial-gradient(ellipse at 14% 30%, rgba(46,122,136,.22)  0%,transparent 44%),
+    radial-gradient(ellipse at 86% 34%, rgba(184,130,58,.20)  0%,transparent 44%),
+    radial-gradient(ellipse at 22% 68%, rgba(46,122,136,.14)  0%,transparent 42%),
+    radial-gradient(ellipse at 78% 72%, rgba(184,130,58,.13)  0%,transparent 42%),
+    radial-gradient(ellipse at 50% 92%, rgba(90,74,158,.20)   0%,transparent 42%),
+    radial-gradient(ellipse at 50% 52%, rgba(6,7,12,.78)      0%,transparent 74%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 50% 6%,rgba(240,228,184,.60) 0%,transparent 100%),
+    radial-gradient(1px 1px at 18% 14%,rgba(156,212,220,.50) 0%,transparent 100%),
+    radial-gradient(1px 1px at 82% 17%,rgba(240,206,154,.48) 0%,transparent 100%),
+    radial-gradient(1px 1px at 30% 40%,rgba(100,176,188,.44) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 70% 44%,rgba(220,170,102,.44) 0%,transparent 100%),
+    radial-gradient(1px 1px at 12% 70%,rgba(184,172,232,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 74%,rgba(140,124,208,.34) 0%,transparent 100%),
+    radial-gradient(1px 1px at 46% 92%,rgba(216,200,138,.32) 0%,transparent 100%);
+}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;background:rgba(6,7,12,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(184,172,232,.22);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{font-family:'Frank Ruhl Libre',serif;font-weight:900;padding:12px 22px;
+  border-right:1px solid rgba(184,172,232,.20);white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.nav-brand-main{font-size:.95em;color:var(--nez-vlt);letter-spacing:.05em;direction:rtl;}
+.nav-brand-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.50em;
+  color:var(--silver-dim);font-weight:300;letter-spacing:.14em;direction:ltr;}
+.nav-link{font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(184,172,232,.56);text-decoration:none;padding:0 11px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;}
+.nav-link:hover{color:var(--nez-vlt);border-bottom-color:var(--nez-lt);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:48px;padding-bottom:56px;
+  border-bottom:1px solid rgba(184,172,232,.18);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--nez-dp);font-size:.52em;letter-spacing:.65em;}
+.album-tag{font-family:'Frank Ruhl Libre',serif;font-size:.72em;font-weight:700;letter-spacing:.2em;
+  color:var(--nez-vlt);border:1px solid rgba(140,124,208,.40);padding:4px 16px;
+  display:inline-block;margin-bottom:18px;direction:rtl;background:rgba(90,74,158,.12);}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--emet);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.9;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.07em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 90px rgba(140,124,208,.46),0 0 180px rgba(46,122,136,.24);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:22px;}
+.epigraph{font-family:'Frank Ruhl Libre',serif;font-size:1.16em;color:var(--ivory);
+  direction:rtl;line-height:1.9;margin:0 auto 6px;max-width:680px;}
+.epigraph-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--emet);letter-spacing:.10em;margin-bottom:24px;opacity:.85;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 22px;}
+
+/* ── ZWEI STIMMEN, DIE NICHT ENDEN ── */
+.dialog{position:relative;width:100%;max-width:600px;height:66px;margin:0 auto 10px;overflow:hidden;}
+.dialog i{position:absolute;height:3px;border-radius:2px;}
+.dialog i.e{background:linear-gradient(90deg,var(--erg-vlt),var(--erg));top:22px;}
+.dialog i.r{background:linear-gradient(90deg,var(--ric-vlt),var(--ric));top:40px;}
+.d1{left:2%;width:14%;} .d2{left:19%;width:12%;} .d3{left:34%;width:15%;}
+.d4{left:52%;width:11%;} .d5{left:66%;width:13%;} .d6{left:82%;width:10%;opacity:.5;}
+.dialog::after{content:'';position:absolute;right:0;top:0;bottom:0;width:22%;
+  background:linear-gradient(90deg,transparent,var(--bg));}
+.dialog-lbl{display:flex;max-width:600px;margin:0 auto 6px;}
+.dialog-lbl span{flex:1;font-family:'Frank Ruhl Libre',serif;font-size:.78em;direction:rtl;text-align:center;}
+.dialog-lbl .e{color:var(--erg-lt);}
+.dialog-lbl .r{color:var(--ric-lt);}
+.dialog-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);letter-spacing:.13em;margin-bottom:6px;}
+.dialog-cap2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--nez-lt);letter-spacing:.08em;margin-bottom:22px;}
+
+/* ── SEFIROT-LEITER (10) ── */
+.sef10{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:5px;
+  border:1px solid rgba(184,172,232,.20);padding:14px 16px;background:rgba(184,172,232,.03);
+  max-width:800px;margin:0 auto 12px;}
+.sf{font-family:'Frank Ruhl Libre',serif;font-size:.84em;direction:rtl;padding:5px 11px;
+  border:1px solid transparent;color:var(--silver-dim);opacity:.45;}
+.sf.done{opacity:.62;color:var(--nez-dp);}
+.sf.next{opacity:.72;color:var(--erg-lt);border-color:rgba(46,122,136,.34);border-style:dashed;}
+.sf.now{color:var(--nez-vlt);opacity:1;border-color:rgba(140,124,208,.52);
+  background:rgba(90,74,158,.18);font-weight:700;box-shadow:0 0 26px rgba(90,74,158,.22) inset;}
+.sf-sep{color:var(--nez-dp);opacity:.8;font-size:.66em;}
+.sef10-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.70em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:20px;}
+
+.world-chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(184,172,232,.20);padding:12px 26px;background:rgba(184,172,232,.03);margin-top:16px;}
+.wc-item{font-family:'Frank Ruhl Libre',serif;font-size:.9em;direction:rtl;padding:2px 10px;border:1px solid transparent;}
+.wc-active{color:var(--nez-vlt);border-color:rgba(140,124,208,.32);background:rgba(90,74,158,.12);}
+.wc-dim{color:var(--silver-dim);opacity:.4;}
+.wc-sep{color:var(--nez-dp);opacity:.8;font-size:.7em;}
+.wc-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-top:8px;}
+
+/* ── BPM & SCHLAGWÖRTER ── */
+.meta-box{background:linear-gradient(135deg,rgba(90,74,158,.15),rgba(6,7,12,.88));
+  border:1px solid rgba(140,124,208,.32);border-left:4px solid var(--nez-lt);
+  padding:24px 32px;margin-bottom:44px;position:relative;}
+.meta-box::before{content:'נְתוּנֵי בִּצּוּעַ — Tempo & Schlagwörter';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--nez-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.bpm-row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-bottom:18px;}
+.bpm-cell{border:1px solid rgba(184,172,232,.26);padding:12px 22px;background:rgba(184,172,232,.05);
+  text-align:center;flex:1;min-width:130px;}
+.bpm-v{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--ivory-lt);
+  display:block;line-height:1.2;letter-spacing:.03em;}
+.bpm-l{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--silver-dim);letter-spacing:.12em;display:block;margin-top:3px;}
+.kw-h{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--nez-vlt);letter-spacing:.14em;display:block;margin:16px 0 7px;}
+.kw-line{font-family:'EB Garamond',serif;font-size:.90em;color:var(--ivory);line-height:1.85;
+  border-left:2px solid rgba(140,124,208,.34);padding:8px 12px 8px 16px;background:rgba(90,74,158,.05);}
+.kw-line.rtl{direction:rtl;border-left:none;border-right:2px solid rgba(140,124,208,.34);
+  padding:8px 16px 8px 12px;font-family:'Frank Ruhl Libre',serif;font-size:.92em;}
+.meta-note{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.82;margin-top:16px;}
+.meta-note strong{color:var(--ivory-lt);}
+
+/* ── QUELLENPRÜFUNG ── */
+.crit-box{background:linear-gradient(135deg,rgba(184,40,40,.10),rgba(6,7,12,.88));
+  border:1px solid rgba(184,40,40,.32);border-left:4px solid #c03030;
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.crit-box::before{content:'בְּדִיקַת מְקוֹרוֹת — Quellenprüfung & Hinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:#e07070;
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.crit-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.crit-de strong{color:var(--ivory-lt);}
+.crit-de em{color:#e07070;font-style:italic;}
+.crit-num{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:#e07070;display:block;margin:20px 0 8px;direction:rtl;text-align:right;}
+.crit-num:first-of-type{margin-top:6px;}
+.ok-num{color:var(--teal-lt);}
+.he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+.add-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 6px;}
+.add{border:1px solid rgba(42,96,88,.24);padding:12px 16px;background:rgba(42,96,88,.05);}
+.add-lbl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:#e07070;display:block;margin-bottom:5px;letter-spacing:.08em;}
+.add-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);
+  direction:rtl;display:block;letter-spacing:.03em;}
+.add-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  color:var(--silver-dim);display:block;margin-top:5px;line-height:1.7;}
+.clean-note{border:1px solid rgba(42,96,88,.32);border-left:3px solid var(--teal);
+  background:rgba(42,96,88,.08);padding:16px 20px;margin:16px 0 6px;}
+.clean-h{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);
+  direction:rtl;display:block;margin-bottom:8px;}
+.verify{border:1px solid rgba(216,200,138,.34);border-left:3px solid var(--emet);
+  background:rgba(216,200,138,.07);padding:16px 20px;margin:16px 0 6px;}
+.verify-h{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--emet-lt);
+  direction:rtl;display:block;margin-bottom:8px;}
+.bib{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 4px;}
+.bib-c{border:1px solid rgba(216,200,138,.24);padding:12px 16px;background:rgba(216,200,138,.04);}
+.bib-h{font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;direction:rtl;display:block;margin-bottom:4px;}
+.bib-c.e .bib-h{color:var(--erg-lt);}
+.bib-c.r .bib-h{color:var(--ric-lt);}
+.bib-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  color:var(--silver-dim);display:block;line-height:1.7;}
+
+/* ── INFO ── */
+.info-box{background:linear-gradient(135deg,rgba(90,74,158,.13),rgba(6,7,12,.88));
+  border:1px solid rgba(140,124,208,.30);border-left:4px solid var(--nez);
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.info-box::before{content:attr(data-label);position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--nez-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.info-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;text-align:right;margin-bottom:10px;line-height:1.80;}
+.info-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--nez-vlt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.95;}
+.info-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.info-de strong{color:var(--ivory);}
+.info-de em{color:var(--nez-vlt);font-style:italic;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 6px;}
+.tc{border:1px solid rgba(184,172,232,.20);padding:14px 18px;background:rgba(184,172,232,.04);}
+.tc-h{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;direction:rtl;display:block;margin-bottom:5px;}
+.tc.a .tc-h{color:var(--erg-lt);}
+.tc.b .tc-h{color:var(--ric-lt);}
+.tc-t{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.80;}
+.tc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);display:block;margin-bottom:6px;letter-spacing:.08em;}
+.verse-split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 6px;}
+.vs{border:1px solid rgba(216,200,138,.26);padding:14px 18px;background:rgba(216,200,138,.05);}
+.vs-he{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;font-weight:700;
+  color:var(--emet-lt);direction:rtl;display:block;margin-bottom:6px;}
+.vs-t{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.78;}
+
+/* ── SEKTIONS-NAV ── */
+.sefira-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:54px;}
+.sefira-nav-item{border:1px solid rgba(184,172,232,.20);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(184,172,232,.03);}
+.sefira-nav-item:hover{opacity:.88;background:rgba(90,74,158,.16);border-color:rgba(140,124,208,.48);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.57em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--nez-vlt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;scroll-margin-top:60px;border:1px solid rgba(184,172,232,.16);
+  background:linear-gradient(180deg,rgba(20,23,30,.96) 0%,rgba(7,9,14,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--erg),var(--erg-lt),var(--nez-lt),var(--ric-lt),var(--ric));opacity:.68;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(184,172,232,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.46;
+  line-height:1;text-align:center;color:var(--nez-vlt);border-right:1px solid rgba(184,172,232,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.58;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.13em;
+  color:var(--nez-vlt);opacity:.68;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--emet);opacity:.88;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.58em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(184,172,232,.28);
+  padding:5px 14px;color:var(--nez-vlt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(184,172,232,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(184,172,232,.09);opacity:.8;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--guitar);opacity:.88;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(192,136,64,.32);background:rgba(192,136,64,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.15;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.15;border-left:1px solid rgba(184,172,232,.12);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--ivory-dim);opacity:.68;font-size:.92em;}
+.ew{color:var(--erg-lt);}
+.rw{color:var(--ric-lt);}
+.nw{color:var(--nez-vlt);}
+.mw{color:var(--emet-lt);}
+.divider{text-align:center;color:var(--nez);opacity:.38;letter-spacing:.7em;
+  font-size:.72em;margin:26px 0;}
+
+.refrain-box{background:linear-gradient(135deg,rgba(90,74,158,.18),rgba(90,74,158,.02));
+  border:1px solid rgba(140,124,208,.34);border-left:3px solid var(--nez-lt);padding:22px 28px;}
+.strophe-e{background:linear-gradient(135deg,rgba(46,122,136,.15),transparent);
+  border:1px solid rgba(46,122,136,.32);border-left:3px solid var(--erg);padding:22px 28px;}
+.strophe-r{background:linear-gradient(135deg,rgba(184,130,58,.14),transparent);
+  border:1px solid rgba(184,130,58,.32);border-left:3px solid var(--ric);padding:22px 28px;}
+.bridge-box{background:linear-gradient(135deg,rgba(216,200,138,.10),transparent);
+  border:1px solid rgba(216,200,138,.28);border-left:3px solid var(--emet);padding:22px 28px;}
+.climax-box{background:linear-gradient(135deg,rgba(184,172,232,.13),transparent);
+  border:1px solid rgba(184,172,232,.32);padding:24px 28px;}
+.climax-box .lyrics-he .line{font-size:1.06em;font-weight:700;}
+.coda-box{text-align:center;padding:26px 0 12px;}
+.coda-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;color:var(--ivory-dim);
+  direction:rtl;line-height:2.4;letter-spacing:.07em;}
+.coda-whisper em{font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;}
+
+.tikkun-box{background:linear-gradient(135deg,rgba(42,96,88,.13),rgba(8,32,28,.44));
+  border:1px solid rgba(42,96,88,.30);border-left:4px solid var(--teal);
+  padding:28px 32px;margin:28px 0;position:relative;}
+.tikkun-box::before{content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 12px;font-size:.60em;color:var(--teal-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.tikkun-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid rgba(42,96,88,.18);gap:18px;flex-wrap:wrap;}
+.tikkun-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);direction:rtl;}
+.tikkun-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--teal);display:block;margin-top:2px;}
+.tikkun-src{font-family:'Frank Ruhl Libre',serif;font-size:.65em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.32);padding:3px 11px;background:rgba(42,96,88,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{font-family:'Frank Ruhl Libre',serif;font-size:.68em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.30);padding:3px 10px;background:rgba(42,96,88,.05);direction:rtl;}
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(184,172,232,.05);
+  border-left:2px solid rgba(184,172,232,.26);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--nez-vlt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(192,136,64,.07),rgba(6,7,12,.86));
+  border:1px solid rgba(192,136,64,.24);border-left:4px solid var(--guitar);
+  padding:24px 32px;margin:28px 0 0;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--guitar-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.perf-item{border-left:2px solid rgba(192,136,64,.20);padding:2px 0 2px 16px;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  color:var(--guitar-lt);display:block;margin-bottom:3px;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.78;}
+
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,172,232,.32),transparent);}
+.ornament-star{color:var(--nez);font-size:.65em;letter-spacing:.5em;opacity:.52;}
+
+.footer{text-align:center;margin-top:80px;padding-top:60px;border-top:1px solid rgba(184,172,232,.16);}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--nez-vlt);
+  direction:rtl;letter-spacing:.10em;text-shadow:0 0 58px rgba(90,74,158,.50);margin-bottom:14px;}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:26px;}
+.footer-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97em;
+  color:var(--silver-dim);line-height:1.95;max-width:640px;margin:0 auto 28px;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.4em;color:var(--sage-lt);letter-spacing:.22em;opacity:.58;}
+
+.sources-box{background:linear-gradient(135deg,rgba(184,172,232,.06),rgba(6,7,12,.85));
+  border:1px solid rgba(184,172,232,.22);border-left:4px solid var(--nez-lt);
+  padding:26px 32px;margin-top:44px;position:relative;}
+.sources-box::before{content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.60em;color:var(--nez-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.88;}
+.sources-text strong{color:var(--ivory);}
+
+@media(max-width:780px){
+  .wrap{padding:40px 18px 80px;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(184,172,232,.12);padding-top:14px;margin-top:14px;}
+  .perf-grid,.add-grid,.two,.bib,.verse-split{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:62px 1fr;}
+  .source-badge{display:none;}
+  .song-body{padding:0 18px 34px;}
+  .page-title-he{font-size:2.2em;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .tikkun-box{padding:20px 18px;}
+  .sf{font-size:.74em;padding:4px 7px;}
+  .bpm-cell{min-width:110px;padding:10px 12px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">נֶצַח — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</span>
+    <span class="nav-brand-sub">עֵץ הַחַיִּים Album II · Lied VII/X · Nezach · Maqam Bayat · 64 BPM</span>
+  </div>
+  <a class="nav-link" href="#meta"><span class="nav-num">·</span>נְתוּנִים</a>
+  <a class="nav-link" href="#p1"><span class="nav-num">א</span>פְּתִיחָה</a>
+  <a class="nav-link" href="#p2"><span class="nav-num">ב</span>אֶרְגָּס</a>
+  <a class="nav-link" href="#p3"><span class="nav-num">ג</span>רִיקִי</a>
+  <a class="nav-link" href="#p4"><span class="nav-num">ד</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p5"><span class="nav-num">ה</span>גֶּשֶׁר</a>
+  <a class="nav-link" href="#p6"><span class="nav-num">ו</span>שִׂיא</a>
+  <a class="nav-link" href="#p7"><span class="nav-num">ז</span>קוֹדָה</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══ HEADER ══ -->
+<div class="page-header">
+  <div class="album-tag">עֵץ הַחַיִּים · Album II · שִׁיר ז מִתּוֹךְ י</div>
+  <div class="eyebrow">Piyut · Der Lebensbaum · Siebte Sefira · Solostimme &amp; akustische Gitarre</div>
+  <h1 class="page-title-he">נֶצַח</h1>
+  <div class="page-title-de">Nezach — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם · Streit um des Himmels willen</div>
+
+  <div class="epigraph">
+    כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר —<br>
+    וּכְבֹד מְלָכִים חֲקֹר דָּבָר
+  </div>
+  <div class="epigraph-src">מִשְׁלֵי כ״ה:ב׳ &nbsp;·&nbsp; Mischlei 25,2 — beide Hälften stehen in diesem Lied</div>
+
+  <div class="dialog">
+    <i class="e d1"></i><i class="r d2"></i><i class="e d3"></i>
+    <i class="r d4"></i><i class="e d5"></i><i class="r d6"></i>
+  </div>
+  <div class="dialog-lbl"><span class="e">אֶרְגָּס</span><span class="r">רִיקִי</span></div>
+  <div class="dialog-cap">Rede und Gegenrede, abwechselnd — und der rechte Rand hört nicht auf, er verblasst</div>
+  <div class="dialog-cap2">Album II: I Sonnenaufgang · II Leiter · III Vorhang · IV das Grenzenlose · V die Linie · VI die Mitte · VII das Gespräch</div>
+
+  <div class="sef10">
+    <span class="sf done">כֶּתֶר</span><span class="sf-sep">▸</span>
+    <span class="sf done">חָכְמָה</span><span class="sf-sep">▸</span>
+    <span class="sf done">בִּינָה</span><span class="sf-sep">▸</span>
+    <span class="sf done">חֶסֶד</span><span class="sf-sep">▸</span>
+    <span class="sf done">גְּבוּרָה</span><span class="sf-sep">▸</span>
+    <span class="sf done">תִּפְאֶרֶת</span><span class="sf-sep">▸</span>
+    <span class="sf now">נֶצַח</span><span class="sf-sep">▸</span>
+    <span class="sf next">הוֹד</span><span class="sf-sep">▸</span>
+    <span class="sf">יְסוֹד</span><span class="sf-sep">▸</span>
+    <span class="sf">מַלְכוּת</span>
+  </div>
+  <div class="sef10-cap">
+    Siebte Station · und die Lücke von Album I ist damit geschlossen —
+    Nezach fehlte dort als einzige der sieben
+  </div>
+
+  <p class="page-desc">
+    Das Lied, auf das der ganze Zyklus zulief: Der Streit, den Lied VI in aschkenasischer
+    Gestalt schilderte, erscheint hier in seiner <strong>sephardischen Urform</strong> —
+    Ergas gegen Ricchi, Italien, 1730er Jahre, ein Jahrhundert früher.
+    Und das Lied tut etwas, was kein anderes im Album tut: Es <em>löst nichts</em> und
+    behauptet, genau das sei der Punkt. Nezach heißt Beständigkeit <em>und</em> Ewigkeit —
+    und was hier besteht, ist die Frage.
+  </p>
+
+  <div class="world-chain">
+    <span class="wc-item wc-active">עֲשִׂיָּה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-active">יְצִירָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-active">בְּרִיאָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-active">אֲצִילוּת</span>
+  </div>
+  <div class="wc-note">
+    Alle vier Welten — denn der Streit selbst handelt davon, wie die oberste mit den
+    unteren zusammenhängt.
+  </div>
+</div>
+
+<!-- ══ BPM & SCHLAGWÖRTER ══ -->
+<div class="meta-box" id="meta">
+  <div class="bpm-row">
+    <div class="bpm-cell">
+      <span class="bpm-v">64</span>
+      <span class="bpm-l">BPM · dialogisch</span>
+    </div>
+    <div class="bpm-cell">
+      <span class="bpm-v">בַּיַּאת</span>
+      <span class="bpm-l">Maqam Bayat · Nezach</span>
+    </div>
+    <div class="bpm-cell">
+      <span class="bpm-v">4/4</span>
+      <span class="bpm-l">Rede und Gegenrede</span>
+    </div>
+    <div class="bpm-cell">
+      <span class="bpm-v">≈ 5:20</span>
+      <span class="bpm-l">Richtwert Gesamtdauer</span>
+    </div>
+  </div>
+
+  <span class="kw-h">Schlagwörter — Musik &amp; Klang</span>
+  <div class="kw-line">
+    Sephardic piyut, Jewish liturgical music, Hebrew sacred song, solo male voice,
+    acoustic nylon-string guitar, call and response, two alternating voices, Maqam Bayat,
+    Middle Eastern modal, Andalusian, Levantine Jewish tradition, questioning, unresolved,
+    deliberative, no percussion, no drums, no choir, sparse arrangement
+  </div>
+
+  <span class="kw-h">Schlagwörter — Inhalt &amp; Thema</span>
+  <div class="kw-line">
+    Nezach, Beständigkeit, Ewigkeit, Machloket leSchem Schamajim, Ergas, Ricchi,
+    Schomer Emunim, Joscher Lewaw, Tzimtzum wörtlich oder nicht, Ein Sof, Livorno, Ferrara,
+    Elu weElu, Sefirot, Lebensbaum, Ez HaChaim, Kabbala, Fragen, Album II
+  </div>
+
+  <span class="kw-h">Schlagwörter — עִבְרִית</span>
+  <div class="kw-line rtl">
+    נֶצַח, מַחֲלֹקֶת לְשֵׁם שָׁמַיִם, אֶרְגָּס, רִיקִי, שׁוֹמֵר אֱמוּנִים, יֹשֶׁר לֵבָב,
+    צִמְצוּם כְּפִשׁוּטוֹ, אֵין-סוֹף, אֵלּוּ וָאֵלּוּ, שְׁאֵלָה, בֵּית מִדְרָשׁ,
+    עֵץ הַחַיִּים, קַבָּלָה, מַקַאם בַּיַּאת, פִּיּוּט סְפָרַדִּי, קוֹל יָחִיד
+  </div>
+
+  <p class="meta-note">
+    <strong>Zum Tempo — bewusst langsamer als Lied VI:</strong> Dort klangen die beiden Stimmen
+    <em>gleichzeitig</em> (Terzen, 72 BPM); hier sprechen sie <em>abwechselnd</em>.
+    Ein Dialog braucht Platz für die Antwort — 64 BPM, mit einer echten Atempause zwischen
+    Rede und Gegenrede. Und Bayat trägt hier dieselbe Funktion wie in Lied III (Bina):
+    <strong>der suchende Modus ohne Ruhepunkt.</strong> Das ist keine Doppelung, sondern
+    Konsequenz — Bina fragte nach der Grenze des Wissens, Nezach fragt weiter.</p></div><div class="crit-box">
+  <div class="clean-note">
+    <span class="clean-h">שִׁיר ז — סְפָרַדִּי לְגַמְרֵי</span>
+    <p class="crit-de">
+      Dieses Lied ist das <strong>am reinsten sephardische des gesamten Albums</strong>.&nbsp;&nbsp;<strong>R. Josef Ergas</strong>
+      (1685–1730), Rabbiner in Livorno, und <strong>R. Immanuel Chai Ricchi</strong>
+      (1688–1743), aus Ferrara. Italienisch-sephardische Kabbalisten, beide in der Tradition
+      des Ari, beide unbestritten autoritativ.
+      <br><br>
+      <strong>Und damit korrigiert dieses Lied rückwirkend Lied VI.</strong> Dort trug die
+      Album-Fassung <em>Nefesch HaChaim</em> und <em>Tanja</em> — beide aschkenasisch — für
+      genau dieselbe Frage: Immanenz gegen Grenze. Hier steht die Urform, ein Jahrhundert
+      früher und vollständig innersephardisch. Wer Lied VI sephardisch belegen will,
+      braucht nur auf Lied VII zu zeigen.
+    </p>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num">Zur Ortsangabe in der Brücke — bitte prüfen</span>
+  </p>
+  <div class="verify">
+    <span class="verify-h">שְׁאֵלָה זוֹ נוֹלְדָה בְּלִיוֹרְנוֹ — תצ״ו</span>
+    <p class="crit-de">
+      <strong>תצ״ו = 5496 = 1736</strong> — das stimmt mit der Album-Angabe „1736/1737“
+      überein und passt zum Erscheinen von <em>Schomer Emunim</em>.
+      Bei <em>Livorno</em>:
+    </p>
+    <div class="bib">
+      <div class="bib-c e">
+        <span class="bib-h">ר׳ יוֹסֵף אֶרְגָּס · שׁוֹמֵר אֱמוּנִים</span>
+        <span class="bib-t">Livorno war sein <em>Amtssitz</em> — insofern trifft die Zeile.
+        Aber Ergas starb bereits <strong>1730</strong>; das Buch erschien
+        <strong>posthum</strong>, und zwar nach meiner Kenntnis in <strong>Amsterdam</strong>,
+        nicht in Livorno.</span>
+      </div>
+      <div class="bib-c r">
+        <span class="bib-h">ר׳ עִמָּנוּאֵל חַי רִיקִּי · יֹשֶׁר לֵבָב</span>
+        <span class="bib-t">Erschien im Jahr darauf, ebenfalls nach meiner Kenntnis in
+        <strong>Amsterdam</strong>. Ricchi stammte aus <strong>Ferrara</strong>.
+        „Livorno“ als gemeinsamer Ort trifft also allenfalls die <em>Schule</em>,
+        nicht den Druckort.</span>
+      </div>
+    </div>
+    <p class="crit-de">
+      <strong>Ich sage das ausdrücklich mit Vorbehalt:</strong> Ich kann diese
+      bibliographischen Angaben nicht verifizieren. Als <em>poetische</em>
+      Kurzform für „die livornesische Schule“ ist die Zeile völlig vertretbar — falls man bibliographische Genauigkeit will, wäre das der Punkt zum Nachschlagen.
+      <br><br>
+      <strong>Und ein Detail, das die These des Liedes stützt:</strong> Wenn Ergas 1730 starb
+      und sein Buch 1736 erschien, dann antwortet Ricchi 1737 auf einen Mann, der seit sieben
+      Jahren tot war. <em>Der Disput hat seine Teilnehmer von Anfang an überlebt</em> — was für
+      ein Lied mit dem Titel <span class="he">הַוִּיכּוּחַ נִצְחִי</span> kaum passender
+      sein könnte.
+    </p>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num ok-num">Sieben Quellen</span>
+  </p>
+  <div class="add-grid">
+    <div class="add">
+      <span class="add-lbl">für Strophe 2 <em>und</em> den Klimax — Epigraph</span>
+      <span class="add-he">מִשְׁלֵי כ״ה:ב׳</span>
+      <span class="add-note">„<b>כְּבֹד אֱלֹהִים</b> הַסְתֵּר דָּבָר, וּכְבֹד מְלָכִים
+      <b>חֲקֹר</b> דָּבָר“. Die erste Hälfte ist wörtlich Ricchis Argument —
+      <em>kavod Elohim</em> durch Verbergung. Die zweite ist dein Klimax: das Nachforschen.
+      <strong>Ein einziger Vers trägt beide Pole des Liedes.</strong></span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für <span class="he">הָאֱמֶת נֶצַח</span> — der Sefira-Vers</span>
+      <span class="add-he">שְׁמוּאֵל א׳ ט״ו:כ״ט</span>
+      <span class="add-note">„וְגַם <b>נֵצַח יִשְׂרָאֵל</b> לֹא יְשַׁקֵּר“ — der Vers, in dem
+      <em>Nezach</em> als Gottesname erscheint, und zwar unmittelbar verbunden mit
+      Wahrhaftigkeit. Für ein Nezach-Lied über die Wahrheit der zweite Grundvers.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für <span class="he">זֶה וְזֶה לְשֵׁם שָׁמַיִם</span></span>
+      <span class="add-he">אָבוֹת ה׳:י״ז · עֵרוּבִין י״ג ע״ב</span>
+      <span class="add-note">„סוֹפָהּ לְהִתְקַיֵּם“ — ein Streit um des Himmels willen
+      <em>hat Bestand</em>; und „אֵלּוּ וָאֵלּוּ דִּבְרֵי אֱלֹהִים חַיִּים“.
+      Dieselben zwei Quellen tragen Lied VI — hier sind sie nicht mehr Deutung,
+      sondern der ausdrückliche Refrain.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für <span class="he">מִי שֶׁחָדַל לִשְׁאֹל</span></span>
+      <span class="add-he">מִשְׁלֵי ב׳:ג׳–ה׳ · הַגָּדָה שֶׁל פֶּסַח</span>
+      <span class="add-note">„אִם תְּבַקְשֶׁנָּה כַכָּסֶף … אָז תָּבִין“ — Suchen als Bedingung
+      des Findens. Und die Haggada behandelt <span class="he">שֶׁאֵינוֹ יוֹדֵעַ לִשְׁאֹל</span>
+      als Mangel, den man beheben muss: <em>at petach lo</em>. Nicht-Fragen ist dort
+      kein Zustand der Ruhe.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für Ergas’ Position</span>
+      <span class="add-he">תִּקּוּנֵי זֹהַר נ״ז · רָמָ״ק, פַּרְדֵּס רִמּוֹנִים</span>
+      <span class="add-note">„לֵית אֲתָר פָּנוּי מִנֵּיהּ“ — dieselbe Zeile, die Lied I trägt.
+      Und Ramaks Bestimmung des Verhältnisses von Ein Sof zu den Sefirot ist der Rahmen,
+      innerhalb dessen Ergas überhaupt argumentieren kann.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für Ricchis Position</span>
+      <span class="add-he">רַמְבַּ״ם, יְסוֹדֵי הַתּוֹרָה א׳</span>
+      <span class="add-note">Die schroffe Unterschiedenheit Gottes von allem Geschaffenen —
+      die klassische sephardische Formulierung, auf die sich <span class="he">אֱלֹהִים
+      מֻבְדָּל מִן הַנִּבְרָאִים</span> stützt. Auch hier ist der Rahmen älter als
+      der Streit.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für die Auflösung, die das Lied nicht ausspricht</span>
+      <span class="add-he">רַשַׁ״שׁ — נְהַר שָׁלוֹם</span>
+      <span class="add-note">R. Schalom Scharabi (1720–1777) — geboren, während der Disput
+      gedruckt wurde. Sein Werk, das die lurianische Lehre systematisch ordnet, heißt
+      <em>Strom des Friedens</em>. Dein Album nennt ihn nicht in diesem Lied;
+      er wäre die dritte Stimme.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für <span class="he">בֵּית מִדְרָשׁ</span> als Ort</span>
+      <span class="add-he">חֲגִיגָה ג׳ ע״ב</span>
+      <span class="add-note">Die Gemara über die einander widersprechenden Lehrmeinungen im
+      Lehrhaus: <span class="he">כֻּלָּם נִתְּנוּ מֵרוֹעֶה אֶחָד</span>.
+      Deine Brückenzeile „in jedem Lehrhaus“ ist damit nicht Bild, sondern Fortsetzung.</span>
+    </div>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num">eine Kleinigkeiten</span>
+    <span class="he">וְעֲדַיִן</span> (Brücke) — vor Chataf-Patach steht das Waw als
+    <span class="he">וַ</span>, erwartbar also <span class="he">וַעֲדַיִן</span>;
+    und <span class="he">נֶצַחִית</span> — die geläufige Form ist
+    <span class="he">נִצְחִית</span> (wie im Refrain, wo korrekt
+    <span class="he">נִצְחִי</span> steht). Beide silbengleich.
+    <br><br></p>
+</div>
+
+<!-- ══ EIN VERS, ZWEI HÄLFTEN ══ -->
+<div class="info-box" data-label="מִשְׁלֵי כ״ה:ב׳ — Ein Vers, der das ganze Lied enthält">
+  <div class="info-he">
+    כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר — וּכְבֹד מְלָכִים חֲקֹר דָּבָר
+  </div>
+  <div class="info-src">מִשְׁלֵי כ״ה:ב׳</div>
+  <p class="info-de">Ein einziger Vers aus Mischlei enthält
+    <strong>beide</strong> Bewegungen des Liedes — und zwar in genau seinen zwei Hälften.
+  </p>
+  <div class="verse-split">
+    <div class="vs">
+      <span class="vs-he">כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר</span>
+      <span class="vs-t">Gottes Ehre ist es, eine Sache zu <em>verbergen</em>.
+      Das ist Ricchis Argument, fast wörtlich: <span class="he">אֵין כָּבוֹד אֱלֹהִים</span>
+      ohne wirklichen Abstand. Die Verborgenheit <strong>ist</strong> der Kavod —
+      dieselbe Figur, die schon Lied III trug.</span>
+    </div>
+    <div class="vs">
+      <span class="vs-he">וּכְבֹד מְלָכִים חֲקֹר דָּבָר</span>
+      <span class="vs-t">Und der Könige Ehre ist es, ihr <em>nachzuforschen</em>.
+      Das ist dein Klimax: <span class="he">גַּם אֲנִי שׁוֹאֵל</span>.
+      Nicht trotz der Verborgenheit, sondern <em>weil</em> es sie gibt, ist Forschen ehrenhaft.</span>
+    </div>
+  </div>
+  <p class="info-de">
+    <strong>Das ist mehr als ein hübscher Beleg.</strong> Der Vers stellt beide Seiten
+    nebeneinander, ohne eine zu bevorzugen — und er nennt beide <em>Kavod</em>, Ehre.
+    Verbergen und Nachforschen sind nicht Gegner, sondern zwei Würden, die einander
+    voraussetzen: Ohne ein Verborgenes gäbe es nichts zu erforschen, und ohne Forschende
+    bliebe das Verborgene bedeutungslos.
+    <br><br>
+    Genau das behauptet der Refrain: <span class="he">גַּם הַמַּחֲלֹקֶת — מְשַׁרְתַּת
+    הָאֵין-סוֹף</span>. Der Streit dient nicht trotz seiner Unabschließbarkeit,
+    sondern <em>durch</em> sie. Und deshalb steht das Lied unter Nezach:
+    <strong>Nezach heißt Beständigkeit</strong> — was hier Bestand hat, ist nicht eine
+    Antwort, sondern die Frage.
+  </p>
+</div>
+
+<!-- ══ DIE ZWEI POSITIONEN ══ -->
+<div class="info-box" data-label="אֶרְגָּס מוּל רִיקִּי — Was genau strittig ist">
+  <p class="info-de">
+    Die Streitfrage ist präziser, als sie klingt, und der Text formuliert sie
+    bemerkenswert genau. Es geht <em>nicht</em> darum, ob Gott überall ist —
+    das bejahen beide. Es geht darum, <strong>was der Tzimtzum eigentlich zurückgezogen hat.</strong>
+  </p>
+  <div class="two">
+    <div class="tc a">
+      <span class="tc-sub">Strophe 1 · Ergas · Schomer Emunim</span>
+      <span class="tc-h">רַק אוֹרוֹ נֶאֱסַף, לֹא עַצְמוּתוֹ</span>
+      <span class="tc-t">Der Tzimtzum ist <em>nicht wörtlich</em>: Zurückgezogen wurde das
+      <strong>Licht</strong>, nicht das <strong>Wesen</strong>. Gottes Selbst bleibt
+      ungeschmälert an jedem Ort; was fehlt, ist nur die Offenbarung.
+      Die Unterscheidung <span class="he">אוֹר / עַצְמוּת</span> ist der ganze Kern der
+      Position — und der Text setzt sie in vier Wörter.</span>
+    </div>
+    <div class="tc b">
+      <span class="tc-sub">Strophe 2 · Ricchi · Joscher Lewaw</span>
+      <span class="tc-h">בְּלִי רֶוַח אֲמִתִּי … אֵין כָּבוֹד</span>
+      <span class="tc-t">Der Tzimtzum ist <em>wörtlich</em>: Es gibt einen wirklichen
+      <strong>Abstand</strong>. Und das Argument ist nicht kosmologisch, sondern
+      <em>theologisch</em> — ohne echten Abstand verlöre Gott seine Erhabenheit,
+      und Geschöpf und Schöpfer würden ununterscheidbar. Es geht um Kavod, nicht um Physik.</span>
+    </div>
+  </div>
+  <p class="info-de">
+    <strong>Und beachte, was der Refrain daraus macht.</strong> Er sagt nicht „die Wahrheit
+    liegt in der Mitte“ — das wäre der billige Ausweg und wäre auch falsch, denn zwischen
+    „wörtlich“ und „nicht wörtlich“ gibt es keine Mitte. Er sagt etwas anderes:
+    <span class="he">גַּם הַמַּחֲלֹקֶת — מְשַׁרְתַּת הָאֵין-סוֹף</span>. Nicht die Positionen
+    werden versöhnt, sondern <em>der Streit selbst</em> bekommt eine Funktion.
+    <br><br>
+    Das ist exakt die Logik von <strong>Awot 5:17</strong>: Ein Streit um des Himmels willen
+    <span class="he">סוֹפָהּ לְהִתְקַיֵּם</span> — <em>hat Bestand</em>. Nicht: wird gelöst.
+    Und es ist der Unterschied zu Lied VI: Dort stand Tiferet <em>zwischen</em> den beiden;
+    hier steht Nezach <em>hinter</em> beiden und lässt sie weiterreden.
+  </p>
+</div>
+
+<!-- ══ SEKTIONS-NAV ══ -->
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro · Dialog</span></a>
+  <a class="sefira-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">אֶרְגָּס</span><span class="sn-de">Nicht wörtlich</span></a>
+  <a class="sefira-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">רִיקִי</span><span class="sn-de">Eine echte Grenze</span></a>
+  <a class="sefira-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Der Streit dient</span></a>
+  <a class="sefira-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Livorno</span></a>
+  <a class="sefira-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">שִׂיא</span><span class="sn-de">Auch ich frage</span></a>
+  <a class="sefira-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">קוֹדָה</span><span class="sn-de">Outro · vier Wörter</span></a>
+  <a class="sefira-nav-item" href="#meta"><span class="sn-num">·</span><span class="sn-he">נְתוּנִים</span><span class="sn-de">BPM &amp; Tags</span></a>
+</div>
+
+<!-- ══ SONG ══ -->
+<div class="song-section">
+
+  <div class="song-header">
+    <div class="song-num"><span class="snum-sefira">נֶצַח</span>VII</div>
+    <div class="song-meta">
+      <span class="sefira-badge">נֶצַח · נְצִיחוּת וּמַחֲלֹקֶת · עֵץ הַחַיִּים Album II, שִׁיר ז מִתּוֹךְ י</span>
+      <span class="maqam-badge">Maqam Bayat · 64 BPM dialogisch · ca. 5:20 · Solostimme &amp; akustische Gitarre</span>
+      <span class="song-title-he">נֶצַח — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</span>
+      <span class="song-title-de">Nezach — Streit um des Himmels willen</span>
+    </div>
+    <div class="source-badge">
+      פִּיּוּט מְקוֹרִי
+      <span class="source-badge-de">Originalpiyut · Mischlei 25:2 · Awot 5:17</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <!-- I · PETICHA -->
+    <div class="section-block" id="p1">
+      <div class="section-label">I · פְּתִיחָה — Intro / zwei Stimmen im Gespräch</div>
+      <div class="instr-note">Guitar: two voices in dialogue, one phrase answering the other —
+        not a battle, but a wrestling for truth. Play them strictly alternating, never together:
+        state a phrase in the lower register, leave a real silence, then answer it higher.
+        The answer should share the first phrase's contour but end differently — agreement
+        in method, difference in conclusion. Bayat, the searching mode; do not resolve
+        either phrase.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">
+          <span class="echo">zwei Stimmen, die miteinander sprechen — eine Phrase antwortet der anderen</span><br>
+          <em>— nicht Kampf, sondern Ringen um Wahrheit —</em>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Warum abwechselnd und nicht gleichzeitig</span>
+        בְּשִׁיר ו נִשְׁמְעוּ שְׁנֵי הַקּוֹלוֹת יַחַד, בִּשְׁלִישִׁיּוֹת. כָּאן הֵם מִתְחַלְּפִים — כִּי זֶהוּ וִיכּוּחַ, וּבְוִיכּוּחַ אֶחָד מַמְתִּין בְּעוֹד הַשֵּׁנִי מְדַבֵּר. הַשְּׁתִיקָה שֶׁבֵּין הַשּׁוּרוֹת הִיא הַכָּבוֹד שֶׁכָּל צַד נוֹתֵן לַשֵּׁנִי.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- II · STROPHE 1 · ERGAS -->
+    <div class="section-block" id="p2">
+      <div class="section-label">II · בֵּית א — Ergas · Nicht wörtlich</div>
+      <div class="instr-note">Guitar: the lower, flowing voice — <em>mp</em>, legato, wide open strings.
+        This is a scholar quoting a scholar, so sing it evenly and without advocacy.
+        The whole position turns on the last line's two nouns; separate <em>oro</em>
+        and <em>azmuto</em> clearly, because everything depends on the distinction.</div>
+      <div class="strophe-e">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="ew">אֶרְגָּס אָמַר: לֹא כְּפִשּׁוּטוֹ —</span></span>
+            <span class="line">הַצִּמְצוּם הוּא מַסָּךְ, לֹא עֲזִיבָה —</span>
+            <span class="line">הָאֵין-סוֹף נוֹכֵחַ בְּכֹל מָקוֹם,</span>
+            <span class="line"><span class="ew">רַק אוֹרוֹ נֶאֱסַף, לֹא עַצְמוּתוֹ.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="ew">Ergas sagte: Nicht wörtlich —</span></span>
+            <span class="line">der Tzimtzum ist ein Schleier, kein Verlassen —</span>
+            <span class="line">das Ein Sof ist an jedem Ort gegenwärtig,</span>
+            <span class="line"><span class="ew">nur sein Licht wurde eingezogen, nicht sein Wesen.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        ר׳ יוֹסֵף אֶרְגָּס, שׁוֹמֵר אֱמוּנִים. וְהַשּׁוּרָה הַשְּׁלִישִׁית הִיא תִּקּוּנֵי זֹהַר נ״ז — „לֵית אֲתָר פָּנוּי מִנֵּיהּ“, אוֹתוֹ מְקוֹר שֶׁנּוֹשֵׂא אֶת שִׁיר א שֶׁל אַלְבּוֹם זֶה. שִׂים לֵב לְדִיּוּק הַשּׁוּרָה הָאַחֲרוֹנָה: הַהַבְחָנָה בֵּין אוֹר לְעַצְמוּת הִיא כָּל הָעֶמְדָּה, וְהִיא נֶאֱמֶרֶת בְּאַרְבַּע מִלִּים.
+      </div>
+    </div>
+
+    <!-- III · STROPHE 2 · RICCHI -->
+    <div class="section-block" id="p3">
+      <div class="section-label">III · בֵּית ב — Ricchi · Es gibt eine echte Grenze</div>
+      <div class="instr-note">Guitar: the higher, more angular voice — <em>mp</em>, slightly more
+        articulated, shorter note values. Same dynamic level as Ergas: neither position may
+        sound louder than the other. The final line repeats <em>kavod</em> twice; the second
+        one quieter, so that it lands as a consequence rather than as insistence.</div>
+      <div class="strophe-r">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="rw">רִיקִי עָנָה: יֵשׁ גְּבוּל אֲמִתִּי,</span></span>
+            <span class="line">אֱלֹהִים מֻבְדָּל מִן הַנִּבְרָאִים —</span>
+            <span class="line">בְּלִי רֶוַח אֲמִתִּי בֵּין הַבּוֹרֵא לְנִבְרָא,</span>
+            <span class="line"><span class="rw">אֵין כָּבוֹד אֱלֹהִים — אֵין שׁוּם כָּבוֹד.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="rw">Ricchi antwortete: Es gibt eine wirkliche Grenze,</span></span>
+            <span class="line">Gott ist von den Geschöpfen abgesondert —</span>
+            <span class="line">ohne wirklichen Abstand zwischen Schöpfer und Geschöpf</span>
+            <span class="line"><span class="rw">gibt es keine Ehre Gottes — überhaupt keine Ehre.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        ר׳ עִמָּנוּאֵל חַי רִיקִּי, יֹשֶׁר לֵבָב. וְ„כָּבוֹד“ — מִשְׁלֵי כ״ה:ב׳: „כְּבֹד אֱלֹהִים הַסְתֵּר דָּבָר“; הַהֶסְתֵּר הוּא הַכָּבוֹד עַצְמוֹ. וְ„מֻבְדָּל מִן הַנִּבְרָאִים“ — רַמְבַּ״ם, יְסוֹדֵי הַתּוֹרָה א׳. שִׂים לֵב שֶׁהַטַּעֲנָה אֵינָהּ קוֹסְמוֹלוֹגִית אֶלָּא תֵּאוֹלוֹגִית: לֹא „אֵיפֹה הוּא“ אֶלָּא „מַה נִּשְׁאָר מִכְּבוֹדוֹ“.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- IV · PIZMON -->
+    <div class="section-block" id="p4">
+      <div class="section-label">IV · פִּזְמוֹן — Refrain</div>
+      <div class="instr-note">Guitar: here the two voices may finally sound together, <em>mf</em> —
+        but only here, and not in parallel: let them keep their own contours over a shared
+        drone. The wordplay <em>nezach / nizchi / nezach</em> runs through three lines;
+        do not colour it differently each time — the point is that it is one word.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="nw">נֶצַח, נֶצַח, הַוִּיכּוּחַ נִצְחִי —</span></span>
+            <span class="line"><span class="mw">אַךְ זֶה וְזֶה — לְשֵׁם שָׁמַיִם,</span></span>
+            <span class="line"><span class="nw">נֶצַח, נֶצַח, הָאֱמֶת נֶצַח —</span></span>
+            <span class="line"><span class="mw">גַּם הַמַּחֲלֹקֶת — מְשַׁרְתַּת הָאֵין-סוֹף.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="nw">Nezach, Nezach, der Disput ist ewig —</span></span>
+            <span class="line"><span class="mw">doch dieser wie jener — um des Himmels willen;</span></span>
+            <span class="line"><span class="nw">Nezach, Nezach, die Wahrheit besteht —</span></span>
+            <span class="line"><span class="mw">auch der Streit — dient dem Ein Sof.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen · und das Wortspiel</span>
+        „כָּל מַחֲלֹקֶת שֶׁהִיא לְשֵׁם שָׁמַיִם — סוֹפָהּ לְהִתְקַיֵּם“, אָבוֹת ה׳:י״ז; וְ„אֵלּוּ וָאֵלּוּ דִּבְרֵי אֱלֹהִים חַיִּים“, עֵרוּבִין י״ג ע״ב. וְ„נֶצַח“ כְּשֵׁם: „וְגַם נֵצַח יִשְׂרָאֵל לֹא יְשַׁקֵּר“ — שְׁמוּאֵל א׳ ט״ו:כ״ט. שָׁלֹשׁ פְּעָמִים אוֹתוֹ שֹׁרֶשׁ בִּשְׁלֹשָׁה מוּבָנִים: הַסְּפִירָה, הַנְּצִיחוּת שֶׁל הַוִּיכּוּחַ, וְקִיּוּמָהּ שֶׁל הָאֱמֶת.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- V · GESCHER / TIKKUN -->
+    <div class="section-block" id="p5">
+      <div class="section-block-inner"></div>
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div>
+            <div class="tikkun-title-he">גֶּשֶׁר — שְׁאֵלָה שֶׁאֵינָהּ נִפְתֶּרֶת</div>
+            <span class="tikkun-title-de">Brücke — eine Frage, die nicht gelöst wird</span>
+          </div>
+          <div class="tikkun-src">מִשְׁלֵי כ״ה:ב׳ · אָבוֹת ה׳:י״ז</div>
+        </div>
+        <div class="instr-note">Guitar: both voices drop away and a single line remains, <em>p</em> —
+          the narrator steps out of the dispute and describes it. The first line is a genuine
+          question and should be sung as one, with a rising ending. The date is a fact;
+          speak it plainly. Then the last line, very quiet, as a statement of principle.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line"><span class="mw">כֵּיצַד אֱלֹהִים אֵין-סוֹף מִתְיַחֵס לְגָבוּל?</span></span>
+              <span class="line">שְׁאֵלָה זוֹ נוֹלְדָה בְּלִיוֹרְנוֹ — תצ״ו —</span>
+              <span class="line">וְעֲדַיִן הִיא שׁוֹאֶלֶת בְּכָל בֵּית מִדְרָשׁ,</span>
+              <span class="line"><span class="nw">כִּי אֱמֶת נֶצַחִית אֵינָהּ נִפְתֶּרֶת.</span></span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line"><span class="mw">Wie verhält sich der unendliche Gott zur Grenze?</span></span>
+              <span class="line">Diese Frage wurde in Livorno geboren — 5496 —</span>
+              <span class="line">und noch immer fragt sie in jedem Lehrhaus,</span>
+              <span class="line"><span class="nw">denn eine ewige Wahrheit wird nicht aufgelöst.</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mitzva-tags">
+          <span class="mitzva-tag">נֶצַח</span>
+          <span class="mitzva-tag">מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</span>
+          <span class="mitzva-tag">אֵלּוּ וָאֵלּוּ</span>
+          <span class="mitzva-tag">בַּיַּאת</span>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Der Tikkun</span>
+          הַתִּיקּוּן כָּאן הוּא הַהֶפֶךְ מִן הַצָּפוּי: לֹא לְיַשֵּׁב אֶת הַקֻּשְׁיָה. „כְּבֹד מְלָכִים חֲקֹר דָּבָר“ — מִשְׁלֵי כ״ה:ב׳: הַחֲקִירָה עַצְמָהּ הִיא כָּבוֹד, וְלֹא רַק אֶמְצָעִי לִתְשׁוּבָה. וְ„סוֹפָהּ לְהִתְקַיֵּם“ — אָבוֹת ה׳:י״ז: מַחֲלֹקֶת לְשֵׁם שָׁמַיִם מִתְקַיֶּמֶת, אֵינָהּ נִגְמֶרֶת. שִׂים לֵב לַפֹּעַל שֶׁבָּחַרְתָּ: הַשְּׁאֵלָה „שׁוֹאֶלֶת“ — הִיא הַנּוֹשֵׂא, לֹא הָאָדָם.
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- VI · SI -->
+    <div class="section-block" id="p6">
+      <div class="section-label">VI · שִׂיא — Klimax / auch ich frage</div>
+      <div class="instr-note">Guitar: <em>f</em>, both voices full and for the first time genuinely
+        together — the agreement is not about the answer but about the asking.
+        The third line is where the song turns from history to the present; take a breath
+        before <em>gam ani</em>. The last line is the sharpest sentence of the piece and
+        should be sung firmly but without triumph — it is a warning, not a boast.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="nw">נֶצַח! נֶצַח! הַשְּׁאֵלָה חַיָּה!</span></span>
+            <span class="line"><span class="ew">אֶרְגָּס</span> <span class="rw">וְרִיקִי</span> — <span class="mw">שְׁנֵיהֶם אֱמֶת!</span></span>
+            <span class="line"><span class="nw">נֶצַח! נֶצַח! גַּם אֲנִי שׁוֹאֵל!</span></span>
+            <span class="line"><span class="mw">כִּי מִי שֶׁחָדַל לִשְׁאֹל — חָדַל לִחְיוֹת!</span></span>
+            <span class="line"><span class="echo">(נֶצַח… שְׁאֵלָה… נֶצַח… חַיִּים…)</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="nw">Nezach! Nezach! Die Frage lebt!</span></span>
+            <span class="line"><span class="ew">Ergas</span> und <span class="rw">Ricchi</span> — <span class="mw">beide sind Wahrheit!</span></span>
+            <span class="line"><span class="nw">Nezach! Nezach! Auch ich frage!</span></span>
+            <span class="line"><span class="mw">Denn wer aufhört zu fragen — hat aufgehört zu leben!</span></span>
+            <span class="line"><span class="echo">(Nezach… Frage… Nezach… Leben…)</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen · und die Wende zur ersten Person</span>
+        „גַּם אֲנִי שׁוֹאֵל“ — כְּמוֹ „אֶצְטַמְצֵם גַּם אֲנִי“ בְּשִׁיר ג: הַשִּׁיר יוֹצֵא מִן הַתֵּאוּר אֶל הַמַּעֲשֶׂה. וְ„מִי שֶׁחָדַל לִשְׁאֹל“ — מִשְׁלֵי ב׳:ג׳–ה׳, „אִם תְּבַקְשֶׁנָּה כַכָּסֶף … אָז תָּבִין“; וְהַגָּדָה שֶׁל פֶּסַח, שֶׁבָּהּ „שֶׁאֵינוֹ יוֹדֵעַ לִשְׁאֹל“ הוּא מַצָּב שֶׁיֵּשׁ לְתַקְּנוֹ — „אַתְּ פְּתַח לוֹ“. אֵין הַשִּׁיר מְשַׁבֵּחַ סָפֵק אֶלָּא חִיּוּת.
+      </div>
+    </div>
+
+    <!-- VII · CODA -->
+    <div class="section-block" id="p7">
+      <div class="section-label">VII · קוֹדָה — Outro / die Frage steht zwischen zwei Ewigkeiten</div>
+      <div class="instr-note">Guitar: return to strict alternation — one voice per word, four words,
+        four notes. Do not resolve and do not slow down; simply stop, as if the next answer
+        were still coming. The next song is Hod: after endurance comes surrender,
+        and the transition works only if this piece stays open.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">
+          <span class="nw">נֶצַח…</span> <span class="mw">שְׁאֵלָה…</span>
+          <span class="mw">חַיִּים…</span> <span class="nw">נֶצַח…</span><br>
+          <span class="echo">— הַשְּׁאֵלָה עוֹמֶדֶת בֵּין שְׁתֵּי נְצָחִים —</span><br>
+          <em>Nezach… Frage… Leben… Nezach…<br>
+          (bereit für Hod: nach der Beständigkeit die Hingabe)</em>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Die Bauform der Coda · und der Anschluss an Lied VIII</span>
+        שִׂים לֵב לַסֵּדֶר: נֶצַח — שְׁאֵלָה — חַיִּים — נֶצַח. הַמִּלָּה הָרִאשׁוֹנָה חוֹזֶרֶת בָּאַחֲרוֹנָה, וּבֵין שְׁתֵּיהֶן עוֹמְדוֹת הַשְּׁאֵלָה וְהַחַיִּים. זוֹ הַקּוֹדָה הַיְּחִידָה בִּשְׁנֵי הָאַלְבּוֹמִים הַבְּנוּיָה כְּמִסְגֶּרֶת סְגוּרָה — וְדַוְקָא בַּשִּׁיר שֶׁאֵינוֹ סוֹגֵר דָּבָר. וּמִכָּאן אֶל הוֹד: אַחֲרֵי הָעֲמִידָה בַּשְּׁאֵלָה בָּאָה הַכְנִיעָה שֶׁלְּפָנֶיהָ.
+      </div>
+    </div>
+
+    <!-- VORTRAG -->
+    <div class="perf-box">
+      <div class="perf-grid">
+        <div class="perf-item">
+          <span class="perf-h">Tempo &amp; Dynamik</span>
+          <span class="perf-t"><strong>64 BPM, dialogisch</strong> — langsamer als Lied VI (72),
+          weil die Stimmen hier abwechseln statt zusammenzuklingen. Intro und beide Strophen:
+          <em>mp</em>, streng alternierend, mit echter Pause dazwischen. Refrain: <em>mf</em>,
+          erstmals gemeinsam. Brücke: <em>p</em>, eine einzelne Linie. Klimax: <em>f</em>.
+          Coda: wieder alternierend, vier Einzeltöne.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Maqam Bayat</span>
+          <span class="perf-t">Bayat — kanonisch der <strong>Nezach</strong> zugeordnet, und
+          derselbe Modus wie in Lied III (Bina). Das ist keine Doppelung, sondern Konsequenz:
+          Bayat ist der suchende Modus ohne Ruhepunkt. Bina fragte nach der Grenze des Wissens,
+          Nezach fragt weiter. Kein Phrasenende auflösen.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Gleichgewicht der Stimmen</span>
+          <span class="perf-t">Das ist die zentrale Aufgabe: <strong>Keine der beiden Positionen
+          darf lauter, wärmer oder überzeugender klingen als die andere.</strong> Gleiche
+          Dynamik, gleiche Phrasenlänge, gleiche Sorgfalt. Sobald der Vortrag Partei ergreift,
+          widerlegt er den Refrain.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Vokalführung</span>
+          <span class="perf-t">Offene Phrasenenden auf Kamatz/Cholam (עֲזִיבָה, מָקוֹם, אֲמִתִּי,
+          כָּבוֹד, שָׁמַיִם) tragen gehaltene Töne. Das dreifache
+          <span class="he">נֶצַח / נִצְחִי / נֶצַח</span> im Refrain gleich färben —
+          es ist dasselbe Wort in drei Bedeutungen, und das hört man nur, wenn man es
+          nicht unterstreicht.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</div><!-- /song-section -->
+
+<div class="ornament">
+  <div class="ornament-line"></div>
+  <div class="ornament-star">✦ ✦ ✦</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-world">נֶצַח — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</div>
+  <div class="footer-chain">נֶצַח · מַקַאם בַּיַּאת · 64 BPM · עֵץ הַחַיִּים Album II, שִׁיר ז מִתּוֹךְ י · מִשְׁלֵי כ״ה:ב׳ · אָבוֹת ה׳:י״ז</div>
+  <p class="footer-de">
+    Das am reinsten sephardische Lied des Albums — und dasjenige, das Lied VI rückwirkend
+    seine Quelle gibt: derselbe Streit, ein Jahrhundert früher, zwischen zwei italienischen
+    Kabbalisten. Es löst nichts, und es behauptet, genau das sei der Punkt.
+    Mischlei nennt beides <em>Kavod</em>: das Verbergen und das Nachforschen. Sie sind keine
+    Gegner, sondern zwei Würden, die einander brauchen — ohne ein Verborgenes gäbe es nichts
+    zu erforschen, und ohne Forschende bliebe das Verborgene stumm.
+    <br><br>
+    <strong>כִּי מִי שֶׁחָדַל לִשְׁאֹל — חָדַל לִחְיוֹת.</strong>
+  </p>
+  <div class="footer-amen">אָמֵן</div>
+</div>
+
+<!-- QUELLEN -->
+<div class="sources-box">
+  <div class="sources-text">
+    <strong>R. Josef Ergas (Livorno, 1685–1730), Schomer Emunim</strong> — der Tzimtzum ist
+    nicht wörtlich zu verstehen; zurückgezogen wurde das Licht, nicht das Wesen.
+    Grundlage von Strophe I. ·
+    <strong>R. Immanuel Chai Ricchi (Ferrara, 1688–1743), Joscher Lewaw</strong> — der Tzimtzum
+    ist wörtlich; ohne wirklichen Abstand kein Kavod. Grundlage von Strophe II.
+    <em>Zur Datierung und zum Druckort siehe den Prüfhinweis oben.</em> ·
+    <strong>Mischlei 25:2</strong> — <em>kewod Elohim haster dawar, uchwod melachim chakor
+    dawar</em>. Die erste Vershälfte ist Ricchis Argument, die zweite der Klimax des Liedes;
+    beide werden <em>Kavod</em> genannt. Epigraph.
+    <strong>Ergänzt — der tragende Vers.</strong> ·
+    <strong>Schmuel I 15:29</strong> — <em>wegam nezach Jisrael lo jeschakker</em>:
+    <em>Nezach</em> als Gottesname, verbunden mit Wahrhaftigkeit. Grundlage von
+    <em>ha'emet nezach</em>. <strong>Ergänzt.</strong> ·
+    <strong>Awot 5:17</strong> — <em>kol machloket schehi leschem schamajim sofah
+    lehitkajjem</em>: ein Streit um des Himmels willen hat Bestand; und
+    <strong>Eruwin 13b</strong> — <em>elu we'elu diwrei Elohim chajim</em>.
+    Grundlage des Refrains. Dieselben Quellen tragen Lied VI. <strong>Ergänzt.</strong> ·
+    <strong>Chagiga 3b</strong> zu <strong>Kohelet 12:11</strong> — die widerstreitenden
+    Lehrmeinungen im Lehrhaus stammen von einem Hirten; Grundlage von
+    <em>bechol beit midrasch</em>. <strong>Ergänzt.</strong> ·
+    <strong>Mischlei 2:3–5</strong> — <em>im tewakschenna kakkessef … as tawin</em>:
+    Suchen als Bedingung des Verstehens. Dazu die <strong>Haggada schel Pessach</strong>,
+    in der <em>sche'eino jodea lisch'ol</em> ein zu behebender Mangel ist.
+    Grundlage der Schlusszeile des Klimax. <strong>Ergänzt.</strong> ·
+    <strong>Tikkunei Zohar 57</strong> — <em>let atar panui minneh</em>; dieselbe Zeile trägt
+    Lied I dieses Albums. Rahmen von Ergas' Position. ·
+    <strong>Rambam, Hilchot Jesodei HaTora 1</strong> — die Unterschiedenheit Gottes von allem
+    Geschaffenen; Rahmen von Ricchis Position. ·
+    <strong>Ramak (R. Mosche Cordovero, 1522–1570, Safed), Pardes Rimonim</strong> — das
+    Verhältnis von Ein Sof zu den Sefirot und die Bestimmung der Nezach. ·
+    <strong>Raschasch (R. Schalom Scharabi, 1720–1777), Nehar Schalom</strong> — geboren in
+    eben den Jahren, in denen der Disput gedruckt wurde; die systematische Ordnung der
+    lurianischen Lehre, in der beide Anliegen aufgehoben sind. Im Lied nicht genannt;
+    <strong>als dritte Stimme ergänzt.</strong><br><br>
+    Das Tetragramm erscheint im gesamten Dokument ausschließlich als <strong>אֲדֹנָי</strong>.
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

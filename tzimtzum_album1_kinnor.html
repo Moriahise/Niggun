@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>צִמְצוּם — Album I · שִׁבְעָה שִׁירִים לְכִנּוֹר וְקוֹל</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:         #04060c;
+  --deep:       #080c18;
+  --layer:      #0e1428;
+  --card:       #0b0f1f;
+  --gold:       #c8a44a;
+  --gold-lt:    #e8c870;
+  --gold-dim:   #3e2c10;
+  --harp:       #d4a84e;
+  --harp-lt:    #eec870;
+  --azure:      #4472b4;
+  --azure-lt:   #78a8d6;
+  --azure-dim:  #182848;
+  --sage:       #4a8460;
+  --sage-lt:    #78c090;
+  --sage-dim:   #1a3824;
+  --ember:      #c05828;
+  --ember-lt:   #e07840;
+  --ivory:      #e8e0d0;
+  --ivory-lt:   #f5f0e8;
+  --ivory-dim:  #8a8070;
+  --silver:     #c4d2ea;
+  --silver-dim: #637292;
+  --text:       #a8bcd4;
+  --tikkun:     #3e6e52;
+  --tikkun-lt:  #5a9470;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.8;
+}
+
+/* ── STARFIELD ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% -10%,rgba(68,114,180,.12) 0%,transparent 60%),
+    radial-gradient(ellipse at 15% 60%,rgba(200,164,74,.06) 0%,transparent 45%),
+    radial-gradient(ellipse at 85% 35%,rgba(74,132,96,.04) 0%,transparent 40%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%,rgba(200,210,234,.45) 0%,transparent 100%),
+    radial-gradient(1px 1px at 67%  7%,rgba(200,210,234,.5)  0%,transparent 100%),
+    radial-gradient(1px 1px at 43% 52%,rgba(200,210,234,.32) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 89% 22%,rgba(200,164,74,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 31% 85%,rgba(200,210,234,.38) 0%,transparent 100%),
+    radial-gradient(2px 2px at 58%  4%,rgba(200,164,74,.42)  0%,transparent 100%),
+    radial-gradient(1px 1px at 76% 70%,rgba(200,210,234,.28) 0%,transparent 100%),
+    radial-gradient(1px 1px at 5%  40%,rgba(200,210,234,.36) 0%,transparent 100%);
+}
+
+/* ── NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(4,6,12,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(68,114,180,.18);
+  display:flex;align-items:stretch;gap:0;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-logo{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.05em;
+  color:var(--harp);padding:14px 24px;
+  border-right:1px solid rgba(68,114,180,.2);
+  white-space:nowrap;flex-shrink:0;direction:rtl;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-logo-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:0.55em;color:var(--silver-dim);font-weight:300;letter-spacing:.1em;
+  direction:ltr;
+}
+.nav-link{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.78em;
+  color:var(--silver-dim);text-decoration:none;padding:0 14px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  display:flex;align-items:center;direction:rtl;
+}
+.nav-link:hover{color:var(--harp-lt);border-bottom-color:var(--harp);}
+.nav-link.active{color:var(--gold-lt);border-bottom-color:var(--gold);}
+
+/* ── WRAPPER ── */
+.wrap{max-width:1020px;margin:0 auto;padding:72px 44px 140px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:80px;padding-bottom:60px;
+  border-bottom:1px solid rgba(68,114,180,.15);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 20px;
+  color:var(--harp);font-size:.55em;letter-spacing:.6em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--azure-lt);letter-spacing:.28em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.8;
+}
+.page-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.2em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;
+  text-shadow:0 0 70px rgba(200,164,74,.35),0 0 120px rgba(68,114,180,.2);
+  margin-bottom:8px;line-height:1.1;
+}
+.page-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2em;
+  color:var(--silver-dim);margin-bottom:28px;
+}
+.page-desc{
+  font-size:1.02em;color:var(--text);line-height:1.95;
+  max-width:620px;margin:0 auto 32px;
+}
+.instrument-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(212,168,78,.3);padding:10px 24px;
+  background:rgba(212,168,78,.05);
+  font-family:'Frank Ruhl Libre',serif;
+}
+.instrument-badge .he{font-size:1.05em;color:var(--harp-lt);direction:rtl;}
+.instrument-badge .de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;color:var(--silver-dim);}
+.instrument-badge .sep{color:var(--harp);opacity:.4;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:100px;scroll-margin-top:60px;
+  border:1px solid rgba(68,114,180,.12);
+  background:linear-gradient(180deg,rgba(11,15,31,.9) 0%,rgba(8,12,24,.95) 100%);
+  overflow:hidden;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:36px 44px 28px;
+  border-bottom:1px solid rgba(68,114,180,.12);
+  background:linear-gradient(135deg,rgba(68,114,180,.06),transparent);
+  position:relative;
+  display:grid;grid-template-columns:auto 1fr auto;gap:0 28px;align-items:center;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:2.4em;color:var(--harp);opacity:.5;line-height:1;
+  border-right:1px solid rgba(200,164,74,.2);padding-right:24px;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:2em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;
+  text-shadow:0 0 40px rgba(200,164,74,.2);display:block;
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-pill{
+  font-family:'Frank Ruhl Libre',serif;font-size:.7em;
+  color:var(--gold);border:1px solid var(--gold-dim);
+  padding:4px 14px;background:rgba(200,164,74,.04);white-space:nowrap;
+  direction:rtl;text-align:right;line-height:1.6;
+}
+.source-pill-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.65em;color:var(--silver-dim);display:block;direction:ltr;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 44px 44px;}
+
+/* ── SECTION BLOCK ── */
+.section-block{margin:32px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.22em;text-transform:uppercase;
+  margin-bottom:16px;padding-bottom:8px;
+  border-bottom:1px solid rgba(99,114,146,.1);
+  display:flex;align-items:center;gap:10px;
+}
+
+/* label colors per section type */
+.label-intro    .section-label{color:var(--silver-dim);}
+.label-verse    .section-label{color:var(--azure-lt);}
+.label-refrain  .section-label{color:var(--harp-lt);}
+.label-bridge   .section-label{color:var(--gold);}
+.label-tikkun   .section-label{color:var(--sage-lt);}
+.label-climax   .section-label{color:var(--harp-lt);}
+.label-coda     .section-label{color:var(--silver-dim);}
+.label-scenario .section-label{color:var(--azure-lt);}
+
+/* ── HARP NOTE ── */
+.harp-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.83em;color:var(--harp);opacity:.75;
+  margin-bottom:12px;padding:8px 16px;
+  border-left:2px solid rgba(212,168,78,.3);
+  background:rgba(212,168,78,.03);direction:ltr;
+}
+
+/* ── LYRICS ── */
+.lyrics-block{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0 40px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.18em;font-weight:400;
+  color:var(--ivory-lt);direction:rtl;text-align:right;
+  line-height:2.1;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.94em;
+  color:var(--text);line-height:2.1;
+  border-left:1px solid rgba(99,114,146,.15);padding-left:28px;
+}
+.lyrics-he .line{display:block;}
+.lyrics-de .line{display:block;}
+
+/* ── REFRAIN BLOCK ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(68,114,180,.07),rgba(68,114,180,.03));
+  border:1px solid rgba(68,114,180,.2);border-left:3px solid var(--azure);
+  padding:22px 28px;margin:8px 0;
+}
+/* ── BRIDGE BOX ── */
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,164,74,.07),transparent);
+  border:1px solid rgba(200,164,74,.18);border-left:3px solid var(--gold);
+  padding:22px 28px;
+}
+/* ── TIKKUN BOX ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(74,132,96,.1),rgba(26,56,36,.4));
+  border:1px solid rgba(74,132,96,.28);border-left:4px solid var(--sage);
+  padding:28px 32px;position:relative;margin:32px 0;
+}
+.tikkun-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:18px;padding-bottom:12px;
+  border-bottom:1px solid rgba(74,132,96,.2);
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;
+  color:var(--sage-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--sage);
+}
+.tikkun-source{
+  font-family:'Frank Ruhl Libre',serif;font-size:.7em;
+  color:var(--sage);border:1px solid rgba(74,132,96,.3);
+  padding:2px 10px;background:rgba(74,132,96,.05);direction:rtl;
+}
+.tikkun-source a{color:var(--azure-lt);text-decoration:none;font-family:'EB Garamond',serif;font-size:.9em;}
+.tikkun-source a:hover{color:var(--azure);text-decoration:underline;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.7em;
+  color:var(--sage-lt);border:1px solid rgba(74,132,96,.3);
+  padding:3px 12px;background:rgba(74,132,96,.06);direction:rtl;
+}
+
+/* ── CLIMAX BOX ── */
+.climax-box{
+  background:linear-gradient(135deg,rgba(212,168,78,.08),rgba(200,164,74,.03));
+  border:1px solid rgba(212,168,78,.22);border-left:3px solid var(--harp);
+  padding:22px 28px;
+}
+
+/* ── SCENARIOS ── */
+.scenarios-section{
+  margin-top:52px;padding-top:40px;
+  border-top:1px solid rgba(99,114,146,.12);
+}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.1em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;text-align:right;
+  margin-bottom:28px;
+}
+.scenarios-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+}
+.scenario-card{
+  border:1px solid;padding:24px 26px;
+  background:rgba(8,12,24,.6);
+  position:relative;overflow:hidden;
+}
+.scenario-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+}
+.sc1{border-color:rgba(68,114,180,.25);}
+.sc1::before{background:linear-gradient(90deg,var(--azure),transparent);}
+.sc2{border-color:rgba(200,164,74,.22);}
+.sc2::before{background:linear-gradient(90deg,var(--gold),transparent);}
+.sc3{border-color:rgba(74,132,96,.25);}
+.sc3::before{background:linear-gradient(90deg,var(--sage),transparent);}
+.sc4{border-color:rgba(99,114,146,.22);}
+.sc4::before{background:linear-gradient(90deg,var(--silver-dim),transparent);}
+.scenario-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.65em;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:6px;opacity:.6;
+}
+.sc1 .scenario-num{color:var(--azure-lt);}
+.sc2 .scenario-num{color:var(--gold);}
+.sc3 .scenario-num{color:var(--sage-lt);}
+.sc4 .scenario-num{color:var(--silver-dim);}
+.scenario-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  direction:rtl;margin-bottom:2px;
+}
+.sc1 .scenario-title-he{color:var(--azure-lt);}
+.sc2 .scenario-title-he{color:var(--gold-lt);}
+.sc3 .scenario-title-he{color:var(--sage-lt);}
+.sc4 .scenario-title-he{color:var(--silver);}
+.scenario-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.8em;color:var(--silver-dim);margin-bottom:14px;
+}
+.scenario-body{
+  font-size:.9em;color:var(--text);line-height:1.85;
+}
+.key-moment{
+  margin-top:14px;padding:10px 16px;
+  border-left:2px solid;
+  background:rgba(255,255,255,.02);
+  font-size:.88em;font-style:italic;color:var(--ivory-dim);
+}
+.sc1 .key-moment{border-left-color:var(--azure);}
+.sc2 .key-moment{border-left-color:var(--gold);}
+.sc3 .key-moment{border-left-color:var(--sage);}
+.sc4 .key-moment{border-left-color:var(--silver-dim);}
+.reaction{
+  margin-top:12px;font-size:.85em;
+  color:var(--silver-dim);border-top:1px solid rgba(99,114,146,.1);
+  padding-top:10px;
+}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── SONG DIVIDER ── */
+.song-div{
+  display:flex;align-items:center;gap:16px;
+  margin:60px 0 0;padding:0;
+}
+.song-div-line{flex:1;height:1px;background:rgba(68,114,180,.12);}
+.song-div-star{color:var(--harp);font-size:.6em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.album-footer{
+  text-align:center;margin-top:80px;padding-top:52px;
+  border-top:1px solid rgba(68,114,180,.12);
+}
+.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;letter-spacing:.08em;
+  text-shadow:0 0 40px rgba(200,164,74,.25);margin-bottom:8px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.9em;color:var(--silver-dim);
+}
+
+@media(max-width:720px){
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(99,114,146,.12);padding-top:18px;margin-top:18px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:auto 1fr;}
+  .source-pill{display:none;}
+  .wrap{padding:40px 18px 80px;}
+  .song-body{padding:0 18px 32px;}
+  .page-he{font-size:2.8em;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    צִמְצוּם
+    <span class="nav-logo-sub">Album I · כִּנּוֹר וְקוֹל</span>
+  </div>
+  <a class="nav-link" href="#song1">א · אֵין סוֹף</a>
+  <a class="nav-link" href="#song2">ב · הַצִּמְצוּם</a>
+  <a class="nav-link" href="#song3">ג · הַחָלָל</a>
+  <a class="nav-link" href="#song4">ד · קַו הָאוֹר</a>
+  <a class="nav-link" href="#song5">ה · שְׁבִירָה</a>
+  <a class="nav-link" href="#song6">ו · נִיצוֹצוֹת</a>
+  <a class="nav-link" href="#song7">ז · תִּיקּוּן</a>
+</nav>
+
+<div class="wrap">
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <p class="eyebrow">Album I — שִׁבְעָה שִׁירִים · Sieben Lieder</p>
+  <h1 class="page-he">צִמְצוּם</h1>
+  <p class="page-de">Die Kontraktion — Der lurianische Schöpfungsweg</p>
+  <p class="page-desc">
+    Sieben Lieder für Harfe und Stimme, dem Weg der lurianischen Kabbalah folgend:
+    von Ein Sof, dem Unendlichen, bis zum Tikkun, der Wiederherstellung.
+    Jedes Lied trägt eine kosmologische, eine theologische und eine praktische Schicht.
+  </p>
+  <div class="instrument-badge">
+    <span class="he">כִּנּוֹר</span>
+    <span class="sep">·</span>
+    <span class="de">Harfe — Instrument Davids, halachisch geheiligt</span>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED I — אֵין סוֹף
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song1">
+  <div class="song-header">
+    <div class="song-num">א</div>
+    <div>
+      <span class="song-title-he">אֵין סוֹף</span>
+      <span class="song-title-de">Das Unendliche — Vor aller Schöpfung</span>
+    </div>
+    <div class="source-pill">
+      עֵץ חַיִּים, שַׁעַר א · תַּנְיָא פֶּרֶק ל״ג
+      <span class="source-pill-de">Etz Chaim Sha'ar 1 · Tanya Kap. 33</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <!-- INTRO -->
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe solo · Flageolett-Töne, pianissimo, fast unhörbar · Weite offene Akkorde, als kämen sie aus dem Nichts · Kein Rhythmus, nur Stille mit Tönen · Dauer: ca. 40 Sekunden</div>
+    </div>
+
+    <!-- VERSE I -->
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֵין סוֹף, אֵין סוֹף —</span>
+          <span class="line">מָלֵא כֹּל, וְאֵין כֹּל בִּלְעָדָיו,</span>
+          <span class="line">אֵין רֵאשִׁית, אֵין אַחֲרִית,</span>
+          <span class="line">אֵין מַעְלָה וְאֵין מַטָּה לְפָנָיו.</span>
+          <span class="line">אֲדֹנָי אֶחָד, וּשְׁמוֹ אֶחָד —</span>
+          <span class="line">לִפְנֵי כָּל עוֹלָם שֶׁנִּהְיָה,</span>
+          <span class="line">בְּאוֹר אֵין סוֹף הָיָה הַכֹּל,</span>
+          <span class="line">בְּסוֹד אֶחָד — בִּדְמָמָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Kein Ende, kein Ende —</span>
+          <span class="line">alles ist erfüllt, und nichts ist ohne Ihn,</span>
+          <span class="line">kein Anfang, kein Ende,</span>
+          <span class="line">kein Oben und kein Unten vor Ihm.</span>
+          <span class="line">Adonai ist Einer, Sein Name ist Einer —</span>
+          <span class="line">vor jeder Welt, die je war,</span>
+          <span class="line">im Licht des Ein Sof war alles,</span>
+          <span class="line">in einem Geheimnis — in der Stille.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERSE II -->
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֵין מַחֲשָׁבָה תּוֹפֶסֶת בּוֹ,</span>
+          <span class="line">אֵין לֵב יָכֹל לְכַלְכְּלוֹ —</span>
+          <span class="line">רַק שְׁתִיקַת הַנֶּפֶשׁ לְפָנָיו,</span>
+          <span class="line">וְהַהַכְנָעָה — וְהַסִּלּוּק.</span>
+          <span class="line">כֹּל מַה שֶּׁיֵּשׁ — בוֹ הוּא חַי,</span>
+          <span class="line">כֹּל מַה שֶּׁיֵּשׁ — בוֹ הוּא קַיָּם,</span>
+          <span class="line">וְאָנֹכִי אֵפֶר וָעָפָר לְפָנָיו —</span>
+          <span class="line">וּבְכָל זֹאת — בִּי הוּא דָּם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Kein Gedanke kann Ihn erfassen,</span>
+          <span class="line">kein Herz ist fähig, Ihn zu fassen —</span>
+          <span class="line">nur das Schweigen der Seele vor Ihm,</span>
+          <span class="line">und die Unterwerfung — und das Zurücktreten.</span>
+          <span class="line">Alles was ist — lebt in Ihm,</span>
+          <span class="line">alles was ist — besteht in Ihm,</span>
+          <span class="line">und ich bin Asche und Staub vor Ihm —</span>
+          <span class="line">und dennoch — lebt er in mir.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFRAIN -->
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֵין סוֹף, אֵין סוֹף —</span>
+            <span class="line">אוֹר שֶׁאֵין לוֹ גְּבוּל,</span>
+            <span class="line">אֵין סוֹף, אֵין סוֹף —</span>
+            <span class="line">מְלֹא כָּל הָעוֹלָם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kein Ende, kein Ende —</span>
+            <span class="line">Licht ohne Grenzen,</span>
+            <span class="line">kein Ende, kein Ende —</span>
+            <span class="line">erfüllt die ganze Welt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRIDGE -->
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: einzelne Flageolett-Töne, sehr langsam · Stimme fast gesprochen</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לִפְנֵי שֶׁהָיְתָה בְּרֵאשִׁית —</span>
+            <span class="line">לִפְנֵי אוֹר וְחֹשֶׁךְ וָמָיִם,</span>
+            <span class="line">הָיָה, וְהָיָה, וְיִהְיֶה —</span>
+            <span class="line">אֲדֹנָי הוּא הָאֱלֹהִים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Bevor am Anfang war —</span>
+            <span class="line">bevor Licht und Finsternis und Wasser —</span>
+            <span class="line">Er war, Er ist, Er wird sein —</span>
+            <span class="line">Adonai, Er ist der Gott.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN I -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — בִּיטּוּל הַיֵּשׁ</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung I — Selbstnullifikation</div>
+        </div>
+        <div class="tikkun-source">
+          תַּנְיָא פֶּרֶק ל״ג
+          <a href="https://www.sefaria.org/Likutei_Amarim,_Tanya.33" target="_blank"> sefaria.org/Tanya.33</a>
+        </div>
+      </div>
+      <div class="harp-note">Harfe: sanfte Terzen, pp · Neue melodische Phrase, anders als der Hauptteil</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מוֹדֶה אֲנִי לְפָנֶיךָ —</span>
+          <span class="line">לֹא אֲנִי, כִּי אַתָּה בִּי.</span>
+          <span class="line">אֵין יֵשׁ, אֵין אֲנִי —</span>
+          <span class="line">רַק אַתָּה, רַק שִׁמְךָ.</span>
+          <span class="line">בְּכָל בֹּקֶר אֲנִי אוֹמֵר:</span>
+          <span class="line">אֲנִי אֵינִי — אַתָּה הָאֵין סוֹף,</span>
+          <span class="line">וּבְבִיטּוּל הַיֵּשׁ שֶׁלִּי —</span>
+          <span class="line">תִּיקּוּן רִאשׁוֹן שֶׁלִּי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ich danke Dir —</span>
+          <span class="line">nicht ich, denn Du bist in mir.</span>
+          <span class="line">Kein Sein, kein Ich —</span>
+          <span class="line">nur Du, nur Dein Name.</span>
+          <span class="line">Jeden Morgen sage ich:</span>
+          <span class="line">Ich bin nicht — Du bist Ein Sof,</span>
+          <span class="line">und in meiner Selbstnullifikation —</span>
+          <span class="line">mein erster Tikkun.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">מוֹדֶה אֲנִי</span>
+        <span class="mitzva-tag">בִּיטּוּל הַיֵּשׁ</span>
+        <span class="mitzva-tag">כַּוָּנָה בִּתְפִלָּה</span>
+      </div>
+    </div>
+
+    <!-- CLIMAX -->
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: volle Akkorde, mf · Stimme: höchster Intensitätspunkt · Glissando im letzten Vers</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֵין סוֹף, אֵין סוֹף —</span>
+            <span class="line">מָלֵא כֹּל, וְשׁוֹכֵן בִּי,</span>
+            <span class="line">בְּבֹקֶר, בְּעֶרֶב, בְּלַיְלָה —</span>
+            <span class="line">מוֹדֶה אֲנִי לְפָנֶיךָ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kein Ende, kein Ende —</span>
+            <span class="line">alles erfüllt, und wohnend in mir,</span>
+            <span class="line">morgens, abends, nachts —</span>
+            <span class="line">ich danke Dir.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CODA -->
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: Rückkehr zum Flageolett des Intros · pp → ppp → Stille · Das letzte Töne verklingen ins Nichts — Rückkehr zum Ein Sof</div>
+    </div>
+
+    <!-- SCENARIOS -->
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Er öffnet die App oder sitzt in einem Café. Die Harfen-Flageolett-Eröffnung fängt ihn ein — er erwartet Pop, bekommt Stille. Die hebräischen Wörter <em>אֵין סוֹף</em> kennt er aus dem Schulunterricht, vielleicht auch aus einem Gespräch über Physik oder Unendlichkeit. Der Refrain ist einfach genug, um ihn zu fesseln. Beim Tikkun-Teil, besonders der Phrase <em>מוֹדֶה אֲנִי לְפָנֶיךָ</em>, entsteht eine unerwartete Emotion: Er sagt diesen Satz als Kind gesagt — und hatte ihn vergessen.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Phrase <em>וּבְכָל זֹאת — בִּי הוּא דָּם</em> trifft ihn. Das ist keine religiöse Aussage mehr — das ist Existenz.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er schickt das Lied an einen Freund mit dem Kommentar: „Kein Ahnung was das ist, aber es hat mich erwischt."</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Er kennt <em>מוֹדֶה אֲנִי</em> aus dem Morgengebet. Er kennt <em>אֵין סוֹף</em> aus dem Sidur. Das Lied gibt ihm eine neue Melodie für Worte, die er täglich sagt — und das ist erschütternd, weil es bedeutet, dass er diese Worte vielleicht nie wirklich gehört hat. Die Tanya-Quelle gibt ihm Sicherheit: Das ist nicht Esoterik, das ist Halachah. Der Tikkun-Teil gibt der Praxis eine kosmologische Tiefe: <em>מוֹדֶה אֲנִי</em> wird zu einem kosmischen Akt.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>בִּיטּוּל הַיֵּשׁ שֶׁלִּי — תִּיקּוּן רִאשׁוֹן שֶׁלִּי</em> — Er versteht: Sein tägliches Gebet ist kosmische Reparatur.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er lernt die Melodie und singt den Refrain als Teil seiner Schachrit-Vorbereitung.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Er erkennt sofort die Etz-Chaim-Terminologie. Der erste Vers ist für ihn eine musikalische Formulierung des ersten Sha'ar — er hört den Ari in den Worten. Das Flageolett der Harfe verbindet er mit dem <em>אוֹר סוֹבֵב כָּל עָלְמִין</em> — das Licht, das von außen umgibt. Der Tikkun-Teil rührt ihn besonders: Die Verbindung von <em>בִּיטּוּל הַיֵּשׁ</em> und <em>מוֹדֶה אֲנִי</em> ist genau das, was der Ba'al Shem Tov lehrte. Er schließt die Augen und versinkt in die Melodie.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Zeile <em>אֲנִי אֵינִי — אַתָּה הָאֵין סוֹף</em> — Das ist die vollständige Zusammenfassung des chassidischen Weges in einem Satz.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er singt das Lied beim Tisch am Schabbat und erklärt es seinen Kindern als Einführung in die Kabbala.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Er hört das Lied in einem Restaurant, in einer Playlist seines Freundes, oder auf YouTube. Er versteht kein Hebräisch. Er hört nur die Harfe und die Stimme — und fühlt etwas, das er nicht benennen kann. Das Lied klingt alt und neu zugleich. Der Refrain — <em>אֵין סוֹף, אֵין סוֹף</em> — mit seinen offenen Vokalen haftet im Gedächtnis. Er fragt: „Was ist das? Was bedeutet das?"
+            <div class="key-moment">⚡ Schlüsselmoment: Die Stille nach dem letzten Harpfen-Ton. Er sitzt eine Sekunde lang in der Stille und weiß nicht warum.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er googelt „אֵין סוֹף" und landet auf einem Wikipedia-Artikel über Kabbala. Der erste Schritt einer Reise.</div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /scenarios -->
+  </div><!-- /song-body -->
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED II — הַצִּמְצוּם הָרִאשׁוֹן
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song2">
+  <div class="song-header">
+    <div class="song-num">ב</div>
+    <div>
+      <span class="song-title-he">הַצִּמְצוּם הָרִאשׁוֹן</span>
+      <span class="song-title-de">Die erste Kontraktion — Rückzug als Schöpfungsakt</span>
+    </div>
+    <div class="source-pill">
+      עֵץ חַיִּים שַׁעַר א · מִכְתַּב מֵאֵלִיָּהוּ, חֵלֶק א
+      <span class="source-pill-de">Etz Chaim Sha'ar 1 · Michtav MeEliyahu Bd. 1 (Rabbi Dessler)</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: absteigende Phrase, vier Töne wie ein Atemzug nach innen · Mf, dann pp · Wiederholung zweimal, jedes Mal leiser — musikalischer Tzimtzum</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּשֶׁרָצָה לִבְרֹא עוֹלָמוֹת —</span>
+          <span class="line">צִמְצֵם אֶת אוֹרוֹ מִקִּירְבּוֹ,</span>
+          <span class="line">הֵסִיר אֶת עַצְמוֹ כְּדֵי לִתֵּן,</span>
+          <span class="line">וְנָתַן — כְּדֵי לִהְיוֹת.</span>
+          <span class="line">בְּמָקוֹם שֶׁהָיָה הַכֹּל — עַכְשָׁיו יֵשׁ חָלָל,</span>
+          <span class="line">בְּמָקוֹם שֶׁהָיָה אַיִן — עַכְשָׁיו יֵשׁ עוֹלָם,</span>
+          <span class="line">הַצִּמְצוּם הָרִאשׁוֹן — סוֹד הַחֶסֶד הַגָּדוֹל,</span>
+          <span class="line">לְוַתֵּר עַל הַמָּקוֹם — לְמַעַן הָאַחֵר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Als Er Welten erschaffen wollte —</span>
+          <span class="line">kontrahierte Er Sein Licht aus Seiner Mitte,</span>
+          <span class="line">Er zog Sich zurück, um zu geben,</span>
+          <span class="line">und gab — damit sei.</span>
+          <span class="line">Wo alles war — jetzt ist ein Raum,</span>
+          <span class="line">wo Nichts war — jetzt ist eine Welt,</span>
+          <span class="line">die erste Kontraktion — das Geheimnis der großen Gnade,</span>
+          <span class="line">auf den Platz zu verzichten — um des Anderen willen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כָּכָה בָּרָא אֱלֹהִים שָׁמַיִם —</span>
+          <span class="line">כָּכָה נָתַן לָאָדָם מָקוֹם,</span>
+          <span class="line">הַמֶּלֶךְ שֶׁנִּכְנַס לַצֵּל —</span>
+          <span class="line">כְּדֵי שֶׁהָעֶבֶד יֵשֵׁב בָּאוֹר.</span>
+          <span class="line">וְהַצִּמְצוּם אֵינֶנּוּ חֶסְרוֹן —</span>
+          <span class="line">הוּא אֶת-הַחֵרוּת שֶׁנִּתֵּן:</span>
+          <span class="line">לִרְאוֹת אוֹר שֶׁלֹּא יָכֹל לִהְיוֹת,</span>
+          <span class="line">לָשֶׁבֶת בְּמָקוֹם שֶׁלֹּא הָיָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">So schuf Gott den Himmel —</span>
+          <span class="line">so gab Er dem Menschen seinen Platz,</span>
+          <span class="line">der König, der in den Schatten trat —</span>
+          <span class="line">damit der Diener im Licht sitze.</span>
+          <span class="line">Und die Kontraktion ist kein Mangel —</span>
+          <span class="line">sie ist die Freiheit, die geschenkt wird:</span>
+          <span class="line">ein Licht zu sehen, das nicht sein konnte,</span>
+          <span class="line">an einem Ort zu sitzen, der nicht war.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַצִּמְצוּם הָרִאשׁוֹן —</span>
+            <span class="line">הַנְּסִיגָה שֶׁהִיא בְּרֵאשִׁית,</span>
+            <span class="line">הַצִּמְצוּם הָרִאשׁוֹן —</span>
+            <span class="line">הַחֶסֶד שֶׁבַּשֶּׁקֶט.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Die erste Kontraktion —</span>
+            <span class="line">der Rückzug, der der Anfang ist,</span>
+            <span class="line">die erste Kontraktion —</span>
+            <span class="line">die Gnade in der Stille.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: aufwärts-Terzen, langsam · Stimme: tief, ruhig</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי, אֲדֹנָי —</span>
+            <span class="line">מָלֵא עֹז וְרַחֲמִים,</span>
+            <span class="line">צִמְצַמְתָּ עַצְמְךָ</span>
+            <span class="line">לְמַעַן בָּנֶיךָ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai, Adonai —</span>
+            <span class="line">erfüllt von Stärke und Barmherzigkeit,</span>
+            <span class="line">Du hast Dich kontrahiert</span>
+            <span class="line">um Deiner Kinder willen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN II -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — הַצִּמְצוּם שֶׁלִּי</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung II — Meine eigene Kontraktion</div>
+        </div>
+        <div class="tikkun-source">
+          מִכְתַּב מֵאֵלִיָּהוּ, חֵלֶק א
+        </div>
+      </div>
+      <div class="harp-note">Harfe: Terzen, nachgebend · Neue Melodie-Phrase, nachdenklich, pp</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">וַאֲנִי — הֵיכָן אֶצְטַמְצֵם?</span>
+          <span class="line">בְּמָקוֹם שֶׁמִּלֵּאתִי יֶתֶר מִדַּי —</span>
+          <span class="line">לִנְסֹג, לְהַחֲרִישׁ, לִתֵּן מָקוֹם —</span>
+          <span class="line">זֶה תִּיקּוּן שֶׁלִּי בַּיּוֹם הַזֶּה.</span>
+          <span class="line">כִּיבּוּד אָב וָאֵם — צִמְצוּם שֶׁלִּי,</span>
+          <span class="line">אַהֲבַת הָרֵעַ — צִמְצוּם שֶׁלִּי,</span>
+          <span class="line">עֲנָוָה כְּנֶגֶד הָאַחֵר —</span>
+          <span class="line">הַצִּמְצוּם הָרִאשׁוֹן שֶׁלִּי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und ich — wo werde ich mich kontrahieren?</span>
+          <span class="line">Wo ich zu viel ausgefüllt habe —</span>
+          <span class="line">zurückweichen, schweigen, Raum geben —</span>
+          <span class="line">das ist mein Tikkun heute.</span>
+          <span class="line">Elternehrung — meine Kontraktion,</span>
+          <span class="line">Nächstenliebe — meine Kontraktion,</span>
+          <span class="line">Demut dem Anderen gegenüber —</span>
+          <span class="line">meine erste Kontraktion.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">כִּיבּוּד אָב וָאֵם</span>
+        <span class="mitzva-tag">וְאָהַבְתָּ לְרֵעֲךָ</span>
+        <span class="mitzva-tag">עֲנָוָה</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: breite Akkorde, crescendo · Stimme: Höhepunkt</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כַּאֲשֶׁר צִמְצַמְתָּ — נוֹלַד עוֹלָם,</span>
+            <span class="line">כַּאֲשֶׁר אֶצְטַמְצֵם — יִוָּלֵד אַחֵר.</span>
+            <span class="line">הַצִּמְצוּם הָרִאשׁוֹן — הוּא בִּי,</span>
+            <span class="line">וּבִי — הַצִּמְצוּם נִמְשָׁךְ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Als Du Dich kontrahiertest — wurde eine Welt geboren,</span>
+            <span class="line">wenn ich mich kontrahiere — wird ein Anderer geboren.</span>
+            <span class="line">Die erste Kontraktion — ist in mir,</span>
+            <span class="line">und in mir — setzt sich die Kontraktion fort.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: die absteigende Intro-Phrase, noch einmal, pp · Dann Stille</div>
+    </div>
+
+    <!-- SCENARIOS II -->
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Die Worte <em>כְּשֶׁרָצָה לִבְרֹא עוֹלָמוֹת</em> klingen für ihn wie ein Mythos — fast griechisch, fast babylonisch, aber eben Hebräisch. Das Konzept eines Gottes, der sich zurückzieht, um Platz zu machen, ist für ihn philosophisch interessant: Er denkt an negative Theologie, an Apophasis. Beim Tikkun-Teil — <em>הֵיכָן אֶצְטַמְצֵם?</em> — erkennt er plötzlich eine universelle ethische Frage: Wo nehme ich zu viel Raum in Beziehungen?
+            <div class="key-moment">⚡ Schlüsselmoment: <em>כַּאֲשֶׁר אֶצְטַמְצֵם — יִוָּלֵד אַחֵר</em> — Eine Lebensweisheit, die er in keiner Sprache so schön gefunden hat.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er schreibt das Wort „Tzimtzum" auf einen Zettel und fragt seinen Therapeuten: „Gibt es dafür ein psychologisches Konzept?"</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Das Lied bestätigt, was er in der Jeschiwa gelernt hat — aber mit einer Melodie, die den Text zum Leben erweckt. Der Brücken-Teil <em>אֲדֹנָי מָלֵא עֹז וְרַחֲמִים</em> klingt wie Tefillah. Der Tikkun-Teil ist für ihn ein konkretes Mussar-Programm: Die drei Mitzwot — Kibbud Av, Ahavat Reya, Anavah — sind jetzt mit einer Melodie verbunden, die er sich merkt.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Verbindung zwischen dem kosmischen Tzimtzum Gottes und dem eigenen <em>כִּיבּוּד אָב וָאֵם</em> — der Vater als Gott im Kleinen.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er ruft seinen Vater an, den er seit drei Wochen nicht angerufen hat.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Der erste Vers ist für ihn eine präzise Zusammenfassung des ersten Sha'ar des Etz Chaim. Die Phrase <em>הֵסִיר אֶת עַצְמוֹ כְּדֵי לִתֵּן</em> ist für ihn die Definition von Chesed Elyon. Der Tikkun-Teil berührt ihn tief: Die Transformation des kosmologischen Konzepts in ein Mussar-Prinzip ist genau das, was die Meister des Michtav MeEliyahu getan haben. Das Lied trägt Rav Desslers Gedanken in eine sangbare Form.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>הַצִּמְצוּם הָרִאשׁוֹן — הוּא בִּי</em> — Der kosmologische Urakt wohnt im Menschen. Das ist das Innerste der chassidischen Anthropologie.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er memoriert das Lied und verwendet es als Einführungstext bei seinem nächsten Shiur über Etz Chaim.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Er hört die absteigende Harfen-Phrase — sie klingt nach Rückzug, nach etwas Leiser-Werdendem. Er versteht das Konzept nicht theologisch, aber emotional: Die Musik selbst ist ein Tzimtzum. Beim Hören fühlt er etwas wie die Erfahrung, sich in einem lauten Raum zurückgezogen zu haben. Die Phrase <em>לְוַתֵּר עַל הַמָּקוֹם — לְמַעַן הָאַחֵר</em> versteht er — ohne Übersetzung — irgendwie.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Stille nach der absteigenden Harfen-Phrase im Intro. Er hält inne.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er sucht nach einer Übersetzung des Textes und findet sich plötzlich lesend über jüdische Mystik.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED III — הַחָלָל הַפָּנוּי
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song3">
+  <div class="song-header">
+    <div class="song-num">ג</div>
+    <div>
+      <span class="song-title-he">הַחָלָל הַפָּנוּי</span>
+      <span class="song-title-de">Der leere Raum — Leere und verborgene Gegenwart</span>
+    </div>
+    <div class="source-pill">
+      עֵץ חַיִּים, שַׁעַר א · לִקּוּטֵי מוֹהַרַ״ן א, ס״ד
+      <span class="source-pill-de">Etz Chaim Sha'ar 1 · Likutey Moharan I:64 (Rebbe Nachman)</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: weite leere Akkorde, pianissimo · Dissonante Intervalle, nicht aufgelöst · Klingt wie ein weiter, leerer Raum · Kein Grundton, schwebend</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אַחֲרֵי הַצִּמְצוּם — חָלָל,</span>
+          <span class="line">מָקוֹם שֶׁנִּרְאֶה רֵיק —</span>
+          <span class="line">אַךְ בְּתוֹכוֹ שָׁמוּר רֶשֶׁם,</span>
+          <span class="line">אוֹת שֶׁנִּשְׁאַר אַחֲרֵי הַמֶּלֶךְ.</span>
+          <span class="line">לֹא חֹשֶׁךְ גָּמוּר, לֹא אוֹר גָּמוּר —</span>
+          <span class="line">בֵּין הַשְּׁמָשׁוֹת שֶׁל הַבְּרֵאשִׁית,</span>
+          <span class="line">הַחָלָל הַפָּנוּי — מָלֵא שְׁאֵלוֹת,</span>
+          <span class="line">וְהַתְּשׁוּבָה — בָּרֶּשֶׁם שֶׁנִּשְׁאָר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nach der Kontraktion — ein Hohlraum,</span>
+          <span class="line">ein Ort, der leer erscheint —</span>
+          <span class="line">aber in ihm bewahrt ein Abdruck,</span>
+          <span class="line">ein Zeichen, das nach dem König blieb.</span>
+          <span class="line">Nicht vollständige Finsternis, nicht vollständiges Licht —</span>
+          <span class="line">im Zwielicht der Schöpfung,</span>
+          <span class="line">der leere Raum — voll von Fragen,</span>
+          <span class="line">und die Antwort — im Abdruck, der blieb.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כָּכָה גַּם הָאָדָם —</span>
+          <span class="line">בִּלְבָבוֹ חָלָל פָּנוּי,</span>
+          <span class="line">מָקוֹם שֶׁהָאֵל הִסְתַּלֵּק מִמֶּנּוּ</span>
+          <span class="line">כְּדֵי שֶׁהוּא יִמְלָא אוֹתוֹ.</span>
+          <span class="line">בַּחֹשֶׁךְ שֶׁל הַשְּׁאֵלָה —</span>
+          <span class="line">עֲדַיִן יֵשׁ רֶשֶׁם,</span>
+          <span class="line">עֲדַיִן יֵשׁ אוֹת שֶׁל נוֹכְחוּת —</span>
+          <span class="line">וְזֶה מַסְפִּיק לְהַאֲמִין.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">So auch der Mensch —</span>
+          <span class="line">in seinem Herzen ein leerer Raum,</span>
+          <span class="line">ein Ort, von dem der Gott sich zurückgezogen hat</span>
+          <span class="line">damit er ihn fülle.</span>
+          <span class="line">In der Finsternis der Frage —</span>
+          <span class="line">gibt es noch einen Abdruck,</span>
+          <span class="line">noch ein Zeichen der Gegenwart —</span>
+          <span class="line">und das genügt zu glauben.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַחָלָל הַפָּנוּי — לֹא רֵיק,</span>
+            <span class="line">בְּתוֹכוֹ רֶשֶׁם שֶׁנִּשְׁאָר,</span>
+            <span class="line">הַחָלָל הַפָּנוּי — לֹא חֹשֶׁךְ,</span>
+            <span class="line">בְּתוֹכוֹ אֱמוּנָה שֶׁחַיָּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der leere Raum — nicht leer,</span>
+            <span class="line">in ihm ein Abdruck, der geblieben ist,</span>
+            <span class="line">der leere Raum — nicht Finsternis,</span>
+            <span class="line">in ihm ein Glaube, der lebt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: Tremolo, sehr pp · Stimme allein, fast gesprochen</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בַּחָלָל הַגָּדוֹל —</span>
+            <span class="line">בַּחֹשֶׁךְ שֶׁל הַלַּיְלָה —</span>
+            <span class="line">גַּם שָׁם, גַּם שָׁם —</span>
+            <span class="line">אֲדֹנָי שׁוֹמֵעַ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Im großen Hohlraum —</span>
+            <span class="line">in der Finsternis der Nacht —</span>
+            <span class="line">auch dort, auch dort —</span>
+            <span class="line">Adonai hört.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN III -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — הָאֱמוּנָה בַּחֹשֶׁךְ</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung III — Der Glaube in der Dunkelheit</div>
+        </div>
+        <div class="tikkun-source">
+          לִקּוּטֵי מוֹהַרַ״ן א, ס״ד
+          <a href="https://www.sefaria.org/Likutey_Moharan.64" target="_blank"> sefaria.org/Likutey_Moharan.64</a>
+        </div>
+      </div>
+      <div class="harp-note">Harfe: Tremolo wie Herzschlag · Neue melodische Linie, pp, fast a cappella</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">וּכְשֶׁאֲנִי בְּחָלָל שֶׁלִּי —</span>
+          <span class="line">כְּשֶׁאֵינִי רוֹאֶה וְאֵינִי שׁוֹמֵעַ —</span>
+          <span class="line">אוֹמֵר אֲנִי: שְׁמַע יִשְׂרָאֵל,</span>
+          <span class="line">וּבֶאֱמוּנָה פְּשׁוּטָה — שׁוֹכֵב.</span>
+          <span class="line">הָרֶשֶׁם שֶׁבְּלִבִּי — מַסְפִּיק,</span>
+          <span class="line">גַּם בְּלֹא רְאָיָה — מַאֲמִינָה נַפְשִׁי,</span>
+          <span class="line">תְּהִלִּים בַּלַּיְלָה — שִׁירַת הֶחָלָל,</span>
+          <span class="line">וּבַשַּׁחַר — הָאֵל שׁוּב בָּא.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und wenn ich in meinem Hohlraum bin —</span>
+          <span class="line">wenn ich nicht sehe und nicht höre —</span>
+          <span class="line">sage ich: Höre Israel,</span>
+          <span class="line">und im einfachen Glauben — liege ich nieder.</span>
+          <span class="line">Der Abdruck in meinem Herzen — genügt,</span>
+          <span class="line">auch ohne Beweis — glaubt meine Seele,</span>
+          <span class="line">Psalmen in der Nacht — Lied des Hohlraums,</span>
+          <span class="line">und am Morgen — kommt Gott wieder.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">אֱמוּנָה פְּשׁוּטָה</span>
+        <span class="mitzva-tag">קְרִיאַת שְׁמַע</span>
+        <span class="mitzva-tag">תְּהִלִּים בַּלַּיְלָה</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַחָלָל הַפָּנוּי — מָלֵא אֱמוּנָה,</span>
+            <span class="line">הַחֹשֶׁךְ — מָלֵא שִׁירָה,</span>
+            <span class="line">הָרֶשֶׁם — מְרַנֵּן בַּלֵּב —</span>
+            <span class="line">אֲדֹנָי, אֲדֹנָי — נֶאֱמָן.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der leere Raum — voll von Glauben,</span>
+            <span class="line">die Finsternis — voll von Gesang,</span>
+            <span class="line">der Abdruck — singt im Herzen —</span>
+            <span class="line">Adonai, Adonai — getreu.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: Tremolo, sehr langsam verklingend · Dissonante Akkorde lösen sich nicht auf — sie verschwinden einfach in der Stille</div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Das Bild des <em>חָלָל פָּנוּי</em> trifft ihn existenziell: Er kennt diesen Zustand — die Nacht, in der man nicht glaubt, nicht weiß, nicht sieht. Das Lied beschreibt keine religiöse Erfahrung, sondern eine menschliche. Beim Hören des Refrains <em>לֹא רֵיק, לֹא חֹשֶׁךְ</em> fühlt er eine unerwartete Hoffnung.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>עֲדַיִן יֵשׁ אוֹת שֶׁל נוֹכְחוּת — וְזֶה מַסְפִּיק לְהַאֲמִין</em> — Er denkt an Menschen in seinem Leben, die ihren Glauben behalten haben trotz allem.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er spielt das Lied seinem Partner vor. Gemeinsam sitzen sie in der Stille nach dem letzten Ton.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Er kennt Perioden des religiösen Zweifels — <em>עֵת צָרָה</em>. Das Lied gibt ihm eine Sprache für diese Erfahrung, die nicht Apostasie ist, sondern ein Teil des spirituellen Weges. Die Verbindung von Chalal und menschlicher Innenwelt ist für ihn theologisch präzise. Der Tikkun-Teil — <em>שְׁמַע יִשְׂרָאֵל</em> in der Dunkelheit — ist die Antwort.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>תְּהִלִּים בַּלַּיְלָה — שִׁירַת הֶחָלָל</em> — Er versteht: Tehillim ist nicht nur Trost, es ist kosmische Funktion.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er beginnt, abends Tehillim zu sagen — nicht als Pflicht, sondern als Resonanz mit dem Lied.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Für ihn ist der Chalal HaPanui das schwierigste Thema des Etz Chaim — der Ort, wo die Frage nach der Shechina in der Galut liegt. Der Reshim als verborgene Gegenwart ist für ihn das Herzstück der lurianischen Theologie. Dass Rebbe Nachmans <em>אֱמוּנָה מֵעַל הַדַּעַת</em> hier zur Lösung wird, freut ihn — es verbindet Lurianic mit Breslov.
+            <div class="key-moment">⚡ Schlüsselmoment: Das Tremolo der Harfe im Tikkun-Teil: ein musikalischer Reshim — das Echo von etwas Vergangenem, das noch klingt.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er lernt mit seinen Schülern Likutey Moharan I:64 und singt das Lied als Einführung.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Die weiten, dissonanten Harfenakkorde des Intros fesseln ihn sofort — es klingt anders als alles, was er kennt. Das Lied fühlt sich an wie ein Raum, ein Vakuum — aber kein leeres. Er kann die Dissonanz nicht benennen, aber er fühlt, dass die Musik selbst die Botschaft trägt: Es ist leer, aber nicht nichts.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Coda — die Akkorde, die nicht aufgelöst werden, einfach verschwinden. Er atmet aus.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er sucht nach Musik, die ähnlich klingt, und findet sich plötzlich in der Welt des Cantorial Singing.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED IV — קַו הָאוֹר
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song4">
+  <div class="song-header">
+    <div class="song-num">ד</div>
+    <div>
+      <span class="song-title-he">קַו הָאוֹר</span>
+      <span class="song-title-de">Der Lichtstrahl — Das erste Licht im leeren Raum</span>
+    </div>
+    <div class="source-pill">
+      עֵץ חַיִּים, שַׁעַר ב · וְהָגִיתָ בּוֹ יוֹמָם וָלַיְלָה
+      <span class="source-pill-de">Etz Chaim Sha'ar 2 · Josua 1:8 — Talmud Torah als Kav des Menschen</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: Glissando von hohem Register nach unten, wie ein Lichtstrahl der eintritt · Dann ein heller, klarer Akkord — f, dann sofort pp · Pause — als warte die Welt</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מִן הָאֵין סוֹף נִמְשַׁךְ קַו —</span>
+          <span class="line">דַּק כְּחוּט, חַד כְּחֶרֶב,</span>
+          <span class="line">נָגַע בַּחָלָל וּמִלְּאוֹ אוֹר —</span>
+          <span class="line">פְּנִימָה, פְּנִימָה, עַד הַלֵּב.</span>
+          <span class="line">קַו הָאוֹר — רֵאשִׁית כָּל חַיִּים,</span>
+          <span class="line">קַו הָאוֹר — גֶּשֶׁר מִמַּעְלָה,</span>
+          <span class="line">בְּלֹא הַקַּו — אֵין כְּלִי,</span>
+          <span class="line">בְּלֹא הַקַּו — אֵין עוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Aus dem Ein Sof wurde ein Strahl gezogen —</span>
+          <span class="line">dünn wie ein Faden, scharf wie ein Schwert,</span>
+          <span class="line">er berührte den Hohlraum und füllte ihn mit Licht —</span>
+          <span class="line">hinein, hinein, bis zum Herzen.</span>
+          <span class="line">Der Lichtstrahl — Anfang allen Lebens,</span>
+          <span class="line">der Lichtstrahl — Brücke von oben,</span>
+          <span class="line">ohne den Strahl — kein Gefäß,</span>
+          <span class="line">ohne den Strahl — keine Welt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כַּשֶּׁמֶשׁ שֶׁחוֹדֶרֶת לַחֶדֶר —</span>
+          <span class="line">כַּמַּיִם שֶׁנִּכְנָסִים לַצֶּמַח,</span>
+          <span class="line">כָּכָה הָאוֹר נִכְנַס לַחָלָל —</span>
+          <span class="line">וְהֶחָלָל — קִבֵּל וְשָׂמַח.</span>
+          <span class="line">אוֹר הַנִּסְתָּר — עַכְשָׁיו גָּלוּי,</span>
+          <span class="line">אוֹר הָעֶלְיוֹן — עַכְשָׁיו קָרוֹב,</span>
+          <span class="line">בְּקַו הַדַּק הַנִּמְשָׁךְ —</span>
+          <span class="line">עוֹלָמוֹת מַתְחִילִים לִחְיוֹת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wie die Sonne, die in das Zimmer dringt —</span>
+          <span class="line">wie das Wasser, das in die Pflanze eintritt,</span>
+          <span class="line">so trat das Licht in den Hohlraum ein —</span>
+          <span class="line">und der Hohlraum — empfing und freute sich.</span>
+          <span class="line">Das verborgene Licht — jetzt offenbar,</span>
+          <span class="line">das höchste Licht — jetzt nah,</span>
+          <span class="line">im dünnen gezogenen Strahl —</span>
+          <span class="line">beginnen Welten zu leben.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">קַו הָאוֹר, קַו הָאוֹר —</span>
+            <span class="line">מִן הָאֵין סוֹף לַחָלָל,</span>
+            <span class="line">קַו הָאוֹר, קַו הָאוֹר —</span>
+            <span class="line">אוֹר שֶׁלֹּא יִכְבֶּה לְעוֹלָם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Lichtstrahl, der Lichtstrahl —</span>
+            <span class="line">vom Ein Sof in den Hohlraum,</span>
+            <span class="line">der Lichtstrahl, der Lichtstrahl —</span>
+            <span class="line">Licht, das nie erlischt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: aufsteigendes Motiv, jedes Mal einen Ton höher · Crescendo → mf</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מִלְּמַעְלָה לְמַטָּה —</span>
+            <span class="line">מִן הַסּוֹד לַגָּלוּי,</span>
+            <span class="line">אֲדֹנָי נִמְשַׁךְ לְעוֹלָמוֹ —</span>
+            <span class="line">וְאוֹרוֹ — לֹא נִסְתַּר.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Von oben nach unten —</span>
+            <span class="line">vom Verborgenen zum Offenbaren,</span>
+            <span class="line">Adonai zog sich in Seine Welt —</span>
+            <span class="line">und Sein Licht — ist nicht verborgen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN IV -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — תּוֹרָה כְּקַו הָאוֹר</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung IV — Torah als Lichtstrahl</div>
+        </div>
+        <div class="tikkun-source">
+          עֵץ חַיִּים שַׁעַר ב · יְהוֹשֻׁעַ א:ח
+        </div>
+      </div>
+      <div class="harp-note">Harfe: aufsteigendes Motiv wie ein Kav, pp → mp · Klarer, heller Klang</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">וְיֵשׁ קַו שֶׁנָּתַן לְיָדִי —</span>
+          <span class="line">תּוֹרָה, שֶׁאֶלְמֹד בְּכָל יוֹם,</span>
+          <span class="line">מִלִּים שֶׁמוֹשְׁכוֹת אֶת הָאוֹר</span>
+          <span class="line">לְתוֹךְ הַחָלָל שֶׁבִּי.</span>
+          <span class="line">בִּרְכַּת הַתּוֹרָה — פֶּתַח הַקַּו,</span>
+          <span class="line">לִמּוּד יוֹמִי — הַקַּו עַצְמוֹ,</span>
+          <span class="line">וְהָגִיתָ בּוֹ יוֹמָם וָלַיְלָה —</span>
+          <span class="line">כָּכָה הָאוֹר לֹא כָּבֶה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und es gibt einen Strahl, der mir gegeben wurde —</span>
+          <span class="line">Torah, die ich jeden Tag lerne,</span>
+          <span class="line">Worte, die das Licht ziehen</span>
+          <span class="line">in den Hohlraum in mir.</span>
+          <span class="line">Birkat HaTorah — der Öffner des Strahls,</span>
+          <span class="line">tägliches Lernen — der Strahl selbst,</span>
+          <span class="line">„und sinne darüber nach bei Tag und Nacht" —</span>
+          <span class="line">so erlischt das Licht nicht.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">תַּלְמוּד תּוֹרָה</span>
+        <span class="mitzva-tag">בִּרְכַּת הַתּוֹרָה</span>
+        <span class="mitzva-tag">וְהָגִיתָ בּוֹ יוֹמָם וָלַיְלָה</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: voller Klang, alle Saiten · Stimme: Höhepunkt der Melodie</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">קַו הָאוֹר בְּתוֹכִי —</span>
+            <span class="line">תּוֹרָה שֶׁלֹּא תִּשְׁכַּח,</span>
+            <span class="line">קַו הָאוֹר מִמַּעְלָה —</span>
+            <span class="line">לְמַטָּה עַד לְעוֹלָם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Lichtstrahl in mir —</span>
+            <span class="line">Torah, die nicht vergisst,</span>
+            <span class="line">der Lichtstrahl von oben —</span>
+            <span class="line">nach unten bis in Ewigkeit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: aufsteigendes Motiv, sehr langsam · Letzter Ton — ein einzelnes hohes Flageolett — verblasst</div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Das Bild des Kav — ein dünner Faden Licht im leeren Raum — trifft ihn ästhetisch. Es klingt fast physikalisch: ein Laser, ein Photon. Das Lied bewegt sich für ihn zwischen Wissenschaft und Poesie. Beim Hören des Tikkun-Teils — <em>תּוֹרָה שֶׁאֶלְמֹד בְּכָל יוֹם</em> — denkt er an seinen letzten Kurs, sein letztes Buch, die Intensität des Lernens.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>מִלִּים שֶׁמוֹשְׁכוֹת אֶת הָאוֹר לְתוֹךְ הַחָלָל שֶׁבִּי</em> — Lesen als Lichteinlass. Das versteht er sofort.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er nimmt ein Buch, das er seit Jahren nicht geöffnet hat, und liest.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Die Verbindung zwischen dem kosmischen Kav HaOr und dem täglichen Talmud Torah ist für ihn eine theologische Erleuchtung: Das Lernen ist nicht nur Pflicht — es ist kosmische Partizipation. Der Satz <em>בִּרְכַּת הַתּוֹרָה — פֶּתַח הַקַּו</em> gibt der Birkat HaTorah eine neue Dimension. Er sagt sie künftig mit mehr Kavanah.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>וְהָגִיתָ בּוֹ יוֹמָם וָלַיְלָה</em> als Melodie — der Pasuk aus Josua, den er auswendig kennt, bekommt plötzlich eine Melodie.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er reserviert täglich 30 Minuten für Lernen und nennt es in Gedanken seinen „Kav".</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Das Glissando der Harfe zu Beginn ist für ihn die perfekte musikalische Umsetzung des Kav — von oben nach unten, schmal und scharf. Die theologische Präzision des Liedes freut ihn: Der Kav als Verbindungselement zwischen Ein Sof und den Sephirot ist die Grundlage des gesamten Etz Chaim. Dass der Tikkun-Teil die Torah als menschliches Äquivalent setzt, ist klassisches lurianisches Denken.
+            <div class="key-moment">⚡ Schlüsselmoment: Das Glissando als musikalischer Kav — er schließt die Augen und visualisiert den Kav während er hört.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er stimmt das Lied beim nächsten Shiur über Sha'ar 2 des Etz Chaim an.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Das Glissando im Intro fesselt ihn — er hat so etwas auf einer Harfe noch nicht gehört. Das Lied klingt für ihn fast filmisch — die Vorstellung eines Lichtstrahls, der einen leeren Raum betritt, ist universell schön. Die Phrase <em>קַו הָאוֹר, קַו הָאוֹר</em> bleibt im Ohr wie ein Mantra.
+            <div class="key-moment">⚡ Schlüsselmoment: Das letzte hohe Flageolett der Harfe in der Coda — ein einzelner Ton, der weg ist, bevor man ihn festhalten kann.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er teilt das Lied mit der Beschriftung: „Das klingt wie Licht in den Ohr."</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED V — שְׁבִירַת הַכֵּלִים
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song5">
+  <div class="song-header">
+    <div class="song-num">ה</div>
+    <div>
+      <span class="song-title-he">שְׁבִירַת הַכֵּלִים</span>
+      <span class="song-title-de">Das Zerbrechen der Gefäße — Katastrophe als Schöpfungsmoment</span>
+    </div>
+    <div class="source-pill">
+      עֵץ חַיִּים שַׁעַר י · תְּהִלִּים נא:יט · הִלְכוֹת תְּשׁוּבָה ב:ב
+      <span class="source-pill-de">Etz Chaim Sha'ar 10 · Ps. 51:19 · Rambam Hilchot Teshuvah 2:2</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: harte, volle Akkorde, forte · Plötzliche Stille — Pause · Dann ein gebrochener Akkord, Töne einzeln fallend, pp · Die Musik selbst bricht</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָאוֹר הָיָה גָּדוֹל מִדַּי —</span>
+          <span class="line">הַכֵּלִים לֹא יָכְלוּ לִשְׂאֵת,</span>
+          <span class="line">שֶׁבֶר, שֶׁבֶר, שֶׁבֶר —</span>
+          <span class="line">נָפְלוּ הַקְּלִיפוֹת, שָׁקָעוּ.</span>
+          <span class="line">שְׁבִירַת הַכֵּלִים — אֵינֶנָּה מַפָּלָה,</span>
+          <span class="line">הִיא הַסּוֹד שֶׁבַּבְּרֵאשִׁית —</span>
+          <span class="line">מֵהַשֶּׁבֶר נִבְנֶה עוֹלָם חָדָשׁ,</span>
+          <span class="line">מִן הַקְּלִיפָה — נִיצוֹץ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Das Licht war zu groß —</span>
+          <span class="line">die Gefäße konnten es nicht tragen,</span>
+          <span class="line">Bruch, Bruch, Bruch —</span>
+          <span class="line">die Schalen fielen, sanken.</span>
+          <span class="line">Das Zerbrechen der Gefäße ist kein Versagen —</span>
+          <span class="line">es ist das Geheimnis des Anfangs —</span>
+          <span class="line">aus dem Bruch wird eine neue Welt gebaut,</span>
+          <span class="line">aus der Schale — ein Funke.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">גַּם הַלֵּב הָאֱנוֹשִׁי —</span>
+          <span class="line">גַּם הוּא נִשְׁבָּר לִפְעָמִים,</span>
+          <span class="line">גַּם הוּא לֹא יָכֹל לִשְׂאֵת</span>
+          <span class="line">אֶת הָאוֹר שֶׁיָּרַד עָלָיו.</span>
+          <span class="line">לֵב נִשְׁבָּר וְנִדְכֶּה —</span>
+          <span class="line">אֱלֹהִים לֹא יִבְזֶה,</span>
+          <span class="line">וּמִן הַשֶּׁבֶר הָאֱנוֹשִׁי —</span>
+          <span class="line">מַתְחִיל הַתִּיקּוּן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Auch das menschliche Herz —</span>
+          <span class="line">auch es bricht manchmal,</span>
+          <span class="line">auch es kann nicht tragen</span>
+          <span class="line">das Licht, das auf es herabkam.</span>
+          <span class="line">Ein gebrochenes und zermalmtes Herz —</span>
+          <span class="line">Gott verachtet es nicht,</span>
+          <span class="line">und aus dem menschlichen Bruch —</span>
+          <span class="line">beginnt der Tikkun.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שְׁבִירַת הַכֵּלִים —</span>
+            <span class="line">לֹא הַסּוֹף, כִּי הַהַתְחָלָה,</span>
+            <span class="line">שְׁבִירַת הַכֵּלִים —</span>
+            <span class="line">שָׁם מַתְחִיל הָאוֹר.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Das Zerbrechen der Gefäße —</span>
+            <span class="line">nicht das Ende, sondern der Anfang,</span>
+            <span class="line">das Zerbrechen der Gefäße —</span>
+            <span class="line">dort beginnt das Licht.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: gebrochene Akkorde, traurig-schön · Stimme leise, tief</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לֵב נִשְׁבָּר — תְּפִלָּה שְׁלֵמָה,</span>
+            <span class="line">לֵב נִדְכֶּה — קָרְבָּן לַאֲדֹנָי,</span>
+            <span class="line">בְּתוֹךְ הַשֶּׁבֶר —</span>
+            <span class="line">הָאֵל קָרוֹב בְּיוֹתֵר.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Ein gebrochenes Herz — ein vollständiges Gebet,</span>
+            <span class="line">ein zermalmtes Herz — ein Opfer für Adonai,</span>
+            <span class="line">inmitten des Bruchs —</span>
+            <span class="line">ist Gott am nächsten.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN V -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — הַשֶּׁבֶר כִּתְחִילַת הַתְּשׁוּבָה</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung V — Der Bruch als Anfang der Umkehr</div>
+        </div>
+        <div class="tikkun-source">
+          מִשְׁנֶה תּוֹרָה, הִלְכוֹת תְּשׁוּבָה ב:ב
+          <a href="https://www.sefaria.org/Mishneh_Torah,_Repentance.2.2" target="_blank"> sefaria.org/Hilchot_Teshuvah.2.2</a>
+        </div>
+      </div>
+      <div class="harp-note">Harfe: aufsteigende Auflösung der gebrochenen Akkorde — musikalische Teshuvah · pp → mp</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">וּכְשֶׁנִּשְׁבַּרְתִּי — לֹא אֶשְׁתֹּק,</span>
+          <span class="line">כִּי הַשֶּׁבֶר הוּא הַפֶּתַח:</span>
+          <span class="line">וִדּוּי — אוֹמֵר בְּפֶה מָלֵא,</span>
+          <span class="line">חֲרָטָה — לֵב שָׁבוּר מוֹדֶה.</span>
+          <span class="line">שְׁלֹשָׁה צְעָדִים שֶׁל הָרַמְבַּ״ם —</span>
+          <span class="line">הַכָּרָה, הוֹדָיָה, שִׁינּוּי,</span>
+          <span class="line">וּבִתְשׁוּבָה שֶׁלִּי —</span>
+          <span class="line">הַכֵּלִים מִתְחַדְּשִׁים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und wenn ich zerbrochen bin — schweige ich nicht,</span>
+          <span class="line">denn der Bruch ist die Öffnung:</span>
+          <span class="line">Vidui — sage ich mit vollem Mund,</span>
+          <span class="line">Charata — ein gebrochenes Herz bekennt.</span>
+          <span class="line">Die drei Schritte des Rambam —</span>
+          <span class="line">Erkennen, Bekennen, Verändern,</span>
+          <span class="line">und in meiner Teshuvah —</span>
+          <span class="line">erneuern sich die Gefäße.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">תְּשׁוּבָה</span>
+        <span class="mitzva-tag">וִדּוּי</span>
+        <span class="mitzva-tag">עֲשֶׂרֶת יְמֵי תְּשׁוּבָה</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: Dissonanz löst sich in reinen Dur-Akkord auf · Stimme: Befreiung</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שְׁבִירַת הַכֵּלִים —</span>
+            <span class="line">וּתְשׁוּבָה — בּוֹנָה מֵחָדָשׁ,</span>
+            <span class="line">שְׁבִירַת הַכֵּלִים —</span>
+            <span class="line">וְהַלֵּב — מְחֻדָּשׁ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Das Zerbrechen der Gefäße —</span>
+            <span class="line">und Teshuvah — baut neu auf,</span>
+            <span class="line">das Zerbrechen der Gefäße —</span>
+            <span class="line">und das Herz — erneuert.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: der reine Dur-Akkord, dreifach wiederholt, jedes Mal leiser · Ein Hauch von Lied I (Flageolett) am Ende — Andeutung der Wiederherstellung</div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Das Intro — die brechende Harfe — erschüttert ihn. Er hat dieses musikalische Zerbrechen noch nie so erlebt. Die Texte rühren ihn: <em>לֵב נִשְׁבָּר וְנִדְכֶּה — אֱלֹהִים לֹא יִבְזֶה</em> ist für ihn, ob religiös oder nicht, ein tiefer menschlicher Trost. Beim Tikkun-Teil denkt er an eigene Niederlagen und die Frage: Was kommt danach?
+            <div class="key-moment">⚡ Schlüsselmoment: <em>מֵהַשֶּׁבֶר נִבְנֶה עוֹלָם חָדָשׁ</em> — Er denkt an Scheitern in seinem Leben und begreift: Das war nicht das Ende.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er ruft einen Freund an, dem er nach einer Trennung seit Wochen nicht geschrieben hat.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Der Vers aus Tehillim 51:19 — <em>לֵב נִשְׁבָּר וְנִדְכֶּה</em> — ist ihm von Yom Kippur bekannt. Das Lied gibt ihm die kabbalistischen Hintergrund: Das persönliche Zerbrechen ist keine Schwäche, es ist ein kosmisches Muster. Der Tikkun-Teil — die drei Schritte der Teshuvah nach Rambam — ist für ihn ein konkretes Programm für die Aseret Yemei Teshuvah.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>הַכָּרָה, הוֹדָיָה, שִׁינּוּי</em> — drei Worte, die Rambams ganzes Kapitel zusammenfassen, jetzt singbar.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er schreibt diese drei Worte in seinen Kalender für Elul.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Die Shevirat HaKelim ist für ihn das härteste und schönste Kapitel des Etz Chaim. Das Lied setzt es musikalisch um: die harte Harfe, das Schweigen, die fallenden Töne. Der theologische Schritt vom kosmischen Bruch zum persönlichen Bruch und dann zur Teshuvah ist präzise — das ist der Weg, den der Alter Rebbe im Tanya geht. Die musikalische Auflösung der Dissonanz im Climax ist für ihn die schönste Stelle des Albums.
+            <div class="key-moment">⚡ Schlüsselmoment: Der Moment, wo die Harfen-Dissonanz aufgelöst wird — er hält den Atem an.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er verwendet das Lied als Einleitung zu seiner Teshuvah-Drashah vor Rosh Hashana.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Das musikalische Zerbrechen im Intro ist für ihn unvergesslich. Er hat noch nie eine Harfe so gespielt gehört. Die dreifache Wiederholung von <em>שֶׁבֶר, שֶׁבֶר, שֶׁבֶר</em> klingt wie etwas, das tatsächlich fällt. Das Lied trifft ihn in einem Moment der eigenen Krise — der Text, den er nicht versteht, trägt trotzdem.
+            <div class="key-moment">⚡ Schlüsselmoment: Der reine Dur-Akkord am Ende — nach all der Dissonanz. Er atmet zum ersten Mal tief durch.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er sucht nach hebräischem Text für „gebrochenes Herz" und liest Tehillim 51.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED VI — הַנִּיצוֹצוֹת
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song6">
+  <div class="song-header">
+    <div class="song-num">ו</div>
+    <div>
+      <span class="song-title-he">הַנִּיצוֹצוֹת</span>
+      <span class="song-title-de">Die heiligen Funken — Zerstreut und wartend</span>
+    </div>
+    <div class="source-pill">
+      שַׁעַר הַמִּצְווֹת לָאֲרִ״י · עֵץ חַיִּים שַׁעַר י
+      <span class="source-pill-de">Sha'ar HaMitzwot des Ari (Chayyim Vital) · Etz Chaim Sha'ar 10</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: einzelne Staccato-Töne, über das gesamte Register verteilt, pp · Wie Funken, die fallen · Kein Rhythmus, kein Muster — chaotisch und schön · Dann ein Moment der Stille</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּכָל קְלִיפָה — נִיצוֹץ כָּמוּס,</span>
+          <span class="line">בְּכָל חֹשֶׁךְ — אוֹר אָסִיר,</span>
+          <span class="line">הַנִּיצוֹצוֹת נָפְלוּ בַּשְּׁבִירָה —</span>
+          <span class="line">חִיכּוּ, חִיכּוּ לַגּוֹאֵל.</span>
+          <span class="line">בְּכָל מָקוֹם שֶׁהָאָדָם עוֹבֵר —</span>
+          <span class="line">יֵשׁ שָׁם נִיצוֹץ הַמְּחַכֶּה,</span>
+          <span class="line">רַק יָד שֶׁתָּשִׂים לִפְנֵי הָאוֹר —</span>
+          <span class="line">וְהַנִּיצוֹץ עוֹלֶה לְמָקוֹמוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">In jeder Schale — ein verborgener Funke,</span>
+          <span class="line">in jeder Finsternis — ein gefangenes Licht,</span>
+          <span class="line">die Funken fielen beim Zerbrechen —</span>
+          <span class="line">warteten, warteten auf den Erlöser.</span>
+          <span class="line">Überall, wo der Mensch geht —</span>
+          <span class="line">ist dort ein Funke, der wartet,</span>
+          <span class="line">nur eine Hand, die sich dem Licht entgegenstreckt —</span>
+          <span class="line">und der Funke steigt zu seinem Ort.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לֹא בְּמֶרְחַק הַכּוֹכָבִים —</span>
+          <span class="line">לֹא בְּגָבְהֵי הַשָּׁמַיִם,</span>
+          <span class="line">הַנִּיצוֹצוֹת — בַּשּׁוּק, בַּבַּיִת,</span>
+          <span class="line">בְּכֶסֶף, בְּמִלָּה, וּבַזְּמַן.</span>
+          <span class="line">כָּל עֲסָקָה שֶׁבֶּאֱמֶת —</span>
+          <span class="line">כָּל שַׁבָּת שֶׁשּׁוֹמְרִים —</span>
+          <span class="line">כָּל חֶסֶד שֶׁנּוֹתְנִים —</span>
+          <span class="line">נִיצוֹץ עָלָה לַמַּעְלָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nicht in der Ferne der Sterne —</span>
+          <span class="line">nicht in den Höhen des Himmels,</span>
+          <span class="line">die Funken — auf dem Markt, im Haus,</span>
+          <span class="line">im Geld, im Wort und in der Zeit.</span>
+          <span class="line">Jedes aufrichtige Geschäft —</span>
+          <span class="line">jeder gehaltene Schabbat —</span>
+          <span class="line">jede Güte, die gegeben wird —</span>
+          <span class="line">ein Funke stieg hinauf.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַנִּיצוֹצוֹת — בְּכָל מָקוֹם,</span>
+            <span class="line">בְּכָל יוֹם — מַמְתִּינִים לְךָ,</span>
+            <span class="line">הַנִּיצוֹצוֹת — רַק אַתָּה יָכֹל —</span>
+            <span class="line">רַק אַתָּה תַּחֲזִירֵם לַמַּעְלָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Die Funken — überall,</span>
+            <span class="line">jeden Tag — warten sie auf dich,</span>
+            <span class="line">die Funken — nur du kannst —</span>
+            <span class="line">nur du sie zurück nach oben bringen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: rhythmisches Staccato, wie Herzschläge oder Schritte · Stimme fest, klar</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָאֲרִ״י הַקָּדוֹשׁ אָמַר —</span>
+            <span class="line">כָּל מִצְוָה — נִיצוֹץ,</span>
+            <span class="line">הָאֲרִ״י הַקָּדוֹשׁ אָמַר —</span>
+            <span class="line">כָּל מַעֲשֶׂה — תִּיקּוּן.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der heilige Ari sagte —</span>
+            <span class="line">jede Mitzwa — ein Funke,</span>
+            <span class="line">der heilige Ari sagte —</span>
+            <span class="line">jede Tat — ein Tikkun.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN VI -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ו — כָּל מִצְוָה — נִיצוֹץ</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung VI — Jede Mitzwa ist ein Funke</div>
+        </div>
+        <div class="tikkun-source">
+          שַׁעַר הַמִּצְווֹת לָאֲרִ״י — כָּל מִצְוָה מַעֲלָה נִיצוֹץ מְיֻחָד
+        </div>
+      </div>
+      <div class="harp-note">Harfe: aufsteigendes Staccato — jeder Ton ein Funke, der steigt · Lebendig, pp → mp</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">צְדָקָה שֶׁנָּתַתִּי הַיּוֹם —</span>
+          <span class="line">נִיצוֹץ שֶׁל הַכֶּסֶף עָלָה,</span>
+          <span class="line">שַׁבָּת שֶׁשָּׁמַרְתִּי — נִיצוֹץ הַזְּמַן,</span>
+          <span class="line">אֱמֶת שֶׁדִּבַּרְתִּי — נִיצוֹץ הַמִּלָּה.</span>
+          <span class="line">כְּבוֹד הַבְּרִיּוֹת — נִיצוֹץ הָאָדָם,</span>
+          <span class="line">תְּפִלָּה בְּכַוָּנָה — נִיצוֹץ הַנֶּפֶשׁ,</span>
+          <span class="line">וּבְכָל יוֹם שֶׁחַי —</span>
+          <span class="line">תִּיקּוּן אַחֵר לְמַעְלָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Tzedakah, die ich heute gab —</span>
+          <span class="line">der Funke des Geldes stieg auf,</span>
+          <span class="line">der Schabbat, den ich hielt — der Funke der Zeit,</span>
+          <span class="line">die Wahrheit, die ich sprach — der Funke des Wortes.</span>
+          <span class="line">Die Würde der Menschen — der Funke des Menschen,</span>
+          <span class="line">das Gebet mit Kavanah — der Funke der Seele,</span>
+          <span class="line">und jeden Tag, den ich lebe —</span>
+          <span class="line">ein anderer Tikkun nach oben.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">צְדָקָה</span>
+        <span class="mitzva-tag">שַׁבָּת</span>
+        <span class="mitzva-tag">אֱמֶת בַּמִּשְׂחָר</span>
+        <span class="mitzva-tag">כִּבּוּד בְּרִיּוֹת</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: volle aufsteigende Arpeggi · Stimme: Jubel, höchster Punkt</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַנִּיצוֹצוֹת עוֹלִים —</span>
+            <span class="line">בְּיָדַיִם שֶׁעוֹשׂוֹת טוֹב,</span>
+            <span class="line">הַנִּיצוֹצוֹת עוֹלִים —</span>
+            <span class="line">כַּאֲשֶׁר אֲנִי חַי אֱמֶת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Die Funken steigen auf —</span>
+            <span class="line">durch Hände, die Gutes tun,</span>
+            <span class="line">die Funken steigen auf —</span>
+            <span class="line">wenn ich wahrhaftig lebe.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: Staccato-Töne jetzt aufsteigend, immer höher · Letzter Ton — ein hoher Harmonic — hält lange · Die Funken sind oben angekommen</div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Die Funken-Metapher ist für ihn unmittelbar verständlich — er kennt sie aus der Alltagssprache: <em>ניצוץ</em> für Inspiration, für Liebe, für Kreativität. Das Lied verbindet diese alltägliche Metapher mit etwas Kosmologischem. Der Tikkun-Teil ist für ihn überraschend: <em>צְדָקָה שֶׁנָּתַתִּי הַיּוֹם — נִיצוֹץ שֶׁל הַכֶּסֶף עָלָה</em> — Geben als kosmischer Akt. Das sitzt.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>הַנִּיצוֹצוֹת — רַק אַתָּה תַּחֲזִירֵם לַמַּעְלָה</em> — Er, der Säkulare, ist der Einzige, der das tun kann. Das ist keine religiöse Exklusivität, das ist ein Aufruf.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er überweist spontan eine Spende und denkt: „Das ist mein Funke für heute."</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Das Lied verbindet lurianische Abstraktion mit konkreter Halacha auf eine Weise, die er selten gehört hat. Die Liste im Tikkun — Tzedakah, Schabbat, Emet, Kevod HaBriot — ist sein tägliches religiöses Leben. Jetzt weiß er, dass jede dieser Handlungen einen bestimmten Funken hebt, der nur durch diese Handlung gehoben werden kann. Das gibt seinem religiösen Leben eine kosmologische Würde.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>כָּל חֶסֶד שֶׁנּוֹתְנִים — נִיצוֹץ עָלָה לַמַּעְלָה</em> — Er denkt an eine Chesed-Tat letzte Woche und sieht sie jetzt anders.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er erklärt seiner Tochter beim Schabbat-Tisch: „Weißt du, was passiert, wenn du tzedakah gibst?"</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Das ist für ihn das Herzstück des gesamten Albums — das lurianische Programm in seiner reinsten Form. Die Verbindung zwischen Shevirat HaKelim und Nitzotzot ist präzise. Die musikalische Umsetzung — Staccato für die zerstreuten Funken, Arpeggio für die aufsteigenden — ist für ihn ein kleines Wunder. Der Brücken-Teil, das Zitat des Ari, ist für ihn eine direkte Überlieferung.
+            <div class="key-moment">⚡ Schlüsselmoment: Das aufsteigende Arpeggio im Climax — er visualisiert die Nitzotzot, die aufsteigen, und singt mit.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er schreibt seine eigene Liste: „Was sind meine Nitzotzot heute?"</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Das Staccato-Intro fesselt ihn — es klingt wie etwas Zerstreutes, wie Regentropfen oder Sterne. Die Metapher von Funken versteht er intuitiv. Das Lied hat eine Energie, die ihn aufweckt — besonders der Climax mit den vollen Harfen-Arpeggien. Er weiß nicht, was <em>נִיצוֹצוֹת</em> bedeutet, aber er googelt es sofort.
+            <div class="key-moment">⚡ Schlüsselmoment: Der hohe, lange Harfenton in der Coda — er fühlt, dass da etwas angekommen ist. Irgendwo oben.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er liest über lurianische Kabbalah und findet sie faszinierend — nicht als Religion, sondern als Weltbild.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="song-div"><div class="song-div-line"></div><div class="song-div-star">✦ ✦ ✦</div><div class="song-div-line"></div></div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     LIED VII — תִּיקּוּן
+═══════════════════════════════════════════════════ -->
+<section class="song-section" id="song7">
+  <div class="song-header">
+    <div class="song-num">ז</div>
+    <div>
+      <span class="song-title-he">תִּיקּוּן</span>
+      <span class="song-title-de">Die Wiederherstellung — Der Mensch vollendet die Schöpfung</span>
+    </div>
+    <div class="source-pill">
+      זְכַרְיָה יד:ט · אָבוֹת א:ב
+      <span class="source-pill-de">Zechariah 14:9 · Pirkei Avot 1:2 (Shimon HaTzaddik)</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <div class="section-block label-intro">
+      <div class="section-label">[פְּתִיחָה — כִּנּוֹר בִּלְבַד]</div>
+      <div class="harp-note">Harfe: sammelt alle sechs Motive der Vorgängerlieder — Flageolett (I), absteigende Phrase (II), Tremolo (III), Glissando (IV), gebrochener Akkord (V), Staccato (VI) — in einer langen, ruhigen Phrase · Dann: ein breiter, voller Akkord, mf · Die Reise endet, etwas Neues beginnt</div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית א]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בַּיּוֹם הַהוּא — יִהְיֶה אֲדֹנָי אֶחָד,</span>
+          <span class="line">בַּיּוֹם הַהוּא — וּשְׁמוֹ אֶחָד.</span>
+          <span class="line">כָּל הַנִּיצוֹצוֹת שָׁבִים לְמָקוֹמָם,</span>
+          <span class="line">כָּל הַשְּׁבוּרוֹת — שְׁלֵמוֹת.</span>
+          <span class="line">הַתִּיקּוּן — לֹא חֲלוֹם בִּלְבַד,</span>
+          <span class="line">הַתִּיקּוּן — מֻבְטָח וְנִסְתָּר,</span>
+          <span class="line">מִן הַצִּמְצוּם וְעַד הַגְּאֻלָּה —</span>
+          <span class="line">הַדֶּרֶךְ הִיא אֶחָת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">An jenem Tag — wird Adonai Einer sein,</span>
+          <span class="line">an jenem Tag — und Sein Name Einer.</span>
+          <span class="line">Alle Funken kehren zu ihrem Ort zurück,</span>
+          <span class="line">alles Zerbrochene — ganz.</span>
+          <span class="line">Der Tikkun — nicht nur ein Traum,</span>
+          <span class="line">der Tikkun — versprochen und verborgen,</span>
+          <span class="line">vom Tzimtzum bis zur Erlösung —</span>
+          <span class="line">der Weg ist einer.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-verse">
+      <div class="section-label">[בֵּית ב]</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מֵאֵין סוֹף — הַכֹּל בָּא,</span>
+          <span class="line">לְאֵין סוֹף — הַכֹּל שָׁב,</span>
+          <span class="line">הַקַּו שֶׁנִּמְשַׁךְ — נָשׁוּב אֵלָיו,</span>
+          <span class="line">וְהֶחָלָל — יִמָּלֵא אוֹר.</span>
+          <span class="line">וְהַשְּׁבִירָה — תִּהְיֶה שְׁלֵמָה,</span>
+          <span class="line">וְהַנִּיצוֹצוֹת — יַחֲזְרוּ כֻּלָּם,</span>
+          <span class="line">בַּיּוֹם הַהוּא — אֲדֹנָי אֶחָד,</span>
+          <span class="line">וּשְׁמוֹ — מְרַנֵּן בְּכָל עוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Von Ein Sof — kommt alles,</span>
+          <span class="line">zu Ein Sof — kehrt alles zurück,</span>
+          <span class="line">der Strahl, der gezogen wurde — zu ihm kehren wir,</span>
+          <span class="line">und der Hohlraum — wird mit Licht gefüllt.</span>
+          <span class="line">Und das Zerbrechen — wird ganz sein,</span>
+          <span class="line">und die Funken — werden alle zurückkehren,</span>
+          <span class="line">an jenem Tag — Adonai Einer,</span>
+          <span class="line">und Sein Name — jubelt in jeder Welt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-refrain">
+      <div class="section-label">[פִּזְמוֹן]</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">תִּיקּוּן, תִּיקּוּן —</span>
+            <span class="line">עַד שֶׁיִּהְיֶה הַכֹּל אֶחָד,</span>
+            <span class="line">תִּיקּוּן, תִּיקּוּן —</span>
+            <span class="line">אֲדֹנָי — בַּכֹּל שׁוֹכֵן.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Tikkun, Tikkun —</span>
+            <span class="line">bis alles Eines sein wird,</span>
+            <span class="line">Tikkun, Tikkun —</span>
+            <span class="line">Adonai — wohnt in allem.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block label-bridge">
+      <div class="section-label">[גֶּשֶׁר — שְׁלֹשָׁה עַמּוּדִים]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: drei separate Akkord-Motive für die drei Säulen · Jede Säule hat ihren eigenen Ton</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">עַל שְׁלֹשָׁה דְּבָרִים</span>
+            <span class="line">הָעוֹלָם עוֹמֵד —</span>
+            <span class="line">תּוֹרָה, וַעֲבוֹדָה,</span>
+            <span class="line">וּגְמִילוּת חֲסָדִים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Auf drei Dingen</span>
+            <span class="line">steht die Welt —</span>
+            <span class="line">Torah, Gottesdienst,</span>
+            <span class="line">und Werke der Güte.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN VII -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ז — שְׁלֹשָׁה עַמּוּדֵי הַתִּיקּוּן</div>
+          <div class="tikkun-title-de">Die Handlung der Wiederherstellung VII — Die drei Säulen der Wiederherstellung</div>
+        </div>
+        <div class="tikkun-source">
+          אָבוֹת א:ב — שִׁמְעוֹן הַצַּדִּיק
+          <a href="https://www.sefaria.org/Pirkei_Avot.1.2" target="_blank"> sefaria.org/Avot.1.2</a>
+        </div>
+      </div>
+      <div class="harp-note">Harfe: drei aufsteigende Akkorde — ein Motiv für jede Säule · Dann alle drei zusammen in einem vollen Akkord · Forte, feierlich</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">תּוֹרָה — קַו הָאוֹר שֶׁלִּי,</span>
+          <span class="line">עֲבוֹדָה — תְּפִלָּה שֶׁמְּחַבֶּרֶת,</span>
+          <span class="line">גְּמִילוּת חֲסָדִים — נִיצוֹצוֹת שֶׁעוֹלִים,</span>
+          <span class="line">שְׁלֹשָׁה עַמּוּדִים — תִּיקּוּן אֶחָד.</span>
+          <span class="line">לֹא הַמַּלְאָכִים יְתַקְּנוּ —</span>
+          <span class="line">רַק אֲנִי, רַק אַתָּה, רַק אֲנַחְנוּ,</span>
+          <span class="line">בְּכָל יוֹם שֶׁחַי —</span>
+          <span class="line">מְכוֹנֶנֶת הַגְּאֻלָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Torah — mein Lichtstrahl,</span>
+          <span class="line">Gottesdienst — Gebet, das verbindet,</span>
+          <span class="line">Werke der Güte — Funken, die aufsteigen,</span>
+          <span class="line">drei Säulen — ein Tikkun.</span>
+          <span class="line">Nicht die Engel werden wiederherstellen —</span>
+          <span class="line">nur ich, nur du, nur wir,</span>
+          <span class="line">jeden Tag, den wir leben —</span>
+          <span class="line">wird die Erlösung begründet.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">תּוֹרָה</span>
+        <span class="mitzva-tag">עֲבוֹדָה</span>
+        <span class="mitzva-tag">גְּמִילוּת חֲסָדִים</span>
+      </div>
+    </div>
+
+    <div class="section-block label-climax">
+      <div class="section-label">[שִׁיא]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: der vollste Klang des gesamten Albums · Alle Register · Forte-Fortissimo · Stimme: höchster, freiester Punkt des Albums · Dann plötzlich pp für die letzte Zeile</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בַּיּוֹם הַהוּא — אֲדֹנָי אֶחָד,</span>
+            <span class="line">וּשְׁמוֹ אֶחָד — בְּפִינוּ,</span>
+            <span class="line">הַתִּיקּוּן — כָּאן, עַכְשָׁיו, בַּמַּעֲשֶׂה —</span>
+            <span class="line">וּבוֹ — הַגְּאֻלָּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">An jenem Tag — Adonai Einer,</span>
+            <span class="line">und Sein Name Einer — in unserem Mund,</span>
+            <span class="line">der Tikkun — hier, jetzt, in der Tat —</span>
+            <span class="line">und darin — die Erlösung.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CODA FINALE -->
+    <div class="section-block label-coda">
+      <div class="section-label">[קוֹדָה — כִּנּוֹר בִּלְבַד — סִיּוּם הַמַּחְזוֹר]</div>
+      <div class="harp-note">Harfe: die sieben Zyklusmotive, einzeln geflüstert, in Reihenfolge (wie ein Echo von Liedern I-VI) · Jeder Ton leiser als der vorige · Letzter Ton: das Flageolett von Lied I — der Kreis schließt sich · Vollständige Stille</div>
+      <div style="margin-top:18px; padding:14px 20px; border:1px solid rgba(200,164,74,.12); background:rgba(200,164,74,.03);">
+        <div style="font-family:'Frank Ruhl Libre',serif; font-size:.85em; color:var(--gold-lt); direction:rtl; text-align:right; margin-bottom:6px;">הַמִּלִּים הַנִּלְחָשׁוֹת בְּסִיּוּם — Die geflüsterten Worte am Ende</div>
+        <div style="font-family:'Frank Ruhl Libre',serif; font-size:1em; color:var(--ivory-dim); direction:rtl; text-align:right; line-height:2.2; letter-spacing:.05em;">
+          אֵין סוֹף … הַצִּמְצוּם … הַחָלָל … קַו הָאוֹר … שְׁבִירָה … נִיצוֹצוֹת … תִּיקּוּן …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien</div>
+      <div class="scenarios-grid">
+
+        <div class="scenario-card sc1">
+          <div class="scenario-num">Szenario 1</div>
+          <div class="scenario-title-he">הַחִילוֹנִי הָיִשְׂרְאֵלִי</div>
+          <div class="scenario-sub">Der säkulare Israeli</div>
+          <div class="scenario-body">
+            Er hat alle sieben Lieder gehört — und das letzte trifft ihn anders. Das Intro, in dem alle Motive zusammenkommen, gibt ihm das Gefühl einer Zusammenfassung, einer Ankunft. Der Vers aus Zechariah — <em>בַּיּוֹם הַהוּא — יִהְיֶה אֲדֹנָי אֶחָד</em> — klingt für ihn nicht religiös, sondern wie eine Vision: eine Welt, in der alles zusammenkommt. Der Satz <em>לֹא הַמַּלְאָכִים יְתַקְּנוּ</em> trifft ihn am stärksten.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>רַק אֲנִי, רַק אַתָּה, רַק אֲנַחְנוּ</em> — Er fühlt sich direkt angesprochen. Er, der Säkulare, ist Teil des Tikkun.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er hört den gesamten Zyklus nochmal von vorne. Dann macht er etwas Konkretes: Er hilft jemandem, dem er es seit langem schuldet.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc2">
+          <div class="scenario-num">Szenario 2</div>
+          <div class="scenario-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="scenario-sub">Der traditionell-religiöse Hörer</div>
+          <div class="scenario-body">
+            Das Schlusslied ist für ihn das Befreiendste: Der Zyklus mündet nicht in kontemplativer Mystik, sondern in konkretem Handeln. Die drei Säulen — Torah, Avoda, Gemilut Chasadim — sind für ihn das Herz seines religiösen Lebens, jetzt mit einem kosmologischen Fundament verbunden. Die Coda mit den sieben geflüsterten Worten bewegt ihn tief — er erkennt den ganzen Weg.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Coda — die Rückkehr zum Flageolett von Lied I. Der Kreis schließt sich. Er versteht: Schöpfung und Erlösung sind dasselbe Atemzug.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er kauft das Album (wenn verfügbar) für seine Synagoge und schlägt vor, es am Schabbat zu singen.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc3">
+          <div class="scenario-num">Szenario 3</div>
+          <div class="scenario-title-he">הַקַּבָּלִיסְט / הַחֲסִידִי</div>
+          <div class="scenario-sub">Der Kabbalist / Chassidischer Hörer</div>
+          <div class="scenario-body">
+            Das Intro — alle sechs Motive des Zyklus in einer Phrase — ist für ihn eine musikalische Zusammenfassung des gesamten Etz Chaim, Sha'ar 1-10. Die Tikkun-Sektion mit den drei Säulen aus Avot 1:2 verbindet lurianische Kabbalah mit der Mischna — ein klassischer Schritt, wie ihn der Ramchal im Derech HaShem getan hat. Das geflüsterte Schluss-Zitat berührt ihn zutiefst.
+            <div class="key-moment">⚡ Schlüsselmoment: <em>מְכוֹנֶנֶת הַגְּאֻלָּה</em> — Die Erlösung wird nicht gebracht, sie wird gegründet. Durch ihn, täglich. Er sitzt lange still.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er schreibt eine Drashah über den Zyklus und verwendet ihn als Grundlage für seinen nächsten Shiur über Sha'ar 10 des Etz Chaim.</div>
+          </div>
+        </div>
+
+        <div class="scenario-card sc4">
+          <div class="scenario-num">Szenario 4</div>
+          <div class="scenario-title-he">הַלֹּא-דָּתִי שֶׁשָּׁמַע בְּמִקְרֶה</div>
+          <div class="scenario-sub">Der zufällige Hörer</div>
+          <div class="scenario-body">
+            Er hat nur dieses eine Lied gehört — zufällig geteilt von jemandem. Er versteht nicht, dass es das siebte in einem Zyklus ist, aber das Intro — mit seinen verschiedenen Harfen-Texturen — fühlt sich für ihn wie eine Zusammenfassung von etwas Großem an. Das Lied klingt wie eine Ankunft. Die Zeile <em>תִּיקּוּן, תִּיקּוּן</em> im Refrain bleibt im Kopf — er weiß nicht was es bedeutet, aber es klingt wie ein Versprechen.
+            <div class="key-moment">⚡ Schlüsselmoment: Die Stille nach dem letzten Flageolett. Er hat das Gefühl, dass etwas beendet wurde — etwas, das er nicht kannte, aber das ihn trotzdem betraf.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er sucht nach dem gesamten Album. Er hört alle sieben Lieder von Anfang an. Der Kreis beginnt von vorne.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ALBUM FOOTER -->
+<div class="album-footer">
+  <div class="footer-he">צִמְצוּם — שִׁבְעָה שִׁירִים לְכִנּוֹר וְקוֹל</div>
+  <div class="footer-de">Album I — Sieben Lieder für Harfe und Stimme · Mario</div>
+  <div style="margin-top:24px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--silver-dim); max-width:580px; margin-left:auto; margin-right:auto; line-height:1.9;">
+    „Wenn alle sieben Lieder den Abschnitt מַעֲשֵׂה הַתִּיקּוּן tragen, entsteht ein Zyklus,
+    der drei Schichten trägt: die kosmologische, die theologische und die praktische.
+    Das Projekt tut, was <em>Messilat Yesharim</em> getan hat:
+    die höchsten kabbalistischen Kategorien in tägliche Praxis übersetzen."
+  </div>
+  <div style="margin-top:32px; color:var(--harp); opacity:.3; letter-spacing:.5em; font-size:.6em;">✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>

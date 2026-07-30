@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אֵין סוֹף · צִמְצוּם Album I · שִׁיר א · פִּיּוּט סְפָרַדִּי</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   אֵין סוֹף — Das Unendliche
+   צִמְצוּם · Album I · שִׁיר א מִתּוֹךְ ז
+   כֶּתֶר · Maqam Saba · Gitarre & Stimme
+   Absolute Leere · grenzenloses Licht (Or Ein Sof) · Violett des Unentfalteten
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#030308; --deep:#06060E; --layer:#0B0B16; --card:#08080F;
+
+  /* ── אוֹר אֵין סוֹף — grenzenloses Licht, kühl-leuchtend ── */
+  --or:#E4EEF4; --or-lt:#F8FCFE; --or-dim:#A8B8C4;
+  --gleam:#A8C4D8; --gleam-lt:#CFE0EC; --gleam-dp:#6A8496;
+
+  /* ── תְּהוֹם — das Unentfaltete, Violett-Indigo ── */
+  --void:#3A2E6E; --void-lt:#6A5AA8; --void-vlt:#9A8AD0; --void-dp:#1C1636;
+
+  /* ── סַבָּא / כֶּתֶר — blasses Gold am Rand ── */
+  --saba:#C8B478; --saba-lt:#E2D0A0; --saba-dim:#8E7E52;
+
+  --sage:#4A6840; --sage-lt:#7AA870;
+  --teal:#2A6058; --teal-lt:#50A098;
+  --parch-dim:#a4a494;
+  --ivory:#e4e6e2; --ivory-lt:#f4f6f4; --ivory-dim:#86887e;
+  --silver:#b4b6b4; --silver-dim:#62645e;
+  --text:#96988e;
+  --guitar:#c08840; --guitar-lt:#dca860;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 1%,  rgba(228,238,244,.13) 0%,transparent 44%),
+    radial-gradient(ellipse at 18% 20%, rgba(58,46,110,.18)  0%,transparent 44%),
+    radial-gradient(ellipse at 84% 24%, rgba(106,90,168,.13) 0%,transparent 42%),
+    radial-gradient(ellipse at 50% 52%, rgba(168,196,216,.07) 0%,transparent 38%),
+    radial-gradient(ellipse at 26% 76%, rgba(58,46,110,.13)  0%,transparent 44%),
+    radial-gradient(ellipse at 78% 82%, rgba(200,180,120,.06) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(3,3,8,.88)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 6% 8%,rgba(248,252,254,.52) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 43% 3%,rgba(168,196,216,.56) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 13%,rgba(154,138,208,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 21% 33%,rgba(228,238,244,.34) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 49%,rgba(106,90,168,.36) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 10% 68%,rgba(207,224,236,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 87% 73%,rgba(226,208,160,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 36% 87%,rgba(168,196,216,.32) 0%,transparent 100%),
+    radial-gradient(1px 1px at 56% 92%,rgba(248,252,254,.28) 0%,transparent 100%);
+}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;background:rgba(3,3,8,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(168,196,216,.22);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{font-family:'Frank Ruhl Libre',serif;font-weight:900;padding:12px 22px;
+  border-right:1px solid rgba(168,196,216,.20);white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.nav-brand-main{font-size:.95em;color:var(--or);letter-spacing:.05em;direction:rtl;}
+.nav-brand-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.50em;
+  color:var(--silver-dim);font-weight:300;letter-spacing:.14em;direction:ltr;}
+.nav-link{font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(168,196,216,.58);text-decoration:none;padding:0 11px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;}
+.nav-link:hover{color:var(--or-lt);border-bottom-color:var(--gleam);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:48px;padding-bottom:56px;
+  border-bottom:1px solid rgba(168,196,216,.18);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--gleam-dp);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--void-vlt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.6em;font-weight:900;
+  color:var(--or-lt);direction:rtl;letter-spacing:.07em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 90px rgba(228,238,244,.40),0 0 190px rgba(106,90,168,.34);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:22px;}
+.epigraph{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--ivory);
+  direction:rtl;line-height:1.9;margin:0 auto 6px;max-width:660px;}
+.epigraph-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--gleam);letter-spacing:.10em;margin-bottom:24px;opacity:.85;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:700px;margin:0 auto 22px;}
+
+/* ── OR-BAR: Licht ohne Rand ── */
+.or-bar{height:3px;max-width:560px;margin:0 auto 10px;
+  background:linear-gradient(90deg,transparent,rgba(106,90,168,.5) 18%,rgba(168,196,216,.85) 42%,
+    rgba(248,252,254,.95) 50%,rgba(168,196,216,.85) 58%,rgba(106,90,168,.5) 82%,transparent);
+  box-shadow:0 0 34px rgba(228,238,244,.34);}
+.or-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);letter-spacing:.14em;margin-bottom:22px;}
+
+/* ── ALBUM-STATIONEN ── */
+.stations{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;
+  border:1px solid rgba(168,196,216,.20);padding:14px 18px;background:rgba(168,196,216,.03);
+  max-width:760px;margin:0 auto 12px;}
+.st{font-family:'Frank Ruhl Libre',serif;font-size:.86em;direction:rtl;padding:5px 12px;
+  border:1px solid transparent;color:var(--silver-dim);opacity:.45;}
+.st.now{color:var(--or-lt);opacity:1;border-color:rgba(228,238,244,.42);
+  background:rgba(228,238,244,.08);font-weight:700;box-shadow:0 0 24px rgba(228,238,244,.14) inset;}
+.st-sep{color:var(--gleam-dp);opacity:.42;font-size:.68em;}
+.stations-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.70em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:20px;}
+
+.world-chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(168,196,216,.20);padding:12px 26px;background:rgba(168,196,216,.03);margin-top:16px;}
+.wc-item{font-family:'Frank Ruhl Libre',serif;font-size:.9em;direction:rtl;padding:2px 10px;border:1px solid transparent;}
+.wc-active{color:var(--or);border-color:rgba(228,238,244,.30);background:rgba(228,238,244,.07);}
+.wc-dim{color:var(--silver-dim);opacity:.4;}
+.wc-sep{color:var(--gleam-dp);opacity:.4;font-size:.7em;}
+.wc-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-top:8px;}
+
+/* ── QUELLENPRÜFUNG ── */
+.crit-box{background:linear-gradient(135deg,rgba(184,40,40,.09),rgba(3,3,8,.88));
+  border:1px solid rgba(184,40,40,.30);border-left:4px solid #c03030;
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.crit-box::before{content:'בְּדִיקַת מְקוֹרוֹת — Quellenprüfung &amp; Regel-Hinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:#e07070;
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.crit-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.crit-de strong{color:var(--ivory-lt);}
+.crit-de em{color:#e07070;font-style:italic;}
+.crit-num{font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:#e07070;display:block;margin:20px 0 8px;direction:rtl;text-align:right;}
+.crit-num:first-of-type{margin-top:6px;}
+.he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+.ok-num{color:var(--teal-lt);}
+.add-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 6px;}
+.add{border:1px solid rgba(42,96,88,.24);padding:12px 16px;background:rgba(42,96,88,.05);}
+.add-lbl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:#e07070;display:block;margin-bottom:5px;letter-spacing:.08em;}
+.add-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);
+  direction:rtl;display:block;letter-spacing:.03em;}
+.add-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  color:var(--silver-dim);display:block;margin-top:5px;line-height:1.7;}
+
+/* ── INFO ── */
+.info-box{background:linear-gradient(135deg,rgba(58,46,110,.14),rgba(3,3,8,.88));
+  border:1px solid rgba(106,90,168,.28);border-left:4px solid var(--void-lt);
+  padding:26px 34px;margin-bottom:44px;position:relative;}
+.info-box::before{content:attr(data-label);position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--void-vlt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.info-he{font-family:'Frank Ruhl Libre',serif;font-size:1.13em;font-weight:700;color:var(--ivory-lt);
+  direction:rtl;text-align:right;margin-bottom:10px;line-height:1.80;}
+.info-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--void-vlt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.9;}
+.info-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.info-de strong{color:var(--ivory);}
+.info-de em{color:var(--void-vlt);font-style:italic;}
+.aram-list{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px;}
+.aram{font-family:'Frank Ruhl Libre',serif;font-size:.78em;color:var(--gleam-lt);
+  border:1px solid rgba(168,196,216,.26);padding:4px 12px;background:rgba(168,196,216,.05);direction:rtl;}
+
+/* ── SEKTIONS-NAV ── */
+.sefira-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:54px;}
+.sefira-nav-item{border:1px solid rgba(168,196,216,.20);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(168,196,216,.03);}
+.sefira-nav-item:hover{opacity:.88;background:rgba(228,238,244,.07);border-color:rgba(228,238,244,.40);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.57em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.94em;font-weight:700;color:var(--or);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:70px;scroll-margin-top:60px;border:1px solid rgba(168,196,216,.14);
+  background:linear-gradient(180deg,rgba(11,11,22,.96) 0%,rgba(4,4,9,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--void-dp),var(--void),var(--void-lt),var(--gleam),var(--or-lt));opacity:.58;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(168,196,216,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9em;opacity:.44;
+  line-height:1;text-align:center;color:var(--or);border-right:1px solid rgba(168,196,216,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.58;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.13em;
+  color:var(--or);opacity:.64;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--void-vlt);opacity:.80;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(168,196,216,.28);
+  padding:5px 14px;color:var(--or);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(168,196,216,.04);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(168,196,216,.09);opacity:.8;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--guitar);opacity:.88;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(192,136,64,.32);background:rgba(192,136,64,.04);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.12em;color:var(--ivory-lt);
+  direction:rtl;text-align:right;line-height:2.15;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.15;border-left:1px solid rgba(168,196,216,.12);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--ivory-dim);opacity:.68;font-size:.92em;}
+.ow{color:var(--or-lt);}
+.aw{color:var(--gleam-lt);}
+.vw{color:var(--void-vlt);}
+.divider{text-align:center;color:var(--gleam-dp);opacity:.34;letter-spacing:.7em;
+  font-size:.72em;margin:26px 0;}
+
+.refrain-box{background:linear-gradient(135deg,rgba(228,238,244,.09),rgba(228,238,244,.01));
+  border:1px solid rgba(228,238,244,.26);border-left:3px solid var(--or-dim);padding:22px 28px;}
+.strophe-box{background:linear-gradient(135deg,rgba(58,46,110,.12),transparent);
+  border:1px solid rgba(106,90,168,.24);border-left:3px solid var(--void-lt);padding:22px 28px;}
+.bridge-box{background:linear-gradient(135deg,rgba(200,180,120,.08),transparent);
+  border:1px solid rgba(200,180,120,.24);border-left:3px solid var(--saba);padding:22px 28px;}
+.climax-box{background:linear-gradient(135deg,rgba(248,252,254,.11),transparent);
+  border:1px solid rgba(248,252,254,.28);padding:24px 28px;}
+.climax-box .lyrics-he .line{font-size:1.06em;font-weight:700;}
+.coda-box{text-align:center;padding:26px 0 12px;}
+.coda-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.06em;color:var(--ivory-dim);
+  direction:rtl;line-height:2.4;letter-spacing:.08em;}
+.coda-whisper em{font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;}
+
+.tikkun-box{background:linear-gradient(135deg,rgba(42,96,88,.13),rgba(8,32,28,.44));
+  border:1px solid rgba(42,96,88,.30);border-left:4px solid var(--teal);
+  padding:28px 32px;margin:28px 0;position:relative;}
+.tikkun-box::before{content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 12px;font-size:.60em;color:var(--teal-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.tikkun-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid rgba(42,96,88,.18);gap:18px;flex-wrap:wrap;}
+.tikkun-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;color:var(--teal-lt);direction:rtl;}
+.tikkun-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--teal);display:block;margin-top:2px;}
+.tikkun-src{font-family:'Frank Ruhl Libre',serif;font-size:.65em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.32);padding:3px 11px;background:rgba(42,96,88,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{font-family:'Frank Ruhl Libre',serif;font-size:.68em;color:var(--teal-lt);
+  border:1px solid rgba(42,96,88,.30);padding:3px 10px;background:rgba(42,96,88,.05);direction:rtl;}
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(168,196,216,.04);
+  border-left:2px solid rgba(168,196,216,.24);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--or);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(192,136,64,.07),rgba(3,3,8,.86));
+  border:1px solid rgba(192,136,64,.24);border-left:4px solid var(--guitar);
+  padding:24px 32px;margin:28px 0 0;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--guitar-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.perf-item{border-left:2px solid rgba(192,136,64,.20);padding:2px 0 2px 16px;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  color:var(--guitar-lt);display:block;margin-bottom:3px;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.78;}
+
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(168,196,216,.28),transparent);}
+.ornament-star{color:var(--gleam-dp);font-size:.65em;letter-spacing:.5em;opacity:.46;}
+
+.footer{text-align:center;margin-top:80px;padding-top:60px;border-top:1px solid rgba(168,196,216,.14);}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;color:var(--or);
+  direction:rtl;letter-spacing:.10em;text-shadow:0 0 55px rgba(228,238,244,.34);margin-bottom:14px;}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;
+  color:var(--silver-dim);letter-spacing:.10em;margin-bottom:26px;}
+.footer-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97em;
+  color:var(--silver-dim);line-height:1.95;max-width:620px;margin:0 auto 28px;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;color:var(--sage-lt);letter-spacing:.2em;opacity:.50;}
+
+.sources-box{background:linear-gradient(135deg,rgba(168,196,216,.06),rgba(3,3,8,.85));
+  border:1px solid rgba(168,196,216,.22);border-left:4px solid var(--gleam);
+  padding:26px 32px;margin-top:44px;position:relative;}
+.sources-box::before{content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.60em;color:var(--gleam-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.88;}
+.sources-text strong{color:var(--ivory);}
+
+@media(max-width:780px){
+  .wrap{padding:40px 18px 80px;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(168,196,216,.12);padding-top:14px;margin-top:14px;}
+  .perf-grid,.add-grid{grid-template-columns:1fr;}
+  .song-header{grid-template-columns:62px 1fr;}
+  .source-badge{display:none;}
+  .song-body{padding:0 18px 34px;}
+  .page-title-he{font-size:2.4em;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .tikkun-box{padding:20px 18px;}
+  .st{font-size:.76em;padding:4px 8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">אֵין סוֹף</span>
+    <span class="nav-brand-sub">צִמְצוּם Album I · Lied I/VII · Keter · Maqam Saba · Gitarre</span>
+  </div>
+  <a class="nav-link" href="#p1"><span class="nav-num">א</span>פְּתִיחָה</a>
+  <a class="nav-link" href="#p2"><span class="nav-num">ב</span>בֵּית א</a>
+  <a class="nav-link" href="#p3"><span class="nav-num">ג</span>בֵּית ב</a>
+  <a class="nav-link" href="#p4"><span class="nav-num">ד</span>פִּזְמוֹן</a>
+  <a class="nav-link" href="#p5"><span class="nav-num">ה</span>גֶּשֶׁר</a>
+  <a class="nav-link" href="#p6"><span class="nav-num">ו</span>שִׂיא</a>
+  <a class="nav-link" href="#p7"><span class="nav-num">ז</span>קוֹדָה</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══ HEADER ══ -->
+<div class="page-header">
+  <div class="eyebrow">Piyut · Sephardische Tradition · צִמְצוּם Album I · Erste Station</div>
+  <h1 class="page-title-he">אֵין סוֹף</h1>
+  <div class="page-title-de">Ein Sof — Das Unendliche · Die Stille vor aller Schöpfung</div>
+
+  <div class="epigraph">
+    דַּע כִּי טֶרֶם שֶׁנֶּאֶצְלוּ הַנֶּאֱצָלִים וְנִבְרְאוּ הַנִּבְרָאִים —<br>
+    הָיָה אוֹר עֶלְיוֹן פָּשׁוּט מְמַלֵּא כָּל הַמְּצִיאוּת
+  </div>
+  <div class="epigraph-src">עֵץ חַיִּים, פְּתִיחָה &nbsp;·&nbsp; Ez Chaim, Eröffnung (Ari / R. Chaim Vital)</div>
+
+  <div class="or-bar"></div>
+  <div class="or-cap">אוֹר עַד בְּלִי גְּבוּל — Licht, das keinen Rand hat, weil es keinen Ort außerhalb gibt</div>
+
+  <div class="stations">
+    <span class="st now">אֵין סוֹף</span><span class="st-sep">▸</span>
+    <span class="st">צִמְצוּם</span><span class="st-sep">▸</span>
+    <span class="st">חָלָל</span><span class="st-sep">▸</span>
+    <span class="st">קַו הָאוֹר</span><span class="st-sep">▸</span>
+    <span class="st">שְׁבִירָה</span><span class="st-sep">▸</span>
+    <span class="st">נִיצוֹצוֹת</span><span class="st-sep">▸</span>
+    <span class="st">תִּיקּוּן</span>
+  </div>
+  <div class="stations-cap">Sieben Stationen · dieses Lied ist die erste — und die einzige, in der noch nichts geschehen ist</div>
+
+  <p class="page-desc">
+    Das einzige Lied des Zyklus, das <strong>vor</strong> allem steht. Kein Ereignis, keine Handlung,
+    keine Sefira, die sich entfaltet — nur ein Licht, das alles erfüllt, weil es außerhalb seiner
+    keinen Ort gibt. Der Text baut das fast ausschließlich mit <em>Verneinungen</em> und
+    <em>Wiederholung</em>: kein Himmel, keine Erde, kein Stern, kein Staub; kein Wort, keine Stimme —
+    und dazwischen immer wieder dieselben zwei Silben. Ein Lied kann das Unendliche nicht sagen.
+    Es kann nur <em>zeigen</em>, dass ihm die Worte ausgehen.
+  </p>
+
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">יְצִירָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">בְּרִיאָה</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span><span class="wc-sep">◂</span>
+    <span class="wc-item wc-active">אֵין סוֹף</span>
+  </div>
+  <div class="wc-note">
+    Die vier Welten stehen bewusst <em>alle</em> gedimmt: Ein Sof geht ihnen voraus.
+    Gesungen wird es dennoch in Assija — Stimme, Gitarre, Atem.
+  </div>
+</div>
+
+<!-- ══ QUELLENPRÜFUNG ══ -->
+<div class="crit-box">
+  <p class="crit-de"><span class="crit-num ok-num">א · Die aramäischen Zeilen sind zoharisch&nbsp;</span>
+    Zwei Zeilen der zweiten Strophe kennt man heute vor allem aus Chabad-Literatur
+    (Scha'ar HaJichud VehaEmuna) — <span class="he">מְמַלֵּא כָּל עָלְמִין, סוֹבֵב כָּל עָלְמִין</span>
+    und <span class="he">לֵית אֲתָר פָּנוּי מִנֵּיהּ</span>. <strong>Ihr Ursprung ist aber der Zohar
+    selbst</strong>, und der Text hat sie direkt von dort genommen, nicht über die chassidische
+    Rezeption. Damit sind sie einwandfrei sephardisch:
+    <span class="he">מְמַלֵּא כָּל עָלְמִין וְסוֹבֵב כָּל עָלְמִין</span> steht in der
+    <strong>Ra'aja Mehemna</strong> (Zohar III), <span class="he">לֵית אֲתָר פָּנוּי מִנֵּיהּ</span>
+    im <strong>Tikkunei Zohar, Tikkun 57</strong>.<span class="crit-num ok-num">ב · Ergänzt — vier Quellen, die genau auf deinen Zeilen sitzen</span>
+  </p>
+  <div class="add-grid">
+    <div class="add">
+      <span class="add-lbl">für Strophe 1 &amp; 2 — die Grundlage fehlte ganz</span>
+      <span class="add-he">עֵץ חַיִּים — פְּתִיחָה</span>
+      <span class="add-note">„Bevor die Emanationen emaniert und die Geschöpfe erschaffen wurden,
+      war ein einfaches oberes Licht, das die ganze Wirklichkeit erfüllte“ — das ist Wort für Wort
+      deine erste Hälfte, inklusive <em>„kein Himmel, keine Erde“</em>. Ari via R. Chaim Vital;
+      Kern deines ganzen Albums.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für die Brücke — <span class="he">הוּא הָיָה, הֹוֶה, יִהְיֶה</span></span>
+      <span class="add-he">אֲדוֹן עוֹלָם — רַבִּי שְׁלֹמֹה אִבְּן גַּבִּירוֹל</span>
+      <span class="add-note">„וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה“ und
+      „בְּלִי רֵאשִׁית בְּלִי תַכְלִית“ — deine Brücke ist Adon Olam. Und das schließt einen
+      Kreis: Album-Lied VII beruft sich bereits auf <em>Keter Malchut</em> desselben Dichters.
+      <strong>Ibn Gabirol trägt damit den Anfang und das Ende des Albums.</strong></span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für den Schluss — <span class="he">וּשְׁמוֹ אֶחָד</span></span>
+      <span class="add-he">זְכַרְיָה י״ד:ט׳</span>
+      <span class="add-note">„בַּיּוֹם הַהוּא יִהְיֶה אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד“ — wörtliches
+      Zitat, und dazu <strong>Dewarim 6:4</strong> für <span class="he">אֲדֹנָי אֶחָד</span>.
+      Der Klimax des Liedes ist damit biblisch verankert, nicht bloß poetisch.</span>
+    </div>
+    <div class="add">
+      <span class="add-lbl">für <span class="he">אֵין סוֹף לְגָדְלוֹ</span> · <span class="he">מִי יוּכַל לְסַפֵּר</span></span>
+      <span class="add-he">תְּהִלִּים קמ״ה:ג׳ · ק״ו:ב׳</span>
+      <span class="add-note">„וְלִגְדֻלָּתוֹ אֵין חֵקֶר“ und „מִי יְמַלֵּל גְּבוּרוֹת אֲדֹנָי“ —
+      die unerreichbare Größe und die rhetorische Frage der Brücke stehen beide schon in den
+      Tehillim. Dazu <strong>Rambam, Hilchot Jesodei HaTora 1</strong> für
+      <span class="he">לֹא נִבְרָא וְלֹא יֶחְסַר</span>.</span>
+    </div>
+  </div>
+  <p class="crit-de">
+    <span class="crit-num"><br></span></p>
+</div>
+
+<!-- ══ DIE ARAMÄISCHEN ZEILEN ══ -->
+<div class="info-box" data-label="הַשּׁוּרוֹת הָאֲרַמִּיּוֹת — Die beiden aramäischen Zeilen">
+  <div class="info-he">
+    לֵית אֲתָר פָּנוּי מִנֵּיהּ
+  </div>
+  <div class="info-src">תִּיקּוּנֵי זֹהַר, תִּיקּוּן נ״ז</div>
+  <p class="info-de">
+    Vier Wörter, die das ganze Lied tragen: <strong>„Kein Ort ist leer von ihm.“</strong>
+    Beachte, wie exakt sie zur Bauweise des Textes passen — es ist selbst eine <em>Verneinung</em>,
+    und sie sagt nicht „Er ist überall“, sondern das Schwierigere: dass es kein Außen gibt,
+    von dem aus man „überall“ überhaupt sagen könnte.
+    <br><br>
+    Dazu das Paar <span class="he">מְמַלֵּא כָּל עָלְמִין</span> / <span class="he">סוֹבֵב כָּל
+    עָלְמִין</span> — <em>erfüllend</em> und <em>umgebend</em>. Das ist keine Doppelung, sondern
+    die klassische kabbalistische Unterscheidung zweier Lichtweisen: das Licht, das <em>in</em>
+    die Welten eingeht und sich ihrem Maß anpasst, und das Licht, das sie umfasst, ohne in sie
+    einzugehen. Dein Lied stellt beide in <em>eine</em> Zeile und lässt sie unaufgelöst nebeneinander
+    stehen — genau richtig, denn im Ein Sof sind sie noch nicht getrennt.
+  </p>
+  <div class="aram-list">
+    <span class="aram">לֵית אֲתָר פָּנוּי מִנֵּיהּ</span>
+    <span class="aram">מְמַלֵּא כָּל עָלְמִין</span>
+    <span class="aram">סוֹבֵב כָּל עָלְמִין</span>
+  </div>
+  <p class="info-de">
+    Alle drei bleiben <strong>im Aramäischen unverändert</strong> — Projektregel, und hier
+    besonders wichtig: die Wucht der Zeile liegt in <em>leit atar panui minneih</em>,
+    nicht in einer Übersetzung.
+  </p>
+</div>
+
+<!-- ══ ZWEI KLEINIGKEITEN ══ -->
+<div class="info-box" data-label="שְׁתֵּי הֶעָרוֹת קַלּוֹת — Zwei Kleinigkeiten (nichts geändert)">
+  <p class="info-de">
+    Nur zur Kenntnis, falls es je eine Neufassung gibt — im Video bleibt alles, wie es ist:
+    <br><br>
+    <strong>1.</strong> <span class="he">בְּלֹא קֵץ וָתְחִלָּה</span> (Brücke). Das
+    <span class="he">וָ־</span> vor Schwa ist ungewöhnlich; grammatisch erwartbar wäre
+    <span class="he">וּתְחִלָּה</span>. Gesungen fällt das nicht auf, und die Silbenzahl bliebe
+    identisch — es wäre also ein reiner Schreibfehler-Fix, keine Melodieänderung.
+    <br><br>
+    <strong>2.</strong> <span class="he">אַחַד — אֶחָד — וּשְׁמוֹ אֶחָד</span> (Klimax).
+    Das erste Wort steht mit Patach statt Segol. Wenn es Absicht ist — als Steigerung, drei
+    Anläufe auf dasselbe Wort —, funktioniert es. Falls nicht: Secharja 14:9 hat dreimal
+    <span class="he">אֶחָד</span>.
+  </p>
+</div>
+
+<!-- ══ SEKTIONS-NAV ══ -->
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">פְּתִיחָה</span><span class="sn-de">Intro · Stille</span></a>
+  <a class="sefira-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">בֵּית א</span><span class="sn-de">Vor allem Anfang</span></a>
+  <a class="sefira-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בֵּית ב</span><span class="sn-de">Nur sein Licht</span></a>
+  <a class="sefira-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain &amp; Echo</span></a>
+  <a class="sefira-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Wer kann es sagen?</span></a>
+  <a class="sefira-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">שִׂיא</span><span class="sn-de">Klimax</span></a>
+  <a class="sefira-nav-item" href="#p7"><span class="sn-num">VII</span><span class="sn-he">קוֹדָה</span><span class="sn-de">Outro · ins Nichts</span></a>
+</div>
+
+<!-- ══ SONG ══ -->
+<div class="song-section">
+
+  <div class="song-header">
+    <div class="song-num"><span class="snum-sefira">כֶּתֶר</span>I</div>
+    <div class="song-meta">
+      <span class="sefira-badge">כֶּתֶר · לִפְנֵי כָּל הָעוֹלָמוֹת · צִמְצוּם Album I, שִׁיר א מִתּוֹךְ ז</span>
+      <span class="maqam-badge">Maqam Saba · Rubato ≈ 52 BPM · Solostimme &amp; akustische Gitarre</span>
+      <span class="song-title-he">אֵין סוֹף</span>
+      <span class="song-title-de">Ein Sof — Das Unendliche</span>
+    </div>
+    <div class="source-badge">
+      פִּיּוּט מְקוֹרִי
+      <span class="source-badge-de">Originalpiyut · Ez Chaim · Tikkunei Zohar 57</span>
+    </div>
+  </div>
+
+  <div class="song-body">
+
+    <!-- I · PETICHA -->
+    <div class="section-block" id="p1">
+      <div class="section-label">I · פְּתִיחָה — Intro / Gitarre allein, dann der erste Atem</div>
+      <div class="instr-note">Guitar: a single note, held out slowly. Before it: silence — real silence,
+        long enough to be uncomfortable. Saba, but so bare the mode is barely identifiable.
+        The singer waits. Then, very softly, the first breath. Nothing here should sound like
+        a beginning; it should sound like something that was already going on.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">
+          <em>— Stille —</em><br>
+          <span class="echo">ein einzelner Ton, lang ausgehalten</span><br>
+          <span class="echo">der Sänger wartet</span>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Warum die Stille zuerst kommt</span>
+        זֶהוּ הַשִּׁיר הַיָּחִיד בַּמַּחֲזוֹר שֶׁאֵין בּוֹ מַעֲשֶׂה. אֵין צִמְצוּם, אֵין שְׁבִירָה, אֵין תִּיקּוּן — עֲדַיִן לֹא קָרָה כְּלוּם. עַל כֵּן הַפְּתִיחָה אֵינָהּ הַקְדָּמָה לַשִּׁיר אֶלָּא חֵלֶק מִתָּכְנוֹ: הַשְּׁתִיקָה שֶׁלִּפְנֵי הַכֹּל.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- II · BAYIT ALEF -->
+    <div class="section-block" id="p2">
+      <div class="section-label">II · בֵּית א — Strophe I · Vor allem Anfang</div>
+      <div class="instr-note">Guitar: still very sparse, <em>pp</em> — single notes far apart, like stars in
+        nothing. Do not accompany the voice; alternate with it. The last line, <em>ze sodo</em>,
+        should be almost spoken.</div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לִפְנֵי כָּל בְּרֵאשִׁית, לִפְנֵי כָּל אוֹר,</span>
+            <span class="line"><span class="ow">אֲדֹנָי אֶחָד מָלֵא כָּל מָקוֹם, כָּל דּוֹר.</span></span>
+            <span class="line">אֵין סוֹף לְגָדְלוֹ, אֵין קֵץ לְאוֹרוֹ,</span>
+            <span class="line">הַכֹּל בּוֹ, וְהוּא בַּכֹּל — <span class="vw">זֶה סוֹדוֹ.</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Vor allem Anfang, vor allem Licht —</span>
+            <span class="line"><span class="ow">Adonai, der Eine, erfüllt jeden Ort, jedes Geschlecht.</span></span>
+            <span class="line">Kein Ende seiner Größe, keine Grenze seinem Licht;</span>
+            <span class="line">alles ist in ihm, und er ist in allem — <span class="vw">das ist sein Geheimnis.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen</span>
+        „לִפְנֵי כָּל בְּרֵאשִׁית“ — כְּנֶגֶד בְּרֵאשִׁית א׳:א׳, וּמַמָּשׁ כִּלְשׁוֹן עֵץ חַיִּים: „טֶרֶם שֶׁנֶּאֶצְלוּ הַנֶּאֱצָלִים“. „אֲדֹנָי אֶחָד“ — דְּבָרִים ו׳:ד׳. „אֵין סוֹף לְגָדְלוֹ“ — תְּהִלִּים קמ״ה:ג׳: „וְלִגְדֻלָּתוֹ אֵין חֵקֶר“.
+      </div>
+    </div>
+
+    <!-- III · BAYIT BET -->
+    <div class="section-block" id="p3">
+      <div class="section-label">III · בֵּית ב — Strophe II · Nur sein Licht</div>
+      <div class="instr-note">Guitar: the four negations of the first line each a touch lower — the list
+        is a subtraction, not an accumulation. Then, on the Aramaic lines, let the guitar drop out
+        almost entirely: those two lines are the oldest words in the song and should stand alone.</div>
+      <div class="strophe-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לֹא שָׁמַיִם, לֹא אֶרֶץ, לֹא כּוֹכָב, לֹא עָפָר,</span>
+            <span class="line">רַק אוֹרוֹ הָאֵין-סוֹפִי בּוֹעֵר וְזוֹהָר.</span>
+            <span class="line"><span class="aw">מְמַלֵּא כָּל עָלְמִין, סוֹבֵב כָּל עָלְמִין,</span></span>
+            <span class="line"><span class="aw">לֵית אֲתָר פָּנוּי מִנֵּיהּ</span> — הוּא הָרִאשׁוֹן.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kein Himmel, keine Erde, kein Stern, kein Staub —</span>
+            <span class="line">nur sein unendliches Licht, brennend und strahlend.</span>
+            <span class="line"><span class="aw">Erfüllend alle Welten, umgebend alle Welten;</span></span>
+            <span class="line"><span class="aw">kein Ort ist leer von ihm</span> — er ist der Erste.</span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quellen · die aramäische Achse</span>
+        „לֹא שָׁמַיִם, לֹא אֶרֶץ“ — עֵץ חַיִּים בַּפְּתִיחָה: אוֹר פָּשׁוּט מְמַלֵּא כָּל הַמְּצִיאוּת, וְלֹא הָיָה מָקוֹם פָּנוּי. „מְמַלֵּא כָּל עָלְמִין וְסוֹבֵב כָּל עָלְמִין“ — רַעְיָא מְהֵימְנָא (זֹהַר ג׳). „לֵית אֲתָר פָּנוּי מִנֵּיהּ“ — תִּיקּוּנֵי זֹהַר, תִּיקּוּן נ״ז. הָאֲרַמִּית נִשְׁמֶרֶת כִּלְשׁוֹנָהּ.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- IV · PIZMON -->
+    <div class="section-block" id="p4">
+      <div class="section-label">IV · פִּזְמוֹן — Refrain / und das Echo</div>
+      <div class="instr-note">Guitar: the Saba motif enters properly for the first time — warmer, but never
+        loud. <em>Ein Sof</em> is two syllables and comes six times; do not vary them, let the
+        repetition do the work. The echo afterwards: quiet, stretched out, as if the word were
+        continuing without anyone singing it.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="ow">אֵין סוֹף, אֵין סוֹף,</span></span>
+            <span class="line">אֲדֹנָי מָלֵא כֹל —</span>
+            <span class="line"><span class="ow">אֵין סוֹף, אֵין סוֹף,</span></span>
+            <span class="line">אֵין מִלָּה, אֵין קוֹל —</span>
+            <span class="line">רַק אוֹר, רַק אוֹר,</span>
+            <span class="line"><span class="ow">רַק אוֹרוֹ עַד בְּלִי גְּבוּל.</span></span>
+            <span class="line"><span class="echo">(אֵין סוֹף… אֵין סוֹף…)</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="ow">Ein Sof, Ein Sof —</span></span>
+            <span class="line">Adonai erfüllt alles —</span>
+            <span class="line"><span class="ow">Ein Sof, Ein Sof —</span></span>
+            <span class="line">kein Wort, keine Stimme —</span>
+            <span class="line">nur Licht, nur Licht,</span>
+            <span class="line"><span class="ow">nur sein Licht, ohne Grenze.</span></span>
+            <span class="line"><span class="echo">(Ein Sof… Ein Sof…)</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Die stärkste Zeile</span>
+        „אֵין מִלָּה, אֵין קוֹל“ — כָּאן הַשִּׁיר אוֹמֵר עַל עַצְמוֹ שֶׁאֵינוֹ יָכוֹל. פִּיּוּט שֶׁמּוֹדֶה בְּאֶמְצַע הַפִּזְמוֹן שֶׁאֵין מִלָּה וְאֵין קוֹל — וּמַמְשִׁיךְ לָשִׁיר. זֹאת אֵינָהּ סְתִירָה אֶלָּא הַצּוּרָה הַיְּחִידָה הָאֶפְשָׁרִית: הַחֲזָרָה בִּמְקוֹם הַתֵּאוּר.
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- V · GESCHER -->
+    <div class="section-block" id="p5">
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div>
+            <div class="tikkun-title-he">גֶּשֶׁר — מִי יוּכַל לְסַפֵּר</div>
+            <span class="tikkun-title-de">Brücke — Wer kann es erzählen?</span>
+          </div>
+          <div class="tikkun-src">אֲדוֹן עוֹלָם · תְּהִלִּים ק״ו:ב׳</div>
+        </div>
+        <div class="instr-note">Guitar: <em>pp</em>, a single sustained open chord underneath. The two questions
+          are sung as questions — do not resolve them melodically. Then the three tenses
+          (<em>haja, howe, jihje</em>) each on the same note, evenly, like something that does not move.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מִי יוּכַל לְבָאֵר, מִי יוּכַל לְסַפֵּר,</span>
+              <span class="line">אֶת הָאֵין-סוֹף שֶׁלֹּא נִבְרָא וְלֹא יֶחְסַר?</span>
+              <span class="line"><span class="ow">הוּא הָיָה, הֹוֶה, יִהְיֶה לְעוֹלָם,</span></span>
+              <span class="line">אֶחָד — רַק אֶחָד — בְּלֹא קֵץ וָתְחִלָּה.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wer kann es erklären, wer kann es erzählen —</span>
+              <span class="line">das Unendliche, das nicht erschaffen wurde und nicht abnimmt?</span>
+              <span class="line"><span class="ow">Er war, ist, wird sein in Ewigkeit,</span></span>
+              <span class="line">Einer — nur Einer — ohne Ende und Anfang.</span>
+            </div>
+          </div>
+        </div>
+        <div class="mitzva-tags">
+          <span class="mitzva-tag">כֶּתֶר</span>
+          <span class="mitzva-tag">אַחְדוּת פְּשׁוּטָה</span>
+          <span class="mitzva-tag">מָצוּי רִאשׁוֹן</span>
+          <span class="mitzva-tag">סַבָּא</span>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Der Tikkun · und Ibn Gabirol</span>
+          „מִי יְמַלֵּל גְּבוּרוֹת אֲדֹנָי, יַשְׁמִיעַ כָּל תְּהִלָּתוֹ“ — תְּהִלִּים ק״ו:ב׳: הַשְּׁאֵלָה הָרֵטוֹרִית הִיא עַצְמָהּ מְקוֹרִית. וּ„הוּא הָיָה, הֹוֶה, יִהְיֶה“ עִם „בְּלֹא קֵץ וָתְחִלָּה“ — אֲדוֹן עוֹלָם לְרַבִּי שְׁלֹמֹה אִבְּן גַּבִּירוֹל („וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה“, „בְּלִי רֵאשִׁית בְּלִי תַכְלִית“). וְ„לֹא נִבְרָא וְלֹא יֶחְסַר“ — רַמְבַּ״ם, יְסוֹדֵי הַתּוֹרָה א׳: הַמָּצוּי הָרִאשׁוֹן שֶׁאֵינוֹ תָּלוּי וְאֵינוֹ נִפְסָק. הַתִּיקּוּן כָּאן אֵינוֹ מַעֲשֶׂה אֶלָּא הוֹדָאָה: לְהוֹדוֹת שֶׁאִי אֶפְשָׁר לְסַפֵּר — וְלָשִׁיר בְּכָל זֹאת.
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">· · ·</div>
+
+    <!-- VI · SI -->
+    <div class="section-block" id="p6">
+      <div class="section-label">VI · שִׂיא — Klimax / Abschluss-Refrain, voll</div>
+      <div class="instr-note">Guitar: the only loud passage of the piece — full strumming on the accents.
+        But keep it short: the climax must not last, because nothing in this song develops.
+        Then drop immediately into the bracketed echo, <em>pp</em>, and let the last
+        <em>echad</em> hang unsupported.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line"><span class="ow">אֵין סוֹף! אֵין סוֹף!</span></span>
+            <span class="line">הַכֹּל בּוֹ — הוּא בַּכֹּל!</span>
+            <span class="line"><span class="ow">אֵין סוֹף! אֵין סוֹף!</span></span>
+            <span class="line">אַחַד — אֶחָד — <span class="vw">וּשְׁמוֹ אֶחָד!</span></span>
+            <span class="line"><span class="echo">(אֵין סוֹף… אֵין סוֹף… אֶחָד…)</span></span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line"><span class="ow">Ein Sof! Ein Sof!</span></span>
+            <span class="line">Alles ist in ihm — er ist in allem!</span>
+            <span class="line"><span class="ow">Ein Sof! Ein Sof!</span></span>
+            <span class="line">Einer — Einer — <span class="vw">und sein Name Einer!</span></span>
+            <span class="line"><span class="echo">(Ein Sof… Ein Sof… Einer…)</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Quelle</span>
+        „בַּיּוֹם הַהוּא יִהְיֶה אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד“ — זְכַרְיָה י״ד:ט׳, מִלָּה בְּמִלָּה. שִׂים לֵב שֶׁהַשִּׂיא אֵינוֹ מוֹסִיף דָּבָר חָדָשׁ אֶלָּא חוֹזֵר עַל בֵּית א׳ („הַכֹּל בּוֹ, וְהוּא בַּכֹּל“) בְּקוֹל רָם. אֵין הִתְפַּתְּחוּת — כִּי בְּאֵין סוֹף אֵין מַה שֶּׁיִּתְפַּתֵּחַ.
+      </div>
+    </div>
+
+    <!-- VII · CODA -->
+    <div class="section-block" id="p7">
+      <div class="section-label">VII · קוֹדָה — Outro / ins Nichts, wie es begann</div>
+      <div class="instr-note">Guitar: fades away on an open string. The voice fades into silence.
+        No ritardando, no final chord — the song ends in nothingness, just as it began.
+        Do not cut the recording immediately; let the room be heard for a few seconds.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">
+          אֵין סוֹף… אֵין סוֹף… אֵין סוֹף…<br>
+          <span class="echo">— שְׁתִיקָה —</span><br>
+          <em>Ein Sof… Ein Sof… Ein Sof…<br>
+          (Stille)</em>
+        </div>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">Der Kreis · und der Anschluss an Lied II</span>
+        הַשִּׁיר מַתְחִיל בִּשְׁתִיקָה וּמְסַיֵּם בִּשְׁתִיקָה — אוֹתָהּ שְׁתִיקָה, לֹא אַחֶרֶת, כִּי לֹא קָרָה כְּלוּם. וְדַוְקָא מִשּׁוּם כָּךְ הַשִּׁיר הַבָּא יָכוֹל לְהַתְחִיל: הַצִּמְצוּם הוּא הַמַּעֲשֶׂה הָרִאשׁוֹן בַּמַּחֲזוֹר. הַשְּׁתִיקָה שֶׁבַּסּוֹף אֵינָהּ סִיּוּם — הִיא הַחָלָל שֶׁעֲדַיִן לֹא נִפְתַּח.
+      </div>
+    </div>
+
+    <!-- VORTRAG -->
+    <div class="perf-box">
+      <div class="perf-grid">
+        <div class="perf-item">
+          <span class="perf-h">Dynamik</span>
+          <span class="perf-t">Intro &amp; Coda: <em>ppp</em>, echte Stille davor und danach.
+          Strophen: <em>pp</em>, Gitarre und Stimme abwechselnd statt gleichzeitig.
+          Refrain: <em>mp</em>, wärmer. Brücke: <em>pp</em>, ein einziger liegender Akkord.
+          Klimax: einmal voll — aber kurz.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Maqam Saba</span>
+          <span class="perf-t">Saba (Keter) durchgehend, kein Modenwechsel — es gibt in diesem Lied
+          nichts, wohin man modulieren könnte. Das charakteristische übermäßige Intervall bleibt
+          schwebend und ortlos; kein Ruhepunkt bis zur letzten Note, und auch dort keiner.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Die Aramäisch-Zeilen</span>
+          <span class="perf-t">מְמַלֵּא כָּל עָלְמִין / לֵית אֲתָר פָּנוּי מִנֵּיהּ — hier die Gitarre
+          fast ganz zurücknehmen. Aramäische Aussprache streng bewahren
+          (<em>leit atar panui minneih</em>, nicht hebraisiert). Es sind die ältesten Worte des Liedes.</span>
+        </div>
+        <div class="perf-item">
+          <span class="perf-h">Vokalführung &amp; Wiederholung</span>
+          <span class="perf-t">Offene Phrasenenden auf Kamatz/Cholam (אוֹר, סוֹדוֹ, גְּבוּל, אֶחָד)
+          tragen gehaltene Töne. „אֵין סוֹף“ erscheint über zwanzigmal — bewusst <em>nicht</em>
+          variieren: die Monotonie ist die Aussage, nicht ein Mangel.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</div><!-- /song-section -->
+
+<div class="ornament">
+  <div class="ornament-line"></div>
+  <div class="ornament-star">✦ ✦ ✦</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-world">אֵין סוֹף</div>
+  <div class="footer-chain">כֶּתֶר · מַקַאם סַבָּא · צִמְצוּם Album I, שִׁיר א מִתּוֹךְ ז · עֵץ חַיִּים · תִּיקּוּנֵי זֹהַר נ״ז</div>
+  <p class="footer-de">
+    Das einzige Lied des Zyklus ohne Handlung. Es beschreibt nicht, sondern nimmt weg:
+    kein Himmel, keine Erde, kein Stern, kein Staub, kein Wort, keine Stimme — und was übrig
+    bleibt, lässt sich nur wiederholen, nicht sagen. Deshalb ist der Refrain zwei Silben lang
+    und kehrt wieder, bis er kein Satz mehr ist, sondern ein Zustand.
+    Die Stille am Ende ist dieselbe wie am Anfang — und genau darum kann das nächste Lied
+    beginnen: der Tzimtzum ist die erste Tat.
+    <br><br>
+    <strong>לֵית אֲתָר פָּנוּי מִנֵּיהּ — רַק אוֹרוֹ עַד בְּלִי גְּבוּל.</strong>
+  </p>
+  <div class="footer-amen">אָמֵן</div>
+</div>
+
+<!-- QUELLEN -->
+<div class="sources-box">
+  <div class="sources-text">
+    <strong>Ez Chaim, Eröffnung (Ari, aufgezeichnet von R. Chaim Vital, 1542–1620, Safed)</strong> —
+    <em>„Bevor die Emanationen emaniert und die Geschöpfe erschaffen wurden, war ein einfaches
+    oberes Licht, das die ganze Wirklichkeit erfüllte, und es gab keinen leeren Ort.“</em>
+    Das ist die Grundlage der Strophen I und II, nahezu Satz für Satz — und zugleich die Wurzel
+    des ganzen Albums. In der alten Fassung fehlte dieser Nachweis; <strong>ergänzt</strong>.
+    Die Sha'ar-/Anaf-Zählung schwankt je nach Ausgabe und ist hier bewusst nicht angegeben. ·
+    <strong>Tikkunei Zohar, Tikkun 57</strong> — <em>leit atar panui minneih</em>, „kein Ort ist
+    leer von ihm“. Aramäisch, unverändert. ·
+    <strong>Zohar III, Ra'aja Mehemna</strong> — <em>memale kol almin usowew kol almin</em>,
+    das erfüllende und das umgebende Licht. Aramäisch, unverändert. Die genaue Blattangabe ist
+    als üblicher Nachweis geführt, nicht von mir verifiziert. ·
+    <strong>Dewarim 6:4</strong> — <em>Adonai echad</em>. ·
+    <strong>Secharja 14:9</strong> — <em>bajom hahu jihje Adonai echad uschmo echad</em>;
+    wörtliche Grundlage des Klimax. <strong>Ergänzt.</strong> ·
+    <strong>Tehillim 145:3</strong> — <em>weligdulato ejn cheker</em>, Grundlage von
+    <em>ejn sof legodlo</em>; und <strong>Tehillim 106:2</strong> — <em>mi jemallel gewurot
+    Adonai</em>, Grundlage der rhetorischen Frage der Brücke. <strong>Beide ergänzt.</strong> ·
+    <strong>Adon Olam, zugeschrieben R. Schlomo Ibn Gabirol (ca. 1021–1058, Andalusien)</strong> —
+    <em>wehu haja wehu howe wehu jihje</em> und <em>beli reschit beli tachlit</em>; Grundlage der
+    dritten und vierten Brückenzeile. <strong>Ergänzt</strong> — und bemerkenswert, weil Lied VII
+    des Albums bereits <em>Keter Malchut</em> desselben Dichters führt: Ibn Gabirol rahmt damit
+    den gesamten Zyklus. ·
+    <strong>Rambam, Hilchot Jesodei HaTora 1</strong> — der erste Seiende, der von nichts abhängt
+    und nicht aufhört; Grundlage von <em>schello niwra welo jechsar</em>. <strong>Ergänzt.</strong> ·
+    <strong>Ramchal (R. Moshe Chaim Luzzatto, 1707–1746), Derech Haschem I:1</strong> — dieselbe
+    Bestimmung in philosophischer Sprache: notwendige, von nichts bedingte Existenz. ·
+    <strong>Ramak (R. Moshe Cordovero, 1522–1570, Safed), Pardes Rimonim</strong> — der klassische
+    sephardische Ort für <em>Ein Sof</em> und für das Verhältnis von Transzendenz und Immanenz
+    (<em>„alles ist in ihm, und er ist in allem“</em>); ohne bestimmten Scha'ar geführt, als
+    Rahmen, nicht als Zitat.<br><br>
+    Das Tetragramm erscheint im gesamten Dokument ausschließlich als <strong>אֲדֹנָי</strong>.
+    Die aramäischen Wendungen bleiben unverändert.
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>נִשְׁמָתִין · שִׁיר מִן הַזֹּהַר · אַדְמַת יִשְׂרָאֵל</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   נִשְׁמָתִין — Nishmatin
+   Schir min haZohar · Die Seelen & das Land Israel
+   Aus dem Grab durch die Erde ins Leben · Jecheskel 37 · Ketubot 111a
+   Erde · Gold der Verheißung · Lebens-Grün des Landes · Rost der Tilgung
+   ── פִּיּוּט · תְּחִיַּת הַמֵּתִים ──
+═══════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0A0806; --deep:#120D08; --layer:#1B140C; --card:#130E08;
+
+  /* ── זָהָב — Gold der göttlichen Verheißung / der Zohar ── */
+  --gold:#C9A84C; --gold-lt:#E8C96A; --gold-vlt:#F3E3A6;
+  --gold-dim:#4A3A10;
+
+  /* ── אֲדָמָה — Erde, Gräber, das Rollen (gilgul mechilot) ── */
+  --earth:#9A6A34; --earth-lt:#C0904E; --earth-vlt:#DBB77E;
+  --earth-dim:#3A2810;
+
+  /* ── חַיִּים — Lebens-Grün des Landes (admat Yisrael, וחייתם) ── */
+  --life:#5E8A4E; --life-lt:#93BE80; --life-vlt:#BFDCAF; --life-dim:#28381E;
+
+  /* ── מְחִיָּה — Rost der Tilgung (die das Land besudelten) ── */
+  --rust:#8B3A2E; --rust-lt:#C46A54;
+
+  --parch:#efe4c8; --parch-dim:#a89876;
+  --ivory:#e8e0ca; --ivory-lt:#f5efdb; --ivory-dim:#867c60;
+  --silver:#c4bda8; --silver-dim:#6c6450;
+  --text:#9c9078;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--silver);font-family:'EB Garamond',serif;overflow-x:hidden;line-height:1.88;}
+
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,  rgba(201,168,76,.20)  0%,transparent 54%),
+    radial-gradient(ellipse at 26% 24%, rgba(219,183,126,.10) 0%,transparent 46%),
+    radial-gradient(ellipse at 50% 100%,rgba(94,138,78,.16)   0%,transparent 54%),
+    radial-gradient(ellipse at 82% 84%, rgba(94,138,78,.09)   0%,transparent 42%),
+    radial-gradient(ellipse at 16% 72%, rgba(154,106,52,.10)  0%,transparent 44%),
+    radial-gradient(ellipse at 50% 48%, rgba(10,8,6,.84)      0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 8% 10%,rgba(243,227,166,.46) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 44% 6%,rgba(232,201,106,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 15%,rgba(219,183,126,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 23% 40%,rgba(191,220,175,.28) 0%,transparent 100%),
+    radial-gradient(1px 1px at 64% 56%,rgba(147,190,128,.3) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 12% 74%,rgba(201,168,76,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 78%,rgba(243,227,166,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 37% 90%,rgba(94,138,78,.28) 0%,transparent 100%);
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── HEADER ── */
+.page-header{text-align:center;margin-bottom:56px;padding-bottom:56px;
+  border-bottom:1px solid rgba(201,168,76,.20);position:relative;}
+.page-header::after{content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+  background:var(--bg);padding:0 22px;color:var(--gold);font-size:.52em;letter-spacing:.65em;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--life-lt);letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;opacity:.85;}
+.page-title-he{font-family:'Frank Ruhl Libre',serif;font-size:3.4em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.05em;line-height:1.16;margin-bottom:10px;
+  text-shadow:0 0 80px rgba(201,168,76,.42),0 0 150px rgba(94,138,78,.28);}
+.page-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1em;
+  color:var(--silver-dim);margin-bottom:26px;}
+.page-desc{font-size:1.01em;color:var(--text);line-height:1.95;max-width:710px;margin:0 auto 30px;}
+.page-desc em{color:var(--earth-vlt);font-style:italic;}
+.page-desc .life{color:var(--life-lt);font-style:italic;}
+
+/* ── KETTE ── */
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  border:1px solid rgba(201,168,76,.22);padding:12px 26px;background:rgba(201,168,76,.04);margin-top:20px;}
+.chain-item{font-family:'Frank Ruhl Libre',serif;font-size:.92em;direction:rtl;padding:2px 12px;border:1px solid transparent;}
+.chain-earth{color:var(--earth-vlt);border-color:rgba(154,106,52,.34);background:rgba(154,106,52,.10);}
+.chain-life{color:var(--life-lt);border-color:rgba(94,138,78,.34);background:rgba(94,138,78,.09);}
+.chain-sep{color:var(--gold);opacity:.55;font-size:.7em;}
+
+/* ── STATIONEN-LEISTE ── */
+.cycle-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:50px;}
+.cyc{border:1px solid;padding:13px 15px;position:relative;background:rgba(10,8,6,.6);}
+.cyc-grave{border-color:rgba(154,106,52,.36);background:rgba(154,106,52,.08);}
+.cyc-roll{border-color:rgba(192,144,78,.32);background:rgba(192,144,78,.06);}
+.cyc-land{border-color:rgba(94,138,78,.36);background:rgba(94,138,78,.08);}
+.cyc-live{border-color:rgba(201,168,76,.36);background:rgba(201,168,76,.07);}
+.cyc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.66;display:block;margin-bottom:3px;}
+.cyc-grave .cyc-num{color:var(--earth-vlt);} .cyc-roll .cyc-num{color:var(--earth-lt);}
+.cyc-land .cyc-num{color:var(--life-lt);} .cyc-live .cyc-num{color:var(--gold-lt);}
+.cyc-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;display:block;}
+.cyc-grave .cyc-he{color:var(--earth-vlt);} .cyc-roll .cyc-he{color:rgba(219,183,126,.92);}
+.cyc-land .cyc-he{color:var(--life-vlt);} .cyc-live .cyc-he{color:var(--gold-vlt);}
+.cyc-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+
+/* ── GLOSSE-BOX ── */
+.gloss-box{background:linear-gradient(135deg,rgba(94,138,78,.09),rgba(10,8,6,.85));
+  border:1px solid rgba(94,138,78,.26);border-left:4px solid var(--life);
+  padding:24px 32px;margin-bottom:50px;position:relative;}
+.gloss-box::before{content:'נִשְׁמָתִין — Zum Wort';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--life-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.gloss-glyph{font-family:'Frank Ruhl Libre',serif;font-size:2.3em;font-weight:900;
+  color:var(--life-lt);direction:rtl;text-align:center;display:block;margin-bottom:12px;
+  letter-spacing:.08em;text-shadow:0 0 60px rgba(94,138,78,.4);}
+.gloss-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.gloss-de strong{color:var(--ivory);}
+.gloss-de em{color:var(--life-lt);font-style:italic;}
+.gloss-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── INTRO BOX ── */
+.intro-box{background:linear-gradient(135deg,rgba(201,168,76,.11),rgba(10,8,6,.85));
+  border:1px solid rgba(201,168,76,.30);border-left:4px solid var(--gold);
+  padding:26px 34px;margin-bottom:50px;position:relative;}
+.intro-box::before{content:'הַכָּתוּב · Jecheskel 37 · Ketubot 111';
+  position:absolute;top:-11px;right:22px;background:var(--bg);padding:0 14px;font-size:.62em;
+  color:var(--gold-lt);letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.ib-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;color:var(--ivory);
+  direction:rtl;text-align:right;margin-bottom:6px;line-height:1.7;}
+.ib-src{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78em;
+  color:var(--gold-lt);direction:rtl;text-align:right;margin-bottom:14px;opacity:.85;}
+.ib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.ib-de strong{color:var(--ivory);}
+.ib-de em{color:var(--earth-vlt);font-style:italic;}
+.ib-de .life{color:var(--life-lt);font-style:italic;}
+
+/* ── SEKTIONS-NAV ── */
+.sec-nav{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:56px;}
+.sec-nav-item{border:1px solid rgba(201,168,76,.22);padding:10px 6px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;background:rgba(201,168,76,.03);}
+.sec-nav-item:hover{opacity:.9;background:rgba(201,168,76,.09);border-color:rgba(201,168,76,.44);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:.9em;font-weight:700;color:var(--gold-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--silver-dim);display:block;}
+
+/* ── SONG ── */
+.song-section{margin-bottom:52px;border:1px solid rgba(201,168,76,.14);
+  background:linear-gradient(180deg,rgba(27,20,12,.96) 0%,rgba(9,7,5,.98) 100%);overflow:hidden;position:relative;}
+.song-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--earth),var(--gold),var(--life),var(--gold),transparent);opacity:.55;}
+.song-header{padding:28px 42px 22px;border-bottom:1px solid rgba(201,168,76,.12);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;}
+.song-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7em;opacity:.44;
+  line-height:1;text-align:center;color:var(--gold-lt);border-right:1px solid rgba(201,168,76,.18);padding-right:22px;}
+.song-num .snum-sefira{font-family:'Frank Ruhl Libre',serif;font-size:.32em;font-weight:700;
+  opacity:.6;letter-spacing:.05em;display:block;margin-bottom:2px;}
+.sefira-badge{font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;letter-spacing:.14em;
+  color:var(--gold-lt);opacity:.66;display:block;margin-bottom:3px;direction:rtl;}
+.maqam-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;display:block;
+  margin-bottom:5px;direction:ltr;letter-spacing:.12em;color:var(--life-lt);opacity:.72;}
+.song-title-he{font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--gold-vlt);direction:rtl;letter-spacing:.04em;display:block;}
+.song-title-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;
+  color:var(--silver-dim);display:block;margin-top:2px;}
+.source-badge{font-family:'Frank Ruhl Libre',serif;font-size:.64em;border:1px solid rgba(201,168,76,.32);
+  padding:5px 14px;color:var(--gold-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(201,168,76,.05);}
+.source-badge-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;
+  color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;}
+
+.song-body{padding:0 42px 40px;}
+.section-block{margin:26px 0;scroll-margin-top:24px;}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.7em;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:12px;
+  padding-bottom:7px;border-bottom:1px solid rgba(201,168,76,.10);opacity:.85;}
+.instr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;
+  color:var(--life-lt);opacity:.9;margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(94,138,78,.32);background:rgba(94,138,78,.05);direction:ltr;line-height:1.78;}
+
+.lyrics-block{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.lyrics-he{font-family:'Frank Ruhl Libre',serif;font-size:1.14em;color:var(--gold-vlt);
+  direction:rtl;text-align:right;line-height:2.2;}
+.lyrics-de{font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;color:var(--text);
+  line-height:2.2;border-left:1px solid rgba(201,168,76,.14);padding-left:26px;}
+.line{display:block;}
+.echo{color:var(--silver-dim);opacity:.7;font-size:.82em;}
+.earth{color:var(--earth-vlt);}
+.life{color:var(--life-lt);}
+.gold{color:var(--gold-lt);}
+.rust{color:var(--rust-lt);}
+
+.refrain-box{background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(94,138,78,.05));
+  border:1px solid rgba(201,168,76,.28);border-left:3px solid var(--gold);padding:22px 28px;}
+.refrain-box .lyrics-he .line:first-child{font-weight:700;color:var(--gold-vlt);}
+.bridge-box{background:linear-gradient(135deg,rgba(139,58,46,.12),transparent);
+  border:1px solid rgba(139,58,46,.28);border-left:3px solid var(--rust);padding:22px 28px;}
+.outro-box{text-align:center;padding:22px 0 6px;}
+.outro-whisper{font-family:'Frank Ruhl Libre',serif;font-size:1.2em;color:var(--life-vlt);
+  direction:rtl;line-height:2.4;letter-spacing:.05em;text-shadow:0 0 30px rgba(94,138,78,.3);}
+.outro-whisper .sm{font-size:.8em;color:var(--silver-dim);}
+.outro-whisper .de{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.56em;color:var(--silver-dim);direction:ltr;display:block;margin-top:8px;}
+
+.piyut-ref{margin-top:14px;padding:11px 16px;background:rgba(201,168,76,.05);
+  border-left:2px solid rgba(201,168,76,.28);font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--parch-dim);direction:rtl;line-height:1.68;font-style:italic;}
+.piyut-ref.earthy{background:rgba(154,106,52,.06);border-left-color:rgba(154,106,52,.30);}
+.piyut-ref.rusty{background:rgba(139,58,46,.06);border-left-color:rgba(139,58,46,.30);}
+.piyut-ref-label{font-family:'Cormorant Garamond',serif;font-size:.82em;color:var(--gold-lt);
+  letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;}
+.piyut-ref.earthy .piyut-ref-label{color:var(--earth-lt);}
+.piyut-ref.rusty .piyut-ref-label{color:var(--rust-lt);}
+
+/* ── VORTRAG ── */
+.perf-box{background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(10,8,6,.86));
+  border:1px solid rgba(201,168,76,.24);border-left:4px solid var(--gold);
+  padding:26px 32px;margin-top:16px;position:relative;}
+.perf-box::before{content:'הֶעָרוֹת לַבִּצּוּעַ — Aufführungshinweise';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.perf-intro{font-family:'EB Garamond',serif;font-size:.9em;color:var(--text);line-height:1.85;margin-bottom:18px;}
+.perf-intro em{color:var(--life-lt);font-style:italic;}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;}
+.perf-item{border-left:2px solid rgba(94,138,78,.22);padding:2px 0 2px 16px;}
+.perf-item.wide{grid-column:1 / -1;}
+.perf-h{font-family:'Frank Ruhl Libre',serif;font-size:.88em;font-weight:700;
+  color:var(--gold-lt);display:block;margin-bottom:4px;}
+.perf-h .he{color:var(--life-lt);font-weight:400;font-size:.9em;}
+.perf-t{font-size:.88em;color:var(--text);line-height:1.82;}
+.perf-t strong{color:var(--ivory);}
+.perf-t em{color:var(--life-lt);font-style:italic;}
+
+/* ── NAMEN-BOX ── */
+.names-box{margin-top:16px;padding:22px 30px;border:1px solid rgba(201,168,76,.16);
+  background:rgba(201,168,76,.03);position:relative;}
+.names-box::before{content:'שְׁמוֹת קֹדֶשׁ · Heilige Namen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.6em;color:var(--gold-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;}
+.names-list{display:flex;flex-wrap:wrap;gap:8px 20px;direction:rtl;margin-bottom:12px;}
+.names-list span{font-family:'Frank Ruhl Libre',serif;font-size:1.02em;color:var(--gold-lt);
+  border:1px solid rgba(201,168,76,.22);padding:3px 12px;background:rgba(201,168,76,.05);}
+.names-note{font-family:'EB Garamond',serif;font-size:.86em;color:var(--text);line-height:1.8;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent);}
+.ornament-star{color:var(--gold);font-size:.8em;letter-spacing:.5em;opacity:.6;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:44px 20px 0;}
+.footer-world{font-family:'Frank Ruhl Libre',serif;font-size:1.3em;font-weight:700;
+  color:var(--gold-lt);direction:rtl;margin-bottom:10px;}
+.footer-chain{font-family:'Frank Ruhl Libre',serif;font-size:.8em;color:var(--life-lt);
+  direction:rtl;opacity:.72;margin-bottom:22px;letter-spacing:.04em;}
+.footer-de{font-size:.92em;color:var(--text);max-width:720px;margin:0 auto;line-height:1.95;}
+.footer-de strong{color:var(--ivory);}
+.footer-de em{color:var(--life-lt);font-style:italic;}
+.footer-amen{font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--gold-lt);direction:rtl;margin-top:24px;text-shadow:0 0 40px rgba(201,168,76,.4);}
+
+/* ── QUELLEN ── */
+.sources-box{margin-top:56px;padding:28px 34px;border:1px solid rgba(201,168,76,.20);
+  background:rgba(201,168,76,.03);position:relative;}
+.sources-box::before{content:'מְקוֹרוֹת · Quellen';position:absolute;top:-11px;right:22px;
+  background:var(--bg);padding:0 14px;font-size:.62em;color:var(--gold-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;}
+.sources-text{font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.95;}
+.sources-text strong{color:var(--ivory);}
+.sources-text em{color:var(--gold-lt);font-style:italic;}
+.sources-he{font-family:'Frank Ruhl Libre',serif;direction:rtl;unicode-bidi:embed;color:var(--ivory-lt);}
+
+/* ── RESPONSIVE ── */
+@media (max-width:720px){
+  .wrap{padding:44px 20px 90px;}
+  .page-title-he{font-size:2.3em;}
+  .cycle-strip{grid-template-columns:1fr 1fr;}
+  .sec-nav{grid-template-columns:repeat(3,1fr);}
+  .song-header{grid-template-columns:1fr;gap:14px;text-align:center;}
+  .song-num{border-right:none;border-bottom:1px solid rgba(201,168,76,.18);padding:0 0 12px;}
+  .lyrics-block{grid-template-columns:1fr;gap:18px;}
+  .lyrics-de{border-left:none;border-top:1px solid rgba(201,168,76,.14);padding-left:0;padding-top:16px;}
+  .song-body{padding:0 22px 32px;}
+  .perf-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ══ HEADER ══ -->
+  <div class="page-header">
+    <div class="eyebrow">שִׁיר מִן הַזֹּהַר · Auferstehung im Land · für Stimme &amp; Gitarre</div>
+    <div class="page-title-he">נִשְׁמָתִין</div>
+    <div class="page-title-de">Nishmatin — Die Seelen &amp; das Land Israel</div>
+    <p class="page-desc">
+      Ein Lied zwischen zwei Stimmen: dem Aramäisch des <em>Zohar</em> in den Strophen und der Prophetie
+      <span class="life">Jecheskels</span> im Refrain. Der Gedanke ist uralt und tröstlich zugleich —
+      dass die Seele ihr volles Leben <span class="life">im Land Israel</span> empfängt; dass die
+      Gerechten der Ferne durch verborgene Gänge in der Erde <em>rollen</em>, bis sie das Land erreichen,
+      und dort — <span class="life">וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם</span> — neu erstehen.
+    </p>
+    <div class="chain">
+      <span class="chain-item chain-earth">קִבְרוֹתֵיכֶם</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-earth">גִּלְגּוּל מְחִילוֹת</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-life">אַדְמַת יִשְׂרָאֵל</span><span class="chain-sep">↦</span>
+      <span class="chain-item chain-life">וִחְיִיתֶם</span>
+    </div>
+  </div>
+
+  <!-- ══ STATIONEN-LEISTE ══ -->
+  <div class="cycle-strip">
+    <div class="cyc cyc-grave">
+      <span class="cyc-num">Die Gräber</span>
+      <span class="cyc-he">אֶפְתַּח אֶת קִבְרוֹתֵיכֶם</span>
+      <span class="cyc-de">„Ich öffne eure Gräber" (Jech 37)</span>
+    </div>
+    <div class="cyc cyc-roll">
+      <span class="cyc-num">Der verborgene Weg</span>
+      <span class="cyc-he">גִּלְגּוּל מְחִילוֹת</span>
+      <span class="cyc-de">Rollen durch Gänge (Ketubot 111)</span>
+    </div>
+    <div class="cyc cyc-land">
+      <span class="cyc-num">Das Land</span>
+      <span class="cyc-he">אַדְמַת יִשְׂרָאֵל</span>
+      <span class="cyc-de">wo die Seele empfangen wird</span>
+    </div>
+    <div class="cyc cyc-live">
+      <span class="cyc-num">Das Leben</span>
+      <span class="cyc-he">וְנָתַתִּי רוּחִי בָכֶם</span>
+      <span class="cyc-de">„und ihr werdet leben"</span>
+    </div>
+  </div>
+
+  <!-- ══ GLOSSE: NISHMATIN ══ -->
+  <div class="gloss-box">
+    <span class="gloss-glyph">נִשְׁמָתִין</span>
+    <p class="gloss-de">
+      <strong>Nishmatin</strong> ist aramäischer Plural — <em>„Seelen"</em>. Der Zohar lehrt in der
+      Spur einer alten talmudischen Streitfrage (Ketubot 111a): die volle, lebendige Seele wird
+      <strong>im Land Israel</strong> empfangen. Darum, so das Bild, werden die im Ausland Bestatteten
+      nicht zurückgelassen — ihre Leiber <em>rollen</em> durch verborgene Gänge in der Erde
+      (<span class="gloss-he">גִּלְגּוּל מְחִילוֹת</span>), bis sie das Land erreichen und dort erstehen.
+      <br><br>
+      Es ist keine Strafe, sondern ein <em>Weg</em>: das Wort <span class="gloss-he">דְּיִתְגַּלְגְּלוּן</span>
+      (von der Wurzel <span class="gloss-he">גלגל</span> — Rad, Gilgul) trägt die ganze Lehre von der
+      Wanderung der Seele in sich. Was oben Prophetie ist — <em>„ich öffne eure Gräber"</em> — wird
+      unten zum Weg durch die Erde, und beides mündet in dasselbe Wort: <span class="gloss-he">וִחְיִיתֶם</span>,
+      <em>und ihr werdet leben</em>.
+    </p>
+  </div>
+
+  <!-- ══ INTRO: JECHESKEL & KETUBOT ══ -->
+  <div class="intro-box">
+    <div class="ib-he">הִנֵּה אֲנִי פֹתֵחַ אֶת קִבְרוֹתֵיכֶם … וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל · וְנָתַתִּי רוּחִי בָכֶם וִחְיִיתֶם</div>
+    <div class="ib-src">יְחֶזְקֵאל ל״ז:י״ב–י״ד</div>
+    <p class="ib-de">
+      Der Refrain ist die Vision vom <strong>Tal der dürren Gebeine</strong>: Gott öffnet die Gräber,
+      bringt sein Volk ins Land und legt seinen Geist in sie. Die Strophen erklären das „Wie" aus dem
+      Talmud (<strong>Ketubot 111a</strong>): nach R. Elazar erstehen die Toten im Land Israel; und da
+      fragt die Gemara — und die Gerechten der Ferne? <em>R. Ile'a</em>: durch <em>Rollen</em> (Gilgul);
+      <em>Abaje</em>: <span class="life">„Gänge (מְחִילּוֹת) werden ihnen in der Erde bereitet"</span>,
+      durch die sie ins Land gelangen.
+      <br><br>
+      Darum bat schon Jaakow, in der Erde des Landes bestattet zu werden (Bereschit 47:30), und wer im
+      Land begraben liegt, ist — sagt der Talmud — <em>„wie unter dem Altar bestattet"</em>. Der Zohar
+      fasst dies in aramäische Verse: die Seelen werden im Land empfangen; die aber, <em>die das Land
+      besudelten</em>, werden getilgt.
+    </p>
+  </div>
+
+  <!-- ══ SEKTIONS-NAV ══ -->
+  <div class="sec-nav">
+    <a class="sec-nav-item" href="#p1"><span class="sn-num">I</span><span class="sn-he">בַּיִת א</span><span class="sn-de">Str. I</span></a>
+    <a class="sec-nav-item" href="#p2"><span class="sn-num">II</span><span class="sn-he">פִּזְמוֹן</span><span class="sn-de">Refrain</span></a>
+    <a class="sec-nav-item" href="#p3"><span class="sn-num">III</span><span class="sn-he">בַּיִת ב</span><span class="sn-de">Str. II</span></a>
+    <a class="sec-nav-item" href="#p4"><span class="sn-num">IV</span><span class="sn-he">גֶּשֶׁר</span><span class="sn-de">Brücke</span></a>
+    <a class="sec-nav-item" href="#p5"><span class="sn-num">V</span><span class="sn-he">סוֹפִי</span><span class="sn-de">Finale</span></a>
+    <a class="sec-nav-item" href="#p6"><span class="sn-num">VI</span><span class="sn-he">סִיּוּם</span><span class="sn-de">Ausklang</span></a>
+  </div>
+
+  <!-- ══ SONG ══ -->
+  <div class="song-section">
+
+    <div class="song-header">
+      <div class="song-num"><span class="snum-sefira">נִשְׁמָתִין ↑ חַיִּים</span>ל״ז</div>
+      <div class="song-meta">
+        <span class="sefira-badge">מִן הַקֶּבֶר · דֶּרֶךְ הָאָרֶץ · לַחַיִּים</span>
+        <span class="maqam-badge">Solo voice &amp; acoustic guitar · Dm / G · narrating → rising</span>
+        <span class="song-title-he">נִשְׁמָתִין</span>
+        <span class="song-title-de">Schir min haZohar · Seelen im Land</span>
+      </div>
+      <div class="source-badge">
+        פִּיּוּט מְקוֹרִי
+        <span class="source-badge-de">Originalpiyut · Zohar · Jech 37 · Ketubot 111a</span>
+      </div>
+    </div>
+
+    <div class="song-body">
+
+      <!-- I · BAYIT ALEF -->
+      <div class="section-block" id="p1">
+        <div class="section-label">I · בֵּית א׳ — Strophe I · das Aramäische des Zohar</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">וְלָא יָהִיב קוּדְשָׁא בְּרִיךְ הוּא</span>
+            <span class="line">נִשְׁמָתִין לְכָל בְּנֵי עָלְמָא</span>
+            <span class="line life">אֶלָּא בְּאַרְעָא דְיִשְׂרָאֵל</span>
+            <span class="line gold">שָׁם תָּקוּם נִשְׁמַת כָּל אִישׁ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Und nicht gibt der Heilige, gelobt sei Er,</span>
+            <span class="line">Seelen all den Kindern der Welt —</span>
+            <span class="line life">außer im Land Israel:</span>
+            <span class="line gold">dort ersteht die Seele eines jeden Menschen.</span>
+          </div>
+        </div>
+        <div class="piyut-ref earthy">
+          <span class="piyut-ref-label">Quelle</span>
+          לְשׁוֹן הַזֹּהַר: נִשְׁמָתִין מִתְקַבְּלוֹת בְּאַרְעָא דְיִשְׂרָאֵל — עַל דֶּרֶךְ רַבִּי אֶלְעָזָר בִּכְתֻבּוֹת קי״א ע״א (וּמְקוֹרוֹת בַּזֹּהַר). וְ„הַנִּקְבָּר בְּאֶרֶץ יִשְׂרָאֵל כְּאִלּוּ קָבוּר תַּחַת הַמִּזְבֵּחַ" — שָׁם.
+        </div>
+      </div>
+
+      <!-- II · PIZMON -->
+      <div class="section-block" id="p2">
+        <div class="section-label">II · פָּזְמוֹן — Refrain (2×) · die Stimme Jecheskels</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנֵּה אֲנִי פּוֹתֵחַ, פּוֹתֵחַ אֶת קִבְרוֹתֵיכֶם</span>
+              <span class="line">וְהַעֲלֵיתִי אֶתְכֶם, עַמִּי, עַמִּי</span>
+              <span class="line life">וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל</span>
+              <span class="line gold">וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Sieh, ich öffne, ich öffne eure Gräber,</span>
+              <span class="line">und ich hebe euch empor, mein Volk, mein Volk,</span>
+              <span class="line life">und ich bringe euch ins Land Israel,</span>
+              <span class="line gold">und ich lege meinen Geist in euch — und ihr werdet leben.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref">
+          <span class="piyut-ref-label">Quelle</span>
+          „הִנֵּה אֲנִי פֹתֵחַ אֶת קִבְרוֹתֵיכֶם וְהַעֲלֵיתִי אֶתְכֶם … וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל … וְנָתַתִּי רוּחִי בָכֶם וִחְיִיתֶם" — יְחֶזְקֵאל ל״ז:י״ב, י״ד.
+        </div>
+      </div>
+
+      <!-- III · BAYIT BET -->
+      <div class="section-block" id="p3">
+        <div class="section-label">III · בֵּית ב׳ — Strophe II · gilgul mechilot</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line earth">דְּיִתְגַּלְגְּלוּן תְּחוֹת אַרְעָא</span>
+            <span class="line earth">גּוּפִין וְנַפְשׁוֹת בַּדֶּרֶךְ הַנִּסְתָּר</span>
+            <span class="line life">עַד דְּמָטוּן לְאַדְמַת יִשְׂרָאֵל</span>
+            <span class="line gold">וְשָׁם תָּקוּם הַנְּשָׁמָה מֵחָדָשׁ</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line earth">Die rollen werden unter der Erde,</span>
+            <span class="line earth">Leiber und Seelen auf dem verborgenen Weg,</span>
+            <span class="line life">bis sie das Land Israel erreichen —</span>
+            <span class="line gold">und dort ersteht die Seele neu.</span>
+          </div>
+        </div>
+        <div class="piyut-ref earthy">
+          <span class="piyut-ref-label">Quelle</span>
+          גִּלְגּוּל מְחִילוֹת — כְּתֻבּוֹת קי״א ע״א: „עַל יְדֵי גִּלְגּוּל" (ר׳ אִילְעָא), „מְחִילּוֹת נַעֲשׂוֹת לָהֶם בַּקַּרְקַע" (אַבַּיֵי). וְעַל כֵּן בִּקֵּשׁ יַעֲקֹב לְהִקָּבֵר בָּאָרֶץ (בְּרֵאשִׁית מ״ז:ל׳).
+        </div>
+      </div>
+
+      <!-- PIZMON (Wiederholung) -->
+      <div class="section-block">
+        <div class="section-label">פָּזְמוֹן — Refrain · Wiederholung</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנֵּה אֲנִי פּוֹתֵחַ, פּוֹתֵחַ אֶת קִבְרוֹתֵיכֶם</span>
+              <span class="line">וְהַעֲלֵיתִי אֶתְכֶם, עַמִּי, עַמִּי</span>
+              <span class="line life">וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל</span>
+              <span class="line gold">וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Sieh, ich öffne, ich öffne eure Gräber,</span>
+              <span class="line">und ich hebe euch empor, mein Volk, mein Volk,</span>
+              <span class="line life">und ich bringe euch ins Land Israel,</span>
+              <span class="line gold">und ich lege meinen Geist in euch — und ihr werdet leben.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV · GESCHER -->
+      <div class="section-block" id="p4">
+        <div class="section-label">IV · גֶּשֶׁר — Brücke · gedämpft, fast gesprochen</div>
+        <div class="instr-note">Muted, almost spoken; a shadow before the light — then a slow crescendo into the final refrain.</div>
+        <div class="bridge-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line rust">יִמָּחוּ מִסֵּפֶר חַיִּים</span>
+              <span class="line rust">אֵלֶּה אֲשֶׁר טִמְּאוּ אֶת הָאָרֶץ</span>
+              <span class="line life">אַךְ הַצַּדִּיקִים יָשׁוּבוּ לְחַיִּים</span>
+              <span class="line gold">בְּאוֹר אַדְמַת יִשְׂרָאֵל הַקְּדוֹשָׁה</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line rust">Getilgt seien aus dem Buch des Lebens</span>
+              <span class="line rust">jene, die das Land besudelt haben;</span>
+              <span class="line life">doch die Gerechten kehren zum Leben zurück,</span>
+              <span class="line gold">im Licht des heiligen Landes Israel.</span>
+            </div>
+          </div>
+        </div>
+        <div class="piyut-ref rusty">
+          <span class="piyut-ref-label">Quelle</span>
+          „יִמָּחוּ מִסֵּפֶר חַיִּים" — תְּהִלִּים ס״ט:כ״ט. „אֲשֶׁר טִמְּאוּ אֶת הָאָרֶץ" — עַל דֶּרֶךְ „וַתִּטְמָא הָאָרֶץ … וַתָּקִא הָאָרֶץ" (וַיִּקְרָא י״ח:כ״ה–כ״ח); בַּזֹּהַר: „וְאִלֵּין דְּסָאִיבוּ אַרְעָא".
+        </div>
+      </div>
+
+      <!-- V · PIZMON SOFI -->
+      <div class="section-block" id="p5">
+        <div class="section-label">V · פָּזְמוֹן סוֹפִי — Finaler Refrain · langsam, crescendo</div>
+        <div class="refrain-box">
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">הִנֵּה אֲנִי פּוֹתֵחַ, פּוֹתֵחַ אֶת קִבְרוֹתֵיכֶם</span>
+              <span class="line">וְהַעֲלֵיתִי אֶתְכֶם, עַמִּי, עַמִּי</span>
+              <span class="line life">וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל</span>
+              <span class="line gold">וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Sieh, ich öffne, ich öffne eure Gräber,</span>
+              <span class="line">und ich hebe euch empor, mein Volk, mein Volk,</span>
+              <span class="line life">und ich bringe euch ins Land Israel,</span>
+              <span class="line gold">und ich lege meinen Geist in euch — und ihr werdet leben.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VI · SIJUM -->
+      <div class="section-block" id="p6">
+        <div class="section-label">VI · סִיּוּם — Ausklang · leise, a cappella möglich</div>
+        <div class="outro-box">
+          <div class="outro-whisper">
+            רַק בְּאַרְעָא דְיִשְׂרָאֵל...<br>
+            <span class="sm">נִשְׁמָתִין... יְקַבְּלוּן...</span><br>
+            וִחְיִיתֶם...
+            <span class="de">Nur im Land Israel… werden Seelen empfangen… und ihr werdet leben…</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /song-body -->
+  </div><!-- /song-section -->
+
+  <!-- ══ AUFFÜHRUNGSHINWEISE ══ -->
+  <div class="perf-box">
+    <p class="perf-intro">
+      Der Vortrag folgt einem Weg von unten nach oben: aus dem Grab, durch die Erde, ins Leben.
+      Die Strophen erzählen ruhig (das Aramäische wie ein alter Text), der Refrain <em>hebt</em> —
+      und der letzte Refrain ist die volle Auferstehung.
+    </p>
+    <div class="perf-grid">
+      <div class="perf-item wide">
+        <span class="perf-h">Dramatischer Bogen <span class="he">· הַמַּסָּע</span></span>
+        <p class="perf-t">Von der nüchternen Zohar-Strophe (<em>erzählend, verborgen</em>) über das
+        Rollen unter der Erde bis zum Refrain, der jedes Mal höher greift. Die Brücke ist der Schatten
+        — <strong>יִמָּחוּ מִסֵּפֶר חַיִּים</strong> — und aus ihr steigt der finale Refrain als volle
+        Auferstehung. Der Sijum verklingt still: <em>וִחְיִיתֶם…</em></p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Dynamik <span class="he">· דִּינָמִיקָה</span></span>
+        <p class="perf-t">Strophen: <strong>mp</strong>, ruhig, erzählend. Refrain: <strong>mf → f</strong>,
+        aufsteigend und emotional, gehalten. Brücke: <strong>p</strong>, gedämpft, fast gesprochen, mit
+        Crescendo zum letzten Refrain. Finaler Refrain: <strong>f–ff</strong>, langsam und voll.
+        Outro: <strong>ppp</strong>, allein die Stimme.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gitarre <span class="he">· גִּיטָרָה</span></span>
+        <p class="perf-t">Strophen: <em>fingerpicked</em>, ruhig, D-Moll / G — erzählend, wenig Bewegung.
+        Refrain: aufsteigendes Strumming, warm und tragend. Brücke: gedämpft, fast perkussiv, dann öffnen.
+        Outro: allein die Stimme — oder ein Oktav-Flageolett als letzter Klang.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Gesang <span class="he">· שִׁירָה</span></span>
+        <p class="perf-t">Das Aramäische in den Strophen deutlich und getragen artikulieren. Im Refrain
+        auf den offenen Vokalen halten — <strong>ָ</strong> (Kamatz) und <strong>ִי</strong>
+        (Chirek-Jod), etwa in <em>עַמִּי · וִחְיִיתֶם</em>. Die Doppelung <em>עַמִּי, עַמִּי</em> als
+        inniger Ruf. Das Schluss-<em>וִחְיִיתֶם…</em> ganz zart aushauchen.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Zwei Stimmen <span class="he">· שְׁתֵּי לְשׁוֹנוֹת</span></span>
+        <p class="perf-t">Das Lied lebt vom Gegenüber zweier Sprachen: <em>Aramäisch</em> (Zohar) in den
+        Strophen, <em>Hebräisch</em> (Jecheskel) im Refrain. Wo möglich, die beiden farblich im Klang
+        trennen — die Strophe verhangener, der Refrain offen und hell, wie ein Gespräch über die
+        Jahrhunderte.</p>
+      </div>
+      <div class="perf-item">
+        <span class="perf-h">Tonart &amp; Struktur <span class="he">· נֻסָּח</span></span>
+        <p class="perf-t">Empfehlung: D-Moll (dorisch angehaucht), das im Refrain nach Dur-Licht strebt.
+        Ablauf: Str. I → Refrain → Str. II → Refrain → Brücke → Refrain (final) → Sijum.
+        Gesamtlaufzeit mit Wiederholungen etwa <strong>5–6 Minuten</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ HEILIGE NAMEN ══ -->
+  <div class="names-box">
+    <div class="names-list">
+      <span>אֲדֹנָי ← יהוה</span>
+      <span>קוּדְשָׁא בְּרִיךְ הוּא</span>
+    </div>
+    <p class="names-note">
+      Das Tetragramm ist durchgehend als <span class="sources-he">אֲדֹנָי</span> wiedergegeben. In den
+      Zohar-Strophen erscheint der aramäische Ausdruck <span class="sources-he">קוּדְשָׁא בְּרִיךְ הוּא</span>
+      („der Heilige, gelobt sei Er").&nbsp;</p>
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-star">✦ ✦ ✦</div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-world">נִשְׁמָתִין — מִן הַקֶּבֶר לַחַיִּים</div>
+    <div class="footer-chain">קִבְרוֹתֵיכֶם ◂ גִּלְגּוּל מְחִילוֹת ◂ אַדְמַת יִשְׂרָאֵל ◂ וְנָתַתִּי רוּחִי בָכֶם · וִחְיִיתֶם</div>
+    <p class="footer-de">
+      Zwei Stimmen tragen dieses Lied — der Zohar und Jecheskel — und beide sagen dasselbe: dass kein
+      Grab das letzte Wort hat. Was fern liegt, wird nicht vergessen; es findet einen verborgenen Weg
+      durch die Erde, bis es das Land erreicht, wo die Seele empfangen wird. Nur die, <em>die das Land
+      besudelten</em>, bleiben zurück — doch die Gerechten kehren zurück ins Licht.
+      <br><br>
+      <strong>וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם.</strong>
+    </p>
+    <div class="footer-amen">אָמֵן</div>
+  </div>
+
+  <!-- ══ QUELLEN ══ -->
+  <div class="sources-box">
+    <p class="sources-text">
+      <strong>Dieser Piyut ist ein Originaltext</strong>; die aramäischen Strophen sind im Stil des
+      Zohar gedichtet, die Verklammerung mit Jecheskel und die Wendung <em>„auf dem verborgenen Weg"</em>
+      gehören dem Lied. Die verifizierten Quellen des Stoffes:
+      <br><br>
+      <strong>Jecheskel 37:12, 14</strong> — <span class="sources-he">הִנֵּה אֲנִי פֹתֵחַ אֶת קִבְרוֹתֵיכֶם … וְהֵבֵאתִי אֶתְכֶם אֶל אַדְמַת יִשְׂרָאֵל … וְנָתַתִּי רוּחִי בָכֶם וִחְיִיתֶם</span>
+      (Tal der dürren Gebeine); der ganze Refrain. ·
+      <strong>Ketubot 111a</strong> (bestätigt) — R. Elazar: die Auferstehung geschieht im Land Israel;
+      die Gerechten der Ferne <em>„durch Rollen"</em> (R. Ile'a) — <em>„Gänge werden ihnen in der Erde
+      bereitet"</em> (Abaje, <span class="sources-he">מְחִילּוֹת נַעֲשׂוֹת לָהֶם בַּקַּרְקַע</span>).
+      Talmudischer Kern von Strophe II (גִּלְגּוּל מְחִילוֹת) und Strophe I. Ebenda: wer im Land begraben
+      liegt, ist <em>„wie unter dem Altar bestattet"</em>. ·
+      <strong>Bereschit 47:30 / 50:25</strong> — Jaakow und Josef bestehen auf Bestattung im Land (damit
+      sie der „Gänge" würdig werden). ·
+      <strong>Tehillim 69:29</strong> — <span class="sources-he">יִמָּחוּ מִסֵּפֶר חַיִּים</span>;
+      Grundlage der Brücke. ·
+      <strong>Wajikra 18:25–28</strong> — das Land <em>„speit aus"</em>, wer es verunreinigt; Hintergrund
+      von <span class="sources-he">אֵלֶּה אֲשֶׁר טִמְּאוּ אֶת הָאָרֶץ</span>. ·
+      <strong>Zohar</strong> — die Lehre, dass die Seelen im Land Israel empfangen werden und die
+      Besudler getilgt sind, ist an mehreren Stellen im Zohar entfaltet (in der Spur von Ketubot 111a);
+      das Aramäisch des Liedes ist eine solche Formulierung.
+      <br><br>
+      <em>Hinweis zur Quellenangabe:</em> Die Vorlage nannte als Fundstelle <em>„Zohar Noach 27"</em>.
+      Diese genaue Folio-Angabe ließ sich in der Prüfung nicht eindeutig bestätigen; gesichert und
+      tragend sind <strong>Ketubot 111a</strong> und <strong>Jecheskel 37</strong>, denen der Zohar folgt.
+      Für die exakte Zohar-Stelle empfiehlt sich eine Verifizierung an der gedruckten Ausgabe.
+      <br><br>
+      <strong>שֵׁם קֹדֶשׁ:</strong> <span class="sources-he">אֲדֹנָי</span> steht für das Tetragramm;
+      in den Strophen <span class="sources-he">קוּדְשָׁא בְּרִיךְ הוּא</span>.&nbsp;</p>
+  </div>
+
+</div><!-- /wrap -->
+
+
+</body></html>

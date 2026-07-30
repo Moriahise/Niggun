@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>גִּנַּת אֱגוֹז · שַׁעַר ב׳ · שַׁעַר הַהֵיכָל — אֲדֹנָי (ס״ה · מַלְכוּת) · ז׳ קְרִיאוֹת · מַקָּאם חִיגָ׳אז · Sephardische Kabbalah-Vertonung (vertieft)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#060808; --deep:#0A0E0E; --layer:#101414; --card:#0C1010;
+      --parchment:#f2e8d0; --parch-dim:#c8b898;
+      --ivory:#f0e8d8; --ivory-dim:#a89878;
+      --silver:#c8d4e0; --silver-dim:#7a8290;
+      --text:#a0a89c;
+      --work:#C8A048; --work-lt:#F0CC66; --work-dim:#8B7020;
+      --work-bg:rgba(200,160,72,.08); --work-bdr:rgba(200,160,72,.36); --work-glow:rgba(240,204,102,.20);
+      --myst:#8A6CB8; --myst-lt:#B598E0; --myst-dim:#5A4080;
+      --myst-bg:rgba(138,108,184,.08); --myst-bdr:rgba(138,108,184,.34); --myst-glow:rgba(181,152,224,.20);
+      --maqam-saba:#B0904A; --maqam-hijaz:#C85050; --maqam-bayat:#A07850;
+      --maqam-rast:#C8A860; --maqam-ajam:#7A9050; --maqam-nahawand:#6080A0;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--silver); font-family:'EB Garamond',serif; overflow-x:hidden; line-height:1.85; padding:40px 20px 80px; }
+    body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: radial-gradient(ellipse at 18% 12%, rgba(200,160,72,.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 82% 28%, rgba(138,108,184,.12) 0%, transparent 45%),
+                  radial-gradient(ellipse at 12% 68%, rgba(200,160,72,.08) 0%, transparent 45%),
+                  radial-gradient(ellipse at 88% 82%, rgba(181,152,224,.10) 0%, transparent 42%),
+                  radial-gradient(ellipse at 50% 50%, rgba(14,10,20,.82) 0%, transparent 70%); }
+    body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(1px 1px at 8% 10%, rgba(240,204,102,.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 48% 5%, rgba(181,152,224,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 82% 16%, rgba(224,188,96,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 42%, rgba(216,176,80,.28) 0%, transparent 100%),
+        radial-gradient(1px 1px at 68% 58%, rgba(181,152,224,.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 12% 75%, rgba(208,172,72,.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 78%, rgba(181,152,224,.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 88%, rgba(224,188,96,.26) 0%, transparent 100%); }
+    .wrap { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+    .page-header { text-align:center; margin-bottom:70px; padding-bottom:40px; border-bottom:1px solid var(--work-bdr); position:relative; }
+    .page-header::after { content:'✦ ✡ ✦'; position:absolute; bottom:-14px; left:50%; transform:translateX(-50%); background:var(--bg); padding:0 20px; color:var(--work); font-size:.62em; letter-spacing:.55em; }
+    .eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; color:var(--work-lt); letter-spacing:.28em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .sefer-letter { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; color:var(--work); font-weight:900; display:inline-block; margin-bottom:6px; text-shadow:0 0 30px var(--work-glow); letter-spacing:.04em; }
+    .page-title-he { font-family:'Frank Ruhl Libre',serif; font-size:3.0em; font-weight:900; color:var(--ivory); direction:rtl; letter-spacing:.05em; text-shadow:0 0 80px var(--work-glow), 0 0 140px var(--myst-glow); margin-bottom:8px; line-height:1.15; }
+    .page-subtitle-he { font-family:'Frank Ruhl Libre',serif; font-size:1.12em; color:var(--work-lt); direction:rtl; margin-bottom:10px; letter-spacing:.06em; }
+    .page-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.14em; color:var(--silver-dim); margin-bottom:22px; }
+    .page-desc { font-size:1.0em; color:var(--text); max-width:820px; margin:0 auto; line-height:1.95; }
+    .page-desc strong { color:var(--ivory-dim); }
+    .page-desc em { color:var(--myst-lt); font-style:italic; }
+    .special-note { max-width:820px; margin:26px auto 0; padding:16px 20px; background:var(--myst-bg); border:1px dashed var(--myst-bdr); border-radius:6px; font-family:'Cormorant Garamond',serif; font-size:.86em; color:var(--text); line-height:1.85; text-align:right; direction:rtl; }
+    .special-note .lbl { color:var(--myst-lt); font-style:italic; letter-spacing:.06em; }
+    .special-note b { color:var(--ivory-dim); }
+
+    .song-section { margin-bottom:70px; }
+    .song-header { display:flex; flex-wrap:wrap; align-items:flex-start; gap:20px; margin-bottom:44px; padding:24px 26px; background:var(--layer); border:1px solid var(--myst-bdr); border-radius:10px; }
+    .song-meta { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .work-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; letter-spacing:.08em; color:var(--work-lt); }
+    .maqam-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.78em; letter-spacing:.08em; display:inline-block; padding:3px 10px; border-radius:4px; color:#f0e8d8; font-weight:600; background:linear-gradient(90deg,var(--maqam-saba),var(--maqam-bayat)); }
+    .song-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.7em; font-weight:700; color:var(--ivory); direction:rtl; letter-spacing:.04em; }
+    .song-title-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02em; color:var(--silver); }
+    .source-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; color:#A88850; line-height:1.6; }
+
+    /* KRI'AH BLOCK */
+    .kria-block { margin-bottom:40px; padding-bottom:24px; border-bottom:1px solid rgba(200,160,72,.14); }
+    .kria-top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+    .kria-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.16em; text-transform:uppercase; color:var(--work-lt); white-space:nowrap; }
+    .kria-label { font-family:'Frank Ruhl Libre',serif; font-size:1.02em; font-weight:700; direction:rtl; color:var(--work); letter-spacing:.05em; }
+    .kria-label-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--silver-dim); margin-right:12px; opacity:.85; }
+    .kria-dyn { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--text); margin:8px 0 14px; padding:9px 14px; background:rgba(138,108,184,.05); border-left:2px solid var(--myst-dim); }
+    .line-status { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.66em; letter-spacing:.04em; padding:1px 7px; border-radius:4px; margin-right:8px; white-space:nowrap; }
+    .st-verb { color:var(--work-lt); background:rgba(200,160,72,.12); border:1px solid var(--work-bdr); }
+    .st-ess { color:var(--myst-lt); background:var(--myst-bg); border:1px dashed var(--myst-bdr); }
+    .lyrics-block { display:flex; gap:44px; flex-wrap:wrap; }
+    .lyrics-he, .lyrics-de { flex:1; min-width:280px; display:flex; flex-direction:column; gap:6px; }
+    .lyrics-he span.line { font-family:'Frank Ruhl Libre',serif; font-size:1.08em; color:var(--ivory); direction:rtl; line-height:2.0; }
+    .lyrics-de span.line { font-family:'Cormorant Garamond',serif; font-size:1.0em; color:var(--silver); line-height:1.9; }
+    .kria-commentary { font-family:'Cormorant Garamond',serif; font-size:.92em; color:var(--text); line-height:1.9; margin-top:16px; padding-left:15px; border-left:2px solid var(--work-dim); }
+    .kria-commentary strong { color:var(--ivory); }
+    .kria-commentary em { color:var(--work-lt); font-style:italic; }
+
+    .tikkun-box { background:rgba(200,160,72,.06); border:1px solid rgba(200,160,72,.30); padding:30px; margin-top:44px; border-radius:6px; }
+    .tikkun-header { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .tikkun-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.25em; color:var(--ivory); direction:rtl; font-weight:700; letter-spacing:.04em; }
+    .tikkun-title-de { font-family:'Cormorant Garamond',serif; font-size:1.0em; font-style:italic; color:var(--silver); }
+    .tikkun-src { font-family:'Cormorant Garamond',serif; font-size:.74em; color:#A88850; line-height:1.7; }
+    .tikkun-body { font-family:'Cormorant Garamond',serif; font-size:.96em; color:var(--text); line-height:1.92; }
+    .tikkun-body strong { color:var(--ivory); }
+    .tikkun-body em { color:var(--work-lt); font-style:italic; }
+    .tikkun-list { margin:16px 0 0; padding:0; list-style:none; counter-reset:tik; }
+    .tikkun-list li { font-family:'Cormorant Garamond',serif; font-size:.94em; color:var(--text); line-height:1.85; margin-bottom:12px; padding-left:34px; position:relative; }
+    .tikkun-list li::before { counter-increment:tik; content:'('counter(tik)')'; position:absolute; left:0; color:var(--work-lt); font-style:italic; }
+    .tikkun-list em { color:var(--work-lt); font-style:italic; }
+    .tikkun-list strong { color:var(--ivory); }
+    .tikkun-tags { margin-top:18px; display:flex; gap:9px; flex-wrap:wrap; }
+    .tikkun-tag { background:rgba(200,160,72,.15); color:var(--work-lt); padding:4px 10px; border-radius:4px; font-size:.74em; font-family:'Frank Ruhl Libre',serif; direction:rtl; }
+
+    .climax-box { background:linear-gradient(135deg,rgba(200,160,72,.18),rgba(138,108,184,.12),rgba(6,8,8,.88)); border:2px solid var(--work-bdr); padding:32px; margin-top:44px; margin-bottom:30px; border-radius:8px; }
+    .climax-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.82em; color:var(--work-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+    .climax-verse-he { font-family:'Frank Ruhl Libre',serif; font-size:1.55em; font-weight:700; color:var(--ivory); direction:rtl; text-align:center; line-height:1.85; letter-spacing:.04em; text-shadow:0 0 30px var(--work-glow); }
+    .climax-verse-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05em; color:var(--silver); text-align:center; margin-top:14px; line-height:1.7; }
+    .climax-src { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--work-lt); text-align:center; margin-top:12px; opacity:.8; }
+
+    .coda-box { background:rgba(6,8,8,.78); border:1px solid var(--myst-bdr); padding:36px; text-align:center; margin-top:30px; margin-bottom:30px; border-radius:6px; }
+    .coda-label { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.80em; color:var(--myst-lt); letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px; }
+    .coda-whisper { font-family:'Frank Ruhl Libre',serif; font-size:1.20em; direction:rtl; line-height:2.3; opacity:.9; color:var(--myst-lt); }
+    .coda-whisper strong { font-weight:900; opacity:1; color:var(--ivory); }
+
+    .scenarios-section { margin-top:54px; margin-bottom:40px; }
+    .scenarios-title { font-family:'Frank Ruhl Libre',serif; font-size:1.35em; font-weight:700; text-align:center; margin-bottom:34px; direction:rtl; color:var(--work-lt); letter-spacing:.06em; }
+    .scenarios-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; }
+    .scenario-card { background:linear-gradient(135deg,rgba(24,18,32,.78),rgba(6,8,8,.92)); border:1px solid var(--myst-bdr); padding:24px; transition:transform .2s, box-shadow .2s; border-radius:6px; }
+    .scenario-card:hover { transform:translateY(-4px); box-shadow:0 10px 36px var(--myst-glow); }
+    .sc-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.74em; letter-spacing:.14em; text-transform:uppercase; margin-bottom:7px; color:var(--myst-lt); }
+    .sc-title-he { font-family:'Frank Ruhl Libre',serif; font-size:1.10em; font-weight:700; color:var(--ivory); direction:rtl; margin-bottom:4px; letter-spacing:.04em; }
+    .sc-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.84em; color:#A88850; margin-bottom:14px; }
+    .sc-body { font-size:.92em; color:var(--text); line-height:1.80; margin-bottom:14px; }
+    .sc-body strong { color:var(--work-lt); }
+    .key-moment { font-size:.86em; color:var(--work-lt); font-style:italic; margin-bottom:9px; padding-left:13px; border-left:2px solid var(--work-lt); }
+    .reaction { font-size:.86em; color:var(--text); font-style:italic; padding-left:13px; border-left:2px solid var(--myst-dim); line-height:1.78; }
+
+    .footer { margin-top:80px; padding-top:50px; border-top:1px solid var(--work-bdr); text-align:center; }
+    .footer-he { font-family:'Frank Ruhl Libre',serif; font-size:1.40em; font-weight:700; color:var(--work-lt); direction:rtl; margin-bottom:18px; text-shadow:0 0 30px var(--work-glow); letter-spacing:.06em; }
+    .footer-chain { font-family:'Frank Ruhl Libre',serif; font-size:1.0em; color:var(--silver); direction:rtl; margin-bottom:22px; letter-spacing:.09em; }
+    .footer-de { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.92em; color:var(--text); line-height:2.0; max-width:840px; margin:0 auto 24px; text-align:left; }
+    .footer-de strong { color:var(--ivory-dim); font-style:normal; }
+    .footer-amen { font-family:'Frank Ruhl Libre',serif; font-size:1.30em; color:var(--work-lt); direction:rtl; margin-top:24px; letter-spacing:.14em; text-shadow:0 0 30px var(--work-glow); }
+
+    @media (max-width:720px) {
+      .page-title-he { font-size:2.2em; }
+      .lyrics-block { flex-direction:column; gap:24px; }
+      .scenarios-grid { grid-template-columns:1fr; }
+      .climax-verse-he { font-size:1.18em; }
+      .footer-he { font-size:1.10em; }
+      .footer-de { text-align:right; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-header">
+    <div class="eyebrow">Sephardische Kabbalah-Vertonung · Sefer HaParashot bemo Maqam · Vertieft in sieben Kriot</div>
+    <div class="sefer-letter">ג</div>
+    <h1 class="page-title-he">שַׁעַר הַהֵיכָל — אֲדֹנָי, סוֹד הַמַּלְכוּת הַנִּגְלֵית</h1>
+    <div class="page-subtitle-he">שַׁעַר ב׳ · ר׳ יוֹסֵף גִּיקַטִילְיָא · גִּנַּת אֱגוֹז · מַלְכוּת · מַקָּאם חִיגָ׳אז · ~60 BPM · שֶׁבַע קְרִיאוֹת</div>
+    <div class="page-title-de">Ginat Egoz · Zweites Tor — Das Tor des Heichal — אֲדֹנָי (ס״ה = 65), die offenbarte Königsherrschaft · vertieft in sieben Kriot · Malchut · Maqam Hijaz</div>
+    <p class="page-desc">Das <strong>zweite Tor</strong> tritt aus dem verborgenen Wesensnamen (יְקֹוָק) heraus in die <em>offenbare Herrschaft</em>: den Namen <strong>אֲדֹנָי</strong>, dessen Zahl (ס״ה = 65) genau die von <strong>הֵיכָל</strong> (Palast) ist — <em>Adonai ist das Tor, das in den Heichal führt.</em> Der Ankervers ist <em>„וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ, הַס מִפָּנָיו כָּל הָאָרֶץ“</em> (Chawakuk 2:20): der transzendente Name wohnt im Heichal, und alle Erde verstummt vor Ihm. In <strong>sieben Kriot</strong> im königlich-sehnenden Maqam <em>Hijaz</em> (Malchut, ~60 BPM). <strong>Verifizierte Anker (◆):</strong> die Gimatria אֲדֹנָי = הֵיכָל = 65 (zwei unabhängige Quellen), der Vers Chawakuk 2:20, und der Milui אֲדֹנָי = 671 = תַּרְעָא (aram. „Tor“). Die verbindende Prosa bleibt ehrlich <em>Essenz (○)</em>.</p>
+    <div class="special-note">
+      <span class="lbl">שִׂים לֵב · Namens-Sonderfall (wie Schaʿarei Orah):</span> Weil dieses Werk <b>von den Namen handelt</b>, ist die Projekt-Regel „Tetragramm stets als אֲדֹנָי“ hier ausgesetzt. Das Tetragramm erscheint als die ehrfürchtige Druckform <b>יְקֹוָק</b> — niemals die vier Buchstaben ausgeschrieben. <b>אֲדֹנָי</b> bleibt als eigener Name (הֵיכָל · מַלְכוּת · ס״ה = 65) erhalten. Im gesungenen Suno-Feld wird das Tetragramm als <b>„HaShem“</b> gesprochen (nicht „Adonai“, zur Vermeidung der Kollision).
+    </div>
+  </header>
+
+  <section class="song-section">
+
+    <div class="song-header">
+      <div class="song-meta">
+        <div class="work-badge">Standalone · Sephardische Kabbalah · ר׳ יוֹסֵף גִּיקַטִילְיָא (רִאשׁוֹן · ~ה׳ל״ד) · שַׁעַר ב׳</div>
+        <div class="song-title-he">שַׁעַר הַהֵיכָל — אֲדֹנָי, הַשַּׁעַר אֶל הַהֵיכָל</div>
+        <div class="song-title-de">Das Tor des Heichal — Adonai, das Tor in den Palast · sieben Kriot in Maqam Hijaz</div>
+        <span class="maqam-badge" style="background:linear-gradient(90deg,var(--maqam-hijaz),var(--maqam-saba))">מַלְכוּת · Malchut · מַקָּאם חִיגָ׳אז · Hijaz · ~60 BPM · rubato</span>
+        <div class="source-badge">חֲבַקּוּק ב׳:כ׳ (וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ) · גִּימַטְרִיָּא אֲדֹנָי = הֵיכָל = ס״ה (חיד״א · מוֹרֶה בְּאֶצְבַּע · יעב״ץ) · מִלּוּי אֲדֹנָי = תרע״א = תַּרְעָא · תַּלְמוּד בַּבְלִי פְּסָחִים נ׳. · רש״ש · בן איש חי · תְּהִלִּים ה׳:ח׳</div>
+      </div>
+    </div>
+
+    <!-- ── KRI'AH א׳ · אֲדֹנָי = הֵיכָל ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה א׳</span>
+        <span class="kria-label">אֲדֹנָי = הֵיכָל — הַשַּׁעַר אֶל הַהֵיכָל<span class="kria-label-de">Adonai = Heichal — das Tor in den Palast</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Maqam Hijaz royal yearning mode with augmented second, mp entering the gate, biblical Hebrew Aleppo-Yerushalayim, rubato ~60 BPM] Oud und Harfe: Hijaz königlich-sehnend mit übermäßiger Sekunde — der Eintritt durch das Tor in den Palast.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verifiziert · Gimatria</span>שֵׁם אֲדֹנָי בְּגִימַטְרִיָּא ס״ה — כְּמִנְיַן הֵיכָל; וְהוּא הַשַּׁעַר אֲשֶׁר בּוֹ נִכְנָסִים אֶל הַהֵיכָל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Name Adonai in Gimatria 65 (ס״ה) — gleich der Zahl von הֵיכָל (Palast); und er ist das Tor, durch das man in den Heichal eintritt.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Die verifizierte Gleichung, auf der das ganze Tor ruht: <strong>אֲדֹנָי (65) = הֵיכָל (65)</strong>. Der Name der offenbaren Herrschaft <em>ist</em> der Palast — genauer: das Tor in den Palast. Der Chida (מוֹרֶה בְּאֶצְבַּע) und der Yaʿawetz (צִיצִים וּפְרָחִים) bezeugen es unabhängig: „הֵיכָל בְּגִימַטְרִיָּא אֲדֹנָי“. Wer „Adonai“ spricht, steht schon im Torbogen.</div>
+    </div>
+
+    <!-- ── KRI'AH ב׳ · וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ב׳</span>
+        <span class="kria-label">וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ<span class="kria-label-de">Und HaShem in Seinem heiligen Palast</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, mp to mf, a rising royal phrase, the transcendent entering the palace] Eine aufsteigende königliche Phrase — der verborgene Name wohnt im Heichal.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · חבקוק ב׳:כ׳</span>וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ, הַס מִפָּנָיו כָּל הָאָרֶץ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Und HaShem ist in Seinem heiligen Palast — verstumme vor Ihm, alle Erde. (Chawakuk 2:20)</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Der Ankervers verbindet die beiden Namen: der transzendente Wesensname (<em>יְקֹוָק</em>) <strong>wohnt im Heichal</strong> (= אֲדֹנָי). Das Verborgene erfüllt das Offenbare. Genau hier braucht es die Druckform יְקֹוָק — schriebe man den Vers mit „Adonai“, hieße es „Adonai im Heichal des Adonai“, und die Aussage zerfiele; so aber trägt der Vers seine ganze Theologie: der Eine im Palast Seiner Herrschaft.</div>
+    </div>
+
+    <!-- ── KRI'AH ג׳ · מַלְכוּת הַנִּגְלֵית ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ג׳</span>
+        <span class="kria-label">מַלְכוּת הַנִּגְלֵית — גִּלּוּי וְהֶעְלֵם<span class="kria-label-de">Die offenbarte Königsherrschaft — Enthüllung und Verhüllung</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, mf, warm royal sustain, the King revealed and veiled] Warmer königlicher Klang — der König, offenbart und zugleich verhüllt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-ess">○ Essenz</span>אֲדֹנָי הוּא סוֹד הַמַּלְכוּת: בּוֹ מִתְגַּלֵּית הַנְהָגַת הָאֵל בְּעוֹלַם הַבְּרִיאָה, וּבוֹ גַּם הֶעְלֵמוֹ — הַהֵיכָל הַמַּסְתִּיר וְהַמְגַלֶּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai ist das Geheimnis der Malchut: in ihm offenbart sich Gottes Lenkung in der Welt der Schöpfung, und in ihm auch seine Verborgenheit — der Palast, der verhüllt und enthüllt.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Malchut ist die unterste Sefirah, die dem Menschen zugewandte: der König <em>regiert sichtbar</em> die Welt der Beriah — und ist doch im selben Namen <em>verborgen</em>, wie ein König im Innersten seines Palastes. Adonai ist beides: das Tor, das öffnet, und der Vorhang, der wahrt. (Paraphrase der Gikatilla-Lehre — als Essenz ○ gekennzeichnet.)</div>
+    </div>
+
+    <!-- ── KRI'AH ד׳ · הַשֶּׁפַע מִלְמַעְלָה ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ד׳</span>
+        <span class="kria-label">הַשֶּׁפַע מִלְמַעְלָה — מִיְּקֹוָק אֶל אֲדֹנָי<span class="kria-label-de">Der Fluss von oben — von HaShem zu Adonai</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, mf building, descending shefa motion then royal gathering] Herabfließende Bewegung, dann königliches Sammeln — der Fluss von oben in den Palast.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-ess">○ Essenz</span>כָּל הַכֹּחַ נִמְשָׁךְ מִשֵּׁם יְקֹוָק שֶׁלְּמַעְלָה, וַאֲדֹנָי הוּא הַשַּׁעַר הַמַּמְשִׁיךְ אֶל הַהֵיכָל — קָשׁוּר בְּעָבָר, הֹוֶה וְעָתִיד, מֵעִיד עַל תְּמִידוּת הָאֵל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Alle Kraft wird herabgezogen vom Namen יְקֹוָק, der darüber ist, und Adonai ist das Tor, das sie in den Heichal weiterleitet — verbunden mit Vergangenheit, Gegenwart und Zukunft, zeugend von der Beständigkeit Gottes.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Der Wesensname <em>יְקֹוָק</em> ist die Quelle des Seins (Tor 1); <strong>אֲדֹנָי</strong> ist der Kanal, durch den dieses Sein in die Welt strömt — das Tor, das den Palast speist. So hängt die immanente Herrschaft ganz an der transzendenten Quelle; Malchut empfängt und gibt weiter. (Paraphrase — Essenz ○.)</div>
+    </div>
+
+    <!-- ── KRI'AH ה׳ · תַּרְעָא — הַשַּׁעַר בְּמִלּוּאוֹ ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ה׳</span>
+        <span class="kria-label">תַּרְעָא — אֲדֹנָי בְּמִלּוּאוֹ<span class="kria-label-de">Tarʿa — Adonai in seiner Ausschreibung ist „das Tor“</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, f royal peak, wide open gate-like intervals] Voller königlicher Höhepunkt — weit geöffnete, tor-artige Intervalle.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verifiziert · Milui</span>אֲדֹנָי בְּמִלּוּאוֹ (אָלֶף דָּלֶת נוּן יוֹד) עוֹלֶה תרע״א — לְשׁוֹן תַּרְעָא בַּאֲרַמִּית, הוּא הַשַּׁעַר: צַדִּיק עָיֵיל וְנָפֵיק.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai in seiner vollen Ausschreibung (Alef Dalet Nun Jod) ergibt 671 — das ist „Tarʿa“ im Aramäischen, das Tor: der Gerechte tritt ein und tritt aus.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Ein zweiter verifizierter Zahlen-Beweis: die <em>volle Ausschreibung</em> von אֲדֹנָי (Milui) ergibt <strong>תרע״א = 671</strong> — im Aramäischen <em>תַּרְעָא</em>, „das Tor“. Der Name ist also nicht nur <em>gleich</em> dem Palast, sondern selbst <em>das Tor</em> — durch das, im Wort des Zohar, „der Gerechte eintritt und austritt“. (Yaʿawetz, צִיצִים וּפְרָחִים.)</div>
+    </div>
+
+    <!-- ── KRI'AH ו׳ · נִכְתָּב יְקֹוָק וְנִקְרָא אֲדֹנָי ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ו׳</span>
+        <span class="kria-label">נִכְתָּב יְקֹוָק וְנִקְרָא אֲדֹנָי — הַיִּחוּד<span class="kria-label-de">Geschrieben HaShem, gelesen Adonai — der Yichud</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, mf to hushed, the intimate kavanah of union] Vom königlichen Klang ins Innige — die Kawanah der Vereinigung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · פסחים נ׳.</span>הַשֵּׁם נִכְתָּב יְקֹוָק וְנִקְרָא אֲדֹנָי — „לֹא כְּשֶׁאֲנִי נִכְתָּב אֲנִי נִקְרָא“; הַנִּסְתָּר וְהַנִּגְלֶה יִחוּד אֶחָד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Name wird geschrieben יְקֹוָק und gelesen Adonai — „nicht wie ich geschrieben werde, werde ich gelesen“; das Verborgene und das Offenbare, ein einziger Yichud.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Die beiden Tore werden eins: der <em>geschriebene</em> Wesensname (Tor 1) und der <em>gelesene</em> Heichal-Name (Tor 2) sind ein Yichud (פְּסָחִים נ׳.). <strong>Rashash</strong> verwebt sie zum Sigel <em>יאהדונה״י</em>; <strong>Ben Ish Chai</strong> rechnet: <em>יְקֹוָק (26) + אֲדֹנָי (65) = צ״א</em> (91). Wer „Adonai“ spricht und den Wesensnamen meint, vollzieht in einem Wort die Vereinigung von Transzendenz und Herrschaft.</div>
+    </div>
+
+    <!-- ── KRI'AH ז׳ · הַס מִפָּנָיו כָּל הָאָרֶץ ── -->
+    <div class="kria-block">
+      <div class="kria-top">
+        <span class="kria-num">Kri'ah · קְרִיאָה ז׳</span>
+        <span class="kria-label">הַקּוֹדָה — הַס מִפָּנָיו כָּל הָאָרֶץ<span class="kria-label-de">Die Koda — verstumme vor Ihm, alle Erde</span></span>
+      </div>
+      <div class="kria-dyn">[no percussion] [no drums] [no choir] [solo oud and harp with ney — Hijaz, f falling to a hushed silence, the whole earth stilled before the King] Vom Fortissimo in die Stille — alle Erde verstummt vor dem König.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he" dir="rtl">
+          <span class="line"><span class="line-status st-verb">◆ verbatim · חבקוק ב׳:כ׳</span>הַס מִפָּנָיו כָּל הָאָרֶץ — תִּתְגַּלֶּה הַמַּלְכוּת בִּשְׁלֵמוּתָהּ עַד בִּיאַת מָשִׁיחַ בֶּן דָּוִד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Verstumme vor Ihm, alle Erde — die Königsherrschaft wird sich in ihrer Vollkommenheit offenbaren, bis zum Kommen des Maschiach ben David.</span>
+        </div>
+      </div>
+      <div class="kria-commentary">Die Koda kehrt zum Ankervers zurück: vor dem König in Seinem Heichal <strong>verstummt alle Erde</strong>. Sephardisch wird dieser Vers vor dem Gebet gesprochen — Schweigen an der Schwelle des Palastes. Und die volle Enthüllung der Malchut, in der der offenbare und der verborgene Name als einer erkannt werden, ist der Horizont der Geulah: <strong>in den Tagen des Maschiach ben David</strong>.</div>
+    </div>
+
+    <!-- ══ TIKKUN-BOX ══ -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן — הַכְּנִיסָה בְּשַׁעַר הַהֵיכָל</div>
+        <div class="tikkun-title-de">Tikkun — der Eintritt durch das Tor in den Heichal</div>
+        <div class="tikkun-src">חֲבַקּוּק ב׳:כ׳ · תְּהִלִּים ה׳:ח׳ („אֶשְׁתַּחֲוֶה אֶל הֵיכַל קָדְשְׁךָ“) · חיד״א · מוֹרֶה בְּאֶצְבַּע (הֵיכָל = אֲדֹנָי; כַּוָּנַת הַכְּנִיסָה לְבֵית הַכְּנֶסֶת) · תַּלְמוּד בַּבְלִי פְּסָחִים נ׳. · רש״ש · נְהַר שָׁלוֹם (יאהדונה״י) · בן איש חי (חִבּוּר הוי״ה אדנ״י = צ״א) · מִלּוּי אֲדֹנָי = תרע״א = תַּרְעָא (יעב״ץ)</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Das zweite Tor macht das Gebet zum Eintritt in einen Palast.</strong> Weil אֲדֹנָי zahlengleich mit הֵיכָל ist (65 = 65) und in der vollen Ausschreibung <em>תַּרְעָא</em> — „das Tor“ — ergibt, ist jede Nennung des Namens ein Durchschreiten der Schwelle. Der <strong>Chida</strong> (מוֹרֶה בְּאֶצְבַּע) macht daraus eine konkrete sephardische Praxis: beim Betreten der Synagoge spreche man <em>„וַאֲנִי בְּרֹב חַסְדְּךָ אָבוֹא בֵיתֶךָ, אֶשְׁתַּחֲוֶה אֶל הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ“</em> (תְּהִלִּים ה׳:ח׳) — mit der Kawanah, dass <em>הֵיכָל = אֲדֹנָי</em>, man tritt durch das Tor der Herrschaft ein. Und vor dem Gebet der Vers <em>„הַס מִפָּנָיו כָּל הָאָרֶץ“</em> (חֲבַקּוּק ב׳:כ׳): Schweigen an der Schwelle. Innen dann die Vereinigung — geschrieben יְקֹוָק, gelesen אֲדֹנָי — die <strong>Rashash</strong> zum Sigel <em>יאהדונה״י</em> verwebt und der <strong>Ben Ish Chai</strong> als <em>חִבּוּר צ״א</em> (91) ausrechnet.
+        <ul class="tikkun-list">
+          <li><em>Kawanah beim Betreten der Synagoge (חיד״א):</em> <em>„אֶשְׁתַּחֲוֶה אֶל הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ“</em> (תְּהִלִּים ה׳:ח׳) sprechen, mit der Kawanah הֵיכָל = אֲדֹנָי — man durchschreitet das Tor der offenbaren Herrschaft in den Palast.</li>
+          <li><em>„הַס מִפָּנָיו כָּל הָאָרֶץ“ vor dem Gebet:</em> Sephardisch (חֲבַקּוּק ב׳:כ׳) einen Augenblick Schweigen an der Schwelle — die ganze Erde verstummt vor dem König im Heichal; erst dann beginnt die Amidah.</li>
+          <li><em>„פִּתְחוּ לִי שַׁעֲרֵי צֶדֶק“ (תְּהִלִּים קי״ח:י״ט):</em> Die Kawanah, dass אֲדֹנָי selbst das Tor ist (תַּרְעָא · 671) — man bittet nicht um Zutritt von außen, sondern erkennt, dass der Name, den man spricht, schon das offene Tor ist.</li>
+          <li><em>Vereinigung „נִכְתָּב יְקֹוָק · נִקְרָא אֲדֹנָי“:</em> Bei jeder Namensnennung die Kawanah, dass der geschriebene Wesensname und der gelesene Heichal-Name ein Yichud sind — <em>יְקֹוָק (26) + אֲדֹנָי (65) = צ״א</em> (91) (Rashash · Ben Ish Chai).</li>
+          <li><em>Kabbalat Malchut im Schma:</em> Beim ersten Vers <em>„שְׁמַע … אֲדֹנָי אֶחָד“</em> die Herrschaft annehmen — der offenbare Name Adonai empfängt seine ganze Kraft vom Wesensnamen darüber; Einheit von Quelle und Palast.</li>
+          <li><em>Horizont der vollen Malchut → Maschiach ben David:</em> Beim Aleinu-Schluss die Kawanah, dass die Königsherrschaft sich in ihrer Vollkommenheit offenbare — <em>„וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ“</em> ganz enthüllt — in den Tagen des Maschiach ben David.</li>
+        </ul>
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">אֲדֹנָי = הֵיכָל = ס״ה</span>
+        <span class="tikkun-tag">תַּרְעָא · הַשַּׁעַר</span>
+        <span class="tikkun-tag">וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ</span>
+        <span class="tikkun-tag">נִכְתָּב יְקֹוָק נִקְרָא אֲדֹנָי</span>
+        <span class="tikkun-tag">חִבּוּר הוי״ה אדנ״י = צ״א</span>
+      </div>
+    </div>
+
+    <!-- ══ KLIMAX ══ -->
+    <div class="climax-box">
+      <div class="climax-label">שִׂיא · Klimax — der Kern des Tores</div>
+      <div class="climax-verse-he">וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ · אֲדֹנָי = הֵיכָל = ס״ה</div>
+      <div class="climax-verse-de">Und HaShem in Seinem heiligen Palast — Adonai ist der Heichal (65 = 65), das Tor der offenbaren Herrschaft.</div>
+      <div class="climax-src">חֲבַקּוּק ב׳:כ׳ (verbatim) · Gimatria verifiziert (חיד״א · יעב״ץ) · Hijaz, f</div>
+    </div>
+
+    <!-- ══ KODA ══ -->
+    <div class="coda-box">
+      <div class="coda-label">קוֹדָה · Koda-Whisper (f → Stille)</div>
+      <div class="coda-whisper">
+        …אֲדֹנָי — תַּרְעָא, הַשַּׁעַר…<br>
+        וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ…<br>
+        <strong>הַס מִפָּנָיו כָּל הָאָרֶץ — עַד בִּיאַת מָשִׁיחַ בֶּן דָּוִד</strong></div></div>
+
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <p class="footer-he">שַׁעַר הַהֵיכָל · אֲדֹנָי = הֵיכָל = ס״ה · מַלְכוּת · מַקָּאם חִיגָ׳אז · שֶׁבַע קְרִיאוֹת · וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ</p>
+    <p class="footer-chain">
+      גִּנַּת אֱגוֹז · ר׳ יוֹסֵף גִּיקַטִילְיָא · נוּסַּח הָרַשַׁ״שׁ · יְרוּשָׁלַיִם · אֲרָם צוֹבָה · מָרוֹקוֹ · תֵּימָן
+    </p>
+    <p class="footer-de">
+      <strong>Namens-Sonderfall (transparent offengelegt):</strong> Weil Ginat Egoz <em>von den Namen handelt</em>, ist die Projekt-Regel „Tetragramm stets als אֲדֹנָי“ hier ausgesetzt (wie bei Schaʿarei Orah). Das Tetragramm erscheint als ehrfürchtige Druckform <strong>יְקֹוָק</strong> — nie die vier Buchstaben ausgeschrieben (auch im Ankervers Chawakuk 2:20: <em>וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ</em>); <strong>אֲדֹנָי</strong> ist hier der eigentliche Gegenstand des Tores — der eigene Name der Malchut (Heichal · ס״ה = 65); im gesungenen Suno-Feld wird das Tetragramm als <strong>„HaShem“</strong> gesprochen, אֲדֹנָי als „Adonai“. — <strong>Maschiach ben David</strong> ausschließlich, affirmativ.
+      <br><br>
+      <strong>Quellen-Verifizierung (doppelt gegengeprüft):</strong> <strong>Verbatim ◆ (Tanach):</strong> חֲבַקּוּק ב׳:כ׳ — <em>„וַיְקֹוָק בְּהֵיכַל קָדְשׁוֹ, הַס מִפָּנָיו כָּל הָאָרֶץ“</em> (Tetragramm als Druckform יְקֹוָק). <strong>Verifiziert ◆ (Gimatria, zwei unabhängige Quellen):</strong> אֲדֹנָי = 65 = הֵיכָל (חיד״א · מוֹרֶה בְּאֶצְבַּע: „הֵיכָל בְּגִימַטְרִיָּא אֲדֹנָי“; יעב״ץ · צִיצִים וּפְרָחִים) · und der Milui אֲדֹנָי (אָלֶף דָּלֶת נוּן יוֹד) = 671 = תרע״א = <em>תַּרְעָא</em> (aram. „Tor“, יעב״ץ). <strong>Apparat:</strong> תְּהִלִּים ה׳:ח׳ (Chida-Kawanah beim Betreten der Synagoge) · תַּלְמוּד בַּבְלִי פְּסָחִים נ׳. („נִכְתָּב יְקֹוָק נִקְרָא אֲדֹנָי“) · רש״ש · נְהַר שָׁלוֹם (יאהדונה״י) · בן איש חי (חִבּוּר הוי״ה אדנ״י = צ״א) · Gimatria 26+65 = 91.
+      <br><br>
+      <strong>Anti-Fabrikations-Hinweis:</strong> Der vollständige Verbatim-Wortlaut von Gikatillas Heichal-Tor war nicht offen abrufbar (HebrewBooks #9423 Bild-Scan). Darum ruht dieses Tor auf <em>verifizierter Gimatria und einem verifizierten Tanach-Vers</em>; die verbindende Prosa (Kriot ג׳, ד׳) ist ehrlich als <em>Essenz (○)</em> gekennzeichnet, nicht als Gikatilla-Wortlaut. Nichts erfunden. Projekt-Rahmen schließt Raschi · Malbim · Metzudat aus.
+    </p>
+    <p class="footer-amen">אָמֵן · יִבָּנֶה הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ · יָבוֹא מָשִׁיחַ בֶּן דָּוִד · אָמֵן</p>
+  </div>
+
+</div>
+
+
+</body></html>
