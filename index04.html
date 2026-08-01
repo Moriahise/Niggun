@@ -1,0 +1,2979 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niggun-Sammlung · אוסף הניגונים</title>
+<meta name="description" content="Katalog der eigenen Niggunim und Pijutim: Seite, Klangaufnahme, Video und YouTube-Verweis zu jedem Lied. Mit Suche, Welten, Maqam und eingebauter Abspielleiste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Frank+Ruhl+Libre:wght@300;400;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#080605;
+  --deep:#0D0906;
+  --layer:#140E09;
+  --card:#170F09;
+  --card-up:#1E140C;
+  --copper:#9B4D18;
+  --copper-lt:#D4854A;
+  --copper-vlt:#E8A870;
+  --ocher:#C89018;
+  --ocher-lt:#E8BA50;
+  --teal:#2A6058;
+  --teal-lt:#50A098;
+  --parch:#F0E8D4;
+  --text:#B6A794;
+  --muted:#7E7061;
+  --dim:#5A4E43;
+  --wine:#A33636;
+  --line:rgba(212,133,74,.20);
+  --line-soft:rgba(212,133,74,.10);
+  --he-font:'Frank Ruhl Libre', 'Times New Roman', serif;
+  --de-font:'EB Garamond', Georgia, serif;
+  --dis-font:'Cormorant Garamond', Georgia, serif;
+  --ui-font:'IBM Plex Mono', ui-monospace, monospace;
+  --radius:2px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none !important;transition:none !important}}
+body{background:var(--ink);color:var(--text);font-family:var(--de-font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body.has-player{padding-bottom:96px}
+a{color:var(--copper-vlt);text-decoration:none}
+a:hover{color:var(--ocher-lt)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ocher);outline-offset:2px}
+.he{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+::selection{background:rgba(212,133,74,.28);color:var(--parch)}
+
+/* ── Kopf ── */
+header{position:relative;overflow:hidden;padding:64px 24px 40px;border-bottom:1px solid var(--line)}
+header::before{
+  content:"";position:absolute;inset:-40% -10% auto -10%;height:150%;pointer-events:none;
+  background:radial-gradient(60% 55% at 22% 0%, rgba(155,77,24,.30) 0%, rgba(155,77,24,.09) 42%, transparent 72%);
+}
+header::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg, transparent, var(--copper) 22%, var(--ocher) 50%, var(--copper) 78%, transparent);
+  opacity:.55;
+}
+.hw{max-width:1220px;margin:0 auto;position:relative}
+.eyebrow{font-family:var(--ui-font);font-size:.68rem;letter-spacing:.30em;text-transform:uppercase;color:var(--copper-lt);margin-bottom:18px}
+header h1{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-weight:400;font-size:clamp(2.2rem,5.6vw,3.5rem);line-height:1.15;color:var(--parch)}
+header .de{font-family:var(--dis-font);font-style:italic;font-weight:300;font-size:clamp(1.25rem,2.6vw,1.7rem);color:var(--copper-vlt);margin-top:6px;letter-spacing:.01em}
+.lede{margin-top:18px;max-width:620px;color:var(--text);font-size:1.02rem}
+.stats{margin-top:30px;display:flex;gap:38px;flex-wrap:wrap;font-family:var(--ui-font);font-size:.64rem;letter-spacing:.20em;text-transform:uppercase;color:var(--muted)}
+.stats b{display:block;font-family:var(--dis-font);font-size:1.9rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ocher-lt);line-height:1.1;font-variant-numeric:tabular-nums}
+
+/* ── Gerüst ── */
+.shell{max-width:1220px;margin:0 auto;padding:0 24px 90px;display:grid;grid-template-columns:238px 1fr;gap:44px;align-items:start}
+nav.side{position:sticky;top:0;padding:30px 0 20px;max-height:100vh;overflow-y:auto;scrollbar-width:thin}
+.side h2{font-family:var(--ui-font);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-lt);margin:28px 0 10px;font-weight:500}
+.side h2:first-of-type{margin-top:0}
+.search{
+  width:100%;font-family:var(--ui-font);font-size:.84rem;padding:9px 11px;color:var(--parch);
+  border:1px solid var(--line);background:var(--layer);border-radius:var(--radius);
+}
+.search::placeholder{color:var(--dim)}
+.search:focus{border-color:var(--copper);background:var(--card-up)}
+.catlist{list-style:none;font-family:var(--ui-font);font-size:.8rem}
+.catlist li{margin-bottom:1px}
+.catlist button{
+  width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  background:none;border:0;border-left:2px solid transparent;padding:6px 8px 6px 10px;
+  color:var(--text);cursor:pointer;text-align:left;letter-spacing:.02em;
+}
+.catlist button:hover{background:var(--layer);color:var(--parch)}
+.catlist button[aria-current="true"]{border-left-color:var(--ocher);background:var(--layer);color:var(--ocher-lt)}
+.catlist .n{font-size:.7rem;color:var(--dim);font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:5px;font-family:var(--ui-font);font-size:.68rem}
+.chip{
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  padding:4px 9px;border-radius:999px;cursor:pointer;letter-spacing:.06em;
+}
+.chip:hover{border-color:var(--copper);color:var(--copper-vlt)}
+.chip[aria-pressed="true"]{background:rgba(155,77,24,.22);border-color:var(--copper);color:var(--ocher-lt)}
+.side .actions{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+.btn{
+  font-family:var(--ui-font);font-size:.76rem;letter-spacing:.08em;padding:9px 12px;border-radius:var(--radius);
+  border:1px solid var(--copper);background:rgba(155,77,24,.18);color:var(--ocher-lt);cursor:pointer;text-align:center;
+  transition:background .15s ease,color .15s ease,border-color .15s ease;
+}
+.btn:hover{background:rgba(200,144,24,.22);color:var(--parch);border-color:var(--ocher)}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--copper);color:var(--copper-vlt)}
+.btn.quiet{background:transparent;border-color:transparent;color:var(--muted);padding:5px 8px;font-size:.72rem}
+.btn.quiet:hover{color:var(--copper-vlt);background:var(--layer)}
+.side details{margin-top:26px;font-family:var(--de-font);font-size:.88rem;color:var(--muted);line-height:1.55}
+.side summary{cursor:pointer;font-family:var(--ui-font);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text)}
+.side details p{margin-top:10px}
+.side details code{font-family:var(--ui-font);font-size:.78em;color:var(--copper-vlt)}
+
+/* ── Inhalt ── */
+main{padding:30px 0 0;min-width:0}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line-soft);margin-bottom:28px}
+.bar .count{font-family:var(--ui-font);font-size:.72rem;letter-spacing:.10em;color:var(--muted)}
+.bar label{font-family:var(--ui-font);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-left:auto}
+.bar select{font-family:var(--ui-font);font-size:.76rem;padding:6px 8px;border:1px solid var(--line);background:var(--layer);color:var(--text);border-radius:var(--radius)}
+section.group{margin-bottom:46px;scroll-margin-top:16px}
+section.group > h2{
+  font-family:var(--ui-font);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-lt);
+  font-weight:500;display:flex;align-items:center;gap:14px;margin-bottom:18px;
+}
+section.group > h2::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(276px,1fr));gap:18px}
+
+/* ── Karte ── */
+.card{
+  position:relative;background:linear-gradient(178deg,var(--card) 0%, var(--deep) 100%);
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:15px 17px 12px;display:flex;flex-direction:column;min-height:246px;
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--copper);opacity:.35;
+}
+.card[data-world="Assija"]::before{background:var(--copper)}
+.card[data-world="Jezira"]::before{background:var(--ocher)}
+.card[data-world="Beria"]::before{background:var(--teal)}
+.card[data-world="Azilut"]::before{background:#8E7BB0}
+.card:hover,.card:focus-within{transform:translateY(-2px);border-color:var(--line);box-shadow:0 10px 30px rgba(0,0,0,.55)}
+.card.playing{border-color:var(--ocher);box-shadow:0 0 0 1px rgba(200,144,24,.35), 0 10px 30px rgba(0,0,0,.55)}
+.sig{
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  font-family:var(--ui-font);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid var(--line-soft);
+}
+.sig .code{color:var(--copper-lt);font-weight:500}
+.card .cardhe{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.34rem;line-height:1.35;color:var(--parch);font-weight:400}
+.card h3{font-family:var(--dis-font);font-weight:400;font-size:1.02rem;line-height:1.3;margin-top:4px;color:var(--copper-vlt)}
+.card h3 a{color:inherit}
+.card h3 a:hover{color:var(--ocher-lt);text-decoration:underline;text-underline-offset:3px}
+.card .mline{font-family:var(--ui-font);font-size:.64rem;letter-spacing:.08em;color:var(--muted);margin-top:8px}
+.card .mline span+span::before{content:" · ";color:var(--dim)}
+.card p.desc{
+  font-size:.9rem;color:var(--text);line-height:1.5;margin-top:9px;opacity:.86;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.tag{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:.76rem;color:var(--copper-vlt);background:rgba(155,77,24,.13);border:1px solid var(--line-soft);border-radius:999px;padding:1px 9px 2px}
+
+/* ── Trägerleiste: das Kennzeichen der Sammlung ── */
+.rail{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:auto;padding-top:13px}
+.slot{
+  border:1px solid var(--line-soft);background:transparent;border-radius:var(--radius);
+  padding:6px 4px 5px;cursor:pointer;text-align:center;line-height:1.25;
+  font-family:var(--ui-font);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
+  transition:border-color .14s ease,color .14s ease,background .14s ease;
+}
+.slot i{display:block;font-style:normal;font-size:.62rem;letter-spacing:.04em;color:var(--dim);margin-top:2px;font-variant-numeric:tabular-nums}
+.slot:hover{border-color:var(--copper);color:var(--copper-vlt)}
+.slot.on{color:var(--copper-vlt);border-color:var(--line);background:rgba(155,77,24,.10)}
+.slot.on i{color:var(--muted)}
+.slot.on:hover{background:rgba(200,144,24,.16);color:var(--ocher-lt);border-color:var(--ocher)}
+.slot.live{background:rgba(200,144,24,.22);border-color:var(--ocher);color:var(--ocher-lt)}
+.card .foot{display:flex;gap:2px;justify-content:flex-end;margin-top:8px}
+.icon{
+  font-family:var(--ui-font);font-size:.62rem;letter-spacing:.10em;text-transform:uppercase;
+  border:1px solid transparent;background:none;color:var(--dim);cursor:pointer;padding:4px 7px;border-radius:var(--radius);
+}
+.icon:hover{color:var(--copper-vlt);background:var(--layer)}
+.icon.del:hover{color:var(--wine);background:rgba(163,54,54,.12)}
+
+/* ── Schwebendes Info-Fenster ── */
+#hover{
+  position:fixed;z-index:60;width:344px;max-width:calc(100vw - 32px);background:var(--layer);
+  border:1px solid var(--line);border-top:2px solid var(--ocher);border-radius:var(--radius);
+  box-shadow:0 20px 50px rgba(0,0,0,.7);padding:16px 18px;pointer-events:none;
+  opacity:0;transform:translateY(4px);transition:opacity .14s ease, transform .14s ease;
+}
+#hover.on{opacity:1;transform:translateY(0)}
+#hover .hh{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;color:var(--parch);font-size:1.22rem;line-height:1.4}
+#hover h4{font-family:var(--dis-font);font-weight:400;font-size:.98rem;color:var(--copper-vlt);margin-bottom:8px}
+#hover p{font-size:.86rem;color:var(--text);line-height:1.5;opacity:.9}
+#hover .sub{font-family:var(--ui-font);font-size:.6rem;letter-spacing:.20em;text-transform:uppercase;color:var(--copper-lt);margin:13px 0 6px}
+#hover ul{list-style:none;font-size:.82rem;color:var(--text)}
+#hover ul li{padding:2px 0 2px 13px;position:relative;opacity:.88}
+#hover ul li::before{content:"·";position:absolute;left:2px;color:var(--ocher)}
+#hover dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-family:var(--ui-font);font-size:.68rem;margin-top:13px;padding-top:11px;border-top:1px solid var(--line-soft)}
+#hover dt{color:var(--dim);letter-spacing:.08em}
+#hover dd{color:var(--text);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+
+/* ── Leerer Zustand ── */
+.empty{border:1px dashed var(--line);border-radius:var(--radius);padding:44px 28px;text-align:center;color:var(--muted);background:var(--deep)}
+.empty strong{display:block;font-family:var(--dis-font);font-size:1.3rem;color:var(--parch);margin-bottom:8px;font-weight:400}
+
+/* ── Dialog ── */
+dialog{
+  border:1px solid var(--line);border-top:2px solid var(--copper);border-radius:var(--radius);
+  padding:0;background:var(--deep);color:var(--text);width:min(720px,calc(100vw - 28px));max-height:88vh;
+  box-shadow:0 30px 80px rgba(0,0,0,.8);
+}
+dialog::backdrop{background:rgba(4,3,2,.78)}
+.dlg-head{padding:22px 26px 14px;border-bottom:1px solid var(--line-soft)}
+.dlg-head h2{font-family:var(--dis-font);font-weight:400;font-size:1.5rem;color:var(--parch)}
+.dlg-head p{font-size:.9rem;color:var(--muted);margin-top:5px;line-height:1.5}
+.dlg-body{padding:20px 26px;overflow-y:auto;max-height:58vh}
+.dlg-foot{padding:14px 26px 20px;border-top:1px solid var(--line-soft);display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.drop{
+  border:1px dashed var(--line);border-radius:var(--radius);background:var(--layer);padding:30px 20px;text-align:center;
+  font-family:var(--ui-font);font-size:.78rem;color:var(--muted);cursor:pointer;transition:border-color .15s, background .15s;letter-spacing:.04em;
+}
+.drop:hover,.drop.hot{border-color:var(--ocher);background:var(--card-up);color:var(--parch)}
+.drop b{display:block;font-family:var(--dis-font);font-size:1.15rem;letter-spacing:0;color:var(--parch);margin-bottom:6px;font-weight:400}
+.drop small{display:block;margin-top:9px;font-size:.68rem;color:var(--dim)}
+.orbar{display:flex;gap:10px;align-items:center;margin:14px 0 6px;font-family:var(--ui-font);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.orbar::before,.orbar::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.hint{font-size:.82rem;color:var(--muted);margin-top:10px;line-height:1.5}
+form.entry{border:1px solid var(--line-soft);border-radius:var(--radius);padding:16px;margin-top:14px;background:var(--layer)}
+form.entry .file{font-family:var(--ui-font);font-size:.66rem;letter-spacing:.08em;color:var(--copper-lt);margin-bottom:6px;overflow-wrap:anywhere}
+form.entry .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form.entry .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+form.entry label{display:block;font-family:var(--ui-font);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:12px 0 4px}
+form.entry input,form.entry textarea,form.entry select{
+  width:100%;font-family:var(--de-font);font-size:.94rem;padding:7px 9px;color:var(--parch);
+  border:1px solid var(--line-soft);background:var(--card);border-radius:var(--radius);
+}
+form.entry input:focus,form.entry textarea:focus,form.entry select:focus{border-color:var(--copper);background:var(--card-up)}
+form.entry textarea{min-height:74px;resize:vertical;line-height:1.5}
+form.entry .carrier{margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft)}
+form.entry .carrier > b{font-family:var(--ui-font);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-lt);font-weight:500}
+.pick{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}
+.pick .btn{padding:7px 10px;white-space:nowrap}
+form.entry .stat{font-family:var(--ui-font);font-size:.66rem;color:var(--dim);margin-top:12px;letter-spacing:.06em}
+
+/* ── Abspielleiste ── */
+#player{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(13,9,6,.97);
+  border-top:1px solid var(--line);box-shadow:0 -12px 40px rgba(0,0,0,.6);backdrop-filter:blur(6px);
+}
+.pw{max-width:1220px;margin:0 auto;padding:11px 24px 13px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.ptrans{display:flex;align-items:center;gap:6px}
+.pbtn{
+  border:1px solid var(--line);background:transparent;color:var(--copper-vlt);cursor:pointer;
+  width:32px;height:32px;border-radius:50%;font-size:.8rem;display:grid;place-items:center;
+}
+.pbtn:hover{border-color:var(--ocher);color:var(--ocher-lt);background:rgba(200,144,24,.12)}
+.pbtn.main{width:40px;height:40px;font-size:1rem;border-color:var(--copper);background:rgba(155,77,24,.22)}
+.pmid{min-width:0}
+.pname{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.02rem;color:var(--parch);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.psub{font-family:var(--ui-font);font-size:.62rem;letter-spacing:.10em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.pseek{display:flex;align-items:center;gap:10px;margin-top:6px}
+input[type=range]{-webkit-appearance:none;appearance:none;height:3px;background:var(--line);border-radius:2px;accent-color:var(--ocher-lt);cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--ocher-lt);border:0;margin-top:-4px}
+input[type=range]::-moz-range-thumb{width:11px;height:11px;border:0;border-radius:50%;background:var(--ocher-lt)}
+#p-pos{flex:1;min-width:80px}
+.ptime{font-family:var(--ui-font);font-size:.64rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pright{display:flex;align-items:center;gap:10px}
+.pkind{font-family:var(--ui-font);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);background:transparent;color:var(--muted);padding:5px 9px;border-radius:999px;cursor:pointer}
+.pkind:hover{border-color:var(--copper);color:var(--copper-vlt)}
+#p-vol{width:80px}
+@media (max-width:760px){
+  .pw{grid-template-columns:auto 1fr;padding:9px 16px 11px}
+  .pright{grid-column:1 / -1;justify-content:space-between}
+}
+
+/* ── Video-Bühne ── */
+#stage{
+  position:fixed;right:22px;bottom:104px;z-index:85;width:380px;max-width:calc(100vw - 32px);
+  background:var(--deep);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 22px 60px rgba(0,0,0,.8);overflow:hidden;
+}
+#stage.big{right:50%;transform:translateX(50%);bottom:120px;width:min(920px,calc(100vw - 40px))}
+.st-head{display:flex;align-items:center;gap:8px;padding:7px 8px 7px 12px;border-bottom:1px solid var(--line-soft);background:var(--layer)}
+.st-head b{font-family:var(--ui-font);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper-lt);font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st-head button{border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;font-family:var(--ui-font);font-size:.6rem;letter-spacing:.1em;padding:4px 8px;border-radius:var(--radius)}
+.st-head button:hover{border-color:var(--copper);color:var(--copper-vlt)}
+#vv{display:block;width:100%;background:#000;max-height:70vh}
+
+/* ── Seiteneditor ── */
+#edit{position:fixed;inset:0;z-index:78;background:var(--ink);display:flex;flex-direction:column}
+body.has-player #edit{bottom:92px}
+.ehead{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--layer);flex-wrap:wrap}
+.efile{font-family:var(--ui-font);font-size:.64rem;letter-spacing:.06em;color:var(--copper-lt);max-width:30ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.edirty{font-family:var(--ui-font);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ocher-lt);border:1px solid var(--ocher);border-radius:999px;padding:2px 8px}
+.egrow{flex:1}
+.egrp{display:flex;gap:2px;padding:0 5px;border-left:1px solid var(--line-soft)}
+.ebtn{font-family:var(--ui-font);font-size:.6rem;letter-spacing:.10em;text-transform:uppercase;border:1px solid var(--line-soft);background:transparent;color:var(--text);padding:6px 9px;border-radius:var(--radius);cursor:pointer;white-space:nowrap}
+.ebtn:hover{border-color:var(--copper);color:var(--copper-vlt);background:rgba(155,77,24,.12)}
+.ebtn[aria-pressed="true"]{background:rgba(200,144,24,.20);border-color:var(--ocher);color:var(--ocher-lt)}
+.ebtn.prim{border-color:var(--copper);background:rgba(155,77,24,.24);color:var(--ocher-lt)}
+.ebtn.prim:hover{background:rgba(200,144,24,.26);border-color:var(--ocher);color:var(--parch)}
+.ebtn:disabled{opacity:.35;cursor:default;background:transparent;border-color:var(--line-soft);color:var(--dim)}
+.efind{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line-soft);background:var(--deep);flex-wrap:wrap}
+.efind input{font-family:var(--ui-font);font-size:.74rem;padding:6px 9px;border:1px solid var(--line-soft);background:var(--card);color:var(--parch);border-radius:var(--radius);min-width:160px}
+.efind input:focus{border-color:var(--copper)}
+.efind span{font-family:var(--ui-font);font-size:.62rem;color:var(--muted)}
+.ebody{flex:1;display:flex;min-height:0}
+.estage{flex:1;display:flex;min-width:0;position:relative}
+#ed-frame{flex:1;width:100%;border:0;background:var(--ink)}
+#ed-src{flex:1;width:100%;border:0;padding:14px 16px;background:var(--deep);color:var(--parch);font-family:var(--ui-font);font-size:.78rem;line-height:1.6;resize:none;tab-size:2;white-space:pre;overflow:auto}
+#ed-src:focus{outline:0}
+.epanel{width:290px;flex:none;border-left:1px solid var(--line);background:var(--layer);overflow-y:auto;padding:14px}
+.epanel h4{font-family:var(--ui-font);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-lt);margin:18px 0 8px;font-weight:500}
+.epanel h4:first-child{margin-top:0}
+.epanel .note{font-size:.85rem;color:var(--muted);line-height:1.55}
+.crumb{display:flex;flex-wrap:wrap;gap:3px}
+.crumb button{font-family:var(--ui-font);font-size:.56rem;border:1px solid var(--line-soft);background:transparent;color:var(--muted);padding:3px 7px;border-radius:999px;cursor:pointer;letter-spacing:.04em}
+.crumb button:hover{border-color:var(--copper);color:var(--copper-vlt)}
+.crumb button.cur{border-color:var(--ocher);color:var(--ocher-lt);background:rgba(200,144,24,.14)}
+.eacts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.epanel .cls,.epanel .raw{width:100%;font-family:var(--ui-font);font-size:.7rem;padding:7px 9px;border:1px solid var(--line-soft);background:var(--card);color:var(--parch);border-radius:var(--radius);line-height:1.5}
+.epanel .raw{min-height:130px;resize:vertical;white-space:pre-wrap}
+.epanel .cls:focus,.epanel .raw:focus{border-color:var(--copper)}
+@media (max-width:900px){.epanel{display:none}}
+
+/* ── Lesefenster: Text mitlesen, während der Klang läuft ── */
+#read{position:fixed;inset:0;z-index:70;background:var(--ink);display:flex;flex-direction:column}
+body.has-player #read{bottom:92px}
+.rhead{display:flex;align-items:center;gap:8px;padding:9px 12px 9px 16px;border-bottom:1px solid var(--line);background:var(--layer)}
+.rhead b{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.05rem;font-weight:400;color:var(--parch);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rhead .rsub{font-family:var(--ui-font);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40%}
+.rwrap{flex:1;position:relative;display:flex;min-height:0}
+#rd-frame{flex:1;width:100%;border:0;background:var(--ink)}
+.rwarn{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;
+  background:var(--card-up);border:1px solid var(--copper);border-radius:var(--radius);padding:22px 26px;max-width:440px;
+  font-size:.92rem;color:var(--text);line-height:1.55;box-shadow:0 20px 50px rgba(0,0,0,.7);
+}
+.rwarn b{display:block;font-family:var(--dis-font);font-size:1.2rem;font-weight:400;color:var(--parch);margin-bottom:8px}
+.rwarn button{margin-top:14px}
+
+/* ── YouTube-Fenster ── */
+#yt{position:fixed;inset:0;z-index:90;background:rgba(4,3,2,.86);display:grid;place-items:center;padding:24px}
+#yt[hidden],#player[hidden],#stage[hidden],#dropwrap[hidden],[hidden]{display:none !important}
+#yt .ytw{width:min(980px,100%);background:var(--deep);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.8)}
+#yt .st-head{padding:9px 10px 9px 14px}
+#yt .frame{position:relative;padding-top:56.25%;background:#000}
+#yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── Meldung ── */
+#toast{
+  position:fixed;left:50%;bottom:22px;transform:translate(-50%,14px);z-index:95;
+  background:var(--card-up);border:1px solid var(--copper);border-radius:var(--radius);
+  padding:11px 18px;font-family:var(--ui-font);font-size:.74rem;letter-spacing:.04em;color:var(--parch);
+  box-shadow:0 14px 40px rgba(0,0,0,.7);opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;max-width:min(560px,calc(100vw - 32px));text-align:center;
+}
+body.has-player #toast{bottom:112px}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ── Fuß ── */
+footer{border-top:1px solid var(--line-soft);padding:26px 24px 40px;margin-top:10px}
+footer .hw{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--ui-font);font-size:.66rem;letter-spacing:.10em;color:var(--dim)}
+footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);letter-spacing:0}
+
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr;gap:22px;padding-bottom:60px}
+  nav.side{position:static;max-height:none;padding-bottom:0;border-bottom:1px solid var(--line-soft)}
+  header{padding:44px 20px 32px}
+  #stage{right:12px;left:12px;width:auto;bottom:96px}
+}
+</style>
+</head>
+<body class="">
+
+<header>
+  <div class="hw">
+    <p class="eyebrow">Eigene Sammlung · Niggunim &amp; Pijutim</p>
+    <h1>אוֹסֶף הַנִּגּוּנִים</h1>
+    <div class="de">Niggun-Sammlung</div>
+    <p class="lede">Jedes Lied bekommt hier seine Karte — mit vier Trägern: der Seite, der Klangaufnahme, dem Video und dem YouTube-Verweis. Was vorhanden ist, leuchtet; was fehlt, wartet auf einen Klick.</p>
+    <div class="stats" id="stats" data-runtime=""></div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <nav class="side" aria-label="Sammlungsnavigation">
+    <h2>Suchen</h2>
+    <input class="search" id="q" type="search" placeholder="Titel, Maqam, Zeile …" autocomplete="off" aria-label="Sammlung durchsuchen">
+
+    <h2>Abteilungen</h2>
+    <ul class="catlist" id="cats" data-runtime=""></ul>
+
+    <h2>Welten</h2>
+    <div class="chips" id="worlds" data-runtime="" role="group" aria-label="Nach Welt filtern"></div>
+
+    <h2>Träger</h2>
+    <div class="chips" id="carriers" data-runtime="" role="group" aria-label="Nach Träger filtern"></div>
+
+    <h2>Sammlung pflegen</h2>
+    <div class="actions">
+      <button class="btn" id="btn-add">Niggun aufnehmen</button>
+      <button class="btn ghost" id="btn-export">Index exportieren</button>
+      <button class="btn quiet" id="btn-json">Daten als JSON sichern</button>
+      <button class="btn quiet" id="btn-import-json">JSON einlesen</button>
+      <button class="btn quiet" id="btn-reset">Auf Dateistand zurücksetzen</button>
+    </div>
+
+    <details>
+      <summary>So funktioniert die Sammlung</summary>
+      <p>Diese Datei gehört in denselben Ordner wie Ihre Liedseiten, Klang- und Videodateien. Die Karten verweisen auf die Dateinamen daneben.</p>
+      <p>Über <em>Niggun aufnehmen</em> legen Sie HTML-Seiten, <code>.wav</code>, <code>.mp3</code>, <code>.mp4</code> und <code>.webm</code> ab — auch alles auf einmal. Dateien mit gleichem Namen finden von selbst zusammen: <code>Schirat.html</code>, <code>Schirat.wav</code> und <code>Schirat.mp4</code> werden eine Karte.</p>
+      <p>Ein Klick auf den Titel oder auf <em>Seite</em> öffnet den Liedtext im Lesefenster — die Wiedergabe läuft dabei weiter, Sie können also mitlesen.</p>
+      <p><em>Seite ✎</em> öffnet den Editor: Sie schreiben direkt auf der Seite, wählen links Blöcke aus und speichern mit <kbd>Strg+S</kbd>. Verbinden Sie einmal den Ordner, dann schreibt der Editor direkt in die Datei und legt beim ersten Mal eine Sicherung <code>.bak</code> daneben.</p>
+      <p>Änderungen liegen zunächst nur in diesem Browser. <em>Index exportieren</em> schreibt sie in eine neue <code>index.html</code>, die Sie über die alte legen.</p>
+      <p>YouTube lässt sich aus einer lokalen Datei heraus nicht einbetten; der Verweis öffnet daher einen neuen Tab. Über einen lokalen Server (<code>http://localhost</code>) erscheint die Aufnahme im Fenster.</p>
+    </details>
+  </nav>
+
+  <main>
+    <div class="bar">
+      <span class="count" id="count" data-runtime=""></span>
+      <label for="sort">Ordnung</label>
+      <select id="sort">
+        <option value="welt">Welt</option>
+        <option value="cat">Abteilung</option>
+        <option value="title">Titel A–Z</option>
+        <option value="added">Zuletzt aufgenommen</option>
+        <option value="dur">Spielzeit</option>
+        <option value="maqam">Maqam</option>
+      </select>
+    </div>
+    <div id="results" data-runtime=""></div>
+  </main>
+</div>
+
+<footer>
+  <div class="hw">
+    <span>Niggun-Sammlung · Stand <span id="stamp" data-runtime=""></span></span>
+    <span class="he">בְּעֶזְרַת הַשֵּׁם</span>
+  </div>
+</footer>
+
+<div id="hover" data-runtime="" role="tooltip" aria-hidden="true" class="" style="left: 918.156px; top: 151px;"></div>
+<div id="toast" data-runtime="" role="status" aria-live="polite" class="on"></div>
+
+<!-- ══ Abspielleiste ══ -->
+<div id="player" hidden="">
+  <div class="pw">
+    <div class="ptrans">
+      <button class="pbtn" id="p-prev" type="button" title="Vorheriger Niggun" aria-label="Vorheriger Niggun">◂◂</button>
+      <button class="pbtn main" id="p-play" type="button" title="Abspielen / Anhalten" aria-label="Abspielen oder anhalten">❚❚</button>
+      <button class="pbtn" id="p-next" type="button" title="Nächster Niggun" aria-label="Nächster Niggun">▸▸</button>
+    </div>
+    <div class="pmid">
+      <div class="pname" id="p-name" data-runtime=""></div>
+      <div class="psub" id="p-sub" data-runtime=""></div>
+      <div class="pseek">
+        <input type="range" id="p-pos" min="0" max="1000" value="0" step="1" aria-label="Position im Stück">
+        <span class="ptime" id="p-time" data-runtime=""></span>
+      </div>
+    </div>
+    <div class="pright">
+      <button class="pkind" id="p-read" type="button" title="Liedtext mitlesen, ohne die Wiedergabe zu unterbrechen">Mitlesen</button>
+      <button class="pkind" id="p-kind" type="button" title="Zwischen Klang und Video wechseln">Klang</button>
+      <input type="range" id="p-vol" min="0" max="100" value="90" aria-label="Lautstärke">
+      <button class="pbtn" id="p-close" type="button" title="Abspielleiste schließen" aria-label="Abspielleiste schließen">✕</button>
+    </div>
+  </div>
+  <audio id="av" preload="metadata"></audio>
+</div>
+
+<!-- ══ Video-Bühne ══ -->
+<div id="stage" class="" hidden="">
+  <div class="st-head">
+    <b id="st-name" data-runtime=""></b>
+    <button type="button" id="st-size">Groß</button>
+    <button type="button" id="st-close" aria-label="Video schließen">✕</button>
+  </div>
+  <video id="vv" playsinline="" preload="metadata"></video>
+</div>
+
+<!-- ══ Seiteneditor ══ -->
+<div id="edit" role="dialog" aria-modal="true" aria-label="Seite bearbeiten" hidden="">
+  <div class="ehead">
+    <span class="efile" id="ed-file" data-runtime=""></span>
+    <span class="edirty" id="ed-dirty" hidden="">ungespeichert</span>
+    <span class="egrow"></span>
+    <div class="egrp" id="ed-fmt">
+      <button class="ebtn" type="button" data-cmd="bold" title="Fett (Strg+B)"><b>F</b></button>
+      <button class="ebtn" type="button" data-cmd="italic" title="Kursiv (Strg+I)"><i>K</i></button>
+      <button class="ebtn" type="button" data-cmd="createLink" title="Verweis setzen">Verweis</button>
+      <button class="ebtn" type="button" data-cmd="removeFormat" title="Formatierung entfernen">Format ab</button>
+    </div>
+    <div class="egrp">
+      <button class="ebtn" type="button" id="ed-undo" title="Rückgängig (Strg+Z)">↺</button>
+      <button class="ebtn" type="button" id="ed-redo" title="Wiederholen (Strg+Y)">↻</button>
+    </div>
+    <div class="egrp">
+      <button class="ebtn" type="button" id="ed-visual" aria-pressed="true">Visuell</button>
+      <button class="ebtn" type="button" id="ed-source" aria-pressed="false">Quelltext</button>
+      <button class="ebtn" type="button" id="ed-findbtn">Suchen</button>
+    </div>
+    <div class="egrp">
+      <button class="ebtn" type="button" id="ed-folder" title="Einmal den Sammlungsordner verbinden – danach schreibt Speichern ohne Nachfrage in die Datei" aria-pressed="false">Ordner verbinden</button>
+      <button class="ebtn prim" type="button" id="ed-save" title="Speichern (Strg+S)">Speichern</button>
+      <button class="ebtn" type="button" id="ed-close" aria-label="Editor schließen">✕</button>
+    </div>
+  </div>
+  <div class="efind" id="ed-findbar" hidden="">
+    <input id="ed-q" placeholder="Suchen" aria-label="Suchen">
+    <input id="ed-r" placeholder="Ersetzen durch" aria-label="Ersetzen durch">
+    <button class="ebtn" type="button" id="ed-count">Zählen</button>
+    <button class="ebtn" type="button" id="ed-repl">Alle ersetzen</button>
+    <span id="ed-fstat" data-runtime=""></span>
+  </div>
+  <div class="ebody">
+    <div class="estage">
+      <iframe id="ed-frame" title="Seite bearbeiten"></iframe>
+      <textarea id="ed-src" spellcheck="false" hidden="" aria-label="Quelltext der Seite"></textarea>
+    </div>
+    <aside class="epanel">
+      <h4>Ausgewähltes Element</h4>
+      <div class="crumb" id="ed-crumb" data-runtime=""></div>
+      <div id="ed-elem" data-runtime=""></div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══ Lesefenster ══ -->
+<div id="read" role="dialog" aria-modal="true" aria-label="Liedtext mitlesen" hidden="">
+  <div class="rhead">
+    <b id="rd-name" data-runtime=""></b>
+    <span class="rsub" id="rd-sub" data-runtime=""></span>
+    <button type="button" class="pkind" id="rd-edit" title="Diese Seite im Editor öffnen">Bearbeiten ✎</button>
+    <a class="pkind" id="rd-new" href="#" target="_blank" rel="noopener">Eigenes Fenster ↗</a>
+    <button type="button" class="pkind" id="rd-close" aria-label="Lesefenster schließen">Schließen ✕</button>
+  </div>
+  <div class="rwrap">
+    <div class="rwarn" id="rd-warn" hidden="">
+      <b>Die Seite lässt sich hier nicht einbetten</b>
+      Manche Browser sperren das Anzeigen lokaler Dateien im Rahmen. Öffnen Sie die Seite in einem eigenen Fenster — der Klang läuft in diesem Fenster weiter.
+      <button type="button" class="btn" id="rd-warn-open">In eigenem Fenster öffnen</button>
+    </div>
+    <iframe id="rd-frame" title="Liedtext" referrerpolicy="no-referrer"></iframe>
+  </div>
+</div>
+
+<!-- ══ YouTube ══ -->
+<div id="yt" hidden="" role="dialog" aria-modal="true" aria-label="YouTube-Aufnahme">
+  <div class="ytw">
+    <div class="st-head">
+      <b id="yt-name" data-runtime=""></b>
+      <a class="pkind" id="yt-open" href="#" target="_blank" rel="noopener">Bei YouTube öffnen</a>
+      <button type="button" id="yt-close" aria-label="Schließen">✕</button>
+    </div>
+    <div class="frame"><iframe id="yt-frame" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen="" title="YouTube-Aufnahme"></iframe></div>
+  </div>
+</div>
+
+<dialog id="dlg">
+  <div class="dlg-head">
+    <h2 id="dlg-title">Niggun aufnehmen</h2>
+    <p id="dlg-note">Legen Sie Seiten und Aufnahmen ab — HTML, WAV, MP3, MP4. Gleichnamige Dateien werden zu einer Karte zusammengelegt.</p>
+  </div>
+  <div class="dlg-body">
+    <div id="dropwrap" hidden="">
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="Dateien auswählen oder ablegen">
+        <b>Dateien hierher ziehen</b>
+        Seiten und Aufnahmen ablegen oder klicken, um sie auszuwählen
+        <small>HTML · WAV · MP3 · M4A · FLAC · MP4 · WEBM · MOV</small>
+      </div>
+      <div class="orbar">oder</div>
+      <button class="btn ghost" id="btn-folder" style="width:100%">Ganzen Ordner einlesen</button>
+      <p class="hint">Beim Ordner-Einlesen wird jede Datei geprüft: Seiten werden gelesen, Aufnahmen anhand des Dateinamens zugeordnet. Bereits aufgenommene Niggunim werden ergänzt statt doppelt angelegt.</p>
+    </div>
+    <div id="forms" data-runtime=""></div>
+  </div>
+  <div class="dlg-foot">
+    <button class="btn ghost" id="dlg-cancel">Abbrechen</button>
+    <button class="btn" id="dlg-save">In die Sammlung übernehmen</button>
+  </div>
+</dialog>
+
+<input type="file" id="fileinput" accept=".html,.htm,.wav,.mp3,.m4a,.flac,.ogg,.opus,.mp4,.webm,.mov,.m4v" multiple="" hidden="">
+<input type="file" id="folderinput" webkitdirectory="" directory="" multiple="" hidden="">
+<input type="file" id="jsoninput" accept=".json,application/json" hidden="">
+<input type="file" id="mediainput" hidden="" accept="video/*">
+<input type="file" id="pageinput" accept=".html,.htm,text/html" hidden="">
+
+<script id="seed" type="application/json">
+{
+  "stamp": 1784951062184,
+  "entries": [
+    {
+      "id": "n-1",
+      "sig": "PIY-01",
+      "title": "Schirat HaJam HaChadaschah — Das neue Lied am Meer",
+      "titleHe": "שִׁירַת הַיָּם הַחֲדָשָׁה",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Hijaz · Coda: Saba",
+      "bpm": "62",
+      "sefira": "גְּבוּרָה ← מַלְכוּת · עֲשִׂיָּה",
+      "voicing": "Sephardisch · Stimme & akustische Gitarre · Maqam Hijaz",
+      "desc": "Ein Piyut über der Struktur von Schemot 15 — der Schirat HaJam. Das Lied nimmt die Sprache des Meeres auf und legt sie über die Zeit der Rückkehr: Das Meer, das sich einmal teilte, teilt sich wieder; die Wasser, die einmal standen wie ein Damm, stehen erneut. Der Bogen führt von der Bedrängnis über das Bekenntnis מִי כָמֹכָה hin zum Berg des Erbes, zum Heiligtum und zum Frieden im Innern des Landes.",
+      "tags": [
+        "גְּבוּרָה → מַלְכוּת",
+        "מָכוֹן לְשִׁבְתְּךָ",
+        "בִּנְיַן הַמִּקְדָּשׁ",
+        "הַר נַחֲלָה"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung",
+        "II · בַּיִת א — Erste Strophe",
+        "III · בַּיִת ב — Zweite Strophe",
+        "IV · גֶּשֶׁר — Brücke · Die Namen der Bedrängnis",
+        "V · בַּיִת ג — Dritte Strophe · Das Wasser steht",
+        "VI · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "VII · בַּיִת ד — Vierte Strophe · Das Zittern der Ferne",
+        "IX · שִׂיא — Höhepunkt",
+        "X · קוֹדָה — Coda"
+      ],
+      "page": "אָז יָשִׁיר יִשְׂרָאֵל-Shirat_HaYam_HaChadashah.html",
+      "audio": "Schir ha-Geulah שיר הגאולה.mp3",
+      "video": "שיר הגאולה-Schir ha-Geulah.mp4",
+      "youtube": "https://www.youtube.com/watch?v=kMgXtS54-iU",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 41660,
+        "duration": 354
+      },
+      "lang": "he",
+      "added": 1753250400000,
+      "updated": 1784842001463
+    },
+    {
+      "id": "n-2",
+      "sig": "PIY-02",
+      "title": "Sei — Bevor Lech Lecha · Das Beben vor dem Wort",
+      "titleHe": "סֵי — בְּטֶרֶם לֶךְ־לְךָ",
+      "category": "Piyut",
+      "world": "Jezira",
+      "maqam": "Maqam Saba → Ajam",
+      "bpm": "54",
+      "sefira": "כֶּתֶר שֶׁבְּחֶסֶד · יְצִירָה",
+      "voicing": "Sephardisch · Yetzirah · Stimme & Oud · Maqam Saba",
+      "desc": "Ein Piyut über die Nacht vor dem Ruf. Bevor Lech Lecha gesprochen wurde, war schon etwas da — kein Engel, keine Schechina im Feuer, keine Stimme: nur ein inneres Erwachen, das weder Klang noch Erscheinung ist. Der Piyut nennt es סֵי. Der Bogen führt vom wortlosen Klopfen an den Türen der Seele über die Öffnung zur Offenbarung bis zu den siebzig Pfaden, die sich dem Samen Abrahams auftun.",
+      "tags": [
+        "כֶּתֶר שֶׁבְּחֶסֶד",
+        "קוֹל דְּמָמָה דַקָּה",
+        "הַשַּׁחַר",
+        "הַהֲלִיכָה"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung",
+        "II · בַּיִת א — Erste Strophe · Die dreifache Verneinung",
+        "III · בַּיִת ב — Zweite Strophe · Die Frage",
+        "IV · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "V · גֶּשֶׁר — Brücke · Die Öffnung",
+        "VI · בַּיִת ג — Dritte Strophe · Der Weg ohne Weg",
+        "VII · בַּיִת ד — Vierte Strophe · Die Einsicht",
+        "IX · שִׂיא — Höhepunkt",
+        "X · קוֹדָה — Coda"
+      ],
+      "page": "מדרש א אברהם – הסיי שבלך־לך-Sei_Beterem_Lech_Lecha.html",
+      "audio": "מדרש א אברהם – הסיי שבלך־לך.wav",
+      "video": "מדרש א אברהם – הסיי שבלך־לך.mp4",
+      "youtube": "https://youtu.be/Di6xZlXXXNY",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 40441,
+        "duration": 257
+      },
+      "lang": "he",
+      "added": 1753250401000,
+      "updated": 1784882768159
+    },
+    {
+      "id": "n-3",
+      "sig": "PIY-03",
+      "title": "Sei — In den Nächten von Schilo · Das Ohr vor dem Wort",
+      "titleHe": "סֵי — בְּלֵילוֹת שִׁלֹה",
+      "category": "Piyut",
+      "world": "Beria",
+      "maqam": "Maqam Saba → Nahawand",
+      "bpm": "50",
+      "sefira": "כֶּתֶר שֶׁבְּהוֹד · בְּרִיאָה",
+      "voicing": "Sephardisch · Beriah · Stimme & Kinnor · Maqam Saba",
+      "desc": "Der zweite Piyut des Sei-Zyklus. Bei Abraham ging das Beben dem Ruf voraus — hier ist es der Ruf selbst: dreimal hört der Knabe etwas, das kein Klang ist, und läuft zum Falschen. Erst beim vierten Mal legt sich Sprache über das Beben. Der alte Priester hört nichts; das Kind bebt. Der Bogen endet mit einer Umkehrung: Erwählt ist nicht, wer hören lässt, sondern wer das hört, was nicht gehört wird.",
+      "tags": [
+        "כֶּתֶר שֶׁבְּהוֹד",
+        "שְׁמִיעָה",
+        "הַפַּעַם הָרְבִיעִית",
+        "סַבָּא → נַהַאוַנְד"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung · Die Nacht von Schilo",
+        "II · בַּיִת א — Erste Strophe · Wie der Ruf kam",
+        "III · בַּיִת ב — Zweite Strophe · Hier bin ich",
+        "IV · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "V · בַּיִת ג — Dritte Strophe · Dreimal, und der alte Priester",
+        "VI · גֶּשֶׁר — Brücke · Der Satz des ganzen Zyklus",
+        "VII · בַּיִת ד — Vierte Strophe · Die zwei Ohren",
+        "IX · שִׂיא — Höhepunkt",
+        "X · קוֹדָה — Coda"
+      ],
+      "page": "מדרש_ב_שמואל___הסיי_באוזן_שאינה_נכונה-Sei_Beleilot_Shilo.html",
+      "audio": "מדרש ב שמואל – הסיי באוזן שאינה נכונה.wav",
+      "video": "מדרש ב שמואל – הסיי באוזן שאינה נכונה.mp4",
+      "youtube": "https://youtu.be/f1hKcW72c-A",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 43088,
+        "duration": 219
+      },
+      "lang": "he",
+      "added": 1753250402000,
+      "updated": 1784882707485
+    },
+    {
+      "id": "n-khdb3y6",
+      "sig": "PIY-04",
+      "title": "Sei — Und ich sah einen Sturmwind · Die Stille der Flügel",
+      "titleHe": "סֵי — וָאֵרֶא רוּחַ סְעָרָה",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Saba → Hijaz",
+      "bpm": "58",
+      "sefira": "מַלְכוּת שֶׁבַּאֲצִילוּת ← כֶּתֶר שֶׁבַּעֲשִׂיָּה",
+      "voicing": "Sephardisch · Merkawah · Kinnor → Gitarre · Maqam Saba",
+      "desc": "Der vierte Piyut des Sei-Zyklus — und seine Umkehr. Die drei ersten Lieder gingen aufwärts: Abraham geht, Schmuel hört, Mosche steigt. Hier ist die Höhe schon erreicht, im lautesten Bild der ganzen Schrift — Sturm, Feuer, vier Wesen, Flügel wie das Rauschen vieler Wasser. Und mitten in diesem Getöse steht ein Vers, der die These des ganzen Zyklus bestätigt: Die Stimme kommt, als die Flügel still werden. Danach führt das Lied wieder hinunter — zu den Widerspenstigen, mit nichts als einem Sei in der Hand.",
+      "tags": [
+        "כֶּתֶר שֶׁבְּמַלְכוּת",
+        "הַשְׁקֵט כְּנָפַיִם",
+        "אוֹר חוֹזֵר",
+        "סַבָּא → חִיגַ׳אז"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung · Sturm aus dem Norden",
+        "II · בַּיִת א — Erste Strophe · Die Flügel",
+        "III · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "IV · בַּיִת ב — Zweite Strophe · Als die Flügel still wurden",
+        "V · גֶּשֶׁר — Brücke · Der Fall",
+        "VI · בַּיִת ג — Dritte Strophe · Menschensohn",
+        "VII · בַּיִת ד — Vierte Strophe · Nicht mit Donner",
+        "IX · שִׂיא — Höhepunkt · Die Sendung hinunter",
+        "X · קוֹדָה — Coda · Vielleicht"
+      ],
+      "page": "מדרש ד יחזקאל – הסיי מתחת לכנפיים-Sei_Vaere_Ruach_Searah.html",
+      "audio": "מדרש ד יחזקאל – הסיי מתחת לכנפיים.wav",
+      "video": "מדרש ד יחזקאל – הסיי מתחת לכנפיים.mp4",
+      "youtube": "https://youtu.be/EGkL-TKMdmM",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 47717,
+        "duration": 223
+      },
+      "lang": "he-IL",
+      "added": 1784882921740,
+      "updated": 1784888351876
+    },
+    {
+      "id": "n-wl879p8",
+      "sig": "PIY-05",
+      "title": "Sei — Als Mosche auf den Berg stieg · Die Stille auf Sinai",
+      "titleHe": "סֵי — וּכְשֶׁעָלָה מֹשֶׁה בָּהָר",
+      "category": "Piyut",
+      "world": "Azilut",
+      "maqam": "Maqam Saba → Rast",
+      "bpm": "46",
+      "sefira": "כֶּתֶר שֶׁבְּתִפְאֶרֶת · אֲצִילוּת",
+      "voicing": "Sephardisch · Atzilut · Stimme & Kinnor · Maqam Saba",
+      "desc": "Der dritte Piyut des Sei-Zyklus und sein Höhepunkt. Bei Abraham ging das Beben dem Ruf voraus, bei Schmuel war es der Ruf selbst — hier wird es zur Empfangsform der Tora. Das Volk hörte Donner; Mosche stieg hinauf, und oben war es still. Vierzig Tage lang ein Sei je Tag, und an jedem Ende ein Wort. Am Schluss steht das, was der ganze Zyklus vorbereitet hat: dass auf den Tafeln in der Stimme des Sei geschrieben stand.",
+      "tags": [
+        "כֶּתֶר שֶׁבְּתִפְאֶרֶת",
+        "לֵב עֵר",
+        "אֹזֶן שׁוֹמַעַת",
+        "סַבָּא → רַאסְט"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung · Nach dem Donner",
+        "II · בַּיִת א — Erste Strophe · Die Verwunderung",
+        "III · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "IV · בַּיִת ב — Zweite Strophe · Vierzig Tage",
+        "V · גֶּשֶׁר — Brücke · Die Öffnung",
+        "VI · בַּיִת ג — Dritte Strophe · Nicht allein im Donner",
+        "VII · בַּיִת ד — Vierte Strophe · Wachendes Herz, hörendes Ohr",
+        "IX · שִׂיא — Höhepunkt · Der Abstieg",
+        "X · קוֹדָה — Coda · Das Klanglose wird Schrift"
+      ],
+      "page": "מדרש ג משה – הסיי בהר סיני-Sei_Ucheshealah_Moshe_Bahar.html",
+      "audio": "מדרש ג משה – הסיי בהר סיני.wav",
+      "video": "מדרש ג משה – הסיי בהר סיני.mp4",
+      "youtube": "https://youtu.be/wgK5P2g9kHs",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 44903,
+        "duration": 233
+      },
+      "lang": "he-IL",
+      "added": 1784885437778,
+      "updated": 1784885829676
+    },
+    {
+      "id": "n-zbvuc0y",
+      "sig": "PIY-06",
+      "title": "Sei — Und am Berg Chorew · Die Stimme dünnen Schweigens",
+      "titleHe": "סֵי — וּבְהַר חֹרֵב",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Saba → Bayat",
+      "bpm": "52",
+      "sefira": "כֶּתֶר שֶׁבְּנֶצַח · עֲשִׂיָּה · שֹׁרֶשׁ הַמַּחֲזוֹר",
+      "voicing": "Sephardisch · Wurzel des Zyklus · Gitarre · Maqam Saba",
+      "desc": "Dies ist die Quelle. In den vier vorangegangenen Liedern habe ich denselben Vers als Anker zitiert — kol demama daka, Melachim I 19:12. Hier steht er nicht mehr in der Fußnote, sondern in der Mitte des Liedes. Ein Prophet flieht, will sterben, legt sich in eine Höhle. Dann kommen Sturm, Beben und Feuer — und dreimal sagt der Text לֹא. Erst danach kommt das, wovon der ganze Zyklus handelt. Und am Ende kehrt sich alles um: Nicht der Prophet wählt das Sei — das Sei wählt ihn.",
+      "tags": [
+        "כֶּתֶר שֶׁבְּנֶצַח",
+        "שִׁבְעַת אֲלָפִים",
+        "נֶחָמָה",
+        "סַבָּא → בַּיַּאת"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung · Die Höhle",
+        "II · בַּיִת א — Erste Strophe · Etwas regte sich",
+        "III · בַּיִת ב — Der Wind · לֹא בָרוּחַ",
+        "IV · בַּיִת ג — Das Beben · לֹא בָרַעַשׁ",
+        "V · בַּיִת ד — Das Feuer · לֹא בָאֵשׁ",
+        "VI · פִּזְמוֹן — Refrain · dreimal, dynamisch gestuft",
+        "VII · גֶּשֶׁר — Brücke · Der Mantel",
+        "VIII · בַּיִת ה — Fünfte Strophe · Die Siebentausend",
+        "X · שִׂיא — Höhepunkt · Die dreifache Verneinung",
+        "XI · קוֹדָה — Coda · Die Umkehr"
+      ],
+      "page": "מוריה – פרק חדש_ אֵלִיָּהוּ בְּחֹרֵב-Sei_UveHar_Chorev.html",
+      "audio": "",
+      "video": "מוריה – פרק חדש אֵלִיָּהוּ בְּחֹרֵב.mp4",
+      "youtube": "https://youtu.be/49COi9VRddc",
+      "stats": {
+        "links": 24,
+        "sections": 10,
+        "bytes": 57559,
+        "duration": 0
+      },
+      "lang": "he-IL",
+      "added": 1784923460208,
+      "updated": 1784923503860
+    },
+    {
+      "id": "n-mpw7b2x",
+      "sig": "PIY-07",
+      "title": "Ani beRibbui Orot — Ich in der Vielheit der Lichter",
+      "titleHe": "אֲנִי בְּרִבּוּי אוֹרוֹת",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Saba ⇄ Hijaz",
+      "bpm": "66",
+      "sefira": "יְסוֹד ⇄ מַלְכוּת · עֲשִׂיָּה",
+      "voicing": "Sephardisch · Assija · Gitarre · Saba ⇄ Hijaz",
+      "desc": "Ein Lied, das in zwei Richtungen zugleich zieht. Es beginnt in der göttlichen ersten Person mit einer Vielheit — ani beRibbui Orot — und antwortet sich selbst mit der Zeile aus Adon Olam: und nachdem alles vergangen ist, wird Er allein herrschen. Dazwischen steht dreifach der Segen an Jaakow in Bet El, ani El Schaddai, pere urwe. Der Refrain ist Ausbreitung, die Antwort ist Einheit — und das Lied lässt beide stehen, statt eines aufzulösen.",
+      "tags": [
+        "יְסוֹד ⇄ מַלְכוּת",
+        "מִלּוּי אוֹתִיּוֹת",
+        "דֶּרֶךְ בַּמִּדְבָּר",
+        "שֵׁם בְּרֶמֶז"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung",
+        "II · פִּזְמוֹן א — Refrain · leise",
+        "III · בַּיִת א — Erste Strophe · Das Nicht-Vernichten",
+        "IV · גֶּשֶׁר — Brücke · Elijahu und die Frage",
+        "V · פִּזְמוֹן ב — Refrain · voll",
+        "VII · פִּזְמוֹן ג — Refrain · Aufbau",
+        "VIII · שִׂיא — Höhepunkt · Die Rückkehr zum Anfang",
+        "IX · קוֹדָה — Coda"
+      ],
+      "page": "אני בריבוי אורות-Ani_beRibbui_Orot.html",
+      "audio": "אני בריבוי אורות.wav",
+      "video": "אני בריבוי אורות.mp4",
+      "youtube": "https://youtu.be/HJ1DFEbG-O8",
+      "stats": {
+        "links": 20,
+        "sections": 8,
+        "bytes": 57102,
+        "duration": 289
+      },
+      "lang": "he-IL",
+      "added": 1784923576658,
+      "updated": 1784923609315
+    },
+    {
+      "id": "n-5bqzsaf",
+      "sig": "PIY-08",
+      "title": "Doro schel Maschiach — Die Generation des Maschiach",
+      "titleHe": "דּוֹרוֹ שֶׁל מָשִׁיחַ",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Rast → Hijaz",
+      "bpm": "72",
+      "sefira": "תִּפְאֶרֶת → מַלְכוּת · עֲשִׂיָּה",
+      "voicing": "Sephardisch · Assija · Gitarre · Rast → Hijaz",
+      "desc": "Ein Erlösungslied, gebaut auf einem alphabetischen Akrostichon: jede Sektion trägt einen eigenen Buchstaben, und das Lied steigt von ב bis ה — von bezot jadati über ge'ulla und doro schel Maschiach bis zu hu Maschiach ben David. Es beginnt im Flüstern vor Tag, steigt zu einer Erklärung und sinkt am Ende in dieselbe Stille zurück, aus der es kam.",
+      "tags": [
+        "תִּפְאֶרֶת → מַלְכוּת",
+        "צֵרוּף",
+        "כְּלִי טָהוֹר",
+        "רַאסְט → חִיגַ׳אז"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Öffnung · zartes Flüstern ב",
+        "II · בַּיִת א — Erste Strophe · Erwachen ב",
+        "III · פִּזְמוֹן א — Refrain · Verkündung ג",
+        "IV · בַּיִת ב — Zweite Strophe · Das gerechte Volk ג",
+        "V · פִּזְמוֹן מֶרְכָּזִי — Hauptrefrain · das Herz des Liedes ד",
+        "VII · בְּנִיָּה — Aufbau · Annäherung ה",
+        "VIII · שִׂיא — Höhepunkt · die große Erklärung ה",
+        "IX · פִּזְמוֹן סוֹפִי — Schlussrefrain · alles zusammen",
+        "X · סִיּוּם — Ausklang · bedeutungsvolle Stille"
+      ],
+      "page": "בְּזֹאת יָדַעְתִּי-Doro_shel_Mashiach.html",
+      "audio": "",
+      "video": "בְּזֹאת יָדַעְתִּי.mp4",
+      "youtube": "https://youtu.be/nxYeTLleEPk",
+      "stats": {
+        "links": 21,
+        "sections": 9,
+        "bytes": 61638,
+        "duration": 0
+      },
+      "lang": "he-IL",
+      "added": 1784923635260,
+      "updated": 1784923669580
+    },
+    {
+      "id": "n-2pa4cyu",
+      "sig": "PIY-09",
+      "title": "Urim veTumim — Der Kanal · נִיגּוּן לְגִיטָרָה אֲקוּסְטִית וְקוֹל",
+      "titleHe": "אוּרִים וְתֻמִּים — הַצִּנּוֹר",
+      "category": "Piyut",
+      "world": "",
+      "maqam": "Maqam Nahawand → Hijaz  · ca. 5–6 min",
+      "bpm": "60",
+      "sefira": "הוֹד → מַלְכוּת · אַהֲרֹן וְהַשְּׁכִינָה",
+      "voicing": "Gitarre & Stimme · Hod → Malchut · Nahawand → Hijaz",
+      "desc": "Ein Lied über ein Orakel, das keines ist. Der Hohepriester fragt nicht für sich, weiß die Antwort nicht, und entscheidet nichts — er ist Durchlass, nicht Instanz. Der Text sagt das nicht mit Behauptungen, sondern fast ausschließlich mit Verneinungen: erst wenn alles weg ist, was der Mensch beitragen könnte, bleibt übrig, was antwortet.",
+      "tags": [
+        "הוֹד → מַלְכוּת",
+        "סִלּוּק הָאֲנִי",
+        "הַכֹּהֵן כְּצִנּוֹר",
+        "נַהַאוַנְד → חִיגַ׳אז"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Intro / Flüstern, ppp",
+        "II · בֵּית א׳ — Strophe I / ruhig aufbauend",
+        "III · פָּזְמוֹן — Refrain, mf, getragen",
+        "IV · בֵּית ב׳ — Strophe II / mystisch, leise",
+        "V · פָּזְמוֹן — Refrain (Wiederholung)",
+        "VII · פָּזְמוֹן סוֹפִי — Abschluss-Refrain / volles Crescendo, fff",
+        "VIII · יְצִיאָה — Outro / verklingend, Flüstern, ppp"
+      ],
+      "page": "אוּרִים וְתֻמִּים-Urim_veTumim_HaTzinor.html",
+      "audio": "אוּרִים וְתֻמִּים-youtube.MP3",
+      "video": "אוּרִים וְתֻמִּים-youtube.mp4",
+      "youtube": "https://youtu.be/9lD-7IInvUI",
+      "stats": {
+        "links": 18,
+        "sections": 7,
+        "bytes": 62152,
+        "duration": 0
+      },
+      "lang": "he-IL",
+      "added": 1784923733037,
+      "updated": 1784923847195
+    },
+    {
+      "id": "n-cl2or81",
+      "sig": "PIY-10",
+      "title": "Tipat HaLoven — Der Tropfen des Weißen · נִיגּוּן הַתִּיקּוּן",
+      "titleHe": "טִיפַּת הַלֹּבֶן",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Hijaz → Saba  · ca. 6 min",
+      "bpm": "58",
+      "sefira": "מַלְכוּת → יְסוֹד · אֲצִילוּת בְּכֵלִים שֶׁל עֲשִׂיָּה",
+      "voicing": "Niggun der Tikkun · Gitarre & Stimme · Hijaz → Saba",
+      "desc": "Der ganze Bogen der lurianischen Kosmologie in acht Abschnitten: aus der Namenlosigkeit des Ein Sof über das Zerbrechen der Gefäße bis zu dem einen König, von dessen Tod die Schrift nichts berichtet. Das Lied endet nicht mit einer Reparatur des Bruchs, sondern mit der Rückkehr eines einzigen Tropfens — und behauptet, dass genau das die Erlösung ist.",
+      "tags": [
+        "מַלְכוּת → יְסוֹד",
+        "בֵּרוּר נִיצוֹצוֹת",
+        "כְּלִי טָהוֹר",
+        "אוֹר מ״ה"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Intro / Flüstern",
+        "II · בֵּית א׳ — Strophe I",
+        "III · פָּזְמוֹן — Refrain",
+        "IV · בֵּית ב׳ — Strophe II / mystisch, leise",
+        "V · פָּזְמוֹן — Refrain (Wiederholung)",
+        "VI · גֶּשֶׁר — Brücke / sehr langsam, beinahe Flüstern",
+        "VIII · יְצִיאָה — Outro / verklingend, Flüstern"
+      ],
+      "page": "בְּאֵין סוֹף אֵין שֵׁם-Tipat_HaLoven.html",
+      "audio": "בְּאֵין סוֹף אֵין שֵׁם-youtube.MP3",
+      "video": "בְּאֵין סוֹף אֵין שֵׁם-youtube.mp4",
+      "youtube": "https://youtu.be/WAl1rxMqiAA",
+      "stats": {
+        "links": 18,
+        "sections": 7,
+        "bytes": 57371,
+        "duration": 424
+      },
+      "lang": "he-IL",
+      "added": 1784923923454,
+      "updated": 1784923975732
+    },
+    {
+      "id": "n-88ih57x",
+      "sig": "PIY-11",
+      "title": "Pinchas — Die Seele des Feuers",
+      "titleHe": "פִּינְחָס — נֶפֶשׁ הָאֵשׁ",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Hijaz → Bayat  · ca. 7 min",
+      "bpm": "56",
+      "sefira": "מַלְכוּת שֶׁבַּגְּבוּרָה → נֶצַח · אֲצִילוּת בְּכֵלִים שֶׁל עֲשִׂיָּה",
+      "voicing": "Niggun der herabsteigenden Seele · Gitarre · Hijaz → Bayat",
+      "desc": "Ein Lied über ein Feuer, das seine Gestalt wechselt statt zu verlöschen. Der Eifer des Pinchas in Schittim ist die sichtbare Flamme; ihre Wurzel liegt in der Malchut des Din, ihre Seele stammt aus Atzilut. Und das Lied endet nicht mit dem Priesterbund, sondern mit einem Aufstieg: dieselbe Seele trägt später einen anderen Namen und steigt lebend zum Himmel — die Seelenkette des Arizal von Nadav und Awihu über Pinchas bis zu Elijahu dem Tischbiter.",
+      "tags": [
+        "גְּבוּרָה → נֶצַח",
+        "גִּלְגּוּל",
+        "בֵּרוּר נִיצוֹצוֹת",
+        "חִיגַ׳אז → בַּיַּאת"
+      ],
+      "headings": [
+        "I · פְּתִיחָה — Intro / Flüstern, sehr langsam",
+        "II · בֵּית א׳ — Strophe I / ruhig, aufbauend",
+        "III · פָּזְמוֹן — Refrain / stark, Stimme voll",
+        "IV · בֵּית ב׳ — Strophe II / fließend, melodisch",
+        "V · פָּזְמוֹן — Refrain (Wiederholung)",
+        "VII · שִׂיא — Höhepunkt / volles Crescendo, fff",
+        "VIII · פָּזְמוֹן סוֹפִי — Abschluss-Refrain / mit ganzer Kraft",
+        "IX · יְצִיאָה — Outro / ausblendend · Andeutung des Nächsten"
+      ],
+      "page": "פִּינְחָס — נֶפֶשׁ הָאֵשׁ-Pinchas_Nefesh_HaEsch.html",
+      "audio": "פִּינְחָס — נֶפֶשׁ הָאֵשׁ-youtube.MP3",
+      "video": "פִּינְחָס — נֶפֶשׁ הָאֵשׁ-youtube.mp4",
+      "youtube": "https://youtu.be/IvDdkXiRUd8",
+      "stats": {
+        "links": 19,
+        "sections": 8,
+        "bytes": 57482,
+        "duration": 250
+      },
+      "lang": "he-IL",
+      "added": 1784926233425,
+      "updated": 1784926281029
+    },
+    {
+      "id": "n-bbijmfv",
+      "sig": "NIG-01",
+      "title": "Eliyahu al haKarmel — Elijah auf dem Karmel",
+      "titleHe": "אֵלִיָּהוּ עַל הַכַּרְמֶל",
+      "category": "נֶפֶשׁ הָאֵשׁ",
+      "world": "Azilut",
+      "maqam": "Am – G – F · fingerpicked · Rubato → ff → ppp",
+      "bpm": "",
+      "sefira": "גְּבוּרָה שֶׁבַּאֲצִילוּת → שָׁלוֹם",
+      "voicing": "",
+      "desc": "Das erste Lied ließ die Seele des Pinchas aufsteigen mit einem Namen, der noch nicht ausgesprochen war. Hier wird er ausgesprochen. Dieselbe Nefesh, dieselbe Gewura, dasselbe Feuer — doch jetzt fällt es nicht mehr auf einen Feind, sondern auf den Altar, und das Volk fällt nicht mehr in der Seuche, sondern auf sein Angesicht. Der Niggun der gesüßten Gewura: wie aus dem Speer des Pinchas das Feuer des Karmel wird und aus dem Feuer der Bund des Friedens.",
+      "tags": [],
+      "headings": [
+        "I · פְּתִיחָה — Intro · Flüstern, nur Gitarre, ppp",
+        "II · בֵּית א׳ — Strophe I · leise, aufbauend, mp",
+        "III · פָּזְמוֹן — Refrain · volle Stimme, ff",
+        "IV · בֵּית ב׳ — Strophe II · erzählend, mp",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "V · גֶּשֶׁר — Brücke · sehr langsam, fast a cappella, pp",
+        "VI · שִׂיא — Klimax · fff, voller Einsatz",
+        "פָּזְמוֹן סוֹפִי — Abschluss-Refrain · 3× wiederholen, crescendo",
+        "VII · יְצִיאָה — Outro · ppp, verklingend, nur Gitarre"
+      ],
+      "page": "אֵלִיָּהוּ עַל הַכַּרְמֶל.Eliyahu_al_haKarmel.html",
+      "audio": "אֵלִיָּהוּ עַל הַכַּרְמֶל-youtube.MP3",
+      "video": "אֵלִיָּהוּ עַל הַכַּרְמֶל-youtube.mp4",
+      "youtube": "https://youtu.be/LwnEc-hoMUs",
+      "stats": {
+        "links": 7,
+        "sections": 9,
+        "bytes": 39391,
+        "duration": 364
+      },
+      "lang": "he-IL",
+      "added": 1784926569928,
+      "updated": 1784926612796
+    },
+    {
+      "id": "n-06zyg20",
+      "sig": "NIG-02",
+      "title": "Schefa — Der Strom des Segens aus dem oberen Heiligtum",
+      "titleHe": "שֶׁפַע — מִשְׁכְּנֵי עֶלְיוֹן",
+      "category": "מִשְׁכְּנֵי עֶלְיוֹן",
+      "world": "Azilut",
+      "maqam": "Solo · voice & acoustic guitar · Chazzanut & Piyut style",
+      "bpm": "",
+      "sefira": "חֶסֶד שֶׁבַּאֲצִילוּת → כָּל הָעוֹלָמוֹת",
+      "voicing": "",
+      "desc": "Ein Lied nach dem Mischkeney Eljon des Ramchal: der Tempel als der eine Punkt, an dem alle Zweige des Lebensbaums mit ihrer Wurzel verbunden werden — und von dort strömt der Schefa, der Strom von Segen und Nahrung, hinaus in jede Welt. Abraham, der Kohen des Chesed, zieht ihn herab; und aus dem innersten Heiligtum breitet er sich aus bis zur äußersten Schwelle, für alles, was lebt.",
+      "tags": [],
+      "headings": [
+        "I · בֵּית א — Strophe I · Die Seelen & die Stämme",
+        "II · פָּזְמוֹן — Refrain · Der Strom des Schefa",
+        "III · בֵּית ב — Strophe II · Abraham, Kohen Gadol",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "IV · גֶּשֶׁר — Brücke · Die drei Welten",
+        "פָּזְמוֹן — Refrain · Abschluss",
+        "V · קוֹדָה — Coda · Besiegelung"
+      ],
+      "page": "שֶׁפַע-Shefa_Mishkney_Elyon.html",
+      "audio": "שֶׁפַע-youtube.MP3",
+      "video": "שֶׁפַע-youtube.mp4",
+      "youtube": "https://youtu.be/6VHzesjbaEA",
+      "stats": {
+        "links": 5,
+        "sections": 7,
+        "bytes": 33030,
+        "duration": 0
+      },
+      "lang": "he-IL",
+      "added": 1784928473672,
+      "updated": 1784928526143
+    },
+    {
+      "id": "n-e3n6vw4",
+      "sig": "NIG-03",
+      "title": "Kanno Kineti — „Eifern habe ich geeifert\"",
+      "titleHe": "קַנֹּא קִנֵּאתִי",
+      "category": "נֶפֶשׁ הָאֵשׁ",
+      "world": "",
+      "maqam": "Em · fingerpicked · äolisch/dorisch · Rubato",
+      "bpm": "",
+      "sefira": "אֵלִיָּהוּ · חוֹרֵב · קִינָה → נֶחָמָה",
+      "voicing": "",
+      "desc": "Nach dem Feuer auf dem Karmel flieht der Eiferer in die Wüste und klagt: „die Altäre haben sie niedergerissen … und ich bin allein übrig geblieben.\" Doch der Radak legt in diese Klage einen Trost: dieselben מִזְבְּחוֹת, die Elija beweint, waren Altäre der Liebe — in Bethel schon von Gott angenommen. So kehrt sich das Lied um, von לְבַדִּי („allein\") zu אַךְ לֹא לְבַדִּי („doch nicht allein\").",
+      "tags": [],
+      "headings": [
+        "I · פְּתִיחָה — Intro · leises Flüstern, einzelne Gitarrentöne, ppp",
+        "II · בֵּית א׳ — Strophe I · ruhig, getragen, mp",
+        "III · פָּזְמוֹן — Refrain · Stimme voll, Gitarre rhythmisch, mf → f",
+        "IV · בֵּית ב׳ — Strophe II · leiser, innig · die Bethel-Dimension (Radak)",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "V · גֶּשֶׁר — Brücke · sehr langsam, fast a cappella, nachdenklich, p",
+        "VI · פָּזְמוֹן סוֹפִי — Abschluss-Refrain · volles Crescendo, dann Umschlag — fff → p",
+        "VII · יְצִיאָה — Outro · Gitarre solo, dann Flüstern, Fade, ppp"
+      ],
+      "page": "קַנֹּא קִנֵּאתִי-Kanno_Kineti_Niggun_Eliyahu.html",
+      "audio": "קַנֹּא קִנֵּאתִי-youtube.MP3",
+      "video": "קַנֹּא קִנֵּאתִי-youtube.mp4",
+      "youtube": "https://youtu.be/bJ99oYNG28o",
+      "stats": {
+        "links": 7,
+        "sections": 8,
+        "bytes": 39814,
+        "duration": 0
+      },
+      "lang": "he-IL",
+      "added": 1784929500895,
+      "updated": 1784929547702
+    },
+    {
+      "id": "n-zdjrdv4",
+      "sig": "NIG-04",
+      "title": "Maskil leDavid — „Ein Maskil, von David\"",
+      "titleHe": "מַשְׂכִּיל לְדָוִד",
+      "category": "תְּהִלִּים ל״ב",
+      "world": "",
+      "maqam": "Solo voice & acoustic guitar · quiet, contemplative",
+      "bpm": "",
+      "sefira": "מַשְׂכִּיל ⇄ אַשְׁרֵי · שְׁנַיִם מִן הָעֶשֶׂר",
+      "voicing": "",
+      "desc": "Psalm 32 trägt zwei der zehn Lobpreisungen zugleich: מַשְׂכִּיל in der Überschrift und אַשְׁרֵי im ersten Wort. Das Lied hört beide zusammen — die Seligpreisung des Menschen, dessen Frevel getragen und dessen Sünde bedeckt wird, und den Aufstieg dessen, der zum Maskil wird: dem, der Einsicht erlangt und andere leuchten lässt, „wie das Glänzen des Himmelsgewölbes\" (Dan 12:3).",
+      "tags": [],
+      "headings": [
+        "I · פְּתִיחָה — Intro · zweimal, sehr ruhig, wie ein Atemzug",
+        "II · פָּזְמוֹן — Refrain · die Kernaussage",
+        "III · בֵּית א׳ — Strophe I · die Waage des Himmels",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "IV · בֵּית ב׳ — Strophe II · die zehn Stufen",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "V · גֶּשֶׁר — Brücke · das höchste Lob",
+        "VI · פָּזְמוֹן סִיּוּם — Schlussrefrain · intensiviert, dreifach",
+        "VII · סִיּוּם — Ausklang · Fade, sehr leise · der Bogen schließt sich"
+      ],
+      "page": "מַשְׂכִּיל לְדָוִד.Maskil_leDavid.html",
+      "audio": "מַשְׂכִּיל לְדָוִד-youtube.MP3",
+      "video": "מַשְׂכִּיל לְדָוִד-youtube.mp4",
+      "youtube": "https://youtu.be/ZjBFzMKc_GA",
+      "stats": {
+        "links": 7,
+        "sections": 9,
+        "bytes": 38950,
+        "duration": 249
+      },
+      "lang": "he-IL",
+      "added": 1784931526026,
+      "updated": 1784931579294
+    },
+    {
+      "id": "n-rvszpeh",
+      "sig": "NIG-05",
+      "title": "Yatzata liYesha — „Du bist ausgezogen zur Rettung\"",
+      "titleHe": "יָצָאתָ לְיֶשַׁע",
+      "category": "חֲבַקּוּק ג׳",
+      "world": "",
+      "maqam": "Solo voice & guitar · Em · free melisma · ppp → fff → ppp",
+      "bpm": "",
+      "sefira": "יְשׁוּעָה · מְשִׁיחַ · שִׁיבַת צִיּוֹן",
+      "voicing": "",
+      "desc": "Das Gebet Habakuks endet mit einer Theophanie: Gott zieht aus, um sein Volk und seinen Gesalbten zu retten, und zerschmettert das Haupt aus dem Haus des Frevlers. Das Lied trägt diesen Vers vom Auszug über das Zerschmettern des Bösen bis in die Endzeit — wenn Mashiach ben David kommt und Adonai nach Zion zurückkehrt.",
+      "tags": [],
+      "headings": [
+        "I · הַקְדָּמָה — Einleitung · ruhig, atemlos",
+        "II · פָּזְמוֹן — Refrain · aufsteigend",
+        "III · בֵּית א׳ — Strophe I · das Zerschmettern",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "IV · בֵּית ב׳ — Strophe II · die eschatologische Hoffnung",
+        "V · גֶּשֶׁר — Brücke · langsam, tief, Selah-Pause",
+        "VI · פָּזְמוֹן סִיּוּם — Abschluss-Refrain · voll, fortissimo",
+        "VII · נְעִילָה — Ausklang · Pianissimo, allein"
+      ],
+      "page": "יָצָאתָ לְיֶשַׁע-Yatzata_liYesha.html",
+      "audio": "יָצָאתָ לְיֶשַׁע-youtube.MP3",
+      "video": "יָצָאתָ לְיֶשַׁע-youtube.mp4",
+      "youtube": "https://youtu.be/VP8cAIFzk7c",
+      "stats": {
+        "links": 7,
+        "sections": 8,
+        "bytes": 36775,
+        "duration": 479
+      },
+      "lang": "he-IL",
+      "added": 1784947500496,
+      "updated": 1784947544421
+    },
+    {
+      "id": "n-y1k6zdq",
+      "sig": "PIY-12",
+      "title": "Isch keAchiw — Jeder wie sein Bruder",
+      "titleHe": "אִישׁ כְּאָחִיו",
+      "category": "Piyut",
+      "world": "Assija",
+      "maqam": "Maqam Rast → Hijaz  · Solostimme & Gitarre",
+      "bpm": "66",
+      "sefira": "תִּפְאֶרֶת → מַלְכוּת · אֲצִילוּת בְּכֵלִים שֶׁל עֲשִׂיָּה",
+      "voicing": "Jecheskel 47–48 · Assija · Gitarre · Rast → Hijaz",
+      "desc": "Kein Klagelied und keine Sehnsucht ins Ungewisse, sondern ein Kataster — eine gesungene Landkarte der Endzeit. Jecheskels letzte Vision teilt das Land איש כאחיו, jeder wie sein Bruder, und setzt in die Mitte nicht einen König, sondern ein Heiligtum; der Fürst steht davor, nicht darüber. Das Lied endet mit dem letzten Wort des ganzen Buches: dem neuen Namen der Stadt.",
+      "tags": [
+        "תִּפְאֶרֶת → מַלְכוּת",
+        "תְּרוּמַת הַקֹּדֶשׁ",
+        "נָשִׂיא = מָשִׁיחַ בֶּן דָּוִד",
+        "רַאסְט → חִיגַ׳אז"
+      ],
+      "headings": [
+        "I · פָּסוּק פְּתִיחָה — Eröffnungsvers",
+        "II · פַּזְמוֹן — Refrain",
+        "III · בֵּית א — Strophe I · Die Prophetie",
+        "IV · פַּזְמוֹן — Refrain (Wiederholung)",
+        "V · בֵּית ב — Strophe II · Die Stämme",
+        "VI · פַּזְמוֹן — Refrain (Wiederholung)",
+        "VIII · פַּזְמוֹן סִיּוּם — Schlussrefrain mit Coda"
+      ],
+      "page": "אִישׁ כְּאָחִיו-Isch_keAchiw.html",
+      "audio": "אִישׁ כְּאָחִיו-youtube.MP3",
+      "video": "אִישׁ כְּאָחִיו-youtube.mp4",
+      "youtube": "https://www.youtube.com/watch?v=B9JO4Ey1kuA",
+      "stats": {
+        "links": 16,
+        "sections": 7,
+        "bytes": 48681,
+        "duration": 480,
+        "audioBytes": 11521303,
+        "videoBytes": 371291190
+      },
+      "lang": "he-IL",
+      "added": 1784950756060,
+      "updated": 1784950817869
+    },
+    {
+      "id": "n-e26m5jo",
+      "sig": "NIG-06",
+      "title": "Nishmatin — Die Seelen & das Land Israel",
+      "titleHe": "נִשְׁמָתִין",
+      "category": "שִׁיר מִן הַזֹּהַר",
+      "world": "",
+      "maqam": "Solo voice & acoustic guitar · Dm / G · narrating → rising",
+      "bpm": "",
+      "sefira": "מִן הַקֶּבֶר · דֶּרֶךְ הָאָרֶץ · לַחַיִּים",
+      "voicing": "",
+      "desc": "Ein Lied zwischen zwei Stimmen: dem Aramäisch des Zohar in den Strophen und der Prophetie Jecheskels im Refrain. Der Gedanke ist uralt und tröstlich zugleich — dass die Seele ihr volles Leben im Land Israel empfängt; dass die Gerechten der Ferne durch verborgene Gänge in der Erde rollen, bis sie das Land erreichen, und dort — וְנָתַתִּי רוּחִי בָכֶם — וִחְיִיתֶם — neu erstehen.",
+      "tags": [],
+      "headings": [
+        "I · בֵּית א׳ — Strophe I · das Aramäische des Zohar",
+        "II · פָּזְמוֹן — Refrain (2×) · die Stimme Jecheskels",
+        "III · בֵּית ב׳ — Strophe II · gilgul mechilot",
+        "פָּזְמוֹן — Refrain · Wiederholung",
+        "IV · גֶּשֶׁר — Brücke · gedämpft, fast gesprochen",
+        "V · פָּזְמוֹן סוֹפִי — Finaler Refrain · langsam, crescendo",
+        "VI · סִיּוּם — Ausklang · leise, a cappella möglich"
+      ],
+      "page": "נִשְׁמָתִין-Nishmatin.html",
+      "audio": "נִשְׁמָתִין-youtube.MP3",
+      "video": "נִשְׁמָתִין-youtube.mp4",
+      "youtube": "https://www.youtube.com/watch?v=6772ZlZp8Tw",
+      "stats": {
+        "links": 6,
+        "sections": 7,
+        "bytes": 39939,
+        "duration": 243,
+        "audioBytes": 5833715,
+        "videoBytes": 177352986
+      },
+      "lang": "he-IL",
+      "added": 1784950849560,
+      "updated": 1784950900182
+    },
+    {
+      "id": "n-7gfqmoa",
+      "sig": "NIG-07",
+      "title": "Schir haMaalot — Lied der Stufen / des Aufstiegs",
+      "titleHe": "שִׁיר הַמַּעֲלוֹת",
+      "category": "תְּהִלִּים ק״ל",
+      "world": "",
+      "maqam": "Solo voice & guitar · rising, step by step · ppp → f",
+      "bpm": "",
+      "sefira": "חֲמֵשׁ עֶשְׂרֵה מַעֲלוֹת · יה",
+      "voicing": "",
+      "desc": "Fünfzehn Ma'alot — fünfzehn „Stufen\" und fünfzehn „Aufstiege\" zugleich: die fünfzehn Stufen im Tempel, auf denen die Leviten sangen, die fünfzehn Schir-haMaalot-Psalmen, und die fünfzehn Lieder, mit denen David die Wasser der Tiefe bändigte. Das Lied steigt vom Ruf aus den Tiefen (mimaamakim) über all diese Stufen empor — bis zum erhabenen Licht und heim.",
+      "tags": [],
+      "headings": [
+        "I · פְּתִיחָה — Eröffnung · aus der Tiefe, ppp",
+        "II · בֵּית א׳ — Strophe I · die fünfzehn Stufen im Tempel",
+        "III · פִּזְמוֹן — Refrain · Lied des Aufstiegs",
+        "IV · בֵּית ב׳ — Strophe II · die Wasser der Flut",
+        "פִּזְמוֹן — Refrain · Wiederholung",
+        "V · גֶּשֶׁר — Brücke · David, die Scherbe und die Tiefe",
+        "VI · בֵּית ג׳ — Strophe III · so auch wir",
+        "פִּזְמוֹן מוּגְדָּל — Erweiterter Refrain",
+        "VII · סִיּוּם — Schluss · heim, hinauf"
+      ],
+      "page": "שִׁיר הַמַּעֲלוֹת-Shir_HaMaalot.html",
+      "audio": "שִׁיר הַמַּעֲלוֹת-youtube.MP3",
+      "video": "שִׁיר הַמַּעֲלוֹת-youtube.mp4",
+      "youtube": "https://www.youtube.com/watch?v=y0-R7FjJKfg",
+      "stats": {
+        "links": 7,
+        "sections": 9,
+        "bytes": 42721,
+        "duration": 272,
+        "audioBytes": 6527736,
+        "videoBytes": 192053661
+      },
+      "lang": "he-IL",
+      "added": 1784950924580,
+      "updated": 1784950974116
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "niggun-sammlung-v1";
+  var SELF = "index.html";
+
+  var AUDIO_EXT = /\.(wav|mp3|m4a|flac|ogg|opus|aac)$/i;
+  var VIDEO_EXT = /\.(mp4|webm|mov|m4v|ogv)$/i;
+  var PAGE_EXT  = /\.html?$/i;
+
+  /* ── Speicher ── */
+  var store = (function () {
+    try {
+      var t = "__t";
+      window.localStorage.setItem(t, t);
+      window.localStorage.removeItem(t);
+      return {
+        ok: true,
+        read: function () { try { return JSON.parse(window.localStorage.getItem(KEY)); } catch (e) { return null; } },
+        write: function (d) { try { window.localStorage.setItem(KEY, JSON.stringify(d)); return true; } catch (e) { return false; } },
+        clear: function () { try { window.localStorage.removeItem(KEY); } catch (e) {} }
+      };
+    } catch (e) {
+      return { ok: false, read: function () { return null; }, write: function () { return false; }, clear: function () {} };
+    }
+  })();
+
+  var seed = JSON.parse(document.getElementById("seed").textContent);
+  var savedData = store.read();
+  var data = (savedData && savedData.stamp >= (seed.stamp || 0)) ? savedData : seed;
+  var entries = (data.entries || []).slice();
+
+  var state = { q: "", cat: "*", world: "*", carrier: "*", sort: "welt" };
+  var pending = [];
+  var mode = "add";
+  var BLOBS = {};   /* Dateiname -> Objekt-Adresse dieser Sitzung */
+
+  var $ = function (s) { return document.querySelector(s); };
+  var results = $("#results"), catsEl = $("#cats"), hover = $("#hover"), dlg = $("#dlg");
+
+  /* ── Hilfen ── */
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function bytes(n) {
+    if (!n && n !== 0) return "–";
+    if (n < 1024) return n + " B";
+    if (n < 1048576) return (n / 1024).toFixed(0) + " kB";
+    if (n < 1073741824) return (n / 1048576).toFixed(1) + " MB";
+    return (n / 1073741824).toFixed(2) + " GB";
+  }
+  function clock(sec) {
+    sec = Math.max(0, Math.round(sec || 0));
+    var h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+    return (h ? h + ":" + String(m).padStart(2, "0") : String(m)) + ":" + String(s).padStart(2, "0");
+  }
+  function spanTime(sec) {
+    sec = Math.round(sec || 0);
+    if (!sec) return "0 Min";
+    var h = Math.floor(sec / 3600), m = Math.round((sec % 3600) / 60);
+    return h ? h + " Std " + m + " Min" : m + " Min";
+  }
+  function datum(ts) {
+    if (!ts) return "–";
+    return new Date(ts).toLocaleDateString("de-AT", { day: "2-digit", month: "short", year: "numeric" });
+  }
+  function toast(msg) {
+    var t = $("#toast");
+    t.textContent = msg;
+    t.classList.add("on");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { t.classList.remove("on"); }, 4200);
+  }
+  function slugCat(c) { return "abt-" + String(c).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); }
+  function plain(s) { return String(s || "").replace(/[\u0591-\u05C7]/g, ""); }
+  function base(name) { return String(name || "").replace(/\.[^.]+$/, ""); }
+  function normName(name) {
+    return plain(base(name)).toLowerCase().replace(/[^a-z0-9\u0590-\u05FF]+/g, "");
+  }
+  function latinTail(name) {
+    var b = base(name);
+    var m = b.split(/[-–—]/);
+    var last = m.length > 1 ? m[m.length - 1] : b;
+    return last.toLowerCase().replace(/[^a-z0-9]+/g, "");
+  }
+  function hebOf(s) {
+    var m = String(s || "").match(/[\u0590-\u05FF][\u0590-\u05FF\s'"״׳\-–־]*/g);
+    if (!m) return "";
+    return m.sort(function (a, b) { return b.length - a.length; })[0].trim();
+  }
+
+  var WORLDS = ["Assija", "Jezira", "Beria", "Azilut"];
+  var WORLD_RE = [
+    { w: "Assija", re: /עשיה|עשייה|assij|assiy|asija|asiya/i },
+    { w: "Jezira", re: /יצירה|jezir|jetzir|yetzir|yezir/i },
+    { w: "Beria",  re: /בריאה|beria|berij|beriy|briah/i },
+    { w: "Azilut", re: /אצילות|azilut|atzilut|aziluth/i }
+  ];
+  function worldOf(txt) {
+    var hay = plain(txt || "");
+    for (var i = 0; i < WORLD_RE.length; i++) if (WORLD_RE[i].re.test(hay)) return WORLD_RE[i].w;
+    return "";
+  }
+  function worldRank(w) {
+    var i = WORLDS.indexOf(w);
+    return i < 0 ? 99 : i;
+  }
+
+  var CATRULES = [
+    { re: /pijut|piyut|פיוט/i, cat: "Piyut" },
+    { re: /niggun|nigun|ניגון/i, cat: "Niggun" },
+    { re: /zemer|zmirot|semirot|זמירות|schabbat|shabbat/i, cat: "Zemirot" },
+    { re: /tehill|psalm|תהלים/i, cat: "Tehillim" },
+    { re: /tefilla|gebet|תפילה|selicha|סליחות/i, cat: "Tefilla" },
+    { re: /midrasch|midrash|מדרש/i, cat: "Midrasch-Lieder" },
+    { re: /kinnot|קינה|klage/i, cat: "Kinot" }
+  ];
+  function guessCat(txt) {
+    for (var i = 0; i < CATRULES.length; i++) if (CATRULES[i].re.test(txt)) return CATRULES[i].cat;
+    return "Niggun";
+  }
+  function catAbbr(c) {
+    var w = String(c).replace(/[^A-Za-zÄÖÜäöüß ]/g, "").trim().split(/\s+/);
+    return (w[0] || "NIG").substring(0, 3).toUpperCase();
+  }
+  function nextSig(cat) {
+    var ab = catAbbr(cat), n = 0;
+    entries.forEach(function (e) {
+      var m = /^([A-ZÄÖÜ]+)-(\d+)$/.exec(e.sig || "");
+      if (m && m[1] === ab) n = Math.max(n, parseInt(m[2], 10));
+    });
+    return ab + "-" + String(n + 1).padStart(2, "0");
+  }
+  function ytId(url) {
+    var s = String(url || "");
+    var m = s.match(/(?:youtu\.be\/|v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{6,})/);
+    if (m) return m[1];
+    if (/^[A-Za-z0-9_-]{8,}$/.test(s.trim())) return s.trim();
+    return "";
+  }
+  function srcOf(name) {
+    if (!name) return "";
+    if (BLOBS[name]) return BLOBS[name];
+    if (/^(https?:|blob:|data:)/i.test(name)) return name;
+    return name.split("/").map(encodeURIComponent).join("/");
+  }
+  function has(e, k) {
+    if (k === "page") return !!e.page;
+    if (k === "audio") return !!e.audio;
+    if (k === "video") return !!e.video;
+    if (k === "yt") return !!e.youtube;
+    return false;
+  }
+
+  /* ── Ansicht ── */
+  function categories() {
+    var map = {};
+    entries.forEach(function (e) { map[e.category || "Ohne Abteilung"] = (map[e.category || "Ohne Abteilung"] || 0) + 1; });
+    return Object.keys(map).sort(function (a, b) { return a.localeCompare(b, "de"); })
+      .map(function (c) { return { name: c, n: map[c] }; });
+  }
+
+  function filtered() {
+    var q = state.q.trim().toLowerCase();
+    var qp = plain(q);
+    var list = entries.filter(function (e) {
+      if (state.cat !== "*" && (e.category || "Ohne Abteilung") !== state.cat) return false;
+      if (state.world !== "*" && (e.world || "") !== (state.world === "-" ? "" : state.world)) return false;
+      if (state.carrier !== "*") {
+        if (state.carrier === "none" && (e.audio || e.video || e.youtube)) return false;
+        if (state.carrier !== "none" && !has(e, state.carrier)) return false;
+      }
+      if (!q) return true;
+      var hay = plain([e.title, e.titleHe, e.desc, e.page, e.audio, e.video, e.category, e.world,
+        e.maqam, e.sefira, e.voicing, e.sig, (e.tags || []).join(" "), (e.headings || []).join(" ")].join(" ")).toLowerCase();
+      return hay.indexOf(qp) > -1;
+    });
+    var by = {
+      title: function (a, b) { return (a.title || "").localeCompare(b.title || "", "de"); },
+      added: function (a, b) { return (b.added || 0) - (a.added || 0); },
+      dur: function (a, b) { return (((b.stats || {}).duration) || 0) - (((a.stats || {}).duration) || 0); },
+      maqam: function (a, b) { return (a.maqam || "zzz").localeCompare(b.maqam || "zzz", "de") || (a.title || "").localeCompare(b.title || "", "de"); },
+      cat: function (a, b) { return (a.category || "").localeCompare(b.category || "", "de") || (a.title || "").localeCompare(b.title || "", "de"); },
+      welt: function (a, b) { return worldRank(a.world) - worldRank(b.world) || (a.title || "").localeCompare(b.title || "", "de"); }
+    };
+    return list.sort(by[state.sort] || by.welt);
+  }
+
+  function slotHTML(e, key, label, extra) {
+    var on = has(e, key);
+    return '<button class="slot' + (on ? " on" : "") + '" data-go="' + key + '" type="button" title="' +
+      (on ? esc(label + ": " + (extra || "vorhanden")) : esc(label + " fehlt – klicken, um eine Datei zuzuordnen")) + '">' +
+      esc(label) + (on && extra ? "<i>" + esc(extra) + "</i>" : "") + "</button>";
+  }
+
+  function cardHTML(e) {
+    var tags = (e.tags || []).slice(0, 3).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("");
+    var meta = [];
+    if (e.maqam) meta.push("<span>" + esc(e.maqam) + "</span>");
+    if (e.bpm) meta.push("<span>" + esc(e.bpm) + " BPM</span>");
+    if (e.world) meta.push("<span>" + esc(e.world) + "</span>");
+    var dur = ((e.stats || {}).duration) ? clock(e.stats.duration) : "";
+    var title = esc(e.title || base(e.page || e.audio || e.video) || "Ohne Titel");
+    return '' +
+      '<article class="card" data-id="' + esc(e.id) + '" data-world="' + esc(e.world || "") + '" tabindex="0">' +
+        '<div class="sig"><span class="code">' + esc(e.sig || "–") + '</span><span>' + esc(e.category || "Ohne Abteilung") + "</span></div>" +
+        (e.titleHe ? '<div class="cardhe">' + esc(e.titleHe) + "</div>" : "") +
+        "<h3>" + (e.page ? '<a href="' + srcOf(e.page) + '">' + title + "</a>" : "<span>" + title + "</span>") + "</h3>" +
+        (meta.length ? '<div class="mline">' + meta.join("") + "</div>" : "") +
+        '<p class="desc">' + esc(e.desc || "Noch ohne Beschreibung.") + "</p>" +
+        (tags ? '<div class="tags">' + tags + "</div>" : "") +
+        '<div class="rail">' +
+          slotHTML(e, "page", "Seite", e.page ? "lesen" : "") +
+          slotHTML(e, "audio", "Klang", dur || "hören") +
+          slotHTML(e, "video", "Video", "sehen") +
+          slotHTML(e, "yt", "YouTube", "öffnen") +
+        "</div>" +
+        '<div class="foot">' +
+          (e.page ? '<button class="icon" data-act="page" type="button" title="HTML-Seite im Editor bearbeiten">Seite ✎</button>' : "") +
+          '<button class="icon" data-act="edit" type="button" title="Angaben der Karte bearbeiten">Karte</button>' +
+          '<button class="icon del" data-act="del" type="button" title="Aus der Sammlung nehmen">Entfernen</button>' +
+        "</div>" +
+      "</article>";
+  }
+
+  function render() {
+    var list = filtered();
+
+    var withAudio = entries.filter(function (e) { return e.audio; }).length;
+    var totalDur = entries.reduce(function (s, e) { return s + (((e.stats || {}).duration) || 0); }, 0);
+    $("#stats").innerHTML =
+      "<div><b>" + entries.length + "</b>Niggunim</div>" +
+      "<div><b>" + withAudio + "</b>mit Aufnahme</div>" +
+      "<div><b>" + spanTime(totalDur) + "</b>Spielzeit</div>" +
+      "<div><b>" + categories().length + "</b>Abteilungen</div>";
+    $("#stamp").textContent = datum(data.stamp || Date.now());
+
+    var cats = categories();
+    catsEl.innerHTML = ['<li><button data-cat="*" aria-current="' + (state.cat === "*") + '"><span>Alle Niggunim</span><span class="n">' + entries.length + "</span></button></li>"]
+      .concat(cats.map(function (c) {
+        return '<li><button data-cat="' + esc(c.name) + '" aria-current="' + (state.cat === c.name) + '"><span>' + esc(c.name) + '</span><span class="n">' + c.n + "</span></button></li>";
+      })).join("");
+
+    var wcount = {};
+    entries.forEach(function (e) { wcount[e.world || "-"] = (wcount[e.world || "-"] || 0) + 1; });
+    var wlist = [{ k: "*", l: "Alle" }].concat(WORLDS.filter(function (w) { return wcount[w]; }).map(function (w) { return { k: w, l: w + " " + wcount[w] }; }));
+    if (wcount["-"]) wlist.push({ k: "-", l: "Ohne Welt " + wcount["-"] });
+    $("#worlds").innerHTML = wlist.map(function (w) {
+      return '<button class="chip" type="button" data-world="' + esc(w.k) + '" aria-pressed="' + (state.world === w.k) + '">' + esc(w.l) + "</button>";
+    }).join("");
+
+    var carr = [
+      { k: "*", l: "Alle" },
+      { k: "audio", l: "Klang " + entries.filter(function (e) { return e.audio; }).length },
+      { k: "video", l: "Video " + entries.filter(function (e) { return e.video; }).length },
+      { k: "yt", l: "YouTube " + entries.filter(function (e) { return e.youtube; }).length },
+      { k: "page", l: "Seite " + entries.filter(function (e) { return e.page; }).length },
+      { k: "none", l: "Ohne Aufnahme " + entries.filter(function (e) { return !e.audio && !e.video && !e.youtube; }).length }
+    ];
+    $("#carriers").innerHTML = carr.map(function (c) {
+      return '<button class="chip" type="button" data-carrier="' + esc(c.k) + '" aria-pressed="' + (state.carrier === c.k) + '">' + esc(c.l) + "</button>";
+    }).join("");
+
+    $("#count").textContent = list.length + (list.length === 1 ? " Karte" : " Karten") +
+      (state.q ? " zu „" + state.q + "“" : "") +
+      (state.cat !== "*" ? " in " + state.cat : "") +
+      (state.world !== "*" ? " · " + (state.world === "-" ? "ohne Welt" : state.world) : "");
+
+    if (!list.length) {
+      results.innerHTML = '<div class="empty"><strong>Keine Karte gefunden</strong>' +
+        (entries.length ? "Suchbegriff ändern oder die Filter oben links zurücksetzen."
+                        : "Nehmen Sie über „Niggun aufnehmen“ Ihr erstes Lied in die Sammlung auf.") + "</div>";
+      markPlaying();
+      return;
+    }
+
+    if ((state.sort === "welt" || state.sort === "cat") && state.cat === "*") {
+      var groups = {}, order = [];
+      list.forEach(function (e) {
+        var k = state.sort === "welt" ? (e.world || "Ohne Welt") : (e.category || "Ohne Abteilung");
+        if (!groups[k]) { groups[k] = []; order.push(k); }
+        groups[k].push(e);
+      });
+      results.innerHTML = order.map(function (c) {
+        return '<section class="group" id="' + slugCat(c) + '"><h2>' + esc(c) + " · " + groups[c].length + "</h2>" +
+          '<div class="grid">' + groups[c].map(cardHTML).join("") + "</div></section>";
+      }).join("");
+    } else {
+      results.innerHTML = '<section class="group"><div class="grid">' + list.map(cardHTML).join("") + "</div></section>";
+    }
+    markPlaying();
+  }
+
+  function persist(touch) {
+    if (touch !== false) data.stamp = Date.now();
+    data.entries = entries;
+    if (!store.write({ stamp: data.stamp, entries: entries }) && store.ok === false) {
+      toast("Dieser Browser speichert nichts dauerhaft – bitte gleich exportieren.");
+    }
+    render();
+  }
+  function byId(id) { return entries.filter(function (x) { return x.id === id; })[0]; }
+
+  /* ── Schwebendes Info-Fenster ── */
+  function showHover(card) {
+    var e = byId(card.dataset.id);
+    if (!e) return;
+    var hs = (e.headings || []).slice(0, 7);
+    var more = (e.headings || []).length - hs.length;
+    var tr = [];
+    if (e.page) tr.push("Seite");
+    if (e.audio) tr.push("Klang");
+    if (e.video) tr.push("Video");
+    if (e.youtube) tr.push("YouTube");
+    hover.innerHTML =
+      (e.titleHe ? '<div class="hh">' + esc(e.titleHe) + "</div>" : "") +
+      "<h4>" + esc(e.title || "") + "</h4>" +
+      "<p>" + esc(e.desc || "Noch ohne Beschreibung.") + "</p>" +
+      (hs.length ? '<div class="sub">Abschnitte</div><ul>' + hs.map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") +
+        (more > 0 ? '<li style="color:#5A4E43">und ' + more + " weitere</li>" : "") + "</ul>" : "") +
+      "<dl>" +
+        (e.sefira ? "<dt>Sefira</dt><dd>" + esc(e.sefira) + "</dd>" : "") +
+        (e.maqam ? "<dt>Maqam</dt><dd>" + esc(e.maqam) + (e.bpm ? " · " + esc(e.bpm) + " BPM" : "") + "</dd>" : "") +
+        (e.voicing ? "<dt>Besetzung</dt><dd>" + esc(e.voicing) + "</dd>" : "") +
+        "<dt>Träger</dt><dd>" + (tr.length ? esc(tr.join(" · ")) : "noch keine") + "</dd>" +
+        (e.audio ? "<dt>Klang</dt><dd>" + esc(e.audio) + "</dd>" : "") +
+        (e.video ? "<dt>Video</dt><dd>" + esc(e.video) + "</dd>" : "") +
+        (((e.stats || {}).duration) ? "<dt>Dauer</dt><dd>" + clock(e.stats.duration) + "</dd>" : "") +
+        "<dt>Signatur</dt><dd>" + esc(e.sig || "–") + "</dd>" +
+        "<dt>Aufgenommen</dt><dd>" + datum(e.added) + "</dd>" +
+      "</dl>";
+    hover.setAttribute("aria-hidden", "false");
+    hover.classList.add("on");
+    place(card);
+  }
+  function place(card) {
+    var r = card.getBoundingClientRect();
+    var w = hover.offsetWidth, h = hover.offsetHeight, gap = 12;
+    var left = r.right + gap;
+    if (left + w > window.innerWidth - 8) left = r.left - w - gap;
+    if (left < 8) left = Math.max(8, Math.min(window.innerWidth - w - 8, r.left));
+    var top = r.top;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, window.innerHeight - h - 8);
+    hover.style.left = left + "px";
+    hover.style.top = top + "px";
+  }
+  function hideHover() {
+    hover.classList.remove("on");
+    hover.setAttribute("aria-hidden", "true");
+  }
+  var hoverTimer;
+  results.addEventListener("mouseover", function (ev) {
+    var card = ev.target.closest(".card");
+    if (!card || card === hover._c) return;
+    hover._c = card;
+    clearTimeout(hoverTimer);
+    hoverTimer = setTimeout(function () { showHover(card); }, 150);
+  });
+  results.addEventListener("mouseout", function (ev) {
+    if (ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest(".card") === hover._c) return;
+    hover._c = null;
+    clearTimeout(hoverTimer);
+    hideHover();
+  });
+  results.addEventListener("focusin", function (ev) {
+    var card = ev.target.closest(".card");
+    if (card) { hover._c = card; showHover(card); }
+  });
+  results.addEventListener("focusout", function (ev) {
+    var card = ev.target.closest(".card");
+    if (card && !card.contains(ev.relatedTarget)) hideHover();
+  });
+  window.addEventListener("scroll", function () { if (hover.classList.contains("on") && hover._c) place(hover._c); }, { passive: true });
+
+  /* ══════════ Abspielen ══════════ */
+  var av = $("#av"), vv = $("#vv"), player = $("#player"), stage = $("#stage");
+  var cur = { id: "", kind: "" };
+
+  function activeEl() { return cur.kind === "video" ? vv : av; }
+
+  function markPlaying() {
+    [].slice.call(document.querySelectorAll(".card")).forEach(function (c) {
+      var on = c.dataset.id === cur.id;
+      c.classList.toggle("playing", on && !!cur.kind);
+      [].slice.call(c.querySelectorAll(".slot")).forEach(function (s) {
+        s.classList.toggle("live", on && s.dataset.go === cur.kind);
+      });
+    });
+  }
+
+  function play(e, kind) {
+    var name = kind === "video" ? e.video : e.audio;
+    if (!name) { openEdit(e); return; }
+    var other = kind === "video" ? av : vv;
+    try { other.pause(); } catch (err) {}
+    var el = kind === "video" ? vv : av;
+    if (cur.id === e.id && cur.kind === kind && el.src) {
+      if (el.paused) { el.play(); } else { el.pause(); }
+      return;
+    }
+    cur = { id: e.id, kind: kind };
+    el.src = srcOf(name);
+    $("#p-name").textContent = e.titleHe || e.title || "";
+    $("#p-sub").textContent = [e.title, e.maqam, name].filter(Boolean).join(" · ");
+    $("#p-kind").textContent = kind === "video" ? "Video" : "Klang";
+    $("#p-kind").hidden = !(e.audio && e.video);
+    player.hidden = false;
+    document.body.classList.add("has-player");
+    if (kind === "video") {
+      stage.hidden = false;
+      $("#st-name").textContent = e.title || e.titleHe || "";
+    } else {
+      stage.hidden = true;
+      try { vv.pause(); vv.removeAttribute("src"); vv.load(); } catch (err) {}
+    }
+    el.volume = ($("#p-vol").value || 90) / 100;
+    var p = el.play();
+    if (p && p.catch) p.catch(function () {});
+    markPlaying();
+  }
+
+  function stopPlayer() {
+    try { av.pause(); av.removeAttribute("src"); av.load(); } catch (e) {}
+    try { vv.pause(); vv.removeAttribute("src"); vv.load(); } catch (e) {}
+    player.hidden = true;
+    stage.hidden = true;
+    stage.classList.remove("big");
+    document.body.classList.remove("has-player");
+    cur = { id: "", kind: "" };
+    markPlaying();
+  }
+
+  function step(dir) {
+    var list = filtered().filter(function (e) { return cur.kind === "video" ? e.video : e.audio; });
+    if (!list.length) { toast("Keine weitere Aufnahme in dieser Auswahl."); return; }
+    var i = -1;
+    list.forEach(function (e, k) { if (e.id === cur.id) i = k; });
+    var n = list[(i + dir + list.length) % list.length];
+    play(n, cur.kind || "audio");
+  }
+
+  function bindMedia(el) {
+    el.addEventListener("timeupdate", function () {
+      if (el !== activeEl()) return;
+      var d = el.duration || 0;
+      $("#p-pos").value = d ? Math.round((el.currentTime / d) * 1000) : 0;
+      $("#p-time").textContent = clock(el.currentTime) + " / " + (d ? clock(d) : "–:–");
+    });
+    el.addEventListener("loadedmetadata", function () {
+      if (el !== activeEl()) return;
+      var e = byId(cur.id);
+      if (e && el.duration && isFinite(el.duration) && cur.kind === "audio") {
+        e.stats = e.stats || {};
+        if (Math.abs((e.stats.duration || 0) - el.duration) > 1) { e.stats.duration = Math.round(el.duration); persist(false); }
+      }
+    });
+    el.addEventListener("play", function () { $("#p-play").textContent = "❚❚"; markPlaying(); });
+    el.addEventListener("pause", function () { $("#p-play").textContent = "▶"; });
+    el.addEventListener("ended", function () { $("#p-play").textContent = "▶"; step(1); });
+    el.addEventListener("error", function () {
+      if (el !== activeEl()) return;
+      var e = byId(cur.id);
+      var f = e ? (cur.kind === "video" ? e.video : e.audio) : "";
+      toast("Datei nicht gefunden: " + f + " — liegt sie im selben Ordner wie diese Seite?");
+    });
+  }
+  bindMedia(av); bindMedia(vv);
+
+  $("#p-play").addEventListener("click", function () {
+    var el = activeEl();
+    if (!el.src) return;
+    if (el.paused) el.play(); else el.pause();
+  });
+  $("#p-prev").addEventListener("click", function () { step(-1); });
+  $("#p-next").addEventListener("click", function () { step(1); });
+  $("#p-close").addEventListener("click", stopPlayer);
+  $("#p-pos").addEventListener("input", function () {
+    var el = activeEl();
+    if (el.duration) el.currentTime = (this.value / 1000) * el.duration;
+  });
+  $("#p-vol").addEventListener("input", function () { av.volume = vv.volume = this.value / 100; });
+  $("#p-kind").addEventListener("click", function () {
+    var e = byId(cur.id);
+    if (!e) return;
+    play(e, cur.kind === "video" ? "audio" : "video");
+  });
+  $("#st-close").addEventListener("click", function () {
+    try { vv.pause(); } catch (e) {}
+    stage.hidden = true;
+  });
+  $("#st-size").addEventListener("click", function () {
+    stage.classList.toggle("big");
+    this.textContent = stage.classList.contains("big") ? "Klein" : "Groß";
+  });
+
+  /* ── Lesefenster: Text mitlesen ── */
+  var read = $("#read");
+  function isLocal() { return location.protocol === "file:"; }
+
+  function openRead(e) {
+    if (!e || !e.page) { if (e) openEdit(e, "page"); return; }
+    var url = srcOf(e.page);
+    $("#rd-name").textContent = e.titleHe || e.title || "";
+    $("#rd-sub").textContent = e.titleHe ? (e.title || "") : (e.maqam || "");
+    $("#rd-new").href = url;
+    var f = $("#rd-frame"), warn = $("#rd-warn");
+    warn.hidden = true;
+    clearTimeout(openRead._t);
+    openRead._t = setTimeout(function () { warn.hidden = false; }, 3500);
+    f.onload = function () { clearTimeout(openRead._t); warn.hidden = true; };
+    f.src = url;
+    read._url = url;
+    read._id = e.id;
+    read.hidden = false;
+    hideHover();
+    $("#rd-close").focus();
+  }
+  function closeRead() {
+    clearTimeout(openRead._t);
+    $("#rd-frame").removeAttribute("src");
+    $("#rd-warn").hidden = true;
+    read.hidden = true;
+  }
+  $("#rd-close").addEventListener("click", closeRead);
+  $("#rd-edit").addEventListener("click", function () {
+    var e = byId(read._id);
+    if (e) openEditor(e, true);
+  });
+  $("#rd-warn-open").addEventListener("click", function () {
+    window.open(read._url, "_blank", "noopener");
+    toast("Die Seite läuft im eigenen Fenster – der Klang bleibt in diesem Fenster.");
+  });
+  $("#rd-new").addEventListener("click", function () {
+    toast("Der Klang läuft in diesem Fenster weiter – lassen Sie es geöffnet.");
+  });
+  $("#p-read").addEventListener("click", function () {
+    var e = byId(cur.id);
+    if (!e) return;
+    if (!e.page) { toast("Zu diesem Niggun ist noch keine Seite hinterlegt."); return; }
+    openRead(e);
+  });
+
+  /* ── YouTube ── */
+  var yt = $("#yt");
+  function openYT(e) {
+    var id = ytId(e.youtube);
+    if (!id) { toast("Dieser YouTube-Verweis lässt sich nicht lesen."); return; }
+    if (isLocal()) {
+      window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener");
+      toast("YouTube lässt sich aus einer lokalen Datei nicht einbetten (Fehler 153) – die Aufnahme wurde in einem neuen Tab geöffnet.");
+      return;
+    }
+    $("#yt-name").textContent = e.title || e.titleHe || "";
+    $("#yt-open").href = "https://www.youtube.com/watch?v=" + id;
+    $("#yt-frame").src = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&autoplay=1";
+    yt.hidden = false;
+  }
+  function closeYT() {
+    $("#yt-frame").removeAttribute("src");
+    yt.hidden = true;
+  }
+  $("#yt-close").addEventListener("click", closeYT);
+  yt.addEventListener("mousedown", function (ev) { if (ev.target === yt) closeYT(); });
+
+  /* ── Karten-Aktionen ── */
+  results.addEventListener("click", function (ev) {
+    var go = ev.target.closest("[data-go]");
+    var act = ev.target.closest("[data-act]");
+    var card = ev.target.closest(".card");
+    if (!card) return;
+    var e = byId(card.dataset.id);
+    if (!e) return;
+
+    var link = ev.target.closest("h3 a");
+    if (link) {
+      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button > 0) return;
+      ev.preventDefault();
+      openRead(e);
+      return;
+    }
+
+    if (go) {
+      var k = go.dataset.go;
+      if (k === "page") {
+        openRead(e);
+      } else if (k === "yt") {
+        if (e.youtube) openYT(e); else openEdit(e, "youtube");
+      } else if (k === "audio") {
+        if (e.audio) play(e, "audio"); else openEdit(e, "audio");
+      } else if (k === "video") {
+        if (e.video) play(e, "video"); else openEdit(e, "video");
+      }
+      return;
+    }
+    if (!act) return;
+    if (act.dataset.act === "page") { openEditor(e); return; }
+    if (act.dataset.act === "del") {
+      if (confirm("„" + (e.title || e.titleHe) + "“ aus der Sammlung nehmen?\n\nDie Dateien selbst bleiben unberührt.")) {
+        if (cur.id === e.id) stopPlayer();
+        entries = entries.filter(function (x) { return x.id !== e.id; });
+        hideHover();
+        persist();
+        toast("Karte entfernt. Zum Festschreiben den Index exportieren.");
+      }
+    } else {
+      openEdit(e);
+    }
+  });
+
+  /* ── Bedienung ── */
+  $("#q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+  $("#sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
+  catsEl.addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-cat]");
+    if (!b) return;
+    state.cat = b.dataset.cat;
+    render();
+  });
+  $("#worlds").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-world]");
+    if (!b) return;
+    state.world = (state.world === b.dataset.world) ? "*" : b.dataset.world;
+    render();
+  });
+  $("#carriers").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-carrier]");
+    if (!b) return;
+    state.carrier = (state.carrier === b.dataset.carrier) ? "*" : b.dataset.carrier;
+    render();
+  });
+
+  /* ══════════ Dateien lesen ══════════ */
+  function parsePage(text, name, path) {
+    var doc = new DOMParser().parseFromString(text, "text/html");
+    function pick(sel) {
+      var n = doc.querySelector(sel);
+      return n ? n.textContent.replace(/\s+/g, " ").trim() : "";
+    }
+    function all(sel, max) {
+      return [].slice.call(doc.querySelectorAll(sel)).map(function (n) {
+        return n.textContent.replace(/\s+/g, " ").trim();
+      }).filter(Boolean).slice(0, max || 40);
+    }
+    var titleHe = pick(".page-title-he") || pick("h1.page-title-he") || pick(".nav-brand-main");
+    var titleDe = pick(".page-title-de");
+    var docTitle = pick("title");
+    var h1 = pick("h1");
+    var eyebrow = pick(".eyebrow");
+    var maqamRaw = pick(".maqam-badge") || pick(".maqam");
+    var sefira = pick(".sefira-badge") || pick(".song-meta");
+    var voicing = pick(".nav-brand-sub");
+    var desc = "";
+    var d = doc.querySelector(".page-desc");
+    if (d) desc = d.textContent.replace(/\s+/g, " ").trim();
+    if (!desc) {
+      var meta = doc.querySelector('meta[name="description"]');
+      desc = meta ? (meta.getAttribute("content") || "") : "";
+    }
+    if (!desc) {
+      var p = doc.querySelector("main p, article p, body p");
+      desc = p ? p.textContent.replace(/\s+/g, " ").trim().slice(0, 360) : "";
+    }
+    var heads = all(".section-label");
+    if (!heads.length) heads = all(".sefira-nav-item .sn-de");
+    if (!heads.length) heads = all("h2, h3");
+    var tags = all(".mitzva-tag", 6);
+    var bpm = "";
+    var mb = (maqamRaw || "").match(/(\d{2,3})\s*BPM/i);
+    if (mb) bpm = mb[1];
+    var maqam = (maqamRaw || "").replace(/·?\s*(Rubato|Puls|Tempo)?\s*≈?\s*\d{2,3}\s*BPM/i, "").replace(/\s*·\s*$/, "").trim();
+    if (!titleHe) titleHe = hebOf(h1) || hebOf(docTitle);
+    var titleLat = titleDe || docTitle.split("·")[0].replace(/[\u0590-\u05FF][\u0590-\u05FF\s'"״׳\-–־]*/g, "").replace(/[·|–-]\s*$/, "").replace(/\s+/g, " ").trim();
+    if (!titleLat) titleLat = base(name);
+    var cat = (eyebrow ? eyebrow.split("·")[0].trim() : "") || guessCat([docTitle, h1, name, eyebrow].join(" "));
+    return {
+      id: "n-" + Math.random().toString(36).slice(2, 9),
+      sig: "",
+      title: titleLat,
+      titleHe: titleHe,
+      category: cat,
+      world: worldOf([eyebrow, sefira, voicing, docTitle].join(" ")),
+      maqam: maqam,
+      bpm: bpm,
+      sefira: sefira,
+      voicing: voicing,
+      desc: desc,
+      tags: tags,
+      headings: heads,
+      page: path || name,
+      audio: "",
+      video: "",
+      youtube: "",
+      stats: { links: doc.querySelectorAll("a").length, sections: heads.length, bytes: text.length, duration: 0 },
+      lang: doc.documentElement.getAttribute("lang") || "",
+      added: Date.now(),
+      updated: Date.now()
+    };
+  }
+
+  function blankEntry(name, path) {
+    var nice = base(name).replace(/[_]+/g, " ").replace(/\s+/g, " ").trim();
+    return {
+      id: "n-" + Math.random().toString(36).slice(2, 9),
+      sig: "", title: nice, titleHe: hebOf(nice), category: "Niggun", world: "",
+      maqam: "", bpm: "", sefira: "", voicing: "", desc: "", tags: [], headings: [],
+      page: "", audio: "", video: "", youtube: "",
+      stats: { links: 0, sections: 0, bytes: 0, duration: 0 },
+      lang: "", added: Date.now(), updated: Date.now()
+    };
+  }
+
+  function readDuration(file, kind, cb) {
+    var url = "";
+    try { url = URL.createObjectURL(file); } catch (e) { cb(0); return; }
+    if (!url) { cb(0); return; }
+    BLOBS[file.name] = url;
+    var el = document.createElement(kind === "video" ? "video" : "audio");
+    el.preload = "metadata";
+    var done = false;
+    var finish = function (d) { if (done) return; done = true; cb(d || 0); };
+    el.addEventListener("loadedmetadata", function () { finish(isFinite(el.duration) ? Math.round(el.duration) : 0); });
+    el.addEventListener("error", function () { finish(0); });
+    setTimeout(function () { finish(0); }, 6000);
+    el.src = url;
+  }
+
+  function matchEntry(pool, name) {
+    var n = normName(name), t = latinTail(name);
+    var hit = null;
+    pool.forEach(function (e) {
+      if (hit) return;
+      var cands = [e.page, e.audio, e.video, e.title, e.titleHe].filter(Boolean);
+      for (var i = 0; i < cands.length; i++) {
+        var cn = normName(cands[i]);
+        if (cn && (cn === n || (n.length > 5 && cn.indexOf(n) === 0) || (cn.length > 5 && n.indexOf(cn) === 0))) { hit = e; return; }
+        if (t && t.length > 4 && latinTail(cands[i]) === t) { hit = e; return; }
+      }
+    });
+    return hit;
+  }
+
+  function readFiles(files) {
+    var list = [].slice.call(files).filter(function (f) {
+      if (PAGE_EXT.test(f.name)) return f.name.toLowerCase() !== SELF;
+      return AUDIO_EXT.test(f.name) || VIDEO_EXT.test(f.name);
+    });
+    if (!list.length) { toast("Keine passenden Dateien dabei – erwartet werden HTML, WAV, MP3 oder MP4."); return; }
+
+    var pages = list.filter(function (f) { return PAGE_EXT.test(f.name); });
+    var media = list.filter(function (f) { return !PAGE_EXT.test(f.name); });
+    var fresh = [];
+    var left = pages.length + media.length;
+
+    function relOf(f) {
+      var rel = f.webkitRelativePath || "";
+      if (rel) rel = rel.split("/").slice(1).join("/") || f.name;
+      return rel || f.name;
+    }
+    function finish() {
+      if (--left > 0) return;
+      /* Aufnahmen den Seiten zuordnen */
+      media.forEach(function (m) {
+        var kind = VIDEO_EXT.test(m.name) ? "video" : "audio";
+        var target = matchEntry(fresh, m.name) || matchEntry(entries, m.name);
+        if (target && fresh.indexOf(target) < 0 && entries.indexOf(target) > -1) {
+          var copy = JSON.parse(JSON.stringify(target));
+          copy._update = true;
+          fresh.push(copy);
+          target = copy;
+        }
+        if (!target) {
+          target = blankEntry(m.name, relOf(m));
+          fresh.push(target);
+        }
+        target[kind] = relOf(m);
+        target.stats = target.stats || {};
+        target.stats[kind === "video" ? "videoBytes" : "audioBytes"] = m.size;
+        if (m._dur) target.stats.duration = m._dur;
+      });
+      if (!fresh.length) { toast("Nichts Neues gefunden."); return; }
+      openDialog("add", fresh);
+    }
+
+    if (!left) { toast("Nichts zu lesen."); return; }
+
+    pages.forEach(function (f) {
+      var fr = new FileReader();
+      fr.onload = function () {
+        var n = parsePage(String(fr.result), f.name, relOf(f));
+        var old = entries.filter(function (e) { return e.page === n.page; })[0];
+        if (old) {
+          n.id = old.id; n.sig = old.sig; n.added = old.added;
+          n.audio = old.audio; n.video = old.video; n.youtube = old.youtube;
+          n.tags = (n.tags && n.tags.length) ? n.tags : old.tags;
+          n.stats.duration = (old.stats || {}).duration || 0;
+          if (old.desc && old.desc.length > (n.desc || "").length) n.desc = old.desc;
+          n._update = true;
+        }
+        fresh.push(n);
+        finish();
+      };
+      fr.onerror = function () { finish(); };
+      fr.readAsText(f, "UTF-8");
+    });
+
+    media.forEach(function (f) {
+      readDuration(f, VIDEO_EXT.test(f.name) ? "video" : "audio", function (d) {
+        f._dur = d;
+        finish();
+      });
+    });
+  }
+
+  /* ══════════ Dialog ══════════ */
+  function openDialog(m, list) {
+    mode = m;
+    pending = list || [];
+    $("#dlg-title").textContent = m === "edit" ? "Karte bearbeiten" : "Niggun aufnehmen";
+    $("#dlg-note").textContent = m === "edit"
+      ? "Angaben und Träger anpassen. Die Dateien selbst bleiben unverändert."
+      : "Legen Sie Seiten und Aufnahmen ab — HTML, WAV, MP3, MP4. Gleichnamige Dateien werden zu einer Karte zusammengelegt.";
+    $("#dropwrap").hidden = (m === "edit" || pending.length > 0);
+    $("#dlg-save").hidden = pending.length === 0;
+    renderForms();
+    if (!dlg.open) dlg.showModal();
+  }
+  function openEdit(e, focusField) {
+    hideHover();
+    openDialog("edit", [JSON.parse(JSON.stringify(e))]);
+    if (focusField) {
+      var el = document.querySelector('form.entry [name="' + (focusField === "page" ? "page" : focusField) + '"]');
+      if (el) { el.focus(); if (el.scrollIntoView) el.scrollIntoView({ block: "center" }); }
+    }
+  }
+
+  function field(label, name, val, extra) {
+    return "<label>" + esc(label) + "</label><input name=\"" + name + "\" value=\"" + esc(val || "") + "\" " + (extra || "") + ">";
+  }
+  function pickRow(label, name, val, kind) {
+    return '<label>' + esc(label) + '</label><div class="pick">' +
+      '<input name="' + name + '" value="' + esc(val || "") + '" placeholder="Dateiname im selben Ordner">' +
+      '<button type="button" class="btn ghost" data-pick="' + name + '" data-kind="' + kind + '">Datei wählen</button></div>';
+  }
+
+  function renderForms() {
+    $("#forms").innerHTML = pending.map(function (e, i) {
+      var st = e.stats || {};
+      return '<form class="entry" data-i="' + i + '" onsubmit="return false">' +
+        '<div class="file">' + esc(e.page || e.audio || e.video || "Neue Karte") + (e._update ? " · vorhandene Karte wird ergänzt" : "") + "</div>" +
+        '<div class="row">' +
+          "<div>" + field("Titel (lateinisch)", "title", e.title) + "</div>" +
+          "<div>" + field("Titel (hebräisch)", "titleHe", e.titleHe, 'dir="rtl"') + "</div>" +
+        "</div>" +
+        '<div class="row3">' +
+          "<div>" + field("Abteilung", "category", e.category, 'list="catopts"') + "</div>" +
+          "<div>" + field("Welt", "world", e.world, 'list="worldopts"') + "</div>" +
+          "<div>" + field("Maqam", "maqam", e.maqam) + "</div>" +
+        "</div>" +
+        '<div class="row3">' +
+          "<div>" + field("BPM", "bpm", e.bpm, 'inputmode="numeric"') + "</div>" +
+          "<div>" + field("Sefira", "sefira", e.sefira, 'dir="rtl"') + "</div>" +
+          "<div>" + field("Besetzung", "voicing", e.voicing) + "</div>" +
+        "</div>" +
+        field("Schlagwörter (Komma)", "tags", (e.tags || []).join(", ")) +
+        "<label>Beschreibung</label><textarea name=\"desc\">" + esc(e.desc || "") + "</textarea>" +
+        '<div class="carrier"><b>Träger</b>' +
+          pickRow("Seite (HTML)", "page", e.page, "page") +
+          pickRow("Klang (WAV, MP3)", "audio", e.audio, "audio") +
+          pickRow("Video (MP4)", "video", e.video, "video") +
+          "<label>YouTube-Verweis</label><input name=\"youtube\" value=\"" + esc(e.youtube || "") + "\" placeholder=\"https://www.youtube.com/watch?v=…\">" +
+        "</div>" +
+        '<p class="stat">' + ((e.headings || []).length) + " Abschnitte · " + (st.duration ? clock(st.duration) + " Spielzeit · " : "") +
+          (st.bytes ? bytes(st.bytes) + " Seite" : "ohne Seite") + "</p>" +
+        "</form>";
+    }).join("");
+    datalist("catopts", categories().map(function (c) { return c.name; }).concat(["Piyut", "Niggun", "Zemirot", "Tehillim", "Tefilla", "Midrasch-Lieder", "Kinot"]));
+    datalist("worldopts", WORLDS);
+  }
+  function datalist(id, vals) {
+    var dl = document.getElementById(id);
+    if (!dl) { dl = document.createElement("datalist"); dl.id = id; document.body.appendChild(dl); }
+    var seen = {};
+    dl.innerHTML = vals.filter(function (v) { if (!v || seen[v]) return false; seen[v] = 1; return true; })
+      .map(function (v) { return '<option value="' + esc(v) + '">'; }).join("");
+  }
+
+  /* Datei für einen Träger wählen */
+  var pickTarget = null;
+  $("#forms").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-pick]");
+    if (!b) return;
+    pickTarget = { form: b.closest("form.entry"), name: b.dataset.pick, kind: b.dataset.kind };
+    var inp = $("#mediainput");
+    inp.accept = pickTarget.kind === "page" ? ".html,.htm" : (pickTarget.kind === "video" ? "video/*" : "audio/*");
+    inp.click();
+  });
+  $("#mediainput").addEventListener("change", function (ev) {
+    var f = ev.target.files[0];
+    ev.target.value = "";
+    if (!f || !pickTarget) return;
+    var form = pickTarget.form, nm = pickTarget.name, kind = pickTarget.kind;
+    var el = form.elements.namedItem(nm);
+    if (el) el.value = f.name;
+    if (kind !== "page") {
+      readDuration(f, kind, function (d) {
+        var e = pending[+form.dataset.i];
+        if (e && d) { e.stats = e.stats || {}; e.stats.duration = d; }
+        toast(f.name + (d ? " · " + clock(d) : "") + " zugeordnet.");
+      });
+    } else {
+      toast(f.name + " zugeordnet.");
+    }
+    pickTarget = null;
+  });
+
+  $("#dlg-save").addEventListener("click", function () {
+    [].slice.call(document.querySelectorAll("form.entry")).forEach(function (f) {
+      var e = pending[+f.dataset.i];
+      var v = function (n) { var el = f.elements.namedItem(n); return el ? el.value.trim() : ""; };
+      e.title = v("title") || base(e.page || e.audio || e.video) || "Ohne Titel";
+      e.titleHe = v("titleHe");
+      e.category = v("category") || "Niggun";
+      e.world = v("world");
+      e.maqam = v("maqam");
+      e.bpm = v("bpm").replace(/[^\d]/g, "");
+      e.sefira = v("sefira");
+      e.voicing = v("voicing");
+      e.tags = v("tags").split(",").map(function (t) { return t.trim(); }).filter(Boolean);
+      e.desc = v("desc");
+      e.page = v("page");
+      e.audio = v("audio");
+      e.video = v("video");
+      e.youtube = v("youtube");
+      e.updated = Date.now();
+    });
+    var added = 0, upd = 0;
+    pending.forEach(function (e) {
+      delete e._update;
+      var idx = -1;
+      entries.forEach(function (x, i) {
+        if (x.id === e.id || (e.page && x.page === e.page) || (e.audio && x.audio === e.audio)) idx = i;
+      });
+      if (!e.sig) e.sig = nextSig(e.category);
+      if (idx > -1) { entries[idx] = e; upd++; } else { entries.push(e); added++; }
+    });
+    dlg.close();
+    persist();
+    toast((added ? added + " Karte(n) aufgenommen. " : "") + (upd ? upd + " ergänzt. " : "") + "Zum Festschreiben den Index exportieren.");
+  });
+
+  $("#dlg-cancel").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("close", function () { pending = []; $("#forms").innerHTML = ""; });
+  $("#btn-add").addEventListener("click", function () { openDialog("add", []); });
+
+  var drop = $("#drop");
+  drop.addEventListener("click", function () { $("#fileinput").click(); });
+  drop.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("#fileinput").click(); } });
+  ["dragenter", "dragover"].forEach(function (n) {
+    drop.addEventListener(n, function (e) { e.preventDefault(); drop.classList.add("hot"); });
+  });
+  ["dragleave", "drop"].forEach(function (n) {
+    drop.addEventListener(n, function (e) { e.preventDefault(); drop.classList.remove("hot"); });
+  });
+  drop.addEventListener("drop", function (e) { if (e.dataTransfer.files.length) readFiles(e.dataTransfer.files); });
+  $("#fileinput").addEventListener("change", function (e) { if (e.target.files.length) readFiles(e.target.files); e.target.value = ""; });
+  $("#btn-folder").addEventListener("click", function () { $("#folderinput").click(); });
+  $("#folderinput").addEventListener("change", function (e) { if (e.target.files.length) readFiles(e.target.files); e.target.value = ""; });
+
+  ["dragover", "drop"].forEach(function (n) {
+    document.addEventListener(n, function (e) {
+      if (!e.dataTransfer || !e.dataTransfer.types || [].indexOf.call(e.dataTransfer.types, "Files") < 0) return;
+      e.preventDefault();
+      if (n === "drop" && !dlg.open) readFiles(e.dataTransfer.files);
+    });
+  });
+
+  /* ══════════ Sichern ══════════ */
+  function download(text, name, type) {
+    var b = new Blob([text], { type: (type || "text/html") + ";charset=utf-8" });
+    var u = URL.createObjectURL(b);
+    var a = document.createElement("a");
+    a.href = u; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(u); }, 1500);
+  }
+
+  $("#btn-export").addEventListener("click", function () {
+    if (ED.dirty && !confirm("Der Editor hat ungespeicherte Änderungen an der Seite.\n\nTrotzdem den Index exportieren? Die Seitenänderungen bleiben als Entwurf erhalten.")) return;
+    var wasPlaying = cur.id;
+    stopPlayer();
+    closeYT();
+    closeRead();
+    if (!edWrap.hidden) { ED.dirty = false; closeEditor(); }
+    var clone = document.documentElement.cloneNode(true);
+    clone.querySelector("#seed").textContent = "\n" + JSON.stringify({ stamp: Date.now(), entries: entries }, null, 2) + "\n";
+    [].slice.call(clone.querySelectorAll("[data-runtime]")).forEach(function (el) { el.innerHTML = ""; });
+    [].slice.call(clone.querySelectorAll("dialog")).forEach(function (d) { d.removeAttribute("open"); });
+    [].slice.call(clone.querySelectorAll("datalist")).forEach(function (d) { d.remove(); });
+    ["#player", "#stage", "#yt", "#read", "#rd-warn", "#edit", "#ed-findbar", "#ed-dirty", "#ed-src"].forEach(function (s) { var n = clone.querySelector(s); if (n) n.setAttribute("hidden", ""); });
+    ["#ed-fmt", "#ed-frame"].forEach(function (s) { var n = clone.querySelector(s); if (n) n.removeAttribute("hidden"); });
+    var ef = clone.querySelector("#ed-frame");
+    if (ef) { ef.removeAttribute("srcdoc"); ef.removeAttribute("src"); }
+    ["#ed-undo", "#ed-redo"].forEach(function (s) { var n = clone.querySelector(s); if (n) n.removeAttribute("disabled"); });
+    var fb = clone.querySelector("#ed-folder");
+    if (fb) { fb.textContent = "Ordner verbinden"; fb.setAttribute("aria-pressed", "false"); }
+    [].slice.call(clone.querySelectorAll("#rd-new, #yt-open")).forEach(function (a) { a.setAttribute("href", "#"); });
+    [].slice.call(clone.querySelectorAll("audio,video,iframe")).forEach(function (n) { n.removeAttribute("src"); });
+    var b = clone.querySelector("body");
+    if (b) b.className = "";
+    var st = clone.querySelector("#stage");
+    if (st) st.className = "";
+    var out = "<!DOCTYPE html>\n" + clone.outerHTML;
+    download(out, "index.html");
+    toast("index.html gespeichert – legen Sie die Datei über die alte im Sammlungsordner." + (wasPlaying ? " Die Wiedergabe wurde dafür angehalten." : ""));
+  });
+
+  $("#btn-json").addEventListener("click", function () {
+    download(JSON.stringify({ stamp: Date.now(), entries: entries }, null, 2), "niggun-sammlung.json", "application/json");
+  });
+  $("#btn-import-json").addEventListener("click", function () { $("#jsoninput").click(); });
+  $("#jsoninput").addEventListener("change", function (ev) {
+    var f = ev.target.files[0]; if (!f) return;
+    var fr = new FileReader();
+    fr.onload = function () {
+      try {
+        var d = JSON.parse(String(fr.result));
+        if (!d.entries || !d.entries.length) throw 0;
+        entries = d.entries;
+        persist();
+        toast(entries.length + " Karten eingelesen.");
+      } catch (e) { toast("Diese Datei enthält keine Sammlungsdaten."); }
+    };
+    fr.readAsText(f, "UTF-8");
+    ev.target.value = "";
+  });
+
+  $("#btn-reset").addEventListener("click", function () {
+    if (!confirm("Alle Änderungen in diesem Browser verwerfen und den Stand aus der Datei laden?")) return;
+    store.clear();
+    entries = JSON.parse(JSON.stringify(seed.entries));
+    data = { stamp: seed.stamp, entries: entries };
+    stopPlayer();
+    render();
+    toast("Stand aus der Datei geladen.");
+  });
+
+  /* ══════════════════════════════════════════════════════════
+     SEITENEDITOR — visuell auf der Seite oder im Quelltext
+     ══════════════════════════════════════════════════════════ */
+  var edWrap = $("#edit"), edFrame = $("#ed-frame"), edSrc = $("#ed-src");
+  var ED = { entry: null, name: "", handle: null, orig: "", dirty: false, mode: "visual",
+             hist: [], hpos: -1, sel: null, fromRead: false, backup: {} };
+  var dirHandle = null, dirPending = null;
+  var OFF = ' type="text/nig-off"';
+
+  function isLocalFile() { return location.protocol === "file:"; }
+
+  /* ── Ordnerzugriff dauerhaft merken ── */
+  function idbOpen(cb) {
+    try {
+      var r = indexedDB.open("niggun-fs", 1);
+      r.onupgradeneeded = function () { try { r.result.createObjectStore("h"); } catch (e) {} };
+      r.onsuccess = function () { cb(r.result); };
+      r.onerror = function () { cb(null); };
+    } catch (e) { cb(null); }
+  }
+  function idbGet(cb) {
+    idbOpen(function (db) {
+      if (!db) { cb(null); return; }
+      try {
+        var q = db.transaction("h", "readonly").objectStore("h").get("dir");
+        q.onsuccess = function () { cb(q.result || null); };
+        q.onerror = function () { cb(null); };
+      } catch (e) { cb(null); }
+    });
+  }
+  function idbPut(v) {
+    idbOpen(function (db) {
+      if (!db) return;
+      try { db.transaction("h", "readwrite").objectStore("h").put(v, "dir"); } catch (e) {}
+    });
+  }
+  function markFolder() {
+    var b = $("#ed-folder");
+    if (dirHandle) { b.textContent = "Ordner ✓ " + dirHandle.name; b.setAttribute("aria-pressed", "true"); }
+    else { b.textContent = dirPending ? "Ordner freigeben" : "Ordner verbinden"; b.setAttribute("aria-pressed", "false"); }
+  }
+  function connectFolder() {
+    if (dirPending && dirPending.requestPermission) {
+      return dirPending.requestPermission({ mode: "readwrite" }).then(function (p) {
+        if (p === "granted") { dirHandle = dirPending; dirPending = null; markFolder(); toast("Ordner „" + dirHandle.name + "“ wieder freigegeben."); return dirHandle; }
+        return pickFolder();
+      }).catch(function () { return pickFolder(); });
+    }
+    return pickFolder();
+  }
+  function pickFolder() {
+    if (!window.showDirectoryPicker) {
+      toast("Dieser Browser kann keinen Ordner verbinden. Gespeichert wird dann als Download – Chrome oder Edge schreiben direkt in die Datei.");
+      return Promise.resolve(null);
+    }
+    return window.showDirectoryPicker({ mode: "readwrite" }).then(function (h) {
+      dirHandle = h; dirPending = null; idbPut(h); markFolder();
+      toast("Ordner „" + h.name + "“ verbunden – Speichern schreibt jetzt direkt in die Datei.");
+      return h;
+    }).catch(function (err) {
+      if (err && err.name !== "AbortError") toast("Der Ordner ließ sich nicht verbinden: " + (err.message || err.name));
+      return null;
+    });
+  }
+  function handleFor(path, create) {
+    if (!dirHandle) return Promise.reject(new Error("kein Ordner verbunden"));
+    var parts = String(path).split("/").filter(Boolean);
+    var file = parts.pop();
+    var p = Promise.resolve(dirHandle);
+    parts.forEach(function (seg) { p = p.then(function (d) { return d.getDirectoryHandle(seg, { create: !!create }); }); });
+    return p.then(function (d) { return d.getFileHandle(file, { create: !!create }); });
+  }
+
+  /* ── Datei holen ── */
+  function loadText(e) {
+    if (dirHandle) {
+      return handleFor(e.page).then(function (fh) { ED.handle = fh; return fh.getFile(); })
+        .then(function (f) { return f.text(); })
+        .catch(function () {
+          toast("Im verbundenen Ordner fand sich „" + e.page + "“ nicht – bitte von Hand wählen.");
+          return pickText(e);
+        });
+    }
+    return pickText(e);
+  }
+  function pickText(e) {
+    if (window.showOpenFilePicker) {
+      return window.showOpenFilePicker({ multiple: false, types: [{ description: "HTML-Seite", accept: { "text/html": [".html", ".htm"] } }] })
+        .then(function (hs) { ED.handle = hs[0]; return hs[0].getFile(); })
+        .then(function (f) { return f.text(); })
+        .catch(function (err) {
+          if (err && err.name === "AbortError") return null;
+          return inputText(e);
+        });
+    }
+    return inputText(e);
+  }
+  function inputText(e) {
+    return new Promise(function (res) {
+      var inp = $("#pageinput");
+      inp.onchange = function (ev) {
+        var f = ev.target.files[0];
+        ev.target.value = "";
+        if (!f) { res(null); return; }
+        var want = String(e.page).split("/").pop();
+        if (f.name !== want) toast("Hinweis: gewählt wurde „" + f.name + "“, die Karte verweist auf „" + want + "“.");
+        var fr = new FileReader();
+        fr.onload = function () { res(String(fr.result)); };
+        fr.onerror = function () { res(null); };
+        fr.readAsText(f, "UTF-8");
+      };
+      inp.click();
+    });
+  }
+
+  /* ── Öffnen und Schließen ── */
+  function openEditor(e, fromRead) {
+    if (!e) return;
+    if (!e.page) { toast("Zu diesem Niggun ist noch keine Seite hinterlegt."); openEdit(e, "page"); return; }
+    ED.fromRead = !!fromRead;
+    ED.entry = e; ED.name = e.page; ED.handle = null; ED.sel = null;
+    $("#ed-file").textContent = e.page;
+    $("#ed-fstat").textContent = "";
+    $("#ed-findbar").hidden = true;
+    markFolder();
+    toast("Seite wird geöffnet …");
+    loadText(e).then(function (txt) {
+      if (txt == null) { toast("Es wurde keine Datei geöffnet."); return; }
+      var d = draftGet(e.page);
+      if (d && d.html && d.html !== txt &&
+          confirm("Für diese Seite liegt ein ungespeicherter Entwurf vom " + new Date(d.ts).toLocaleString("de-AT") + " vor.\n\nEntwurf weiterbearbeiten? (Abbrechen lädt die gespeicherte Datei.)")) {
+        txt = d.html;
+      } else {
+        draftClear(e.page);
+      }
+      ED.orig = txt;
+      hideHover();
+      closeRead();
+      edWrap.hidden = false;
+      setDirty(false);
+      histReset(txt);
+      setMode("visual", txt);
+    });
+  }
+  function closeEditor() {
+    if (ED.dirty && !confirm("Es gibt ungespeicherte Änderungen.\n\nEditor trotzdem schließen? Der Entwurf bleibt erhalten und wird beim nächsten Öffnen angeboten.")) return;
+    if (ED.dirty) draftSave();
+    var e = ED.entry, back = ED.fromRead;
+    edWrap.hidden = true;
+    edFrame.removeAttribute("srcdoc");
+    edSrc.value = "";
+    ED.entry = null; ED.handle = null; ED.sel = null; ED.hist = []; ED.hpos = -1; ED.orig = "";
+    setDirty(false);
+    if (back && e) { var live = byId(e.id); if (live) openRead(live); }
+  }
+
+  /* ── Ansichten ── */
+  function setMode(m, text) {
+    var html = (text != null) ? text : currentHTML();
+    ED.mode = m;
+    $("#ed-visual").setAttribute("aria-pressed", String(m === "visual"));
+    $("#ed-source").setAttribute("aria-pressed", String(m === "source"));
+    $("#ed-fmt").hidden = (m !== "visual");
+    if (m === "visual") {
+      edSrc.hidden = true; edFrame.hidden = false;
+      renderFrame(html);
+    } else {
+      edFrame.hidden = true; edSrc.hidden = false;
+      edSrc.value = html;
+      selectEl(null);
+    }
+  }
+  function currentHTML() {
+    return ED.mode === "source" ? edSrc.value : serializeFrame();
+  }
+  function renderFrame(html) {
+    var prep = String(html).replace(/<script(\s|>)/gi, "<script" + OFF + "$1");
+    edFrame.onload = function () { prepFrame(); };
+    try { edFrame.srcdoc = prep; } catch (e) {}
+    clearTimeout(renderFrame._t);
+    renderFrame._t = setTimeout(function () {
+      var doc = edFrame.contentDocument;
+      if (doc && doc.body && doc.body.childNodes.length) return;   /* srcdoc hat getragen */
+      try {
+        edFrame.removeAttribute("srcdoc");
+        doc = edFrame.contentDocument;
+        var withBase = prep.replace(/<head(\s[^>]*)?>/i, function (m) {
+          return m + '<base data-nig-base href="' + location.href.replace(/[^\/]*$/, "") + '">';
+        });
+        doc.open(); doc.write(withBase); doc.close();
+        prepFrame();
+      } catch (err) {
+        toast("Die Seite ließ sich nicht in die Ansicht laden – bitte im Quelltext bearbeiten.");
+      }
+    }, 400);
+  }
+  function prepFrame() {
+    var doc = edFrame.contentDocument;
+    if (!doc) {
+      toast("Diese Seite lässt sich hier nicht visuell bearbeiten – wechseln Sie in den Quelltext.");
+      return;
+    }
+    if (doc.__nigPrepped) return;
+    doc.__nigPrepped = true;
+    try { doc.designMode = "on"; } catch (e) {}
+    try {
+      var st = doc.createElement("style");
+      st.id = "nig-edit-style";
+      st.textContent = "[data-nig-sel]{outline:1.5px dashed #E8A870 !important;outline-offset:3px}";
+      (doc.head || doc.documentElement).appendChild(st);
+    } catch (e) {}
+    doc.addEventListener("input", function () { setDirty(true); histSoon(); draftSoon(); }, true);
+    doc.addEventListener("click", function (ev) { pickFromCaret(ev.target); }, true);
+    doc.addEventListener("keyup", function () { pickFromCaret(null); }, true);
+    doc.addEventListener("keydown", edKey, true);
+    selectEl(null);
+  }
+  function serializeFrame() {
+    var doc = edFrame.contentDocument;
+    if (!doc || !doc.documentElement) return ED.orig || "";
+    var c = doc.documentElement.cloneNode(true);
+    var st = c.querySelector("#nig-edit-style");
+    if (st) st.parentNode.removeChild(st);
+    [].slice.call(c.querySelectorAll("[data-nig-base]")).forEach(function (x) { x.parentNode.removeChild(x); });
+    [].slice.call(c.querySelectorAll("[data-nig-sel]")).forEach(function (x) { x.removeAttribute("data-nig-sel"); });
+    [].slice.call(c.querySelectorAll("[contenteditable]")).forEach(function (x) { x.removeAttribute("contenteditable"); });
+    var out = "<!DOCTYPE html>\n" + c.outerHTML;
+    return out.split(OFF).join("");
+  }
+
+  /* ── Element wählen ── */
+  function pickFromCaret(target) {
+    var doc = edFrame.contentDocument;
+    if (!doc) return;
+    var node = target;
+    if (!node) {
+      var sel = doc.getSelection();
+      node = sel && sel.anchorNode;
+    }
+    while (node && node.nodeType !== 1) node = node.parentNode;
+    if (!node || node.nodeName === "HTML" || node.nodeName === "BODY") { selectEl(null); return; }
+    selectEl(node);
+  }
+  function selectEl(el) {
+    var doc = edFrame.contentDocument;
+    if (doc) [].slice.call(doc.querySelectorAll("[data-nig-sel]")).forEach(function (x) { x.removeAttribute("data-nig-sel"); });
+    ED.sel = el || null;
+    if (el && el.setAttribute) el.setAttribute("data-nig-sel", "");
+    renderPanel();
+  }
+  function elLabel(x) {
+    var cls = (typeof x.className === "string" && x.className.trim()) ? "." + x.className.trim().split(/\s+/).slice(0, 2).join(".") : "";
+    return x.nodeName.toLowerCase() + cls;
+  }
+  function renderPanel() {
+    var el = ED.sel;
+    if (!el) {
+      $("#ed-crumb").innerHTML = "";
+      $("#ed-elem").innerHTML = '<p class="note">Klicken Sie in der Ansicht in eine Zeile oder einen Block. Danach lässt er sich duplizieren, verschieben, löschen, umklassifizieren oder als Quelltext bearbeiten. Getippt wird überall direkt auf der Seite.</p>';
+      return;
+    }
+    var chain = [], n = el;
+    while (n && n.nodeName !== "BODY" && chain.length < 7) { chain.unshift(n); n = n.parentElement; }
+    ED._chain = chain;
+    $("#ed-crumb").innerHTML = chain.map(function (x, i) {
+      return '<button type="button" data-crumb="' + i + '"' + (x === el ? ' class="cur"' : "") + ">" + esc(elLabel(x)) + "</button>";
+    }).join("");
+    $("#ed-elem").innerHTML =
+      '<div class="eacts">' +
+        '<button class="ebtn" type="button" data-el="dup">Duplizieren</button>' +
+        '<button class="ebtn" type="button" data-el="del">Löschen</button>' +
+        '<button class="ebtn" type="button" data-el="up">Nach oben</button>' +
+        '<button class="ebtn" type="button" data-el="down">Nach unten</button>' +
+      "</div>" +
+      "<h4>Klassen</h4>" +
+      '<input class="cls" id="ed-cls" value="' + esc(el.getAttribute("class") || "") + '">' +
+      '<div class="eacts"><button class="ebtn" type="button" data-el="cls">Übernehmen</button>' +
+      '<button class="ebtn" type="button" data-el="scroll">Hinzeigen</button></div>' +
+      "<h4>Quelltext dieses Elements</h4>" +
+      '<textarea class="raw" id="ed-raw" spellcheck="false">' + esc(el.outerHTML) + "</textarea>" +
+      '<div class="eacts"><button class="ebtn" type="button" data-el="raw">Übernehmen</button></div>';
+  }
+  $("#ed-crumb").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-crumb]");
+    if (!b || !ED._chain) return;
+    selectEl(ED._chain[+b.dataset.crumb]);
+  });
+  $("#ed-elem").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-el]");
+    if (!b) return;
+    var el = ED.sel;
+    if (!el || !el.parentNode) return;
+    var act = b.dataset.el, p = el.parentNode, sib;
+    if (act === "scroll") { if (el.scrollIntoView) el.scrollIntoView({ block: "center" }); return; }
+    histPush();
+    if (act === "dup") {
+      var copy = el.cloneNode(true);
+      copy.removeAttribute("data-nig-sel");
+      p.insertBefore(copy, el.nextSibling);
+      selectEl(copy);
+    } else if (act === "del") {
+      var nxt = el.nextElementSibling || el.previousElementSibling || p;
+      p.removeChild(el);
+      selectEl(nxt && nxt.nodeName !== "BODY" ? nxt : null);
+    } else if (act === "up") {
+      sib = el.previousElementSibling;
+      if (!sib) { toast("Das Element ist schon das erste."); return; }
+      p.insertBefore(el, sib);
+      selectEl(el);
+    } else if (act === "down") {
+      sib = el.nextElementSibling;
+      if (!sib) { toast("Das Element ist schon das letzte."); return; }
+      p.insertBefore(el, sib.nextSibling);
+      selectEl(el);
+    } else if (act === "cls") {
+      var v = $("#ed-cls").value.trim();
+      if (v) el.setAttribute("class", v); else el.removeAttribute("class");
+      selectEl(el);
+    } else if (act === "raw") {
+      try {
+        var wrap = edFrame.contentDocument.createElement("div");
+        wrap.innerHTML = $("#ed-raw").value;
+        var fresh = wrap.firstElementChild;
+        if (!fresh) { toast("Der Quelltext enthält kein Element."); return; }
+        p.replaceChild(fresh, el);
+        selectEl(fresh);
+      } catch (err) { toast("Der Quelltext ließ sich nicht übernehmen: " + err.message); return; }
+    }
+    setDirty(true);
+    histPush();
+    draftSoon();
+  });
+
+  /* ── Zustand, Verlauf, Entwurf ── */
+  function setDirty(b) {
+    ED.dirty = !!b;
+    $("#ed-dirty").hidden = !b;
+  }
+  function histReset(html) { ED.hist = [html]; ED.hpos = 0; updHist(); }
+  function histPush() {
+    if (!ED.entry) return;
+    var h = currentHTML();
+    if (ED.hist[ED.hpos] === h) return;
+    ED.hist = ED.hist.slice(0, ED.hpos + 1);
+    ED.hist.push(h);
+    if (ED.hist.length > 40) ED.hist.shift();
+    ED.hpos = ED.hist.length - 1;
+    updHist();
+  }
+  var histT;
+  function histSoon() { clearTimeout(histT); histT = setTimeout(histPush, 700); }
+  function histGo(d) {
+    var p = ED.hpos + d;
+    if (p < 0 || p >= ED.hist.length) return;
+    clearTimeout(histT);
+    ED.hpos = p;
+    var h = ED.hist[p];
+    if (ED.mode === "source") edSrc.value = h; else renderFrame(h);
+    setDirty(true);
+    updHist();
+  }
+  function updHist() {
+    $("#ed-undo").disabled = ED.hpos <= 0;
+    $("#ed-redo").disabled = ED.hpos >= ED.hist.length - 1;
+  }
+  function draftKey(n) { return KEY + ":draft:" + n; }
+  function draftGet(n) { try { return JSON.parse(window.localStorage.getItem(draftKey(n))); } catch (e) { return null; } }
+  function draftClear(n) { try { window.localStorage.removeItem(draftKey(n)); } catch (e) {} }
+  function draftSave() {
+    if (!ED.entry) return;
+    try { window.localStorage.setItem(draftKey(ED.name), JSON.stringify({ ts: Date.now(), html: currentHTML() })); } catch (e) {}
+  }
+  var draftT;
+  function draftSoon() { clearTimeout(draftT); draftT = setTimeout(draftSave, 2500); }
+
+  /* ── Speichern ── */
+  function saveEditor() {
+    if (!ED.entry) return;
+    var html = currentHTML();
+    if (!html) { toast("Es gibt nichts zu speichern."); return; }
+    var plainName = String(ED.name).split("/").pop();
+
+    function fallback(reason) {
+      download(html, plainName);
+      afterSave(html, reason || "als Datei heruntergeladen – legen Sie sie über die alte");
+    }
+    function write(fh) {
+      return backupOnce().then(function () { return fh.createWritable(); })
+        .then(function (w) { return Promise.resolve(w.write(html)).then(function () { return w.close(); }); })
+        .then(function () { afterSave(html, "in „" + plainName + "“ geschrieben"); })
+        .catch(function (err) {
+          toast("Direktes Schreiben misslang (" + (err.message || err.name) + ") – die Datei wird heruntergeladen.");
+          fallback("heruntergeladen");
+        });
+    }
+    if (ED.handle && ED.handle.createWritable) { write(ED.handle); return; }
+    if (dirHandle) {
+      handleFor(ED.name, true).then(function (fh) { ED.handle = fh; write(fh); })
+        .catch(function () { fallback(); });
+      return;
+    }
+    if (window.showSaveFilePicker) {
+      window.showSaveFilePicker({ suggestedName: plainName, types: [{ description: "HTML-Seite", accept: { "text/html": [".html", ".htm"] } }] })
+        .then(function (fh) { ED.handle = fh; write(fh); })
+        .catch(function (err) { if (!err || err.name !== "AbortError") fallback(); });
+      return;
+    }
+    fallback();
+  }
+  function backupOnce() {
+    if (!dirHandle || ED.backup[ED.name] || !ED.orig) return Promise.resolve();
+    ED.backup[ED.name] = 1;
+    return handleFor(ED.name + ".bak", true)
+      .then(function (fh) { return fh.createWritable(); })
+      .then(function (w) { return Promise.resolve(w.write(ED.orig)).then(function () { return w.close(); }); })
+      .catch(function () {});
+  }
+  function afterSave(html, how) {
+    ED.orig = html;
+    setDirty(false);
+    draftClear(ED.name);
+    var e = ED.entry && byId(ED.entry.id);
+    if (e) {
+      try {
+        var p = parsePage(html, String(ED.name).split("/").pop(), ED.name);
+        e.headings = p.headings;
+        e.stats = e.stats || {};
+        e.stats.links = p.stats.links;
+        e.stats.sections = p.stats.sections;
+        e.stats.bytes = p.stats.bytes;
+        e.updated = Date.now();
+        persist();
+      } catch (err) {}
+    }
+    toast("Gespeichert · " + how + ".");
+  }
+
+  /* ── Suchen und Ersetzen ── */
+  function textNodes(doc) {
+    var w = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT, null, false), out = [], n;
+    while ((n = w.nextNode())) out.push(n);
+    return out;
+  }
+  function findRun(replace) {
+    var q = $("#ed-q").value;
+    if (!q) { toast("Bitte einen Suchbegriff eingeben."); return; }
+    var r = $("#ed-r").value, count = 0;
+    if (ED.mode === "source") {
+      var parts = edSrc.value.split(q);
+      count = parts.length - 1;
+      if (replace && count) { edSrc.value = parts.join(r); setDirty(true); histPush(); }
+    } else {
+      var doc = edFrame.contentDocument;
+      if (!doc || !doc.body) return;
+      if (replace) histPush();
+      var first = null;
+      textNodes(doc).forEach(function (t) {
+        var c = t.nodeValue.split(q).length - 1;
+        if (!c) return;
+        count += c;
+        if (!first) first = t.parentElement;
+        if (replace) t.nodeValue = t.nodeValue.split(q).join(r);
+      });
+      if (replace && count) { setDirty(true); histPush(); draftSoon(); }
+      if (!replace && first && first.scrollIntoView) { first.scrollIntoView({ block: "center" }); selectEl(first); }
+    }
+    $("#ed-fstat").textContent = replace
+      ? (count ? count + " Stelle(n) ersetzt" : "nichts gefunden")
+      : (count ? count + " Fundstelle(n)" : "nichts gefunden");
+  }
+
+  /* ── Bedienung des Editors ── */
+  function edCmd(cmd) {
+    var doc = edFrame.contentDocument;
+    if (!doc) return;
+    try {
+      if (cmd === "createLink") {
+        var u = window.prompt("Adresse des Verweises:", "https://");
+        if (!u) return;
+        doc.execCommand("createLink", false, u);
+      } else {
+        doc.execCommand(cmd, false, null);
+      }
+      setDirty(true);
+      histSoon();
+      draftSoon();
+    } catch (e) {}
+  }
+  function edKey(ev) {
+    var k = (ev.key || "").toLowerCase();
+    if (!(ev.ctrlKey || ev.metaKey)) return;
+    if (k === "s") { ev.preventDefault(); saveEditor(); }
+    else if (k === "z" && !ev.shiftKey) { ev.preventDefault(); histGo(-1); }
+    else if (k === "y" || (k === "z" && ev.shiftKey)) { ev.preventDefault(); histGo(1); }
+    else if (k === "f") { ev.preventDefault(); $("#ed-findbar").hidden = false; $("#ed-q").focus(); }
+  }
+  $("#ed-fmt").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-cmd]");
+    if (b) edCmd(b.dataset.cmd);
+  });
+  $("#ed-undo").addEventListener("click", function () { histGo(-1); });
+  $("#ed-redo").addEventListener("click", function () { histGo(1); });
+  $("#ed-visual").addEventListener("click", function () { if (ED.mode !== "visual") setMode("visual"); });
+  $("#ed-source").addEventListener("click", function () { if (ED.mode !== "source") setMode("source"); });
+  $("#ed-findbtn").addEventListener("click", function () {
+    var bar = $("#ed-findbar");
+    bar.hidden = !bar.hidden;
+    if (!bar.hidden) $("#ed-q").focus();
+  });
+  $("#ed-count").addEventListener("click", function () { findRun(false); });
+  $("#ed-repl").addEventListener("click", function () { findRun(true); });
+  $("#ed-q").addEventListener("keydown", function (ev) { if (ev.key === "Enter") { ev.preventDefault(); findRun(false); } });
+  $("#ed-r").addEventListener("keydown", function (ev) { if (ev.key === "Enter") { ev.preventDefault(); findRun(true); } });
+  $("#ed-folder").addEventListener("click", function () { connectFolder(); });
+  $("#ed-save").addEventListener("click", saveEditor);
+  $("#ed-close").addEventListener("click", closeEditor);
+  edSrc.addEventListener("input", function () { setDirty(true); histSoon(); draftSoon(); });
+  window.addEventListener("beforeunload", function (ev) {
+    if (!ED.dirty) return;
+    draftSave();
+    ev.preventDefault();
+    ev.returnValue = "";
+  });
+  idbGet(function (h) {
+    if (!h || !h.queryPermission) return;
+    h.queryPermission({ mode: "readwrite" }).then(function (p) {
+      if (p === "granted") { dirHandle = h; } else { dirPending = h; }
+      markFolder();
+    }).catch(function () {});
+  });
+
+  /* ── Tasten ── */
+  document.addEventListener("keydown", function (e) {
+    var inField = /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || "");
+    if (e.key === "/" && !inField && !dlg.open) { e.preventDefault(); $("#q").focus(); }
+    if ((e.ctrlKey || e.metaKey) && (e.key || "").toLowerCase() === "s" && !edWrap.hidden) {
+      e.preventDefault(); saveEditor(); return;
+    }
+    if (e.key === "Escape") {
+      if (!yt.hidden) { closeYT(); return; }
+      if (!edWrap.hidden) { closeEditor(); return; }
+      if (!read.hidden) { closeRead(); return; }
+      if (!dlg.open) { $("#q").value = ""; state.q = ""; render(); hideHover(); }
+    }
+    if (e.key === " " && !inField && !dlg.open && !player.hidden && read.hidden && edWrap.hidden) {
+      e.preventDefault();
+      $("#p-play").click();
+    }
+  });
+
+  render();
+})();
+</script>
+
+
+
+</body></html>
