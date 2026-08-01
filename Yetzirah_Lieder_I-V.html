@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יְצִירָה — שִׁירִים א–ה · עוֹלַם הַתְּפִילָּה · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   יְצִירָה — עוֹלַם הַתְּפִילָּה · שִׁירִים א–ה
+   Zehn Lieder der Welt des Gebets · Sephardische Tradition
+   Amethyst · Violett · Lavendel · Nacht vor dem Morgengrauen
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg:          #080610;
+  --deep:        #0C0A18;
+  --layer:       #120E22;
+  --card:        #0E0B1A;
+
+  /* ── YETZIRAH — Amethyst · Violett · Lavendel ── */
+  --yet:         #6B3FA0;
+  --yet-lt:      #A87ACC;
+  --yet-vlt:     #C8A8E0;
+  --yet-dim:     #1E0A30;
+  --yet-bg:      rgba(107,63,160,.07);
+  --yet-bdr:     rgba(107,63,160,.32);
+  --yet-glow:    rgba(168,122,204,.18);
+
+  /* ── Sekundärfarben ── */
+  --violet:      #8844C0;
+  --violet-lt:   #B880E0;
+  --indigo:      #3040B0;
+  --indigo-lt:   #6878D8;
+  --rose:        #B04080;
+  --rose-lt:     #D870B0;
+  --night:       #1A1840;
+  --nightstar:   rgba(210,190,255,.50);
+
+  /* ── Schrift / Parchment ── */
+  --ivory:       #EAE4F2;
+  --ivory-lt:    #F5F0FC;
+  --ivory-dim:   #8880A0;
+  --silver:      #C0B8DC;
+  --silver-dim:  #6058A0;
+  --text:        #9890A8;
+
+  /* Guitar */
+  --guitar:      #C0A840;
+  --guitar-lt:   #E0CC60;
+
+  /* Sephirot */
+  --keter:       #F0EEF8;
+  --chochma:     #6080E0;
+  --binah:       #B050C0;
+  --chesed:      #4090D0;
+  --gevura:      #C03040;
+  --tiferet:     #C8A010;
+  --netzach:     #408840;
+  --hod:         #8050C0;
+  --yesod:       #3070B0;
+  --malchut:     #A03070;
+
+  /* Tikkun */
+  --tik:         #304480;
+  --tik-lt:      #6080D0;
+  --tik-bg:      rgba(48,68,128,.10);
+  --tik-bdr:     rgba(48,68,128,.32);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── MYSTISCHE ATMOSPHÄRE — Nacht vor dem Morgengrauen ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 30% 5%,   rgba(107,63,160,.14) 0%,transparent 50%),
+    radial-gradient(ellipse at 75% 20%,  rgba(56,64,176,.09)  0%,transparent 45%),
+    radial-gradient(ellipse at 10% 65%,  rgba(107,63,160,.08) 0%,transparent 44%),
+    radial-gradient(ellipse at 88% 75%,  rgba(136,68,192,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,16,.90)     0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px   1px   at  6%  8%, rgba(220,200,255,.55) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 43%  3%, rgba(168,122,204,.62) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 80% 12%, rgba(200,188,240,.45) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 20% 38%, rgba(168,122,204,.32) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 62% 52%, rgba(200,188,240,.28) 0%,transparent 100%),
+    radial-gradient(2px   2px   at 10% 72%, rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 87% 78%, rgba(220,200,255,.36) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 35% 90%, rgba(107,63,160,.30)  0%,transparent 100%),
+    radial-gradient(1px   1px   at 55%  6%, rgba(200,188,240,.40) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 92% 42%, rgba(168,122,204,.28) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(8,6,16,.97);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(107,63,160,.22);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid rgba(107,63,160,.20);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--yet-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(168,122,204,.50);text-decoration:none;padding:0 11px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;
+}
+.nav-link:hover,.nav-link.active{color:var(--yet-lt);border-bottom-color:var(--yet);}
+.nav-link.dim{opacity:.35;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:76px;padding-bottom:60px;
+  border-bottom:1px solid rgba(107,63,160,.14);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--yet);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--indigo-lt);letter-spacing:.28em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.8;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.1;
+  margin-bottom:10px;
+  text-shadow:0 0 80px rgba(107,63,160,.50),0 0 150px rgba(56,64,176,.18);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.1em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:660px;margin:0 auto 30px;
+}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid rgba(107,63,160,.18);padding:12px 26px;
+  background:rgba(107,63,160,.03);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.9em;
+  direction:rtl;padding:2px 10px;border:1px solid transparent;
+}
+.wc-active{color:var(--yet-lt);border-color:var(--yet-bdr);background:rgba(107,63,160,.08);}
+.wc-dim{color:var(--silver-dim);opacity:.35;}
+.wc-sep{color:var(--yet);opacity:.35;font-size:.7em;}
+
+/* ── WORLD INTRO BOX ── */
+.world-intro-box{
+  background:linear-gradient(135deg,rgba(107,63,160,.10),rgba(8,6,16,.85));
+  border:1px solid rgba(107,63,160,.28);border-left:4px solid var(--yet);
+  padding:26px 34px;margin-bottom:58px;position:relative;
+}
+.world-intro-box::before{
+  content:'יְצִירָה — Die Welt des Gebets';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 14px;font-size:.62em;color:var(--yet-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;
+}
+.wib-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;
+  color:var(--ivory);direction:rtl;text-align:right;
+  margin-bottom:10px;line-height:1.6;
+}
+.wib-src{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--yet-lt);direction:rtl;text-align:right;
+  margin-bottom:12px;opacity:.85;
+}
+.wib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.wib-de strong{color:var(--ivory);}
+
+/* ── SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin-bottom:66px;
+}
+.sefira-nav-item{
+  border:1px solid rgba(107,63,160,.2);padding:10px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;
+  background:rgba(107,63,160,.02);
+}
+.sefira-nav-item:hover,.sefira-nav-item.active{
+  opacity:.88;background:rgba(107,63,160,.07);border-color:rgba(107,63,160,.38);
+}
+.sefira-nav-item.dim{opacity:.28;}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--yet-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.64em;color:var(--silver-dim);display:block;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--guitar);opacity:.60;display:block;direction:ltr;margin-top:2px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:100px;scroll-margin-top:60px;
+  border:1px solid rgba(107,63,160,.10);
+  background:linear-gradient(180deg,rgba(18,14,34,.96) 0%,rgba(12,10,26,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--yet),var(--violet),var(--yet),transparent);
+  opacity:.45;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:28px 42px 22px;
+  border-bottom:1px solid rgba(107,63,160,.09);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.9em;opacity:.40;line-height:1;text-align:center;
+  color:var(--yet-lt);
+  border-right:1px solid rgba(107,63,160,.14);padding-right:22px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.38em;font-weight:700;
+  opacity:.55;letter-spacing:.1em;display:block;margin-bottom:2px;
+}
+.sefira-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;
+  letter-spacing:.16em;color:var(--yet-lt);opacity:.55;display:block;margin-bottom:3px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.58em;display:block;margin-bottom:5px;direction:ltr;
+  letter-spacing:.12em;color:var(--guitar);opacity:.65;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.85em;color:var(--silver-dim);display:block;margin-top:2px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  border:1px solid rgba(107,63,160,.28);padding:5px 14px;
+  color:var(--yet-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(107,63,160,.04);
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.70em;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(107,63,160,.07);opacity:.8;
+}
+
+/* ── GUITAR NOTE ── */
+.guitar-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.84em;color:var(--guitar);opacity:.88;
+  margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(192,168,64,.3);
+  background:rgba(192,168,64,.03);direction:ltr;
+  line-height:1.78;
+}
+
+/* ── LYRICS BLOCK ── */
+.lyrics-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 36px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.12em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.08;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;
+  color:var(--text);line-height:2.08;
+  border-left:1px solid rgba(107,63,160,.10);padding-left:26px;
+}
+.line{display:block;}
+
+/* ── BOXES ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(107,63,160,.09),rgba(107,63,160,.02));
+  border:1px solid rgba(107,63,160,.26);border-left:3px solid var(--yet);
+  padding:22px 28px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(56,64,176,.07),transparent);
+  border:1px solid rgba(56,64,176,.18);border-left:3px solid var(--indigo-lt);
+  padding:22px 28px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(136,68,192,.09),transparent);
+  border:1px solid rgba(107,63,160,.22);
+  padding:20px 24px;
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{text-align:center;padding:24px 0 12px;}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.06em;
+  color:var(--ivory-dim);direction:rtl;line-height:2.3;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+
+/* ── TIKKUN BOX ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(48,68,128,.13),rgba(16,12,40,.42));
+  border:1px solid rgba(48,68,128,.32);border-left:4px solid var(--tik-lt);
+  padding:28px 32px;margin:28px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(48,68,128,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.76em;color:var(--tik-lt);display:block;margin-top:2px;opacity:.75;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.65em;
+  color:var(--tik-lt);border:1px solid rgba(48,68,128,.32);
+  padding:3px 11px;background:rgba(48,68,128,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;
+}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(48,68,128,.30);
+  padding:3px 10px;background:rgba(48,68,128,.05);direction:rtl;
+}
+.piyut-ref{
+  margin-top:14px;padding:11px 16px;
+  background:rgba(107,63,160,.04);border-left:2px solid rgba(107,63,160,.22);
+  font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--yet-vlt);direction:rtl;line-height:1.68;font-style:italic;
+}
+.piyut-ref-label{
+  font-family:'Cormorant Garamond',serif;font-size:.82em;
+  color:var(--yet-lt);letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;
+}
+
+/* ── SCENARIOS ── */
+.scenarios-section{margin-top:46px;padding-top:38px;border-top:1px solid rgba(107,63,160,.08);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:var(--yet-lt);direction:rtl;text-align:right;margin-bottom:20px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card{
+  border:1px solid;padding:20px 22px;
+  background:rgba(8,6,16,.65);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.sc1{border-color:rgba(64,144,208,.20);}  .sc1::before{background:linear-gradient(90deg,var(--chesed),transparent);}
+.sc2{border-color:rgba(107,63,160,.18);}  .sc2::before{background:linear-gradient(90deg,var(--yet),transparent);}
+.sc3{border-color:rgba(48,68,128,.22);}   .sc3::before{background:linear-gradient(90deg,var(--tik-lt),transparent);}
+.sc4{border-color:rgba(96,88,160,.16);}   .sc4::before{background:linear-gradient(90deg,var(--silver-dim),transparent);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px;opacity:.65;}
+.sc1 .sc-num{color:var(--chesed);} .sc2 .sc-num{color:var(--yet-lt);}
+.sc3 .sc-num{color:var(--tik-lt);} .sc4 .sc-num{color:var(--silver-dim);}
+.sc-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:2px;}
+.sc1 .sc-title-he{color:var(--chesed);}  .sc2 .sc-title-he{color:var(--yet-lt);}
+.sc3 .sc-title-he{color:var(--tik-lt);}  .sc4 .sc-title-he{color:var(--silver);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body{font-size:.87em;color:var(--text);line-height:1.84;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid;background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.sc1 .key-moment{border-left-color:var(--chesed);}  .sc2 .key-moment{border-left-color:var(--yet);}
+.sc3 .key-moment{border-left-color:var(--tik-lt);}  .sc4 .key-moment{border-left-color:var(--silver-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(107,63,160,.07);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(107,63,160,.28),transparent);}
+.ornament-star{color:var(--yet);font-size:.65em;letter-spacing:.5em;opacity:.40;}
+
+/* ── BRIDGE TRANSITION ── */
+.bridge-transition{
+  margin:20px 0 60px;padding:26px 36px;
+  border:1px solid rgba(107,63,160,.18);
+  background:linear-gradient(135deg,rgba(107,63,160,.06),transparent);
+  position:relative;
+}
+.bt-label{font-family:'Frank Ruhl Libre',serif;font-size:.62em;color:var(--yet-lt);letter-spacing:.14em;direction:rtl;display:block;margin-bottom:8px;}
+.bt-text{font-family:'EB Garamond',serif;font-size:.92em;color:var(--text);line-height:1.85;}
+.bt-text strong{color:var(--ivory);}
+
+/* ── FOOTER ── */
+.footer{text-align:center;margin-top:90px;padding-top:60px;border-top:1px solid rgba(107,63,160,.10);}
+.footer-world{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--yet-lt);direction:rtl;letter-spacing:.08em;
+  text-shadow:0 0 50px rgba(107,63,160,.32);margin-bottom:14px;
+}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:26px;}
+.footer-de{font-size:.88em;color:var(--text);line-height:1.9;max-width:580px;margin:0 auto 32px;}
+.footer-de strong{color:var(--ivory-dim);}
+
+@media(max-width:720px){
+  .wrap{padding:48px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{display:none;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(107,63,160,.08);padding-top:14px;margin-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">יְצִירָה — עוֹלַם הַתְּפִילָּה</span>
+    <span class="nav-brand-sub">Lieder I–V · Sephardische Tradition</span>
+  </div>
+  <a class="nav-link active" href="#song-keter"><span class="nav-num">א</span>כֶּתֶר</a>
+  <a class="nav-link active" href="#song-chochma"><span class="nav-num">ב</span>חָכְמָה</a>
+  <a class="nav-link active" href="#song-binah"><span class="nav-num">ג</span>בִּינָה</a>
+  <a class="nav-link active" href="#song-chesed"><span class="nav-num">ד</span>חֶסֶד</a>
+  <a class="nav-link active" href="#song-gevura"><span class="nav-num">ה</span>גְּבוּרָה</a>
+  <a class="nav-link dim" href="Yetzirah_Lieder_VI-X.html"><span class="nav-num">ו</span>תִּפְאֶרֶת →</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ── PAGE HEADER ── -->
+<header class="page-header">
+  <div class="eyebrow">מַסַּע הָעוֹלָמוֹת · Die vier Welten · Sephardischer Aufstieg</div>
+  <div class="page-title-he">יְצִירָה — עוֹלַם הַתְּפִילָּה</div>
+  <div class="page-title-de">Die Welt der Formung — Zehn Lieder des Gebets · Lieder I–V</div>
+  <p class="page-desc">
+    יְצִירָה היא עולם הרוח, המלאכים והתפילה — בין עֲשִׂיָּה הגשמי ובִּרְיָּה השכלי.
+    עשרת השירים הללו הולכים בדרכה של המסורת הספרדית: מֵהַבַּקָּשׁוֹת עד הַעֲמִידָה,
+    ממקאם סבא של שקט הלילה ועד מקאם סיגה של הפתיחה לבריאה.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה ↑</span>
+    <span class="wc-sep">✦</span>
+    <span class="wc-item wc-active">יְצִירָה</span>
+    <span class="wc-sep">✦</span>
+    <span class="wc-item wc-dim">↑ בְּרִיאָה</span>
+    <span class="wc-sep">✦</span>
+    <span class="wc-item wc-dim">↑ אֲצִילוּת</span>
+  </div>
+</header>
+
+<!-- ── WORLD INTRO BOX ── -->
+<div class="world-intro-box">
+  <div class="wib-he">
+    עוֹלַם יְצִירָה — עוֹלַם הַתְּפִילָּה וְהַמַּלְאָכִים —
+    שֵׂכֶל הַנֶּפֶשׁ הַמְּדַבֶּרֶת — שַׁעַר בֵּין גּוּף לְשֵׂכֶל.
+    מַלְכוּת עֲשִׂיָּה = כֶּתֶר יְצִירָה: הַמַּעֲשֶׂה הַשָּׁלֵם פּוֹתֵחַ אֶת שַׁעַר הַתְּפִילָּה.
+  </div>
+  <div class="wib-src">הָרַמַּ״ק, פַּרְדֵּס רִמּוֹנִים שַׁעַר ט״ז · הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם, הַקְדָּמָה</div>
+  <div class="wib-de">
+    <strong>Die Welt der Formung</strong> ist die spirituelle Zwischenwelt — das Reich des Gebets, der Engel und der heiligen Sprache.
+    Sie liegt zwischen der physischen Welt des Handelns (עֲשִׂיָּה) und der intellektuellen Welt des Schöpfungsgeistes (בְּרִיאָה).
+    Nach dem Rashash öffnet <strong>jede vollendete Tat</strong> automatisch das Tor der Formungswelt —
+    denn Malchut d'Assiya ist dasselbe wie Keter d'Yetzirah. Wer wirklich <em>handelt</em>, betet bereits.
+    Wer wirklich <em>betet</em>, öffnet das Tor des Verstehens (Beriah). Die zehn Lieder dieser Welt
+    folgen dem sephardischen Aufstieg: von den Bakashot des Keter bis zur vollendeten Amidah als Malchut-Tor.
+  </div>
+</div>
+
+<!-- ── SEFIRA NAV GRID ── -->
+<nav class="sefira-nav">
+  <a class="sefira-nav-item active" href="#song-keter">
+    <span class="sn-num">I</span>
+    <span class="sn-he">כֶּתֶר</span>
+    <span class="sn-de">Krone</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-chochma">
+    <span class="sn-num">II</span>
+    <span class="sn-he">חָכְמָה</span>
+    <span class="sn-de">Weisheit</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-binah">
+    <span class="sn-num">III</span>
+    <span class="sn-he">בִּינָה</span>
+    <span class="sn-de">Verständnis</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-chesed">
+    <span class="sn-num">IV</span>
+    <span class="sn-he">חֶסֶד</span>
+    <span class="sn-de">Güte</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-gevura">
+    <span class="sn-num">V</span>
+    <span class="sn-he">גְּבוּרָה</span>
+    <span class="sn-de">Stärke</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Yetzirah_Lieder_VI-X.html">
+    <span class="sn-num">VI</span>
+    <span class="sn-he">תִּפְאֶרֶת</span>
+    <span class="sn-de">Schönheit →</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Yetzirah_Lieder_VI-X.html">
+    <span class="sn-num">VII</span>
+    <span class="sn-he">נֶצַח</span>
+    <span class="sn-de">Beständigkeit →</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Yetzirah_Lieder_VI-X.html">
+    <span class="sn-num">VIII</span>
+    <span class="sn-he">הוֹד</span>
+    <span class="sn-de">Pracht →</span>
+    <span class="sn-maqam">Maqam Nahawand</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Yetzirah_Lieder_VI-X.html">
+    <span class="sn-num">IX</span>
+    <span class="sn-he">יְסוֹד</span>
+    <span class="sn-de">Fundament →</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Yetzirah_Lieder_VI-X.html">
+    <span class="sn-num">X</span>
+    <span class="sn-he">מַלְכוּת</span>
+    <span class="sn-de">Königreich →</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר א — כֶּתֶר דְּיְצִירָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-keter">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כֶּתֶר</span>
+      א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">כֶּתֶר דְּיְצִירָה · Keter d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סַבָּא — Tiefe · Nacht · Fundament des Gebets</span>
+      <span class="song-title-he">בַּקָּשׁוֹת לִפְנֵי עָלוֹת הַשַּׁחַר</span>
+      <span class="song-title-de">Bitten vor dem Morgengrauen — Das Keter-Tor des Gebets öffnet sich</span>
+    </div>
+    <div class="source-badge">
+      סֵפֶר הַבַּקָּשׁוֹת · הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם
+      <span class="source-badge-de">Sefer HaBakashot (Marokko / Jerusalem) · Rashash</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — מְאוּחָר, כְּקוֹל חַזָּן לִפְנֵי הַשַּׁחַר]</div>
+      <div class="guitar-note">Gitarre: Saba-Stimmung — ein einzelner tiefer Ton auf der A-Saite, pp, sehr langsam. Der Sänger öffnet mit einem langen, gehaltenen אֲדֹנָי — wie ein Chazzan, der die Bakashot-Vigil eröffnet, noch im Dunkel. Kein Eilen. Die Nacht ist noch da.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — אֲדֹנָי —</span>
+          <span class="line">לִפְנֵי עָלוֹת הַשַּׁחַר —</span>
+          <span class="line">בַּקָּשׁוֹת — שִׁיר לַלַּיְלָה —</span>
+          <span class="line">כֶּתֶר — יְצִירָה — נִפְתָּח.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Adonai —</span>
+          <span class="line">vor dem Aufgang des Morgenrots —</span>
+          <span class="line">Bitten — Lied in der Nacht —</span>
+          <span class="line">die Krone — der Formung — öffnet sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — מְסֹרֶת הַבַּקָּשׁוֹת — מָרוֹקוֹ, יְרוּשָׁלַיִם, בֵּית אֵל]</div>
+      <div class="guitar-note">Gitarre: Saba-Arpeggio, tief und ruhig, mf. Die charakteristischen kleinen Terzen des Saba geben dem Lied seine nächtliche, sehnsüchtige Farbe.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּאַשְׁמֹרֶת הַבֹּקֶר — קַמְתִּי לְבַקֵּשׁ,</span>
+          <span class="line">וְקוֹלִי עָלָה — בַּחֲשֵׁכַת הַלַּיְלָה,</span>
+          <span class="line">בַּקָּשׁוֹת שֶׁל מֶלֶךְ — מִמָּרוֹקוֹ וִירוּשָׁלַיִם —</span>
+          <span class="line">תְּחִנָּה — לִפְנֵי אֲדֹנָי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">In der Morgenwache — stand ich auf, um zu bitten,</span>
+          <span class="line">meine Stimme stieg auf — in der Finsternis der Nacht,</span>
+          <span class="line">Bakashot eines Königs — aus Marokko und Jerusalem —</span>
+          <span class="line">Bittgebet — vor Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — יְסוֹד הַבַּקָּשׁוֹת — הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם]</div>
+      <div class="guitar-note">Gitarre: dasselbe Arpeggio, leicht intensiver — mf. Das Saba-Motiv entfaltet seinen vollen Charakter: Tiefe, Sehnsucht, Nacht.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מְסֹרֶת הַסְּפָרַדִּים — שִׁיר הַלַּיְלָה,</span>
+          <span class="line">אֵין שְׁלֵמוּת — בְּלֹא בַּקָּשׁוֹת —</span>
+          <span class="line">כֶּתֶר יְצִירָה — שַׁעַר הַתְּפִילָּה —</span>
+          <span class="line">נִפְתָּח בְּשִׁיר — נִפְתָּח בְּשִׁיר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Überlieferung der Sepharden — das Lied der Nacht,</span>
+          <span class="line">es gibt keine Vollkommenheit — ohne die Bakashot —</span>
+          <span class="line">Keter d'Yetzirah — das Tor des Gebets —</span>
+          <span class="line">öffnet sich durch Gesang — öffnet sich durch Gesang.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Saba-Motiv, voll entfaltet. pp beim ersten Durchgang — fast ein Flüstern. mf beim zweiten — das Herz öffnet sich. pp beim dritten — die Nacht atmet wieder. Die Stimme trägt liturgische Würde.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׁירִי — שִׁירִי — לַאֲדֹנָי —</span>
+            <span class="line">בְּאַשְׁמֹרֶת — לִפְנֵי הָאוֹר,</span>
+            <span class="line">כֶּתֶר יְצִירָה — מִתְגַּלֶּה —</span>
+            <span class="line">בְּשִׁיר — שֶׁיּוֹצֵא — מֵהַלֵּב.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Singe — singe — für Adonai —</span>
+            <span class="line">in der Morgenwache — vor dem Licht,</span>
+            <span class="line">Keter d'Yetzirah — offenbart sich —</span>
+            <span class="line">im Lied — das aus dem Herzen kommt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הָרַשַּׁ״שׁ וּסֵפֶר הַבַּקָּשׁוֹת — בֵּית אֵל וּמָרוֹקוֹ]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: nachdenklich, einzelne Töne, fast rezitativisch — das Saba schleicht in den Raum, wie eine innere Stimme kurz vor dem Morgengrauen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַשַּׁ״שׁ כָּתַב בְּנַהַר שָׁלוֹם —</span>
+            <span class="line">כָּל בַּקָּשָׁה — הָעֶלְיוֹן מַקְשִׁיב,</span>
+            <span class="line">הַשַּׁחַר מֵאִיר — כְּשֶׁהַשִּׁיר מַגִּיעַ —</span>
+            <span class="line">וְהַכֶּתֶר — פּוֹתֵחַ שְׁעָרָיו.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Rashash schrieb in Nahar Shalom —</span>
+            <span class="line">jedes Bittgebet — der Erhabene hört hin,</span>
+            <span class="line">das Morgenrot leuchtet auf — wenn das Lied ankommt —</span>
+            <span class="line">und die Krone — öffnet ihre Tore.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — בַּקָּשׁוֹת וְתִקּוּן חֲצוֹת לִפְנֵי הַשַּׁחַר</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung I — Bakashot und Tikkun Chatzot als Öffnung des Keter d'Yetzirah</div>
+        </div>
+        <div class="tikkun-src">סֵפֶר הַבַּקָּשׁוֹת · הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם, הַקְדָּמָה</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, sehr ruhig — ein einziger Saba-Grundton wie ein Herzschlag. Die Stimme spricht die Tikkun-Anweisung fast im Flüsterton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּאַשְׁמֹרֶת הַבֹּקֶר — לִפְנֵי עָלוֹת הַשַּׁחַר —</span>
+          <span class="line">קוּם — וְשִׁיר בַּקָּשׁוֹת לַאֲדֹנָי.</span>
+          <span class="line">בְּשַׁבָּת — שִׁיר כָּל הַסֵּדֶר —</span>
+          <span class="line">בְּשֵׁשֶׁת יְמֵי הַשָּׁבוּעַ — לְפָחוֹת שִׁיר אֶחָד.</span>
+          <span class="line">אוֹ: קוּם בַּחֲצוֹת הַלַּיְלָה — לְתִקּוּן חֲצוֹת —</span>
+          <span class="line">בְּקִינָה עַל חֻרְבַּן הַמִּקְדָּשׁ —</span>
+          <span class="line">כִּי כֶּתֶר יְצִירָה — נִפְתָּח —</span>
+          <span class="line">בְּשִׁיר שֶׁל הַלַּיְלָה — לִפְנֵי הָאוֹר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">In der Morgenwache — vor dem Aufgang des Morgenrots —</span>
+          <span class="line">stehe auf — und singe Bakashot für Adonai.</span>
+          <span class="line">Am Schabbat — singe den ganzen Seder der Bakashot —</span>
+          <span class="line">an den sechs Wochentagen — wenigstens ein Lied.</span>
+          <span class="line">Oder: stehe um Mitternacht auf — für Tikkun Chatzot —</span>
+          <span class="line">in der Totenklage über die Zerstörung des Tempels —</span>
+          <span class="line">denn Keter d'Yetzirah — öffnet sich —</span>
+          <span class="line">durch das Nachtlied — vor dem Licht.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">בַּקָּשׁוֹת לִפְנֵי שַׁחֲרִית</span>
+        <span class="mitzva-tag">תִּקּוּן חֲצוֹת</span>
+        <span class="mitzva-tag">מְסֹרֶת מָרוֹקוֹ / יְרוּשָׁלַיִם</span>
+        <span class="mitzva-tag">כַּוָּנוֹת הָרַשַּׁ״שׁ</span>
+        <span class="mitzva-tag">בֵּית אֵל — יְרוּשָׁלַיִם</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        סֵפֶר הַבַּקָּשׁוֹת — מַסּוֹרֶת מָרוֹקוֹ / יְרוּשָׁלַיִם: נוּסַח בֵּית אֵל · Gesungen im Maqam Saba als Vorbereitung auf Shacharit; am Schabbatvormittag vollständig als spirituelles Aufwärmritual vor dem gemeinsamen Gebet. Die sephardische Tradition schreibt das nächtliche Bakashot-Singen ausdrücklich als Öffnung des Keter-Tores vor.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann sofort pp]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: das Saba-Motiv forte — ein kraftvoller, voller Akkord — dann sofort pp. Das Keter öffnet sich nicht mit Lärm, sondern mit einem einzigen klaren Ruf.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׁירִי! — לְאֵל! — שִׁירִי! — לָאוֹר!</span>
+            <span class="line">אֲדֹנָי שׁוֹמֵעַ! — לִפְנֵי הָאוֹר!</span>
+            <span class="line">כֶּתֶר יְצִירָה — נִפְתַּח — שׁוֹמֵעַ!</span>
+            <span class="line">בַּקָּשׁוֹת — מַגִּיעוֹת — לַכֶּתֶר!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Singe! — für Gott! — singe! — zum Licht!</span>
+            <span class="line">Adonai hört! — vor dem Morgengrauen!</span>
+            <span class="line">Keter d'Yetzirah — öffnet sich — hört!</span>
+            <span class="line">Die Bakashot — erreichen — die Krone!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — מִתְפּוֹגֵג כְּאוֹר שַׁחַר]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: der letzte Saba-Ton, langsam ausklingend wie ein erlöschender Stern. Absolute Stille. Der Morgen wartet.</div>
+        <div class="coda-whisper">
+          בַּקָּשׁוֹת … לִפְנֵי הָאוֹר … שֶׁקֶט …<br>
+          <em>— שְׁתִיקַת הַלַּיְלָה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ב — חָכְמָה דְּיְצִירָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-chochma">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חָכְמָה</span>
+      ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חָכְמָה דְּיְצִירָה · Chochmah d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Offenheit · Göttliche Güte · Aufleuchten</span>
+      <span class="song-title-he">הָעִנְיָן הָאֱלֹהִי</span>
+      <span class="song-title-de">Die göttliche Erleuchtung — Der Blitz der Weisheit im Gebet</span>
+    </div>
+    <div class="source-badge">
+      הַכּוּזָרִי, מַאֲמָר ד׳ §3
+      <span class="source-badge-de">Kuzari · Rabbi Yehuda HaLevi · Andalusien</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — מְרַחֵף, כְּאוֹר רִאשׁוֹן]</div>
+      <div class="guitar-note">Gitarre: Rast-Stimmung — warme, offene Sekunde über dem Grundton. pp, fließend. Der Rast-Maqam klingt wie das erste Morgenlicht auf Wasser — offen, einladend, von Güte erfüllt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — בְּאֶמְצַע הַתְּפִילָּה —</span>
+          <span class="line">פֶּתַע — בָּרָק קָטָן —</span>
+          <span class="line">הָעִנְיָן הָאֱלֹהִי — יוֹרֵד —</span>
+          <span class="line">וְחָכְמָה — נִדְלֶקֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — mitten im Gebet —</span>
+          <span class="line">plötzlich — ein kleines Aufleuchten —</span>
+          <span class="line">das göttliche Inyan — steigt herab —</span>
+          <span class="line">und Chochmah — entzündet sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — רַבִּי יְהוּדָה הַלֵּוִי, כּוּזָרִי מַאֲמָר ד׳ §3]</div>
+      <div class="guitar-note">Gitarre: Rast-Arpeggio, fließend, mf. Die Melodie atmet — offen, ohne Drängen. Das Rast hat keine Angst.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּעוֹד שִׂפְתַי נָעוֹת — וְלִבִּי שׁוֹקֵט —</span>
+          <span class="line">פֶּתַע — אוֹר קָטָן — בְּתוֹכִי,</span>
+          <span class="line">יְהוּדָה הַלֵּוִי קָרָא לוֹ — הָעִנְיָן —</span>
+          <span class="line">הַנְּבוּאָה הַקְּטַנָּה — שֶׁבַּתְּפִילָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Während meine Lippen sich bewegten — und mein Herz still war —</span>
+          <span class="line">plötzlich — ein kleines Licht — in mir,</span>
+          <span class="line">Yehuda HaLevi nannte es — das Inyan —</span>
+          <span class="line">die kleine Prophetie — die im Gebet wohnt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — הָרֶגַע שֶׁאֵין לוֹ שֵׁם]</div>
+      <div class="guitar-note">Gitarre: ein Zögern im Rast — ein kurzes Verweilen auf dem Grundton, bevor die Melodie weitergeht. mf, dann leiser.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לֹא תָמִיד — לֹא בְּכָל שָׁחַר —</span>
+          <span class="line">אֶלָּא בְּרֶגַע — שֶׁאֵין לוֹ שֵׁם —</span>
+          <span class="line">חָכְמָה דְּיְצִירָה — מְבַהֶקֶת —</span>
+          <span class="line">וְהַלֵּב — מַכִּיר: הִנֵּה הוּא.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nicht immer — nicht jeden Morgen —</span>
+          <span class="line">sondern in einem Moment — der keinen Namen hat —</span>
+          <span class="line">leuchtet Chochmah d'Yetzirah auf —</span>
+          <span class="line">und das Herz — erkennt: da ist er.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv — warm, offen, einladend. mf beim ersten Mal, mf beim zweiten Mal (das Herz öffnet sich weiter), pp beim dritten — das Licht zieht sich zurück und hinterlässt Wärme.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָעִנְיָן הָאֱלֹהִי — יוֹרֵד —</span>
+            <span class="line">בְּרֶגַע — אֶחָד — שֶׁאֵין לוֹ שֵׁם,</span>
+            <span class="line">חָכְמָה — בְּתוֹךְ — הַתְּפִילָּה —</span>
+            <span class="line">אֲדֹנָי — נוֹגֵעַ — וְהוֹלֵךְ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Das göttliche Inyan — steigt herab —</span>
+            <span class="line">in einem — einzigen — namenlosen Moment,</span>
+            <span class="line">Chochmah — mitten — im Gebet —</span>
+            <span class="line">Adonai — berührt — und geht weiter.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — יְהוּדָה הַלֵּוִי — כְּנֶסֶת יִשְׂרָאֵל וְהַנְּבוּאָה]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: nachdenklich, fast rezitativisch. Der Rast trägt jetzt eine leichte andalusische Schwere — die Weisheit Spaniens spricht.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">יְהוּדָה הַלֵּוִי בְּכוּזָרִי —</span>
+            <span class="line">לִמֵּד: כְּנֶסֶת יִשְׂרָאֵל חָשָׁה —</span>
+            <span class="line">מָה שֶׁנָּבִיא רָאָה — בְּחָזוֹן —</span>
+            <span class="line">הַמְּכַוֵּן — חָשׁ — בְּלִבּוֹ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Yehuda HaLevi im Kuzari —</span>
+            <span class="line">lehrte: die Gemeinde Israels fühlt —</span>
+            <span class="line">was der Prophet — in der Vision sah —</span>
+            <span class="line">der Konzentrierte — fühlt — in seinem Herzen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — הִתְפַּעֲלוּת — פְּתִיחַת הַלֵּב לַהָעִנְיָן הָאֱלֹהִי</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung II — Hitpaalut — Das Herz öffnen für das göttliche Aufleuchten im Gebet</div>
+        </div>
+        <div class="tikkun-src">הַכּוּזָרִי ד׳ §3 · הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, Rast-Grundton, ein einziger offener Ton. Die Stimme spricht die Übung langsam, als ob sie selbst in ihr Gebet einsinkt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּאֶמְצַע הַתְּפִילָּה — עֲצֹר —</span>
+          <span class="line">אַל תְּמַהֵר — אַל תָּרוּץ —</span>
+          <span class="line">הַנַּח לְרֶגַע — שֶׁאֵין לוֹ שֵׁם — לָבוֹא:</span>
+          <span class="line">זֶה הָעִנְיָן הָאֱלֹהִי — שֶׁהַלֵּוִי תֵּאֵר.</span>
+          <span class="line">אַל תַּחְלִיט מֵרֹאשׁ — מָה תַּרְגִּישׁ —</span>
+          <span class="line">פְּתַח אֶת הַלֵּב — כְּחַלּוֹן לְאוֹר —</span>
+          <span class="line">כִּי חָכְמָה דְּיְצִירָה — בָּאָה —</span>
+          <span class="line">לְמִי שֶׁאֵינֶנּוּ מְמַהֵר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Mitten im Gebet — halte inne —</span>
+          <span class="line">eile nicht — laufe nicht —</span>
+          <span class="line">lass den namenlosen Moment — kommen:</span>
+          <span class="line">das ist das göttliche Inyan — das HaLevi beschrieb.</span>
+          <span class="line">Entscheide nicht im Voraus — was du fühlen wirst —</span>
+          <span class="line">öffne das Herz — wie ein Fenster zum Licht —</span>
+          <span class="line">denn Chochmah d'Yetzirah — kommt —</span>
+          <span class="line">zu dem, der nicht eilt.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">הִתְפַּעֲלוּת בַּתְּפִילָּה</span>
+        <span class="mitzva-tag">הָעִנְיָן הָאֱלֹהִי</span>
+        <span class="mitzva-tag">לֹא לְמַהֵר בִּתְפִילָּה</span>
+        <span class="mitzva-tag">כּוּזָרִי ד׳ §3</span>
+        <span class="mitzva-tag">מְסֹרֶת סְפָרַד</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        פִּיּוּטִים בְּמַקָּם רָסְט שֶׁל יְהוּדָה הַלֵּוִי (שִׁירֵי קֹדֶשׁ) — שִׁירִים לְפֶתַח הָעִינֵיִם לָאוֹר הָאֱלֹהִי · Die liturgischen Hymnen von Yehuda HaLevi im Rast-Maqam — gesungen vor der Amidah als Vorbereitung der Seele auf den Empfang des Inyan HaEloki.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann Stille]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: Rast-Akkord forte — dann augenblickliche Stille. Das Licht blitzt auf und bleibt — als Wärme, nicht als Lärm.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חָכְמָה! — בָּרָק! — הָעִנְיָן!</span>
+            <span class="line">אֲדֹנָי — נוֹגֵעַ — בַּלֵּב!</span>
+            <span class="line">הַתְּפִילָּה — נִפְתַּחַת — לָרֹחַב —</span>
+            <span class="line">וְהַחָכְמָה — שׁוֹלַחַת — אוֹרָהּ!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Chochmah! — Aufleuchten! — das Inyan!</span>
+            <span class="line">Adonai — berührt — das Herz!</span>
+            <span class="line">Das Gebet — öffnet sich — in die Weite —</span>
+            <span class="line">und die Weisheit — sendet — ihr Licht!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: der Rast-Grundton, langsam ausklingend. Das Licht des Inyan bleibt als Wärme — nicht zu sehen, aber zu spüren.</div>
+        <div class="coda-whisper">
+          בְּרֶגַע … הָעִנְיָן … אֱלֹהִי …<br>
+          <em>— שְׁתִיקָה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ג — בִּינָה דְּיְצִירָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-binah">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">בִּינָה</span>
+      ג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">בִּינָה דְּיְצִירָה · Binah d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָאת — Geduld · Innerlichkeit · Sehnsucht</span>
+      <span class="song-title-he">חֶשְׁבּוֹן הַנֶּפֶשׁ</span>
+      <span class="song-title-de">Die Seelenabrechnung — Tägliche Selbstprüfung als Binah d'Yetzirah</span>
+    </div>
+    <div class="source-badge">
+      חוֹבוֹת הַלְּבָבוֹת, שַׁעַר חֶשְׁבּוֹן הַנֶּפֶשׁ
+      <span class="source-badge-de">Chovot HaLevavot · Bachya ibn Paquda · Andalusien</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — עֶרֶב, שֶׁקֶט, לִפְנֵי הַשֵּׁנָה]</div>
+      <div class="guitar-note">Gitarre: Bayat-Stimmung — die charakteristische kleine Sekunde des Bayat gibt dem Lied seine introspektive, nachdenkliche Farbe. pp, sehr ruhig, wie das Aufsetzen vor dem Schlafengehen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — בִּנְשׁוֹת הַיּוֹם —</span>
+          <span class="line">מָה עָשִׂיתִי — מָה חָטָאתִי —</span>
+          <span class="line">חֶשְׁבּוֹן — הַנֶּפֶשׁ —</span>
+          <span class="line">בִּינָה — שָׁבָה — הַבַּיְתָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — beim Sinken des Tages —</span>
+          <span class="line">was habe ich getan — was habe ich verfehlt —</span>
+          <span class="line">Seelenabrechnung —</span>
+          <span class="line">Binah — kehrt — nach Hause zurück.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — רַבֵּינוּ בַּחְיָא, חוֹבוֹת הַלְּבָבוֹת]</div>
+      <div class="guitar-note">Gitarre: Bayat-Arpeggio, langsam, gleichmäßig — wie ein Herzschlag am Ende eines langen Tages.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">עֶרֶב עֶרֶב — יוֹשֵׁב אֲנִי —</span>
+          <span class="line">וּמוֹנֶה: מָה נָתַתִּי — מָה לָקַחְתִּי,</span>
+          <span class="line">בַּחְיָא בֶּן פְּקוּדָה לִמֵּד —</span>
+          <span class="line">חֶשְׁבּוֹן הַנֶּפֶשׁ — דֶּרֶךְ הַלֵּב.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Abend für Abend — setze ich mich hin —</span>
+          <span class="line">und zähle: was habe ich gegeben — was habe ich genommen,</span>
+          <span class="line">Bachya ben Paquda lehrte —</span>
+          <span class="line">Cheshbon HaNefesh — der Weg des Herzens.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — לֹא עֹנֶשׁ, כִּי אֱמֶת]</div>
+      <div class="guitar-note">Gitarre: dasselbe Arpeggio, jetzt mit leichter Erleichterung — die Binah hat keine Angst vor der Wahrheit. Sie schaut, erkennt und wendet sich.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לֹא מַחְשָׁבוֹת — שֶׁל עֹנֶשׁ —</span>
+          <span class="line">כִּי אִם בִּינָה — שֶׁל אֱמֶת:</span>
+          <span class="line">הִכַּרְתִּי — חָטָאתִי — שַׁבְתִּי —</span>
+          <span class="line">וּבִינָה — חוֹזֶרֶת — לִמְקוֹמָהּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Keine Gedanken — der Strafe —</span>
+          <span class="line">sondern Binah — der Wahrheit:</span>
+          <span class="line">ich erkannte — ich verfehlte — ich kehrte um —</span>
+          <span class="line">und Binah — kehrt zurück — an ihren Ort.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Bayat-Motiv — geduldig, wartend, ohne Druck. Dreimal gesungen, jedes Mal tiefer eindringend. Der Bayat lässt dem Herz Zeit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חֶשְׁבּוֹן — חֶשְׁבּוֹן — הַנֶּפֶשׁ —</span>
+            <span class="line">כָּל עֶרֶב — לִפְנֵי הַשֵּׁנָה —</span>
+            <span class="line">בִּינָה — שׁוֹמֶרֶת — עַל הַנֶּפֶשׁ —</span>
+            <span class="line">אֲדֹנָי — מַקְשִׁיב — לְחֶשְׁבּוֹנִי.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Abrechnung — Abrechnung — der Seele —</span>
+            <span class="line">jeden Abend — vor dem Schlaf —</span>
+            <span class="line">Binah — wacht — über die Seele —</span>
+            <span class="line">Adonai — hört zu — meiner Abrechnung.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — שַׁעַר חֶשְׁבּוֹן הַנֶּפֶשׁ — שַׁעַר שָׁלֹשׁ]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: ein einzelner Bayat-Ton — ruhig, aufmerksam. Bachya spricht.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שַׁעַר חֶשְׁבּוֹן הַנֶּפֶשׁ — שַׁעַר שָׁלֹשׁ —</span>
+            <span class="line">בַּחְיָא כָּתַב: הָאָדָם שֶׁיָּדַע —</span>
+            <span class="line">מָה חָסֵר — יְמַלֵּא —</span>
+            <span class="line">וּמָה עוֹדֵף — יְמַעֵט.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Das Tor der Seelenabrechnung — das dritte Tor —</span>
+            <span class="line">Bachya schrieb: der Mensch, der erkannte —</span>
+            <span class="line">was fehlt — soll füllen —</span>
+            <span class="line">und was überflüssig ist — soll mindern.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — חֶשְׁבּוֹן הַנֶּפֶשׁ הַיּוֹמִי לִפְנֵי הַשֵּׁנָה</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung III — Das tägliche Cheshbon HaNefesh vor dem Schlaf nach Chovot HaLevavot</div>
+        </div>
+        <div class="tikkun-src">חוֹבוֹת הַלְּבָבוֹת, שַׁעַר חֶשְׁבּוֹן הַנֶּפֶשׁ · בַּחְיָא בֶּן פְּקוּדָה</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, Bayat-Grundton, sehr leise — wie der letzte Atemzug vor dem Schlaf. Keine Dramatik. Nur Stille und Wahrheit.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לִפְנֵי הַשֵּׁנָה — שְׁאַל אֶת עַצְמְךָ:</span>
+          <span class="line">מָה עָשִׂיתִי הַיּוֹם — בְּמַעֲשֶׂה?</span>
+          <span class="line">מָה אָמַרְתִּי — בְּדִבּוּר?</span>
+          <span class="line">מָה חָשַׁבְתִּי — בְּמַחְשָׁבָה?</span>
+          <span class="line">לֹא לְמַעַן עֹנֶשׁ — כִּי לְמַעַן אֱמֶת —</span>
+          <span class="line">כִּי בִּינָה — רוֹצָה — רַק לָדַעַת.</span>
+          <span class="line">מָה חָסֵר? — הַשְׁלֵם מָחָר —</span>
+          <span class="line">מָה עוֹדֵף? — מַעֵט מָחָר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Vor dem Schlaf — frage dich:</span>
+          <span class="line">Was habe ich heute getan — in der Tat?</span>
+          <span class="line">Was habe ich gesagt — in der Rede?</span>
+          <span class="line">Was habe ich gedacht — im Gedanken?</span>
+          <span class="line">Nicht um der Strafe willen — sondern um der Wahrheit willen —</span>
+          <span class="line">denn Binah — will — nur wissen.</span>
+          <span class="line">Was fehlt? — ergänze es morgen —</span>
+          <span class="line">was ist überflüssig? — mindere es morgen.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">חֶשְׁבּוֹן הַנֶּפֶשׁ יוֹמִי</span>
+        <span class="mitzva-tag">לִפְנֵי שְׁנַת הַלַּיְלָה</span>
+        <span class="mitzva-tag">שַׁלֹּשׁ שְׁאֵלוֹת</span>
+        <span class="mitzva-tag">חוֹבוֹת הַלְּבָבוֹת שַׁעַר ג׳</span>
+        <span class="mitzva-tag">מְסֹרֶת אַנְדָּלוּסְיָה</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        פִּיּוּטִים בְּמַקָּם בַּיָאת לְעֶרֶב שַׁבָּת וְיוֹם כִּפּוּר · Die Bayat-Piyutim der sephardischen Tradition — gesungen am Abend vor dem Schlaf als musikalischer Rahmen für das Cheshbon HaNefesh. Bachya ibn Paqudas andalusisches Werk ist das Fundament dieser Abendpraxis.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann Frieden]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: Bayat-Akkord forte — nicht bedrohlich, sondern befreiend. Die Binah hat gezählt, hat erkannt, hat Frieden gefunden. Dann pp — Ruhe.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חֶשְׁבּוֹן! — אֱמֶת! — שְׁלֵמוּת!</span>
+            <span class="line">בִּינָה דְּיְצִירָה — בּוֹנָה אֶת הַנֶּפֶשׁ!</span>
+            <span class="line">הִכַּרְנוּ — חָזַרְנוּ — שַׁבְנוּ —</span>
+            <span class="line">אֲדֹנָי — מְקַבֵּל — הַחוֹזֵר!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Abrechnung! — Wahrheit! — Vollständigkeit!</span>
+            <span class="line">Binah d'Yetzirah — baut die Seele!</span>
+            <span class="line">Wir erkannten — kehrten um — wir sind zurück —</span>
+            <span class="line">Adonai — nimmt an — den Heimkehrenden!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: ein letzter Bayat-Ton — ruhig, friedvoll. Der Tag ist abgerechnet. Die Nacht kommt mit Frieden.</div>
+        <div class="coda-whisper">
+          חֶשְׁבּוֹן … לַיְלָה … שֶׁקֶט …<br>
+          <em>— שֵׁנָה שֶׁל שָׁלוֹם —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ד — חֶסֶד דְּיְצִירָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-chesed">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חֶסֶד דְּיְצִירָה · Chesed d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Offene Liebe · Güte ohne Grund</span>
+      <span class="song-title-he">אַהֲבַת עוֹלָם</span>
+      <span class="song-title-de">Ewige Liebe — Chesed im Gebet nach Ibn Gabirol</span>
+    </div>
+    <div class="source-badge">
+      כֶּתֶר מַלְכוּת §2 · אִבְּן גַּבִּירוֹל
+      <span class="source-badge-de">Keter Malchut · Rabbi Shlomo ibn Gabirol · Andalusien</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אַהֲבָה, לֹא פַּחַד]</div>
+      <div class="guitar-note">Gitarre: Rast-Stimmung — warm, strahlend, von göttlicher Güte erfüllt. pp bis mf, fließend. Der Rast ist hier der Klang der Ahavah Rabbah — der großen Liebe. Keine Angst, keine Schwere.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — אֲנִי אוֹהֵב —</span>
+          <span class="line">לֹא מִיִּרְאָה — כִּי מֵאַהֲבָה —</span>
+          <span class="line">כֶּתֶר מַלְכוּת — שִׁיר הָאַהֲבָה —</span>
+          <span class="line">אֲשִׁיר — לְאֵל — שֶׁאֵין לוֹ כָּמוֹהוּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — ich liebe —</span>
+          <span class="line">nicht aus Furcht — sondern aus Liebe —</span>
+          <span class="line">Keter Malchut — das Lied der Liebe —</span>
+          <span class="line">ich werde singen — für Gott — der seinesgleichen nicht hat.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — שְׁלֹמֹה אִבְּן גַּבִּירוֹל — כֶּתֶר מַלְכוּת §2]</div>
+      <div class="guitar-note">Gitarre: Rast-Arpeggio, warm und fließend. Die andalusische Sonne ist in diesem Maqam — die Liebe Gabirols aus Málaga.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שְׁלֹמֹה אִבְּן גַּבִּירוֹל — שָׁר בִּסְפָרַד —</span>
+          <span class="line">אַהֲבָה — שֶׁאֵין לָהּ שׁוּם סִבָּה,</span>
+          <span class="line">לֹא שְׂכַר — לֹא פַּחַד — רַק אַהֲבָה —</span>
+          <span class="line">חֶסֶד יְצִירָה — בּוֹעֵר בַּתְּפִילָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Shlomo ibn Gabirol — sang in Spanien —</span>
+          <span class="line">Liebe — die keinen Grund hat,</span>
+          <span class="line">kein Lohn — keine Furcht — nur Liebe —</span>
+          <span class="line">Chesed d'Yetzirah — brennt im Gebet.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — אַהֲבָה הֲדָדִית]</div>
+      <div class="guitar-note">Gitarre: das Rast-Motiv öffnet sich weiter — wie eine Umarmung, die größer wird. mf, strahlend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בִּשְׂפַת הַפִּיּוּט — אֶבְחַן אֶת אַהֲבָתִי —</span>
+          <span class="line">לְאֵל שֶׁבָּרָא — וְלֹא הִצְטָרֵךְ —</span>
+          <span class="line">הוּא אוֹהֵב — אֲנִי אוֹהֵב —</span>
+          <span class="line">וְחֶסֶד — זוֹרֵם — בֵּין שְׁנֵינוּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">In der Sprache des Piyut — prüfe ich meine Liebe —</span>
+          <span class="line">für Gott, der schuf — und nichts brauchte —</span>
+          <span class="line">er liebt — ich liebe —</span>
+          <span class="line">und Chesed — fließt — zwischen uns beiden.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv in voller Wärme. Dreimal gesungen — jedes Mal mit mehr Überzeugung. Das Chesed wächst mit der Wiederholung.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי — אוֹהֵב אַתָּה —</span>
+            <span class="line">וַאֲנִי — אוֹהֵב — אֶת אוֹהֲבִי,</span>
+            <span class="line">חֶסֶד — יְצִירָה — הַמִּתְגַּלֶּה —</span>
+            <span class="line">בִּתְפִילָּה — שֶׁל אַהֲבָה — שְׁלֵמָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai — du liebst —</span>
+            <span class="line">und ich — liebe — meinen Geliebten,</span>
+            <span class="line">Chesed — d'Yetzirah — der sich offenbart —</span>
+            <span class="line">im Gebet — vollständiger Liebe.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — אִבְּן גַּבִּירוֹל — לֹא לְמַעַן שְׂכָרִי]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv zieht sich zurück — nun ein einzelner, ruhiger Ton. Gabirol spricht aus Spanien über ein Jahrtausend hinweg.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אִבְּן גַּבִּירוֹל — כָּתַב: אַתָּה אֱלֹהַי —</span>
+            <span class="line">לֹא לְמַעַן שְׂכָרִי — כִּי לְמַעַן אַתָּה,</span>
+            <span class="line">אַהֲבַת עוֹלָם — אַהֲבַת אֱמֶת —</span>
+            <span class="line">חֶסֶד — מֵהַשָּׁמַיִם — יוֹרֵד.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Ibn Gabirol — schrieb: du bist mein Gott —</span>
+            <span class="line">nicht um meines Lohnes willen — sondern um deinetwillen,</span>
+            <span class="line">ewige Liebe — wahre Liebe —</span>
+            <span class="line">Chesed — vom Himmel — steigt herab.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — קְרִיאַת כֶּתֶר מַלְכוּת — אַהֲבָה בַּתְּפִילָּה</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung IV — Rezitation von Keter Malchut — Beten aus Liebe, nicht aus Furcht</div>
+        </div>
+        <div class="tikkun-src">כֶּתֶר מַלְכוּת §2–§9 · שְׁלֹמֹה אִבְּן גַּבִּירוֹל</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, Rast-Grundton — warm, offen. Die Stimme trägt die Keter-Malchut-Strophen mit Würde und Liebe.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּלֵיל יוֹם כִּפּוּר — לִפְנֵי כָּל נֶדֶר — שִׁיר כֶּתֶר מַלְכוּת,</span>
+          <span class="line">אוֹ: כָּל עֶרֶב שַׁבָּת — לִפְנֵי הַתְּפִילָּה,</span>
+          <span class="line">וּלְמַד: הָאֱלֹהִים — לֹא צָרִיךְ לָנוּ —</span>
+          <span class="line">הוּא אָהַב — לִפְנֵי שֶׁיָּדַע שֶׁנֵּאָהֵב.</span>
+          <span class="line">וְכַאֲשֶׁר תִּתְפַּלֵּל — שְׁאַל אֶת עַצְמְךָ:</span>
+          <span class="line">מֵאַהֲבָה — אֲנִי מְבַקֵּשׁ — אוֹ מִיִּרְאָה?</span>
+          <span class="line">כִּי חֶסֶד יְצִירָה — נִפְתָּח —</span>
+          <span class="line">רַק לְמִי שֶׁאוֹהֵב — לֹא מִפַּחַד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">In der Nacht von Jom Kippur — vor Kol Nidre — singe Keter Malchut,</span>
+          <span class="line">oder: jeden Schabbatabend — vor dem Gebet,</span>
+          <span class="line">und lerne: Gott — braucht uns nicht —</span>
+          <span class="line">er liebte — bevor er wusste, dass wir lieben würden.</span>
+          <span class="line">Wenn du betest — frage dich:</span>
+          <span class="line">aus Liebe — bitte ich — oder aus Furcht?</span>
+          <span class="line">denn Chesed d'Yetzirah — öffnet sich —</span>
+          <span class="line">nur dem, der liebt — nicht dem, der fürchtet.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">קְרִיאַת כֶּתֶר מַלְכוּת</span>
+        <span class="mitzva-tag">אַהֲבָה בַּתְּפִילָּה</span>
+        <span class="mitzva-tag">לֹא לְמַעַן שְׂכָרִי</span>
+        <span class="mitzva-tag">לֵיל יוֹם כִּפּוּר</span>
+        <span class="mitzva-tag">עֶרֶב שַׁבָּת</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        כֶּתֶר מַלְכוּת לְרַבִּי שְׁלֹמֹה אִבְּן גַּבִּירוֹל — פִּיּוּט לֵיל יוֹם כִּפּוּר: נוּסַח הַסְּפָרַדִּים · In der sephardischen Tradition wird Keter Malchut in der Nacht von Jom Kippur nach Maariv gesungen — als vollständige Meditation über die göttliche Liebe, die keine Gegenseitigkeit fordert. Ibn Gabirol formuliert in §9: אַתָּה הוּא — וְלֹא אַתָּה לְמַעַן תּוֹעַלְתְּךָ — כִּי אֵינְךָ צָרִיךְ לְכָל אֵלֶּה. Das Maqam Rast trägt diese Liebe als warme Grundfarbe.
+      </div>
+    </div><!-- end tikkun-box chesed -->
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — חֶסֶד — forte, dann pp]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: forte — das Rast-Motiv in voller Entfaltung. Die Stimme singt mit voller Überzeugung. Dann — auf dem letzten אֲדֹנָי — plötzliches pp. Stille.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אַהֲבַת עוֹלָם — אַהֲבַת עוֹלָם —</span>
+            <span class="line">לֹא מִיִּרְאָה — כִּי מֵאַהֲבָה,</span>
+            <span class="line">אִבְּן גַּבִּירוֹל — יוֹדֵעַ — שֶׁאַתָּה אוֹהֵב —</span>
+            <span class="line">וַאֲנִי — אוֹהֵב — אֶת אֲדֹנָי.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Ewige Liebe — ewige Liebe —</span>
+            <span class="line">nicht aus Furcht — sondern aus Liebe,</span>
+            <span class="line">Ibn Gabirol — weiß — dass du liebst —</span>
+            <span class="line">und ich — liebe — Adonai.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — לַחַשׁ]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: ein letzter Rast-Akkord, pp, ausklingend. Die Stimme flüstert.</div>
+        <div class="coda-whisper">
+          אַהֲבָה — <em>Liebe</em> — אַהֲבָה —<br>
+          חֶסֶד יְצִירָה — נִפְתָּח —<br>
+          לְמִי שֶׁאוֹהֵב — <em>der liebt</em>.
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIOS CHESED -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div><!-- end scenarios chesed -->
+
+  </div><!-- end song-body chesed -->
+</section><!-- end song-chesed -->
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ה — גְּבוּרָה דְּיְצִירָה · מַקָּם חִיגָ׳אז
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-gevura">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">גְּבוּרָה</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">גְּבוּרָה דְּיְצִירָה · Gevurah d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִיגָ׳אז — Ehrfurcht · Erhabenheit · Heilige Scheu</span>
+      <span class="song-title-he">יִרְאַת שָׁמַיִם בַּתְּפִילָּה</span>
+      <span class="song-title-de">Gottesscheu im Gebet — Gevurah öffnet den Raum der Stille</span>
+    </div>
+    <div class="source-badge">
+      תּוֹמֶר דְּבוֹרָה, פֶּרֶק ה · הָרַמַּ״ק
+      <span class="source-badge-de">Tomer Devorah, Kap. 5 · Ramak (R. Moshe Kordovero)</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — בְּיִרְאָה וְאַהֲבָה גַּם יַחַד]</div>
+      <div class="guitar-note">Gitarre: Hijaz — die charakteristische übermäßige Sekunde des Hijaz sofort spürbar. Ein einzelner Ton, dann das Hijaz-Tetrachord aufwärts — wie ein Ruf in die Stille. pp. Der Sänger öffnet langsam, mit Ehrfurcht.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — יִרְאָתְךָ —</span>
+          <span class="line">לֹא פַּחַד — כִּי קְדֻשָּׁה,</span>
+          <span class="line">גְּבוּרָה — יְצִירָה —</span>
+          <span class="line">שַׁעַר הַיִּרְאָה — נִפְתָּח.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — deine Ehrfurcht —</span>
+          <span class="line">nicht Angst — sondern Heiligkeit,</span>
+          <span class="line">Gevurah — d'Yetzirah —</span>
+          <span class="line">das Tor der Scheu — öffnet sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — הָרַמַּ״ק, תּוֹמֶר דְּבוֹרָה, פֶּרֶק ה — יִרְאָה שֶׁמֵּעַל לָאַהֲבָה]</div>
+      <div class="guitar-note">Gitarre: das Hijaz-Arpeggio, mf — die übermäßige Sekunde gibt dem Lied seine charakteristische Farbe: fremd, erhaben, heilig. Der Kordovero spricht über eine Furcht, die höher ist als Liebe.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַמַּ״ק כָּתַב בְּתוֹמֶר דְּבוֹרָה —</span>
+          <span class="line">יִרְאָה — גְּבוֹהָה מֵאַהֲבָה —</span>
+          <span class="line">כִּי הָאַהֲבָה — מִשֵּׁם תּוֹעֶלֶת —</span>
+          <span class="line">אֲבָל הַיִּרְאָה — לְשֵׁם עַצְמוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Ramak schrieb im Tomer Devorah —</span>
+          <span class="line">Ehrfurcht — höher als Liebe —</span>
+          <span class="line">denn die Liebe — kommt vom Nutzen —</span>
+          <span class="line">aber die Scheu — gilt ihm selbst.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — יִרְאַת הָרוֹמְמוּת — הַגְּבוּרָה שֶׁמְּשַׁחְרֶרֶת]</div>
+      <div class="guitar-note">Gitarre: das Hijaz-Motiv steigt — ein aufsteigendes Tetrachord, dann eine Pause. Als ob die Musik selbst innehält vor etwas Erhabenem.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">יִרְאַת הָרוֹמְמוּת — לֹא כְּמוֹ עֶבֶד —</span>
+          <span class="line">כִּי אִם כְּמוֹ בֵּן — לִפְנֵי אָבִיו,</span>
+          <span class="line">בּוֹשֵׁשׁ מִגְּדֻלָּתוֹ — בּוֹשֵׁשׁ מֵאַהֲבָתוֹ —</span>
+          <span class="line">וְהַגְּבוּרָה — מְשַׁחְרֶרֶת — אֶת הַנֶּפֶשׁ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Ehrfurcht der Erhabenheit — nicht wie ein Sklave —</span>
+          <span class="line">sondern wie ein Sohn — vor seinem Vater,</span>
+          <span class="line">beschämt von seiner Größe — beschämt von seiner Liebe —</span>
+          <span class="line">und die Gevurah — befreit — die Seele.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Hijaz-Motiv voll entfaltet — mf beim zweiten Durchgang fast ein Ausruf, dann wieder pp. Die Ehrfurcht schwingt zwischen Stärke und Stille.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">יִרְאָה — יִרְאָה — לַאֲדֹנָי —</span>
+            <span class="line">לֹא פַּחַד — כִּי רוֹמְמוּת,</span>
+            <span class="line">גְּבוּרָה יְצִירָה — מִתְגַּלָּה —</span>
+            <span class="line">בְּשֶׁקֶט — שֶׁל יִרְאַת שָׁמַיִם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Ehrfurcht — Ehrfurcht — für Adonai —</span>
+            <span class="line">nicht Angst — sondern Erhabenheit,</span>
+            <span class="line">Gevurah d'Yetzirah — offenbart sich —</span>
+            <span class="line">in der Stille — heiliger Scheu.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הָרַמַּ״ק — הַגְּבוּרָה כְּצֵל הָרַחֲמִים]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: das Hijaz zieht sich zurück — ein einzelner, schwebender Ton. Der Ramak spricht über Gevurah als Schatten des Erbarmens. Rezitativisch, nachdenklich.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַמַּ״ק כָּתַב: אַל תִּירָא — אֶלָּא הִתְבּוֹשֵׁשׁ —</span>
+            <span class="line">כִּי הַגְּבוּרָה — צֵל הָרַחֲמִים הִיא,</span>
+            <span class="line">בְּשַׁחֲרִית — כְּשֶׁאַתָּה עוֹמֵד —</span>
+            <span class="line">לִפְנֵי אֲדֹנָי — בִּגְבוּרָה — וּבְיִרְאָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Ramak schrieb: fürchte nicht — sondern schäme dich —</span>
+            <span class="line">denn die Gevurah — ist Schatten des Erbarmens,</span>
+            <span class="line">beim Morgengebet — wenn du stehst —</span>
+            <span class="line">vor Adonai — in Stärke — und Ehrfurcht.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN GEVURAH -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — עֲמִידָה בְּיִרְאַת הָרוֹמְמוּת — תּוֹמֶר דְּבוֹרָה</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung V — Amidah mit Yirat HaRomemut — Ehrfurcht der Erhabenheit nach Tomer Devorah</div>
+        </div>
+        <div class="tikkun-src">תּוֹמֶר דְּבוֹרָה, פֶּרֶק ה · הָרַמַּ״ק</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, ein einzelner Hijaz-Ton — gehalten, unbeweglich. Die Stimme spricht die Tikkun-Anweisung mit stiller Würde, keine Eile.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לִפְנֵי הָעֲמִידָה — עֲמֹד רֶגַע —</span>
+          <span class="line">וְשָׁאַל: הַאִם אֲנִי יָרֵא — אוֹ פוֹחֵד?</span>
+          <span class="line">יִרְאַת הָרוֹמְמוּת — אֵינָהּ חֲרָדָה —</span>
+          <span class="line">כִּי אִם הַכָּרָה — בִּגְדֻלַּת אֲדֹנָי.</span>
+          <span class="line">עֲמֹד — כְּמוֹ בֵּן לִפְנֵי אָבִיו —</span>
+          <span class="line">בּוֹשֵׁשׁ — אֲבָל אָהוּב — אֲבָל נִשְׁמָע,</span>
+          <span class="line">כִּי גְּבוּרָה יְצִירָה — שַׁעַר הַיִּרְאָה —</span>
+          <span class="line">נִפְתָּח לְמִי שֶׁעוֹמֵד — בִּשְׁקֵטָה — בְּכָבוֹד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Vor der Amidah — halte einen Moment inne —</span>
+          <span class="line">und frage: bin ich ehrfürchtig — oder ängstlich?</span>
+          <span class="line">Die Yirat HaRomemut — ist keine Angststörung —</span>
+          <span class="line">sondern das Erkennen — der Größe Adonais.</span>
+          <span class="line">Stehe — wie ein Sohn vor seinem Vater —</span>
+          <span class="line">beschämt — aber geliebt — aber gehört,</span>
+          <span class="line">denn Gevurah d'Yetzirah — das Tor der Ehrfurcht —</span>
+          <span class="line">öffnet sich dem, der steht — in Stille — in Würde.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">יִרְאַת הָרוֹמְמוּת</span>
+        <span class="mitzva-tag">כַּוָּנַת הָעֲמִידָה</span>
+        <span class="mitzva-tag">תּוֹמֶר דְּבוֹרָה</span>
+        <span class="mitzva-tag">גְּבוּרָה דְּיְצִירָה</span>
+        <span class="mitzva-tag">שַׁחֲרִית / מִנְחָה / מַעֲרִיב</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        תּוֹמֶר דְּבוֹרָה לְהָרַמַּ״ק, פֶּרֶק ה: הַגְּבוּרָה הָאֱלֹהִית אֵינָהּ אַכְזָרִיּוּת — כִּי אִם מִדַּת הַדִּין שֶׁמְּכַוֶּנֶת אֶת הָרַחֲמִים. Kordovero lehrt: Wer die Gevurah d'Yetzirah öffnen will, muss die Ehrfurcht von der Angst trennen. Das Maqam Hijaz — mit seiner charakteristischen übermäßigen Sekunde — ist seit Jahrhunderten die musikalische Sprache dieser heiligen Scheu in der sephardischen Synagoge.
+      </div>
+    </div><!-- end tikkun-box gevurah -->
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — גְּבוּרָה — forte dann pp — הַשֶּׁקֶט שֶׁאַחַר הַגְּדֻלָּה]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: forte — das Hijaz-Motiv voll und unerschrocken. Die Stimme mit voller Stärke. Dann — auf dem letzten שֶׁקֶט — absolutes pp. Die Stille nach der Stärke ist selbst heilig.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גְּבוּרָה — גְּבוּרָה — שֶׁל אֲדֹנָי —</span>
+            <span class="line">לֹא אַכְזָרִיּוּת — כִּי צֶדֶק,</span>
+            <span class="line">הָרַמַּ״ק — יוֹדֵעַ — שֶׁהַיִּרְאָה —</span>
+            <span class="line">פּוֹתַחַת — אֶת שַׁעַר הַשֶּׁקֶט.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Gevurah — Gevurah — Adonais —</span>
+            <span class="line">keine Grausamkeit — sondern Gerechtigkeit,</span>
+            <span class="line">der Ramak — weiß — dass die Ehrfurcht —</span>
+            <span class="line">das Tor — der Stille — öffnet.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — לַחַשׁ]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: der letzte Hijaz-Ton, sehr langsam, pp — verblasst ins Schweigen. Die Stimme flüstert. Dann absolute Stille.</div>
+        <div class="coda-whisper">
+          יִרְאָה — <em>Ehrfurcht</em> — יִרְאָה —<br>
+          גְּבוּרָה יְצִירָה — שׁוֹתֶקֶת —<br>
+          לְמִי שֶׁיִּרָא — <em>wer sich scheut</em>.
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIOS GEVURAH -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div><!-- end scenarios gevurah -->
+
+  </div><!-- end song-body gevurah -->
+</section><!-- end song-gevurah -->
+
+<!-- ── BRIDGE TRANSITION → DATEI II ── -->
+<div class="bridge-transition">
+  <span class="bt-label">מַעֲבָר לְשִׁירִים ו–י · Übergang zu den Liedern VI–X</span>
+  <p class="bt-text">
+    הַחֲמִשָּׁה שִׁירִים הָרִאשׁוֹנִים שֶׁל יְצִירָה — כֶּתֶר עַד גְּבוּרָה — הֵם שַׁעֲרֵי הַהִתְכּוֹנְנוּת לַתְּפִילָּה.
+    <strong>כֶּתֶר</strong> פּוֹתֵחַ בָּאֹפֶל, <strong>חָכְמָה</strong> מֵבִיאָה הֶבְזֵק, <strong>בִּינָה</strong> מְעַמֶּקֶת, <strong>חֶסֶד</strong> מְחַמֵּם, <strong>גְּבוּרָה</strong> מְקַדֶּשֶׁת.
+    עַכְשָׁיו — עִם שִׁיר וְ — <strong>תִּפְאֶרֶת</strong> — מַגִּיעִים אֶל לֵב הַתְּפִילָּה.
+    <br><br>
+    Die ersten fünf Lieder der Yetzirah-Welt bereiten den Beter vor. Mit <strong>Tiferet</strong> beginnt die zweite Hälfte: das Herz des Gebets selbst — Piyut, Sefirat HaOmer, Hashkavah, Chazzan, und die vollendete Amidah als Tor zur Welt des Beriah.
+  </p>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-world">יְצִירָה — שִׁירִים א–ה</div>
+  <div class="footer-chain">עֲשִׂיָּה · <strong>יְצִירָה</strong> · בְּרִיאָה · אֲצִילוּת</div>
+  <p class="footer-de">
+    Diese fünf Lieder folgen dem sephardischen Aufstieg durch die Formungswelt —
+    von den <strong>Bakashot</strong> des Keter im Dunkel vor dem Morgengrauen
+    bis zur <strong>Yirat HaRomemut</strong> der Gevurah als stiller Vorbereitung auf das Gebet.
+    Jedes Lied öffnet eine Tür. Jede Tür führt zur nächsten.
+    <br>
+    הַמַּסּוֹרֶת הַסְּפָרַדִּית — בֵּין מָרוֹקוֹ לִירוּשָׁלַיִם —
+    שׁוֹמֶרֶת עַל הַדֶּרֶךְ הַזֹּאת כְּבָר מֵאוֹת שָׁנִים.
+  </p>
+  <div style="color:var(--yet);font-size:.52em;letter-spacing:.65em;opacity:.35;">✦ ✦ ✦</div>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.75em;color:var(--silver-dim);margin-top:18px;opacity:.55;">
+    Fortsetzung: <a href="Yetzirah_Lieder_VI-X.html" style="color:var(--yet-lt);opacity:.65;">יְצִירָה — שִׁירִים ו–י · Lieder VI–X →</a>
+  </p>
+</footer>
+
+</div><!-- end .wrap -->
+
+</body></html>
