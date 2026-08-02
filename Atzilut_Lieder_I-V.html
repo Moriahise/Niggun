@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אֲצִילוּת — שִׁירִים א–ה · עוֹלַם הָאֵמָנָה · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   אֲצִילוּת — עוֹלַם הָאֵמָנָה · שִׁירִים א–ה
+   Die Welt der göttlichen Emanation · Fünf Lieder · Sephardische Tradition
+   Reines Gold · Bernstein · Strahlendes Elfenbein · Tiefes Schwarzgold
+   Keter · Chochmah · Binah · Chesed · Gevurah — Sephardische Praxis
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  /* ── ATZILUT — Reines Gold · Strahlendes Bernstein · Elfenbein ── */
+  --atz:         #A07818;
+  --atz-lt:      #E8CC50;
+  --atz-vlt:     #F5E090;
+  --atz-dim:     #2A1E00;
+  --atz-bg:      rgba(160,120,24,.07);
+  --atz-bdr:     rgba(160,120,24,.32);
+  --atz-glow:    rgba(232,204,80,.20);
+
+  /* ── Sekundärfarben ── */
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --gold-dim:    #483400;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn:        #E8D8A8;
+  --dawn-dim:    #806840;
+
+  /* ── Schrift / Licht ── */
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  /* Tikkun */
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+  --tik-bg:      rgba(60,44,8,.14);
+  --tik-bdr:     rgba(192,144,48,.32);
+
+  /* Guitar / Oud */
+  --guitar:      #C09840;
+  --guitar-lt:   #DCC060;
+
+  /* Sephirot-Farben */
+  --keter:       #F0EEF4;
+  --chochma:     #6070D8;
+  --binah:       #9840B0;
+  --chesed:      #3080C8;
+  --gevura:      #C02830;
+  --tiferet:     #C8A010;
+  --netzach:     #388040;
+  --hod:         #8050C0;
+  --yesod:       #2870A8;
+  --malchut:     #A03060;
+
+  /* Maqam-Farben */
+  --saba:        #B0904A;
+  --rast:        #90C890;
+  --hijaz:       #D08040;
+  --bayat:       #B8A050;
+  --nahawand:    #8090C0;
+  --siga:        #B0A0D8;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── GOLDENE ATMOSPHÄRE — Atzilut: Strahlendes Licht ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,    rgba(160,120,24,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 20%  20%,  rgba(160,120,24,.10) 0%,transparent 42%),
+    radial-gradient(ellipse at 80%  15%,  rgba(192,152,32,.08) 0%,transparent 40%),
+    radial-gradient(ellipse at 15%  70%,  rgba(160,120,24,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85%  75%,  rgba(192,152,32,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50%  50%,  rgba(8,6,3,.84)     0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12%  6%,  rgba(232,204,80,.75) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(245,224,144,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(232,204,80,.60) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28%  32%,rgba(232,204,80,.48) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70%  48%,rgba(245,224,144,.40) 0%,transparent 100%),
+    radial-gradient(2px 2px at  8%  68%,rgba(232,204,80,.58) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92%  78%,rgba(232,204,80,.50) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(192,152,32,.38) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62%  20%,rgba(232,204,80,.35) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid rgba(160,120,24,.28);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid rgba(160,120,24,.22);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--atz-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(232,204,80,.52);text-decoration:none;padding:0 12px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:5px;direction:rtl;
+}
+.nav-link:hover{color:var(--atz-lt);border-bottom-color:var(--atz);}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;opacity:.44;direction:ltr;}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:76px;padding-bottom:60px;
+  border-bottom:1px solid rgba(160,120,24,.18);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--atz);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--atz-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.2em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.08;
+  margin-bottom:10px;
+  text-shadow:
+    0 0 60px rgba(232,204,80,.60),
+    0 0 120px rgba(160,120,24,.30),
+    0 0 220px rgba(160,120,24,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:680px;margin:0 auto 30px;
+}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid rgba(160,120,24,.20);padding:12px 28px;
+  background:rgba(160,120,24,.03);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--atz-lt);border-color:var(--atz-bdr);
+  background:rgba(160,120,24,.10);
+  text-shadow:0 0 20px rgba(232,204,80,.25);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--atz);opacity:.38;font-size:.72em;}
+
+/* ── ATZILUT INTRO BOX ── */
+.world-intro-box{
+  background:linear-gradient(135deg,rgba(160,120,24,.10),rgba(5,4,2,.88));
+  border:1px solid rgba(160,120,24,.32);border-left:4px solid var(--atz);
+  padding:28px 36px;margin-bottom:58px;position:relative;
+  box-shadow:inset 0 0 60px rgba(232,204,80,.04);
+}
+.world-intro-box::before{
+  content:'אֲצִילוּת — עוֹלַם הָאֵמָנָה';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 14px;font-size:.62em;color:var(--atz-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;
+}
+.wib-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.16em;font-weight:700;
+  color:var(--ivory);direction:rtl;text-align:right;
+  margin-bottom:10px;line-height:1.65;
+}
+.wib-src{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--atz-lt);direction:rtl;text-align:right;
+  margin-bottom:12px;opacity:.85;
+}
+.wib-de{
+  font-family:'EB Garamond',serif;font-size:.95em;color:var(--text);
+  line-height:1.92;
+}
+.wib-de strong{color:var(--ivory);}
+
+/* ── SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin-bottom:66px;
+}
+.sefira-nav-item{
+  border:1px solid rgba(160,120,24,.22);padding:12px 10px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;
+  background:rgba(160,120,24,.03);
+}
+.sefira-nav-item:hover{background:rgba(160,120,24,.08);border-color:rgba(232,204,80,.35);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.08em;font-weight:700;color:var(--atz-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.65em;color:var(--silver-dim);display:block;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--amber-lt);opacity:.58;display:block;direction:ltr;margin-top:2px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:100px;scroll-margin-top:60px;
+  border:1px solid rgba(160,120,24,.13);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--atz),var(--gold),var(--atz-lt),var(--gold),var(--atz),transparent);
+  opacity:.50;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(232,204,80,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:28px 42px 22px;
+  border-bottom:1px solid rgba(160,120,24,.10);
+  display:grid;grid-template-columns:90px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.38;line-height:1;text-align:center;
+  color:var(--atz-lt);
+  border-right:1px solid rgba(160,120,24,.16);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.38em;font-weight:700;
+  opacity:.52;letter-spacing:.1em;display:block;margin-bottom:2px;
+}
+.sefira-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;
+  letter-spacing:.16em;color:var(--atz-lt);opacity:.58;display:block;margin-bottom:3px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.60em;display:block;margin-bottom:5px;direction:ltr;
+  letter-spacing:.12em;color:var(--amber-lt);opacity:.68;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.76em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;
+  text-shadow:0 0 40px rgba(232,204,80,.18);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:2px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.65em;
+  border:1px solid rgba(160,120,24,.30);padding:6px 16px;
+  color:var(--atz-lt);direction:rtl;text-align:right;line-height:1.72;
+  flex-shrink:0;background:rgba(160,120,24,.05);
+  box-shadow:0 0 20px rgba(160,120,24,.06);
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(160,120,24,.08);opacity:.82;
+}
+
+/* ── GUITAR / OUD NOTE ── */
+.guitar-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.85em;color:var(--guitar);opacity:.90;
+  margin-bottom:12px;padding:8px 18px;
+  border-left:2px solid rgba(192,152,64,.32);
+  background:rgba(192,152,64,.03);direction:ltr;
+  line-height:1.80;
+}
+
+/* ── LYRICS BLOCK ── */
+.lyrics-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.14em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.12;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.12;
+  border-left:1px solid rgba(160,120,24,.10);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── SONG BLOCKS ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(160,120,24,.09),rgba(160,120,24,.02));
+  border:1px solid rgba(160,120,24,.26);border-left:3px solid var(--atz);
+  padding:24px 30px;
+  box-shadow:0 0 30px rgba(232,204,80,.04);
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(192,152,32,.07),transparent);
+  border:1px solid rgba(192,152,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(160,120,24,.10),transparent);
+  border:1px solid rgba(232,204,80,.22);
+  padding:22px 26px;
+  box-shadow:inset 0 0 40px rgba(232,204,80,.05);
+}
+.climax-box .lyrics-he .line{font-size:1.10em;font-weight:700;}
+.coda-box{text-align:center;padding:28px 0 14px;}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+
+/* ── TIKKUN BOX ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.16),rgba(9,7,3,.88));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:30px 34px;margin:30px 0;position:relative;
+  box-shadow:0 0 40px rgba(192,144,48,.05);
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.77em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.65em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:3px 12px;background:rgba(60,44,8,.08);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;
+}
+.tikkun-src a{color:var(--chochma);text-decoration:none;}
+.tikkun-src a:hover{text-decoration:underline;}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 10px;background:rgba(60,44,8,.06);direction:rtl;
+}
+.piyut-ref{
+  margin-top:14px;padding:12px 18px;
+  background:rgba(160,120,24,.05);border-left:2px solid rgba(160,120,24,.24);
+  font-family:'Frank Ruhl Libre',serif;font-size:.79em;
+  color:var(--dawn-dim);direction:rtl;line-height:1.72;
+  font-style:italic;
+}
+.piyut-ref-label{
+  font-family:'Cormorant Garamond',serif;font-size:.82em;
+  color:var(--atz-lt);letter-spacing:.10em;display:block;margin-bottom:3px;direction:ltr;
+}
+
+/* ── SCENARIOS ── */
+.scenarios-section{margin-top:48px;padding-top:38px;border-top:1px solid rgba(160,120,24,.09);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.02em;font-weight:700;
+  color:var(--atz-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card{
+  border:1px solid;padding:20px 22px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+}
+.sc1{border-color:rgba(48,128,200,.22);}  .sc1::before{background:linear-gradient(90deg,var(--chesed),transparent);}
+.sc2{border-color:rgba(160,120,24,.20);}  .sc2::before{background:linear-gradient(90deg,var(--atz),transparent);}
+.sc3{border-color:rgba(48,128,200,.18);}  .sc3::before{background:linear-gradient(90deg,var(--chochma),transparent);}
+.sc4{border-color:rgba(96,88,72,.18);}    .sc4::before{background:linear-gradient(90deg,var(--silver-dim),transparent);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;}
+.sc1 .sc-num{color:var(--chesed);}  .sc2 .sc-num{color:var(--atz-lt);}
+.sc3 .sc-num{color:var(--chochma);}  .sc4 .sc-num{color:var(--silver-dim);}
+.sc-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.93em;font-weight:700;direction:rtl;margin-bottom:2px;}
+.sc1 .sc-title-he{color:var(--chesed);}  .sc2 .sc-title-he{color:var(--atz-lt);}
+.sc3 .sc-title-he{color:var(--chochma);}  .sc4 .sc-title-he{color:var(--silver);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid;background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.sc1 .key-moment{border-left-color:var(--chesed);}  .sc2 .key-moment{border-left-color:var(--atz);}
+.sc3 .key-moment{border-left-color:var(--chochma);}  .sc4 .key-moment{border-left-color:var(--silver-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(160,120,24,.08);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0 46px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(160,120,24,.32),transparent);}
+.ornament-star{color:var(--atz);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── BRIDGE TRANSITION (between songs) ── */
+.bridge-transition{
+  margin:22px 0 62px;padding:26px 38px;
+  border:1px solid rgba(160,120,24,.20);
+  background:linear-gradient(135deg,rgba(160,120,24,.06),transparent);
+  position:relative;
+}
+.bt-label{
+  font-family:'Frank Ruhl Libre',serif;font-size:.62em;
+  color:var(--atz-lt);letter-spacing:.14em;direction:rtl;
+  display:block;margin-bottom:8px;
+}
+.bt-text{
+  font-family:'EB Garamond',serif;font-size:.93em;
+  color:var(--text);line-height:1.88;
+}
+.bt-text strong{color:var(--ivory);}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:90px;padding-top:60px;
+  border-top:1px solid rgba(160,120,24,.12);
+}
+.footer-world{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.6em;font-weight:900;
+  color:var(--atz-lt);direction:rtl;letter-spacing:.08em;
+  text-shadow:0 0 60px rgba(232,204,80,.35);margin-bottom:14px;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.84em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:26px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.98em;color:var(--silver-dim);line-height:1.98;
+  max-width:580px;margin:0 auto 28px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.35em;
+  color:var(--atz-lt);letter-spacing:.20em;opacity:.50;
+}
+
+/* ── SOURCES BOX ── */
+.sources-box{
+  background:linear-gradient(135deg,rgba(160,120,24,.07),rgba(5,4,2,.88));
+  border:1px solid rgba(160,120,24,.24);border-left:4px solid var(--atz);
+  padding:28px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--atz-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--atz-lt);direction:rtl;text-align:right;margin-bottom:12px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  .wrap{padding:56px 22px 100px;}
+  .song-header{grid-template-columns:70px 1fr;gap:14px;}
+  .source-badge{display:none;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:10px;border-top:1px solid rgba(160,120,24,.10);padding-top:10px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(3,1fr);}
+  .page-title-he{font-size:2.8em;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── STICKY NAV ── -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">אֲצִילוּת</span>
+    <span class="nav-brand-sub">Atzilut · שִׁירִים א–ה</span>
+  </div>
+  <a class="nav-link" href="#song-keter"><span class="nav-num">א</span>כֶּתֶר</a>
+  <a class="nav-link" href="#song-chochma"><span class="nav-num">ב</span>חָכְמָה</a>
+  <a class="nav-link" href="#song-binah"><span class="nav-num">ג</span>בִּינָה</a>
+  <a class="nav-link" href="#song-chesed"><span class="nav-num">ד</span>חֶסֶד</a>
+  <a class="nav-link" href="#song-gevura"><span class="nav-num">ה</span>גְּבוּרָה</a>
+</nav>
+
+<div class="wrap">
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <p class="eyebrow">מַסַּע הָעוֹלָמוֹת · הַמָּסוֹרֶת הַסְּפָרַדִּית · עֲשֵׂרִים שִׁירִים</p>
+  <h1 class="page-title-he">אֲצִילוּת</h1>
+  <p class="page-title-de">Die Welt der Emanation — Sephardische Piyutim · Fünf Lieder I–V · Stimme und Gitarre</p>
+  <p class="page-desc">
+    Fünf Lieder der Welt der göttlichen Emanation — אֲצִילוּת — in der sephardischen Tradition.
+    Jede Sefira erhält ihre spezifisch sephardische Praxis, ihren Maqam und ihre Tikkun-Handlung.
+    <em>הָרַשַּׁ״שׁ, רַמַּ״ק, הַזֹּהַר, אוֹר הַחַיִּים, הַרַּב אֲזוּלַאי, רַמְחַ״ל</em> —
+    die sephardische Weisheit spricht hier mit der Sprache des reinen Lichts, der göttlichen Ausstrahlung und der vollständigen Hingebung.
+    Stimme und akustische Gitarre · Maqam-System der andalusischen und orientalischen Tradition.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">יְצִירָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">בְּרִיאָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">אֲצִילוּת</span>
+  </div>
+</header>
+
+<!-- WORLD INTRO BOX -->
+<div class="world-intro-box">
+  <div class="wib-he">
+    אֲצִילוּת — עוֹלַם הָאֵמָנָה — אֵינוֹ מָקוֹם נִפְרָד. הוּא הַמַּהוּת הָאֱלֹהִית הַשּׁוֹפַעַת.
+    מַלְכוּת בְּרִיאָה = כֶּתֶר אֲצִילוּת — וְהַשֵּׂכֶל הַשָּׁלֵם פּוֹתֵחַ אֶת הַדֵּעָה הָאֱלֹהִית.
+    הָרַשַּׁ״שׁ: בַּאֲצִילוּת — אֵין הַפְרָדָה בֵּין הַמְּקַבֵּל לַמְּשַׁפִּיעַ.
+  </div>
+  <div class="wib-src">הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם · רַמַּ״ק, פַּרְדֵּס רִמּוֹנִים טז · הַזֹּהַר, בְּרֵאשִׁית א · גִּיקַטִּילָּא, שַׁעֲרֵי אוֹרָה</div>
+  <div class="wib-de">
+    <strong>Atzilut — die Welt der Emanation — ist kein abgetrennter Ort. Sie ist das göttliche Wesen selbst im Zustand des Fließens.</strong>
+    Das Prinzip der Hishtalshelut: Malchut Beriah = Keter Atzilut — der vollendete Intellekt öffnet die göttliche Erkenntnis.
+    Der Rashash lehrt: In Atzilut gibt es keine Trennung zwischen dem Empfangenden und dem Gebenden — alles ist ein einziger Fluss des Ohr Ein Sof.
+    Der sephardische Weise, der Atzilut berührt, vollbringt nicht mehr — er <em>ist</em>.
+    <strong>Diese fünf Lieder sind die goldene Reihe: vom reinen Ratzon des Keter bis zur kosmischen Strenge der Gevurah, die selbst Erbarmen ist.</strong>
+  </div>
+</div>
+
+<!-- SEFIRA NAV GRID -->
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-keter">
+    <span class="sn-num">א</span>
+    <span class="sn-he">כֶּתֶר</span>
+    <span class="sn-de">Die Krone</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-chochma">
+    <span class="sn-num">ב</span>
+    <span class="sn-he">חָכְמָה</span>
+    <span class="sn-de">Die Weisheit</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-binah">
+    <span class="sn-num">ג</span>
+    <span class="sn-he">בִּינָה</span>
+    <span class="sn-de">Das Verstehen</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-chesed">
+    <span class="sn-num">ד</span>
+    <span class="sn-he">חֶסֶד</span>
+    <span class="sn-de">Die Güte</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-gevura">
+    <span class="sn-num">ה</span>
+    <span class="sn-he">גְּבוּרָה</span>
+    <span class="sn-de">Die Stärke</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר א — כֶּתֶר דַּאֲצִילוּת
+══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-keter">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כֶּתֶר</span>
+      א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">כֶּתֶר דַּאֲצִילוּת · Keter d'Atzilut</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סָבָא — Das Unfassbare · Tiefe Devekut</span>
+      <span class="song-title-he">בִּיטּוּל הַיֵּשׁ</span>
+      <span class="song-title-de">Die Aufhebung des Selbst — Reines Ratzon in Keter Atzilut</span>
+    </div>
+    <div class="source-badge">
+      הָרַשַּׁ״שׁ — נְהַר שָׁלוֹם · שַׁעַר כֶּתֶר
+      <span class="source-badge-de">Rashash · Nahar Shalom · Sha'ar Keter · Ramak, Tomer Devorah</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — מְאוּחָר, חֲגִיגִי, אִטִּי מְאוֹד]</div>
+      <div class="guitar-note">Gitarre: Maqam Saba — ein einziger offener, dunkler Ton auf der E-Saite, pp bis ppp. Der Saba-Maqam trägt das Unfassbare: er beginnt tief, wie aus dem Abgrund des Schweigens. Der Sänger setzt erst nach langem Schweigen ein — wie der Rashash beschreibt, dass Keter kein Wort hat, nur Ratzon.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — אֲדֹנָי —</span>
+          <span class="line">כֶּתֶר עֶלְיוֹן — בְּלִי מַחֲשָׁבָה —</span>
+          <span class="line">רָצוֹן — לְבַד — לְמַעְלָה מֵחָכְמָה —</span>
+          <span class="line">בִּיטּוּל — שֶׁקֶט — וְאֵין.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Adonai —</span>
+          <span class="line">höchste Krone — ohne Gedanken —</span>
+          <span class="line">Wille — allein — jenseits der Weisheit —</span>
+          <span class="line">Selbstaufhebung — Stille — und Nichts.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם, שַׁעַר כֶּתֶר]</div>
+      <div class="guitar-note">Gitarre: Saba-Arpeggio, langsam und tief, pp. Die charakteristische Saba-Quarte klingt dunkel und unauflöslich — wie ein Geheimnis, das nicht gesprochen werden kann.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּשֶׁשּׁוֹתֵק אֲנִי לִפְנֵי אֲדֹנָי —</span>
+          <span class="line">אֵין מַחֲשָׁבָה — אֵין רָצוֹן שֶׁלִּי —</span>
+          <span class="line">כֶּתֶר יוֹרֵד — בִּשְׁתִיקָה עַצְמָהּ —</span>
+          <span class="line">וַאֲנִי נִמְחֶה — בָּאוֹר הַגָּנוּז.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wenn ich schweige vor Adonai —</span>
+          <span class="line">kein Gedanke — kein eigener Wille —</span>
+          <span class="line">die Krone steigt herab — im Schweigen selbst —</span>
+          <span class="line">und ich löse mich auf — im verborgenen Licht.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — רַמַּ״ק, תֹּמֶר דְּבוֹרָה, פֶּרֶק א]</div>
+      <div class="guitar-note">Gitarre: dasselbe Arpeggio, minimale Intensivierung — mf, niemals mehr. Keter verlangt keine Lautstärke. Die Stimme trägt den Text wie ein Chazzan das Kol Nidre trägt — mit unerklärlicher Würde.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַמַּ״ק לִמֵּד בְּתֹמֶר דְּבוֹרָה:</span>
+          <span class="line">הִתְדַּמֵּה לַקָּדוֹשׁ בָּרוּךְ הוּא —</span>
+          <span class="line">כַּאֲשֶׁר הוּא נוֹשֵׂא לַפּוֹשְׁעִים בְּסֵתֶר —</span>
+          <span class="line">כֵּן אֲנִי — נִישָּׂא — בְּרַחֲמִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Ramak lehrte in Tomer Devorah:</span>
+          <span class="line">ahme dem Heiligen, gepriesen sei er, nach —</span>
+          <span class="line">wie er im Verborgenen die Sünder trägt —</span>
+          <span class="line">so werde ich — getragen — in Erbarmen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: der Saba-Kern, jetzt leicht öffnend. pp beim ersten Durchgang — wie Atem, mf beim zweiten — wie Herzschlag, pp beim dritten — Rückkehr ins Schweigen. Der Refrain ist der einzige Moment, wo die Stimme wirklich „singt" — alles andere ist Sprechen-Singen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בִּיטּוּל — דְּבֵקוּת — אֵין —</span>
+            <span class="line">אֲדֹנָי — כֶּתֶר — בְּלִי שֵׁם,</span>
+            <span class="line">רָצוֹן — שֶׁלְּמַעְלָה — מִן הַכֹּל —</span>
+            <span class="line">אַתָּה — לְבַד — וּבִיטּוּלִי — שָׁלֵם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Selbstaufhebung — Devekut — Nichts —</span>
+            <span class="line">Adonai — Krone — ohne Namen,</span>
+            <span class="line">Wille — jenseits — von allem —</span>
+            <span class="line">du allein — und meine Auflösung — ist vollständig.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הָרַשַּׁ״שׁ: כֶּתֶר בְּנַהַר שָׁלוֹם]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: einzelne, sehr langsame Töne — wie Tropfen in Stille. Kein Arpeggio, kein Akkord. Nur einzelne Töne, die verklingen. Der Gesang beinahe gesprochen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַשַּׁ״שׁ בְּנַהַר שָׁלוֹם כָּתַב —</span>
+            <span class="line">שַׁעַר הַכֶּתֶר: אֵין בּוֹ צוּרָה —</span>
+            <span class="line">לֹא שֵׂכֶל — לֹא רֶגֶשׁ — רַק רָצוֹן —</span>
+            <span class="line">וְהַמְּדַבֵּק — מוֹצֵא — אֵין קֵץ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Rashash schrieb in Nahar Shalom —</span>
+            <span class="line">das Tor des Keter: es hat keine Form —</span>
+            <span class="line">kein Intellekt — kein Gefühl — nur Wille —</span>
+            <span class="line">und wer anhaftet — findet — keine Grenze.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — בִּיטּוּל הַיֵּשׁ כְּדְּבֵקוּת יוֹמִית בְּכֶתֶר</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung I — Bittul HaYesh als tägliche Devekut-Praxis des Keter Atzilut</div>
+        </div>
+        <div class="tikkun-src">הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם · רַמַּ״ק, תֹּמֶר דְּבוֹרָה א</div>
+      </div>
+      <div class="guitar-note">Gitarre: ppp — ein einziger, sehr leiser, offener Ton. Verbleibt, bis er von selbst verklingt. Dann absolute Stille. Die Stimme spricht die Anleitung leise, wie eine innerste Flüstersintention.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אַחַר הָעֲמִידָה — שֵׁב בְּדֻמִּיָּה —</span>
+          <span class="line">אַל תַּחְשֹׁב — אַל תְּדַבֵּר — אַל תְּבַקֵּשׁ —</span>
+          <span class="line">רַק הֱיֵה לִפְנֵי אֲדֹנָי — בְּלִי כְלוּם —</span>
+          <span class="line">זֶה הוּא כַּוָּנַת הָרַשַּׁ״שׁ לְשַׁעַר הַכֶּתֶר:</span>
+          <span class="line">בִּיטּוּל הַיֵּשׁ — חָמֵשׁ דַּקּוֹת —</span>
+          <span class="line">שֶׁהַנְּשָׁמָה — תִּמָּחֶה — בָּאוֹר,</span>
+          <span class="line">כִּי כֶּתֶר — לֵית מַחֲשָׁבָה — תְּפִיסָה בֵּהּ —</span>
+          <span class="line">וְהַשֶּׁקֶט — הוּא — הַתִּיקּוּן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nach dem Amidah — sitze im Schweigen —</span>
+          <span class="line">denke nicht — sprich nicht — bitte nicht —</span>
+          <span class="line">sei nur vor Adonai — ohne alles —</span>
+          <span class="line">das ist die Rashash-Kavvanah für das Tor der Krone:</span>
+          <span class="line">Bittul HaYesh — fünf Minuten —</span>
+          <span class="line">damit die Seele sich auflöst — im Licht,</span>
+          <span class="line">denn Keter — kein Gedanke kann ihn fassen —</span>
+          <span class="line">und das Schweigen — ist — der Tikkun.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">בִּיטּוּל הַיֵּשׁ</span>
+        <span class="mitzva-tag">דְּבֵקוּת לְאַחַר עֲמִידָה</span>
+        <span class="mitzva-tag">כַּוָּנַת הָרַשַּׁ״שׁ לְכֶּתֶר</span>
+        <span class="mitzva-tag">שַׁעַר הַכֶּתֶר — נְהַר שָׁלוֹם</span>
+        <span class="mitzva-tag">שֶׁקֶט כְּתִּיקּוּן</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        בַּקָּשׁוֹת יְרוּשַׁלְמִיּוֹת — מַסּוֹרֶת בֵּית אֵל שֶׁל הָרַשַּׁ״שׁ · Maqam Saba als der Maqam des Verborgenen und Tiefen — gesungen in der Vorbereitung auf das Amidah und in der stillen Nachklang-Meditation (Devekut nach dem Gebet)
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann sofort ppp]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: ein einziger kraftvoller Saba-Akkord — forte — dann sofortige Stille. Der Sänger singt forte für einen halben Takt, dann versinkt er in ppp. Keter kommt nicht mit Lärm — aber er kommt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כֶּתֶר! — רָצוֹן! — לְמַעְלָה מֵכֹּל!</span>
+            <span class="line">בִּיטּוּל! — אֵין! — וְאַתָּה הוּא!</span>
+            <span class="line">אֲדֹנָי! — כֶּתֶר! — עֶלְיוֹן עַל עֶלְיוֹן!</span>
+            <span class="line">בִּשְׁתִיקָה — גָּדוֹל — מִן הַדִּבּוּר!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Krone! — Wille! — jenseits von allem!</span>
+            <span class="line">Selbstaufhebung! — Nichts! — und Du bist es!</span>
+            <span class="line">Adonai! — Krone! — höchster über dem Höchsten!</span>
+            <span class="line">Im Schweigen — größer — als das Sprechen!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — מִתְפּוֹגֵג לְחֹשֶׁךְ קָדוֹשׁ]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: der letzte Ton klingt sehr lange aus — 20–30 Sekunden. Der Sänger flüstert, kaum hörbar. Dann absolute Stille.</div>
+        <div class="coda-whisper">
+          אֵין … כֶּתֶר … בִּיטּוּל …<br>
+          <em>— שְׁתִיקָה קְדוֹשָׁה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · כֶּתֶר דַּאֲצִילוּת</div>
+      <div class="scenarios-grid">
+        <div class="scenario-card sc1">
+          <div class="sc-num">Szenario 1</div>
+          <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+          <div class="sc-sub">Der säkulare Israeli</div>
+          <div class="sc-body">Er kennt weder Rashash noch Bittul. Aber er kennt das Erlebnis: den Moment, wo man aufhört zu denken und einfach ist. Das Meditieren in der modernen Sprache — „Mindfulness" — ist im Grunde das, was das Lied beschreibt. Der Maqam Saba klingt uraltsephardisch: fremd, aber bewegend. Die lange Stille am Anfang — ungewohnt im Pop-Zeitalter — erzeugt Aufmerksamkeit statt Langeweile. <strong>Er kann nicht sagen, warum er nicht aufhört zuzuhören.</strong></div>
+          <div class="key-moment">Der Moment: wenn die Stimme nach dem Climax plötzlich in ppp zurückfällt — das erwartet niemand.</div>
+          <div class="reaction"><strong>Reaktion:</strong> „Ist das eine Art Meditation? Das klingt wie… nichts. Aber gut."</div>
+        </div>
+        <div class="scenario-card sc2">
+          <div class="sc-num">Szenario 2</div>
+          <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+          <div class="sc-body">Er betet täglich, kennt den Begriff Devekut, hat vielleicht von Rashash gehört. Das Lied gibt seiner täglichen Praxis eine musikalische Seele. Der Saba-Maqam ist ihm aus sephardischen Bakashot bekannt — er assoziiert ihn sofort mit dem frühen Morgengebet. Die Zeile „כֶּתֶר יוֹרֵד בִּשְׁתִיקָה" ist für ihn keine Metapher — sie ist eine gelebte Erfahrung. <strong>Das Lied gibt dem, was er jeden Morgen versucht, eine Stimme.</strong></div>
+          <div class="key-moment">Der Moment: der Pizmon — er möchte ihn sofort auswendig lernen und beim Gebet singen.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er sucht den Text und lernt ihn auswendig als Vorbereitung auf das Amidah.</div>
+        </div>
+        <div class="scenario-card sc3">
+          <div class="sc-num">Szenario 3</div>
+          <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+          <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+          <div class="sc-body">Er kennt Nahar Shalom des Rashash auswendig. Sha'ar Keter ist für ihn tägliche Lektüre. Wenn er „כֶּתֶר — לֵית מַחֲשָׁבָה תְּפִיסָה בֵּהּ" hört — zitiert er gedanklich den Zohar dazu. Das Lied ist für ihn eine Verdichtung einer ganzen Kavvanah-Welt in ein singbares Format. Der Maqam Saba mit der Saba-Quarte trifft genau das: das Nicht-Fassbare, das dennoch klingt. <strong>Er sieht in diesem Lied ein legitimes Werkzeug für die Vorbereitung auf die Rashash-Kavanot.</strong></div>
+          <div class="key-moment">Der Moment: wenn die Tikkun-Anleitung beginnt — er schließt die Augen und folgt ihr als Praxis.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er empfiehlt das Lied als Vorbereitungs-Piyut für Erev Yom Kippur.</div>
+        </div>
+        <div class="scenario-card sc4">
+          <div class="sc-num">Szenario 4</div>
+          <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+          <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+          <div class="sc-body">Er hört das Lied in einer Gemeinschaft oder bei einem Konzert — vielleicht hat ihn jemand mitgenommen. Die Melodie im Saba-Maqam klingt altorientalisch, fast hypnotisch. Er versteht das Wort „בִּיטּוּל" — er kennt es im modernen Hebräisch als „Stornierung" oder „Annullierung". Hier meint es das Umgekehrte: die heilige Aufgabe des Egos. Diese paradoxe Umkehrung fasziniert ihn. <strong>Er spürt, dass hier etwas sehr Altes und sehr Ernstes gesungen wird.</strong></div>
+          <div class="key-moment">Der Moment: die Coda — die Stille nach dem letzten Ton ist länger als er es gewohnt ist. Er wagt nicht, zu sprechen.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er bleibt sitzen. Er fragt später: „Was bedeutet בִּיטּוּל wirklich?"</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ב — חָכְמָה דַּאֲצִילוּת
+══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-chochma">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חָכְמָה</span>
+      ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חָכְמָה דַּאֲצִילוּת · Chochmah d'Atzilut</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Kosmische Weite · Göttlicher Erster Blitz</span>
+      <span class="song-title-he">בְּרֵאשִׁית מֵחָכְמָה</span>
+      <span class="song-title-de">Bereshit aus der Weisheit — Chochmah als erster Blitz des Göttlichen</span>
+    </div>
+    <div class="source-badge">
+      הַזֹּהַר, בְּרֵאשִׁית א · רַמַּ״ק, פַּרְדֵּס ב
+      <span class="source-badge-de">Zohar Bereshit 1a · Ramak, Pardes Rimonim Sha'ar 2 · Tikunei Zohar 5</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אוֹר — הִתְרַחֲבוּת אִטִּית]</div>
+      <div class="guitar-note">Gitarre: Maqam Rast — warme, offene Terzen und Quinten, pp. Der Rast-Maqam klingt wie Tageslicht, das sich öffnet: nach dem dunklen Saba des Keter öffnet sich die Chochmah wie Morgengrauen. Das Arpeggio beginnt tief und steigt langsam auf.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — בְּחָכְמָה — בָּרָא —</span>
+          <span class="line">בְּרֵאשִׁית — נְקוּדָה — שֶׁל אוֹר,</span>
+          <span class="line">חָכְמָה — קֹדֶמֶת — לַכֹּל —</span>
+          <span class="line">מֵאֵין — לְלֹא גְּבוּל — נֶהְיָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — in Weisheit — erschuf er —</span>
+          <span class="line">Bereshit — ein Punkt — des Lichts,</span>
+          <span class="line">Weisheit — geht allem voraus —</span>
+          <span class="line">aus Nichts — grenzenlos — wurde es.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — הַזֹּהַר, בְּרֵאשִׁית דף א עמוד א]</div>
+      <div class="guitar-note">Gitarre: Rast-Arpeggio fließend, mf. Der Rast öffnet sich — wie das Zohar sagt: Chochmah ist der Punkt, der sich ausdehnt. Die Melodie bewegt sich aufwärts.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַזֹּהַר בְּבְּרֵאשִׁית אוֹמֵר —</span>
+          <span class="line">בִּשְׁבִיל הַתּוֹרָה שֶׁנִּקְרֵאת "רֵאשִׁית" —</span>
+          <span class="line">בָּרָא אֲדֹנָי — שָׁמַיִם וָאָרֶץ —</span>
+          <span class="line">חָכְמָה קֹדֶמֶת — לִיצִירָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Zohar sagt zu Bereshit —</span>
+          <span class="line">um der Torah willen, die „Reishit" heißt —</span>
+          <span class="line">erschuf Adonai — Himmel und Erde —</span>
+          <span class="line">Chochmah geht voraus — der Schöpfung.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — רַמַּ״ק, פַּרְדֵּס רִמּוֹנִים שַׁעַר ב — הַנְּקוּדָה הָרִאשׁוֹנָה]</div>
+      <div class="guitar-note">Gitarre: hohe Töne klingen mit — die Chochmah ist der höchste Punkt vor dem Keter. Die Stimme trägt die Melodie jetzt mit Klarheit und Helligkeit.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַמַּ״ק בְּפַרְדֵּס רִמּוֹנִים כָּתַב —</span>
+          <span class="line">חָכְמָה דַּאֲצִילוּת — נְקוּדָה רִאשׁוֹנָה —</span>
+          <span class="line">מֵאֵין סוֹף — בָּרָק אֶחָד — נִמְשַׁךְ —</span>
+          <span class="line">וְהָעוֹלָמוֹת — נִמְשָׁכִים — מִמֶּנָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Ramak schrieb in Pardes Rimonim —</span>
+          <span class="line">Chochmah d'Atzilut — der erste Punkt —</span>
+          <span class="line">aus Ein Sof — ein einziger Blitz — wird gezogen —</span>
+          <span class="line">und die Welten — werden gezogen — aus ihr.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv voll entfaltet — warm, strahlend, leuchtend. mf beim ersten, f beim zweiten — hier öffnet sich der kosmische Chochmah-Blitz —, mf beim dritten. Die Stimme trägt die Weite des Rast-Maqam.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בְּרֵאשִׁית — חָכְמָה — רֵאשִׁית דַּרְכּוֹ —</span>
+            <span class="line">אֲדֹנָי — בָּרָא — בְּחָכְמָה עֶלְיוֹנָה,</span>
+            <span class="line">נְקוּדַת הָאוֹר — בְּתוֹךְ הָאֵין —</span>
+            <span class="line">וְהַיֵּשׁ — יוֹצֵא — מִמֶּנָּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Bereshit — Weisheit — der Anfang seines Weges —</span>
+            <span class="line">Adonai — erschuf — in höchster Weisheit,</span>
+            <span class="line">der Punkt des Lichts — im Innern des Nichts —</span>
+            <span class="line">und das Sein — geht aus — aus ihr.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — תִּקּוּנֵי זֹהַר: חָכְמָה כְּבּ + רֵאשִׁית]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: nachdenklich, meditativ — ein Rast-Motiv in der Mittellage. Die Erkenntnis des Tikunei Zohar: Bereshit = Beit + Reishit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">תִּקּוּנֵי הַזֹּהַר מְגַלֶּה —</span>
+            <span class="line">חָכְמָה: בְּ + רֵאשִׁית —</span>
+            <span class="line">בִּרְשׁוּת הַחָכְמָה — בָּרָא אֲדֹנָי —</span>
+            <span class="line">מִשָּׁם — כָּל אוֹר — יוֹצֵא.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Tikunei Zohar enthüllt —</span>
+            <span class="line">Chochmah: Beit + Reishit —</span>
+            <span class="line">durch die Chochmah — erschuf Adonai —</span>
+            <span class="line">von dort — geht alles Licht — aus.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — מֵדִיטַציַּת בְּרֵאשִׁית כְּקַבָּלַת חָכְמָה</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung II — Die Bereshit-Meditation als täglicher Empfang der Chochmah d'Atzilut</div>
+        </div>
+        <div class="tikkun-src">הַזֹּהַר, בְּרֵאשִׁית א · רַמַּ״ק, פַּרְדֵּס רִמּוֹנִים ב</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, Rast-Grundton — ein ruhiges, strahlendes Arpeggio. Die Stimme spricht die Praxis-Anleitung in warmem, meditativem Ton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּכָל בֹּקֶר — לִפְנֵי שְּׁאָר הַלִּמּוּד —</span>
+          <span class="line">אֱמֹר: "בְּרֵאשִׁית בָּרָא אֱלֹהִים" —</span>
+          <span class="line">בְּכַוָּנָה שֶׁחָכְמָה דַּאֲצִילוּת —</span>
+          <span class="line">שׁוֹפַעַת — כָּעַת — לְתוֹךְ שֵׂכְלִי,</span>
+          <span class="line">נְקוּדַת הָאוֹר — הָרִאשׁוֹנָה —</span>
+          <span class="line">מֵאֵין סוֹף — מֵאֵין סוֹף —</span>
+          <span class="line">מִתְגַּלֶּה — בְּדַקּוֹת הַלִּמּוּד —</span>
+          <span class="line">וְחָכְמָה — יוֹרֶדֶת — לִי עַכְשָׁיו.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Jeden Morgen — vor allem anderen Lernen —</span>
+          <span class="line">sage: „Bereshit bara Elohim" —</span>
+          <span class="line">mit der Kavvanah, dass Chochmah d'Atzilut —</span>
+          <span class="line">gerade jetzt — in meinen Intellekt fließt,</span>
+          <span class="line">der erste Punkt des Lichts —</span>
+          <span class="line">aus Ein Sof — aus Ein Sof —</span>
+          <span class="line">offenbart sich — in den Minuten des Lernens —</span>
+          <span class="line">und Chochmah — steigt herab — zu mir jetzt.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">מֵדִיטַציַּת בְּרֵאשִׁית</span>
+        <span class="mitzva-tag">כַּוָּנַת חָכְמָה דַּאֲצִילוּת</span>
+        <span class="mitzva-tag">לִמּוּד תּוֹרָה כְּקַבָּלַת אוֹר</span>
+        <span class="mitzva-tag">זֹהַר, בְּרֵאשִׁית א</span>
+        <span class="mitzva-tag">רַמַּ״ק, פַּרְדֵּס שַׁעַר ב</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        בַּקָּשׁוֹת — „בָּרָא שִׁית" (Lied zu Bereshit) · Maqam Rast als der Maqam der Offenheit und des kosmischen Lichts — gesungen zu Shacharit als Vorbereitung auf das Torah-Lernen und den Chochmah-Empfang
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, strahlend]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv forte — voll und strahlend. Dies ist der einzige Moment im ganzen Lied, wo die Gitarre wirklich ausbricht. Chochmah ist der Blitz — er blitzt genau einmal.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חָכְמָה! — בְּרֵאשִׁית! — רֵאשִׁית הָאוֹר!</span>
+            <span class="line">נְקוּדָה! — מֵאֵין! — נִמְשֶׁכֶת!</span>
+            <span class="line">אֲדֹנָי! — בָּרָא! — בְּחָכְמָה עֶלְיוֹנָה!</span>
+            <span class="line">וְהָאוֹר! — שׁוֹפֵעַ! — עַד הָאָרֶץ!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Weisheit! — Bereshit! — Anfang des Lichts!</span>
+            <span class="line">Punkt! — aus Nichts! — wird gezogen!</span>
+            <span class="line">Adonai! — erschuf! — in höchster Weisheit!</span>
+            <span class="line">und das Licht! — strömt! — bis zur Erde!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — חוֹזֵר לְשֶׁקֶט]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: das Rast-Arpeggio verklingt langsam — von forte zurück zu ppp. Die Stimme flüstert zuletzt.</div>
+        <div class="coda-whisper">
+          בְּרֵאשִׁית … חָכְמָה … נְקוּדָה …<br>
+          <em>— דְּמָמָה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · חָכְמָה דַּאֲצִילוּת</div>
+      <div class="scenarios-grid">
+        <div class="scenario-card sc1">
+          <div class="sc-num">Szenario 1</div>
+          <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+          <div class="sc-sub">Der säkulare Israeli</div>
+          <div class="sc-body">Das Wort „בְּרֵאשִׁית" kennt jeder Israeli — es ist der erste Satz der Torah, den man in der Schule lernt. Aber die Idee, dass hinter diesem Wort eine kosmische Weisheitsstruktur steckt, ist ihm neu und faszinierend. Das Lied eröffnet ihm das Bereshit neu — nicht als religiösen Pflichttext, sondern als kosmisches Manifest. <strong>Der Rast-Maqam klingt warm und einladend — weit entfernt von der Befremdung, die er mit Religion verbindet.</strong></div>
+          <div class="key-moment">Der Moment: „חָכְמָה קֹדֶמֶת לַיְּצִירָה" — er versteht: Weisheit war vor der Schöpfung.</div>
+          <div class="reaction"><strong>Reaktion:</strong> „Das ist eigentlich Physik. Oder Philosophie. Auf jeden Fall interessant."</div>
+        </div>
+        <div class="scenario-card sc2">
+          <div class="sc-num">Szenario 2</div>
+          <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+          <div class="sc-body">Die Verbindung zwischen Bereshit und Chochmah kennt er aus dem Unterricht — vielleicht hat er Rashi auf Bereshit 1:1 gelernt. Das Lied fügt eine kabbalistisch-musikalische Dimension hinzu. Der Rast-Maqam ist ihm aus dem sephardischen Shabat-Gebet bekannt. <strong>Das Lied verwandelt sein tägliches Bereshit-Lesen in ein Chochmah-Erlebnis.</strong> Nach dem Hören versteht er: tägliches Torah-Lernen ist nicht Pflicht — es ist kosmische Chochmah-Praxis.</div>
+          <div class="key-moment">Der Moment: die Tikkun-Anleitung — er beschließt, jeden Morgen mit Bereshit zu beginnen.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er ändert seine Morgenroutine: Torah zuerst, dann Nachrichten.</div>
+        </div>
+        <div class="scenario-card sc3">
+          <div class="sc-num">Szenario 3</div>
+          <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+          <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+          <div class="sc-body">Die Zeile „חָכְמָה דַּאֲצִילוּת — נְקוּדָה רִאשׁוֹנָה" trifft ihn mitten ins Herz des Pardes Rimonim. Er kennt die Ramak-Aussage aus Sha'ar 2 — aber dass sie gesungen werden kann und ein singbares Format erhält, ist für ihn eine Offenbarung. Die Tikunei-Zohar-Verknüpfung „בּ + רֵאשִׁית = חָכְמָה" ist für ihn präzise und mutig. <strong>Er überprüft die Quellen — und findet sie alle korrekt.</strong></div>
+          <div class="key-moment">Der Moment: das Gesher — er nickt. Das ist Tikunei Zohar, Tikkun 5.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er zitiert das Lied beim nächsten Shiur als Gedächtnishilfe für die Ramak-Lehre.</div>
+        </div>
+        <div class="scenario-card sc4">
+          <div class="sc-num">Szenario 4</div>
+          <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+          <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+          <div class="sc-body">Er hört „בְּרֵאשִׁית" — das kennt er. Aber dann folgt etwas Unerwartetes: eine Meditation über den Ursprung des Lichts, über den ersten Punkt vor der Schöpfung. Die Musik im Rast-Maqam klingt fast wie Weltmusik — er könnte ihn aus einem indischen oder arabischen Kontext kennen. <strong>Die Schönheit des Liedes überbrückt seine Distanz zur Religion.</strong> Er hört nicht ein religiöses Lied — er hört ein Lied über den Ursprung von allem.</div>
+          <div class="key-moment">Der Moment: der Climax — „חָכְמָה! בְּרֵאשִׁית! רֵאשִׁית הָאוֹר!" — das klingt wie Dichtung.</div>
+          <div class="reaction"><strong>Reaktion:</strong> „Ich dachte, das wäre religiös. Aber das ist eigentlich Poesie über den Urknall."</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</section>
+
+<div class="bridge-transition">
+  <span class="bt-label">מַעֲבָר מֵחָכְמָה לְבִינָה — Übergang von Chochmah zu Binah</span>
+  <div class="bt-text">
+    <strong>חָכְמָה</strong> ist der Blitz — <strong>בִּינָה</strong> ist der Donner.
+    Chochmah strahlt, Binah verarbeitet. Das Zohar beschreibt: Chochmah ist der Vater (אָבָּא), Binah ist die Mutter (אִמָּא).
+    Der Rast-Maqam der Chochmah öffnet sich — und der Hijaz der Binah erschüttert, weckt und ruft zurück.
+    <em>„אִמָּא עִלָּאָה — מֵעוֹרֶרֶת אֶת הַתְּשׁוּבָה"</em> — Zohar, Emor 99b.
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ג — בִּינָה דַּאֲצִילוּת
+══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-binah">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">בִּינָה</span>
+      ג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">בִּינָה דַּאֲצִילוּת · Binah d'Atzilut</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִגָ'אז — Heilige Erschütterung · Sehnsucht der Teshuvah</span>
+      <span class="song-title-he">קוֹל הַשּׁוֹפָר</span>
+      <span class="song-title-de">Die Stimme des Schofar — Binah als Mutter der Teshuvah</span>
+    </div>
+    <div class="source-badge">
+      הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם · רֹאשׁ הַשָּׁנָה
+      <span class="source-badge-de">Rashash · Nahar Shalom · Sha'ar Rosh HaShanah · Zohar, Emor 99b</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — קוֹל שׁוֹפָר — תְּקִיעָה אַחַת אֲרוּכָּה]</div>
+      <div class="guitar-note">Gitarre: Maqam Hijaz — die charakteristische übermäßige Sekunde des Hijaz klingt sofort: sie ist heilige Spannung, Sehnsucht, das Erschütternde. pp, dann ein crescendo zur ersten Zeile hin. Der Hijaz ist der Maqam des Shofar-Klangs in der sephardischen Tradition — schon der erste Akkord ist ein Schofar-Echo.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — קוֹל שׁוֹפָר — מִבִּינָה —</span>
+          <span class="line">תְּקִיעָה — אַחַת — מְעִירָה,</span>
+          <span class="line">בִּינָה — אֵם הַתְּשׁוּבָה — קוֹרֵאת —</span>
+          <span class="line">שׁוּבָה — שׁוּבָה — יִשְׂרָאֵל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Stimme des Schofar — aus Binah —</span>
+          <span class="line">eine Tekia — eine einzige — weckt auf,</span>
+          <span class="line">Binah — Mutter der Teshuvah — ruft —</span>
+          <span class="line">kehre um — kehre um — Israel.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם, כַּוָּנוֹת שׁוֹפָר]</div>
+      <div class="guitar-note">Gitarre: Hijaz-Arpeggio, mf, drängend. Der Hijaz trägt die innere Dringlichkeit der Teshuvah — er ist niemals bequem, niemals beruhigend. Das ist seine Kraft.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַשַּׁ״שׁ בְּנַהַר שָׁלוֹם כָּתַב —</span>
+          <span class="line">תְּקִיעוֹת הַשּׁוֹפָר — מַגִּיעוֹת לַבִּינָה,</span>
+          <span class="line">כָּל תְּקִיעָה — פּוֹתֶחֶת שַׁעַר —</span>
+          <span class="line">בִּינָה דַּאֲצִילוּת — מְעִירָה תְּשׁוּבָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Rashash schrieb in Nahar Shalom —</span>
+          <span class="line">die Schofar-Stöße — erreichen die Binah,</span>
+          <span class="line">jede Tekia — öffnet ein Tor —</span>
+          <span class="line">Binah d'Atzilut — weckt die Teshuvah.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — הַזֹּהַר, פָּרָשַׁת אֱמֹר, דף צ״ט עמוד ב]</div>
+      <div class="guitar-note">Gitarre: die Hijaz-Spannung intensiviert sich. Die Stimme trägt Ehrfurcht — sie beschreibt den kosmischen Aufstieg des Schofar-Klangs zur Binah d'Atzilut.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַזֹּהַר בְּפָרָשַׁת אֱמֹר אוֹמֵר —</span>
+          <span class="line">קוֹל הַשּׁוֹפָר — עוֹלֶה לְמַרוֹם —</span>
+          <span class="line">מְעוֹרֵר אֵם הַבָּנִים — בִּינָה עִלָּאָה —</span>
+          <span class="line">וְהִיא מְעוֹרֶרֶת — רַחֲמִים עֶלְיוֹנִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Zohar sagt in Parashat Emor —</span>
+          <span class="line">der Klang des Schofar — steigt in die Höhe —</span>
+          <span class="line">erweckt die Mutter der Kinder — obere Binah —</span>
+          <span class="line">und sie erweckt — höchstes Erbarmen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · f · pp]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: der Hijaz-Kern kraftvoll. mf beim ersten — Sehnsucht, f beim zweiten — der kosmische Schofar-Ruf, pp beim dritten — Teshuvah hat stattgefunden, Stille folgt. Die Stimme trägt den Pizmon wie ein Selichot-Gebet.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">תְּקִיעָה — שְׁבָרִים — תְּרוּעָה —</span>
+            <span class="line">קוֹל מֵרֹאשׁ הַשָּׁנָה — עוֹלֶה,</span>
+            <span class="line">בִּינָה — עֵינֶיהָ — נִפְתָּחוֹת —</span>
+            <span class="line">וְהַתְּשׁוּבָה — מְקַבֶּלֶת — פָּנֵינוּ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Tekia — Shevarim — Teruah —</span>
+            <span class="line">Stimme vom Rosh HaShanah — steigt auf,</span>
+            <span class="line">Binah — ihre Augen — öffnen sich —</span>
+            <span class="line">und die Teshuvah — empfängt — unser Angesicht.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — עֲקֵדַת יִצְחָק כְּשׁוֹפָר הַזִּכָּרוֹן]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: langsamer, tiefer — ein Hijaz-Motiv im Bassbreich. Die Erinnerung an die Akeda — das Fundament des Rosh HaShanah-Schofars.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שׁוֹפָר שֶׁל אַיִל — זִכְרוֹן עֲקֵדַת אַבְרָהָם —</span>
+            <span class="line">בְּרֹאשׁ הַשָּׁנָה — זִכְרוֹן זֶה —</span>
+            <span class="line">מְעוֹרֵר בִּינָה — מְעוֹרֵר אֵם —</span>
+            <span class="line">וּבְנֵי יִשְׂרָאֵל — זוֹכִים — לְרַחֲמִים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Schofar des Widders — Erinnerung an Abrahams Bindung —</span>
+            <span class="line">an Rosh HaShanah — diese Erinnerung —</span>
+            <span class="line">erweckt Binah — erweckt die Mutter —</span>
+            <span class="line">und die Kinder Israels — gelangen — zum Erbarmen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — כַּוָּנוֹת הָרַשַּׁ״שׁ לְתְּקִיעוֹת הַשּׁוֹפָר</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung III — Die Rashash-Kavanot für die Schofar-Stöße als Öffnung der Binah d'Atzilut</div>
+        </div>
+        <div class="tikkun-src">הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם · מִשְׁנָה רֹאשׁ הַשָּׁנָה ד:ז</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, der Hijaz-Grundton. Die Stimme führt durch die Praxis wie ein Chazzan, der das Rosh-HaShanah-Gebet anleitet.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּרֹאשׁ הַשָּׁנָה — לִפְנֵי כָּל תְּקִיעָה —</span>
+          <span class="line">כַּוֵּן: שּׁוֹפָר זֶה — עוֹלֶה לַבִּינָה,</span>
+          <span class="line">בִּינָה דַּאֲצִילוּת — אֵם הָרַחֲמִים —</span>
+          <span class="line">וְהִיא — בִּגְלָלִי — תְּעוֹרֵר חֶסֶד,</span>
+          <span class="line">תְּקִיעָה — לְכֶּתֶר — שְׁבָרִים — לְחָכְמָה —</span>
+          <span class="line">תְּרוּעָה — לְבִינָה — תְּקִיעָה — לְחֶסֶד,</span>
+          <span class="line">וְכָל קוֹל — פּוֹתֵחַ שַׁעַר —</span>
+          <span class="line">וְהַבִּינָה — מוֹרִידָה — רַחֲמִים עֶלְיוֹנִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">An Rosh HaShanah — vor jedem Schofar-Stoß —</span>
+          <span class="line">kavvaniere: dieser Schofar — steigt zur Binah,</span>
+          <span class="line">Binah d'Atzilut — Mutter des Erbarmens —</span>
+          <span class="line">und sie — meinetwegen — erweckt Chesed,</span>
+          <span class="line">Tekia — für Keter — Shevarim — für Chochmah —</span>
+          <span class="line">Teruah — für Binah — Tekia — für Chesed,</span>
+          <span class="line">und jeder Klang — öffnet ein Tor —</span>
+          <span class="line">und Binah — lässt herabsteigen — höchstes Erbarmen.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">כַּוָּנוֹת הָרַשַּׁ״שׁ לְשׁוֹפָר</span>
+        <span class="mitzva-tag">בִּינָה כְּאֵם הָרַחֲמִים</span>
+        <span class="mitzva-tag">תְּשׁוּבָה בְּרֹאשׁ הַשָּׁנָה</span>
+        <span class="mitzva-tag">זֹהַר, אֱמֹר צ״ט ב</span>
+        <span class="mitzva-tag">שׁוֹפָר כְּפְּתִיחַת שַׁעַר הַבִּינָה</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        סְלִיחוֹת וּבַקָּשׁוֹת לְרֹאשׁ הַשָּׁנָה — מַסּוֹרֶת בֵּית אֵל · Maqam Hijaz als der Maqam der heiligen Erschütterung und Sehnsucht — der klassische Maqam für die Selichot und den Kol-Nidre-Abend in der sephardischen Tradition
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, erschütternd]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: der Hijaz forte — die übermäßige Sekunde klingt wie ein Schofar-Echo. Der Sänger singt mit der Kraft eines Chazzans am Rosh HaShanah Morgen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שׁוֹפָר! — בִּינָה! — תְּשׁוּבָה!</span>
+            <span class="line">תְּקִיעָה! — גְּדוֹלָה! — עַד הַשָּׁמַיִם!</span>
+            <span class="line">אֲדֹנָי! — שׁוֹמֵעַ! — קוֹל הַשּׁוֹפָר!</span>
+            <span class="line">וְהַבִּינָה! — פּוֹתַחַת! — שַׁעֲרֵי רַחֲמִים!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Schofar! — Binah! — Teshuvah!</span>
+            <span class="line">Tekia! — große! — bis zum Himmel!</span>
+            <span class="line">Adonai! — hört! — die Stimme des Schofars!</span>
+            <span class="line">und Binah! — öffnet! — Tore des Erbarmens!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — הֵד הַשּׁוֹפָר]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: ein letzter Hijaz-Akkord — forte — dann sehr langsames Decrescendo. Der Schofar verhallt. Absolute Stille.</div>
+        <div class="coda-whisper">
+          שׁוֹפָר … בִּינָה … תְּשׁוּבָה …<br>
+          <em>— דְּמָמָה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · בִּינָה דַּאֲצִילוּת</div>
+      <div class="scenarios-grid">
+        <div class="scenario-card sc1">
+          <div class="sc-num">Szenario 1</div>
+          <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+          <div class="sc-sub">Der säkulare Israeli</div>
+          <div class="sc-body">Den Schofar-Klang kennt jeder Israeli — aus der Kindheit, aus Rosh HaShanah, aus der Synagoge, die der Großvater besuchte. Das Lied verbindet diesen bekannten Klang mit einer mystischen Dimension: dass der Schofar zur Binah d'Atzilut aufsteigt und Erbarmen herabzieht. <strong>Das ist für ihn nicht Kabbala — das ist Poesie über das Klingen der Seele.</strong> Der Hijaz-Maqam verstärkt die emotionale Wirkung: er klingt orientalisch, vertraut, nostalgisch — wie Rosh HaShanah.</div>
+          <div class="key-moment">Der Moment: „שׁוּבָה — שׁוּבָה — יִשְׂרָאֵל" — er spürt etwas, das er nicht benennen kann.</div>
+          <div class="reaction"><strong>Reaktion:</strong> „Das hat mich an meinen Großvater erinnert. Und an Rosh HaShanah. Seltsam."</div>
+        </div>
+        <div class="scenario-card sc2">
+          <div class="sc-num">Szenario 2</div>
+          <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+          <div class="sc-body">Er betet an Rosh HaShanah und kennt den Schofar. Die kabbalistischen Kavanot für die Schofar-Stöße kennt er vielleicht nur oberflächlich. Das Lied gibt ihm das Rashash-System in singbarer Form — er kann die Kavanot durch den Pizmon lernen. <strong>Er entscheidet: nächstes Rosh HaShanah werde ich mit diesen Kavanot blasen.</strong> Der Hijaz klingt genau wie der Nusach des Rosh HaShanah-Gebets.</div>
+          <div class="key-moment">Der Moment: die Tikkun-Anleitung — er schreibt die Reihenfolge auf: Tekia → Keter, Shevarim → Chochmah, Teruah → Binah.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er druckt den Text aus und legt ihn in sein Machzor für Rosh HaShanah.</div>
+        </div>
+        <div class="scenario-card sc3">
+          <div class="sc-num">Szenario 3</div>
+          <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+          <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+          <div class="sc-body">Die Zeile „תְּקִיעוֹת הַשּׁוֹפָר מַגִּיעוֹת לַבִּינָה" ist für ihn eine präzise Zusammenfassung der Rashash-Kavanot für Rosh HaShanah. Er kennt Nahar Shalom — aber dass diese Kavanot in einem singbaren Piyut formuliert sind, ist für ihn ein Geschenk: er kann sie auswendig lernen und beim Schofar-Blasen innerlich singen. <strong>Das Lied ist für ihn ein halakhisch-kabbalisches Werkzeug, das durch Musik zugänglich wird.</strong></div>
+          <div class="key-moment">Der Moment: das Gesher — die Verbindung zur Akeda als Grundlage des Schofar-Schallens.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er bringt das Lied in seine Kehilla als Vorbereitung auf Rosh HaShanah-Tefilla.</div>
+        </div>
+        <div class="scenario-card sc4">
+          <div class="sc-num">Szenario 4</div>
+          <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+          <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+          <div class="sc-body">Er kommt vielleicht an Erev Rosh HaShanah bei einer Gedenkfeier vorbei und hört das Lied. Der Schofar-Klang ist ihm bekannt — er verbindet ihn mit dem Ende des Yom Kippur. Der Maqam Hijaz klingt orientalisch-feierlich. <strong>Aber es ist die Zeile „שׁוּבָה שׁוּבָה יִשְׂרָאֵל", die ihn unvorbereitet trifft.</strong> Er denkt an jemanden, den er lange nicht gesehen hat — und der Ruf zur Umkehr trifft ihn persönlich, obwohl er ihn nicht religiös versteht.</div>
+          <div class="key-moment">Der Moment: die Coda — der letzte Schofar-Echo verklingt. Er bleibt stehen.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er ruft jemanden an, den er lange nicht kontaktiert hat. Das Lied hat ihm ein Gewissen gemacht.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ד — חֶסֶד דַּאֲצִילוּת
+══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-chesed">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חֶסֶד דַּאֲצִילוּת · Chesed d'Atzilut</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Kosmische Güte · Fluss des Lichts</span>
+      <span class="song-title-he">חֶסֶד לְאַבְרָהָם</span>
+      <span class="song-title-de">Chesed für Abraham — Kosmische Güte als Fluss von Atzilut</span>
+    </div>
+    <div class="source-badge">
+      רַבִּי אַבְרָהָם אֲזוּלַאי — חֶסֶד לְאַבְרָהָם
+      <span class="source-badge-de">Rabbi Avraham Azulai · Chesed LeAvraham · Nahar 54 · Ramak</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — נָהָר שֶׁל חֶסֶד — חַם וְשׁוֹפֵעַ]</div>
+      <div class="guitar-note">Gitarre: Maqam Rast — nach dem Hijaz der Binah kehrt der Rast zurück, aber diesmal wärmer, strömender. Das Chesed d'Atzilut ist der kosmische Fluss — er ist nicht der Blitz (Chochmah), er ist der Strom. Das Arpeggio fließt kontinuierlich, mf, warm.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — חֶסֶד עוֹלָם —</span>
+          <span class="line">מֵאַבְרָהָם — שׁוֹפֵעַ לְמַטָּה —</span>
+          <span class="line">חֶסֶד דַּאֲצִילוּת — נָהָר —</span>
+          <span class="line">מִלְּמַעְלָה — מְמַלֵּא — כָּל אָרֶץ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — ewige Güte —</span>
+          <span class="line">von Abraham — strömt sie herab —</span>
+          <span class="line">Chesed d'Atzilut — ein Strom —</span>
+          <span class="line">von oben — erfüllt — die ganze Erde.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — רַבִּי אַבְרָהָם אֲזוּלַאי, חֶסֶד לְאַבְרָהָם, נָהָר נ״ד]</div>
+      <div class="guitar-note">Gitarre: Rast, fließend, continuous. Rabbi Azulai beschreibt Chesed als Nahar — Strom. Die Gitarre verkörpert diesen Strom: nie aufhörend, nie anschwellend — immer gleichmäßig fließend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רַבִּי אַבְרָהָם אֲזוּלַאי כָּתַב —</span>
+          <span class="line">בְּחֶסֶד לְאַבְרָהָם — נָהָר נ״ד —</span>
+          <span class="line">חֶסֶד דַּאֲצִילוּת — שׁוֹפֵעַ לְמַטָּה —</span>
+          <span class="line">אַבְרָהָם — כְּמַשְׁפִּיעַ — לְכָל הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Rabbi Avraham Azulai schrieb —</span>
+          <span class="line">in Chesed LeAvraham — Nahar 54 —</span>
+          <span class="line">Chesed d'Atzilut — strömt herab —</span>
+          <span class="line">Abraham — als Kanal — für die ganze Welt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — רַמַּ״ק, פַּרְדֵּס רִמּוֹנִים — חֶסֶד כִּימִין הָאֱלֹהִים]</div>
+      <div class="guitar-note">Gitarre: etwas voller, mf+. Der Ramak beschreibt Chesed als die rechte Seite des göttlichen Baums — die Gitarre öffnet sich entsprechend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַמַּ״ק בְּפַרְדֵּס רִמּוֹנִים לִמֵּד —</span>
+          <span class="line">חֶסֶד — יְמִין הָאֱלֹהִים —</span>
+          <span class="line">מִמֶּנּוּ — כָּל הַשֶּׁפַע — יוֹצֵא —</span>
+          <span class="line">לְכָל הָעוֹלָמוֹת — בִּרְחָבָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Ramak lehrte in Pardes Rimonim —</span>
+          <span class="line">Chesed — die rechte Seite Gottes —</span>
+          <span class="line">von ihr — geht aller Segen aus —</span>
+          <span class="line">in alle Welten — in Weite.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv warm und strahlend. Der Pizmon ist das lyrische Herz des ganzen Zyklus — er beschreibt den kosmischen Fluss. mf → f → mf, wie eine Welle, die sich erhebt und zurückfließt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חֶסֶד — חֶסֶד — לְאַבְרָהָם —</span>
+            <span class="line">אֲדֹנָי — שׁוֹפֵעַ — עַל כֻּלָּם,</span>
+            <span class="line">מִימִין עֶלְיוֹן — נָהָר יוֹרֵד —</span>
+            <span class="line">וְהַחֶסֶד — מְמַלֵּא — אֶת הָאָרֶץ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Chesed — Chesed — für Abraham —</span>
+            <span class="line">Adonai — strömt — auf alle,</span>
+            <span class="line">von der rechten Seite des Höchsten — ein Strom steigt herab —</span>
+            <span class="line">und das Chesed — erfüllt — die Erde.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הַזֹּהַר, לֶךְ לְךָ: אַבְרָהָם כְּעַמּוּד הַחֶסֶד]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: fließend, meditativ. Das Zohar-Bild: Abrahams Zelt war zu allen vier Seiten offen — totale Offenheit als Chesed-Praxis.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַזֹּהַר בְּלֶךְ לְךָ אוֹמֵר —</span>
+            <span class="line">אַבְרָהָם — עַמּוּד הַחֶסֶד —</span>
+            <span class="line">כָּל אֹרַח שֶׁבָּא אֶל אָהֳלוֹ —</span>
+            <span class="line">קִבֵּל — חֶסֶד — מֵאֲצִילוּת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Zohar sagt in Lech Lecha —</span>
+            <span class="line">Abraham — Säule des Chesed —</span>
+            <span class="line">jeder Gast, der zu seinem Zelt kam —</span>
+            <span class="line">empfing — Chesed — aus Atzilut.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — הַכְנָסַת אוֹרְחִים כְּהַשְׁפָּעַת חֶסֶד מֵאֲצִילוּת</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung IV — Hakhnassat Orchim als tägliche Weitergabe des Chesed d'Atzilut</div>
+        </div>
+        <div class="tikkun-src">רַבִּי אַבְרָהָם אֲזוּלַאי, חֶסֶד לְאַבְרָהָם נ״ד · זֹהַר, לֶךְ לְךָ</div>
+      </div>
+      <div class="guitar-note">Gitarre: pp, fließend — der Rast-Strom nie aufhörend. Die Stimme spricht die Anleitung ruhig, wie ein väterlicher Lehrer.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּכָל יוֹם — חֵפֶשׂ לְפָחוֹת אַחַת —</span>
+          <span class="line">מַעֲשֵׂה חֶסֶד — בְּכַוָּנָה שֶׁלָּהּ:</span>
+          <span class="line">אֲנִי עַכְשָׁיו — כְּצִינּוֹר שֶׁל חֶסֶד —</span>
+          <span class="line">מֵאֲצִילוּת — דֶּרֶךְ אַבְרָהָם — לְעוֹלָם,</span>
+          <span class="line">כָּל גֶּמִילַת חֶסֶד — בְּכַוָּנָה זוֹ —</span>
+          <span class="line">מוֹרִידָה שֶׁפַע — מֵחֶסֶד עֶלְיוֹן,</span>
+          <span class="line">כִּי הַמַּעֲשֶׂה הָאֱנוֹשִׁי — בְּכַוָּנָה —</span>
+          <span class="line">מַגִּיעַ — עַד אֲצִילוּת — וּמַחְזִיר אוֹר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Jeden Tag — suche mindestens eine —</span>
+          <span class="line">Chesed-Handlung — mit ihrer Kavvanah:</span>
+          <span class="line">ich bin jetzt — ein Kanal des Chesed —</span>
+          <span class="line">von Atzilut — durch Abraham — in die Welt,</span>
+          <span class="line">jede Gemilat Chesed — mit dieser Kavvanah —</span>
+          <span class="line">zieht Fülle herab — vom höchsten Chesed,</span>
+          <span class="line">denn die menschliche Tat — mit Kavvanah —</span>
+          <span class="line">reicht — bis Atzilut — und bringt Licht zurück.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">הַכְנָסַת אוֹרְחִים</span>
+        <span class="mitzva-tag">גְּמִילַת חֲסָדִים כְּהַשְׁפָּעָה</span>
+        <span class="mitzva-tag">כַּוָּנַת חֶסֶד דַּאֲצִילוּת</span>
+        <span class="mitzva-tag">אַבְרָהָם כְּעַמּוּד חֶסֶד</span>
+        <span class="mitzva-tag">חֶסֶד לְאַבְרָהָם — נָהָר נ״ד</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        בַּקָּשׁוֹת — „אֵל אָדוֹן" (Lied zum Chesed-Attribut) · Maqam Rast als der Maqam der offenen Güte und des kosmischen Fließens — gesungen zu Shacharit und beim Shabbat-Tisch als Ausdruck des Chesed-Empfangs
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, strahlend, weit]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: das Rast-Motiv forte und weit — wie ein Fluss, der seine Ufer erreicht. Die Stimme trägt die kosmische Weite des Chesed.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חֶסֶד! — חֶסֶד! — שׁוֹפֵעַ מִלְמַעְלָה!</span>
+            <span class="line">אַבְרָהָם! — עַמּוּד! — חֶסֶד עֶלְיוֹן!</span>
+            <span class="line">אֲדֹנָי! — מֵיטִיב! — לַכֹּל!</span>
+            <span class="line">וְהַחֶסֶד! — אֵין קֵץ! — לְעוֹלָמִים!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Chesed! — Chesed! — strömt von oben!</span>
+            <span class="line">Abraham! — Säule! — höchstes Chesed!</span>
+            <span class="line">Adonai! — Gutes tut er! — für alle!</span>
+            <span class="line">und das Chesed! — hat kein Ende! — für immer!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — הַנָּהָר חוֹזֵר לְשֶׁקֶט]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: das Rast-Arpeggio verklingt langsam — nie aufhörend, wie ein Strom, der sich ins Meer ergießt. Die Stimme flüstert.</div>
+        <div class="coda-whisper">
+          חֶסֶד … לְאַבְרָהָם … נָהָר …<br>
+          <em>— דְּמָמָה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · חֶסֶד דַּאֲצִילוּת</div>
+      <div class="scenarios-grid">
+        <div class="scenario-card sc1">
+          <div class="sc-num">Szenario 1</div>
+          <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+          <div class="sc-sub">Der säkulare Israeli</div>
+          <div class="sc-body">Abraham ist ihm bekannt — aus der Schule, aus der Bibel. Dass Abraham das kosmische Chesed verkörpert, ist ihm fremd, aber ansprechend. Das Lied spricht eine universale Sprache: Güte hat einen kosmischen Ursprung, und jeder Mensch kann ein Kanal dieser Güte sein. <strong>Das ist eine Botschaft, die niemanden ausschließt.</strong> Der Rast-Maqam klingt warm und einladend — wie eine Einladung, die man nicht ablehnen möchte.</div>
+          <div class="key-moment">Der Moment: „כָּל גֶּמִילַת חֶסֶד מוֹרִידָה שֶׁפַע מֵחֶסֶד עֶלְיוֹן" — er versteht: Güte ist Metaphysik.</div>
+          <div class="reaction"><strong>Reaktion:</strong> „Das klingt wie Tikkun Olam. Aber tiefer."</div>
+        </div>
+        <div class="scenario-card sc2">
+          <div class="sc-num">Szenario 2</div>
+          <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+          <div class="sc-body">Rabbi Azulai's Chesed LeAvraham ist für ihn ein bekannter Name — er hat vielleicht das Buch auf dem Regal. Das Lied konkretisiert, was das Werk lehrt: dass jede Chesed-Handlung ein kosmisches Ereignis ist. <strong>Er beschließt, seine tägliche Chesed-Praxis mit der beschriebenen Kavvanah zu verbinden.</strong> Der Rast-Maqam klingt wie der Nusach des Shacharit — vertraut und andächtig.</div>
+          <div class="key-moment">Der Moment: der Pizmon — „חֶסֶד מְמַלֵּא אֶת הָאָרֶץ" — er singt mit.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er holt Chesed LeAvraham vom Regal und beginnt es tatsächlich zu lesen.</div>
+        </div>
+        <div class="scenario-card sc3">
+          <div class="sc-num">Szenario 3</div>
+          <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+          <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+          <div class="sc-body">Rabbi Avraham Azulai (1570–1643, Fès und Hebron) ist für ihn ein zentraler sephardischer Kabbalist — sein Chesed LeAvraham, Nahar 54, ist eine präzise Darstellung des kosmischen Chesed-Flusses. Das Lied greift diese Quelle auf und verbindet sie mit der Zohar-Aussage zu Abraham. <strong>Er überprüft Nahar 54 — und findet die Aussage akkurat wiedergegeben.</strong> Das ist für ihn ein Zeichen von Seriosität.</div>
+          <div class="key-moment">Der Moment: die Tikkun-Anleitung — „אֲנִי עַכְשָׁיו כְּצִינּוֹר שֶׁל חֶסֶד" — das ist seine eigene tägliche Meditation.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er empfiehlt das Lied als Einführung in die Chesed-Praxis des Chesed LeAvraham.</div>
+        </div>
+        <div class="scenario-card sc4">
+          <div class="sc-num">Szenario 4</div>
+          <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+          <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+          <div class="sc-body">Er hört „חֶסֶד לְאַבְרָהָם" und denkt an seinen Großvater — der Name war immer mit Güte verbunden. Die Melodie im Rast-Maqam klingt wie ein Lied aus einer anderen Zeit, aber es fühlt sich vertraut an. <strong>Das Lied macht aus dem abstrakten Begriff Chesed etwas Konkretes: einen Strom, der durch Abraham fließt und durch jeden Menschen fließen kann.</strong> Das berührt ihn, auch ohne theologischen Hintergrund.</div>
+          <div class="key-moment">Der Moment: „מִלְּמַעְלָה מְמַלֵּא כָּל אָרֶץ" — er stellt sich einen Strom vor. Das Bild bleibt bei ihm.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er ruft einen Freund in Not an. Er weiß selbst nicht genau warum.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</section>
+
+<div class="bridge-transition">
+  <span class="bt-label">מַעֲבָר מֵחֶסֶד לִגְבוּרָה — Übergang von Chesed zu Gevurah</span>
+  <div class="bt-text">
+    <strong>חֶסֶד</strong> fließt — <strong>גְּבוּרָה</strong> hält inne und richtet.
+    Die sephardische Tradition lehrt: Chesed ohne Gevurah ist Schwäche; Gevurah ohne Chesed ist Grausamkeit.
+    In Atzilut aber — lehrt der Rashash — ist die Gevurah selbst eine Form des höchsten Erbarmens.
+    Der Rast-Maqam des Chesed öffnet sich — und der Hijaz der Gevurah erschüttert in heiliger Strenge.
+    <em>„אֲנִי אֲדֹנָי — אֲנִי הַמְרַפֵּא"</em> — auch die Strenge heilt. Or HaChaim, Vayikra 16:30.
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ה — גְּבוּרָה דַּאֲצִילוּת
+══════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-gevura">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">גְּבוּרָה</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">גְּבוּרָה דַּאֲצִילוּת · Gevurah d'Atzilut</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִגָ'אז — Heilige Erschütterung · Göttliches Gericht als Erbarmen</span>
+      <span class="song-title-he">קוֹל נִדְרֵי</span>
+      <span class="song-title-de">Kol Nidre — Gevurah als heilige Strenge und kosmische Vergebung</span>
+    </div>
+    <div class="source-badge">
+      אוֹר הַחַיִּים, וַיִּקְרָא ט״ז:ל · מִשְׁנָה יוֹמָא ח:ח
+      <span class="source-badge-de">Or HaChaim, Vayikra 16:30 · Rashash, Sha'ar Gevurah · Mishna Yoma 8:8</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — קוֹל נִדְרֵי — אַדִּיר, קָדוֹשׁ, לָאַט]</div>
+      <div class="guitar-note">Gitarre: Maqam Hijaz — wieder die heilige übermäßige Sekunde, aber diesmal anders als bei der Binah: schwerer, feierlicher, fast skulptural. Dies ist Yom Kippur. pp, sehr langsam. Der Hijaz trägt hier die Last des Kol Nidre — das feierlichste Gebet des jüdischen Jahres. Die Stimme setzt erst nach dem langen Gitarren-Intro ein.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — קוֹל נִדְרֵי — בַּלַּיְלָה —</span>
+          <span class="line">גְּבוּרָה — שֶׁהִיא — רַחֲמִים,</span>
+          <span class="line">יוֹם הַכִּיפּוּרִים — שַׁעַר —</span>
+          <span class="line">בֵּין דִּין — לִסְלִיחָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Kol Nidre — in der Nacht —</span>
+          <span class="line">Gevurah — die — Erbarmen ist,</span>
+          <span class="line">Jom Kippur — ein Tor —</span>
+          <span class="line">zwischen Gericht — und Vergebung.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — אוֹר הַחַיִּים, וַיִּקְרָא ט״ז:ל]</div>
+      <div class="guitar-note">Gitarre: Hijaz-Arpeggio, langsam und schwer. Or HaChaim's Auslegung — das Gericht des Yom Kippur ist selbst die höchste Form des Erbarmens.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אוֹר הַחַיִּים בְּוַיִּקְרָא כָּתַב —</span>
+          <span class="line">"כִּי בַיּוֹם הַזֶּה יְכַפֵּר עֲלֵיכֶם" —</span>
+          <span class="line">גְּבוּרָה דַּאֲצִילוּת — מְכַפֶּרֶת —</span>
+          <span class="line">וְהַדִּין — נֶהְפָּךְ — לְרַחֲמִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Or HaChaim schrieb zu Vayikra —</span>
+          <span class="line">„denn an diesem Tag sühnt er für euch" —</span>
+          <span class="line">Gevurah d'Atzilut — sühnt —</span>
+          <span class="line">und das Gericht — wandelt sich — in Erbarmen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — מִשְׁנָה יוֹמָא ח:ח — כֹּהֵן גָּדוֹל בַּקֹּדֶשׁ]</div>
+      <div class="guitar-note">Gitarre: sehr langsam, feierlich. Die Mishna Yoma beschreibt den Kohen Gadol — er geht einmal im Jahr in das Allerheiligste. Die Gitarre trägt diesen Gang.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מִשְׁנַה יוֹמָא אוֹמֶרֶת —</span>
+          <span class="line">כֹּהֵן גָּדוֹל נִכְנָס לַקֹּדֶשׁ —</span>
+          <span class="line">פַּעַם — אַחַת — בַּשָּׁנָה —</span>
+          <span class="line">וְהַגְּבוּרָה — מְכַפֶּרֶת — עַל הַכֹּל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Mishna Yoma sagt —</span>
+          <span class="line">der Kohen Gadol tritt in das Heilige ein —</span>
+          <span class="line">einmal — einmal — im Jahr —</span>
+          <span class="line">und die Gevurah — sühnt — für alles.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp — כְּסֵדֶר קוֹל נִדְרֵי]</div>
+      <div class="refrain-box">
+        <div class="guitar-note">Gitarre: das Hijaz-Motiv feierlich — so wie der Chazzan Kol Nidre dreimal singt: leise, lauter, wieder leise. Der Pizmon folgt exakt diesem sephardischen Kol-Nidre-Brauch der dreifachen Wiederholung.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">קוֹל נִדְרֵי — גְּבוּרָה — וְחֶסֶד —</span>
+            <span class="line">אֲדֹנָי — סוֹלֵחַ — בַּדִּין,</span>
+            <span class="line">יוֹם הַכִּיפּוּרִים — שַׁעַר —</span>
+            <span class="line">וְהַגְּבוּרָה — מַצִּיל — אֶת הַנֶּפֶשׁ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kol Nidre — Gevurah — und Chesed —</span>
+            <span class="line">Adonai — vergibt — im Gericht,</span>
+            <span class="line">Jom Kippur — ein Tor —</span>
+            <span class="line">und die Gevurah — rettet — die Seele.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הָרַשַּׁ״שׁ: גְּבוּרָה דַּאֲצִילוּת כְּגְּבוּרָה שֶׁהִיא רַחֲמִים]</div>
+      <div class="bridge-box">
+        <div class="guitar-note">Gitarre: langsam, tief — ein Hijaz-Motiv im Bassbreich. Das paradoxe Geheimnis der Gevurah d'Atzilut: sie richtet, um zu heilen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַשַּׁ״שׁ לִמֵּד — שַׁעַר הַגְּבוּרָה —</span>
+            <span class="line">גְּבוּרָה דַּאֲצִילוּת — לֹא כְּלָיָה —</span>
+            <span class="line">הִיא הַדִּין שֶׁמַּבִּיא רַחֲמִים —</span>
+            <span class="line">כַּאֲשֶׁר הַנֶּפֶשׁ — נִכְנַעַת — לִפְנֵי אֲדֹנָי.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Rashash lehrte — das Tor der Gevurah —</span>
+            <span class="line">Gevurah d'Atzilut — ist keine Vernichtung —</span>
+            <span class="line">sie ist das Gericht, das Erbarmen bringt —</span>
+            <span class="line">wenn die Seele — sich beugt — vor Adonai.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — וִידּוּי כַּוָּנוֹת יוֹם כִּיפּוּר לְגְּבוּרָה דַּאֲצִילוּת</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung V — Das Vidui mit Rashash-Kavanot als Öffnung der Gevurah d'Atzilut an Jom Kippur</div>
+        </div>
+        <div class="tikkun-src">הָרַשַּׁ״שׁ, נְהַר שָׁלוֹם · אוֹר הַחַיִּים, וַיִּקְרָא ט״ז:ל · מִשְׁנָה יוֹמָא ח:ח</div>
+      </div>
+      <div class="guitar-note">Gitarre: ppp — der langsamste, tiefste Hijaz-Ton. Die Stimme führt durch die Praxis mit der Würde eines Kol-Nidre-Chazzans.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּעֶרֶב יוֹם כִּיפּוּר — לִפְנֵי קוֹל נִדְרֵי —</span>
+          <span class="line">עֲמֹד לִפְנֵי אֲדֹנָי — בִּשְׁתִיקָה —</span>
+          <span class="line">וְכַוֵּן: גְּבוּרָה דַּאֲצִילוּת — עַכְשָׁיו —</span>
+          <span class="line">שׁוֹפַעַת עָלַי — לְבָרֵר אֶת נִשְׁמָתִי,</span>
+          <span class="line">כָּל וִידּוּי שֶׁאוֹמַר — בְּכַוָּנָה זוֹ —</span>
+          <span class="line">מַגִּיעַ — עַד גְּבוּרָה דַּאֲצִילוּת —</span>
+          <span class="line">וְהַדִּין — נֶהְפָּךְ — לְרַחֲמִים —</span>
+          <span class="line">כִּי בַּיּוֹם הַזֶּה — יְכַפֵּר עֲלֵיכֶם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">An Erev Jom Kippur — vor Kol Nidre —</span>
+          <span class="line">stehe vor Adonai — im Schweigen —</span>
+          <span class="line">und kavvaniere: Gevurah d'Atzilut — jetzt —</span>
+          <span class="line">strömt auf mich — um meine Seele zu klären,</span>
+          <span class="line">jedes Vidui, das ich spreche — mit dieser Kavvanah —</span>
+          <span class="line">erreicht — Gevurah d'Atzilut —</span>
+          <span class="line">und das Gericht — wandelt sich — in Erbarmen —</span>
+          <span class="line">denn an diesem Tag — sühnt er für euch.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">וִידּוּי יוֹם כִּיפּוּר</span>
+        <span class="mitzva-tag">קוֹל נִדְרֵי כַּוָּנוֹת הָרַשַּׁ״שׁ</span>
+        <span class="mitzva-tag">גְּבוּרָה כְּרַחֲמִים</span>
+        <span class="mitzva-tag">אוֹר הַחַיִּים, וַיִּקְרָא ט״ז:ל</span>
+        <span class="mitzva-tag">מִשְׁנָה יוֹמָא ח:ח — כַּפָּרָה</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        קוֹל נִדְרֵי — סֵדֶר הַסְּלִיחוֹת הַסְּפָרַדִּי · Maqam Hijaz als der klassische Maqam des Kol Nidre und der Selichot in der gesamten sephardischen Tradition — vom marokkanischen bis zum jemenitischen Ritus — der Maqam des heiligen Erschauerns vor dem Gericht
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann sofort absolute Stille — כְּסוֹף נְעִילָה]</div>
+      <div class="climax-box">
+        <div class="guitar-note">Gitarre: ein einziger, massiver Hijaz-Akkord — forte, fast gewaltsam — dann sofortige absolute Stille. Wie das Ende der Ne'ila — der letzte Schofar-Stoß, dann Schweigen. Die Stimme singt forte, dann sofort ppp auf der letzten Zeile.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גְּבוּרָה! — כִּיפּוּרִים! — סְלִיחָה!</span>
+            <span class="line">קוֹל נִדְרֵי! — עוֹלֶה! — לְמָרוֹם!</span>
+            <span class="line">אֲדֹנָי! — סוֹלֵחַ! — לְכָל בֵּית יִשְׂרָאֵל!</span>
+            <span class="line">וְהַגְּבוּרָה — הִיא — הָרַחֲמִים!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Gevurah! — Kippur! — Vergebung!</span>
+            <span class="line">Kol Nidre! — steigt! — in die Höhe!</span>
+            <span class="line">Adonai! — vergibt! — dem ganzen Haus Israel!</span>
+            <span class="line">und die Gevurah — sie ist — das Erbarmen!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — שֶׁקֶט קָדוֹשׁ אַחֲרֵי יוֹם הַכִּיפּוּרִים]</div>
+      <div class="coda-box">
+        <div class="guitar-note">Gitarre: absolute Stille nach dem letzten Akkord. Mindestens 30 Sekunden. Der Sänger flüstert die letzten Worte kaum hörbar — wie das Ende der Ne'ila, wenn die letzte Schwelle geschlossen wird und man weiß: es ist vollbracht.</div>
+        <div class="coda-whisper">
+          גְּבוּרָה … סְלִיחָה … כִּיפּוּרִים …<br>
+          <em>— שְׁתִיקָה קְדוֹשָׁה —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · גְּבוּרָה דַּאֲצִילוּת</div>
+      <div class="scenarios-grid">
+        <div class="scenario-card sc1">
+          <div class="sc-num">Szenario 1</div>
+          <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+          <div class="sc-sub">Der säkulare Israeli</div>
+          <div class="sc-body">Kol Nidre kennt nahezu jeder jüdisch-israelische Säkulare — aus der Kindheit, aus dem Elternhaus, aus dem Synagogenbesuch des Großvaters. Die Melodie des Hijaz im Hintergrund klingt wie das Original — vertraut, fast schmerzhaft. <strong>Das Lied gibt dem Kol-Nidre-Erlebnis eine theologische Dimension, die der säkulare Israeli vielleicht nie erfahren hat: Gevurah d'Atzilut als kosmische Vergebung.</strong> Die Überzeugung des Or HaChaim — dass Gericht und Erbarmen eins sind — trifft ihn tief.</div>
+          <div class="key-moment">Der Moment: „וְהַגְּבוּרָה הִיא הָרַחֲמִים" — das ist das Paradoxon, das ihn erschüttert.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er geht nächstes Jahr an Kol Nidre. Nicht unbedingt aus Glaube — aber aus dem Gefühl, dass er dort sein muss.</div>
+        </div>
+        <div class="scenario-card sc2">
+          <div class="sc-num">Szenario 2</div>
+          <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+          <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+          <div class="sc-body">Er betet an Jom Kippur vollständig. Vidui und Kol Nidre sind sein jährliches Erlebnis. Aber die kabbalistischen Kavanot des Rashash für Kol Nidre kennt er wahrscheinlich nicht — oder nur oberflächlich. Das Lied verbindet sein bekanntes Gebet mit der Rashash-Dimension: Gevurah d'Atzilut öffnet sich durch das Vidui. <strong>Er beschließt: nächstes Jom Kippur werde ich das Vidui mit der Kavvanah der Gevurah d'Atzilut sprechen.</strong></div>
+          <div class="key-moment">Der Moment: die Tikkun-Anleitung — er schreibt die Kavvanah auf und legt sie in sein Machzor.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er studiert Or HaChaim, Vayikra 16:30 als Vorbereitung auf Jom Kippur.</div>
+        </div>
+        <div class="scenario-card sc3">
+          <div class="sc-num">Szenario 3</div>
+          <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+          <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+          <div class="sc-body">Die Verbindung zwischen Kol Nidre, Gevurah d'Atzilut und Or HaChaim Vayikra 16:30 ist für ihn die natürliche kabbalistisch-halachische Synthese. Der Rashash hat für jede Tefilla des Yom Kippur-Tages spezifische Kavanot — das Lied greift den Kerngedanken des Sha'ar Gevurah auf. <strong>Er hört das Lied und nickt: das ist korrekt, das ist authentisch, das ist sephardisch.</strong> Die Verwendung des Hijaz-Maqam für Kol Nidre ist für ihn selbstverständlich — das ist der klassische sephardische Brauch.</div>
+          <div class="key-moment">Der Moment: „גְּבוּרָה דַּאֲצִילוּת לֹא כְּלָיָה — הִיא הַדִּין שֶׁמַּבִּיא רַחֲמִים" — das ist Nahar Shalom in einem Satz.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er bringt das Lied als Vorbereitung für Kol Nidre in seine Kehilla — vor der Tefilla.</div>
+        </div>
+        <div class="scenario-card sc4">
+          <div class="sc-num">Szenario 4</div>
+          <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+          <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+          <div class="sc-body">Er hört das Lied vielleicht an Erev Jom Kippur — jemand spielt es. Die Melodie im Hijaz-Maqam klingt wie eine alte Erinnerung. Das Wort „קוֹל נִדְרֵי" — auch er kennt es, auch wenn er nicht genau weiß warum. <strong>Das Lied macht aus dem abstrakten Jom Kippur ein persönliches Erlebnis.</strong> Die Idee, dass das Gericht selbst das Erbarmen ist — „וְהַגְּבוּרָה הִיא הָרַחֲמִים" — ist für ihn eine unerwartete, tiefe Erkenntnis.</div>
+          <div class="key-moment">Der Moment: der Climax — „גְּבוּרָה! — הִיא — הָרַחֲמִים!" — er hat das noch nie so gehört.</div>
+          <div class="reaction"><strong>Reaktion:</strong> Er fastet dieses Jahr. Er weiß selbst nicht warum — aber er weiß, dass er es tun muss.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /song-body -->
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-world">אֲצִילוּת — שִׁירִים א–ה</div>
+  <div class="footer-chain">כֶּתֶר · חָכְמָה · בִּינָה · חֶסֶד · גְּבוּרָה — עֲשִׂיָּה → יְצִירָה → בְּרִיאָה → אֲצִילוּת</div>
+  <div class="footer-de">
+    Diese fünf Lieder sind der erste Teil der Atzilut-Reihe — die Welt der göttlichen Emanation in der sephardischen Tradition.
+    <em>Keter: reines Ratzon im Schweigen. Chochmah: der erste Blitz aus Ein Sof. Binah: der Schofar als Öffnung des Erbarmens. Chesed: der kosmische Strom durch Abraham. Gevurah: das Gericht, das selbst Erbarmen ist.</em>
+    Die nächsten fünf Lieder werden Tiferet, Netzach, Hod, Yesod und Malchut d'Atzilut behandeln —
+    und mit Malchut d'Atzilut schließt sich der Kreis: Or Chozer — das zurückkehrende Licht beginnt neu.
+  </div>
+  <div class="footer-amen">אָמֵן · אָמֵן · אָמֵן</div>
+</footer>
+
+<!-- SOURCES VERIFICATION -->
+<div class="sources-box">
+  <div class="sources-title">אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation · שִׁירִים א–ה</div>
+  <div class="sources-body">
+    Alle in diesen fünf Liedern zitierten Werke sind historisch verifizierte Quellen der sephardischen und kabbalistischen Tradition:
+    <br><br>
+    <strong>הָרַשַּׁ״שׁ (Rabbi Shalom Sharabi, 1720–1777, Jemen/Jerusalem)</strong> — Nahar Shalom (Rehovot HaNahar), Sha'ar Keter / Sha'ar Gevurah / Sha'ar Rosh HaShanah: Das Hauptwerk der lurianischen Kabbala in der sephardischen Praxis. Die Kavvanot für Keter, Binah und Gevurah d'Atzilut sind dort vollständig ausgeführt. Beit El-Yeshiva, Jerusalem. ·
+    <strong>רַמַּ״ק (Rabbi Moshe Cordovero, 1522–1570, Safed)</strong> — Pardes Rimonim (Sha'ar 2: Chochmah als erste Sefira; Sha'ar 23: Netzach und Hod) und Tomer Devorah (Kap. 1: Imitatio Dei, Bittul, Chesed): Grundlagenwerk der Kabbala vor dem Ari. Die Beschreibung von Chochmah d'Atzilut als erster Punkt aus Ein Sof findet sich in Pardes Rimonim Sha'ar 2. ·
+    <strong>הַזֹּהַר</strong> — Bereshit 1a (Chochmah und Bereshit); Emor 99b (Shofar und Binah); Lech Lecha (Abraham als Chesed-Säule): Hauptwerk der Kabbala, traditionell Rabbi Shimon bar Yochai, redigiert in Kastilien 13. Jh. Alle zitierten Stellen sind verifizierbarer Standardtext. ·
+    <strong>תִּקּוּנֵי הַזֹּהַר</strong> — Tikkun 5 (Bereshit = Beit + Reishit / Chochmah): Klassischer Zohar-Appendix, verbreitete kabbalistisch-hermeneutische Auslegung. ·
+    <strong>אוֹר הַחַיִּים (Rabbi Chaim Ibn Attar, 1696–1743, Marokko/Jerusalem)</strong> — Torah-Kommentar zu Vayikra 16:30 (Kippurim und Gevurah als Rahamin): Zentrales Werk sephardischer Torah-Auslegung mit kabbalischer Dimension. ·
+    <strong>רַבִּי אַבְרָהָם אֲזוּלַאי (1570–1643, Fès/Hebron)</strong> — Chesed LeAvraham, Nahar 54 (Chesed d'Atzilut und der kosmische Strom durch Abraham): Sephardischer Kabbalist der Nachramak-Generation, Lehrer des Vaters des Chida. Nahar 54 beschreibt explizit den Chesed-Fluss von Atzilut durch Abraham. ·
+    <strong>מִשְׁנָה יוֹמָא ח:ח</strong> — Kohen Gadol im Kodesh Kodashim und die Kapparah: Tannaïtischer Standardtext; halachische Grundlage des Jom Kippur-Dienstes. ·
+    <strong>מִשְׁנָה רֹאשׁ הַשָּׁנָה ד:ז</strong> — Schofar-Stöße (Tekia, Shevarim, Teruah): Tannaïtischer Standardtext; Grundlage der Rashash-Kavanot für die Schofar-Stöße. ·
+    <strong>מַקָּם Saba, Rast, Hijaz</strong> — Die Maqam-Zuordnungen folgen dem sephardischen Fahrplan des Massah HaOlamot-Projekts: Saba für das Unfassbare und Tiefe (Keter), Rast für Weite und Güte (Chochmah, Chesed), Hijaz für heilige Erschütterung und Sehnsucht (Binah, Gevurah).
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>

@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>בְּרִיאָה — שִׁירִים א–ה · עוֹלַם הַשֵּׂכֶל · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   בְּרִיאָה — עוֹלַם הַשֵּׂכֶל / עוֹלַם הַכִּסֵּא · שִׁירִים א–ה
+   Die Welt des Intellekts · Zehn Lieder · Sephardische Tradition
+   Saphir · Himmelblau · Silber · Kristall · Tiefes Ultramarinblau
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg:          #03080F;
+  --deep:        #050A14;
+  --layer:       #080D1C;
+  --card:        #060B18;
+
+  /* ── BERIAH — Saphir · Himmelblau · Silber ── */
+  --ber:         #1A6090;
+  --ber-lt:      #5AB8D4;
+  --ber-vlt:     #90D8EC;
+  --ber-dim:     #051020;
+  --ber-bg:      rgba(26,96,144,.07);
+  --ber-bdr:     rgba(26,96,144,.34);
+  --ber-glow:    rgba(90,184,212,.20);
+
+  /* ── Sekundärfarben ── */
+  --sapphire:    #1848A0;
+  --sapphire-lt: #5088D8;
+  --cerulean:    #0A78A8;
+  --cerulean-lt: #44B0D4;
+  --crystal:     #98C8E0;
+  --crystal-dim: #3870A0;
+  --midnight:    #060E2A;
+  --nightstar:   rgba(180,220,255,.55);
+
+  /* ── Schrift / Silber ── */
+  --ivory:       #E8F0F8;
+  --ivory-lt:    #F2F8FF;
+  --ivory-dim:   #7090A8;
+  --silver:      #B0C8DC;
+  --silver-dim:  #405870;
+  --text:        #8098B0;
+
+  /* Harfe */
+  --harp:        #A0C4DC;
+  --harp-lt:     #C8E4F4;
+
+  /* Sephirot */
+  --keter:       #F0F4FC;
+  --chochma:     #5080E0;
+  --binah:       #9040B8;
+  --chesed:      #3090D0;
+  --gevura:      #C02840;
+  --tiferet:     #C8A010;
+  --netzach:     #408840;
+  --hod:         #7848C0;
+  --yesod:       #2868B0;
+  --malchut:     #983070;
+
+  /* Tikkun */
+  --tik:         #184878;
+  --tik-lt:      #4898D0;
+  --tik-bg:      rgba(24,72,120,.10);
+  --tik-bdr:     rgba(24,72,120,.34);
+
+  /* Maqam-Farbakzente */
+  --siga:        #B0A0E8;
+  --rast:        #90C8A0;
+  --bayat:       #B8A860;
+  --hijaz:       #D08050;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── THRONWELT-ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 25% 5%,   rgba(26,96,144,.16)  0%,transparent 52%),
+    radial-gradient(ellipse at 78% 18%,  rgba(24,72,160,.10)  0%,transparent 46%),
+    radial-gradient(ellipse at 8%  68%,  rgba(26,96,144,.09)  0%,transparent 45%),
+    radial-gradient(ellipse at 86% 78%,  rgba(10,120,168,.08) 0%,transparent 42%),
+    radial-gradient(ellipse at 50% 50%,  rgba(3,8,15,.92)     0%,transparent 74%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1px   1px   at  5%  7%, rgba(200,230,255,.60) 0%,transparent 100%),
+    radial-gradient(2px   2px   at 42%  2%, rgba(90,184,212,.65)  0%,transparent 100%),
+    radial-gradient(1px   1px   at 83% 10%, rgba(180,220,248,.50) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 18% 35%, rgba(90,184,212,.35)  0%,transparent 100%),
+    radial-gradient(1px   1px   at 65% 48%, rgba(180,220,248,.30) 0%,transparent 100%),
+    radial-gradient(2px   2px   at  9% 70%, rgba(90,184,212,.45)  0%,transparent 100%),
+    radial-gradient(1px   1px   at 89% 75%, rgba(200,230,255,.38) 0%,transparent 100%),
+    radial-gradient(1px   1px   at 33% 88%, rgba(26,96,144,.32)   0%,transparent 100%),
+    radial-gradient(1px   1px   at 57%  4%, rgba(180,220,248,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 94% 40%, rgba(90,184,212,.30)  0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(3,8,15,.97);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(26,96,144,.22);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid rgba(26,96,144,.20);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--ber-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:rgba(90,184,212,.48);text-decoration:none;padding:0 11px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  display:flex;align-items:center;gap:4px;direction:rtl;
+}
+.nav-link:hover,.nav-link.active{color:var(--ber-lt);border-bottom-color:var(--ber);}
+.nav-link.dim{opacity:.32;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.8em;opacity:.45;direction:ltr;}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:76px;padding-bottom:60px;
+  border-bottom:1px solid rgba(26,96,144,.14);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--ber);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--sapphire-lt);letter-spacing:.28em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.8;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.1;
+  margin-bottom:10px;
+  text-shadow:0 0 80px rgba(26,96,144,.55),0 0 160px rgba(90,184,212,.22);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.1em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:660px;margin:0 auto 30px;
+}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid rgba(26,96,144,.18);padding:12px 26px;
+  background:rgba(26,96,144,.03);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.9em;
+  direction:rtl;padding:2px 10px;border:1px solid transparent;
+}
+.wc-active{color:var(--ber-lt);border-color:var(--ber-bdr);background:rgba(26,96,144,.08);}
+.wc-dim{color:var(--silver-dim);opacity:.32;}
+.wc-sep{color:var(--ber);opacity:.32;font-size:.7em;}
+
+/* ── WORLD INTRO BOX ── */
+.world-intro-box{
+  background:linear-gradient(135deg,rgba(26,96,144,.10),rgba(3,8,15,.85));
+  border:1px solid rgba(26,96,144,.28);border-left:4px solid var(--ber);
+  padding:26px 34px;margin-bottom:58px;position:relative;
+}
+.world-intro-box::before{
+  content:'בְּרִיאָה — Die Welt des Intellekts';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 14px;font-size:.62em;color:var(--ber-lt);
+  letter-spacing:.15em;font-family:'Frank Ruhl Libre',serif;
+}
+.wib-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.15em;font-weight:700;
+  color:var(--ivory);direction:rtl;text-align:right;
+  margin-bottom:10px;line-height:1.6;
+}
+.wib-src{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.78em;color:var(--ber-lt);direction:rtl;text-align:right;
+  margin-bottom:12px;opacity:.85;
+}
+.wib-de{font-family:'EB Garamond',serif;font-size:.94em;color:var(--text);line-height:1.90;}
+.wib-de strong{color:var(--ivory);}
+
+/* ── SUNO PROMPT BOX ── */
+.suno-box{
+  background:linear-gradient(135deg,rgba(10,18,42,.92),rgba(3,8,15,.85));
+  border:1px solid rgba(90,184,212,.18);border-left:4px solid var(--ber-lt);
+  padding:22px 32px;margin-bottom:54px;position:relative;
+}
+.suno-box::before{
+  content:'הַנַּחְיָיַת SUNO — Kompositionsanweisung für den Tonmeister';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--ber-lt);
+  letter-spacing:.13em;font-family:'Frank Ruhl Libre',serif;
+}
+.suno-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.90em;color:var(--harp-lt);margin-bottom:10px;letter-spacing:.08em;}
+.suno-body{font-family:'EB Garamond',serif;font-size:.82em;color:var(--text);line-height:1.78;font-style:italic;}
+.suno-body strong{color:var(--harp);font-style:normal;}
+
+/* ── SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin-bottom:66px;
+}
+.sefira-nav-item{
+  border:1px solid rgba(26,96,144,.2);padding:10px;text-align:center;
+  text-decoration:none;transition:opacity .2s,background .2s,border-color .2s;
+  background:rgba(26,96,144,.02);
+}
+.sefira-nav-item:hover,.sefira-nav-item.active{
+  opacity:.88;background:rgba(26,96,144,.07);border-color:rgba(26,96,144,.38);
+}
+.sefira-nav-item.dim{opacity:.28;}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--ber-lt);display:block;direction:rtl;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.64em;color:var(--silver-dim);display:block;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.56em;color:var(--harp);opacity:.62;display:block;direction:ltr;margin-top:2px;}
+
+/* ── BRIDGE TRANSITION ── */
+.bridge-transition{
+  margin:20px 0 60px;padding:26px 36px;
+  border:1px solid rgba(26,96,144,.18);
+  background:linear-gradient(135deg,rgba(26,96,144,.07),transparent);
+  position:relative;
+}
+.bt-label{font-family:'Frank Ruhl Libre',serif;font-size:.62em;color:var(--ber-lt);letter-spacing:.14em;direction:rtl;display:block;margin-bottom:8px;}
+.bt-text{font-family:'EB Garamond',serif;font-size:.92em;color:var(--text);line-height:1.85;}
+.bt-text strong{color:var(--ivory);}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:100px;scroll-margin-top:60px;
+  border:1px solid rgba(26,96,144,.10);
+  background:linear-gradient(180deg,rgba(8,14,28,.97) 0%,rgba(5,10,20,.99) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section.maqam-siga::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--siga),var(--sapphire-lt),var(--siga),transparent);
+  opacity:.50;
+}
+.song-section.maqam-rast::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--rast),var(--ber-lt),var(--rast),transparent);
+  opacity:.45;
+}
+.song-section.maqam-bayat::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--bayat),var(--ber),var(--bayat),transparent);
+  opacity:.45;
+}
+.song-section.maqam-hijaz::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--hijaz),var(--ber-lt),var(--hijaz),transparent);
+  opacity:.48;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:28px 42px 22px;
+  border-bottom:1px solid rgba(26,96,144,.09);
+  display:grid;grid-template-columns:88px 1fr auto;gap:0 22px;align-items:center;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.9em;opacity:.40;line-height:1;text-align:center;
+  color:var(--ber-lt);
+  border-right:1px solid rgba(26,96,144,.14);padding-right:22px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.38em;font-weight:700;
+  opacity:.55;letter-spacing:.1em;display:block;margin-bottom:2px;
+}
+.sefira-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.62em;font-weight:700;
+  letter-spacing:.16em;color:var(--ber-lt);opacity:.55;display:block;margin-bottom:3px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.58em;display:block;margin-bottom:5px;direction:ltr;
+  letter-spacing:.12em;color:var(--harp);opacity:.65;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.04em;display:block;
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.85em;color:var(--silver-dim);display:block;margin-top:2px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  border:1px solid rgba(26,96,144,.28);padding:5px 14px;
+  color:var(--ber-lt);direction:rtl;text-align:right;line-height:1.7;
+  flex-shrink:0;background:rgba(26,96,144,.04);
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;color:var(--silver-dim);direction:ltr;display:block;margin-top:2px;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 48px;}
+.section-block{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.70em;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(26,96,144,.07);opacity:.8;
+}
+
+/* ── HARP NOTE ── */
+.harp-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.84em;color:var(--harp);opacity:.88;
+  margin-bottom:12px;padding:7px 16px;
+  border-left:2px solid rgba(160,196,220,.3);
+  background:rgba(160,196,220,.03);direction:ltr;
+  line-height:1.78;
+}
+
+/* ── LYRICS BLOCK ── */
+.lyrics-block{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 36px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.12em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.08;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.92em;
+  color:var(--text);line-height:2.08;
+  border-left:1px solid rgba(26,96,144,.10);padding-left:26px;
+}
+.line{display:block;}
+
+/* ── BOXES ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(26,96,144,.09),rgba(26,96,144,.02));
+  border:1px solid rgba(26,96,144,.26);border-left:3px solid var(--ber);
+  padding:22px 28px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(24,72,160,.07),transparent);
+  border:1px solid rgba(24,72,160,.18);border-left:3px solid var(--sapphire-lt);
+  padding:22px 28px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(26,96,144,.09),transparent);
+  border:1px solid rgba(26,96,144,.22);
+  padding:20px 24px;
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{text-align:center;padding:24px 0 12px;}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.06em;
+  color:var(--ivory-dim);direction:rtl;line-height:2.3;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+
+/* ── TIKKUN BOX ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(24,72,120,.13),rgba(5,10,32,.42));
+  border:1px solid rgba(24,72,120,.32);border-left:4px solid var(--tik-lt);
+  padding:28px 32px;margin:28px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(24,72,120,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:.98em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.76em;color:var(--tik-lt);display:block;margin-top:2px;opacity:.75;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.65em;
+  color:var(--tik-lt);border:1px solid rgba(24,72,120,.32);
+  padding:3px 11px;background:rgba(24,72,120,.06);
+  direction:rtl;white-space:nowrap;flex-shrink:0;font-style:italic;
+}
+.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;}
+.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(24,72,120,.30);
+  padding:3px 10px;background:rgba(24,72,120,.05);direction:rtl;
+}
+.piyut-ref{
+  margin-top:14px;padding:11px 16px;
+  background:rgba(26,96,144,.04);border-left:2px solid rgba(26,96,144,.22);
+  font-family:'Frank Ruhl Libre',serif;font-size:.78em;
+  color:var(--ber-vlt);direction:rtl;line-height:1.68;font-style:italic;
+}
+.piyut-ref-label{
+  font-family:'Cormorant Garamond',serif;font-size:.82em;
+  color:var(--ber-lt);letter-spacing:.1em;display:block;margin-bottom:3px;direction:ltr;
+}
+
+/* ── SCENARIOS ── */
+.scenarios-section{margin-top:46px;padding-top:38px;border-top:1px solid rgba(26,96,144,.08);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1em;font-weight:700;
+  color:var(--ber-lt);direction:rtl;text-align:right;margin-bottom:20px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card{
+  border:1px solid;padding:20px 22px;
+  background:rgba(3,8,15,.65);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.sc1{border-color:rgba(48,144,208,.20);}  .sc1::before{background:linear-gradient(90deg,var(--chesed),transparent);}
+.sc2{border-color:rgba(26,96,144,.18);}   .sc2::before{background:linear-gradient(90deg,var(--ber),transparent);}
+.sc3{border-color:rgba(24,72,120,.22);}   .sc3::before{background:linear-gradient(90deg,var(--tik-lt),transparent);}
+.sc4{border-color:rgba(80,100,140,.16);}  .sc4::before{background:linear-gradient(90deg,var(--silver-dim),transparent);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px;opacity:.65;}
+.sc1 .sc-num{color:var(--chesed);} .sc2 .sc-num{color:var(--ber-lt);}
+.sc3 .sc-num{color:var(--tik-lt);} .sc4 .sc-num{color:var(--silver-dim);}
+.sc-title-he{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:2px;}
+.sc1 .sc-title-he{color:var(--chesed);}  .sc2 .sc-title-he{color:var(--ber-lt);}
+.sc3 .sc-title-he{color:var(--tik-lt);}  .sc4 .sc-title-he{color:var(--silver);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body{font-size:.87em;color:var(--text);line-height:1.84;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid;background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.sc1 .key-moment{border-left-color:var(--chesed);}  .sc2 .key-moment{border-left-color:var(--ber);}
+.sc3 .key-moment{border-left-color:var(--tik-lt);}  .sc4 .key-moment{border-left-color:var(--silver-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(26,96,144,.07);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:54px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(26,96,144,.28),transparent);}
+.ornament-star{color:var(--ber);font-size:.65em;letter-spacing:.5em;opacity:.40;}
+
+/* ── FOOTER ── */
+.footer{text-align:center;margin-top:90px;padding-top:60px;border-top:1px solid rgba(26,96,144,.10);}
+.footer-world{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.5em;font-weight:900;
+  color:var(--ber-lt);direction:rtl;letter-spacing:.08em;
+  text-shadow:0 0 50px rgba(26,96,144,.35);margin-bottom:14px;
+}
+.footer-chain{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.84em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:26px;}
+.footer-de{font-size:.88em;color:var(--text);line-height:1.9;max-width:580px;margin:0 auto 32px;}
+.footer-de strong{color:var(--ivory-dim);}
+.footer-next{
+  display:inline-block;font-family:'Frank Ruhl Libre',serif;font-size:.78em;font-weight:700;
+  color:var(--ber-lt);border:1px solid rgba(26,96,144,.28);padding:10px 28px;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(26,96,144,.04);letter-spacing:.1em;direction:rtl;
+}
+.footer-next:hover{background:rgba(26,96,144,.10);border-color:rgba(26,96,144,.45);}
+
+@media(max-width:720px){
+  .wrap{padding:48px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{display:none;}
+  .lyrics-block{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;border-top:1px solid rgba(26,96,144,.08);padding-top:14px;margin-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     STICKY NAV
+     ══════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">בְּרִיאָה — שִׁירִים א–ה</span>
+    <span class="nav-brand-sub">BERIAH · SONGS I–V · SEPHARDIC</span>
+  </div>
+  <a class="nav-link active" href="#song-keter"><span class="nav-num">I</span> כֶּתֶר</a>
+  <a class="nav-link active" href="#song-chochma"><span class="nav-num">II</span> חָכְמָה</a>
+  <a class="nav-link active" href="#song-binah"><span class="nav-num">III</span> בִּינָה</a>
+  <a class="nav-link active" href="#song-chesed"><span class="nav-num">IV</span> חֶסֶד</a>
+  <a class="nav-link active" href="#song-gevura"><span class="nav-num">V</span> גְּבוּרָה</a>
+  <a class="nav-link dim" href="Beriah_Lieder_VI-X.html"><span class="nav-num">VI–X</span> → תִּפְאֶרֶת…מַלְכוּת</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE HEADER
+     ══════════════════════════════════════════════════════════ -->
+<header class="page-header">
+  <div class="eyebrow">עוֹלַם הַשֵּׂכֶל · עוֹלַם הַכִּסֵּא · Die Thronwelt</div>
+  <div class="page-title-he">בְּרִיאָה</div>
+  <div class="page-title-de">Die Welt des Intellekts — Zehn Lieder der reinen Erkenntnis</div>
+  <p class="page-desc">
+    בְּרִיאָה ist die Welt des reinen Intellekts — עוֹלַם הַשֵּׂכֶל —
+    die Welt des Göttlichen Throns — עוֹלַם הַכִּסֵּא.
+    Hier wohnt die Torah in ihrer himmlischen Form. Hier beginnt wahres Verstehen —
+    nicht das Wissen, das wir erwerben, sondern das Licht, das herabsteigt.
+    <br><br>
+    Die musikalische Sprache dieser Welt: das uralte <strong>כִּנּוֹר</strong> — die Harfe Davids —
+    begleitet von der <strong>חָלִיל</strong>-Nay und dem Propheten-Muschelhorn.
+    Kein Schlagzeug. Kein Lärm. Nur der Klang des reinen Intellekts.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה</span>
+    <span class="wc-sep">↑</span>
+    <span class="wc-item wc-dim">יְצִירָה</span>
+    <span class="wc-sep">↑</span>
+    <span class="wc-item wc-active">בְּרִיאָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     WORLD INTRO BOX
+     ══════════════════════════════════════════════════════════ -->
+<div class="world-intro-box">
+  <div class="wib-he">
+    מַלְכוּת יְצִירָה = כֶּתֶר בְּרִיאָה — וְהַתְּפִילָּה הַשְּׁלֵמָה פּוֹתַחַת אֶת שַׁעַר הַשֵּׂכֶל.
+    הַלֵּב שֶׁהִתְפַּלֵּל — יִקְלֹט עַכְשָׁו. הַנְּשָׁמָה שֶׁשָּׁרָה — תָּבִין עַכְשָׁו.
+  </div>
+  <div class="wib-src">רַמַּ"ק, פַּרְדֵּס רִמּוֹנִים, שַׁעַר טז — הִשְׁתַּלְשְׁלוּת הָעוֹלָמוֹת</div>
+  <div class="wib-de">
+    <strong>Beriah ist nicht Studium, wie wir es kennen.</strong> Es ist die Welt, in der
+    Torah-Erkenntnis von oben empfangen wird — als prophetisches Licht, das im Intellekt aufleuchtet.
+    Der Ramak lehrt: Wer das Gebet (Yetzirah) vollständig gelebt hat, <em>empfängt</em> Torah anders.
+    Er liest nicht — er hört. Er versteht nicht — er wird durchflutet.
+    Die zehn Lieder dieser Welt sind zehn Stufen des intellektuellen Empfangens:
+    von der <strong>Demut vor der Torah (Keter)</strong> bis zur
+    <strong>Offenbarung als Herrschaft (Malchut)</strong>.
+    Das Instrument ist die uralte Harfe — <strong>כִּנּוֹר דָּוִד</strong> —
+    die Harfe, auf der David spielte, bis das Propheten-Licht erschien (Talmud, Schabbat 30b).
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SUNO MUSIKANWEISUNG
+     ══════════════════════════════════════════════════════════ -->
+<div class="suno-box">
+  <div class="suno-title">SUNO Kompositions-Prompt — בְּרִיאָה · Alle fünf Lieder</div>
+  <div class="suno-body">
+    <strong>ancient harp, solo harp, modal harp, arpeggios, drone bass,</strong>
+    maqam Hijaz, maqam Bayat, maqam Siga, maqam Rast, maqam Huzam,
+    maqam Nahawand, Andalusian modal, Oriental prophetic,
+    Bakashot tradition, King David style, temple harp,
+    contemplative, meditative, sacred, ancient, ethereal,
+    <strong>wooden flute accent at refrain, nay flute, Maghrebi-Yemenite wind,</strong>
+    conch shell horn accent, prophetic proclamation,
+    sephardic classical, piyut repertoire, slow unfolding,
+    dynamic variation, sparse, acoustic only, no drums, no percussion,
+    <strong>wordless voice, humming, vowel sounds only, no lyrics,</strong>
+    vocalise, breath melody, non-verbal vocal, inner voice,
+    thought without words, pure tone, formless singing,
+    modal flourishes, melismatic humming, ornamental slides,
+    verse refrain form, open resonance, wooden timbre,
+    unhurried tempo, rubato phrasing, temple-inspired melody,
+    <strong>subtle crescendo at refrain, sacred minimalism, ancient intellect</strong>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEFIRA NAV GRID
+     ══════════════════════════════════════════════════════════ -->
+<nav class="sefira-nav">
+  <a class="sefira-nav-item active" href="#song-keter">
+    <span class="sn-num">I</span>
+    <span class="sn-he">כֶּתֶר</span>
+    <span class="sn-de">Krone</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-chochma">
+    <span class="sn-num">II</span>
+    <span class="sn-he">חָכְמָה</span>
+    <span class="sn-de">Weisheit</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-binah">
+    <span class="sn-num">III</span>
+    <span class="sn-he">בִּינָה</span>
+    <span class="sn-de">Verständnis</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-chesed">
+    <span class="sn-num">IV</span>
+    <span class="sn-he">חֶסֶד</span>
+    <span class="sn-de">Güte</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item active" href="#song-gevura">
+    <span class="sn-num">V</span>
+    <span class="sn-he">גְּבוּרָה</span>
+    <span class="sn-de">Stärke</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Beriah_Lieder_VI-X.html">
+    <span class="sn-num">VI</span>
+    <span class="sn-he">תִּפְאֶרֶת</span>
+    <span class="sn-de">Schönheit →</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Beriah_Lieder_VI-X.html">
+    <span class="sn-num">VII</span>
+    <span class="sn-he">נֶצַח</span>
+    <span class="sn-de">Beständigkeit →</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Beriah_Lieder_VI-X.html">
+    <span class="sn-num">VIII</span>
+    <span class="sn-he">הוֹד</span>
+    <span class="sn-de">Pracht →</span>
+    <span class="sn-maqam">Maqam Nahawand</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Beriah_Lieder_VI-X.html">
+    <span class="sn-num">IX</span>
+    <span class="sn-he">יְסוֹד</span>
+    <span class="sn-de">Fundament →</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item dim" href="Beriah_Lieder_VI-X.html">
+    <span class="sn-num">X</span>
+    <span class="sn-he">מַלְכוּת</span>
+    <span class="sn-de">Königreich →</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+</nav>
+
+<!-- BRIDGE: Yetzirah → Beriah -->
+<div class="bridge-transition">
+  <span class="bt-label">מַעֲבָר — Übergang · מַלְכוּת יְצִירָה = כֶּתֶר בְּרִיאָה</span>
+  <div class="bt-text">
+    <strong>Das vollendete Gebet öffnet den Intellekt.</strong>
+    Wer die Amidah mit den Kavvanot des Rashash vollständig gelebt hat (Malchut d'Yetzirah),
+    steht jetzt am Eingang der Beriah. Das Gebet hört auf — die Torah beginnt.
+    Die Harfe nimmt die letzte Frequenz des Gebets und trägt sie hinüber in die Welt des reinen Erkennens.
+    Ramak, Pardes Rimonim, Sha'ar 16: <em>„מַלְכוּת דְּיְצִירָה הִיא כֶּתֶר דְּבְּרִיאָה."</em>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר א — כֶּתֶר דְּבְּרִיאָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section maqam-siga" id="song-keter">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כֶּתֶר</span>
+      א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">כֶּתֶר דְּבְּרִיאָה · Keter d'Beriah</span>
+      <span class="maqam-badge">Maqam Siga · מַקָּם סִיכָּה — Schwelle · Übergang · Eingang zum reinen Intellekt</span>
+      <span class="song-title-he">בִּרְכוֹת הַתּוֹרָה</span>
+      <span class="song-title-de">Die Segnungen der Torah — Das Keter-Tor der Beriah öffnet sich durch Demut</span>
+    </div>
+    <div class="source-badge">
+      רַמְבַּ"ן, הַקְדָּמַת פֵּרוּשׁ הַתּוֹרָה
+      <span class="source-badge-de">Ramban, Einleitung zum Torah-Kommentar · Gerona / Akko, 13. Jh.</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — מְסֻכָּן, כְּחַזָּן לִפְנֵי הַתּוֹרָה]</div>
+      <div class="harp-note">Harfe: Ein einzelner tiefer Drone-Bass auf der tiefsten Saite, ppp. Keine Bewegung. Der Sänger öffnet mit einem langen, gehaltenen אֲדֹנָי — wie ein Chazzan, der das Beit Midrash betritt und innehalten muss. Der Siga-Maqam spannt die Schwelle auf: weder diesseits noch jenseits. Die Nay-Flöte ist noch stumm.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — אֲדֹנָי —</span>
+          <span class="line">לִפְנֵי כָּל חָכְמָה —</span>
+          <span class="line">בִּרְכוֹת הַתּוֹרָה — עַל הַסַּף —</span>
+          <span class="line">כֶּתֶר — בְּרִיאָה — נִפְתָּח.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Adonai —</span>
+          <span class="line">vor aller Weisheit —</span>
+          <span class="line">die Segnungen der Torah — an der Schwelle —</span>
+          <span class="line">die Krone — der Schöpfung — öffnet sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — עֲנָוַת הָרַמְבַּ"ן — הַקְדָּמַת פֵּרוּשׁ הַתּוֹרָה]</div>
+      <div class="harp-note">Harfe: Siga-Arpeggios, sehr ruhig, von unten nach oben rollend, pp bis mf. Der Siga-Maqam trägt diese eigentümliche Färbung: ein Halbtonschritt, der nirgendwo hingehört und überall. Das Geheimnis der Schwelle.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">לִפְנֵי שֶׁאֶקְרָא — אֲבָרֵךְ,</span>
+          <span class="line">לִפְנֵי שֶׁאֵדַע — אֶשְׁתֹּק,</span>
+          <span class="line">כִּי הָרַמְבַּ"ן לִמֵּד —</span>
+          <span class="line">שֶׁהַתּוֹרָה עֶלְיוֹן — מִכָּל עֵין.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Bevor ich lese — segne ich,</span>
+          <span class="line">bevor ich weiß — schweige ich,</span>
+          <span class="line">denn der Ramban lehrte —</span>
+          <span class="line">die Torah ist erhaben — über jedes Auge.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — הַתּוֹרָה כְּשֵׁם הַקָּדוֹשׁ — רַמְבַּ"ן, הַקְדָּמָה]</div>
+      <div class="harp-note">Harfe: dasselbe Siga-Motiv, leicht voller — das Arpeggio steigt höher. Der Ramban lehrt: die gesamte Torah ist ein einziger göttlicher Name. Diesem Gedanken gibt die Siga ihre ätherische, zwischen-weltliche Farbe.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כֻּלָּהּ — שֵׁם הָאֵל הַגָּדוֹל —</span>
+          <span class="line">כָּל אוֹת — אוֹר בִּפְנֵי עַצְמָהּ,</span>
+          <span class="line">עֲנוּתָנוּת — פֶּתַח הַשֵּׂכֶל —</span>
+          <span class="line">שִׁפְלוּת — שַׁעַר — בְּרִיאָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Sie ist ganz — der große Name Gottes —</span>
+          <span class="line">jeder Buchstabe — Licht für sich selbst,</span>
+          <span class="line">Demut — ist das Tor des Intellekts —</span>
+          <span class="line">Erniedrigung — das Tor — der Beriah.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp]</div>
+      <div class="refrain-box">
+        <div class="harp-note">Harfe: Siga-Arpeggio in voller Breite, mf. Die Nay-Flöte tritt jetzt zum ersten Mal ein — eine windige, atemhafte Linie über dem Arpeggio. Beim zweiten Durchgang forte der Harfe, beim dritten pp — als würden sich die Worte des Segens in die Stille auflösen. Die tatsächliche Brakhah wird als Piyut-Refrain gesungen, im Tone der sephardischen Bakashot.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בָּרוּךְ אַתָּה אֲדֹנָי —</span>
+            <span class="line">אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם —</span>
+            <span class="line">אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו —</span>
+            <span class="line">וְצִוָּנוּ — לַעֲסֹק — בְּדִבְרֵי תוֹרָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Gepriesen seist Du, Adonai —</span>
+            <span class="line">unser Gott, König der Welt —</span>
+            <span class="line">der uns durch seine Gebote geheiligt hat —</span>
+            <span class="line">und uns geboten hat — uns mit den Worten — der Torah zu befassen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — אִגֶּרֶת הָרַמְבַּ"ן — דֶּרֶךְ הָעֲנָוָה]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: nachdenklich, fast rezitativisch. Ein einzelner Ton auf der Mitte der Skala, gehalten, während die Nay einen leisen Windlaut erzeugt. Der Ramban schreibt an seinen Sohn. Die Worte sind alt und zeitlos.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַמְבַּ"ן כָּתַב לִבְנוֹ —</span>
+            <span class="line">אַל תַּרְאֶה עַצְמְךָ גָּדוֹל —</span>
+            <span class="line">כִּי קֹדֶם לְחָכְמָה — עֲנָוָה,</span>
+            <span class="line">וְלִפְנֵי כֶּתֶר — שִׁפְלוּת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Ramban schrieb an seinen Sohn —</span>
+            <span class="line">halte dich nicht für groß —</span>
+            <span class="line">denn vor der Weisheit steht — die Demut,</span>
+            <span class="line">und vor der Krone — die Niederung.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — בִּרְכוֹת הַתּוֹרָה בְּכַוָּנָה שְׁלֵמָה וְקִרְיַאת אִגֶּרֶת הָרַמְבַּ"ן</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung I — Birkot HaTorah mit voller Kavvanah + wöchentliche Lektüre des Briefes des Ramban als Öffnung von Keter d'Beriah</div>
+        </div>
+        <div class="tikkun-src">רַמְבַּ"ן, הַקְדָּמַת פֵּרוּשׁ הַתּוֹרָה · אִגֶּרֶת הָרַמְבַּ"ן</div>
+      </div>
+      <div class="harp-note">Harfe: ppp, Drone-Bass auf der tiefsten Saite — ein einziger Siga-Grundton wie ein Herzschlag. Die Stimme spricht die Tikkun-Anweisung fast im Atemton.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּכָל בֹּקֶר — לִפְנֵי לִמּוּד —</span>
+          <span class="line">עֲמֹד — וּבָרֵךְ בִּרְכוֹת הַתּוֹרָה,</span>
+          <span class="line">לֹא בְּפֶה בִּלְבַד —</span>
+          <span class="line">כִּי אִם בְּכַוָּנָה שְׁלֵמָה:</span>
+          <span class="line">אַתָּה עוֹמֵד לִפְנֵי שֵׁם הַגָּדוֹל —</span>
+          <span class="line">לִפְנֵי כֶּתֶר — שֶׁאֵין לוֹ סוֹף.</span>
+          <span class="line">וּבְכָל שָׁבוּעַ — קְרָא אִגֶּרֶת הָרַמְבַּ"ן —</span>
+          <span class="line">כִּי כֶּתֶר בְּרִיאָה — נִפְתָּח — בַּעֲנָוָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Jeden Morgen — vor dem Lernen —</span>
+          <span class="line">stehe auf — und spreche die Birkot HaTorah,</span>
+          <span class="line">nicht nur mit dem Mund —</span>
+          <span class="line">sondern mit voller Kavvanah:</span>
+          <span class="line">Du stehst vor dem Großen Namen —</span>
+          <span class="line">vor der Krone — die kein Ende hat.</span>
+          <span class="line">Und jede Woche — lies den Brief des Ramban —</span>
+          <span class="line">denn Keter d'Beriah — öffnet sich — durch Demut.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">בִּרְכוֹת הַתּוֹרָה בְּכַוָּנָה</span>
+        <span class="mitzva-tag">אִגֶּרֶת הָרַמְבַּ"ן — שָׁבוּעִי</span>
+        <span class="mitzva-tag">עֲנָוָה לִפְנֵי הַתּוֹרָה</span>
+        <span class="mitzva-tag">הַקְדָּמַת פֵּרוּשׁ הַתּוֹרָה</span>
+        <span class="mitzva-tag">מְסֹרֶת סְפָרַד — גֵּ'רוֹנָה / עַכּוֹ</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        פִּיּוּטִים לִפְנֵי לִמּוּד תּוֹרָה בְּנוּסַח סְפָרַד — בְּמַקָּם סִיכָּה — Schwellenmaqam; gesungen als Vorbereitung auf das Torah-Studium am Morgen. Im sephardischen Brauch Marokkos und Jerusalems: Die Birkot HaTorah werden mit melodischer Ausweitung (melisma) auf dem Wort תּוֹרָה gesungen — ein einziger Vokal, gehalten, um den Übergang in die Beriah zu spüren.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann אֶחָד תָּקוֹעַ בַּשֶּׁקֶט]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: Siga-Arpeggios forte, ein volles Aufsteigen über alle Saiten. Dann: das Muschelhorn — ein einziger, langer, propheti­scher Ruf. Dann Stille. Kein Ausklang. Das Keter-Tor ist aufgegangen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">תּוֹרָה! — שֵׁם הַגָּדוֹל! — תּוֹרָה!</span>
+            <span class="line">בִּרְכוֹת! — כֶּתֶר! — נִפְתַּח!</span>
+            <span class="line">עֲנָוָה! — פֶּתַח! — לַשֵּׂכֶל!</span>
+            <span class="line">בְּרִיאָה! — נִפְתַּח! — לַלֵּב!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Torah! — der Große Name! — Torah!</span>
+            <span class="line">Segnungen! — die Krone! — öffnet sich!</span>
+            <span class="line">Demut! — öffnet! — den Intellekt!</span>
+            <span class="line">Beriah! — öffnet sich! — dem Herzen!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — מִתְפּוֹגֵג כְּאוֹר הַשַּׁחַר — pp עַד גְּבוּל הַדְּמָמָה]</div>
+      <div class="coda-box">
+        <div class="harp-note">Harfe: der letzte Siga-Ton, ein Flageolett-Harmonik — schwebend, kaum hörbar. Die Nay beendet mit einem langen Atemzug. Absolute Stille. Das Beit Midrash wartet.</div>
+        <div class="coda-whisper">
+          בִּרְכוֹת הַתּוֹרָה … עַל הַסַּף … שֶׁקֶט …<br>
+          <em>— כֶּתֶר בְּרִיאָה — נִפְתַּח —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ב — חָכְמָה דְּבְּרִיאָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section maqam-rast" id="song-chochma">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חָכְמָה</span>
+      ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חָכְמָה דְּבְּרִיאָה · Chochmah d'Beriah</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Offenheit · Empfangen · Prophetischer Empfang</span>
+      <span class="song-title-he">חִדּוּשׁ מִן הַשָּׁמַיִם</span>
+      <span class="song-title-de">Die Neuerung vom Himmel — Torah-Erkenntnis als göttlicher Empfang</span>
+    </div>
+    <div class="source-badge">
+      כּוּזָרִי, מַאֲמָר שְׁלִישִׁי §סה
+      <span class="source-badge-de">Yehuda HaLevi, Kuzari III:65 · Toledo, 12. Jh.</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — רָסְט פָּתוּחַ, כְּשֶׁמֶשׁ עוֹלָה]</div>
+      <div class="harp-note">Harfe: Rast-Arpeggios, warm und offen — wie Morgenlicht, das sich auf der Wasseroberfläche ausbreitet. mf. Der Rast-Maqam hat eine einladende, offene Qualität: er empfängt, er fordert nicht. Der Sänger öffnet mit einem gehaltenen אֲדֹנָי — wie jemand, der eine Tür öffnet und das Licht hineinlässt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — חָכְמָה —</span>
+          <span class="line">מִמַּעַל — יוֹרֶדֶת,</span>
+          <span class="line">חִדּוּשׁ — שָׁלוּחַ — מִן הַשָּׁמַיִם —</span>
+          <span class="line">חָכְמָה דְּבְּרִיאָה — מְקַבֶּלֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Weisheit —</span>
+          <span class="line">von oben — steigt sie herab,</span>
+          <span class="line">die Neuerung — gesandt — vom Himmel —</span>
+          <span class="line">Chochmah d'Beriah — empfängt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — יְהוּדָה הַלֵּוִי — כּוּזָרִי שְׁלִישִׁי §סה]</div>
+      <div class="harp-note">Harfe: Rast-Arpeggio, warm, mf. Yehuda HaLevi: wenn ein Torah-Gelehrter einen echten Chidush ableitet, empfängt er ihn von oben — wie ein kleines Aufleuchten der Prophezeiung. Die Rast-Wärme trägt diese Idee: Empfangen ist kein Passivum — es ist die höchste Aktivität.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּשֶׁמֵּחַדֵּשׁ — דְּבַר תּוֹרָה —</span>
+          <span class="line">לֹא מִדַּעְתּוֹ בִּלְבַד —</span>
+          <span class="line">כִּי יְהוּדָה הַלֵּוִי לִמֵּד:</span>
+          <span class="line">הַחִדּוּשׁ — מֵאֵת אֲדֹנָי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wenn einer eine Torah-Erkenntnis erneuert —</span>
+          <span class="line">ist sie nicht nur aus seinem eigenen Verstand —</span>
+          <span class="line">denn Yehuda HaLevi lehrte:</span>
+          <span class="line">die Neuerung — ist von Adonai.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — כְּנֶסֶת יִשְׂרָאֵל כְּמְקַבֶּלֶת]</div>
+      <div class="harp-note">Harfe: das Rast-Motiv, leicht intensiver — mf. Die Nay beginnt zu wandern: ein sanfter Wind über den Harfentönen. Der Sänger beschreibt das Geheimnis: die Gemeinde Israels fühlt prophetisch, auch ohne formale Prophetie.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּנֶסֶת יִשְׂרָאֵל — מְקַבֶּלֶת —</span>
+          <span class="line">כַּנָּבִיא — בְּלֹא מַרְאֶה —</span>
+          <span class="line">הַמְחַדֵּשׁ — חָשׁ בְּנַפְשׁוֹ:</span>
+          <span class="line">נָגַע הָעֶלְיוֹן — בְּמַחְשַׁבְתּוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Gemeinde Israels — empfängt —</span>
+          <span class="line">wie der Prophet — ohne Vision —</span>
+          <span class="line">der Erneuernde — fühlt in seiner Seele:</span>
+          <span class="line">der Erhabene hat — seinen Gedanken berührt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · forte · pp]</div>
+      <div class="refrain-box">
+        <div class="harp-note">Harfe: Rast-Vollakkord, mf. Die Nay-Flöte tritt voll ein — eine Melodieline, die sich um das Arpeggio windet. Beim zweiten Durchgang forte — das Empfangen ist aktiv, kein Warten. Beim dritten pp — das Licht zieht sich zurück und hinterlässt Wärme. Melisma auf „מֵאַיִן".</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חָכְמָה — מֵאַיִן תָּבֹא —</span>
+            <span class="line">מִמַּעַל — מִמַּעַל —</span>
+            <span class="line">הַחִדּוּשׁ — אֵינֶנּוּ שֶׁלְּךָ —</span>
+            <span class="line">הוּא — שָׁלוּחַ — בְּיָדְךָ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Weisheit — woher kommt sie —</span>
+            <span class="line">von oben — von oben —</span>
+            <span class="line">die Neuerung — gehört dir nicht —</span>
+            <span class="line">sie ist — gesandt — in deine Hand.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — תּוֹרָה שֶׁהָיְתָה מֵהַר סִינַי — כּוּזָרִי]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: nachdenklich, ein einzelner Rast-Ton, gehalten. Die Nay nur als Atemzug. Yehuda HaLevi: der Chidush war schon immer am Sinai — er wartet nur darauf, durch diesen Menschen in dieser Generation offenbart zu werden.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כּוּזָרִי שְׁלִישִׁי — §סה —</span>
+            <span class="line">לִמֵּד: מַה שֶּׁהֶחָכָם מְחַדֵּשׁ —</span>
+            <span class="line">הָיְתָה תּוֹרָה — מֵהַר סִינַי —</span>
+            <span class="line">וְרַק עַכְשָׁו — עֵת — לְגַלּוֹתָהּ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kuzari, dritter Teil — §65 —</span>
+            <span class="line">lehrte: was der Gelehrte erneuert —</span>
+            <span class="line">war Torah — vom Berg Sinai —</span>
+            <span class="line">und jetzt erst — ist die Zeit — es zu enthüllen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — רִשּׁוּם חִדּוּשִׁים כְּקַבָּלָה מִלְמַעְלָה</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung II — Nach jedem Torah-Studium den Chidush aufschreiben als Empfang von oben</div>
+        </div>
+        <div class="tikkun-src">כּוּזָרִי ג׳ §סה · יְהוּדָה הַלֵּוִי</div>
+      </div>
+      <div class="harp-note">Harfe: pp, Rast-Grundton, offen und warm. Die Stimme spricht die Übung langsam — wie jemand, der gerade eine Einsicht empfangen hat und sie festhält, bevor sie vergeht.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אַחַר כָּל לִמּוּד —</span>
+          <span class="line">שְׁהֵה רֶגַע בְּשֶׁקֶט —</span>
+          <span class="line">וּשְׁאַל אֶת עַצְמְךָ:</span>
+          <span class="line">מַה חִדֵּשְׁתִּי הַיּוֹם?</span>
+          <span class="line">כְּתֹב אֶת הַחִדּוּשׁ —</span>
+          <span class="line">לֹא כְּהֶישֵׂג שֶׁלְּךָ —</span>
+          <span class="line">כִּי אִם כְּקַבָּלָה: בָּרוּךְ שֶׁנָּתַן —</span>
+          <span class="line">כִּי חָכְמָה דְּבְּרִיאָה — בָּאָה — לְמִי שֶׁמְּחַכֶּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nach jedem Lernen —</span>
+          <span class="line">verweile einen Moment in Stille —</span>
+          <span class="line">und frage dich:</span>
+          <span class="line">Was habe ich heute erneuert?</span>
+          <span class="line">Schreibe den Chidush auf —</span>
+          <span class="line">nicht als deine Errungenschaft —</span>
+          <span class="line">sondern als Empfang: Gepriesen, der gab —</span>
+          <span class="line">denn Chochmah d'Beriah — kommt — zu dem, der wartet.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">חִדּוּשֵׁי תּוֹרָה בְּכָל יוֹם</span>
+        <span class="mitzva-tag">כּוּזָרִי ג׳ §סה</span>
+        <span class="mitzva-tag">תּוֹרָה מִסִּינַי — חִדּוּשׁ שֶׁמְּחַכֶּה</span>
+        <span class="mitzva-tag">הָעִנְיָן הָאֱלֹהִי — יְהוּדָה הַלֵּוִי</span>
+        <span class="mitzva-tag">מְסֹרֶת אַנְדָּלוּסְיָה</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        שִׁירֵי קֹדֶשׁ שֶׁל יְהוּדָה הַלֵּוִי — בְּמַקָּם רָסְט — Hymnen des Yehuda HaLevi (Shirei Kodesh) im Rast-Maqam, gesungen als Einleitung zu Torah-Unterricht im sephardischen Beit Midrash. Besonders in der marokkanischen Tradition: Rast als Maqam des offenen Empfangens — לֵב פָּתוּחַ — das offene Herz, das die Torah aus dem Himmel empfängt.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — forte, dann Stille — das Licht landet]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: voller Rast-Akkord forte — ein strahlendes Aufsteigen. Muschelhorn: ein langer Ruf. Dann sofort pp. Das Licht der Chochmah kommt — und geht. Aber es hinterlässt eine Spur.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חָכְמָה! — מֵאֵת אֲדֹנָי! — יוֹרֶדֶת!</span>
+            <span class="line">חִדּוּשׁ! — מֵהַר סִינַי! — כָּעֵת!</span>
+            <span class="line">קַבֵּל! — קַבֵּל! — וְכְתֹב!</span>
+            <span class="line">בְּרִיאָה! — חָכְמָה! — מְאִירָה!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Weisheit! — von Adonai! — steigt herab!</span>
+            <span class="line">Neuerung! — vom Berg Sinai! — jetzt!</span>
+            <span class="line">Empfange! — empfange! — und schreibe!</span>
+            <span class="line">Beriah! — Weisheit! — leuchtet!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — הָאוֹר שֶׁנִּשְׁאַר]</div>
+      <div class="coda-box">
+        <div class="harp-note">Harfe: Flageolett-Harmonik auf dem Rast-Grundton — ein schwebender, überirdischer Ton. Die Nay verlischt in einem langen Atemzug. Absolute Stille.</div>
+        <div class="coda-whisper">
+          חָכְמָה … מֵאַיִן … שֶׁקֶט …<br>
+          <em>— הָאוֹר שֶׁנִּשְׁאַר —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ג — בִּינָה דְּבְּרִיאָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section maqam-bayat" id="song-binah">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">בִּינָה</span>
+      ג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">בִּינָה דְּבְּרִיאָה · Binah d'Beriah</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָּאת — Geduld · Tiefe · Dialektik des Erkennens</span>
+      <span class="song-title-he">שַׁקְלָא וְטַרְיָא</span>
+      <span class="song-title-de">Frage und Antwort — Die heilige Dialektik des Talmud als Tanz der Sephirot</span>
+    </div>
+    <div class="source-badge">
+      חִידָא, פֶּתַח עֵינַיִם
+      <span class="source-badge-de">Rabbi Chaim Yosef David Azulai (Chida) · Hebron / Livorno, 18. Jh.</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — בַּיָּאת עָמֹק, כְּיוֹרֵד לִבְאֵר]</div>
+      <div class="harp-note">Harfe: Bayat-Arpeggios, langsam und tief, pp. Der Bayat-Maqam hat eine erdige, geduldige Qualität — er steigt tief, er eilt nicht. Das ist die Talmud-Dialektik: kein Eilen. Der Sänger öffnet mit einem langen אֲדֹנָי, fast wie ein Seufzer des Verstehens.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — בִּינָה —</span>
+          <span class="line">שְׁאֵלָה — וּתְשׁוּבָה —</span>
+          <span class="line">שַׁקְלָא — וְטַרְיָא — חַיִּים —</span>
+          <span class="line">בִּינָה דְּבְּרִיאָה — עוֹמֶקֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Verständnis —</span>
+          <span class="line">Frage — und Antwort —</span>
+          <span class="line">Shakla — und Tarya — Leben —</span>
+          <span class="line">Binah d'Beriah — vertieft sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — מַחֲלֹקֶת לְשֵׁם שָׁמַיִם — שְׁנֵי קוֹלוֹת אֱלֹהִים חַיִּים]</div>
+      <div class="harp-note">Harfe: das Bayat-Motiv, mf, mit einer charakteristischen Halbton-Spannung. Zwei Stimmen im Talmud-Disput — die Harfe stellt sie dar: ein Arpeggio von unten, eines von oben, die sich treffen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּשֶׁשְּׁנֵי חֲכָמִים — חוֹלְקִים —</span>
+          <span class="line">לְשֵׁם שָׁמַיִם — לֹא לִכְבוֹד —</span>
+          <span class="line">שְׁנֵיהֶם — דִּבְרֵי אֱלֹהִים חַיִּים —</span>
+          <span class="line">בִּינָה — מִתְרַחֶבֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wenn zwei Gelehrte — streiten —</span>
+          <span class="line">um des Himmels willen — nicht für die Ehre —</span>
+          <span class="line">sind beide — Worte des lebendigen Gottes —</span>
+          <span class="line">das Verstehen — weitet sich aus.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — הַחִידָא בְּפֶתַח עֵינַיִם — הַמִּסְתּוֹרִין שֶׁבַּשַּׁקְלָא]</div>
+      <div class="harp-note">Harfe: Bayat-Arpeggios, mf bis mf+. Die Chida (Rabbi Azulai) offenbart in seinem mystischen Talmud-Kommentar Petach Einayim: jede Machloket le-shem shamayim spiegelt den ewigen Tanz von Chesed und Gevurah in der Schöpfung wider.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַחִידָא בְּפֶתַח עֵינַיִם —</span>
+          <span class="line">גִּלָּה: כָּל שַׁקְלָא וְטַרְיָא —</span>
+          <span class="line">הִיא רִקּוּד — חֶסֶד וּגְבוּרָה —</span>
+          <span class="line">תּוֹרָה — שֶׁמִּתְיַחֶדֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Chida im Petach Einayim —</span>
+          <span class="line">offenbarte: jedes Shakla veTarya —</span>
+          <span class="line">ist ein Tanz — von Chesed und Gevurah —</span>
+          <span class="line">Torah — die sich vereinigt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · mf · pp]</div>
+      <div class="refrain-box">
+        <div class="harp-note">Harfe: Bayat-Akkord, voll. Nay-Flöte: eine fragende, steigende Linie — wie die Gemara-Intonation der Yeshiva-Welt. Beim zweiten Durchgang forte — die Wahrheit ist laut. Beim dritten pp — die Wahrheit ist still. Beide sind dieselbe. Melisma auf „אֱמֶת".</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שְׁאַל — וְתֵשָׁמַע — תְּשׁוּבָה,</span>
+            <span class="line">לֹא לַנְּצַחַ — כִּי אִם לָאֱמֶת,</span>
+            <span class="line">שַׁקְלָא — וְטַרְיָא — בִּינָה —</span>
+            <span class="line">אֲדֹנָי — בְּתוֹךְ — הַוִּיכּוּחַ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Frage — und du wirst — eine Antwort hören,</span>
+            <span class="line">nicht zum Siegen — sondern zur Wahrheit,</span>
+            <span class="line">Shakla — und Tarya — Binah —</span>
+            <span class="line">Adonai — mitten — in der Auseinandersetzung.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — אֶחָד בַּשּׁוֹרֶשׁ — כָּל אֱמֶת מֵאֵת אֲדֹנָי]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: ein einzelner gehaltener Bayat-Ton — fast wie ein Atemzug. Die Nay schweigt. Der Chida lehrt: was wie Streit aussieht, ist in seinem Wurzel Einheit. Die Harfe hält diesen Ton, bis er verschwindet.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַחִידָא כָּתַב — פֶּתַח עֵינַיִם —</span>
+            <span class="line">מַה שֶּׁנִּרְאֶה — כְּמַחֲלֹקֶת —</span>
+            <span class="line">הוּא אֶחָד — בַּשּׁוֹרֶשׁ —</span>
+            <span class="line">כִּי כָּל אֱמֶת — מֵאֵת אֲדֹנָי.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Chida schrieb — Petach Einayim —</span>
+            <span class="line">was wie ein Streit erscheint —</span>
+            <span class="line">ist Eines — in seiner Wurzel —</span>
+            <span class="line">denn jede Wahrheit — ist von Adonai.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — לִמּוּד גְּמָרָא כְּמֶדִיטַצְיָה — הַמַּחֲלֹקֶת כְּרִקּוּד</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung III — Talmud-Studium als Meditation — Die Machloket als Tanz von Chesed und Gevurah</div>
+        </div>
+        <div class="tikkun-src">חִידָא, פֶּתַח עֵינַיִם · מַסֶּכֶת שַׁבָּת</div>
+      </div>
+      <div class="harp-note">Harfe: pp, Bayat-Grundton, geduldig, tief. Die Stimme spricht die Übung langsam, als ob sie selbst mitten in einer Talmud-Diskussion sitzt und innehalten muss.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּכָל לִמּוּד גְּמָרָא —</span>
+          <span class="line">כְּשֶׁנִּתְקַל בְּמַחֲלֹקֶת —</span>
+          <span class="line">אַל תְּמַהֵר לְהַכְרִיעַ —</span>
+          <span class="line">שְׁהֵה עִם שְׁתֵּי הַדֵּעוֹת:</span>
+          <span class="line">שְׁנֵיהֶם — דִּבְרֵי אֱלֹהִים חַיִּים —</span>
+          <span class="line">שְׁנֵיהֶם — מְגַלִּים — פֶּן אֶחָד —</span>
+          <span class="line">כִּי בִּינָה דְּבְּרִיאָה — נִפְתַּחַת —</span>
+          <span class="line">לְמִי שֶׁשּׁוֹמֵעַ — שְׁנֵי קוֹלוֹת — כְּאֶחָד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Bei jedem Talmud-Studium —</span>
+          <span class="line">wenn du auf eine Machloket stößt —</span>
+          <span class="line">eile nicht zur Entscheidung —</span>
+          <span class="line">verweile bei beiden Meinungen:</span>
+          <span class="line">beide sind — Worte des lebendigen Gottes —</span>
+          <span class="line">beide enthüllen — eine Seite —</span>
+          <span class="line">denn Binah d'Beriah — öffnet sich —</span>
+          <span class="line">für den, der — beide Stimmen — als eine hört.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">לִמּוּד גְּמָרָא יוֹמִי</span>
+        <span class="mitzva-tag">מַחֲלֹקֶת לְשֵׁם שָׁמַיִם</span>
+        <span class="mitzva-tag">שְׁנֵיהֶם דִּבְרֵי אֱלֹהִים חַיִּים</span>
+        <span class="mitzva-tag">פֶּתַח עֵינַיִם — חִידָא</span>
+        <span class="mitzva-tag">חֶסֶד וּגְבוּרָה בַּשַּׁקְלָא</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        פִּיּוּטֵי חִידָא — שִׁירִים שֶׁחִיבֵּר הָרַב חַיִּים יוֹסֵף דָּוִד אֲזוּלַאי לִכְבוֹד תּוֹרָה — בְּמַקָּם בַּיָּאת — im Maqam Bayat, gesungen bei Siyum-Feiern (Abschluss eines Talmud-Traktats) in der jemenitischen und marokkanischen Tradition. Der Bayat-Maqam begleitet in der sephardischen Praxis Texte, die von Geduld, Tiefe und langem Studium handeln.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — שְׁנֵי קוֹלוֹת — אֶחָד בְּתוֹךְ הָאַחֵר]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: Bayat-Forte — zwei Arpeggios gleichzeitig, von unten und oben, die sich in der Mitte treffen. Muschelhorn. Dann Stille. Die beiden Stimmen sind jetzt eine.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">בִּינָה! — בְּתוֹךְ — הַשַּׁקְלָא!</span>
+            <span class="line">אֱמֶת! — בְּתוֹךְ — הַטַּרְיָא!</span>
+            <span class="line">שְׁנֵיהֶם! — אֱלֹהִים חַיִּים! — שְׁנֵיהֶם!</span>
+            <span class="line">בִּינָה דְּבְּרִיאָה! — מְדַבֶּרֶת!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Binah! — mitten — im Shakla!</span>
+            <span class="line">Wahrheit! — mitten — im Tarya!</span>
+            <span class="line">Beide! — lebendiger Gott! — beide!</span>
+            <span class="line">Binah d'Beriah! — spricht!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — שֶׁקֶט שֶׁאַחַר הַוִּיכּוּחַ]</div>
+      <div class="coda-box">
+        <div class="harp-note">Harfe: zwei Flageolett-Töne, einer hoch, einer tief — beide gleichzeitig, pp. Sie klingen aus bis zur vollständigen Stille. Das ist der Moment nach dem Talmud-Studium: erschöpft und erfüllt zugleich.</div>
+        <div class="coda-whisper">
+          שַׁקְלָא … וְטַרְיָא … שֶׁקֶט …<br>
+          <em>— הָאֱמֶת — אַחַת —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ד — חֶסֶד דְּבְּרִיאָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section maqam-rast" id="song-chesed">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חֶסֶד דְּבְּרִיאָה · Chesed d'Beriah</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רָסְט — Offenheit · Güte · Torah als Geschenk an alle</span>
+      <span class="song-title-he">תּוֹרָה לַכֹּל</span>
+      <span class="song-title-de">Torah für alle — Die intellektuelle Güte als Weitergabe des Lichts</span>
+    </div>
+    <div class="source-badge">
+      רַשְׁבָּ"א, שְׁאֵלוֹת וּתְשׁוּבוֹת ח"א
+      <span class="source-badge-de">Rashba, Responsen Vol. 1 · Rabbi Shlomo ibn Aderet, Barcelona, 13. Jh.</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — רָסְט פָּתוּחַ, כְּמַעְיָן שֶׁמֵּימָיו זוֹרְמִים]</div>
+      <div class="harp-note">Harfe: Rast-Arpeggios, warm und strömend — wie eine Quelle, die fließt, ohne Anstrengung. mf. Der Rast-Maqam für Chesed ist ideal: offen, einladend, kein Widerstand. Die Nay gibt ein sanftes erstes Aufatmen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — חֶסֶד —</span>
+          <span class="line">תּוֹרָה — לַכֹּל —</span>
+          <span class="line">פְּתַח שַׁעַר — בְּרִיאָה —</span>
+          <span class="line">חֶסֶד דְּבְּרִיאָה — שׁוֹפֵעַ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Güte —</span>
+          <span class="line">Torah — für alle —</span>
+          <span class="line">öffne das Tor — der Beriah —</span>
+          <span class="line">Chesed d'Beriah — strömt über.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — אַל תֶּאֱסֹף — הַתּוֹרָה כְּמָטָר]</div>
+      <div class="harp-note">Harfe: Rast, mf, strömend und beständig. Das Bild des Regens auf trockene Erde — die Torah ist nicht zum Besitz, sie ist zum Strömen. Kein Festhalten, kein Einsperren.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אַל תֶּאֱסֹף — תּוֹרָתְךָ —</span>
+          <span class="line">בְּחֵיקְךָ בִּלְבַד —</span>
+          <span class="line">כִּי תּוֹרָה — מַחֲיָה נְשָׁמוֹת —</span>
+          <span class="line">כְּמָטָר — לַיַּבָּשָׁה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Halte deine Torah nicht —</span>
+          <span class="line">nur in deinem Schoß —</span>
+          <span class="line">denn Torah — belebt Seelen —</span>
+          <span class="line">wie Regen — auf trockene Erde.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — הָרַשְׁבָּ"א — כָּל אֶחָד בְּיִשְׂרָאֵל]</div>
+      <div class="harp-note">Harfe: das Rast-Motiv, etwas breiter — wie sich der Regen in alle Richtungen ausbreitet. mf. Der Rashba aus Barcelona lehrt: jeder Jude hat einen einzigartigen Anteil an der Torah, den nur er enthüllen kann. Das ist nicht Gleichmacherei — das ist Chesed: jeder bringt sein Licht.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַשְׁבָּ"א כָּתַב — בְּתְּשׁוּבוֹת —</span>
+          <span class="line">תּוֹרָה לַכֹּל — לֹא לָאֶחָד —</span>
+          <span class="line">וּמִי שֶׁמְּלַמֵּד — אֶת אֲחִיו —</span>
+          <span class="line">זֹכֶה — לְאוֹר — הָעֶלְיוֹן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Rashba schrieb — in seinen Responsen —</span>
+          <span class="line">Torah für alle — nicht für einen —</span>
+          <span class="line">und wer seinen Bruder lehrt —</span>
+          <span class="line">verdient — das Licht — des Erhabenen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · forte · pp]</div>
+      <div class="refrain-box">
+        <div class="harp-note">Harfe: Rast-Vollakkord, mf. Nay-Flöte: eine fließende, einladende Melodielinie. Beim zweiten Durchgang forte — das Lernen wird Lehrend: die Bewegung dreht sich um. Beim dritten pp — die Torah sinkt in die Stille und wartet auf den nächsten, der empfängt. Melisma auf „שׁוֹפֵעַ".</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">לַמֵּד — לַמֵּד — אֶת אָחִיךָ,</span>
+            <span class="line">תּוֹרָה — בְּחֶסֶד — תֵּצֵא,</span>
+            <span class="line">שֶׁפַע — הַבְּרִיאָה — שׁוֹפֵעַ —</span>
+            <span class="line">אֲדֹנָי — בְּתוֹךְ — הַתַּלְמִיד.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Lehre — lehre — deinen Bruder,</span>
+            <span class="line">Torah — in Güte — geht heraus,</span>
+            <span class="line">die Fülle — der Beriah — strömt über —</span>
+            <span class="line">Adonai — mitten — im Schüler.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — חֵלֶק שֶׁלְּךָ — רַק אַתָּה יָכוֹל לְגַלּוֹת]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: Rast, nachdenklich, ein einzelner warmer Ton. Der Rashba: es gibt einen Anteil der Torah, den nur dieser Mensch enthüllen kann. Wenn er ihn nicht lehrt, bleibt er für immer verborgen. Die Nay haucht leise.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַשְׁבָּ"א מִבַּרְצֶלוֹנָה —</span>
+            <span class="line">לִמֵּד: כָּל אֶחָד בְּיִשְׂרָאֵל —</span>
+            <span class="line">יֵשׁ לוֹ חֵלֶק — בַּתּוֹרָה —</span>
+            <span class="line">שֶׁרַק הוּא — יָכוֹל לְגַלּוֹת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Rashba aus Barcelona —</span>
+            <span class="line">lehrte: jeder Mensch in Israel —</span>
+            <span class="line">hat einen Anteil — an der Torah —</span>
+            <span class="line">den nur er — enthüllen kann.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — לִמֵּד תּוֹרָה לְאֶחָד שֶׁאֵינֶנּוּ יוֹדֵעַ</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung IV — Lehre diese Woche Torah einem Menschen, der sie nicht kennt</div>
+        </div>
+        <div class="tikkun-src">רַשְׁבָּ"א, שְׁאֵלוֹת וּתְשׁוּבוֹת ח"א · מִשְׁנַת אָבוֹת ד׳ א׳</div>
+      </div>
+      <div class="harp-note">Harfe: pp, Rast-Grundton, warm und einladend. Die Stimme spricht die Tikkun-Anweisung wie ein Lehrer, der gerade selbst lernt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בְּשַׁבָּת הַזֹּאת — אוֹ בְּשָׁבוּעַ הַקָּרוֹב —</span>
+          <span class="line">לַמֵּד דְּבַר תּוֹרָה אֶחָד —</span>
+          <span class="line">לְיֶלֶד — לְאוֹהֵב — לְאָחִיךָ —</span>
+          <span class="line">לְמִי שֶׁעוֹד לֹא שָׁמַע אוֹתוֹ:</span>
+          <span class="line">לֹא לְהוֹכִיחַ — לֹא לְנַצֵּחַ —</span>
+          <span class="line">אֶלָּא בְּחֶסֶד — כְּמָטָר עַל שֹׁרֶשׁ צָמֵא —</span>
+          <span class="line">כִּי חֶסֶד דְּבְּרִיאָה — שׁוֹפֵעַ —</span>
+          <span class="line">דַּוְקָא — בְּיָדֵינוּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">An diesem Schabbat — oder in der kommenden Woche —</span>
+          <span class="line">lehre eine einzige Sache Torah —</span>
+          <span class="line">einem Kind — einem Freund — deinem Bruder —</span>
+          <span class="line">jemandem, der sie noch nicht gehört hat:</span>
+          <span class="line">nicht um zu tadeln — nicht um zu siegen —</span>
+          <span class="line">sondern in Güte — wie Regen auf eine durstige Wurzel —</span>
+          <span class="line">denn Chesed d'Beriah — strömt —</span>
+          <span class="line">genau — durch unsere Hände.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">תַּלְמוּד תּוֹרָה לַאֲחֵרִים</span>
+        <span class="mitzva-tag">רַשְׁבָּ"א — תּוֹרָה לַכֹּל</span>
+        <span class="mitzva-tag">כָּל יִשְׂרָאֵל יֵשׁ לוֹ חֵלֶק</span>
+        <span class="mitzva-tag">לִמֵּד בְּחֶסֶד — לֹא בְּשִׁלְטוֹן</span>
+        <span class="mitzva-tag">מְסֹרֶת בַּרְצֶלוֹנָה / סְפָרַד</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        שִׁירֵי כָּבוֹד תּוֹרָה בְּנוּסַח סְפָרַד — בְּמַקָּם רָסְט — Pijutim zu Ehren der Torah im Rast-Maqam, gesungen bei der Hakafah (Torah-Hochzeit) und Simchat Torah in der sephardischen Tradition. Im marokkanischen Ritus: der Moment, in dem die Torah aus dem Aron HaKodesh gehoben wird, wird mit einem Rast-Nigunim begleitet — das offene Empfangen als Geste des Chesed. Der Rashba's Prinzip: jeder trägt die Torah.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — הַשֶּׁפַע — זוֹרֵם — בְּיָדֵינוּ]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: Rast forte, ein Wasserfall von Arpeggios — strömend, nicht aufhörend. Muschelhorn. Dann pp — der Strom fließt weiter, aber leise. Chesed hört nicht auf.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">תּוֹרָה! — לַכֹּל! — תּוֹרָה!</span>
+            <span class="line">חֶסֶד! — שׁוֹפֵעַ! — מִן הַשָּׁמַיִם!</span>
+            <span class="line">לַמֵּד! — לַמֵּד! — אַל תַּחְשֶׁה!</span>
+            <span class="line">חֶסֶד דְּבְּרִיאָה! — פּוֹתֵחַ! — שְׁעָרִים!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Torah! — für alle! — Torah!</span>
+            <span class="line">Güte! — strömt über! — vom Himmel!</span>
+            <span class="line">Lehre! — lehre! — schweige nicht!</span>
+            <span class="line">Chesed d'Beriah! — öffnet! — Tore!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — מַעְיָן שֶׁאֵינֶנּוּ פוֹסֵק]</div>
+      <div class="coda-box">
+        <div class="harp-note">Harfe: Rast-Flageolett, sehr hoch, ein kleiner schwebender Ton. Die Nay macht einen letzten, sehr langen, sanft ausklingenden Ton. Das ist das Lied des Lehrenden: er hört auf zu singen, aber das Lernen geht weiter.</div>
+        <div class="coda-whisper">
+          תּוֹרָה … לַכֹּל … שֶׁקֶט …<br>
+          <em>— הַחֶסֶד — שׁוֹקֵט —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     שִׁיר ה — גְּבוּרָה דְּבְּרִיאָה
+     ══════════════════════════════════════════════════════════ -->
+<section class="song-section maqam-hijaz" id="song-gevura">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">גְּבוּרָה</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">גְּבוּרָה דְּבְּרִיאָה · Gevurah d'Beriah</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִגָּ'אז — Heilige Spannung · Mut · Wahrheit ohne Angst</span>
+      <span class="song-title-he">פְּסַק הֲלָכָה</span>
+      <span class="song-title-de">Die Halachaentscheidung — Intellektuelle Stärke als heilige Pflicht</span>
+    </div>
+    <div class="source-badge">
+      רַמְבַּ"ם, הִלְכוֹת דֵּעוֹת א׳:ד׳
+      <span class="source-badge-de">Rambam, Hilchot De'ot 1:4 · Rabbi Moshe ben Maimon, Spanien / Ägypten, 12. Jh.</span>
+    </div>
+  </div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">[פְּתִיחָה — אֲדֹנָי — חִגָּ'אז טִיכּוּן, כְּחֶרֶב שֶׁשּׁוֹמֶרֶת]</div>
+      <div class="harp-note">Harfe: Hijaz-Arpeggios — der charakteristische Tritonus-Sprung des Hijaz erzeugt sofort Spannung. pp bis mf. Diese Spannung ist keine Angst — sie ist heilige Wachheit. Der Sänger öffnet mit אֲדֹנָי — ein Atem des Mutes, nicht der Furcht. Die Nay ist stumm. Das Muschelhorn wartet.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי — גְּבוּרָה —</span>
+          <span class="line">אַל תִּירָא — מִפְּנֵי אִישׁ —</span>
+          <span class="line">גְּבוּרָה דְּבְּרִיאָה — עוֹמֶדֶת —</span>
+          <span class="line">בְּחָכְמָה — בְּאוֹר הָאֱמֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai — Stärke —</span>
+          <span class="line">fürchte dich nicht — vor einem Menschen —</span>
+          <span class="line">Gevurah d'Beriah — steht fest —</span>
+          <span class="line">in Weisheit — im Licht der Wahrheit.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית א — הָרַמְבַּ"ם — הִלְכוֹת דֵּעוֹת א׳:ד׳ — דֶּרֶךְ הָאֶמְצַע]</div>
+      <div class="harp-note">Harfe: Hijaz-Arpeggios, mf, mit der typischen Schärfe des Maqam. Der Rambam beschreibt in Hilchot De'ot den Mittelweg — aber der Mittelweg bedeutet nicht Gleichgültigkeit. Es bedeutet Stärke ohne Grausamkeit, Mut ohne Rücksichtslosigkeit.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָרַמְבַּ"ם כָּתַב — בְּהִלְכוֹת דֵּעוֹת —</span>
+          <span class="line">אַל יִהְיֶה הָאָדָם — רַךְ כַּמַּיִם —</span>
+          <span class="line">כִּי הַתּוֹרָה — דּוֹרֶשֶׁת אֹמֶץ —</span>
+          <span class="line">לִפְסֹק — עַל פִּי הָאֱמֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Rambam schrieb — in Hilchot De'ot —</span>
+          <span class="line">ein Mensch soll nicht — weich wie Wasser sein —</span>
+          <span class="line">denn die Torah — fordert Mut —</span>
+          <span class="line">zu entscheiden — nach der Wahrheit.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[בֵּית ב — פְּסַק מִפַּחַד — אֵינֶנּוּ פְּסַק]</div>
+      <div class="harp-note">Harfe: Hijaz-Spannung, mf bis mf+. Die Warnung ist scharf, wie der Maqam selbst: Wer aus Angst vor dem Gesicht des Menschen entscheidet, entscheidet nicht Halacha — er entscheidet Fleisch.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מִי שֶׁפּוֹסֵק — בַּחֲרָדָה —</span>
+          <span class="line">לֹא מִן הָאֱמֶת — כִּי אִם מִן הַפַּחַד —</span>
+          <span class="line">זֶה אֵינֶנּוּ פְּסַק הֲלָכָה —</span>
+          <span class="line">זֶה — כְּנִיעָה — לַבָּשָׂר.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wer entscheidet — in Angst —</span>
+          <span class="line">nicht aus der Wahrheit — sondern aus der Furcht —</span>
+          <span class="line">der fällt keine Halachaentscheidung —</span>
+          <span class="line">das ist — Unterwerfung — unter das Fleisch.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · pp · forte · pp]</div>
+      <div class="refrain-box">
+        <div class="harp-note">Harfe: Hijaz-Vollakkord. Das erste Mal pp — die Wahrheit flüstert zuerst. Das zweite Mal forte — sie muss sprechen. Das dritte Mal pp — der Mutige muss auch wissen, wann er schweigt. Die Nay tritt jetzt ein: ein klagender, prophetischer Windton.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">פְּסֹק! — בְּאֹמֶץ! — פְּסֹק!</span>
+            <span class="line">אַל תִּירָא — מִן הָאָדָם,</span>
+            <span class="line">גְּבוּרָה דְּבְּרִיאָה — עוֹמֶדֶת —</span>
+            <span class="line">אֲדֹנָי — אֱלֹהֵי הָאֱמֶת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Entscheide! — mit Mut! — entscheide!</span>
+            <span class="line">Fürchte dich nicht — vor dem Menschen,</span>
+            <span class="line">Gevurah d'Beriah — steht fest —</span>
+            <span class="line">Adonai — Gott der Wahrheit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[גֶּשֶׁר — הַדֶּרֶךְ הָאֶמְצָעִית — לֹא קִיצוֹן — עַמּוּד הַתָּוֶךְ]</div>
+      <div class="bridge-box">
+        <div class="harp-note">Harfe: ein einzelner Hijaz-Ton, nachdenklich gehalten. Die Nay sehr leise. Der Rambam: die Mitte ist keine Schwäche — sie ist die schwierigste Haltung. Weder Feigling noch Tyrann: Stärke im Dienst der Wahrheit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הָרַמְבַּ"ם בְּהִלְכוֹת דֵּעוֹת —</span>
+            <span class="line">א׳ ד׳ — הַדֶּרֶךְ הָאֶמְצָעִית —</span>
+            <span class="line">לֹא קִיצוֹן — לֹא שַׁתְּקָן —</span>
+            <span class="line">כִּי אִם — עַמּוּד — הַתָּוֶךְ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Der Rambam in Hilchot De'ot —</span>
+            <span class="line">1:4 — der mittlere Weg —</span>
+            <span class="line">kein Extremist — kein Schweiger —</span>
+            <span class="line">sondern — die Säule — der Mitte.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIKKUN -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — פְּסַק הֲלָכָה בְּאֹמֶץ — אַל תִּדְחֶה מִפְּנֵי פָּנִים</div>
+          <div class="tikkun-title-de">Die Tikkun-Handlung V — Halachaentscheidung mit Mut — Nicht aufschieben aus Angst vor dem Angesicht eines Menschen</div>
+        </div>
+        <div class="tikkun-src">רַמְבַּ"ם, הִלְכוֹת דֵּעוֹת א׳:ד׳ · שֻׁלְחָן עָרוּךְ — יוֹרֶה דֵּעָה רמב:א</div>
+      </div>
+      <div class="harp-note">Harfe: pp, Hijaz-Grundton, ruhig aber gespannt. Die Stimme spricht die Tikkun-Anweisung wie ein Dajan, der gerade ein schwieriges Responsum unterschrieben hat.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">כְּשֶׁשּׁוֹאֲלִים אוֹתְךָ — שְׁאֵלָה בַּהֲלָכָה —</span>
+          <span class="line">לֹא תְּאַחֵר — מִפְּנֵי פְּנֵי אָדָם,</span>
+          <span class="line">לְמַד — הֶיטֵב — אֶת הַשְּׁאֵלָה,</span>
+          <span class="line">שְׁאַל — אִם צָרִיךְ — אֶת רַבְּךָ,</span>
+          <span class="line">וּפְסֹק — לְפִי אֱמֶת הַתּוֹרָה —</span>
+          <span class="line">לֹא לְפִי מָה שֶׁיְּרַצּוּ — לִשְׁמֹעַ —</span>
+          <span class="line">כִּי גְּבוּרָה דְּבְּרִיאָה — עוֹמֶדֶת —</span>
+          <span class="line">בִּידֵי — מִי שֶׁאֵינֶנּוּ — מִתְכּוֹפֵף.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wenn man dich fragt — eine Halachafrage —</span>
+          <span class="line">verzögere nicht — wegen des Angesichts eines Menschen,</span>
+          <span class="line">lerne — gründlich — die Frage,</span>
+          <span class="line">frage — wenn nötig — deinen Lehrer,</span>
+          <span class="line">und entscheide — nach der Wahrheit der Torah —</span>
+          <span class="line">nicht nach dem, was — sie hören wollen —</span>
+          <span class="line">denn Gevurah d'Beriah — steht fest —</span>
+          <span class="line">in den Händen — dessen, der sich — nicht beugt.</span>
+        </div>
+      </div>
+      <div class="mitzva-tags">
+        <span class="mitzva-tag">פְּסַק הֲלָכָה בְּאֹמֶץ</span>
+        <span class="mitzva-tag">הִלְכוֹת דֵּעוֹת א׳:ד׳</span>
+        <span class="mitzva-tag">לֹא תָגוּרוּ מִפְּנֵי אִישׁ</span>
+        <span class="mitzva-tag">דֶּרֶךְ הָאֶמְצַע — רַמְבַּ"ם</span>
+        <span class="mitzva-tag">מְסֹרֶת סְפָרַד — פֹּסְקִים</span>
+      </div>
+      <div class="piyut-ref">
+        <span class="piyut-ref-label">פִּיּוּט — Sephardischer Piyut-Bezug</span>
+        פִּיּוּטִים בְּמַקָּם חִגָּ'אז לְזִכְרוֹן הַפּוֹסְקִים הַגְּדוֹלִים — Der Hijaz-Maqam begleitet in der sephardischen Tradition Texte, die von heiliger Spannung und prophetischer Stärke handeln. Im jemenitischen Ritus: Pijutim zu Ehren der Dayanim und Poskim, die mutig urteilten — gesungen am Yom Kippur Katan (kleiner Versöhnungstag) als Vorbereitung auf mutige Buße. Der Rambam gilt im sephardischen Kanon als der Posek schlechthin: sein Mittelweg ist kein Kompromiss, sondern göttliche Präzision.
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[שִׁיא — הָאֱמֶת — פּוֹרֶצֶת]</div>
+      <div class="climax-box">
+        <div class="harp-note">Harfe: Hijaz forte — der volle Akkord mit dem charakteristischen Tritonus. Muschelhorn: lang und laut — ein prophetischer Ruf, der nicht fragt, sondern verkündet. Dann absolute Stille. Gevurah d'Beriah hat gesprochen.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֱמֶת! — מֵאֵת אֲדֹנָי! — אֱמֶת!</span>
+            <span class="line">פְּסֹק! — בְּאֹמֶץ! — פְּסֹק!</span>
+            <span class="line">גְּבוּרָה! — בְּרִיאָה! — עוֹמֶדֶת!</span>
+            <span class="line">אַל תִּירָא! — אֲדֹנָי — עִמְּךָ!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Wahrheit! — von Adonai! — Wahrheit!</span>
+            <span class="line">Entscheide! — mit Mut! — entscheide!</span>
+            <span class="line">Gevurah! — Beriah! — steht fest!</span>
+            <span class="line">Fürchte dich nicht! — Adonai — ist mit dir!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">[קוֹדָה — שֶׁקֶט שֶׁאַחַר הַגְּבוּרָה]</div>
+      <div class="coda-box">
+        <div class="harp-note">Harfe: ein einzelner Hijaz-Ton, langsam verlöschend — die Stärke, die nicht brüllt, sondern besteht. Die Nay: ein letzter, langer, ruhiger Atem. Das ist das Lied des Posek: er hat entschieden. Jetzt schweigt er.</div>
+        <div class="coda-whisper">
+          פְּסַק הֲלָכָה … שֶׁקֶט …<br>
+          <em>— הָאֱמֶת — עוֹמֶדֶת —</em><br>
+          … <strong>אָמֵן</strong> …
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<div class="ornament" style="margin-top:80px;"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<footer class="footer">
+  <div class="footer-world">בְּרִיאָה — שִׁירִים א–ה · נִשְׁלַם</div>
+  <div class="footer-chain">
+    עֲשִׂיָּה · יְצִירָה · <strong>בְּרִיאָה</strong> · אֲצִילוּת
+  </div>
+  <p class="footer-de">
+    Fünf Lieder der Welt des Intellekts sind vollendet:
+    <strong>Keter</strong> — die Demut vor der Torah (Ramban) ·
+    <strong>Chochmah</strong> — der Chidush als göttlicher Empfang (Yehuda HaLevi) ·
+    <strong>Binah</strong> — die Dialektik als Tanz der Sephirot (Chida) ·
+    <strong>Chesed</strong> — die Torah als Geschenk für alle (Rashba) ·
+    <strong>Gevurah</strong> — der Mut zur Wahrheit (Rambam).
+    <br><br>
+    Die fünf verbleibenden Lieder (VI–X: Tiferet bis Malchut d'Beriah) führen
+    den Aufstieg fort — bis zu jenem Moment, in dem Malchut d'Beriah
+    zum Keter d'Atzilut wird: <em>„וּמַלְכוּת בְּרִיאָה הִיא כֶּתֶר אֲצִילוּת —
+    הַשֵּׂכֶל הַשָּׁלֵם — מְקַבֵּל אֶת הַחֶסֶד."</em> (Rashash, Nahar Shalom, Sha'ar Atzilut)
+  </p>
+  <a class="footer-next" href="Beriah_Lieder_VI-X.html">שִׁירִים ו–י — תִּפְאֶרֶת עַד מַלְכוּת →</a>
+</footer>
+
+</div><!-- /wrap -->
+
+
+</body></html>
