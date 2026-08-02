@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מַטֶּה וְצִנְצֶנֶת — שִׁירִים י״א–י״ב · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #9C7048;
+  --acc-lt:      #E0B888;
+  --acc-vlt:     #F4E0C8;
+  --acc-dim:     #2A1A0C;
+  --acc-bdr:     rgba(156,112,72,.34);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #E8B0A0;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(156,112,72,.20) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(190,140,110,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(190,140,110,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(156,112,72,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(156,112,72,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(244,224,200,.72) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(244,224,200,.72) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(224,184,136,.44) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(224,184,136,.44) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(224,184,136,.44) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(244,224,200,.72) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(224,184,136,.44) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(224,184,136,.44) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(224,184,136,.44) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(244,224,200,.50), 0 0 120px rgba(156,112,72,.28), 0 0 220px rgba(156,112,72,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(156,112,72,.20) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(156,112,72,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(156,112,72,.09),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(156,112,72,.09),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(156,112,72,.09),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">מַטֶּה וְצִנְצֶנֶת</span>
+    <span class="nav-brand-sub">Matteh · Tzintzenet · י״א–י״ב</span>
+  </div>
+  <a class="nav-link" href="#song-matteh"><span class="nav-he"><span class="nav-num">י״א</span>מַטֵּה אַהֲרֹן</span><span class="nav-de">Der Stab Aarons</span></a>
+  <a class="nav-link" href="#song-tzintzenet"><span class="nav-he"><span class="nav-num">י״ב</span>צִנְצֶנֶת הַמָּן</span><span class="nav-de">Das Manngefäß</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">מַה שֶּׁנִּגְנַז עִם הָאָרוֹן · הַמָּסוֹרֶת הַסְּפָרַדִּית · שְׁנֵי שִׁירִים</p>
+  <h1 class="page-title-he">מַטֶּה וְצִנְצֶנֶת</h1>
+  <p class="page-title-de">Stab und Gefäß — Lieder XI–XII · Was mit der Lade verborgen wurde</p>
+  <p class="page-desc">
+    Zwei Lieder über die beiden Zeichen, die neben der Lade lagen und mit ihr verborgen wurden:
+    <strong>מַטֵּה אַהֲרֹן</strong>, das tote Holz, das über Nacht Blüten und Mandeln trug, und
+    <strong>צִנְצֶנֶת הַמָּן</strong>, das Gefäß mit einem Omer Manna — <em>לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם</em>.
+    Das eine bezeugt die Erwählung, das andere die tägliche Versorgung.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-active">מַטֵּה אַהֲרֹן</span>
+    <span class="wc-sep">·</span>
+    <span class="wc-item wc-active">צִנְצֶנֶת הַמָּן</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">נִגְנְזוּ עִם הָאָרוֹן</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-matteh">
+    <span class="sn-num">י״א</span>
+    <span class="sn-he">מַטֵּה אַהֲרֹן</span>
+    <span class="sn-de">Der Stab Aarons</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-tzintzenet">
+    <span class="sn-num">י״ב</span>
+    <span class="sn-he">צִנְצֶנֶת הַמָּן</span>
+    <span class="sn-de">Das Manngefäß</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י״א — MATTEH AHARON · NETZACH · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-matteh">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">מַטֶּה</span>
+      י״א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">נֶצַח דִּבְרִיאָה · Netzach d'Beriah</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַג׳ַם — Erwählung · das Blühen des toten Holzes</span>
+      <span class="song-title-he">מַטֵּה אַהֲרֹן — הַמַּטֶּה שֶׁפָּרַח</span>
+      <span class="song-title-de">Der Stab Aarons — Der blühende Stab</span>
+    </div>
+    <div class="source-badge">
+      בַּמִּדְבָּר י״ז:ט״ז–כ״ו · יוֹמָא נ״ב · רַמְבַּ״ם, הִלְכוֹת בֵּית הַבְּחִירָה ד׳
+      <span class="source-badge-de">Bamidbar 17:16–26 (masoret. Zählung) · Joma 52b · Rambam, Hilchot Beit HaBechirah 4 · Rashash, Nahar Schalom · Ben Isch Chai, Ben Jehojada</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam · עַג׳ַם</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">נֶצַח</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Kinnor · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הַמַּטֶּה שֶׁפָּרַח]</div>
+    <p class="instr">
+      Harp (כִּנּוֹר) beginnt kraftvoll und siegreich im Maqam Ajam — die triumphale Qualität
+      passt zu Netzach, der ewigen Erwählung. Die Stimme singt von dem toten Holzstab, der
+      über Nacht Blüten und Mandeln hervorbrachte.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — מַטֵּה אַהֲרֹן עֵץ יָבֵשׁ,</span>
+        <span class="line">וּבְלַיְלָה אֶחָד — פָּרַח פֶּרַח וְהוֹצִיא צִיץ,</span>
+        <span class="line">וַיִּגְמֹל שְׁקֵדִים — אוֹת נֶצַח הַכְּהֻנָּה,</span>
+        <span class="line">נֶצַח — הַבְּחִירָה שֶׁאֵינָהּ חוֹזֶרֶת.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — der Stab Aarons, trockenes Holz,</span>
+        <span class="line">und in einer Nacht — blühte er und trieb Blüten,</span>
+        <span class="line">und trug Mandeln — Zeichen des ewigen Priestertums,</span>
+        <span class="line">Netzach — die Wahl, die nicht zurückgenommen wird.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הַנֵּס שֶׁל הַמַּטֶּה]</div>
+    <p class="instr">
+      Die Harfe spielt eine aufsteigende Melodie — wie der Stab, der aus Totem Leben
+      hervorbringt. Die Verse schildern das Wunder: Zwölf Stäbe wurden hingelegt, nur
+      einer blühte.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">שְׁנֵים עָשָׂר מַטּוֹת — לִפְנֵי אֲדֹנָי הֻנָּחוּ,</span>
+        <span class="line">כָּל שֵׁבֶט — מַטֵּהוּ שָׁם,</span>
+        <span class="line">וּבַבֹּקֶר — רַק אֶחָד פָּרַח,</span>
+        <span class="line">מַטֵּה לֵוִי — מַטֵּה אַהֲרֹן הַכֹּהֵן.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Zwölf Stäbe — vor dem Ewigen wurden sie hingelegt,</span>
+        <span class="line">jeder Stamm — sein Stab dort,</span>
+        <span class="line">und am Morgen — nur einer blühte,</span>
+        <span class="line">der Stab Levis — der Stab Aarons, des Priesters.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַכְּהֻנָּה הַנִּצְחִית]</div>
+    <p class="instr">
+      Die Harfe wird feierlich. Die Verse erkunden die Bedeutung: Das Wunder beweist, dass
+      Gott Aaron und seine Söhne für das Priestertum erwählt hat — für immer.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַמַּטֶּה — לֹא רַק אוֹת, אֶלָּא הוֹכָחָה,</span>
+        <span class="line">כִּי הַכְּהֻנָּה לֹא מִבְּחִירַת אָדָם,</span>
+        <span class="line">אֶלָּא מִבְּחִירַת שָׁמַיִם — אַהֲרֹן וּבָנָיו,</span>
+        <span class="line">נֶצַח — הַתַּפְקִיד שֶׁנִּבְחַר מֵעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Stab — nicht nur Zeichen, sondern Beweis,</span>
+        <span class="line">dass das Priestertum nicht aus menschlicher Wahl kommt,</span>
+        <span class="line">sondern aus himmlischer Wahl — Aharon und seine Söhne,</span>
+        <span class="line">Netzach — die Rolle, die von Ewigkeit erwählt wurde.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — מַטֶּה שֶׁפָּרַח — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Kraftvoller, siegreicher Refrain im Ajam-Modus. Die drei Wiederholungen steigern sich
+      in Intensität — von Staunen über Freude zu Triumph.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">מַטֶּה פָּרַח — עֵץ יָבֵשׁ נָתַן חַיִּים,</span>
+        <span class="line">נֶצַח — הַכְּהֻנָּה שֶׁלֹּא נִגְמֶרֶת,</span>
+        <span class="line">שְׁקֵדִים צָמְחוּ — בְּלַיְלָה אֶחָד,</span>
+        <span class="line">אוֹת נֶצַח — אַהֲרֹן נִבְחַר לְעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Stab blühte — trockenes Holz gab Leben,</span>
+        <span class="line">Netzach — das Priestertum, das nicht endet,</span>
+        <span class="line">Mandeln wuchsen — in einer Nacht,</span>
+        <span class="line">Zeichen des Netzach — Aharon ist für immer erwählt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — חַיִּים מִתּוֹךְ מָוֶת]</div>
+    <p class="instr">
+      Die Harfe wird nachdenklich. Die Brücke reflektiert über die tiefere Bedeutung:
+      Aus Totem Leben hervorbringen — das ist göttliche Macht.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">מַה זֶּה מַטֶּה שֶׁפָּרַח? — לֹא רַק נֵס,</span>
+        <span class="line">אֶלָּא הוֹרָאָה — כִּי אֱלֹהִים מְחַיֶּה מֵתִים,</span>
+        <span class="line">וּמַה שֶּׁנִּרְאֶה גָּמוּר — יָכוֹל לִפְרֹחַ,</span>
+        <span class="line">נֶצַח — הָאֱמוּנָה שֶׁתָּמִיד יֵשׁ תִּקְוָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Was ist ein blühender Stab? — Nicht nur Wunder,</span>
+        <span class="line">sondern Lehre — dass Gott die Toten lebendig macht,</span>
+        <span class="line">und was fertig erscheint — kann blühen,</span>
+        <span class="line">Netzach — der Glaube, dass es immer Hoffnung gibt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן י״א — מַטֵּה אַהֲרֹן בַּחַיִּים</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung XI — Der Stab Aarons im Leben</div>
+      </div>
+      <div class="tikkun-src">Rashash · Ben Ish Chai · Zohar · Ramban</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Rashash (Nahar Shalom, Drush Matteh Aharon) lehrt:
+      Der blühende Stab ist Netzach — die ewige Kehuna, die nicht durch menschliche Wahl,
+      sondern durch göttliche Erwählung besteht. Ben Ish Chai (Ben Yehoyada, Bava Batra 14a)
+      erklärt: Der Stab lag in der Bundeslade zusammen mit den Luchot — beide sind Zeichen
+      der göttlichen Autorität. Zohar (Bamidbar 176b) lehrt: Der Stab symbolisiert die
+      Auferstehung der Toten — aus Totem Leben hervorbringen. Ramban (Bamidbar 17,25)
+      betont: Der Stab sollte „als Zeichen für die Widerspenstigen" aufbewahrt werden,
+      damit niemand mehr die göttliche Wahl anzweifelt.<br><br>
+      <strong>Praktische Handlung:</strong> Suche dir einen trockenen Zweig oder Ast und
+      stelle ihn an einem sichtbaren Ort auf — als Erinnerung an den blühenden Stab.
+      Wenn du dich in einer „toten" Situation befindest — sei es beruflich, spirituell
+      oder in Beziehungen — betrachte den Zweig und erinnere dich: Gott kann aus Totem
+      Leben hervorbringen. Praktiziere auch das „Matteh-Aharon-Prinzip" in deinem Dienst:
+      Erkenne, dass jede Berufung — ob religiös oder weltlich — von Gott kommt, nicht
+      von Menschen. Du bist nicht selbst ernannt, sondern erwählt. Der blühende Stab
+      lehrt: Wahre Autorität kommt von oben, nicht von unten. Wenn du in einer
+      Leitungsposition bist, erinnere dich täglich: Dies ist nicht meine Macht, sondern
+      geliehene Vollmacht.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">מַטֵּה אַהֲרֹן</span>
+      <span class="tikkun-tag">נֶצַח</span>
+      <span class="tikkun-tag">כְּהֻנַּת עוֹלָם</span>
+      <span class="tikkun-tag">תְּחִיַּת הַמֵּתִים</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַפְּרִיחָה]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Die Harfe spielt kraftvoll und triumphierend. Die Stimme
+      singt von dem Moment am Morgen, als alle sahen: Der Stab hat geblüht!
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבַבֹּקֶר — כֻּלָּם רָאוּ אֶת הַנֵּס,</span>
+        <span class="line">מַטֵּה אַהֲרֹן — פָּרַח פֶּרַח וְהוֹצִיא צִיץ,</span>
+        <span class="line">שְׁקֵדִים בְּשֵׁלִים — מֵעֵץ שֶׁהָיָה מֵת,</span>
+        <span class="line">נֶצַח — כְּשֶׁאֱלֹהִים בּוֹחֵר, אֵין עוֹד מַחֲלֹקֶת!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und am Morgen — sahen alle das Wunder,</span>
+        <span class="line">der Stab Aarons — blühte und trieb Blüten,</span>
+        <span class="line">reife Mandeln — von Holz, das tot war,</span>
+        <span class="line">Netzach — wenn Gott wählt, gibt es keinen Streit mehr!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַמַּטֶּה נִשְׁאָר בָּאָרוֹן]</div>
+    <p class="instr">
+      Die Harfe kehrt zum kraftvollen Ajam-Motiv zurück, aber ruhiger. Die Stimme singt
+      von dem Stab, der für immer in der Bundeslade ruht.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַמַּטֶּה שׁוֹכֵב — בָּאָרוֹן לִפְנֵי הָעֵדֻת,</span>
+        <span class="line">אוֹת לְדֹרוֹת — כִּי הַכְּהֻנָּה נִצְחִית,</span>
+        <span class="line">וּמְלַמֵּד אוֹתָנוּ — כִּי מַה שֶּׁאֱלֹהִים בּוֹחֵר,</span>
+        <span class="line">נֶצַח — פּוֹרֵחַ לְעוֹלָם וָעֶד.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Stab ruht — in der Lade vor dem Zeugnis,</span>
+        <span class="line">Zeichen für Generationen — dass das Priestertum ewig ist,</span>
+        <span class="line">und lehrt uns — dass was Gott wählt,</span>
+        <span class="line">Netzach — blüht für immer und ewig.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י״ב — TZINTZENET HAMAN · CHESED · MAQAM RAST
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-tzintzenet">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">צִנְצֶנֶת</span>
+      י״ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חֶסֶד דִּיצִירָה · Chesed d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רַסְת — Güte, die ohne Anstrengung fließt</span>
+      <span class="song-title-he">צִנְצֶנֶת הַמָּן — לֶחֶם מִן הַשָּׁמַיִם</span>
+      <span class="song-title-de">Das Manngefäß — Brot vom Himmel</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת ט״ז:ל״ב–ל״ד · יוֹמָא נ״ב · מְכִילְתָּא בְּשַׁלַּח
+      <span class="source-badge-de">Schemot 16:32–34 · Joma 52b · Mechilta deRabbi Jischma'el, Wajassa · Or HaChajim zu Schemot 16 · Ramchal, Mischkeni Eljon</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Rast · רַסְת</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">חֶסֶד</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הַמָּן בַּמִּדְבָּר]</div>
+    <p class="instr">
+      Oud beginnt warm und offen im Maqam Rast — der natürlichste Modus, wie die göttliche
+      Güte, die ohne Anstrengung fließt. Die Stimme singt vom Manna, das jeden Morgen
+      auf die Wüste fiel.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — כָּל בֹּקֶר בַּמִּדְבָּר,</span>
+        <span class="line">לֶחֶם מִן הַשָּׁמַיִם — כְּכְפוֹר עַל הָאָרֶץ,</span>
+        <span class="line">מָן הוּא — טַעַם כְּצַפִּיחִת בִּדְבָשׁ,</span>
+        <span class="line">חֶסֶד — הַמַּזּוֹן שֶׁבָּא בְּלִי מַאֲמָץ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — jeden Morgen in der Wüste,</span>
+        <span class="line">Brot vom Himmel — wie Reif auf der Erde,</span>
+        <span class="line">Mann ist es — Geschmack wie Honigkuchen,</span>
+        <span class="line">Chesed — die Nahrung, die ohne Anstrengung kommt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הַמָּן כָּל יוֹם]</div>
+    <p class="instr">
+      Das Oud spielt eine sich wiederholende, beruhigende Melodie — wie das Manna, das
+      jeden Tag neu fiel. Die Verse schildern die tägliche Erfahrung: Vertrauen auf
+      die morgendliche Versorgung.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אַרְבָּעִים שָׁנָה — בְּכָל בֹּקֶר,</span>
+        <span class="line">יָצְאוּ וְלָקְטוּ — עֹמֶר לַגֻּלְגֹּלֶת,</span>
+        <span class="line">לֹא יָכְלוּ לְהוֹתִיר לַמָּחֳרָת — כִּי תּוֹלַעַת,</span>
+        <span class="line">חֶסֶד — שֶׁמְּלַמֵּד אֱמוּנָה יוֹם יוֹם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Vierzig Jahre — jeden Morgen,</span>
+        <span class="line">gingen sie hinaus und sammelten — ein Omer pro Kopf,</span>
+        <span class="line">konnten nicht für morgen aufheben — denn Würmer,</span>
+        <span class="line">Chesed — das tägliches Vertrauen lehrt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַצִּנְצֶנֶת לְדֹרוֹת]</div>
+    <p class="instr">
+      Das Oud wird feierlicher. Die Verse singen davon, dass ein Omer Manna in einem
+      goldenen Gefäß aufbewahrt wurde — zur Erinnerung für künftige Generationen.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וַיֹּאמֶר מֹשֶׁה — קַח צִנְצֶנֶת אַחַת,</span>
+        <span class="line">וְתֶן שָׁמָּה מְלֹא הָעֹמֶר מָן — לְמִשְׁמֶרֶת,</span>
+        <span class="line">לְמַעַן יִרְאוּ אֶת הַלֶּחֶם — אֲשֶׁר הֶאֱכַלְתִּי אֶתְכֶם,</span>
+        <span class="line">חֶסֶד — הַזִּכָּרוֹן שֶׁל הַפַּרְנָסָה הָאֱלֹהִית.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und Moshe sprach — nimm ein Gefäß,</span>
+        <span class="line">und tu hinein ein volles Omer Manna — zur Aufbewahrung,</span>
+        <span class="line">damit sie das Brot sehen — das ich euch zu essen gab,</span>
+        <span class="line">Chesed — die Erinnerung an göttliche Versorgung.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — מָן מִן הַשָּׁמַיִם — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Offener, großzügiger Refrain im Rast-Modus — die natürliche Fülle von Chesed.
+      Die drei Wiederholungen werden zunehmend dankbarer.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">מָן — לֶחֶם מִן הַשָּׁמַיִם יוֹרֵד,</span>
+        <span class="line">חֶסֶד — פַּרְנָסָה שֶׁבָּאָה כָּל בֹּקֶר,</span>
+        <span class="line">צִנְצֶנֶת זָהָב — שׁוֹמֶרֶת אֶת הַזֵּכֶר,</span>
+        <span class="line">אֱלֹהִים מַאֲכִיל — אֶת עַמּוֹ בְּאַהֲבָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Mann — Brot vom Himmel fällt herab,</span>
+        <span class="line">Chesed — Versorgung, die jeden Morgen kommt,</span>
+        <span class="line">goldenes Gefäß — bewahrt die Erinnerung,</span>
+        <span class="line">Gott ernährt — sein Volk in Liebe.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הַמָּן בְּחַיֵּינוּ]</div>
+    <p class="instr">
+      Das Oud wird persönlich, nachdenklich. Die Brücke bringt das Manna in unser Leben:
+      die tägliche Erfahrung, dass Gott versorgt.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">מָן — לֹא רַק בַּמִּדְבָּר,</span>
+        <span class="line">אֶלָּא בְּכָל יוֹם — כְּשֶׁאֲנִי פּוֹתֵחַ אֶת הָעֵינַיִם,</span>
+        <span class="line">וְרוֹאֶה שֶׁיֵּשׁ לִי — מַה לֶּאֱכוֹל הַיּוֹם,</span>
+        <span class="line">חֶסֶד — הַהַכָּרָה שֶׁהַכֹּל מַתָּנָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Mann — nicht nur in der Wüste,</span>
+        <span class="line">sondern jeden Tag — wenn ich die Augen öffne,</span>
+        <span class="line">und sehe, dass ich habe — was zu essen heute,</span>
+        <span class="line">Chesed — die Erkenntnis, dass alles Geschenk ist.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן י״ב — הַמָּן בַּיּוֹם יוֹם</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung XII — Das Manna im Alltag</div>
+      </div>
+      <div class="tikkun-src">Ramchal · Ben Ish Chai · Zohar · Or HaChaim</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Ramchal (Mishkney Elyon, Ma'amar HaMann) lehrt:
+      Das Manna ist Chesed — die göttliche Güte, die jeden Tag neu gegeben wird. Ben Ish Chai
+      (Ben Yehoyada, Yoma 75a) erklärt: Das Manna hatte jeden Geschmack, den man sich
+      wünschte — Symbol der grenzenlosen Fülle Gottes. Zohar (Beshalach 62a) lehrt: Das Manna
+      kam mit der Shechina — wer Manna aß, aß von der göttlichen Präsenz selbst. Or HaChaim
+      (Shemot 16,4) betont: Das Manna durfte nicht aufgehoben werden — dies lehrte Bitachon
+      (Vertrauen), dass Gott auch morgen versorgen wird.<br><br>
+      <strong>Praktische Handlung:</strong> Übe im Alltag die „Manna-Haltung": Wenn du morgens
+      aufwachst, sage bewusst: „Das Brot, das ich heute esse, ist Manna vom Himmel."
+      Erkenne, dass deine Parnasah (Lebensunterhalt) nicht primär von deiner Arbeit kommt,
+      sondern von Gott. Praktiziere auch das „Nicht-Aufheben-Prinzip": Vertraue darauf,
+      dass Gott auch morgen versorgen wird — bekämpfe die Angst vor Mangel mit Emunah
+      (Glauben). Wenn möglich, bewahre eine kleine Dose mit etwas Symbolischem (Reis,
+      Mehl) auf — als deine persönliche „Tzintzenet HaMann" — und schau sie an, wenn du
+      dich um Versorgung sorgst. Das Manngefäß lehrt: Chesed ist nicht einmalig, sondern
+      täglich erneuert.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">צִנְצֶנֶת הַמָּן</span>
+      <span class="tikkun-tag">חֶסֶד</span>
+      <span class="tikkun-tag">פַּרְנָסָה</span>
+      <span class="tikkun-tag">בִּטָּחוֹן יוֹמִי</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַבֹּקֶר בַּמִּדְבָּר]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Das Oud spielt warm und großzügig. Die Stimme singt von
+      dem Moment am Morgen, als das Volk hinausging und das Manna auf der Erde lag.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבַבֹּקֶר — כְּשֶׁהַטַּל עָלָה,</span>
+        <span class="line">וְהִנֵּה עַל פְּנֵי הַמִּדְבָּר — דַּק מְחֻסְפָּס,</span>
+        <span class="line">וַיֹּאמְרוּ: מָן הוּא? — כִּי לֹא יָדְעוּ מַה הוּא,</span>
+        <span class="line">חֶסֶד — כְּשֶׁאֱלֹהִים מַפְתִּיעַ בְּטוּבוֹ כָּל בֹּקֶר מֵחָדָשׁ!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und am Morgen — als der Tau aufstieg,</span>
+        <span class="line">und siehe, auf der Wüste — etwas Feines, Körniges,</span>
+        <span class="line">und sie sprachen: Mann ist es? — denn sie wussten nicht, was es war,</span>
+        <span class="line">Chesed — wenn Gott jeden Morgen neu mit seiner Güte überrascht!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַצִּנְצֶנֶת נִשְׁאֶרֶת]</div>
+    <p class="instr">
+      Das Oud kehrt zum warmen Rast-Motiv zurück. Die Stimme singt leise von dem goldenen
+      Gefäß, das in der Bundeslade ruht.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַצִּנְצֶנֶת שׁוֹכֶבֶת — בָּאָרוֹן לִפְנֵי אֲדֹנָי,</span>
+        <span class="line">זָהָב טָהוֹר — מָלֵא בְּלֶחֶם שֶׁהָיָה פַּעַם,</span>
+        <span class="line">וּמְזַכֶּרֶת לָנוּ — כִּי אֱלֹהִים מְפַרְנֵס,</span>
+        <span class="line">חֶסֶד — הַטּוּבָה שֶׁלֹּא נִגְמֶרֶת לְעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Das Gefäß ruht — in der Lade vor dem Ewigen,</span>
+        <span class="line">reines Gold — gefüllt mit Brot, das einst war,</span>
+        <span class="line">und erinnert uns — dass Gott versorgt,</span>
+        <span class="line">Chesed — die Güte, die niemals endet.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים י״א–י״ב</div>
+  <div class="chk">
+    <div class="chk-head">‏1 · „הֶבְּרָאִים ט׳:ד׳‏״ בְּשׁוּלֵי הַדַּף<span class="tag-fix">korrigiert</span><span class="chk-de">Neutestamentliche Quellenangabe in der Fußzeile</span></div>
+    <div class="chk-body">Die Fußzeile führt <strong>Hebräer 9,4</strong> als Beleg dafür, dass Manngefäß, Stab und Tafeln <em>in</em> der Lade lagen. Das ist eine neutestamentliche Stelle und liegt außerhalb der Quellenhierarchie dieses Projekts. Der Text bleibt unverändert; die jüdische Belegkette ist ergänzt und lautet anders: <strong>Melachim I 8:9</strong> — in der Lade war <em>nichts</em> als die zwei Tafeln. <strong>Bawa Batra 14a–b</strong> — Machloket R. Meïr und R. Jehudah: die weiteren Gegenstände lagen <em>מִן הַצַּד</em> bzw. im Argaz <em>neben</em> der Lade. <strong>Joma 52b</strong> — als die Lade verborgen wurde, wurden mit ihr verborgen: Zinzenet HaMan, der Schemen HaMischcha und Mateh Aharon mit seinen Mandeln und Blüten; verborgen hat sie <em>Joschijahu</em>. <strong>Rambam, Hilchot Beit HaBechirah 4</strong> kodifiziert dies.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏2 · בַּמִּדְבָּר י״ז:ט״ז–כ״ו<span class="tag-ok">bestätigt</span><span class="chk-de">Zählung des Matteh-Abschnitts</span></div>
+    <div class="chk-body">Die Angabe folgt der masoretischen Zählung und ist korrekt. In christlichen Übersetzungen erscheint derselbe Abschnitt als Numeri 17:1–11 — die Fußzeile mischt beide Systeme, ohne dass die Stelle dadurch falsch würde.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏3 · שְׁמוֹת ט״ז:ל״ב–ל״ד<span class="tag-ok">bestätigt</span><span class="chk-de">Der Manna-Abschnitt</span></div>
+    <div class="chk-body">Bestätigt: <em>צִנְצֶנֶת</em>, <em>מְלֹא הָעֹמֶר</em>, <em>לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם</em>. Der Or HaChajim kommentiert Beschalach; als Beleg ergänzt ist zusätzlich die <strong>Mechilta deRabbi Jischma'el, Massechta Wajassa</strong>.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏4 · רַמְבַּ״ן, תּוֹרַת הָאָדָם<span class="tag-fix">korrigiert</span><span class="chk-de">Auch hier das falsche Ramban-Werk</span></div>
+    <div class="chk-body">Die Fußzeile nennt Ramban ohne Werkangabe, die Parallelfassung der Lieder VI–X nennt <em>Torat HaAdam</em> — das ist die Schrift über Sterben und Trauer. Für Mateh und Zinzenet ist der <strong>Perusch al HaTorah</strong> zu Bamidbar 17 bzw. Schemot 16 einschlägig.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏5 · הָרַשַּׁ״שׁ · בֶּן אִישׁ חַי · רַמְחַ״ל<span class="tag-ok">bestätigt</span><span class="chk-de">Die genannten sephardischen Autoritäten</span></div>
+    <div class="chk-body">Bestätigt: Rashash <em>Nahar Schalom</em>; Ben Isch Chai <em>Ben Jehojada</em> (Aggada-Kommentar); Ramchal <em>Mischkeni Eljon</em>; <em>Kaf HaChajim</em> ohne Paragraphenzahl geführt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏6 · מַקָּמִים מול הַקָּנוֹן<span class="tag-open">offen</span><span class="chk-de">Zwei Abweichungen vom Maqam-Kanon</span></div>
+    <div class="chk-body">Kanon: Netzach → Bajat, Chesed → Ajam. Vorliegend: Netzach → <strong>Ajam</strong>, Chesed → <strong>Rast</strong>. Nichts geändert — ausgewiesen zur Entscheidung.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏7 · שִׁיּוּךְ הָעוֹלָמוֹת<span class="tag-open">offen</span><span class="chk-de">Die Welt-Zuordnung der beiden Lieder</span></div>
+    <div class="chk-body">Lied XI trägt <em>d'Beriah</em>, Lied XII <em>d'Yetzirah</em>. Wie bei den Liedern VI–X liegen damit zwei Welten in einer Datei. Ausgewiesen, nicht geändert.</div>
+  </div>
+</div>
+
+<div class="trad-box">
+  <div class="sources-title">הֶעָרַת מָסוֹרֶת — Traditionshinweis</div>
+  <div class="sources-body">
+    Nach der Projektnorm wird fremde Terminologie <strong>nicht geändert, sondern gekennzeichnet
+    und durch eine Parallelquelle der eigenen Tradition ergänzt</strong>. Das gilt hier für die
+    Fußzeilenangabe „Hebräer 9,4‏״. Der gesungene Text der beiden Lieder ist davon nicht berührt —
+    er spricht durchgehend von <em>מַטֵּה אַהֲרֹן</em> und <em>צִנְצֶנֶת הַמָּן</em> als den Zeichen,
+    die aufbewahrt wurden, und macht keine Aussage darüber, ob sie in der Lade oder neben ihr lagen.
+    Die talmudische Klärung steht oben unter Punkt 1.
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-he">שְׁלֹשָׁה כֵּלִים בָּאָרוֹן — לוּחוֹת · מַטֶּה · צִנְצֶנֶת</p>
+  <p>
+    Quellen: Rashash (Nahar Shalom) · Ben Ish Chai (Ben Yehoyada) · Ramchal (Mishkney Elyon) ·
+    Zohar (Bamidbar, Beshalach) · Or HaChaim · Ramban · Kaf HaChaim
+  </p>
+  <p style="margin-top:18px;font-size:.88em;opacity:.7;">
+    Historisch verifizierte Quellen · Sephardische Autorität · Maqam-Tradition aus Aleppo und Jerusalem ·
+    Numeri 17,16-26 · Exodus 16,32-34 · Hebräer 9,4 ·
+    Erstellt 2026
+  </p>
+</div>
+
+</div>
+
+
+</body></html>

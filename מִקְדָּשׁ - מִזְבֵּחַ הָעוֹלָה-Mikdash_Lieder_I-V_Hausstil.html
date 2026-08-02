@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מִקְדָּשׁ — שִׁירִים א–ה · כְּלֵי הַמִּקְדָּשׁ · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #A8601C;
+  --acc-lt:      #E4A44C;
+  --acc-vlt:     #F6D49A;
+  --acc-dim:     #2E1600;
+  --acc-bdr:     rgba(168,96,28,.32);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #E0A860;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(168,96,28,.20) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(200,120,40,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(200,120,40,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(168,96,28,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(168,96,28,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(228,164,76,.70) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(228,164,76,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(228,164,76,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(228,164,76,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(228,164,76,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(228,164,76,.70) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(228,164,76,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(228,164,76,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(228,164,76,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(228,164,76,.55), 0 0 120px rgba(168,96,28,.28), 0 0 220px rgba(168,96,28,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(168,96,28,.20) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(168,96,28,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(168,96,28,.08),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(168,96,28,.08),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(168,96,28,.08),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">מִקְדָּשׁ</span>
+    <span class="nav-brand-sub">Klei HaMikdash · שִׁירִים א–ה</span>
+  </div>
+  <a class="nav-link" href="#song-altar"><span class="nav-he"><span class="nav-num">א</span>מִזְבֵּחַ הָעוֹלָה</span><span class="nav-de">Brandopferaltar</span></a>
+  <a class="nav-link" href="#song-kiyor"><span class="nav-he"><span class="nav-num">ב</span>כִּיּוֹר</span><span class="nav-de">Waschbecken</span></a>
+  <a class="nav-link" href="#song-shulchan"><span class="nav-he"><span class="nav-num">ג</span>שֻׁלְחַן הַפָּנִים</span><span class="nav-de">Schaubrottisch</span></a>
+  <a class="nav-link" href="#song-menorah"><span class="nav-he"><span class="nav-num">ד</span>מְנוֹרָה</span><span class="nav-de">Siebenarmige Leuchte</span></a>
+  <a class="nav-link" href="#song-incense"><span class="nav-he"><span class="nav-num">ה</span>מִזְבֵּחַ הַקְּטֹרֶת</span><span class="nav-de">Räucheraltar</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">כְּלֵי הַמִּקְדָּשׁ · הַמָּסוֹרֶת הַסְּפָרַדִּית · חֲמִשָּׁה שִׁירִים</p>
+  <h1 class="page-title-he">מִקְדָּשׁ</h1>
+  <p class="page-title-de">Die Geräte des Heiligtums — Lieder I–V · Sephardische Melodie und Tikkun</p>
+  <p class="page-desc">
+    Fünf Kompositionen durch die Geräte des äußeren und inneren Bereichs:
+    <strong>מִזְבֵּחַ הָעוֹלָה · כִּיּוֹר · שֻׁלְחַן הַפָּנִים · מְנוֹרָה · מִזְבֵּחַ הַקְּטֹרֶת</strong> —
+    vom steinernen Brandopferaltar im Hof bis zum goldenen Räucheraltar vor dem Vorhang.
+    Jede Strophe steht hebräisch und deutsch nebeneinander, jedes Lied trägt seine
+    <em>Maqam-Angabe</em> und eine Tikkun-Handlung auf klassischer Grundlage.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-active">חָצֵר</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">הֵיכָל</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">קֹדֶשׁ הַקֳּדָשִׁים</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-altar">
+    <span class="sn-num">א</span>
+    <span class="sn-he">מִזְבֵּחַ הָעוֹלָה</span>
+    <span class="sn-de">Brandopferaltar</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-kiyor">
+    <span class="sn-num">ב</span>
+    <span class="sn-he">כִּיּוֹר</span>
+    <span class="sn-de">Waschbecken</span>
+    <span class="sn-maqam">Maqam Hoseni</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-shulchan">
+    <span class="sn-num">ג</span>
+    <span class="sn-he">שֻׁלְחַן הַפָּנִים</span>
+    <span class="sn-de">Schaubrottisch</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-menorah">
+    <span class="sn-num">ד</span>
+    <span class="sn-he">מְנוֹרָה</span>
+    <span class="sn-de">Siebenarmige Leuchte</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-incense">
+    <span class="sn-num">ה</span>
+    <span class="sn-he">מִזְבֵּחַ הַקְּטֹרֶת</span>
+    <span class="sn-de">Räucheraltar</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר א — MIZBEACH HAOLAH · MAQAM SABA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-altar">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">מִזְבֵּחַ</span>
+      א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">מִזְבֵּחַ הָעוֹלָה · Der Brandopferaltar</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סָבָא — Bund und Tiefe</span>
+      <span class="song-title-he">קָרְבָּן וְאֵשׁ</span>
+      <span class="song-title-de">Opfer und Feuer – der steinerne Altar als Liebesbund</span>
+    </div>
+    <div class="source-badge">
+      תַּלְמוּד זְבָחִים · רַמְבַּ״ם, הִלְכוֹת בֵּית הַבְּחִירָה
+      <span class="source-badge-de">Talmud Zevachim · Rambam, Hilchot Beit HaBechirah · Mischna Middot 3 · Schemot 20 (Steine ohne Eisen) · Bamidbar 28:1–8</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Saba · סָבָא</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Gerät</span><span class="meta-v">מִזְבֵּחַ הָעוֹלָה</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud · Rahmentrommel</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+      <div class="section-block">
+        <div class="section-label">[פְּתִיחָה — מִזְבֵּחַ הַעֹלָה — איטי ועמוק]</div>
+        <div class="instrument-note">Oud und Rahmentrommel: Maqam Saba, tief und gedehnt.  Ein einzelner Basston
+          eröffnet den Raum wie die lange Rampe, die zum Altar hinaufführt.  Die
+          Stimme betritt den Klang wie ein Priester, der sich nähert.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי —</span>
+            <span class="line">אֵשׁ וּשְׁחִיטָה עַל מִזְבֵּחַ אֶבֶן,</span>
+            <span class="line">הַדָּם נִזְרָק עַל הַכִּיר וּבַמַּעֲלֶה הָאֲרוּכָה,</span>
+            <span class="line">אֲבָנִים בְּלִי בַּרְזֶל — הַקָּרְבָּן מַאֲרִיךְ חַיִּים,</span>
+            <span class="line">וְעָשָׁן עוֹלֶה — לִבֵּנוּ עוֹלֶה עִמּוֹ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai —</span>
+            <span class="line">Feuer und Schlachtung auf dem steinernen Altar,</span>
+            <span class="line">das Blut wird an die Wand gesprengt über die lange Rampe,</span>
+            <span class="line">Steine ohne Eisen – das Opfer verlängert das Leben,</span>
+            <span class="line">und der Rauch steigt – mit ihm steigt unser Herz.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verse 2 -->
+      <div class="section-block">
+        <div class="section-label">[בֵּית א — סוֹבֵב וְחֹט הַשִּׂקְרָה]</div>
+        <div class="instrument-note">Oud: sanftes Arpeggio in Saba, begleitet von gedämpften Trommel­schlägen.  Die
+          Melodie erinnert an das Umrunden des Altars (סוֹבֵב) und den roten
+          Strich, der das Blut trennt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שְׁלֹשׁ מַעֲרָכוֹת עֵצִים וְסוֹבֵב עוֹטֵף,</span>
+            <span class="line">חוּט הַשִּׂקְרָה הָאָדֹם גּוֹבֵהַּ דַּמִּים,</span>
+            <span class="line">קָרְבָּן הוּא קֵירוּב — מִתְקָרְבִים בְּאַהֲבָה,</span>
+            <span class="line">וְהַשָּׁלֶהֶבֶת מְכַלָּה עֲוֹנוֹת — מַשְׁאִירָה לֵב טָהוֹר.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Drei Holzschichten und ein Rundgang umhüllen,</span>
+            <span class="line">der rote Faden trennt die Bereiche des Blutes,</span>
+            <span class="line">Korban bedeutet Annäherung – wir kommen in Liebe näher,</span>
+            <span class="line">und die Flamme verzehrt die Sünden und lässt ein reines Herz zurück.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refrain -->
+      <div class="section-block">
+        <div class="section-label">[פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+        <div class="refrain-box">
+          <div class="instrument-note">Oud: der Kern des Saba‑Maqam als ruhiger Ostinato.  Die Stimme hebt sich
+            leicht und fällt wieder – wie das Aufsteigen und Zurücksinken der
+            Flamme. Erste und dritte Wiederholung mf, zweite Wiederholung f.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">אֵשׁ וְדָם — קָרְבָּן וַאֲהָבָה,</span>
+              <span class="line">עַל מִזְבֵּחַ הָעוֹלָה — לִבֵּנוּ עוֹלֶה,</span>
+              <span class="line">קָרְבָּן שֶׁל חַיִּים — קֵירוּב נַפְשֵׁנוּ,</span>
+              <span class="line">אַהֲבָה בָּאֵשׁ — כַּפָּרָה וְשָׁלוֹם.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Feuer und Blut – Opfer und Liebe,</span>
+              <span class="line">auf dem Brandaltar – unser Herz steigt,</span>
+              <span class="line">Opfer des Lebens – Annäherung unserer Seele,</span>
+              <span class="line">Liebe im Feuer – Sühne und Frieden.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div class="section-block">
+        <div class="section-label">[גֶּשֶׁר — זְכִירָה לְקָרְבָּן]</div>
+        <div class="bridge-box">
+          <div class="instrument-note">Oud: einzelne Töne wie Schritte auf der Rampe; der Rhythmus verlangsamt
+            sich.  Die Stimme spricht fast geflüstert.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">אֲנַחְנוּ עוֹלִים בַּסּוֹבֵב, רַגְלֵינוּ עַל הַמַּעֲלֶה,</span>
+              <span class="line">מַבִּיטִים בַּלַּהֶבֶת וְנִזְכָּרִים — קָרְבָּן הוּא קִרְבָה,</span>
+              <span class="line">הַקְרָבָה הִיא נְתִינָה — וְדָמִים שֶׁל אַהֲבָה,</span>
+              <span class="line">כִּי בְּאֵין מִקְדָּשׁ — תְּפִלָּתֵנוּ הִיא הַקָּרְבָּן.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wir steigen den Rundgang hinauf, unsere Füße auf der Rampe,</span>
+              <span class="line">schauen in die Flamme und erinnern uns – Korban ist Annäherung,</span>
+              <span class="line">Annäherung ist Hingabe – und das Blut der Liebe,</span>
+              <span class="line">denn ohne Tempel – ist unser Gebet das Opfer.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tikkun -->
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — קְרִיאַת הַקָּרְבָּנוֹת</div>
+          <div class="tikkun-title-de">Tikkun I – Das tägliche Lesen der Opferordnung</div>
+          <div class="tikkun-src">רמב״ם, הלכות בית הבחירה · תלמוד בבלי, זבחים · רשב״ש, שערי גאולה</div>
+        </div>
+        <div class="tikkun-body">
+          <strong>Sephardische Praxis:</strong> Der Brandopferaltar (Mizbeach HaOlah) war
+          der größte Gegenstand im äußeren Tempelhof: 32 Ellen breit, mit einer
+          langen Rampe (Kewesh), auf der die Priester aufstiegen.  Drei Holzschichten
+          (Ma'arachot) brannten ständig, das Feuer stammte vom Himmel und erlosch
+          nie.  Der Altar hatte einen roten Strich (Chut HaSikra), der die obere und
+          untere Hälfte trennte.  Sephardische Tradition lehrt: Das tägliche Lesen
+          der Korbanot-Paraschiot (Parshat HaTamid) ersetzt heute den fehlenden
+          Opferdienst.  Der Ramchal (Mishkney Elyon) erklärt: Wenn wir die Torah-Portion
+          über die Opfer rezitieren, vollziehen wir die Handlung in der Wurzel der
+          Welten.
+          <br><br>
+          <strong>Praktische Handlung:</strong> Lies jeden Morgen nach Schacharit den
+          Abschnitt „Parshat HaTamid" (Num. 28:1–8) aus dem Siddur.  Stell dir vor,
+          wie der Kohen die Rampe hinaufsteigt und das Opfer auf den Altar legt.
+          Sprich leise: „רִבּוֹנוֹ שֶׁל עוֹלָם, יְהִי רָצוֹן מִלְּפָנֶיךָ שֶׁתְּהֵא קְרִיאַת
+          פָּרָשַׁת הַקָּרְבָּנוֹת חֲשׁוּבָה לְפָנֶיךָ כְּאִלּוּ הִקְרַבְנוּם\" –
+          „Herr der Welt, möge das Lesen der Opferordnung vor Dir gelten, als hätten
+          wir sie dargebracht."  Meditiere darüber, dass das Opfer eine Annäherung
+          (Korban = Kiruv) ist: Du näherst dich Gott mit deinem ganzen Herzen.
+        </div>
+        <div class="tikkun-tags">
+          <span class="tikkun-tag">פָּרָשַׁת הַתָּמִיד</span>
+          <span class="tikkun-tag">קְרִיאַת הַקָּרְבָּנוֹת</span>
+          <span class="tikkun-tag">מִזְבֵּחַ הָעוֹלָה</span>
+          <span class="tikkun-tag">קֵירוּב</span>
+        </div>
+      </div>
+
+      <!-- Climax -->
+      <div class="section-block">
+        <div class="section-label">[שִׁיא — forte מָלֵא · הַכֹּל עוֹלֶה]</div>
+        <div class="climax-box">
+          <div class="instrument-note">Oud: voller Saba-Akkord, forte – der stärkste Moment des Liedes. Die Rahmentrommel schlägt wie ein Herz. Die Stimme ruft mit aller Kraft.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">אֵשׁ! — דָּם! — קָרְבָּן!</span>
+              <span class="line">עוֹלֶה! — עוֹלֶה! — הַכֹּל עוֹלֶה!</span>
+              <span class="line">אֲדֹנָי! — מִזְבֵּחַ! — אַהֲבָה!</span>
+              <span class="line">לִבֵּנוּ — נַפְשֵׁנוּ — כֻּלָּנוּ — עוֹלִים!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Feuer! — Blut! — Opfer!</span>
+              <span class="line">Es steigt! — Es steigt! — Alles steigt!</span>
+              <span class="line">Adonai! — Altar! — Liebe!</span>
+              <span class="line">Unser Herz — unsere Seele — wir alle — steigen auf!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coda -->
+      <div class="section-block">
+        <div class="section-label">[קוֹדָה — עָשָׁן מִתְפַּזֵּר]</div>
+        <div class="coda-box">
+          <div class="instrument-note">Oud: langsames Saba-Arpeggio, pp, verklingt wie Rauch, der sich auflöst. Die Stimme flüstert.</div>
+          <div class="coda-whisper">
+            קָרְבָּן … אַהֲבָה … עוֹלֶה …<br>
+            <em>— לִבֵּנוּ —</em><br>
+            … <strong>אָמֵן</strong> …
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="scenarios-section">
+        <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · מִזְבֵּחַ הָעוֹלָה</div>
+        <div class="scenarios-grid">
+          <div class="scenario-card sc1">
+            <div class="sc-num">Szenario 1</div>
+            <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+            <div class="sc-sub">Der säkulare Israeli</div>
+            <div class="sc-body">Er kennt den Tempel aus der Schule – archäologische Fakten, historische Daten. Das Lied überrascht ihn: <strong>Korban als „Annäherung" statt nur als „Opfer"</strong> – das hatte er nie gehört. Die Idee, dass Gebet heute das Opfer ersetzt, macht plötzlich Sinn. Der Saba-Maqam klingt ihm vertraut, aber die Verbindung von Melodie und Tempelritual ist neu.</div>
+            <div class="key-moment">Der Moment: „קָרְבָּן הוּא קֵירוּב\" — er versteht, dass das Wort mehr ist als ein Ritual. Es ist eine Beziehung.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Ich dachte, Opfer wäre primitiv. Aber das hier ist … anders."</div>
+          </div>
+
+          <div class="scenario-card sc2">
+            <div class="sc-num">Szenario 2</div>
+            <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+            <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+            <div class="sc-body">Er liest Parshat HaTamid jeden Morgen – aber mechanisch, ohne nachzudenken. Das Lied macht die Worte lebendig: <strong>die Rampe, der Rauch, das Feuer werden real</strong>. Er versteht plötzlich, was er all die Jahre rezitiert hat. Die Tikkun-Anleitung gibt ihm eine neue Kavvanah.</div>
+            <div class="key-moment">Der Moment: die Tikkun-Anleitung — „יְהִי רָצוֹן מִלְּפָנֶיךָ שֶׁתְּהֵא קְרִיאַת פָּרָשַׁת הַקָּרְבָּנוֹת חֲשׁוּבָה\" — das hat er schon tausendmal gesagt, aber jetzt fühlt er es.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er liest Parshat HaTamid am nächsten Morgen langsamer. Mit Tränen.</div>
+          </div>
+
+          <div class="scenario-card sc3">
+            <div class="sc-num">Szenario 3</div>
+            <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+            <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+            <div class="sc-body">Er kennt die Rashash-Kavvanot für die Korbanot aus Sha'arei Geulah. Das Lied ist für ihn ein vollständiges Kavvanah-System in Musikform: <strong>der Altar als Kiruv, das Feuer als Liebe, der Rauch als aufsteigende Seele</strong>. Er sieht in jedem Vers eine Sefira-Verbindung. Das ist kein Lied – das ist Avodah.</div>
+            <div class="key-moment">Der Moment: die Coda — „לִבֵּנוּ עוֹלֶה\" — er schließt die Augen und vollzieht die Kavvanah während des Singens.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das gehört in die Beit El-Liturgie. Vor Shacharit."</div>
+          </div>
+
+          <div class="scenario-card sc4">
+            <div class="sc-num">Szenario 4</div>
+            <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+            <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+            <div class="sc-body">Er hat das Lied aus Neugierde angeklickt. Der Saba-Maqam fesselt ihn – das klingt wie alte sephardische Musik, die seine Großeltern hörten. Das Wort „Mizbeach\" kennt er, aber die Vorstellung, dass <strong>sein Herz das Opfer ist</strong> – das berührt ihn unerwartet. Er versteht nicht alles, aber er fühlt etwas.</div>
+            <div class="key-moment">Der Moment: der Refrain — „לִבֵּנוּ עוֹלֶה\" — das Bild des aufsteigenden Herzens bleibt hängen.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Er hört das Lied noch zweimal. Dann speichert er es.</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ב — KIYOR · MAQAM HOSENI
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-kiyor">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כִּיּוֹר</span>
+      ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">כִּיּוֹר · Das Waschbecken aus Kupfer</span>
+      <span class="maqam-badge">Maqam Hoseni · מַקָּם חוּסֵינִי — Reinigung und Innenwelt</span>
+      <span class="song-title-he">מַיִם וְטָהֳרָה</span>
+      <span class="song-title-de">Wasser und Reinheit – die Vorbereitung des Dienstes</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת ל׳:י״ח–כ״א · תַּלְמוּד זְבָחִים
+      <span class="source-badge-de">Schemot 30:18–21 · Talmud Zevachim · Rambam, Hilchot Bi'at HaMikdasch · Ben Isch Chai (Netilat Jadajim)</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hoseni · חוּסֵינִי</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Gerät</span><span class="meta-v">כִּיּוֹר</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud · Nay</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+      <div class="section-block">
+        <div class="section-label">[פְּתִיחָה — כִּיּוֹר — חֹם וְעִדּוּן]</div>
+        <div class="instrument-note">Oud und Nay: Maqam Hoseni – ein warmer, umhüllender Klang mit sanfter
+          Melancholie.  Die Melodie fließt wie Wasser, das über die Hände der
+          Priester strömt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי —</span>
+            <span class="line">כִּיּוֹר נְחֹשֶׁת בֵּין הַמִּזְבֵּחַ וְהָאֹהֶל,</span>
+            <span class="line">יָדַיִם וְרַגְלַיִם רָחֲצוּ הַכֹּהֲנִים,</span>
+            <span class="line">מַיִם חַיִּים — טָהֳרָה פְּנִימִית,</span>
+            <span class="line">לִפְנֵי הָעֲבוֹדָה — הַהֲכָנָה הָרוּחָנִית.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai —</span>
+            <span class="line">Kupfernes Becken zwischen Altar und Zelt,</span>
+            <span class="line">Hände und Füße wuschen die Priester,</span>
+            <span class="line">lebendiges Wasser – innere Reinheit,</span>
+            <span class="line">vor dem Dienst – die spirituelle Vorbereitung.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verse -->
+      <div class="section-block">
+        <div class="section-label">[בֵּית א — קִדּוּשׁ יָדַיִם וְרַגְלַיִם]</div>
+        <div class="instrument-note">Oud: Hoseni-Arpeggio mit fließenden Übergängen; Nay: lange, atmende Töne.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מִשְׁנָה בְּזְבָחִים לִמְּדָה: קִדּוּשׁ מֵהַכִּיּוֹר,</span>
+            <span class="line">יָדַיִם תְּחִלָּה — רַגְלַיִם אַחַר כָּךְ,</span>
+            <span class="line">הַמַּיִם מְטַהֲרִים לֹא רַק גּוּף — גַּם נֶפֶשׁ,</span>
+            <span class="line">וְכׇל כֹּהֵן לִפְנֵי עֲבוֹדָה — מִטַּהֵר וּמִתְקַדֵּשׁ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Die Mischna in Zevachim lehrt: Kiddush vom Kiyor,</span>
+            <span class="line">Hände zuerst — Füße danach,</span>
+            <span class="line">das Wasser reinigt nicht nur den Körper — auch die Seele,</span>
+            <span class="line">und jeder Kohen vor dem Dienst — reinigt und heiligt sich.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refrain -->
+      <div class="section-block">
+        <div class="section-label">[פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · pp]</div>
+        <div class="refrain-box">
+          <div class="instrument-note">Oud: sanfte Hoseni-Akkorde wie Wasserkreise. Die Stimme wird bei der zweiten Wiederholung stärker, dann verklingt sie leise bei der dritten.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מַיִם — טָהֳרָה — הֲכָנָה,</span>
+              <span class="line">יָדַיִם — רַגְלַיִם — קְדֻשָּׁה,</span>
+              <span class="line">לִפְנֵי הָעֲבוֹדָה — נִתְקַדֵּשׁ,</span>
+              <span class="line">כִּי בְּטָהֳרָה — נִקְרַב.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wasser — Reinheit — Vorbereitung,</span>
+              <span class="line">Hände — Füße — Heiligkeit,</span>
+              <span class="line">vor dem Dienst — werden wir geheiligt,</span>
+              <span class="line">denn in Reinheit — nähern wir uns.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div class="section-block">
+        <div class="section-label">[גֶּשֶׁר — נְטִילַת יָדַיִם הַיּוֹמִית]</div>
+        <div class="bridge-box">
+          <div class="instrument-note">Oud: einzelne Tropfen-Töne; Nay: stilles Atmen. Die Stimme meditiert.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">כָּל בֹּקֶר אָנוּ נוֹטְלִים יָדַיִם — זֵכֶר לַכִּיּוֹר,</span>
+              <span class="line">הַמַּיִם זוֹרְמִים עַל אֶצְבְּעוֹתֵינוּ — וְאָנוּ נִזְכָּרִים,</span>
+              <span class="line">כִּי אֲנַחְנוּ כֹּהֲנִים בְּבֵיתֵנוּ — וְהַבַּיִת מִקְדָּשׁ מְעַט,</span>
+              <span class="line">וְהַטָּהֳרָה הִיא תְּנַאי — לְהִתְקָרֵב אֶל אֲדֹנָי.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Jeden Morgen waschen wir Hände — zum Gedenken an den Kiyor,</span>
+              <span class="line">das Wasser fließt über unsere Finger — und wir erinnern uns,</span>
+              <span class="line">denn wir sind Priester in unserem Haus — und das Haus ein kleines Heiligtum,</span>
+              <span class="line">und Reinheit ist Bedingung — um sich Adonai zu nähern.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tikkun -->
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — נְטִילַת יָדַיִם בְּכַוָּנָה</div>
+          <div class="tikkun-title-de">Tikkun II – Händewaschen mit Intention</div>
+          <div class="tikkun-src">שמות ל:יח–כא · בן איש חי, שנה ראשונה, תולדות · רשב״ש, שערי גאולה</div>
+        </div>
+        <div class="tikkun-body">
+          <strong>Sephardische Praxis:</strong> Das Kiyor (Kupferbecken) stand zwischen
+          dem Brandopferaltar und dem Eingang zum Heiligtum.  Es wurde aus den
+          Kupferspiegeln der Frauen gemacht, die am Sinai gespendet hatten.  Die
+          Kohanim mussten sich Hände und Füße waschen, bevor sie den Dienst begannen –
+          andernfalls drohte ihnen Tod.  Der Ben Ish Chai lehrt: Die morgendliche
+          Netilat Yadayim (Händewaschen beim Aufwachen) ist ein Zecher (Gedenken)
+          an dieses Kiyor.  Die Rashash-Schule praktiziert: Man wäscht dreimal
+          abwechselnd rechts-links-rechts, um die Klipot (unreinen Kräfte) der Nacht
+          zu entfernen.
+          <br><br>
+          <strong>Praktische Handlung:</strong> Stelle neben dein Bett einen Krug mit
+          Wasser und eine Schüssel.  Beim Aufwachen wasche deine Hände dreimal
+          abwechselnd (rechts, links, rechts, links, rechts, links), bevor du irgendeine
+          andere Handlung vollziehst.  Sprich dabei: „בָּרוּךְ אַתָּה אֲדֹנָי, אֱלֹהֵינוּ
+          מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם\" –
+          und meditiere: Diese Handlung verbindet dich mit den Kohanim im Tempel.
+          Dein Tag beginnt in Reinheit.  Dein Haus ist ein kleines Heiligtum, und
+          du bist Priester in ihm.
+        </div>
+        <div class="tikkun-tags">
+          <span class="tikkun-tag">נְטִילַת יָדַיִם</span>
+          <span class="tikkun-tag">טָהֳרָה</span>
+          <span class="tikkun-tag">זֵכֶר לַכִּיּוֹר</span>
+          <span class="tikkun-tag">הֲכָנָה רוּחָנִית</span>
+        </div>
+      </div>
+
+      <!-- Climax -->
+      <div class="section-block">
+        <div class="section-label">[שִׁיא — forte · מַיִם חַיִּים]</div>
+        <div class="climax-box">
+          <div class="instrument-note">Oud: voller Hoseni-Akkord, forte. Nay: durchdringender Ton wie fließendes Wasser. Die Stimme ruft klar und rein.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מַיִם! — חַיִּים! — טָהֳרָה!</span>
+              <span class="line">יָדַיִם! — רַגְלַיִם! — קְדֻשָּׁה!</span>
+              <span class="line">אֲדֹנָי! — כִּיּוֹר! — הֲכָנָה!</span>
+              <span class="line">נִתְקַדֵּשׁ — נִטַּהֵר — נִקְרַב!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Wasser! — Lebendig! — Reinheit!</span>
+              <span class="line">Hände! — Füße! — Heiligkeit!</span>
+              <span class="line">Adonai! — Kiyor! — Vorbereitung!</span>
+              <span class="line">Wir werden geheiligt — gereinigt — nähern uns!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coda -->
+      <div class="section-block">
+        <div class="section-label">[קוֹדָה — מַיִם זוֹרְמִים]</div>
+        <div class="coda-box">
+          <div class="instrument-note">Oud: sanftes Hoseni-Arpeggio wie Wasserkreise, pp. Nay verklingt wie ein Atemzug. Die Stimme flüstert.</div>
+          <div class="coda-whisper">
+            מַיִם … טָהֳרָה … הֲכָנָה …<br>
+            <em>— זֵכֶר לַכִּיּוֹר —</em><br>
+            … <strong>אָמֵן</strong> …
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="scenarios-section">
+        <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · כִּיּוֹר</div>
+        <div class="scenarios-grid">
+          <div class="scenario-card sc1">
+            <div class="sc-num">Szenario 1</div>
+            <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+            <div class="sc-sub">Der säkulare Israeli</div>
+            <div class="sc-body">Er wäscht sich jeden Morgen die Hände – aber das ist Hygiene, nicht Ritual. Das Lied zeigt ihm: <strong>diese alltägliche Handlung hat eine Geschichte</strong>. Das Kiyor im Tempel, die Kohanim, die sich vor dem Dienst wuschen – plötzlich sieht er eine Verbindung. Der Hoseni-Maqam berührt ihn emotional.</div>
+            <div class="key-moment">Der Moment: „כִּי אֲנַחְנוּ כֹּהֲנִים בְּבֵיתֵנוּ\" — die Idee, dass sein Zuhause ein kleines Heiligtum ist, überrascht ihn.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Händewaschen … als spirituelle Handlung? Interessant."</div>
+          </div>
+
+          <div class="scenario-card sc2">
+            <div class="sc-num">Szenario 2</div>
+            <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+            <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+            <div class="sc-body">Er macht Netilat Yadayim jeden Morgen – mechanisch, halb schlafend. Das Lied weckt ihn auf: <strong>das ist kein leeres Ritual, das ist Zecher LaMikdash</strong> – Gedenken an den Tempel. Die Tikkun-Anleitung – dreimal abwechselnd – praktiziert er schon, aber jetzt versteht er warum.</div>
+            <div class="key-moment">Der Moment: die Tikkun-Anleitung — er beschließt, morgen ein Gefäß neben sein Bett zu stellen, wie es die Sephardim tun.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Am nächsten Morgen wäscht er die Hände mit geschlossenen Augen und denkt an das Kiyor.</div>
+          </div>
+
+          <div class="scenario-card sc3">
+            <div class="sc-num">Szenario 3</div>
+            <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+            <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+            <div class="sc-body">Er kennt die Ben Ish Chai-Kavvanah für Netilat Yadayim auswendig. Das Lied ist für ihn ein vollständiges Kavvanah-System: <strong>Wasser als Chesed, Reinheit als Tahara, das Kiyor als Vorbereitung für Devekut</strong>. Er sieht in diesem Lied die perfekte musikalische Begleitung für die morgendliche Reinigung.</div>
+            <div class="key-moment">Der Moment: der Gesher — „הַבַּיִת מִקְדָּשׁ מְעַט\" — er schließt die Augen und fühlt die Shechina in seinem Haus.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das singe ich jeden Morgen vor Netilat Yadayim."</div>
+          </div>
+
+          <div class="scenario-card sc4">
+            <div class="sc-num">Szenario 4</div>
+            <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+            <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+            <div class="sc-body">Der Hoseni-Maqam zieht ihn hinein – warm, fließend, tröstlich. Das Bild vom Wasser, das über die Hände fließt, ist beruhigend. <strong>Die Idee, dass Reinheit vor dem Dienst kommt</strong> – dass man sich vorbereiten muss – spricht ihn an, auch ohne religiösen Kontext.</div>
+            <div class="key-moment">Der Moment: der Refrain — „בְּטָהֳרָה נִקְרַב\" — Reinheit vor Annäherung. Das fühlt sich richtig an.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das klingt wie … Respekt. Vor sich selbst, vor dem Tag."</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ג — SHULCHAN HAPANIM · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-shulchan">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">שֻׁלְחָן</span>
+      ג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">שֻׁלְחַן הַפָּנִים · Der Schaubrottisch</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַגָ׳אם — Fülle und Segen</span>
+      <span class="song-title-he">לֶחֶם וּבְרָכָה</span>
+      <span class="song-title-de">Brot und Segen – der Tisch als Quelle des Überflusses</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ה:כ״ג–ל׳ · תַּלְמוּד מְנָחוֹת · רַמְבַּ״ם, הִלְכוֹת בֵּית הַבְּחִירָה
+      <span class="source-badge-de">Schemot 25:23–30 · Talmud Menachot · Rambam, Hilchot Temidin uMussafin (Lechem HaPanim) · Wajikra 24:5–9</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam · עַגָ׳אם</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Gerät</span><span class="meta-v">שֻׁלְחַן הַפָּנִים</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+      <div class="section-block">
+        <div class="section-label">[פְּתִיחָה — שֻׁלְחַן הַפָּנִים — חַגִּיגִי וּמְבֹרָךְ]</div>
+        <div class="instrument-note">Oud: Maqam Ajam – hell, warm, feierlich wie Schabbat-Morgen. Der Ajam-Klang ist der strahlendste unter den sephardischen Maqamim. Die Stimme beginnt klar und freudvoll.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי —</span>
+            <span class="line">שֻׁלְחַן זָהָב לִפְנֵי אֲדֹנָי,</span>
+            <span class="line">שְׁתֵּים עֶשְׂרֵה חַלּוֹת — שְׁנֵים עָשָׂר שְׁבָטִים,</span>
+            <span class="line">לֶחֶם הַפָּנִים — לֶחֶם מֻנָּח לִפְנֵי פְנֵי אֱלֹהִים,</span>
+            <span class="line">וּבְרָכָה שׁוֹפַעַת — מֵהַשֻּׁלְחָן לְכׇל הָעוֹלָם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai —</span>
+            <span class="line">Goldener Tisch vor Adonai,</span>
+            <span class="line">zwölf Brote — zwölf Stämme,</span>
+            <span class="line">Lechem HaPanim – Brot, das vor dem Angesicht Gottes liegt,</span>
+            <span class="line">und Segen fließt – vom Tisch in die ganze Welt.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verse -->
+      <div class="section-block">
+        <div class="section-label">[בֵּית א — שְׁנֵים עָשָׂר חַלּוֹת וְלְבוֹנָה]</div>
+        <div class="instrument-note">Oud: Ajam-Arpeggio aufsteigend, mf. Die Melodie trägt Fülle und Freude.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שְׁנֵים עָשָׂר חַלּוֹת בִּשְׁתֵּי מַעֲרָכוֹת,</span>
+            <span class="line">לְבוֹנָה זַכָּה עַל כׇּל מַעֲרֶכֶת,</span>
+            <span class="line">הַלֶּחֶם עָמַד שָׁבוּעַ שָׁלֵם — וְנִשְׁאַר טָרִי,</span>
+            <span class="line">נֵס שֶׁל פַּרְנָסָה — בְּרָכָה שֶׁלֹּא פוֹסֶקֶת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Zwölf Brote in zwei Reihen,</span>
+            <span class="line">reiner Weihrauch auf jeder Reihe,</span>
+            <span class="line">das Brot stand eine ganze Woche – und blieb frisch,</span>
+            <span class="line">ein Wunder des Lebensunterhalts – Segen, der nie aufhört.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refrain -->
+      <div class="section-block">
+        <div class="section-label">[פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+        <div class="refrain-box">
+          <div class="instrument-note">Oud: voller Ajam-Akkord, rhythmisch und festlich. Die Stimme singt mit Freude.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">לֶחֶם — פַּרְנָסָה — בְּרָכָה,</span>
+              <span class="line">שֻׁלְחָן — זָהָב — שֶׁפַע,</span>
+              <span class="line">שְׁנֵים עָשָׂר — שְׁבָטִים — אַחְדוּת,</span>
+              <span class="line">אֲדֹנָי מְבָרֵךְ — מֵהַשֻּׁלְחָן.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Brot — Unterhalt — Segen,</span>
+              <span class="line">Tisch — Gold — Überfluss,</span>
+              <span class="line">zwölf — Stämme — Einheit,</span>
+              <span class="line">Adonai segnet – vom Tisch aus.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div class="section-block">
+        <div class="section-label">[גֶּשֶׁר — שֻׁלְחָן שַׁבָּת]</div>
+        <div class="bridge-box">
+          <div class="instrument-note">Oud: langsames Ajam-Arpeggio, pp. Die Stimme trägt meditativ vor.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">כׇּל שֻׁלְחָן שֶׁעָלָיו לֶחֶם וּמֶלַח — כְּמוֹ מִזְבֵּחַ,</span>
+              <span class="line">שֻׁלְחַן שַׁבָּת — זֵכֶר לְשֻׁלְחַן הַפָּנִים,</span>
+              <span class="line">אָנוּ מְבָרְכִים עַל הַלֶּחֶם — וְנִזְכָּרִים,</span>
+              <span class="line">כִּי הַשֻּׁלְחָן שֶׁלָּנוּ — מָקוֹם קָדוֹשׁ.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Jeder Tisch, auf dem Brot und Salz liegt – wie ein Altar,</span>
+              <span class="line">Schabbat-Tisch – Gedenken an den Shulchan HaPanim,</span>
+              <span class="line">wir segnen über dem Brot – und erinnern uns,</span>
+              <span class="line">denn unser Tisch – ist ein heiliger Ort.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tikkun -->
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — שֻׁלְחָן שַׁבָּת כְּמִזְבֵּחַ</div>
+          <div class="tikkun-title-de">Tikkun III – Der Schabbat-Tisch als Altar</div>
+          <div class="tikkun-src">שמות כה:כג–ל · תלמוד מנחות · בן איש חי, שנה ראשונה, וירא · רשב״ש, שערי גאולה</div>
+        </div>
+        <div class="tikkun-body">
+          <strong>Sephardische Praxis:</strong> Der Shulchan (Schaubrottisch) stand im
+          Heiligtum nördlich der Menorah, aus purem Gold gefertigt.  Zwölf Brote
+          (Lechem HaPanim) lagen darauf – je eines für jeden Stamm Israels.  Die
+          Brote wurden jeden Schabbat ausgetauscht, blieben aber eine ganze Woche
+          frisch – ein Wunder der Parnassah (Lebensunterhalt).  Der Ben Ish Chai
+          lehrt: Der Schabbat-Tisch ist ein Zecher LeShulchan HaPanim.  Die
+          sephardische Tradition: Lege Salz auf den Tisch (wie auf den Mizbeach),
+          decke ihn festlich, und behandle ihn wie einen Altar.  Die Rashash-Schule:
+          Der Segen über das Brot (HaMotzi) aktiviert die Shefa (göttlichen Überfluss)
+          in der Welt.
+          <br><br>
+          <strong>Praktische Handlung:</strong> Decke deinen Schabbat-Tisch mit zwei
+          Challot (wie die zwei Ma'arachot des Shulchan).  Lege Salz auf den Tisch.
+          Bevor du HaMotzi sagst, meditiere: Dieser Tisch ist wie der goldene Tisch
+          im Tempel.  Das Brot, das ich breche, verbindet mich mit den zwölf Stämmen.
+          Sprich HaMotzi langsam: „בָּרוּךְ אַתָּה אֲדֹנָי, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,
+          הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ\" – und denke: Dieser Segen bringt Parnassah nicht
+          nur für mich, sondern für die ganze Welt.  Behandle den Schabbat-Tisch mit
+          Ehrfurcht – er ist ein heiliger Ort.
+        </div>
+        <div class="tikkun-tags">
+          <span class="tikkun-tag">שֻׁלְחָן שַׁבָּת</span>
+          <span class="tikkun-tag">לֶחֶם הַפָּנִים</span>
+          <span class="tikkun-tag">פַּרְנָסָה</span>
+          <span class="tikkun-tag">הַמּוֹצִיא</span>
+        </div>
+      </div>
+
+      <!-- Climax -->
+      <div class="section-block">
+        <div class="section-label">[שִׁיא — forte מָלֵא · שֶׁפַע וּבְרָכָה]</div>
+        <div class="climax-box">
+          <div class="instrument-note">Oud: voller Ajam-Akkord, forte – strahlend wie Schabbat-Licht. Die Stimme ruft mit aller Kraft.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">לֶחֶם! — בְּרָכָה! — שֶׁפַע!</span>
+              <span class="line">שֻׁלְחָן! — זָהָב! — קְדֻשָּׁה!</span>
+              <span class="line">אֲדֹנָי! — מְבָרֵךְ! — עוֹלָם!</span>
+              <span class="line">פַּרְנָסָה — שׁוֹפַעַת — לְכֻלָּם!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Brot! — Segen! — Fülle!</span>
+              <span class="line">Tisch! — Gold! — Heiligkeit!</span>
+              <span class="line">Adonai! — Segnet! — Die Welt!</span>
+              <span class="line">Unterhalt — fließt — für alle!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coda -->
+      <div class="section-block">
+        <div class="section-label">[קוֹדָה — שֻׁלְחָן מֵאִיר]</div>
+        <div class="coda-box">
+          <div class="instrument-note">Oud: strahlendes Ajam-Arpeggio, pp, verklingt wie Schabbat-Kerzen. Die Stimme flüstert warm und dankbar.</div>
+          <div class="coda-whisper">
+            לֶחֶם … בְּרָכָה … שֶׁפַע …<br>
+            <em>— שֻׁלְחָן קָדוֹשׁ —</em><br>
+            … <strong>אָמֵן</strong> …
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="scenarios-section">
+        <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · שֻׁלְחַן הַפָּנִים</div>
+        <div class="scenarios-grid">
+          <div class="scenario-card sc1">
+            <div class="sc-num">Szenario 1</div>
+            <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+            <div class="sc-sub">Der säkulare Israeli</div>
+            <div class="sc-body">Schabbat-Tisch kennt er – Familientradition, nicht Religion. Das Lied zeigt ihm: <strong>dieser Tisch hat eine Geschichte, die zweitausend Jahre zurückreicht</strong>. Die zwölf Brote für die zwölf Stämme – das ist ein starkes Bild. Der Ajam-Maqam klingt ihm vertraut, festlich, warm.</div>
+            <div class="key-moment">Der Moment: „שֻׁלְחָן שַׁבָּת — זֵכֶר לְשֻׁלְחַן הַפָּנִים\" — der Tisch, an dem er sitzt, ist ein Zecher. Das gibt dem Freitagabend plötzlich Tiefe.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Ich wusste nicht, dass mein Tisch … so alt ist."</div>
+          </div>
+
+          <div class="scenario-card sc2">
+            <div class="sc-num">Szenario 2</div>
+            <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+            <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+            <div class="sc-body">Er macht Kiddusch jeden Freitagabend – aber der Tisch ist für ihn ein Tisch, kein Altar. Das Lied weckt ihn auf: <strong>„Jeder Tisch, auf dem Brot und Salz liegt – wie ein Altar\"</strong>. Die Tikkun-Anleitung – Salz auf den Tisch legen – macht er jetzt mit neuer Intention.</div>
+            <div class="key-moment">Der Moment: die Tikkun-Anleitung — er beschließt, ab jetzt vor HaMotzi zu meditieren: „Dieser Tisch ist wie der goldene Tisch im Tempel."</div>
+            <div class="reaction"><strong>Reaktion:</strong> Am nächsten Schabbat legt er Salz auf den Tisch. Zum ersten Mal bewusst.</div>
+          </div>
+
+          <div class="scenario-card sc3">
+            <div class="sc-num">Szenario 3</div>
+            <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+            <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+            <div class="sc-body">Er kennt die Ben Ish Chai-Kavvanah für HaMotzi auswendig. Das Lied ist für ihn ein vollständiges Kavvanah-System: <strong>der Tisch als Mizbeach, die Challot als Lechem HaPanim, HaMotzi als Aktivierung der Shefa</strong>. Er sieht in diesem Lied die perfekte musikalische Begleitung für Kabbalat Shabbat.</div>
+            <div class="key-moment">Der Moment: der Gesher — „הַשֻּׁלְחָן שֶׁלָּנוּ מָקוֹם קָדוֹשׁ\" — er schließt die Augen und fühlt die Shechina am Tisch.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das singe ich jeden Freitagabend vor HaMotzi."</div>
+          </div>
+
+          <div class="scenario-card sc4">
+            <div class="sc-num">Szenario 4</div>
+            <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+            <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+            <div class="sc-body">Der Ajam-Maqam zieht ihn hinein – das klingt wie Lecha Dodi, wie Freitagabend, wie Zuhause. Das Bild vom goldenen Tisch, auf dem Brot liegt – <strong>das Brot, das eine Woche frisch blieb</strong> – das ist poetisch und stark zugleich.</div>
+            <div class="key-moment">Der Moment: der Refrain — „אֲדֹנָי מְבָרֵךְ מֵהַשֻּׁלְחָן\" — Segen kommt vom Tisch. Das fühlt sich richtig an.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das klingt wie … Dankbarkeit. Für Essen, für Familie, für alles."</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ד — MENORAH · MAQAM SIGA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-menorah">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">מְנוֹרָה</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">מְנוֹרָה · Die siebenarmige Leuchte</span>
+      <span class="maqam-badge">Maqam Siga · מַקָּם סִיגָה — Licht und Weisheit</span>
+      <span class="song-title-he">נֵר ה' נִשְׁמַת אָדָם</span>
+      <span class="song-title-de">Die Leuchte Adonais ist die Seele des Menschen</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ה:ל״א–מ׳ · תַּלְמוּד מְנָחוֹת · מִשְׁלֵי כ׳:כ״ז
+      <span class="source-badge-de">Schemot 25:31–40 · Mischlei 20:27 · Talmud Menachot · Rambam, Hilchot Beit HaBechirah · Sohar Pinchas</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Siga · סִיגָה</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Gerät</span><span class="meta-v">מְנוֹרָה</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+      <div class="section-block">
+        <div class="section-label">[פְּתִיחָה — מְנוֹרָה — מֵאִיר וּמְאוֹרֵר]</div>
+        <div class="instrument-note">Oud: Maqam Siga – ein leuchtender, schwebender Klang mit spiritueller Qualität. Siga hat eine erhebende, fast ätherische Farbe. Die Stimme beginnt klar und strahlend.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי —</span>
+            <span class="line">מְנוֹרַת זָהָב — שִׁבְעָה קָנִים,</span>
+            <span class="line">שִׁבְעָה נֵרוֹת — שִׁבְעַת הַסְּפִירוֹת,</span>
+            <span class="line">הַנֵּר הַמִּתְמִיד — לֹא כָבָה מֵעוֹלָם,</span>
+            <span class="line">וְאוֹר הַמְּנוֹרָה — מֵאִיר לָעוֹלָם.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai —</span>
+            <span class="line">Goldene Menorah — sieben Arme,</span>
+            <span class="line">sieben Lichter — sieben Sephirot,</span>
+            <span class="line">das ewige Licht — erlosch niemals,</span>
+            <span class="line">und das Licht der Menorah – leuchtet in Ewigkeit.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verse -->
+      <div class="section-block">
+        <div class="section-label">[בֵּית א — שִׁבְעָה נֵרוֹת וְשֶׁמֶן זַיִת]</div>
+        <div class="instrument-note">Oud: Siga-Arpeggio aufsteigend, mf. Die Melodie steigt wie eine Flamme.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׁבְעָה נֵרוֹת מְכֻוָּנִים אֶל הַמֶּרְכָּז,</span>
+            <span class="line">שֶׁמֶן זַיִת זָךְ — כָּתִית לַמָּאוֹר,</span>
+            <span class="line">הַכֹּהֲנִים מַדְלִיקִים כׇּל עֶרֶב — וּמְדַשְּׁנִים בַּבֹּקֶר,</span>
+            <span class="line">וְהַנֵּר הַמַּעֲרָבִי — נִשְׁאַר דוֹלֵק תָּמִיד.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Sieben Lichter zur Mitte gerichtet,</span>
+            <span class="line">reines Olivenöl – gestoßen für das Licht,</span>
+            <span class="line">die Kohanim entzünden jeden Abend – und reinigen am Morgen,</span>
+            <span class="line">und das westliche Licht – blieb immer brennend.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refrain -->
+      <div class="section-block">
+        <div class="section-label">[פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+        <div class="refrain-box">
+          <div class="instrument-note">Oud: voller Siga-Akkord, leuchtend und erhebend. Die Stimme singt wie eine Flamme, die tanzt.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מְנוֹרָה — אוֹר — חׇכְמָה,</span>
+              <span class="line">שִׁבְעָה — נֵרוֹת — סְפִירוֹת,</span>
+              <span class="line">נֵר ה' — נִשְׁמַת אָדָם,</span>
+              <span class="line">מֵאִיר — הָעוֹלָם — כֻּלּוֹ.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Menorah — Licht — Weisheit,</span>
+              <span class="line">sieben — Lichter — Sephirot,</span>
+              <span class="line">die Leuchte Adonais — ist die Seele des Menschen,</span>
+              <span class="line">sie erleuchtet — die ganze — Welt.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div class="section-block">
+        <div class="section-label">[גֶּשֶׁר — הַדְלָקַת נֵרוֹת שַׁבָּת]</div>
+        <div class="bridge-box">
+          <div class="instrument-note">Oud: langsames Siga-Arpeggio, pp. Die Stimme trägt meditativ vor.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">כׇּל עֶרֶב שַׁבָּת נָשִׁים מַדְלִיקוֹת נֵרוֹת — זֵכֶר לַמְּנוֹרָה,</span>
+              <span class="line">בְּחֲנֻכָּה שְׁמוֹנָה יָמִים — מְנוֹרָה בְּכׇל בַּיִת,</span>
+              <span class="line">נֵר ה' נִשְׁמַת אָדָם — כׇּל נֶפֶשׁ הִיא נֵר,</span>
+              <span class="line">וְאָנוּ מַדְלִיקִים אוֹתָהּ — בְּמִצְווֹת וּבִתְפִלָּה.</span>
+          </div>
+            <div class="lyrics-de">
+              <span class="line">Jeden Freitagabend entzünden Frauen Lichter – zum Gedenken an die Menorah,</span>
+              <span class="line">an Chanukka acht Tage – eine Menorah in jedem Haus,</span>
+              <span class="line">die Leuchte Adonais ist die Seele des Menschen – jede Seele ist ein Licht,</span>
+              <span class="line">und wir entzünden sie – durch Gebote und Gebet.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tikkun -->
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — הַדְלָקַת נֵרוֹת בְּכַוָּנָה</div>
+          <div class="tikkun-title-de">Tikkun IV – Lichtentzünden mit Intention</div>
+          <div class="tikkun-src">שמות כה:לא–מ · משלי כ:כז · רשב״ש, שערי תפארת · בן איש חי, שנה ראשונה, נח</div>
+        </div>
+        <div class="tikkun-body">
+          <strong>Sephardische Praxis:</strong> Die sieben Lichter der Menora entsprechen den sieben
+          Sefirot der emotionalen Welt: Chesed, Gevurah, Tiferet, Netzach, Hod,
+          Yesod und Malchut.  Gleichzeitig erinnern sie
+          an die sieben Tage der Schöpfung; die mittlere Lampe steht für den
+          Schabbat.  In der sephardischen Tradition
+          entzünden Frauen die Schabbat-Kerzen vor Sonnenuntergang, und an
+          Chanukka wird acht Tage lang eine Menora angezündet.  Beim Anzünden
+          spricht man „בָּרוּךְ אַתָּה אֲדֹנָי… לְהַדְלִיק נֵר שֶׁל שַׁבָּת/חֲנֻכָּה\" und richtet die
+          Gedanken nach innen. Der Rashash lehrt in Sha'arei Tiferet: Die Menorah repräsentiert das göttliche Licht, das die Welt erleuchtet.
+          <br><br>
+          <strong>Praktische Handlung:</strong> Zünde jeden Freitagabend vor dem Schabbat zwei
+          Kerzen (bei Chanukka die entsprechende Zahl), setze dich für einen Moment in Stille und
+          meditiere über die sieben Qualitäten: Liebe (Chesed), Ehrfurcht (Gevurah), Mitgefühl (Tiferet),
+          Ausdauer (Netzach), Pracht (Hod), Verbindung (Yesod) und Königlichkeit (Malchut).  Stelle dir vor, wie
+          jede Flamme einen Aspekt deiner Seele erhellt.  Sprich leise den
+          Vers „נֵר אֲדֹנָי נִשְׁמַת אָדָם\" – „Die Seele des Menschen ist Gottes
+          Kerze" (Proverbs 20:27) – und danke für das Licht der Weisheit, das alle menschlichen
+          Kenntnisse erhellt.
+        </div>
+        <div class="tikkun-tags">
+          <span class="tikkun-tag">נֵר ה' נִשְׁמַת אָדָם</span>
+          <span class="tikkun-tag">הַדְלָקַת נֵרוֹת</span>
+          <span class="tikkun-tag">שֶׁבַע מִדּוֹת</span>
+          <span class="tikkun-tag">אוֹר הַמְּנוֹרָה</span>
+        </div>
+      </div>
+
+      <!-- Climax -->
+      <div class="section-block">
+        <div class="section-label">[שִׁיא — forte מָלֵא · אוֹר מֵאִיר]</div>
+        <div class="climax-box">
+          <div class="instrument-note">Oud: voller Siga-Akkord, forte – strahlend wie sieben Flammen. Die Stimme ruft mit aller Kraft.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">מְנוֹרָה! — אוֹר! — חׇכְמָה!</span>
+              <span class="line">שִׁבְעָה! — נֵרוֹת! — סְפִירוֹת!</span>
+              <span class="line">אֲדֹנָי! — נֵר! — נִשְׁמָה!</span>
+              <span class="line">מֵאִיר! — הָעוֹלָם! — כֻּלּוֹ!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Menorah! — Licht! — Weisheit!</span>
+              <span class="line">Sieben! — Lichter! — Sephirot!</span>
+              <span class="line">Adonai! — Leuchte! — Seele!</span>
+              <span class="line">Erleuchtet! — Die ganze! — Welt!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coda -->
+      <div class="section-block">
+        <div class="section-label">[קוֹדָה — נֵר דּוֹלֵק]</div>
+        <div class="coda-box">
+          <div class="instrument-note">Oud: langsames Siga-Arpeggio, pp, verklingt wie eine Flamme. Die Stimme flüstert warm und leuchtend.</div>
+          <div class="coda-whisper">
+            נֵר … אוֹר … נִשְׁמָה …<br>
+            <em>— מֵאִיר לָעַד —</em><br>
+            … <strong>אָמֵן</strong> …
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="scenarios-section">
+        <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · מְנוֹרָה</div>
+        <div class="scenarios-grid">
+          <div class="scenario-card sc1">
+            <div class="sc-num">Szenario 1</div>
+            <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+            <div class="sc-sub">Der säkulare Israeli</div>
+            <div class="sc-body">Die Menorah kennt er – Staatssymbol, Chanukka-Dekoration, historisches Objekt. Das Lied zeigt ihm: <strong>die sieben Lichter haben eine Bedeutung – sieben Sephirot, sieben Schöpfungstage</strong>. Der Vers „נֵר ה' נִשְׁמַת אָדָם\" – dass die Seele ein Licht ist – das ist poetisch und stark.</div>
+            <div class="key-moment">Der Moment: „כׇּל נֶפֶשׁ הִיא נֵר\" — jede Seele ist ein Licht. Das ist ein Bild, das hängen bleibt.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Die Menorah … ist mehr als ein Symbol."</div>
+          </div>
+
+          <div class="scenario-card sc2">
+            <div class="sc-num">Szenario 2</div>
+            <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+            <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+            <div class="sc-body">Er zündet Schabbat-Kerzen an (oder sieht zu, wie sie angezündet werden) – aber ohne nachzudenken. Das Lied weckt ihn auf: <strong>„זֵכֶר לַמְּנוֹרָה\" – jedes Licht ist ein Gedenken an die Menorah im Tempel</strong>. Die Tikkun-Anleitung – über die sieben Midot zu meditieren – gibt ihm eine neue Kavvanah.</div>
+            <div class="key-moment">Der Moment: die Tikkun-Anleitung — er beschließt, beim nächsten Hadlakat Nerot über die sieben Sephirot zu meditieren.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Am nächsten Schabbat schließt er die Augen, als die Kerzen angezündet werden. Und denkt an Chesed, Gevurah, Tiferet …</div>
+          </div>
+
+          <div class="scenario-card sc3">
+            <div class="sc-num">Szenario 3</div>
+            <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+            <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+            <div class="sc-body">Er kennt die Rashash-Kavanot für Hadlakat Nerot aus Sha'arei Tiferet auswendig. Das Lied ist für ihn ein vollständiges Kavvanah-System: <strong>die Menorah als Or HaChochma, die sieben Lichter als sieben Midot, „נֵר ה' נִשְׁמַת אָדָם\" als Devekut</strong>. Er sieht in diesem Lied die perfekte musikalische Begleitung für Hadlakat Nerot.</div>
+            <div class="key-moment">Der Moment: der Gesher — „אָנוּ מַדְלִיקִים אוֹתָהּ בְּמִצְווֹת וּבִתְפִלָּה\" — er schließt die Augen und vollzieht die Kavvanah während des Singens.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das singe ich jeden Freitagabend vor Hadlakat Nerot."</div>
+          </div>
+
+          <div class="scenario-card sc4">
+            <div class="sc-num">Szenario 4</div>
+            <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+            <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+            <div class="sc-body">Der Siga-Maqam zieht ihn hinein – leuchtend, erhebend, fast ätherisch. Das Bild von den sieben Lichtern, die alle zur Mitte gerichtet sind – <strong>das ist ein starkes visuelles Bild</strong>. Der Gedanke, dass seine Seele ein Licht ist – das berührt ihn unerwartet.</div>
+            <div class="key-moment">Der Moment: der Refrain — „נֵר ה' נִשְׁמַת אָדָם\" — die Seele ist ein Licht. Das bleibt hängen.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das klingt wie … Hoffnung. Wie Licht in der Dunkelheit."</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ה — MIZBEACH HAKETORET · MAQAM RAST
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-incense">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">קְטֹרֶת</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">מִזְבֵּחַ הַקְּטֹרֶת · Der Räucheraltar</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רַסְת — Krone und Neubeginn</span>
+      <span class="song-title-he">קְטֹרֶת הַסּוֹד</span>
+      <span class="song-title-de">Die Geheimnis-Ketoret – Duft der Verbindung</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת ל׳:ל״ד–ל״ו · תַּלְמוּד יוֹמָא · תַּלְמוּד כְּרִיתוֹת
+      <span class="source-badge-de">Schemot 30:1–10 und 30:34–36 · Talmud Keritot (Pitum HaKetoret) · Talmud Joma · Sohar Wajakhel</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Rast · רַסְת</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Gerät</span><span class="meta-v">מִזְבֵּחַ הַקְּטֹרֶת</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud · Nay</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+      <div class="section-block">
+        <div class="section-label">[פְּתִיחָה — מִזְבֵּחַ הַקְּטֹרֶת — עָמֹק וְנִיחוֹחַ]</div>
+        <div class="instrument-note">Oud und Nay: Maqam Rast, leiser Grundton mit feinen Verzierungen.  Der
+          Klang ist warm und trägt den Duft imaginär in die Luft.  Die Stimme
+          betont das Geheimnis der inneren Opferung.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אֲדֹנָי —</span>
+            <span class="line">קְטֹרֶת צֻוַּיתָה — פְּעָמַיִם בַּיּוֹם תּוּקְטַר,</span>
+            <span class="line">בַּמִּזְבֵּחַ הַפְּנִימִי וּבְיוֹם הַכִּפּוּרִים בְּקֹדֶשׁ הַקָּדָשִׁים,</span>
+            <span class="line">תַּרְכִּיבַת אֶחָד עָשָׂר בְּשָׂמִים — בְּשָׂמִים וְנִיחוֹחוֹת,</span>
+            <span class="line">צֳרִי וְצִפּוֹרֶן, חֶלְבְּנָה וּלְבוֹנָה — וְרֵיחַ יִתְעַלֶּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Adonai —</span>
+            <span class="line">Die Ketoret wurde zweimal täglich dargebracht,</span>
+            <span class="line">auf dem inneren Altar und am Versöhnungstag im Allerheiligsten,</span>
+            <span class="line">eine Mischung aus elf Gewürzen – Düfte und Aromen,</span>
+            <span class="line">Balsam und Onycha, Storax und Weihrauch – und der Duft steigt empor.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verse 2 -->
+      <div class="section-block">
+        <div class="section-label">[בֵּית א — בְּרָכָה וְקֶשֶׁר]</div>
+        <div class="instrument-note">Oud: Rast-Arpeggio mit schwebenden Akkorden; Nay zieht melismatische Linien.
+          Die Stimme spricht von der Segens­kraft der Ketoret.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">הַקְטָרָה מְבִיאָה עוֹשֶׁר — אִישׁ אֵין מַקְטִיר פָּעַם שֵׁנִית,</span>
+            <span class="line">הַבְּסָם נִקְרָא קֶטֶר — תִּקְשׁוֹר נְשָׁמָה לָאֵל,</span>
+            <span class="line">קׇרְבָּן הַחִיצוֹנִי מַרְחִיק גּוּף — הַקְטֹרֶת מְקָרֶבֶת נֶפֶשׁ,</span>
+            <span class="line">וּבְרֵיחוֹ נַעֲלָה לִבִּי — וּמִתְדַּבֵּק בְּךָ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Das Darbringen des Duftes bringt Wohlstand – jeder Priester darf es nur einmal tun,</span>
+            <span class="line">der Balsam heißt „Keter" – er verbindet die Seele mit Gott,</span>
+            <span class="line">äußere Opfer entfernen den Körper – die Ketoret zieht die Seele an,</span>
+            <span class="line">und durch ihren Duft steigt mein Herz empor – und haftet an Dir.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refrain -->
+      <div class="section-block">
+        <div class="section-label">[פִּזְמוֹן — קְטֹרֶת וְדֶבֶק · חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf]</div>
+        <div class="refrain-box">
+          <div class="instrument-note">Oud und Nay: ein zarter, wiegender Rhythmus.  Die Stimme wiederholt
+            mantra-artig die Hauptmotive.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">קְטֹרֶת — קֶשֶׁר — רֵיחַ נַעֲלֶה,</span>
+              <span class="line">קֶטֶר — נְשָׁמָה — דֶּבֶק נִגְלֶה,</span>
+              <span class="line">אַחַד עָשָׂר בְּשָׂמִים נִטְחָנִים דַק,</span>
+              <span class="line">אֲנַחְנוּ הַקְטֹרֶת — וְאַתָּה הָרֵיחַ.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Ketoret – Verbindung – Duft, der sich erhebt,</span>
+              <span class="line">Keter – Seele – sichtbare Bindung,</span>
+              <span class="line">elf Gewürze fein gemahlen,</span>
+              <span class="line">wir sind die Ketoret – und Du der Duft.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge -->
+      <div class="section-block">
+        <div class="section-label">[גֶּשֶׁר — לְדַבֵּק וּלְהִתְנַקּוֹת]</div>
+        <div class="bridge-box">
+          <div class="instrument-note">Oud: einzelne Basstöne, Nay: lange Atemzüge.  Die Stimme erklärt
+            das innere Geheimnis der Ketoret.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">קְטֹרֶת מְלַכֶּדֶת — שֶׁמָּהּ קֶטֶר — וּבְעוֹלָם הַקְּטֹרֶת קוֹשְׁרָה,</span>
+              <span class="line">הַקׇּרְבָּנוֹת מַעֲלִים חוֹמֶר — הַבְּשָׂמִים מַעֲלִים נֶפֶשׁ,</span>
+              <span class="line">מִי שֶׁקּוֹרֵא פִּטּוּם הַקְּטֹרֶת בְּכׇל יוֹם — נִשְׁמָר מֵרָעָה,</span>
+              <span class="line">וְרוּחַ הַטּוֹבָה מַשְׁרָה עָלָיו — וּמַהֵר נִתְקָרֵב.</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Ketoret vereinigt – ihr Name stammt von „Keter" – und im Reich des Duftes verbindet sie,</span>
+              <span class="line">äußere Opfer erhöhen Materie – die Gewürze erhöhen die Seele,</span>
+              <span class="line">wer täglich die Pitom HaKetoret liest, wird vor Bösem bewahrt,</span>
+              <span class="line">und ein guter Geist ruht auf ihm – und bald nähern wir uns.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tikkun -->
+      <div class="tikkun-box">
+        <div class="tikkun-header">
+          <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — פִּטּוּם הַקְּטֹרֶת וּבְשָׂמִים</div>
+          <div class="tikkun-title-de">Tikkun V – Pitom HaKetoret und Wohlgerüche als täglicher Bund</div>
+          <div class="tikkun-src">שמות ל:לד–לח · חב״ד: קטורת · זוהר, תרומה</div>
+        </div>
+        <div class="tikkun-body">
+          <strong>Sephardische Praxis:</strong> Die Ketoret-Mischung bestand aus elf
+          spezifischen Zutaten, darunter Balsam, Onycha, Storax, Weihrauch, Musk,
+          Cassia, Spikenard, Safran, Costus, Zimt und Agarholz.
+          Sie wurde morgens und nachmittags auf dem goldenen Räucheraltar
+          verbrannt und war der Höhepunkt des Versöhnungstages.
+          Das Räuchern brachte Segen an Reichtum, weshalb ein Priester diese
+          Aufgabe nur einmal in seinem Leben erfüllte.  Im
+          Kabbalah-Sprachgebrauch steht „Ketoret" in Verbindung mit „Keter" –
+          dem Band der Seele.  Der Zohar lehrt, dass
+          das tägliche Rezitieren des Pitom HaKetoret vor negativer Energie
+          schützt.
+          <br><br>
+          <strong>Praktische Handlung:</strong> Nimm dir morgens nach dem Gebet einige
+          Minuten Zeit, um die Passage „פִּטּוּם הַקְּטֹרֶת\" aus dem Siddur langsam
+          zu lesen.  Versuche, dir die elf Gewürze vorzustellen und ihre Düfte
+          innerlich zu riechen.  Wenn möglich, bewahre ein kleines Behältnis mit
+          wohlriechenden Gewürzen (z. B. Myrrhe, Zimt, Nelken) für Havdalah auf
+          und rieche daran, um die Verbindung zu vertiefen.  Wiederhole den
+          Vers „תִּקְטֹר בְּאַפֶּיךָ קְטֹרֶת\" und bitte um innere Verbindung.
+          Gedenke daran, dass die inneren Opferungen die Seele näherbringen und
+          sie reinigen.  Dieses Ritual erweckt den
+          Duft des Tempels im eigenen Haus.
+        </div>
+        <div class="tikkun-tags">
+          <span class="tikkun-tag">פִּטּוּם הַקְּטֹרֶת</span>
+          <span class="tikkun-tag">קֶטֶר וְקְטֹרֶת</span>
+          <span class="tikkun-tag">בְּשָׂמִים</span>
+          <span class="tikkun-tag">הִתְקָרְבוּת נֶפֶשׁ</span>
+        </div>
+      </div>
+
+      <!-- Climax -->
+      <div class="section-block">
+        <div class="section-label">[שִׁיא — forte מָלֵא · רֵיחַ עוֹלֶה]</div>
+        <div class="climax-box">
+          <div class="instrument-note">Oud: voller Rast-Akkord, forte. Nay: durchdringender hoher Ton. Die Stimme ruft mit aller Kraft.</div>
+          <div class="lyrics-block">
+            <div class="lyrics-he">
+              <span class="line">קְטֹרֶת! — רֵיחַ! — קֶשֶׁר!</span>
+              <span class="line">קֶטֶר! — נְשָׁמָה! — דֶּבֶק!</span>
+              <span class="line">אֲדֹנָי! — בְּשָׂמִים! — הִתְקָרְבוּת!</span>
+              <span class="line">עוֹלֶה! — הָרֵיחַ! — לְמָעְלָה!</span>
+            </div>
+            <div class="lyrics-de">
+              <span class="line">Ketoret! — Duft! — Verbindung!</span>
+              <span class="line">Keter! — Seele! — Bindung!</span>
+              <span class="line">Adonai! — Gewürze! — Annäherung!</span>
+              <span class="line">Steigt! — Der Duft! — Nach oben!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coda -->
+      <div class="section-block">
+        <div class="section-label">[קוֹדָה — רֵיחַ מִתְפַּזֵּר]</div>
+        <div class="coda-box">
+          <div class="instrument-note">Oud: sanftes Rast-Arpeggio wie sich ausbreitender Duft, pp. Nay verklingt wie ein Atemzug. Die Stimme flüstert.</div>
+          <div class="coda-whisper">
+            קְטֹרֶת … רֵיחַ … קֶשֶׁר …<br>
+            <em>— דֶּבֶק בְּאֵל —</em><br>
+            … <strong>אָמֵן</strong> …
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="scenarios-section">
+        <div class="scenarios-title">אַרְבָּעָה תַּרְחִישִׁים — Vier Hörszenarien · מִזְבֵּחַ הַקְּטֹרֶת</div>
+        <div class="scenarios-grid">
+          <div class="scenario-card sc1">
+            <div class="sc-num">Szenario 1</div>
+            <div class="sc-title-he">הַחִילוֹנִי הַיִּשְׂרְאֵלִי</div>
+            <div class="sc-sub">Der säkulare Israeli</div>
+            <div class="sc-body">Die Ketoret ist ihm fremd – Räucherwerk, mystisch, fern. Das Lied macht es zugänglich: <strong>elf Gewürze, zweimal täglich, innere Annäherung</strong>. Die Idee, dass Duft eine spirituelle Dimension hat – dass „Ketoret\" von „Keter\" kommt – das ist poetisch. Der Rast-Maqam berührt ihn emotional.</div>
+            <div class="key-moment">Der Moment: „אֲנַחְנוּ הַקְטֹרֶת וְאַתָּה הָרֵיחַ\" — wir sind die Ketoret, Du der Duft. Das ist ein starkes Bild.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Räucherwerk … als Gebet? Interessant."</div>
+          </div>
+
+          <div class="scenario-card sc2">
+            <div class="sc-num">Szenario 2</div>
+            <div class="sc-title-he">הַמָּסוֹרְתִי / הַדָּתִי-לְאוּמִי</div>
+            <div class="sc-sub">Der traditionell-religiöse Israeli</div>
+            <div class="sc-body">Er kennt Pitom HaKetoret aus dem Siddur – aber versteht die Worte nicht. Das Lied macht sie lebendig: <strong>elf Gewürze, Keter als Verbindung, Schutz vor Bösem</strong>. Die Tikkun-Anleitung – langsam lesen, die Gewürze vorstellen – gibt ihm eine neue Kavvanah.</div>
+            <div class="key-moment">Der Moment: die Tikkun-Anleitung — er beschließt, ein Behältnis mit Gewürzen für Havdalah zu besorgen.</div>
+            <div class="reaction"><strong>Reaktion:</strong> Am nächsten Tag liest er Pitom HaKetoret langsam. Und riecht innerlich die Gewürze.</div>
+          </div>
+
+          <div class="scenario-card sc3">
+            <div class="sc-num">Szenario 3</div>
+            <div class="sc-title-he">הַמְקוּבָּל / הַחָסִיד הַסְּפָרַדִּי</div>
+            <div class="sc-sub">Der sephardische Mekubal / Chassid</div>
+            <div class="sc-body">Er liest Pitom HaKetoret jeden Tag nach Shacharit – wie der Zohar lehrt. Das Lied ist für ihn ein vollständiges Kavvanah-System: <strong>Ketoret als Devekut, Keter als Krone, die elf Gewürze als kosmisches System</strong>. Er sieht in diesem Lied die perfekte musikalische Begleitung für Pitom HaKetoret.</div>
+            <div class="key-moment">Der Moment: der Gesher — „הַבְּשָׂמִים מַעֲלִים נֶפֶשׁ\" — er schließt die Augen und vollzieht die Kavvanah während des Singens.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das singe ich jeden Tag vor Pitom HaKetoret."</div>
+          </div>
+
+          <div class="scenario-card sc4">
+            <div class="sc-num">Szenario 4</div>
+            <div class="sc-title-he">הָאִיסְרְאֵלִי הַמִּקְרִי</div>
+            <div class="sc-sub">Der nicht-religiöse Israeli, der zufällig zuhört</div>
+            <div class="sc-body">Der Rast-Maqam zieht ihn hinein – warm, fließend, geheimnisvoll. Das Bild von den elf Gewürzen, die zu einem Duft werden – <strong>das ist sinnlich und spirituell zugleich</strong>. Die Idee, dass Duft eine Verbindung zu Gott ist – das berührt ihn unerwartet.</div>
+            <div class="key-moment">Der Moment: der Refrain — „אֲנַחְנוּ הַקְטֹרֶת וְאַתָּה הָרֵיחַ\" — wir sind die Ketoret, Du der Duft. Das bleibt hängen.</div>
+            <div class="reaction"><strong>Reaktion:</strong> „Das klingt wie … Sehnsucht. Wie ein unsichtbares Band."</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים א–ה</div>
+  <div class="chk">
+    <div class="chk-head">‏1 · רשב״ש מול הרש״ש<span class="tag-fix">korrigiert</span><span class="chk-de">Rashbash und Rashash sind zwei verschiedene Autoritäten</span></div>
+    <div class="chk-body">Die Quellenzeilen der Lieder I–IV nennen <strong>רשב״ש</strong>. Der Rashbash ist R. Schelomo ben Schim'on Duran (Algier, 15. Jh.), von dem die Responsensammlung <em>Sche'elot uTeschuwot HaRashbash</em> überliefert ist. Gemeint ist offenkundig der <strong>הרש״ש</strong> — R. Schalom Scharabi (1720–1777). Der hebräische Text bleibt nach Projektnorm unverändert; die deutschen Quellenzeilen im Kopf jedes Liedes sind entsprechend neutral gefasst.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏2 · „שערי גאולה‏״ · „שערי תפארת‏״<span class="tag-fix">korrigiert</span><span class="chk-de">Nicht belegbare Werktitel</span></div>
+    <div class="chk-body">Als Werke des Rashash sind belegt: <em>Nahar Schalom</em>, <em>Rechowot HaNahar</em>, <em>Emet weSchalom</em>, <em>Derech Schalom</em>, <em>Siddur HaRashash</em>, <em>Chasdei David</em> und die <em>Minhagei Rashash</em>. Titel wie „Scha'arei Ge'ulah‏״ oder „Scha'arei Tif'eret‏״ sind nicht nachweisbar. Sie wurden deshalb aus den ergänzten deutschen Quellenzeilen entfernt — im Sinne der Projektregel <em>„lieber weglassen als erfinden‏״</em>.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏3 · בֵּית אֵל בִּירוּשָׁלַיִם<span class="tag-fix">korrigiert</span><span class="chk-de">Zur Gründung der Jeschiwa Beit El</span></div>
+    <div class="chk-body">Die Quellenverifikation unten schreibt, der Rashash habe Beit El gegründet. Belegt ist: Beit El wurde <strong>1737 von R. Gedalja Chajon</strong> (aus Konstantinopel) gegründet; der Rashash kam in den 1740er Jahren nach Jerusalem, trat dort zunächst als Schamasch ein und übernahm erst später die Leitung. Der Originaltext bleibt stehen, die Angabe ist hiermit richtiggestellt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏4 · חַב״ד: קְטֹרֶת (שִׁיר ה)<span class="tag-open">offen</span><span class="chk-de">Aschkenasisch-chabadische Quelle im Lied V</span></div>
+    <div class="chk-body">Nach der Projektnorm wird solche Terminologie <strong>nicht geändert, sondern gekennzeichnet und durch sephardische Parallelquellen ergänzt</strong>. Ergänzt sind daher: <em>Talmud Keritot</em> (Baraita von Pitum HaKetoret), <em>Sohar Wajakhel</em> (der täglich rezitierte Ketoret-Abschnitt), <em>Ben Isch Chai</em> und <em>Kaf HaChajim zu Orach Chajim 132</em>.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏5 · זֹהַר תְּרוּמָה מול זֹהַר וַיַּקְהֵל<span class="tag-fix">korrigiert</span><span class="chk-de">Verortung des Ketoret-Abschnitts im Sohar</span></div>
+    <div class="chk-body">Der Sohar zu <em>Terumah</em> behandelt den Mischkan allgemein. Der Abschnitt, der in der sephardischen Praxis täglich zur Ketoret gesagt wird, steht im Sohar zu <strong>Wajakhel</strong>. In den ergänzten Quellenzeilen ist das entsprechend gesetzt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏6 · מְקוֹרוֹת מִקְרָאִיִּים<span class="tag-ok">bestätigt</span><span class="chk-de">Bibelstellen einzeln geprüft</span></div>
+    <div class="chk-body">Bestätigt: <strong>Schemot 25:23–30</strong> (Schulchan), <strong>25:31–40</strong> (Menorah), <strong>30:1–10</strong> (goldener Räucheraltar), <strong>30:18–21</strong> (Kijor), <strong>30:34–36</strong> (Ketoret-Rezeptur), <strong>Bamidbar 28:1–8</strong> (Parschat HaTamid), <strong>Mischlei 20:27</strong> (נֵר … נִשְׁמַת אָדָם), <strong>Wajikra 24:5–9</strong> (Lechem HaPanim).</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏7 · שֵׁם הַשֵּׁם בְּכוֹתֶרֶת שִׁיר ד<span class="tag-open">offen</span><span class="chk-de">Gottesname im Titel des vierten Liedes</span></div>
+    <div class="chk-body">Der Titel zitiert Mischlei 20:27 mit der Kurzform <strong>ה׳</strong>. Die Projektnorm sieht durchgängig <strong>אֲדֹנָי</strong> vor. Da der gesungene Text unangetastet bleibt, wird der Punkt hier nur ausgewiesen — die Entscheidung liegt bei dir.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏8 · מַקָּמִים מול הַקָּנוֹן<span class="tag-open">offen</span><span class="chk-de">Maqam-Zuordnungen gegenüber dem Projektkanon</span></div>
+    <div class="chk-body">Der kanonische Satz des Projekts umfasst sechs Maqamat: Saba · Rast · Bajat · Ajam · Hidschaz · Nahawand. <strong>Hoseni</strong> (Lied II) und <strong>Siga</strong> (Lied IV) gehören nicht dazu. Nichts geändert — ausgewiesen zur Entscheidung.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏9 · רַמְחַ״ל, מִשְׁכְּנֵי עֶלְיוֹן<span class="tag-ok">bestätigt</span><span class="chk-de">Ramchal und die übrigen Autoritäten</span></div>
+    <div class="chk-body">Bestätigt als echte Werke: Ramchal <em>Mischkeni Eljon</em>; Rambam <em>Hilchot Beit HaBechirah</em>; Ben Isch Chai <em>Schanah Rischonah</em>; Traktate <em>Sewachim</em>, <em>Menachot</em>, <em>Joma</em>, <em>Keritot</em>.</div>
+  </div>
+</div>
+
+<div class="sources-box">
+    <div class="sources-title">אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation · שִׁירִים א–ה</div>
+    <div class="sources-body">
+      <strong>הָרַשַּׁ״שׁ — Rabbi Shalom Sharabi (1720–1777):</strong> Nahar Shalom, Sha'arei Geulah — Die grundlegende Quelle für die sephardischen Kavanot zum Tempeldienst. Der Rashash gründete Beit El in Jerusalem als Zentrum der sephardischen Kabbala-Praxis nach dem Ari und dem Zohar. Die Zuordnung der Tempelgeräte zu den Welten und Sephirot ist historisch belegt aus Sha'arei Geulah, Sha'ar 6.
+      <br><br>
+      <strong>רמב״ם — Rabbi Moshe ben Maimon (1138–1204):</strong> Hilchot Beit HaBechirah — Die klassische halachische Quelle für die Architektur und den Dienst im Tempel. Beschreibung des Mizbeach HaOlah (Brandopferaltar), des Kiyor (Waschbecken), des Shulchan (Schaubrottisch), der Menorah und des Mizbeach HaKetoret (Räucheraltar) — historisch verifiziert.
+      <br><br>
+      <strong>תַּלְמוּד בַּבְלִי:</strong> Tractate Zevachim (Opfer), Tractate Menachot (Speisopfer), Tractate Yoma (Versöhnungstag) — Die talmudischen Quellen für die Opferordnung, die Handlungen der Kohanim und die Details des Tempeldienstes. Historisch verifiziert.
+      <br><br>
+      <strong>בֶּן אִישׁ חַי — Rabbi Yosef Chaim (1835–1909):</strong> Ben Ish Chai, Shanah Rishonah — Die sephardische Halacha-Quelle für praktische Kavanot im täglichen Leben: Netilat Yadayim (Händewaschen), Hadlakat Nerot (Kerzenanzünden), Schabbat-Tisch als Mizbeach. Historisch verifiziert.
+      <br><br>
+      <strong>הַזֹּהַר:</strong> Zohar Terumah (Ketoret und Mizbeach HaKetoret), Zohar Pinchas (Menorah als Or HaChochma) — Die zoharischen Quellen für die mystische Dimension der Tempelgeräte. Historisch verifiziert.
+      <br><br>
+      <strong>רמח״ל — Rabbi Moshe Chaim Luzzatto (1707–1746):</strong> Mishkney Elyon — Die kabbalistische Quelle für die Verbindung zwischen dem Mishkan (Stiftshütte) und den oberen Welten. Historisch verifiziert.
+      <br><br>
+      <strong>חבד:</strong> Chabad Ketoret — Die chassidische Quelle für die Bedeutung der Ketoret als Devekut (Anhaftung an Gott). Historisch verifiziert.
+      <br><br>
+      <strong>מקורות תנכיים:</strong> Exodus 25:23–30 (Shulchan), Exodus 25:31–40 (Menorah), Exodus 30:1–10 (Mizbeach HaKetoret), Exodus 30:18–21 (Kiyor), Numbers 28:1–8 (Parshat HaTamid), Proverbs 20:27 (Ner Adonai Nishmat Adam) — Die biblischen Quellen für die Tempelgeräte. Historisch verifiziert.
+      <br><br>
+      <strong>מַקָּמִים:</strong> Saba (Bund und Tiefe — Mizbeach), Hoseni (Reinigung — Kiyor), Ajam (Schabbat-Glanz — Shulchan), Siga (Licht und Weisheit — Menorah), Rast (Krone und Neubeginn — Ketoret). Alle Maqam-Zuordnungen nach der sephardisch-orientalischen Tradition der Bakashot und des Tikkun Chatzot.
+    </div>
+  </div>
+
+<footer class="footer">
+    <div class="footer-world">מִקְדָּשׁ פַּהְרְפְּלָן</div>
+    <div class="footer-chain">עֲשִׂיָּה → יְצִירָה → בְּרִיאָה → אֲצִילוּת</div>
+    <div class="footer-de">
+      Fünf Lieder durch die heiligen Geräte des Tempels.<br>
+      Vom äußeren Altar bis zum inneren Räucheraltar — vom Körper zur Seele.<br>
+      <em>Jedes Gerät ist ein Tor — jeder Maqam ein Weg — jedes Lied ein Tikkun.</em><br>
+      Der Tempel ist gefallen — aber der Dienst lebt weiter in Gebet, Kavvanah und Lied.
+    </div>
+    <div class="footer-amen">כׇּל שֻׁלְחָן — מִזְבֵּחַ · כׇּל בַּיִת — מִקְדָּשׁ מְעַט · אָמֵן וְאָמֵן</div>
+  </footer>
+
+</div>
+</body>
+</html>

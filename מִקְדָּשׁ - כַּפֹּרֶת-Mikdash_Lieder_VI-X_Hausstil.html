@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מִקְדָּשׁ — שִׁירִים ו–י · פָּרֹכֶת עַד אָרוֹן · הַמָּסוֹרֶת הַסְּפָרַדִּית</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #5A54A8;
+  --acc-lt:      #A098DC;
+  --acc-vlt:     #D0CCF0;
+  --acc-dim:     #12102E;
+  --acc-bdr:     rgba(90,84,168,.34);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #C0A8E0;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(90,84,168,.20) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(120,100,190,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(120,100,190,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(90,84,168,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(90,84,168,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(160,152,220,.70) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(160,152,220,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(160,152,220,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(160,152,220,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(160,152,220,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(160,152,220,.70) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(160,152,220,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(160,152,220,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(160,152,220,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(160,152,220,.50), 0 0 120px rgba(90,84,168,.28), 0 0 220px rgba(90,84,168,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(90,84,168,.20) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(90,84,168,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(90,84,168,.09),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(90,84,168,.09),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(90,84,168,.09),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">מִקְדָּשׁ</span>
+    <span class="nav-brand-sub">Parochet → Aron · שִׁירִים ו–י</span>
+  </div>
+  <a class="nav-link" href="#song-parochet"><span class="nav-he"><span class="nav-num">ו</span>פָּרֹכֶת</span><span class="nav-de">Der Vorhang</span></a>
+  <a class="nav-link" href="#song-keruvim"><span class="nav-he"><span class="nav-num">ז</span>כְּרוּבִים</span><span class="nav-de">Die Cherubim</span></a>
+  <a class="nav-link" href="#song-luchot"><span class="nav-he"><span class="nav-num">ח</span>לוּחוֹת הַבְּרִית</span><span class="nav-de">Die Bundestafeln</span></a>
+  <a class="nav-link" href="#song-kapporet"><span class="nav-he"><span class="nav-num">ט</span>כַּפֹּרֶת</span><span class="nav-de">Die Sühneplatte</span></a>
+  <a class="nav-link" href="#song-aron"><span class="nav-he"><span class="nav-num">י</span>אֲרוֹן הַקֹּדֶשׁ</span><span class="nav-de">Die Bundeslade</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">כְּלֵי הַקֹּדֶשׁ · הַמָּסוֹרֶת הַסְּפָרַדִּית · חֲמִשָּׁה שִׁירִים</p>
+  <h1 class="page-title-he">מִקְדָּשׁ</h1>
+  <p class="page-title-de">Der innere Bereich — Lieder VI–X · Vom Vorhang bis zur Bundeslade</p>
+  <p class="page-desc">
+    Fünf Lieder über die Geräte hinter dem Vorhang:
+    <strong>פָּרֹכֶת · כְּרוּבִים · לוּחוֹת הַבְּרִית · כַּפֹּרֶת · אֲרוֹן הַקֹּדֶשׁ</strong> —
+    von der Grenze zwischen Heiligem und Allerheiligstem bis zum Ort, an dem die Stimme
+    zwischen den Keruvim spricht. Die Quellen stehen neben dem Text, nicht in ihm:
+    <em>הָרַשַּׁ״שׁ, בֶּן אִישׁ חַי, רַמַּ״ק, אוֹר הַחַיִּים, רַמְחַ״ל, רַמְבַּ״ן, גִּיקַטִּילָּא</em>.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">חָצֵר</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">הֵיכָל</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">קֹדֶשׁ הַקֳּדָשִׁים</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-parochet">
+    <span class="sn-num">ו</span>
+    <span class="sn-he">פָּרֹכֶת</span>
+    <span class="sn-de">Der Vorhang</span>
+    <span class="sn-maqam">Maqam Nahawand</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-keruvim">
+    <span class="sn-num">ז</span>
+    <span class="sn-he">כְּרוּבִים</span>
+    <span class="sn-de">Die Cherubim</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-luchot">
+    <span class="sn-num">ח</span>
+    <span class="sn-he">לוּחוֹת הַבְּרִית</span>
+    <span class="sn-de">Die Bundestafeln</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-kapporet">
+    <span class="sn-num">ט</span>
+    <span class="sn-he">כַּפֹּרֶת</span>
+    <span class="sn-de">Die Sühneplatte</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-aron">
+    <span class="sn-num">י</span>
+    <span class="sn-he">אֲרוֹן הַקֹּדֶשׁ</span>
+    <span class="sn-de">Die Bundeslade</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ו — PAROCHET · TIFERET · MAQAM NAHAWAND
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-parochet">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">פָּרֹכֶת</span>
+      ו
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">תִּפְאֶרֶת דִּיצִירָה · Tiferet d'Yetzirah</span>
+      <span class="maqam-badge">Maqam Nahawand · מַקָּם נַהַאוַונְד — Gilui und Hester · Balance</span>
+      <span class="song-title-he">פָּרֹכֶת — הַמָּסָךְ שֶׁבֵּין עוֹלָמוֹת</span>
+      <span class="song-title-de">Der Vorhang — Die Grenze zwischen den Welten</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ו:ל״א–ל״ה · אוֹר הַחַיִּים · רַמְבַּ״ן, פֵּרוּשׁ עַל הַתּוֹרָה
+      <span class="source-badge-de">Schemot 26:31–35 · Or HaChajim zu Schemot 26:31 · Ramban, Perusch al HaTorah (Terumah) · Rashash, Nahar Schalom</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Nahawand · נַהַאוַונְד</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">תִּפְאֶרֶת</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Oud</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הַפָּרֹכֶת כְּגִלּוּי וְהֶסְתֵּר]</div>
+    <p class="instr">
+      Oud beginnt sanft im Maqam Nahawand — die harmonische Mischung aus Dur und Moll spiegelt
+      den Vorhang wider: halb Offenbarung, halb Verhüllung. Die Stimme singt von der paradoxen
+      Natur des Parochet: Er trennt und verbindet zugleich.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — פָּרֹכֶת תְּכֵלֶת וְאַרְגָּמָן,</span>
+        <span class="line">מַפְרִיד בֵּין קֹדֶשׁ לְקֹדֶשׁ הַקֳּדָשִׁים,</span>
+        <span class="line">וְגַם מְחַבֵּר — כִּי בַּמָּסָךְ רֹאִים,</span>
+        <span class="line">כִּי יֵשׁ אֱלֹהִים מֵעֵבֶר לַמָּסָךְ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — ein Vorhang aus Blau und Purpur,</span>
+        <span class="line">trennt zwischen Heiligtum und Allerheiligstem,</span>
+        <span class="line">und verbindet auch — denn durch den Schleier sehen wir,</span>
+        <span class="line">dass Gott jenseits des Vorhangs ist.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הַיַּחַס בֵּין גִּלּוּי לְהֶסְתֵּר]</div>
+    <p class="instr">
+      Das Oud spielt eine absteigende Melodie — wie der Vorhang, der sich senkt. Die Verse
+      erkunden die Dialektik: Gott offenbart sich, indem er sich verhüllt.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">גִּלּוּי מֻחְלָט — אִם הָיָה, הָיִינוּ שׂוֹרְפִים,</span>
+        <span class="line">הֶסְתֵּר מֻחְלָט — אִם הָיָה, הָיִינוּ אֲבֵדִים,</span>
+        <span class="line">וּפָרֹכֶת בָּא — נוֹתֵן אוֹר וְצֵל בְּיַחַד,</span>
+        <span class="line">מַרְאֶה וּמַסְתִּיר — תִּפְאֶרֶת הָאִזּוּן.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Vollständige Offenbarung — wäre sie, würden wir verbrennen,</span>
+        <span class="line">vollständige Verborgenheit — wäre sie, würden wir verloren gehen,</span>
+        <span class="line">und der Vorhang kommt — gibt Licht und Schatten zusammen,</span>
+        <span class="line">zeigt und verbirgt — Tiferet der Balance.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַפָּרֹכֶת בְּחַיֵּינוּ]</div>
+    <p class="instr">
+      Der Rhythmus wird persönlicher, introspektiver. Die Verse bringen den Vorhang in unser Leben:
+      die Momente, in denen Gott sich zeigt, ohne sich ganz zu offenbaren.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">בְּכָל רֶגַע שֶׁאֲנִי חַי — יֵשׁ פָּרֹכֶת בֵּינִי לְבֵינוֹ,</span>
+        <span class="line">רוֹאֶה אֶת הָעוֹלָם — וְיוֹדֵעַ כִּי הוּא שָׁם,</span>
+        <span class="line">וְלֹא רוֹאֶה אוֹתוֹ — וְזֶה חֶסֶד גָּדוֹל,</span>
+        <span class="line">כִּי בַּמָּסָךְ אֲנִי יָכוֹל לִחְיוֹת — וְלִקְרֹב.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">In jedem Moment, in dem ich lebe — gibt es einen Vorhang zwischen mir und Ihm,</span>
+        <span class="line">ich sehe die Welt — und weiß, dass Er da ist,</span>
+        <span class="line">und sehe Ihn nicht — und das ist große Güte,</span>
+        <span class="line">denn durch den Schleier kann ich leben — und näher kommen.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — הַפָּרֹכֶת — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Der Refrain wird dreimal gesungen, jedes Mal mit wachsender Intensität. Im Nahawand-Modus
+      wird die Balance zwischen Offenbarung und Verhüllung musikalisch erlebbar.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">פָּרֹכֶת — מַפְרִיד וּמְחַבֵּר,</span>
+        <span class="line">מַרְאֶה וּמַסְתִּיר — בְּאִזּוּן שָׁלֵם,</span>
+        <span class="line">תִּפְאֶרֶת הַיַּחַס — בֵּין אָדָם לְאֱלֹהָיו,</span>
+        <span class="line">אוֹר דֶּרֶךְ מָסָךְ — חֶסֶד וּגְבוּרָה כְּאֶחָד.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Vorhang — trennt und verbindet,</span>
+        <span class="line">zeigt und verbirgt — in vollkommener Balance,</span>
+        <span class="line">Tiferet der Beziehung — zwischen Mensch und seinem Gott,</span>
+        <span class="line">Licht durch den Schleier — Chesed und Gevurah als Eins.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הַפָּרֹכֶת כְּתִפְאֶרֶת]</div>
+    <p class="instr">
+      Das Oud wird leiser, fast wie ein Flüstern. Die Brücke reflektiert über Tiferet als
+      die mittlere Sefira — die Harmonie zwischen allen Gegensätzen.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">תִּפְאֶרֶת — לֹא חֶסֶד וְלֹא גְּבוּרָה,</span>
+        <span class="line">אֶלָּא שְׁנֵיהֶם — בְּיַחַד וּבְהַרְמוֹנְיָה,</span>
+        <span class="line">וְהַפָּרֹכֶת מְלַמֵּד — כֵּיצַד לִהְיוֹת קָרוֹב וְרָחוֹק,</span>
+        <span class="line">לִרְאוֹת וְלֹא לִרְאוֹת — וּבָזֶה לְהִתְקַדֵּשׁ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Tiferet — weder Chesed noch Gevurah,</span>
+        <span class="line">sondern beide — zusammen und in Harmonie,</span>
+        <span class="line">und der Vorhang lehrt — wie man nah und fern ist,</span>
+        <span class="line">zu sehen und nicht zu sehen — und darin geheiligt zu werden.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ו — הַפָּרֹכֶת בַּיּוֹם יוֹם</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung VI — Der Vorhang im Alltag</div>
+      </div>
+      <div class="tikkun-src">Or HaChaim · Ramban · Rashash</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Or HaChaim (Shemot 26:31) erklärt: Der Parochet ist
+      kein Hindernis, sondern eine Vorbereitung. Er ist Tiferet — die Balance zwischen Gilui
+      (Offenbarung) und Hester (Verborgenheit). Ramban (Torat HaAdam) lehrt: Der Vorhang
+      entspricht der Harmonie zwischen Barmherzigkeit und Gerechtigkeit. Rashash betont:
+      Der Parochet zeigt, dass göttliche Nähe Distanz braucht — wie die Sonne, die durch
+      Wolken scheint.<br><br>
+      <strong>Praktische Handlung:</strong> Übe im Alltag die „Parochet-Haltung": Erkenne,
+      dass du Gott nie vollständig sehen kannst, aber auch nie vollständig von Ihm getrennt
+      bist. Wenn du betest, stelle dir einen durchscheinenden Vorhang vor — du sprichst
+      zu jemandem, den du nicht siehst, aber dessen Präsenz du fühlst. Übe auch in
+      zwischenmenschlichen Beziehungen diese Balance: Sei nah, aber respektiere Grenzen.
+      Zeige dich, aber bewahre Heiligkeit. Der Parochet lehrt: Wahre Verbindung braucht
+      heilige Distanz.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">פָּרֹכֶת</span>
+      <span class="tikkun-tag">תִּפְאֶרֶת</span>
+      <span class="tikkun-tag">אִזּוּן גִּלּוּי וְהֶסְתֵּר</span>
+      <span class="tikkun-tag">מִדַּת הַזָּהָב</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַגִּלּוּי דֶּרֶךְ הַמָּסָךְ]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Das Oud spielt kraftvoll, die Stimme steigt auf einen
+      hohen Ton. Der Moment, in dem wir verstehen, dass der Vorhang selbst das Geschenk ist.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבְרֶגַע אֶחָד — הַמָּסָךְ נִפְתָּח בַּלֵּב,</span>
+        <span class="line">וְרוֹאֶה אֲנִי — לֹא בָּעֵינַיִם אֶלָּא בַּנְּשָׁמָה,</span>
+        <span class="line">כִּי הַפָּרֹכֶת הוּא הַדֶּרֶךְ — לֹא הַמִּכְשׁוֹל,</span>
+        <span class="line">וּבוֹ אֲנִי קָרֵב — לְמִי שֶׁאֵינִי רוֹאֶה וְהוּא רוֹאֶה אוֹתִי!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und in einem Moment — öffnet sich der Schleier im Herzen,</span>
+        <span class="line">und ich sehe — nicht mit den Augen, sondern mit der Seele,</span>
+        <span class="line">dass der Vorhang der Weg ist — nicht das Hindernis,</span>
+        <span class="line">und durch ihn nähere ich mich — Dem, den ich nicht sehe und der mich sieht!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַפָּרֹכֶת נִשְׁאָר]</div>
+    <p class="instr">
+      Das Oud kehrt zum sanften Anfangsmotiv zurück. Die Stimme singt leise: Der Vorhang
+      bleibt, und das ist gut so.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַפָּרֹכֶת לֹא נִקְרַע — וְזֶה חֶסֶד,</span>
+        <span class="line">כִּי בּוֹ אֲנִי חַי — בֵּין עוֹלָם לְעוֹלָם,</span>
+        <span class="line">רוֹאֶה דֶּרֶךְ מָסָךְ — וּמַאֲמִין שֶׁיֵּשׁ מֵעֵבֶר,</span>
+        <span class="line">פָּרֹכֶת תְּכֵלֶת — שָׁמַיִם וָאָרֶץ כְּאֶחָד.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Vorhang reißt nicht — und das ist Gnade,</span>
+        <span class="line">denn durch ihn lebe ich — zwischen Welt und Welt,</span>
+        <span class="line">sehe durch den Schleier — und glaube, dass es ein Jenseits gibt,</span>
+        <span class="line">blauer Vorhang — Himmel und Erde als Eins.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ז — KERUVIM · NETZACH · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-keruvim">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כְּרוּבִים</span>
+      ז
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">נֶצַח דִּבְרִיאָה · Netzach d'Beriah</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַג׳ַם — Angesicht zu Angesicht · Dewekut</span>
+      <span class="song-title-he">כְּרוּבִים — מַלְאֲכֵי הַנֶּצַח</span>
+      <span class="song-title-de">Cherubim — Engel der Ewigkeit</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ה:י״ח–כ״ב · בָּבָא בַּתְרָא צ״ט · יוֹמָא נ״ד
+      <span class="source-badge-de">Schemot 25:18–22 · Bawa Batra 99a (Blickrichtung der Keruvim) · Joma 54a–b · Ben Isch Chai, Ben Jehojada</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam · עַג׳ַם</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">נֶצַח</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Kinnor · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הַכְּרוּבִים עַל הַכַּפֹּרֶת]</div>
+    <p class="instr">
+      Harp (כִּנּוֹר) beginnt hell und kraftvoll im Maqam Ajam — ähnlich westlichem Dur,
+      aber mit orientalischer Färbung. Die Stimme singt von den Keruvim, die auf der
+      Kapporet stehen und einander anschauen.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — שְׁנֵי כְּרוּבִים זָהָב,</span>
+        <span class="line">עוֹמְדִים עַל הַכַּפֹּרֶת — כְּנָפַיִם פְּרוּשׂוֹת,</span>
+        <span class="line">וּפְנֵיהֶם זֶה אֶל זֶה — בְּאַהֲבָה נִצְחִית,</span>
+        <span class="line">כִּי נֶצַח — הָאַהֲבָה שֶׁלֹּא נִגְמֶרֶת.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — zwei goldene Cherubim,</span>
+        <span class="line">stehen auf der Kapporet — Flügel ausgebreitet,</span>
+        <span class="line">und ihre Gesichter einander zugewandt — in ewiger Liebe,</span>
+        <span class="line">denn Netzach — ist die Liebe, die nicht endet.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הַכְּרוּבִים כְּמֹשֶׁה וְאַהֲרֹן]</div>
+    <p class="instr">
+      Die Harfe spielt eine dialogische Melodie — zwei Stimmen im Gespräch. Die Verse
+      folgen Rashash: Die Keruvim repräsentieren Netzach und Hod, Moshe und Aharon.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">שְׁנֵי אַחִים — מֹשֶׁה וְאַהֲרֹן,</span>
+        <span class="line">נֶצַח וְהוֹד — נְבוּאָה וּכְהֻנָּה,</span>
+        <span class="line">פּוֹנִים זֶה לָזֶה — לֹא בְּתַחֲרוּת אֶלָּא בְּאַחֲוָה,</span>
+        <span class="line">כִּי הַנֶּצַח הוּא — כְּשֶׁשְּׁנַיִם עוֹבְדִים כְּאֶחָד.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Zwei Brüder — Moshe und Aharon,</span>
+        <span class="line">Netzach und Hod — Prophetie und Priestertum,</span>
+        <span class="line">einander zugewandt — nicht im Wettbewerb, sondern in Brüderlichkeit,</span>
+        <span class="line">denn Netzach ist — wenn zwei als Eins dienen.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַכְּרוּבִים כְּסֵמֶל הַדְּבֵקוּת]</div>
+    <p class="instr">
+      Die Harfe wird intensiver. Die Verse erkunden die Keruvim als Symbol der Devekut —
+      der ewigen Bindung zwischen Gott und Israel. Ben Ish Chai lehrt: Wenn Israel treu ist,
+      schauen die Keruvim einander an.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">כְּשֶׁיִּשְׂרָאֵל עוֹשִׂים רְצוֹן הַמָּקוֹם — הַכְּרוּבִים פּוֹנִים זֶה לָזֶה,</span>
+        <span class="line">וּכְשֶׁלֹּא — הֵם מִסְתּוֹבְבִים,</span>
+        <span class="line">וְלֹא הָאַהֲבָה נִגְמֶרֶת — אֶלָּא הַפָּנִים,</span>
+        <span class="line">כִּי נֶצַח — הוּא הַקֶּשֶׁר שֶׁתָּלוּי בִּבְחִירָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Wenn Israel den Willen Gottes tut — schauen die Keruvim einander an,</span>
+        <span class="line">und wenn nicht — wenden sie sich ab,</span>
+        <span class="line">und die Liebe endet nicht — aber die Zuwendung,</span>
+        <span class="line">denn Netzach — ist die Bindung, die von Wahl abhängt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — כְּרוּבִים — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Kraftvoller Refrain im Ajam-Modus — triumphale, siegreiche Qualität. Die drei
+      Wiederholungen steigern sich in Intensität.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">כְּרוּבִים — כְּנָפַיִם פְּרוּשׂוֹת לְמָעְלָה,</span>
+        <span class="line">נֶצַח — הָאַהֲבָה הַנִּצְחִית,</span>
+        <span class="line">פָּנִים אֶל פָּנִים — בְּדִבּוּר שֶׁל זָהָב,</span>
+        <span class="line">נֶצַח וְהוֹד — מֹשֶׁה וְאַהֲרֹן לְעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Cherubim — Flügel nach oben ausgebreitet,</span>
+        <span class="line">Netzach — die ewige Liebe,</span>
+        <span class="line">Gesicht zu Gesicht — in goldener Rede,</span>
+        <span class="line">Netzach und Hod — Moshe und Aharon für immer.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הַנֶּצַח כְּבְחִירָה]</div>
+    <p class="instr">
+      Die Harfe wird nachdenklich. Die Brücke reflektiert: Netzach ist nicht nur Dauer,
+      sondern treue Wahl — jeden Tag neu.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">נֶצַח — לֹא זֶה שֶׁלֹּא מִשְׁתַּנֶּה,</span>
+        <span class="line">אֶלָּא זֶה שֶׁבּוֹחֵר כָּל יוֹם מֵחָדָשׁ,</span>
+        <span class="line">הַכְּרוּבִים לֹא נִדְבָּקִים — הֵם פּוֹנִים,</span>
+        <span class="line">וּבַפְּנִיָּה — הַנִּצְחִיּוּת נוֹלֶדֶת.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Netzach — ist nicht das, was sich nicht ändert,</span>
+        <span class="line">sondern das, was jeden Tag neu wählt,</span>
+        <span class="line">die Cherubim kleben nicht — sie wenden sich zu,</span>
+        <span class="line">und in der Zuwendung — wird Ewigkeit geboren.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ז — הַכְּרוּבִים בְּיַחֲסִים</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung VII — Die Cherubim in Beziehungen</div>
+      </div>
+      <div class="tikkun-src">Rashash · Ben Ish Chai · Ramban</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Rashash (Nahar Shalom, Drush Keruvim) lehrt:
+      Die Keruvim sind Netzach und Hod — Moshe und Aharon. Sie schauen einander an, wenn
+      Israel Gottes Willen tut. Ben Ish Chai (Ben Yehoyada, Yoma 54a) erklärt: Die Keruvim
+      symbolisieren die ewige Beziehung zwischen Gott und Israel — eine Beziehung, die von
+      Treue abhängt. Ramban (Shemot 25:20) betont: Die Keruvim sind kein Götzenbild, sondern
+      Zeichen der lebendigen Präsenz Gottes.<br><br>
+      <strong>Praktische Handlung:</strong> Übe die „Keruvim-Haltung" in deinen Beziehungen:
+      Schaue die Menschen an, die dir wichtig sind — nicht aus Gewohnheit, sondern aus Wahl.
+      Jeden Tag entscheide neu: Ich wende mich dir zu. In der Ehe, in Freundschaften, in
+      der Beziehung zu Gott — Netzach ist nicht Passivität, sondern aktive Treue. Stelle
+      dir vor, dass dein Gesicht eines der Keruvim ist: Wem wendest du dich zu? Wer sieht
+      deine Zuwendung? Die Keruvim lehren: Ewigkeit entsteht nicht durch Dauer, sondern
+      durch tägliche Wahl.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">כְּרוּבִים</span>
+      <span class="tikkun-tag">נֶצַח</span>
+      <span class="tikkun-tag">דְּבֵקוּת נִצְחִית</span>
+      <span class="tikkun-tag">אַהֲבָה פְּעִילָה</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַפְּנִיָּה]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Die Harfe spielt ein kraftvolles, aufsteigendes Motiv.
+      Die Stimme singt von dem Moment, in dem die Keruvim sich einander zuwenden.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבְרֶגַע אֶחָד — הַפָּנִים נִפְתָּחִים,</span>
+        <span class="line">וְהַכְּרוּבִים רוֹאִים זֶה אֶת זֶה — בְּאַהֲבָה שֶׁלֹּא נִדְעָה,</span>
+        <span class="line">וּמִבֵּינֵיהֶם — קוֹל אֱלֹהִים יוֹצֵא,</span>
+        <span class="line">נֶצַח הוּא — כְּשֶׁשְּׁנַיִם נִפְגָּשִׁים וְהַקָּדוֹשׁ בָּרוּךְ הוּא בֵּינֵיהֶם!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und in einem Moment — öffnen sich die Gesichter,</span>
+        <span class="line">und die Cherubim sehen einander — in unbekannter Liebe,</span>
+        <span class="line">und zwischen ihnen — geht die Stimme Gottes aus,</span>
+        <span class="line">Netzach ist — wenn zwei sich begegnen und der Heilige zwischen ihnen ist!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַכְּרוּבִים נִשְׁאָרִים]</div>
+    <p class="instr">
+      Die Harfe kehrt zum ruhigen Anfangsmotiv zurück. Die Stimme singt leise von der
+      ewigen Wacht der Keruvim.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַכְּרוּבִים עוֹמְדִים — עַל הַכַּפֹּרֶת לְנֶצַח,</span>
+        <span class="line">כְּנָפַיִם פְּרוּשׂוֹת — מָגֵן וּמַצִּיל,</span>
+        <span class="line">וּפְנֵיהֶם זֶה אֶל זֶה — כָּל הַיָּמִים,</span>
+        <span class="line">נֶצַח — הָאַהֲבָה שֶׁבּוֹחֶרֶת כָּל יוֹם מֵחָדָשׁ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Die Cherubim stehen — auf der Kapporet ewig,</span>
+        <span class="line">Flügel ausgebreitet — schützend und rettend,</span>
+        <span class="line">und ihre Gesichter einander zugewandt — alle Tage,</span>
+        <span class="line">Netzach — die Liebe, die jeden Tag neu wählt.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ח — LUCHOT HABERIT · HOD · MAQAM SIGA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-luchot">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">לוּחוֹת</span>
+      ח
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">הוֹד דִּבְרִיאָה · Hod d'Beriah</span>
+      <span class="maqam-badge">Maqam Siga · מַקָּם סִיגָה — Dank und Empfangen</span>
+      <span class="song-title-he">לוּחוֹת הַבְּרִית — דִּבְרֵי אֱלֹהִים חַיִּים</span>
+      <span class="song-title-de">Die Bundestafeln — Worte des lebendigen Gottes</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת ל״ב:ט״ז · דְּבָרִים י׳:ב׳ · בָּבָא בַּתְרָא י״ד · מְנָחוֹת צ״ט
+      <span class="source-badge-de">Schemot 32:16 · Dewarim 10:2 · Bawa Batra 14b (Tafeln und Bruchstücke in der Lade) · Menachot 99a · Ramchal</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Siga · סִיגָה</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">הוֹד</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Kinnor · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — לוּחוֹת אֶבֶן]</div>
+    <p class="instr">
+      Harp (כִּנּוֹר) beginnt sanft und ehrfürchtig im Maqam Siga — eine Tonart mit sanfter,
+      dankbarer Qualität. Die Stimme singt von den Steintafeln, auf denen Gottes Finger schrieb.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — לוּחוֹת אֶבֶן כְּתוּבִים בְּאֶצְבַּע אֱלֹהִים,</span>
+        <span class="line">עֲשֶׂרֶת הַדִּבְּרוֹת — קוֹל שֶׁנַּעֲשָׂה כְּתָב,</span>
+        <span class="line">וְהַתּוֹרָה כֻּלָּהּ — מוּשְׁכֶּבֶת בְּעֶשֶׂר מִלִּים,</span>
+        <span class="line">הוֹד — הַהַכָּרָה שֶׁהַתּוֹרָה מִשָּׁמַיִם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — steinerne Tafeln, geschrieben mit Gottes Finger,</span>
+        <span class="line">die Zehn Gebote — Stimme, die zur Schrift wurde,</span>
+        <span class="line">und die ganze Torah — liegt in zehn Worten,</span>
+        <span class="line">Hod — die Anerkennung, dass die Torah vom Himmel kommt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — לוּחוֹת רִאשׁוֹנִים וּשְׁנִיִּים]</div>
+    <p class="instr">
+      Die Harfe spielt eine zweiteilige Melodie — eine für die ersten Tafeln (göttlich
+      erschaffen), eine für die zweiten (von Moshe gehauen). Die Verse folgen Ben Ish Chai:
+      Beide sind Hod.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">לוּחוֹת רִאשׁוֹנִים — מַעֲשֵׂה אֱלֹהִים הֵם,</span>
+        <span class="line">נִשְׁבְּרוּ — כְּשֶׁעַם יִשְׂרָאֵל חָטָא,</span>
+        <span class="line">לוּחוֹת שְׁנִיִּים — פְּסַל מֹשֶׁה וְאֱלֹהִים כָּתַב,</span>
+        <span class="line">שְׁנֵיהֶם הוֹד — כִּי כָּל תּוֹרָה מִשָּׁמַיִם, גַּם אִם יָדַיִם אֱנוֹשִׁיּוֹת.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Die ersten Tafeln — Werk Gottes sind sie,</span>
+        <span class="line">wurden zerbrochen — als das Volk Israel sündigte,</span>
+        <span class="line">die zweiten Tafeln — Moshe hieb sie, und Gott schrieb,</span>
+        <span class="line">beide sind Hod — denn jede Torah ist vom Himmel, auch wenn menschliche Hände.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַלּוּחוֹת בְּאֲרוֹן]</div>
+    <p class="instr">
+      Die Harfe wird introspektiver. Die Verse singen davon, dass beide Tafeln — die ganzen
+      und die zerbrochenen — in der Bundeslade lagen. Ramban lehrt: Auch das Zerbrochene
+      ist heilig.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">לוּחוֹת שְׁלֵמִים וּשְׁבוּרִים — שְׁנֵיהֶם בָּאֲרוֹן,</span>
+        <span class="line">כִּי גַּם מַה שֶּׁנִּשְׁבַּר — יֵשׁ בּוֹ קְדֻשָּׁה,</span>
+        <span class="line">הוֹד — לֹא רַק הַהַצְלָחָה, גַּם הַכִּשָּׁלוֹן,</span>
+        <span class="line">אִם הוּא מוֹבִיל לִתְשׁוּבָה — גַּם הוּא תּוֹרָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Ganze und zerbrochene Tafeln — beide in der Lade,</span>
+        <span class="line">denn auch was zerbrochen ist — hat Heiligkeit,</span>
+        <span class="line">Hod — nicht nur Erfolg, auch Scheitern,</span>
+        <span class="line">wenn es zu Teshuvah führt — ist es auch Torah.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — לוּחוֹת — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Sanfter, dankbarer Refrain im Siga-Modus. Die drei Wiederholungen werden zunehmend
+      demütiger — Hod ist Demut vor der Herrlichkeit der Torah.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">לוּחוֹת — כְּתוּבִים בְּאֶצְבַּע אֱלֹהִים,</span>
+        <span class="line">הוֹד — הַהַכָּרָה שֶׁהַתּוֹרָה לֹא שֶׁלִּי,</span>
+        <span class="line">אֲנִי רַק מְקַבֵּל — דְּבָרִים שֶׁנִּכְתְּבוּ לִי,</span>
+        <span class="line">שְׁלֵמִים וּשְׁבוּרִים — כֻּלָּם קוֹדֶשׁ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Tafeln — geschrieben mit Gottes Finger,</span>
+        <span class="line">Hod — die Anerkennung, dass die Torah nicht mein ist,</span>
+        <span class="line">ich empfange nur — Worte, die für mich geschrieben wurden,</span>
+        <span class="line">ganze und zerbrochene — alle heilig.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הוֹד כְּהַכָּרָה]</div>
+    <p class="instr">
+      Die Harfe wird sehr leise, fast wie ein Flüstern. Die Brücke reflektiert über Hod
+      als Anerkennung — nicht Stolz, sondern Dankbarkeit.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הוֹד — לֹא זֶה שֶׁאֲנִי גָּדוֹל,</span>
+        <span class="line">אֶלָּא זֶה שֶׁאֲנִי יוֹדֵעַ מִי נָתַן,</span>
+        <span class="line">הַלּוּחוֹת לֹא שֶׁלִּי — הֵם שְׁאֵלָה,</span>
+        <span class="line">וְהַהַכָּרָה בָּזֶה — זוֹ הַקְּדֻשָּׁה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Hod — ist nicht, dass ich groß bin,</span>
+        <span class="line">sondern dass ich weiß, wer gegeben hat,</span>
+        <span class="line">die Tafeln sind nicht mein — sie sind geliehen,</span>
+        <span class="line">und die Anerkennung dessen — das ist Heiligkeit.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ח — לוּחוֹת שְׁבוּרִים בַּלֵּב</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung VIII — Zerbrochene Tafeln im Herzen</div>
+      </div>
+      <div class="tikkun-src">Ramchal · Ben Ish Chai · Ramban</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Ramchal (Klach Pitchei Chochma, Peticha 30)
+      erklärt: Die Luchot sind Hod — die Anerkennung, dass die Torah von Gott kommt,
+      nicht vom Menschen. Ben Ish Chai (Ben Yehoyada, Bava Batra 14a) lehrt: Die ersten
+      Tafeln waren aus göttlicher Schöpfung (Beriah), die zweiten aus menschlicher Arbeit
+      (Assiya) — beides ist Hod. Ramban (Shemot 25:16) betont: Die zerbrochenen Tafeln
+      lagen mit den ganzen in der Bundeslade — auch Scheitern hat Heiligkeit, wenn es
+      zu Teshuvah führt.<br><br>
+      <strong>Praktische Handlung:</strong> Übe im Alltag die „Luchot-Haltung": Erkenne,
+      dass alles Wissen, das du hast — ob religiös oder weltlich — ein Geschenk ist, nicht
+      dein Verdienst. Wenn du Torah lernst, sage vor dem Lernen: „Dies ist nicht meine
+      Weisheit, sondern Deine." Bewahre auch deine „zerbrochenen Tafeln" — die Momente,
+      in denen du gescheitert bist — als Teil deiner Geschichte. Wirf sie nicht weg.
+      Lege sie neben deine Erfolge. Die Luchot lehren: Auch das Zerbrochene ist heilig,
+      wenn es zur Demut führt.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">לוּחוֹת</span>
+      <span class="tikkun-tag">הוֹד</span>
+      <span class="tikkun-tag">הַכָּרַת הַטּוֹבָה</span>
+      <span class="tikkun-tag">קְדֻשַּׁת הַשֶּׁבֶר</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַקַּבָּלָה]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Die Harfe spielt kraftvoll, aber mit Ehrfurcht. Die Stimme
+      singt von dem Moment, in dem Moshe die Tafeln empfängt.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבְרֶגַע אֶחָד — הָאֶצְבַּע נוֹגַעַת בָּאֶבֶן,</span>
+        <span class="line">וְהָאוֹתִיּוֹת מִתְחַקּוֹת — מִתּוֹךְ הָאוֹר,</span>
+        <span class="line">וּמֹשֶׁה עוֹמֵד — יָדַיִם רוֹעֲדוֹת,</span>
+        <span class="line">כִּי הוֹד — לָדַעַת שֶׁזֶּה לֹא שֶׁלִּי, זֶה שְׁאֵלָה לְדוֹרוֹת!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und in einem Moment — berührt der Finger den Stein,</span>
+        <span class="line">und die Buchstaben werden eingraviert — aus dem Licht heraus,</span>
+        <span class="line">und Moshe steht — mit zitternden Händen,</span>
+        <span class="line">denn Hod — zu wissen, dass dies nicht mein ist, es ist geliehen für Generationen!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַלּוּחוֹת נִשְׁאָרִים]</div>
+    <p class="instr">
+      Die Harfe kehrt zum sanften Anfangsmotiv zurück. Die Stimme singt leise von den
+      Tafeln, die in der Lade ruhen.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַלּוּחוֹת שׁוֹכְבִים — בָּאֲרוֹן לְעוֹלָם,</span>
+        <span class="line">שְׁלֵמִים וּשְׁבוּרִים — כֻּלָּם יַחַד,</span>
+        <span class="line">וְזוֹכְרִים אוֹתָנוּ — כִּי אֲנַחְנוּ מְקַבְּלִים,</span>
+        <span class="line">הוֹד — הַתּוֹדָה הַשְּׁקֵטָה לְמִי שֶׁנָּתַן.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Die Tafeln ruhen — in der Lade für immer,</span>
+        <span class="line">ganze und zerbrochene — alle zusammen,</span>
+        <span class="line">und erinnern uns — dass wir Empfangende sind,</span>
+        <span class="line">Hod — der stille Dank an Den, der gegeben hat.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ט — KAPPORET · YESOD · MAQAM BAYAT
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-kapporet">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כַּפֹּרֶת</span>
+      ט
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">יְסוֹד דִּבְרִיאָה · Jesod d'Beriah</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָּאת — Vermittlung · Kapparah</span>
+      <span class="song-title-he">כַּפֹּרֶת — מְקוֹם הַכַּפָּרָה וְהַחִבּוּר</span>
+      <span class="song-title-de">Die Sühneplatte — Ort der Versöhnung und Verbindung</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ה:י״ז–כ״ב · וַיִּקְרָא ט״ז · מִשְׁנָה יוֹמָא ה׳
+      <span class="source-badge-de">Schemot 25:17–22 · Wajikra 16 (Awodat Jom HaKippurim) · Mischna Joma 5 · Rambam, Hilchot Awodat Jom HaKippurim</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Bayat · בַּיָּאת</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">יְסוֹד</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Kinnor · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הַכַּפֹּרֶת כְּיְסוֹד]</div>
+    <p class="instr">
+      Harp (כִּנּוֹר) beginnt im Maqam Bayat — ein vermittelnder Modus, weder zu hoch noch
+      zu tief, genau wie Yesod, das Fundament, das Himmel und Erde verbindet. Die Stimme
+      singt von der goldenen Platte auf der Bundeslade.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — כַּפֹּרֶת זָהָב טָהוֹר,</span>
+        <span class="line">כִּסּוּי הָאָרוֹן — מָקוֹם שֶׁהַדָּם נִזְרַק,</span>
+        <span class="line">יְסוֹד — הַמְּקוֹם שֶׁשָּׁמַיִם וָאָרֶץ נִפְגָּשִׁים,</span>
+        <span class="line">כַּפָּרָה — הַחִבּוּר מֵחָדָשׁ בְּדָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — Kapporet aus reinem Gold,</span>
+        <span class="line">Deckel der Lade — Ort, an dem das Blut gesprengt wird,</span>
+        <span class="line">Yesod — der Ort, an dem Himmel und Erde sich treffen,</span>
+        <span class="line">Sühne — die Wiederverbindung durch Blut.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הַדָּם עַל הַכַּפֹּרֶת]</div>
+    <p class="instr">
+      Die Harfe spielt eine aufsteigende Melodie — wie das Blut, das nach oben gesprengt wird.
+      Die Verse folgen Ben Ish Chai: Das Blut auf der Kapporet ist wie Samen in Yesod.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">בְּיוֹם הַכִּפּוּרִים — הַכֹּהֵן הַגָּדוֹל נִכְנָס,</span>
+        <span class="line">אֶל קֹדֶשׁ הַקֳּדָשִׁים — רַק פַּעַם אַחַת בַּשָּׁנָה,</span>
+        <span class="line">וְהִזָּה הַדָּם — עַל פְּנֵי הַכַּפֹּרֶת קֵדְמָה,</span>
+        <span class="line">וּבַדָּם הַזֶּה — הַכַּפָּרָה זוֹרַעַת שָׁלוֹם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Am Versöhnungstag — tritt der Hohepriester ein,</span>
+        <span class="line">ins Allerheiligste — nur einmal im Jahr,</span>
+        <span class="line">und sprengte das Blut — auf die Kapporet nach Osten,</span>
+        <span class="line">und mit diesem Blut — sät die Sühne Frieden.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — יְסוֹד כְּמְקוֹם הַחִבּוּר]</div>
+    <p class="instr">
+      Die Harfe wird introspektiv. Die Verse erkunden Yesod als Fundament — der Ort, an dem
+      alle Sephirot zusammenfließen und von dem aus Shefa (göttlicher Überfluss) in die Welt kommt.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">יְסוֹד — לֹא רַק יְסוֹד מִלְּמַטָּה,</span>
+        <span class="line">אֶלָּא גַּם צִנּוֹר — שֶׁדֶּרֶךְ כָּךְ הַכֹּל זוֹרֵם,</span>
+        <span class="line">הַכַּפֹּרֶת — מְחַבֶּרֶת אֱלֹהִים וְאָדָם,</span>
+        <span class="line">כִּי הַכַּפָּרָה — הִיא הַשֶּׁפַע הַנִּצְחִי.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Yesod — nicht nur Fundament von unten,</span>
+        <span class="line">sondern auch Kanal — durch den alles fließt,</span>
+        <span class="line">die Kapporet — verbindet Gott und Mensch,</span>
+        <span class="line">denn Sühne — ist der ewige Überfluss.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — כַּפֹּרֶת — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Vermittelnder Refrain im Bayat-Modus — weder zu freudig noch zu traurig. Die drei
+      Wiederholungen spiegeln die Bewegung von Trennung über Sühne zu Wiederverbindung.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">כַּפֹּרֶת — מְקוֹם הַחִבּוּר בֵּין עוֹלָמוֹת,</span>
+        <span class="line">יְסוֹד — הַיְּסוֹד שֶׁל הַכַּפָּרָה,</span>
+        <span class="line">דָּם נִזְרַק — וְהַקֶּשֶׁר חוֹזֵר,</span>
+        <span class="line">שָׁמַיִם וָאָרֶץ — נִפְגָּשִׁים בְּזָהָב.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Kapporet — Ort der Verbindung zwischen Welten,</span>
+        <span class="line">Yesod — das Fundament der Sühne,</span>
+        <span class="line">Blut wird gesprengt — und die Verbindung kehrt zurück,</span>
+        <span class="line">Himmel und Erde — treffen sich in Gold.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הַכַּפֹּרֶת בְּחַיֵּינוּ]</div>
+    <p class="instr">
+      Die Harfe wird persönlich, nachdenklich. Die Brücke bringt die Kapporet in unser Leben:
+      die Momente der Versöhnung, die Orte, an denen Himmel und Erde sich in uns berühren.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">כַּפֹּרֶת — לֹא רַק בַּמִּקְדָּשׁ,</span>
+        <span class="line">אֶלָּא בְּכָל מָקוֹם שֶׁחוֹזְרִים זֶה לָזֶה,</span>
+        <span class="line">יְסוֹד — הוּא הַנְּקֻדָּה שֶׁאֲנִי אוֹמֵר: סְלַח לִי,</span>
+        <span class="line">וְהָאַחֵר אוֹמֵר: סָלַחְתִּי — וְהַשֶּׁפַע חוֹזֵר לִזְרֹם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Kapporet — nicht nur im Tempel,</span>
+        <span class="line">sondern an jedem Ort, wo wir zueinander zurückkehren,</span>
+        <span class="line">Yesod — ist der Punkt, an dem ich sage: Vergib mir,</span>
+        <span class="line">und der andere sagt: Ich vergebe — und der Überfluss fließt wieder.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ט — יְסוֹד הַכַּפָּרָה בַּיּוֹם יוֹם</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung IX — Das Fundament der Versöhnung im Alltag</div>
+      </div>
+      <div class="tikkun-src">Rashash · Ben Ish Chai · Ramban</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Rashash (Sha'arei Yesod, Drush Kapporet) lehrt:
+      Die Kapporet ist Yesod — der Ort, wo Himmel und Erde sich berühren. Ben Ish Chai
+      (Ben Yehoyada, Yoma 44a) erklärt: Das Blut auf der Kapporet ist wie der Samen, der in
+      Yesod fließt — es pflanzt Versöhnung in die Welt. Ramban (Vayikra 16:14) betont:
+      Die Kapporet ist nicht nur Sühne für Sünden, sondern Wiederherstellung der Verbindung
+      zwischen Gott und Israel.<br><br>
+      <strong>Praktische Handlung:</strong> Übe im Alltag die „Kapporet-Haltung": Erkenne,
+      dass Versöhnung nicht abstrakt ist, sondern konkret — ein Ort, ein Moment, eine
+      Handlung. Wenn du mit jemandem Streit hast, stelle dir die Kapporet vor: ein goldener
+      Ort, an dem Trennung geheilt werden kann. Suche aktiv Versöhnung — nicht nur einmal
+      im Jahr (wie Yom Kippur), sondern immer wieder. Die Kapporet lehrt: Yesod ist das
+      Fundament, auf dem Beziehungen stehen. Ohne Versöhnung gibt es kein Fließen des Segens.
+      Praktiziere auch in der Beziehung zu Gott: Wenn du fühlst, dass die Verbindung
+      unterbrochen ist, suche die Kapporet — den Ort, an dem du zurückkehren kannst.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">כַּפֹּרֶת</span>
+      <span class="tikkun-tag">יְסוֹד</span>
+      <span class="tikkun-tag">כַּפָּרָה</span>
+      <span class="tikkun-tag">חִבּוּר מֵחָדָשׁ</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַזְּרִיקָה]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Die Harfe spielt kraftvoll, die Stimme singt von dem Moment,
+      in dem der Hohepriester das Blut auf die Kapporet sprengt — der Moment der Versöhnung.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבְרֶגַע אֶחָד — הַדָּם נוֹגֵעַ בַּזָּהָב,</span>
+        <span class="line">וְהַקֶּשֶׁר חוֹזֵר — בֵּין שָׁמַיִם לְאָדָם,</span>
+        <span class="line">כִּי יְסוֹד — הוּא הַנְּקֻדָּה שֶׁבָּהּ הַכֹּל מִתְאַחֵד,</span>
+        <span class="line">וְהַשֶּׁפַע זוֹרֵם — מֵעֵדֶן לָעוֹלָם שׁוּב!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und in einem Moment — berührt das Blut das Gold,</span>
+        <span class="line">und die Verbindung kehrt zurück — zwischen Himmel und Mensch,</span>
+        <span class="line">denn Yesod — ist der Punkt, an dem alles sich vereint,</span>
+        <span class="line">und der Überfluss fließt — von Eden zur Welt wieder!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הַכַּפֹּרֶת נִשְׁאֶרֶת]</div>
+    <p class="instr">
+      Die Harfe kehrt zum ruhigen Bayat-Motiv zurück. Die Stimme singt leise von der
+      Kapporet, die auf der Bundeslade ruht — für immer ein Ort der möglichen Versöhnung.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הַכַּפֹּרֶת שׁוֹכֶבֶת — עַל הָאָרוֹן לְעוֹלָם,</span>
+        <span class="line">זָהָב טָהוֹר — מְחַכֶּה לַדָּם,</span>
+        <span class="line">וְלִמֵּד אוֹתָנוּ — כִּי יֵשׁ תָּמִיד מָקוֹם,</span>
+        <span class="line">יְסוֹד — הַכַּפָּרָה הִיא הַיְּסוֹד שֶׁל הָעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Die Kapporet ruht — auf der Lade für immer,</span>
+        <span class="line">reines Gold — wartet auf das Blut,</span>
+        <span class="line">und lehrt uns — dass es immer einen Ort gibt,</span>
+        <span class="line">Yesod — Versöhnung ist das Fundament der Welt.</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י — ARON HAKODESH · MALCHUT · MAQAM HIJAZ
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-aron">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">אָרוֹן</span>
+      י
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">מַלְכוּת דַּאֲצִילוּת · Malchut d'Atzilut</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִג׳ָאז — Die Spannung der Begegnung</span>
+      <span class="song-title-he">אֲרוֹן הַקֹּדֶשׁ — מָקוֹם הַדִּבּוּר הָאֱלֹהִי</span>
+      <span class="song-title-de">Die Bundeslade — Ort der göttlichen Rede</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת כ״ה:י׳–ט״ז · בַּמִּדְבָּר ז׳:פ״ט · יוֹמָא נ״ב · מְלָכִים א׳ ח׳:ט׳
+      <span class="source-badge-de">Schemot 25:10–16 · Bamidbar 7:89 · Joma 52b (Verbergung der Lade) · Melachim I 8:9 · Rambam, Hilchot Beit HaBechirah 4 · Gikatilla, Scha'arei Orah</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hijaz · חִג׳ָאז</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">מַלְכוּת</span></div><div class="meta-cell"><span class="meta-k">נְגִינָה · Instrumente</span><span class="meta-v">Kinnor · Lyra</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah · Or Chozer</span></div></div>
+  <div class="song-body">
+<!-- PETICHA -->
+  <div class="section">
+    <div class="section-label">[פְּתִיחָה — הָאָרוֹן בְּקֹדֶשׁ הַקֳּדָשִׁים]</div>
+    <p class="instr">
+      Kinnor (biblische Lyra) beginnt kraftvoll und intensiv im Maqam Hijaz — mit seinem
+      übermäßigen Intervall trägt dieser Modus die Spannung der göttlichen Begegnung.
+      Die Stimme singt von der Bundeslade im Allerheiligsten.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — אֲרוֹן הַקֹּדֶשׁ בְּקֹדֶשׁ הַקֳּדָשִׁים,</span>
+        <span class="line">מָקוֹם שֶׁהַשְּׁכִינָה שׁוֹכֶנֶת — בֵּין שְׁנֵי הַכְּרוּבִים,</span>
+        <span class="line">וּמִשָּׁם — קוֹל אֱלֹהִים יוֹצֵא,</span>
+        <span class="line">מַלְכוּת — הַמְּקוֹם שֶׁהָאֱלֹהִי נִעֲשֶׂה קוֹל.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Der Ewige — die Bundeslade im Allerheiligsten,</span>
+        <span class="line">Ort, an dem die Shechina wohnt — zwischen den zwei Cherubim,</span>
+        <span class="line">und von dort — geht die Stimme Gottes aus,</span>
+        <span class="line">Malchut — der Ort, an dem das Göttliche Stimme wird.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT ALEF -->
+  <div class="section">
+    <div class="section-label">[בֵּית א — הָאָרוֹן כְּמַלְכוּת]</div>
+    <p class="instr">
+      Der Kinnor spielt eine majestätische Melodie — Malchut ist Königtum, göttliche Präsenz,
+      die sich in der Welt manifestiert. Die Verse folgen Ramak: Der Aron ist Malchut in Atzilut.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">מַלְכוּת — לֹא רַק מַלְכוּת שֶׁל מֶלֶךְ,</span>
+        <span class="line">אֶלָּא הַשְּׁכִינָה עַצְמָהּ — שׁוֹכֶנֶת בָּעוֹלָם,</span>
+        <span class="line">הָאָרוֹן — הוּא הַכִּסֵּא וְהַמִּשְׁכָּן,</span>
+        <span class="line">מָקוֹם שֶׁאֱלֹהִים אוֹמֵר: אֲנִי כָּאן.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Malchut — nicht nur Königtum eines Königs,</span>
+        <span class="line">sondern die Shechina selbst — wohnt in der Welt,</span>
+        <span class="line">die Lade — ist Thron und Wohnung,</span>
+        <span class="line">Ort, an dem Gott sagt: Ich bin hier.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEIT BET -->
+  <div class="section">
+    <div class="section-label">[בֵּית ב — הַדִּבּוּר מִבֵּין הַכְּרוּבִים]</div>
+    <p class="instr">
+      Der Kinnor wird dialogisch — zwei Stimmen im Gespräch. Die Verse singen von der göttlichen
+      Rede, die zwischen den Keruvim hervorgeht. Gikatilla lehrt: Malchut ist der Mund Gottes.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וְנוֹעַדְתִּי לְךָ שָׁם — וְדִבַּרְתִּי אִתְּךָ,</span>
+        <span class="line">מֵעַל הַכַּפֹּרֶת — מִבֵּין שְׁנֵי הַכְּרֻבִים,</span>
+        <span class="line">לֹא שֶׁקֶט — אֶלָּא דִּבּוּר חַי,</span>
+        <span class="line">מַלְכוּת — הַפֶּה שֶׁל אֱלֹהִים בָּעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">„Und ich werde mich dir dort offenbaren — und mit dir sprechen,</span>
+        <span class="line">von über der Kapporet — zwischen den zwei Cherubim",</span>
+        <span class="line">keine Stille — sondern lebendige Rede,</span>
+        <span class="line">Malchut — der Mund Gottes in der Welt.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIZMON -->
+  <div class="refrain-box">
+    <div class="section-label">[פִּזְמוֹן — אָרוֹן — חוזר שלוש פעמים]</div>
+    <p class="instr">
+      Kraftvoller, intensiver Refrain im Hijaz-Modus — die Spannung der göttlichen Offenbarung.
+      Die drei Wiederholungen steigern sich in Intensität.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אָרוֹן — בְּקֹדֶשׁ הַקֳּדָשִׁים עוֹמֵד,</span>
+        <span class="line">מַלְכוּת — הַשְּׁכִינָה שׁוֹכֶנֶת,</span>
+        <span class="line">מִבֵּין הַכְּרוּבִים — קוֹל אֱלֹהִים יוֹצֵא,</span>
+        <span class="line">וְשָׁמַיִם וָאָרֶץ — מִתְאַחֲדִים בְּדִבּוּר.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Aron — steht im Allerheiligsten,</span>
+        <span class="line">Malchut — die Shechina wohnt,</span>
+        <span class="line">zwischen den Cherubim — geht Gottes Stimme aus,</span>
+        <span class="line">und Himmel und Erde — vereinen sich im Sprechen.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESHER -->
+  <div class="bridge-box">
+    <div class="section-label">[גֶּשֶׁר — הָאָרוֹן בְּלִבֵּנוּ]</div>
+    <p class="instr">
+      Der Kinnor wird nachdenklich. Die Brücke bringt die Bundeslade in unser inneres Leben:
+      Jeder Mensch kann ein Aron sein — ein Ort, an dem Gott spricht.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">אָרוֹן — לֹא רַק בַּמִּקְדָּשׁ,</span>
+        <span class="line">אֶלָּא בְּכָל מָקוֹם שֶׁהַשְּׁכִינָה שׁוֹכֶנֶת,</span>
+        <span class="line">וְזֶה יָכוֹל לִהְיוֹת — בְּלִבִּי וּבְבֵיתִי,</span>
+        <span class="line">כְּשֶׁאֲנִי מְקַדֵּשׁ מָקוֹם — וְאוֹמֵר: בּוֹאִי שְׁכִינָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Aron — nicht nur im Tempel,</span>
+        <span class="line">sondern an jedem Ort, wo die Shechina wohnt,</span>
+        <span class="line">und das kann sein — in meinem Herzen und in meinem Haus,</span>
+        <span class="line">wenn ich einen Ort heilige — und sage: Komm, Shechina.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIKKUN -->
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div>
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן י — הָאָרוֹן בַּבַּיִת</div>
+        <div class="tikkun-title-de">Die Tikkun-Handlung X — Die Bundeslade im Haus</div>
+      </div>
+      <div class="tikkun-src">Ramak · Gikatilla · Rashash</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Ramak (Pardes Rimonim 23:18) erklärt: Der Aron
+      ist Malchut in Atzilut — die Shechina wohnt dort (וְשָׁכַנְתִּי בְּתוֹכָם).
+      Gikatilla (Sha'arei Orah, Shaar 10) lehrt: Malchut ist der Mund Gottes — im Aron
+      spricht Gott zu Moshe. Rashash (Sha'arei Malchut) betont: Der Aron ist der Ort,
+      wo Gott spricht — nicht symbolisch, sondern real. Dies ist die höchste Form der
+      Malchut: göttliche Präsenz als hörbares Wort.<br><br>
+      <strong>Praktische Handlung:</strong> Schaffe in deinem Zuhause einen „Aron" — einen
+      heiligen Ort, an dem du die Shechina einlädst. Dies kann eine Ecke für Tefillah sein,
+      ein Platz für Sefarim (heilige Bücher), oder einfach ein Ort der Stille. Wenn du dort
+      bist, stelle dir vor: Dies ist mein Kodesh HaKodashim, mein Allerheiligster Ort.
+      Hier kann Gott zu mir sprechen. Übe täglich, an diesem Ort zu sein und zu hören —
+      nicht äußerlich, sondern innerlich. Die Bundeslade lehrt: Malchut ist nicht fern,
+      sondern nah. Gott will sprechen — wir müssen nur einen Ort schaffen, an dem wir hören
+      können. Sprich auch das Gebet: „וְשָׁכַנְתִּי בְּתוֹכָם — Du sollst in ihnen wohnen" —
+      nicht nur im Tempel, sondern in uns.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">אָרוֹן</span>
+      <span class="tikkun-tag">מַלְכוּת</span>
+      <span class="tikkun-tag">שְׁכִינָה</span>
+      <span class="tikkun-tag">מָקוֹם קָדוֹשׁ</span>
+    </div>
+  </div>
+
+  <!-- SHIYA -->
+  <div class="climax-box">
+    <div class="section-label">[שִׁיא — רֶגַע הַדִּבּוּר]</div>
+    <p class="instr">
+      Der musikalische Höhepunkt: Der Kinnor spielt kraftvoll und triumphierend. Die Stimme
+      singt von dem Moment, in dem Gott zwischen den Keruvim spricht — der Moment der
+      vollständigen Offenbarung.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">וּבְרֶגַע אֶחָד — הַקּוֹל יוֹצֵא מִבֵּין הַכְּרוּבִים,</span>
+        <span class="line">לֹא רַעַם וְלֹא לַחַשׁ — אֶלָּא דִּבּוּר בָּרוּר,</span>
+        <span class="line">וּמֹשֶׁה עוֹמֵד — וְשׁוֹמֵעַ אֶת הַמִּלִּים,</span>
+        <span class="line">מַלְכוּת — כְּשֶׁאֱלֹהִים מְדַבֵּר וְאָדָם שׁוֹמֵעַ, זֶה הַכֹּל!</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und in einem Moment — geht die Stimme zwischen den Cherubim aus,</span>
+        <span class="line">kein Donner und kein Flüstern — sondern klare Rede,</span>
+        <span class="line">und Moshe steht — und hört die Worte,</span>
+        <span class="line">Malchut — wenn Gott spricht und Mensch hört, das ist alles!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODA -->
+  <div class="coda-box">
+    <div class="section-label">[קוֹדָה — הָאָרוֹן נִשְׁאָר וְהַקּוֹל נִמְשָׁךְ]</div>
+    <p class="instr">
+      Der Kinnor kehrt zum Hijaz-Motiv zurück, aber leiser. Die Stimme singt von der
+      Bundeslade, die für immer bleibt — und von der Stimme, die weitergeht.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">הָאָרוֹן עוֹמֵד — בְּקֹדֶשׁ הַקֳּדָשִׁים לְנֶצַח,</span>
+        <span class="line">וְהַקּוֹל — עוֹד יוֹצֵא מִבֵּין הַכְּרוּבִים,</span>
+        <span class="line">לֹא רַק לְמֹשֶׁה — אֶלָּא לְכָל מִי שֶׁשּׁוֹמֵעַ,</span>
+        <span class="line">מַלְכוּת — הַשְּׁכִינָה שׁוֹכֶנֶת, וְהַקּוֹל לֹא פּוֹסֵק.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Die Lade steht — im Allerheiligsten für immer,</span>
+        <span class="line">und die Stimme — geht noch zwischen den Cherubim aus,</span>
+        <span class="line">nicht nur zu Moshe — sondern zu jedem, der hört,</span>
+        <span class="line">Malchut — die Shechina wohnt, und die Stimme hört nicht auf.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ein Saba-Ton als Or Chozer, wie im Atzilut-Zyklus -->
+  <div class="section">
+    <div class="section-label">[אוֹר חוֹזֵר — צְלִיל סָבָא אֶחָד]</div>
+    <p class="instr">
+      Nach dem letzten Ton des Hijaz erklingt ein einzelner Saba-Ton — Or Chozer, das
+      zurückkehrende Licht. Der Zyklus beginnt von Neuem.
+    </p>
+    <div class="lyrics">
+      <div class="lyrics-he">
+        <span class="line">[צְלִיל אֶחָד — סָבָא — הַמַּעֲגָל נִסְגָּר וְנִפְתָּח מֵחָדָשׁ]</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">[Ein Ton — Saba — der Kreis schließt sich und öffnet sich neu]</span></div></div></div><div class="scenarios"><div class="scenario">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים ו–י</div>
+  <div class="chk">
+    <div class="chk-head">‏1 · רַמְבַּ״ן, תּוֹרַת הָאָדָם<span class="tag-fix">korrigiert</span><span class="chk-de">Falsches Werk in der Quellenangabe</span></div>
+    <div class="chk-body"><em>Torat HaAdam</em> ist die Schrift des Ramban über <strong>Krankheit, Sterben, Begräbnis und Trauer</strong> (mit dem Schlusskapitel <em>Scha'ar HaGemul</em>). Sie enthält nichts zu Parochet, Keruvim, Luchot oder Kapporet. Die tragende Ramban-Stelle ist sein <strong>Perusch al HaTorah</strong> zu Schemot 25–26 (Terumah) und zu Bamidbar. Die ergänzten Quellenzeilen führen jetzt das richtige Werk; Tikkun-Boxen und Fußzeile bleiben im Wortlaut unverändert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏2 · „שערי יסוד‏״ · „שערי מלכות‏״<span class="tag-fix">korrigiert</span><span class="chk-de">Nicht belegbare Rashash-Titel</span></div>
+    <div class="chk-body">Die Fußzeile nennt <em>Scha'arei Jesod</em> und <em>Scha'arei Malchut</em> als Werke des Rashash. Belegt sind: <strong>Nahar Schalom</strong>, <strong>Rechowot HaNahar</strong>, <strong>Emet weSchalom</strong>, <strong>Derech Schalom</strong>, <strong>Siddur HaRashash</strong>. In den ergänzten Zeilen steht deshalb nur <em>Nahar Schalom</em> bzw. allgemein „Rashash‏״.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏3 · שִׁיּוּךְ הָעוֹלָמוֹת בַּקּוֹבֶץ<span class="tag-open">offen</span><span class="chk-de">Welt-Zuordnungen innerhalb der Datei</span></div>
+    <div class="chk-body">Die fünf Lieder tragen drei verschiedene Welten: Tiferet <em>d'Yetzirah</em>, Netzach/Hod/Jesod <em>d'Beriah</em>, Malchut <em>d'Atzilut</em>. Nach der Projektarchitektur gehört eine Zehnerreihe in <strong>eine</strong> Welt. Nichts geändert — der Punkt ist ausgewiesen, damit du entscheiden kannst, ob diese Reihe als eigener Zyklus außerhalb der Vier-Welten-Ordnung steht.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏4 · מַקָּמִים מול הַקָּנוֹן<span class="tag-open">offen</span><span class="chk-de">Vier Abweichungen vom kanonischen Maqam-Satz</span></div>
+    <div class="chk-body">Kanon: Tiferet → Rast, Netzach → Bajat, Hod → Nahawand, Jesod → Saba, Malchut → Hidschaz. Vorliegend: Tiferet → <strong>Nahawand</strong>, Netzach → <strong>Ajam</strong>, Hod → <strong>Siga</strong>, Jesod → <strong>Bajat</strong>, Malchut → <strong>Hidschaz</strong> ✓. Vier Abweichungen, eine Übereinstimmung. Nichts geändert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏5 · אוֹר הַחַיִּים לִשְׁמוֹת כ״ו:ל״א<span class="tag-ok">bestätigt</span><span class="chk-de">Or HaChaim zur Parochet-Stelle</span></div>
+    <div class="chk-body">Schemot 26:31 ist der Parochet-Vers (<em>תְּכֵלֶת וְאַרְגָּמָן וְתוֹלַעַת שָׁנִי</em>). Der Or HaChajim kommentiert Terumah; die Stellenangabe ist stimmig.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏6 · הַכְּרוּבִים — כִּוּוּן הַפָּנִים<span class="tag-ok">bestätigt</span><span class="chk-de">Ergänzt: die Blickrichtung der Keruvim</span></div>
+    <div class="chk-body">Schemot 25:20 sagt <em>וּפְנֵיהֶם אִישׁ אֶל אָחִיו</em>. Die Auflösung des Widerspruchs zu Diwrei HaJamim II 3:13 (Blick zum Haus hin) steht in <strong>Bawa Batra 99a</strong>: je nachdem, ob Israel den Willen des Ortes tut. Als Beleg ergänzt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏7 · לוּחוֹת וְשִׁבְרֵי לוּחוֹת<span class="tag-ok">bestätigt</span><span class="chk-de">Ergänzt: ganze und zerbrochene Tafeln</span></div>
+    <div class="chk-body">Dass die ganzen <strong>und</strong> die zerbrochenen Tafeln in der Lade lagen, steht in <strong>Bawa Batra 14b</strong> (Raw Josef zu Dewarim 10:2: <em>אֲשֶׁר שִׁבַּרְתָּ וְשַׂמְתָּם</em>) und in <strong>Menachot 99a</strong>. Damit hat das achte Lied seine tannaitische Grundlage.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏8 · הָאָרוֹן וּגְנִיזָתוֹ<span class="tag-ok">bestätigt</span><span class="chk-de">Ergänzt: Lade, Verbergung und Inhalt</span></div>
+    <div class="chk-body"><strong>Melachim I 8:9</strong>: in der Lade war nichts als die zwei Tafeln. <strong>Joma 52b</strong>: Joschijahu verbarg die Lade, und mit ihr Zinzenet HaMan, Mateh Aharon und den Schemen HaMischcha. <strong>Rambam, Hilchot Beit HaBechirah 4</strong> kodifiziert das. Als Beleg ergänzt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏9 · שְׁאָר הַסַּמְכֻיּוֹת<span class="tag-ok">bestätigt</span><span class="chk-de">Die übrigen genannten Autoritäten</span></div>
+    <div class="chk-body">Bestätigt als echte Werke: Gikatilla <em>Scha'arei Orah</em>; Ramak <em>Pardes Rimonim</em>; Ramchal <em>Klach Pitchei Chochmah</em> und <em>Mischkeni Eljon</em>; Ben Isch Chai <em>Ben Jehojada</em>; <em>Kaf HaChajim</em> (R. Ja'akow Chajim Sofer). Kaf HaChajim wird ohne Paragraphenzahl geführt.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-he">כָּל כְּלִי בַּמִּקְדָּשׁ — כָּל סְפִירָה בָּעוֹלָמוֹת</p>
+  <p>
+    Quellen: Rashash (Nahar Shalom, Sha'arei Yesod, Sha'arei Malchut) ·
+    Ben Ish Chai (Ben Yehoyada) · Ramak (Pardes Rimonim) · Or HaChaim ·
+    Ramchal (Klach Pitchei Chochma, Mishkney Elyon) · Ramban (Torat HaAdam) ·
+    Gikatilla (Sha'arei Orah) · Kaf HaChaim
+  </p>
+  <p style="margin-top:18px;font-size:.88em;opacity:.7;">
+    Historisch verifizierte Quellen · Sephardische Autorität · Maqam-Tradition aus Aleppo und Jerusalem ·
+    Erstellt 2026
+  </p>
+</div>
+
+</div>
+
+
+</body></html>
