@@ -87,18 +87,6 @@ nav.side{position:sticky;top:0;padding:30px 0 20px;max-height:100vh;overflow-y:a
 .catlist button:hover{background:var(--layer);color:var(--parch)}
 .catlist button[aria-current="true"]{border-left-color:var(--ocher);background:var(--layer);color:var(--ocher-lt)}
 .catlist .n{font-size:.7rem;color:var(--dim);font-variant-numeric:tabular-nums}
-.catlist button{align-items:center}
-.catlist .lbl{display:flex;flex-direction:column;gap:2px;min-width:0}
-.catlist .cat-he{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.02rem;line-height:1.3;letter-spacing:0;color:var(--parch)}
-.catlist .cat-tr{font-size:.63rem;letter-spacing:.06em;line-height:1.35;color:var(--dim);overflow-wrap:anywhere}
-.catlist button:hover .cat-tr{color:var(--muted)}
-.catlist button[aria-current="true"] .cat-he{color:var(--ocher-lt)}
-.catlist button[aria-current="true"] .cat-tr{color:var(--copper-lt)}
-section.group > h2 .lbl{display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-section.group > h2 .cat-he{font-family:var(--he-font);direction:rtl;unicode-bidi:isolate;font-size:1.24rem;line-height:1.2;letter-spacing:0;text-transform:none;color:var(--parch)}
-section.group > h2 .cat-tr{color:var(--copper-lt);letter-spacing:.14em}
-.sig .he{font-family:var(--he-font);font-size:1.26em;letter-spacing:0;color:var(--muted)}
-.sig .cat-tr{text-transform:none;letter-spacing:.06em}
 .chips{display:flex;flex-wrap:wrap;gap:5px;font-family:var(--ui-font);font-size:.68rem}
 .chip{
   border:1px solid var(--line);background:transparent;color:var(--muted);
@@ -305,11 +293,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border:0;border-radiu
   background:linear-gradient(178deg,var(--card-up),var(--deep));border:1px solid var(--line);border-left:3px solid var(--ocher);
   border-radius:var(--radius);padding:16px 20px 14px;margin-bottom:22px;
 }
-.plhead .pl-title{font-family:var(--dis-font);font-weight:400;font-size:1.5rem;color:var(--parch);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.plhead .pl-title .he{font-family:var(--he-font);font-size:1.6rem;line-height:1.25}
-.plhead .pl-tr2{font-family:var(--ui-font);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-lt)}
-#plmenu .pl-tr{font-family:var(--ui-font);font-size:.66rem;letter-spacing:.06em;color:var(--muted)}
-#plmenu button .he{font-family:var(--he-font);font-size:1.05em}
+.plhead .pl-title{font-family:var(--dis-font);font-weight:400;font-size:1.5rem;color:var(--parch)}
 .plhead .pl-desc{font-size:.92rem;color:var(--text);margin-top:4px;opacity:.85;max-width:640px}
 .plhead .pl-meta{font-family:var(--ui-font);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
 .plhead .pl-acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
@@ -746,7 +730,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
 
 <script id="seed" type="application/json">
 {
-  "stamp": 1788898729578,
+  "stamp": 1785677977590,
   "entries": [
     {
       "id": "n-1",
@@ -7775,7 +7759,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
   ],
   "pub": {
     "on": true,
-    "ts": 1788898729578
+    "ts": 1785677977590
   }
 }
 </script>
@@ -7858,16 +7842,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     clearTimeout(toast._t);
     toast._t = setTimeout(function () { t.classList.remove("on"); }, 4200);
   }
-  function slugCat(c) {
-    var t = (catInfo(c) || {}).tr || String(c || "");
-    t = t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-    if (!t) {
-      var h = 0, raw = String(c || "");
-      for (var i = 0; i < raw.length; i++) h = (h * 31 + raw.charCodeAt(i)) >>> 0;
-      t = "x" + h.toString(36);
-    }
-    return "abt-" + t;
-  }
+  function slugCat(c) { return "abt-" + String(c).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); }
   function plain(s) { return String(s || "").replace(/[\u0591-\u05C7]/g, ""); }
   function base(name) { return String(name || "").replace(/\.[^.]+$/, ""); }
   function normName(name) {
@@ -7883,116 +7858,6 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     var m = String(s || "").match(/[\u0590-\u05FF][\u0590-\u05FF\s'"״׳\-–־]*/g);
     if (!m) return "";
     return m.sort(function (a, b) { return b.length - a.length; })[0].trim();
-  }
-
-  /* ── Abteilungen zweisprachig: hebräischer Name + lateinische Umschrift ──
-     [gespeicherter Name, hebräische Zeile ("" = der gespeicherte Name selbst), lateinische Zeile] */
-  var CAT_TR = [
-    ["Piyut", "פִּיּוּט", "Piyut"],
-    ["Bakascha", "בַּקָּשָׁה", "Bakascha"],
-    ["Sephardische Kabbalah-Vertonung", "הַלְחָנָה קַבָּלִית סְפָרַדִּית", "Sephardische Kabbalah-Vertonung"],
-    ["מקדש שירים", "", "Mikdasch Schirim"],
-    ["מסע הגוף", "", "Massa HaGuf"],
-    ["יצירה — עולם התפילה", "", "Jezira — Olam HaTefilla"],
-    ["בריאה — שירים", "", "Beria — Schirim"],
-    ["אצילות שירים", "", "Azilut — Schirim"],
-    ["נפש האש", "", "Nefesch HaEsch"],
-    ["נפש החיים", "", "Nefesch HaChaim"],
-    ["משכני עליון", "", "Mischkenej Eljon"],
-    ["שיר מן הזהר", "", "Schir min haSohar"],
-    ["שיר מדרשי", "", "Schir Midraschi"],
-    ["תהלים ל״ב", "", "Tehillim 32"],
-    ["תהלים ק״ל", "", "Tehillim 130"],
-    ["חבקוק ג׳", "", "Chawakuk 3"],
-    ["זכריה", "", "Secharja"],
-    ["מנחות כ״ט ע״ב", "", "Menachot 29b"]
-  ];
-  /* ── Playlists zweisprachig: [gespeicherter Name, lateinische Zeile] ── */
-  var PL_TR = [
-    ["א | עבודה - אין סוף צמצום", "A | Awoda - Ejn Sof Zimzum"],
-    ["ב | דעת - אין סוף צמצום", "B | Da'at - Ejn Sof Zimzum"],
-    ["ג | בטחון - אין סוף צמצום", "G | Bittachon - Ejn Sof Zimzum"],
-    ["א | עבודה - עץ חיים", "A | Awoda - Ez Chaim"],
-    ["ב | דעת - עץ חיים", "B | Da'at - Ez Chaim"],
-    ["ג | בטחון - עץ חיים", "G | Bittachon - Ez Chaim"],
-    ["גנת אגוז", "Ginnat Egos"],
-    ["סי", "Sej"],
-    ["עשיה — מסע הגוף", "Assija — Massa HaGuf"],
-    ["יצירה — עולם התפילה", "Jezira — Olam HaTefilla"],
-    ["דבריאה — עולם הכסא", "diBria — Olam HaKisse"],
-    ["אצילות - מסע העולמות", "Azilut - Massa HaOlamot"],
-    ["מקדש", "Mikdasch"]
-  ];
-  var PL_MAP = null;
-  function plTr(name) {
-    if (!PL_MAP) {
-      PL_MAP = {};
-      for (var i = 0; i < PL_TR.length; i++) PL_MAP[catNormKey(PL_TR[i][0])] = PL_TR[i][1];
-    }
-    var raw = String(name == null ? "" : name).trim();
-    if (!raw) return "";
-    var tr = PL_MAP[catNormKey(raw)];
-    return tr && tr !== raw ? tr : "";
-  }
-  function plTitleHTML(name) {
-    var raw = String(name == null ? "" : name).trim();
-    var tr = plTr(raw);
-    if (!tr) return esc(raw);
-    return '<span class="he">' + esc(raw) + '</span><span class="pl-tr2">' + esc(tr) + "</span>";
-  }
-  function plText(name) {
-    var raw = String(name == null ? "" : name).trim();
-    var tr = plTr(raw);
-    return tr ? raw + " · " + tr : raw;
-  }
-  function plHTML(name) {
-    var raw = String(name == null ? "" : name).trim();
-    var tr = plTr(raw);
-    if (!tr) return '<span class="lbl">' + esc(raw) + "</span>";
-    return '<span class="lbl"><span class="cat-he">' + esc(raw) + '</span><span class="cat-tr">' + esc(tr) + "</span></span>";
-  }
-  function plLine(name) {
-    var raw = String(name == null ? "" : name).trim();
-    var tr = plTr(raw);
-    if (!tr) return esc(raw);
-    return '<span class="he">' + esc(raw) + '</span> · <span class="pl-tr">' + esc(tr) + "</span>";
-  }
-
-  var CAT_MAP = null;
-  function catNormKey(c) {
-    return plain(String(c == null ? "" : c))
-      .replace(/[\u05f3\u05f4'\u201c\u201d\"]/g, "")
-      .replace(/[\u2013\u2014\u2012-]+/g, "-")
-      .replace(/\s+/g, " ").trim().toLowerCase();
-  }
-  function catInfo(c) {
-    if (!CAT_MAP) {
-      CAT_MAP = {};
-      for (var i = 0; i < CAT_TR.length; i++) CAT_MAP[catNormKey(CAT_TR[i][0])] = CAT_TR[i];
-    }
-    var raw = String(c == null ? "" : c).trim();
-    if (!raw) return null;
-    var hit = CAT_MAP[catNormKey(raw)];
-    if (!hit) return null;
-    return { he: hit[1] || raw, tr: hit[2] };
-  }
-  function catText(c) {
-    var raw = String(c == null ? "" : c).trim() || "Ohne Abteilung";
-    var k = catInfo(raw);
-    if (!k || k.he === k.tr) return raw;
-    return k.he + " · " + k.tr;
-  }
-  function catHTML(c) {
-    var raw = String(c == null ? "" : c).trim() || "Ohne Abteilung";
-    var k = catInfo(raw);
-    if (!k) return '<span class="lbl">' + esc(raw) + "</span>";
-    return '<span class="lbl"><span class="cat-he">' + esc(k.he) + '</span><span class="cat-tr">' + esc(k.tr) + "</span></span>";
-  }
-  function catSig(c) {
-    var raw = String(c == null ? "" : c).trim() || "Ohne Abteilung";
-    var k = catInfo(raw);
-    if (!k) return esc(raw);
-    return '<span class="he">' + esc(k.he) + '</span> · <span class="cat-tr">' + esc(k.tr) + "</span>";
   }
 
   var WORLDS = ["Assija", "Jezira", "Beria", "Azilut"];
@@ -8095,7 +7960,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
         if (state.carrier !== "none" && !has(e, state.carrier)) return false;
       }
       if (!q) return true;
-      var hay = plain([e.title, e.titleHe, e.desc, e.page, e.audio, e.video, catText(e.category), e.world,
+      var hay = plain([e.title, e.titleHe, e.desc, e.page, e.audio, e.video, e.category, e.world,
         e.maqam, e.sefira, e.voicing, e.sig, (e.tags || []).join(" "), (e.headings || []).join(" ")].join(" ")).toLowerCase();
       return hay.indexOf(qp) > -1;
     });
@@ -8132,7 +7997,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     if (state.pl && e._pos) pos = '<span class="posn">' + e._pos + ".</span>";
     return '' +
       '<article class="card" data-id="' + esc(e.id) + '" data-world="' + esc(e.world || "") + '" tabindex="0">' +
-        '<div class="sig"><span class="code">' + pos + esc(e.sig || "–") + '</span><span>' + catSig(e.category) + "</span></div>" +
+        '<div class="sig"><span class="code">' + pos + esc(e.sig || "–") + '</span><span>' + esc(e.category || "Ohne Abteilung") + "</span></div>" +
         (e.titleHe ? '<div class="cardhe">' + esc(e.titleHe) + "</div>" : "") +
         "<h3>" + (e.page ? '<a href="' + srcOf(e.page) + '">' + title + "</a>" : "<span>" + title + "</span>") + "</h3>" +
         (meta.length ? '<div class="mline">' + meta.join("") + "</div>" : "") +
@@ -8178,7 +8043,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
 
     $("#pls").innerHTML = playlists.length
       ? playlists.map(function (pl) {
-          return '<li><button data-pl="' + esc(pl.id) + '" aria-current="' + (state.pl === pl.id) + '">' + plHTML(pl.name) + '<span class="n">' + pl.items.length + "</span></button></li>";
+          return '<li><button data-pl="' + esc(pl.id) + '" aria-current="' + (state.pl === pl.id) + '"><span>' + esc(pl.name) + '</span><span class="n">' + pl.items.length + "</span></button></li>";
         }).join("")
       : '<li style="font-family:var(--de-font);font-size:.85rem;color:var(--dim);padding:4px 10px">' +
         (IS_PUB ? "Noch keine Playlist veröffentlicht." : "Noch keine Playlist — über ＋ Liste auf einer Karte anlegen.") + "</li>";
@@ -8186,7 +8051,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     var cats = categories();
     catsEl.innerHTML = ['<li><button data-cat="*" aria-current="' + (state.cat === "*" && !state.pl) + '"><span>Alle Niggunim</span><span class="n">' + entries.length + "</span></button></li>"]
       .concat(cats.map(function (c) {
-        return '<li><button data-cat="' + esc(c.name) + '" aria-current="' + (state.cat === c.name) + '">' + catHTML(c.name) + '<span class="n">' + c.n + "</span></button></li>";
+        return '<li><button data-cat="' + esc(c.name) + '" aria-current="' + (state.cat === c.name) + '"><span>' + esc(c.name) + '</span><span class="n">' + c.n + "</span></button></li>";
       })).join("");
 
     var wcount = {};
@@ -8211,7 +8076,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
 
     $("#count").textContent = list.length + (list.length === 1 ? " Karte" : " Karten") +
       (state.q ? " zu „" + state.q + "“" : "") +
-      (state.cat !== "*" ? " in " + catText(state.cat) : "") +
+      (state.cat !== "*" ? " in " + state.cat : "") +
       (state.world !== "*" ? " · " + (state.world === "-" ? "ohne Welt" : state.world) : "");
 
     var plHead = "";
@@ -8220,7 +8085,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
       if (apl) {
         var pdur = plDuration(apl);
         plHead = '<div class="plhead">' +
-          '<div class="pl-title">' + plTitleHTML(apl.name) + "</div>" +
+          '<div class="pl-title">' + esc(apl.name) + "</div>" +
           (apl.desc ? '<div class="pl-desc">' + esc(apl.desc) + "</div>" : "") +
           '<div class="pl-meta">' + apl.items.length + " Stücke" + (pdur ? " · " + spanTime(pdur) : "") + " · angelegt " + datum(apl.created) + "</div>" +
           '<div class="pl-acts">' +
@@ -8258,7 +8123,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
         groups[k].push(e);
       });
       results.innerHTML = order.map(function (c) {
-        return '<section class="group" id="' + slugCat(c) + '"><h2>' + (state.sort === "cat" ? catHTML(c) : esc(c)) + " · " + groups[c].length + "</h2>" +
+        return '<section class="group" id="' + slugCat(c) + '"><h2>' + esc(c) + " · " + groups[c].length + "</h2>" +
           '<div class="grid">' + groups[c].map(cardHTML).join("") + "</div></section>";
       }).join("");
     } else {
@@ -8690,7 +8555,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
     plmenu._entry = e;
     var rows = playlists.map(function (pl) {
       var inIt = pl.items.indexOf(e.id) > -1;
-      return '<button type="button" data-pmid="' + esc(pl.id) + '"><span>' + plLine(pl.name) + "</span>" +
+      return '<button type="button" data-pmid="' + esc(pl.id) + '"><span>' + esc(pl.name) + "</span>" +
              '<span class="in">' + (inIt ? "✓ enthalten" : pl.items.length + " Stücke") + "</span></button>";
     }).join("");
     plmenu.innerHTML = '<div class="pm-h">' + esc(e.title || e.titleHe || "") + " aufnehmen in</div>" + rows +
@@ -9271,7 +9136,7 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
       return '<div class="sg"><div class="sg-why">Keine Zusammengehörigkeit gefunden. Mehr Merkmale (Maqam, Schlagwörter, Beschreibungen) auf den Karten ergeben bessere Hinweise.</div></div>';
     }
     var plOpts = playlists.map(function (pl) {
-      return '<option value="' + esc(pl.id) + '">→ in „' + esc(plText(pl.name)) + '“</option>';
+      return '<option value="' + esc(pl.id) + '">→ in „' + esc(pl.name) + '“</option>';
     }).join("");
     return groups.map(function (g, gi) {
       var items = g.ids.map(function (id) {
