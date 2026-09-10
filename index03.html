@@ -790,7 +790,7 @@ html{-webkit-text-size-adjust:100%}
 
 <script id="seed" type="application/json">
 {
-  "stamp": 1789022417068,
+  "stamp": 1789019796237,
   "entries": [
     {
       "id": "n-1",
@@ -7819,7 +7819,7 @@ html{-webkit-text-size-adjust:100%}
   ],
   "pub": {
     "on": true,
-    "ts": 1789022417068
+    "ts": 1789019796237
   }
 }
 </script>
@@ -8423,9 +8423,8 @@ html{-webkit-text-size-adjust:100%}
   function activeEl() { return cur.kind === "video" ? vv : av; }
 
   /* ══ Warteschlange – bleibt bestehen, auch wenn der Bildschirm ausgeht ══ */
-  var BUILD = "H-3";
   var queue = [], qi = -1, queueKind = "audio";
-  var advancing = false, failStreak = 0, watchTries = 0;
+  var advancing = false, failStreak = 0;
 
   function buildQueue(kind, startId) {
     var list = filtered().filter(function (e) { return kind === "video" ? e.video : e.audio; });
@@ -8448,14 +8447,12 @@ html{-webkit-text-size-adjust:100%}
      Dadurch steht sie bereit, wenn der Bildschirm dunkel ist. */
   function preloadNext() {
     if (queueKind !== "audio") return;
-    var con = navigator.connection || {};
-    if (con.saveData) return;               /* Datensparmodus achten */
     var nx = queueNext(1);
     if (!nx || nx.e.id === cur.id) return;
     var url = srcOf(nx.e.audio);
     if (pre._u === url) return;
     pre._u = url;
-    try { pre.muted = true; pre.src = url; pre.preload = "auto"; pre.load(); } catch (err) {}
+    try { pre.src = url; pre.preload = "auto"; pre.load(); } catch (err) {}
   }
 
   /* ══ Medienzentrale: Sperrbildschirm, Kopfhörer, Benachrichtigung ══ */
@@ -8528,27 +8525,6 @@ html{-webkit-text-size-adjust:100%}
   }
   msBind();
 
-  /* ══ Prüfung: die Adresse mit  #handy  aufrufen ══ */
-  function handyCheck() {
-    var ok = function (b) { return b ? "JA" : "NEIN"; };
-    var el = activeEl();
-    var lines = [
-      "Fassung: " + BUILD,
-      "Sperrbildschirm möglich: " + ok("mediaSession" in navigator),
-      "Titel gesetzt: " + ok("mediaSession" in navigator && !!navigator.mediaSession.metadata),
-      "Zustand: " + (("mediaSession" in navigator && navigator.mediaSession.playbackState) || "–"),
-      "Sichere Verbindung: " + ok(window.isSecureContext),
-      "Herkunft: " + location.origin,
-      "Warteschlange: " + queue.length + " Stück, Stelle " + (qi + 1),
-      "Läuft gerade: " + (el && el.src ? decodeURIComponent(String(el.src).split("/").pop()) : "nichts"),
-      "Angehalten: " + ok(!el || el.paused),
-      "Übergang aktiv: " + ok(advancing)
-    ];
-    alert("Niggun-Sammlung · Handy-Prüfung\n\n" + lines.join("\n"));
-  }
-  if (location.hash === "#handy") setTimeout(handyCheck, 600);
-  window.addEventListener("hashchange", function () { if (location.hash === "#handy") handyCheck(); });
-
   function markPlaying() {
     [].slice.call(document.querySelectorAll(".card")).forEach(function (c) {
       var on = c.dataset.id === cur.id;
@@ -8571,11 +8547,8 @@ html{-webkit-text-size-adjust:100%}
     }
     if (keepQueue && queue.indexOf(e.id) > -1) { qi = queue.indexOf(e.id); queueKind = kind; }
     else buildQueue(kind, e.id);
-    /* bleibt an, bis das neue Stück wirklich klingt – solange wacht der Wächter */
-    advancing = true;
-    watchTries = 0;
+    advancing = false;
     cur = { id: e.id, kind: kind };
-    msMeta(e, kind);
     el.src = srcOf(name);
     $("#p-name").textContent = e.titleHe || e.title || "";
     $("#p-sub").textContent = [e.title, e.maqam, name].filter(Boolean).join(" · ");
@@ -8597,12 +8570,6 @@ html{-webkit-text-size-adjust:100%}
     msState("playing");
     preloadNext();
     markPlaying();
-    var coarse = false;
-    try { coarse = window.matchMedia && window.matchMedia("(pointer:coarse)").matches; } catch (err) {}
-    if (!play._said && coarse) {
-      play._said = 1;
-      toast("Handy-Fassung " + BUILD + " · Sperrbildschirm bereit — der Bildschirm darf ausgehen.");
-    }
   }
 
   function stopPlayer() {
@@ -8623,6 +8590,7 @@ html{-webkit-text-size-adjust:100%}
 
   /* Wächter: bleibt ein Übergang hängen (langsames Netz, dunkler Bildschirm),
      wird der Anstoß wiederholt, statt die Playlist abbrechen zu lassen. */
+  var watchTries = 0;
   setInterval(function () {
     if (!advancing || cur.kind !== "audio" || !av.src) { watchTries = 0; return; }
     if (!av.paused) { watchTries = 0; return; }
@@ -8671,13 +8639,7 @@ html{-webkit-text-size-adjust:100%}
       }
     });
     el.addEventListener("play", function () { $("#p-play").textContent = "❚❚"; msState("playing"); markPlaying(); });
-    el.addEventListener("playing", function () {
-      failStreak = 0; advancing = false; watchTries = 0;
-      var e = byId(cur.id);
-      if (e) msMeta(e, cur.kind);      /* Chrome hängt die Anzeige an das laufende Stück */
-      msState("playing");
-      msPos(el);
-    });
+    el.addEventListener("playing", function () { failStreak = 0; advancing = false; msState("playing"); });
     el.addEventListener("pause", function () {
       $("#p-play").textContent = "▶";
       if (!advancing) msState("paused");
