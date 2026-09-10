@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="de"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0D0906">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Niggun-Sammlung · אוסף הניגונים</title>
 <meta name="description" content="Katalog der eigenen Niggunim und Pijutim: Seite, Klangaufnahme, Video und YouTube-Verweis zu jedem Lied. Mit Suche, Welten, Maqam und eingebauter Abspielleiste.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -437,45 +433,6 @@ footer .he{font-family:var(--he-font);font-size:.95rem;color:var(--copper-lt);le
   header{padding:44px 20px 32px}
   #stage{right:12px;left:12px;width:auto;bottom:96px}
 }
-
-/* ══ Handy ══ */
-html{-webkit-text-size-adjust:100%}
-@media (max-width:640px){
-  body{overflow-x:hidden}
-  header{padding:30px 16px 22px}
-  header h1{font-size:clamp(2rem,11vw,3rem);line-height:1.15}
-  .lede{font-size:.92rem}
-  .shell{padding:0 16px 90px;gap:18px}
-  .grid{grid-template-columns:1fr;gap:14px}
-  .card{padding:14px}
-  /* Finger statt Maus: größere Ziele */
-  .slot{min-height:44px}
-  .btn,.pkind,.chip{min-height:38px}
-  nav.side input,nav.side select,form.entry input,form.entry select,form.entry textarea{font-size:16px}
-  form.entry .row,form.entry .row3{grid-template-columns:1fr}
-  footer{padding:22px 16px calc(34px + env(safe-area-inset-bottom))}
-
-  /* Abspielleiste: zwei Reihen, Lautstärke weg (Handy hat eigene Tasten) */
-  .pw{grid-template-columns:auto 1fr;gap:10px;padding:8px 12px calc(10px + env(safe-area-inset-bottom))}
-  .pbtn{width:40px;height:40px}
-  .pbtn.main{width:48px;height:48px;font-size:1.1rem}
-  .pname{font-size:1rem}
-  .psub{font-size:.58rem}
-  #p-vol{display:none}
-  .pright{grid-column:1 / -1;justify-content:flex-start;gap:8px;flex-wrap:wrap}
-  #p-pos{min-width:0}
-  #p-pos::-webkit-slider-thumb{width:16px;height:16px;margin-top:-7px}
-  #p-pos::-moz-range-thumb{width:16px;height:16px}
-  body.has-player{padding-bottom:calc(128px + env(safe-area-inset-bottom))}
-  body.has-player #toast{bottom:calc(140px + env(safe-area-inset-bottom))}
-
-  /* Überlagerungen bildschirmfüllend */
-  #stage{left:8px;right:8px;bottom:calc(126px + env(safe-area-inset-bottom))}
-  #stage.big{left:8px;right:8px;transform:none;width:auto}
-  #read,#edit{left:0;right:0;top:0}
-  body.has-player #read,body.has-player #edit{bottom:calc(124px + env(safe-area-inset-bottom))}
-  #hover{display:none !important}
-}
 </style>
 </head>
 <body class="">
@@ -585,8 +542,7 @@ html{-webkit-text-size-adjust:100%}
       <button class="pbtn" id="p-close" type="button" title="Abspielleiste schließen" aria-label="Abspielleiste schließen">✕</button>
     </div>
   </div>
-  <audio id="av" preload="auto" playsinline="" webkit-playsinline="" x-webkit-airplay="allow"></audio>
-  <audio id="av2" preload="none" playsinline="" webkit-playsinline="" x-webkit-airplay="allow" hidden=""></audio>
+  <audio id="av" preload="metadata"></audio>
 </div>
 
 <!-- ══ Video-Bühne ══ -->
@@ -790,7 +746,7 @@ html{-webkit-text-size-adjust:100%}
 
 <script id="seed" type="application/json">
 {
-  "stamp": 1789019796237,
+  "stamp": 1788898729578,
   "entries": [
     {
       "id": "n-1",
@@ -7819,7 +7775,7 @@ html{-webkit-text-size-adjust:100%}
   ],
   "pub": {
     "on": true,
-    "ts": 1789019796237
+    "ts": 1788898729578
   }
 }
 </script>
@@ -8417,113 +8373,9 @@ html{-webkit-text-size-adjust:100%}
 
   /* ══════════ Abspielen ══════════ */
   var av = $("#av"), vv = $("#vv"), player = $("#player"), stage = $("#stage");
-  var pre = $("#av2");
   var cur = { id: "", kind: "" };
 
   function activeEl() { return cur.kind === "video" ? vv : av; }
-
-  /* ══ Warteschlange – bleibt bestehen, auch wenn der Bildschirm ausgeht ══ */
-  var queue = [], qi = -1, queueKind = "audio";
-  var advancing = false, failStreak = 0;
-
-  function buildQueue(kind, startId) {
-    var list = filtered().filter(function (e) { return kind === "video" ? e.video : e.audio; });
-    queue = list.map(function (e) { return e.id; });
-    queueKind = kind;
-    qi = queue.indexOf(startId);
-    if (qi < 0) { queue = [startId]; qi = 0; }
-  }
-  function queueNext(dir) {
-    if (!queue.length) return null;
-    var n = queue.length;
-    for (var k = 1; k <= n; k++) {
-      var j = ((qi + dir * k) % n + n) % n;
-      var e = byId(queue[j]);
-      if (e && (queueKind === "video" ? e.video : e.audio)) return { e: e, j: j };
-    }
-    return null;
-  }
-  /* Die nächste Datei still vorladen, solange das Stück noch läuft.
-     Dadurch steht sie bereit, wenn der Bildschirm dunkel ist. */
-  function preloadNext() {
-    if (queueKind !== "audio") return;
-    var nx = queueNext(1);
-    if (!nx || nx.e.id === cur.id) return;
-    var url = srcOf(nx.e.audio);
-    if (pre._u === url) return;
-    pre._u = url;
-    try { pre.src = url; pre.preload = "auto"; pre.load(); } catch (err) {}
-  }
-
-  /* ══ Medienzentrale: Sperrbildschirm, Kopfhörer, Benachrichtigung ══ */
-  var artCache = null;
-  function artwork() {
-    if (artCache !== null) return artCache;
-    artCache = [];
-    try {
-      var c = document.createElement("canvas");
-      c.width = c.height = 512;
-      var g = c.getContext("2d");
-      g.fillStyle = "#140E09"; g.fillRect(0, 0, 512, 512);
-      g.strokeStyle = "#9B4D18"; g.lineWidth = 8; g.strokeRect(28, 28, 456, 456);
-      g.fillStyle = "#C89018";
-      g.font = "300px 'Frank Ruhl Libre', serif";
-      g.textAlign = "center"; g.textBaseline = "middle";
-      g.fillText("נ", 256, 268);
-      artCache = [{ src: c.toDataURL("image/png"), sizes: "512x512", type: "image/png" }];
-    } catch (err) { artCache = []; }
-    return artCache;
-  }
-  function msMeta(e, kind) {
-    if (!("mediaSession" in navigator) || typeof MediaMetadata === "undefined") return;
-    var pl = state.pl ? plById(state.pl) : null;
-    try {
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: e.titleHe || e.title || "Niggun",
-        artist: [e.title && e.titleHe ? e.title : "", e.maqam, e.sefira].filter(Boolean).join(" · ") || "Niggun-Sammlung",
-        album: (pl && pl.name) || e.category || "Niggun-Sammlung",
-        artwork: artwork()
-      });
-    } catch (err) {}
-  }
-  function msState(s) {
-    if (!("mediaSession" in navigator)) return;
-    try { navigator.mediaSession.playbackState = s; } catch (err) {}
-  }
-  function msPos(el) {
-    if (!("mediaSession" in navigator) || !navigator.mediaSession.setPositionState) return;
-    if (!el.duration || !isFinite(el.duration)) return;
-    try {
-      navigator.mediaSession.setPositionState({
-        duration: el.duration,
-        playbackRate: el.playbackRate || 1,
-        position: Math.min(el.currentTime, el.duration)
-      });
-    } catch (err) {}
-  }
-  function msBind() {
-    if (!("mediaSession" in navigator) || !navigator.mediaSession.setActionHandler) return;
-    var set = function (name, fn) {
-      try { navigator.mediaSession.setActionHandler(name, fn); } catch (err) {}
-    };
-    set("play", function () { var el = activeEl(); if (el.src) { var p = el.play(); if (p && p.catch) p.catch(function () {}); } });
-    set("pause", function () { try { activeEl().pause(); } catch (err) {} });
-    set("previoustrack", function () { advancing = true; step(-1); });
-    set("nexttrack", function () { advancing = true; step(1); });
-    set("stop", stopPlayer);
-    set("seekbackward", function (d) {
-      var el = activeEl(); el.currentTime = Math.max(0, el.currentTime - ((d && d.seekOffset) || 10));
-    });
-    set("seekforward", function (d) {
-      var el = activeEl();
-      el.currentTime = Math.min(el.duration || 0, el.currentTime + ((d && d.seekOffset) || 10));
-    });
-    set("seekto", function (d) {
-      var el = activeEl();
-      if (d && typeof d.seekTime === "number") el.currentTime = d.seekTime;
-    });
-  }
-  msBind();
 
   function markPlaying() {
     [].slice.call(document.querySelectorAll(".card")).forEach(function (c) {
@@ -8535,7 +8387,7 @@ html{-webkit-text-size-adjust:100%}
     });
   }
 
-  function play(e, kind, keepQueue) {
+  function play(e, kind) {
     var name = kind === "video" ? e.video : e.audio;
     if (!name) { openEdit(e); return; }
     var other = kind === "video" ? av : vv;
@@ -8545,9 +8397,6 @@ html{-webkit-text-size-adjust:100%}
       if (el.paused) { el.play(); } else { el.pause(); }
       return;
     }
-    if (keepQueue && queue.indexOf(e.id) > -1) { qi = queue.indexOf(e.id); queueKind = kind; }
-    else buildQueue(kind, e.id);
-    advancing = false;
     cur = { id: e.id, kind: kind };
     el.src = srcOf(name);
     $("#p-name").textContent = e.titleHe || e.title || "";
@@ -8566,20 +8415,12 @@ html{-webkit-text-size-adjust:100%}
     el.volume = ($("#p-vol").value || 90) / 100;
     var p = el.play();
     if (p && p.catch) p.catch(function () {});
-    msMeta(e, kind);
-    msState("playing");
-    preloadNext();
     markPlaying();
   }
 
   function stopPlayer() {
-    advancing = false;
-    queue = []; qi = -1;
     try { av.pause(); av.removeAttribute("src"); av.load(); } catch (e) {}
     try { vv.pause(); vv.removeAttribute("src"); vv.load(); } catch (e) {}
-    try { pre.removeAttribute("src"); pre._u = ""; } catch (e) {}
-    msState("none");
-    if ("mediaSession" in navigator) { try { navigator.mediaSession.metadata = null; } catch (e) {} }
     player.hidden = true;
     stage.hidden = true;
     stage.classList.remove("big");
@@ -8588,29 +8429,13 @@ html{-webkit-text-size-adjust:100%}
     markPlaying();
   }
 
-  /* Wächter: bleibt ein Übergang hängen (langsames Netz, dunkler Bildschirm),
-     wird der Anstoß wiederholt, statt die Playlist abbrechen zu lassen. */
-  var watchTries = 0;
-  setInterval(function () {
-    if (!advancing || cur.kind !== "audio" || !av.src) { watchTries = 0; return; }
-    if (!av.paused) { watchTries = 0; return; }
-    watchTries++;
-    if (watchTries <= 4) { var p = av.play(); if (p && p.catch) p.catch(function () {}); }
-    else { watchTries = 0; advancing = false; step(1); }
-  }, 2500);
-
   function step(dir) {
-    if (!queue.length && cur.id) buildQueue(cur.kind || "audio", cur.id);
-    var nx = queueNext(dir);
-    if (!nx) {
-      advancing = false;
-      msState("paused");
-      toast("Keine weitere Aufnahme in dieser Auswahl.");
-      return false;
-    }
-    qi = nx.j;
-    play(nx.e, queueKind || "audio", true);
-    return true;
+    var list = filtered().filter(function (e) { return cur.kind === "video" ? e.video : e.audio; });
+    if (!list.length) { toast("Keine weitere Aufnahme in dieser Auswahl."); return; }
+    var i = -1;
+    list.forEach(function (e, k) { if (e.id === cur.id) i = k; });
+    var n = list[(i + dir + list.length) % list.length];
+    play(n, cur.kind || "audio");
   }
 
   function bindMedia(el) {
@@ -8619,16 +8444,6 @@ html{-webkit-text-size-adjust:100%}
       var d = el.duration || 0;
       $("#p-pos").value = d ? Math.round((el.currentTime / d) * 1000) : 0;
       $("#p-time").textContent = clock(el.currentTime) + " / " + (d ? clock(d) : "–:–");
-      msPos(el);
-      /* Kurz vor Schluss schon umschalten. Solange noch Klang läuft, darf die
-         Seite arbeiten – auch bei dunklem Bildschirm. Das ist der Kern der
-         Sache: nach "ended" friert ein Handy die Seite oft ein. */
-      if (el === av && !el.paused && d && isFinite(d) && d - el.currentTime <= 0.4 && !advancing) {
-        var nx = queueNext(1);
-        if (nx && nx.e.id !== cur.id) { advancing = true; step(1); }
-      }
-      /* Etwa in der Mitte des Stücks die nächste Datei vorladen. */
-      if (el === av && d && el.currentTime > d * 0.4) preloadNext();
     });
     el.addEventListener("loadedmetadata", function () {
       if (el !== activeEl()) return;
@@ -8638,29 +8453,14 @@ html{-webkit-text-size-adjust:100%}
         if (Math.abs((e.stats.duration || 0) - el.duration) > 1) { e.stats.duration = Math.round(el.duration); persist(false); }
       }
     });
-    el.addEventListener("play", function () { $("#p-play").textContent = "❚❚"; msState("playing"); markPlaying(); });
-    el.addEventListener("playing", function () { failStreak = 0; advancing = false; msState("playing"); });
-    el.addEventListener("pause", function () {
-      $("#p-play").textContent = "▶";
-      if (!advancing) msState("paused");
-    });
-    el.addEventListener("ended", function () {
-      $("#p-play").textContent = "▶";
-      if (advancing) return;          /* schon vorher umgeschaltet */
-      advancing = true;
-      step(1);
-    });
+    el.addEventListener("play", function () { $("#p-play").textContent = "❚❚"; markPlaying(); });
+    el.addEventListener("pause", function () { $("#p-play").textContent = "▶"; });
+    el.addEventListener("ended", function () { $("#p-play").textContent = "▶"; step(1); });
     el.addEventListener("error", function () {
       if (el !== activeEl()) return;
       var e = byId(cur.id);
       var f = e ? (cur.kind === "video" ? e.video : e.audio) : "";
       toast("Datei nicht gefunden: " + f + " — liegt sie im selben Ordner wie diese Seite?");
-      /* In einer Playlist nicht stehenbleiben, sondern das nächste Stück nehmen. */
-      failStreak++;
-      if (failStreak < 8 && queue.length > 1) {
-        advancing = true;
-        setTimeout(function () { step(1); }, 500);
-      } else { advancing = false; }
     });
   }
   bindMedia(av); bindMedia(vv);
@@ -8668,11 +8468,10 @@ html{-webkit-text-size-adjust:100%}
   $("#p-play").addEventListener("click", function () {
     var el = activeEl();
     if (!el.src) return;
-    if (el.paused) { advancing = false; var p = el.play(); if (p && p.catch) p.catch(function () {}); }
-    else { advancing = false; el.pause(); }
+    if (el.paused) el.play(); else el.pause();
   });
-  $("#p-prev").addEventListener("click", function () { advancing = true; step(-1); });
-  $("#p-next").addEventListener("click", function () { advancing = true; step(1); });
+  $("#p-prev").addEventListener("click", function () { step(-1); });
+  $("#p-next").addEventListener("click", function () { step(1); });
   $("#p-close").addEventListener("click", stopPlayer);
   $("#p-pos").addEventListener("input", function () {
     var el = activeEl();
